@@ -1,0 +1,552 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e5]:
+      - navigation [ref=e6]:
+        - generic [ref=e7]:
+          - link "CSOAI CSOAI" [ref=e8] [cursor=pointer]:
+            - /url: /
+            - img "CSOAI" [ref=e9]
+            - generic [ref=e10]: CSOAI
+          - navigation "Main navigation" [ref=e11]:
+            - link "Home" [ref=e12] [cursor=pointer]:
+              - /url: /
+            - button "Dashboard" [ref=e14] [cursor=pointer]:
+              - text: Dashboard
+              - img [ref=e15]
+            - button "Training" [ref=e18] [cursor=pointer]:
+              - text: Training
+              - img [ref=e19]
+            - button "Certification" [ref=e22] [cursor=pointer]:
+              - text: Certification
+              - img [ref=e23]
+            - button "SOAI-PDCA" [ref=e26] [cursor=pointer]:
+              - text: SOAI-PDCA
+              - img [ref=e27]
+            - button "Watchdog" [ref=e30] [cursor=pointer]:
+              - text: Watchdog
+              - img [ref=e31]
+            - button "Compliance" [ref=e34] [cursor=pointer]:
+              - text: Compliance
+              - img [ref=e35]
+            - button "Enterprise" [ref=e38] [cursor=pointer]:
+              - text: Enterprise
+              - img [ref=e39]
+            - button "Resources" [ref=e42] [cursor=pointer]:
+              - text: Resources
+              - img [ref=e43]
+          - generic [ref=e45]:
+            - link "Support" [ref=e46] [cursor=pointer]:
+              - /url: /support
+              - button "Support" [ref=e47]:
+                - img
+                - text: Support
+            - button "Toggle theme" [ref=e48] [cursor=pointer]:
+              - img
+            - link "Sign In" [ref=e49] [cursor=pointer]:
+              - /url: /login
+              - button "Sign In" [ref=e50]
+            - link "Get Started" [ref=e51] [cursor=pointer]:
+              - /url: /signup
+              - button "Get Started" [ref=e52]
+    - main [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e57]:
+          - generic [ref=e58]: The Watchdog Program
+          - heading "Become an AI Safety Analyst" [level=1] [ref=e59]
+          - paragraph [ref=e60]: Earn $45-150/hour monitoring AI systems for compliance. Work remotely, set your own hours, and protect humanity from AI risks—while building a future-proof career.
+          - paragraph [ref=e61]: Projected to be a top 10 job by 2045. Get certified now.
+          - generic [ref=e62]:
+            - link "Start Free Training" [ref=e63] [cursor=pointer]:
+              - /url: /training
+              - button "Start Free Training" [ref=e64]:
+                - text: Start Free Training
+                - img
+            - link "View Certification" [ref=e65] [cursor=pointer]:
+              - /url: /certification
+              - button "View Certification" [ref=e66]
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - img [ref=e70]
+            - generic [ref=e75]: 2,847
+            - generic [ref=e76]: Active Analysts
+          - generic [ref=e77]:
+            - img [ref=e78]
+            - generic [ref=e80]: $67
+            - generic [ref=e81]: Average Hourly Rate
+          - generic [ref=e82]:
+            - img [ref=e83]
+            - generic [ref=e85]: 18,392
+            - generic [ref=e86]: Cases Reviewed
+          - generic [ref=e87]:
+            - img [ref=e88]
+            - generic [ref=e91]: 1,203
+            - generic [ref=e92]: Job Openings
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]: Real Stories
+            - heading "Meet Our Certified Analysts" [level=2] [ref=e97]
+            - paragraph [ref=e98]: Hear from real people who transformed their careers with CSOAI certification. These aren't actors—they're working analysts earning real income.
+          - generic [ref=e99]:
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]: SC
+                - generic [ref=e104]:
+                  - generic [ref=e105]: Sarah Chen
+                  - generic [ref=e106]: Senior AI Safety Analyst
+                  - generic [ref=e107]:
+                    - img [ref=e108]
+                    - img [ref=e110]
+                    - img [ref=e112]
+                    - img [ref=e114]
+                    - img [ref=e116]
+                  - generic [ref=e118]:
+                    - generic [ref=e119]:
+                      - img [ref=e120]
+                      - text: San Francisco, CA
+                    - generic [ref=e123]:
+                      - img [ref=e124]
+                      - text: $8,200/mo
+                    - generic [ref=e126]:
+                      - img [ref=e127]
+                      - text: 25hrs/week
+              - generic [ref=e130]:
+                - blockquote [ref=e131]: "\"I was laid off from my marketing job when AI took over content creation. CSOAI gave me a new career path in 3 months. Now I earn more than I did before, work from home, and actually feel like I'm making a difference protecting people from AI risks.\""
+                - generic [ref=e132]:
+                  - generic [ref=e133]:
+                    - img
+                    - text: 147 cases reviewed
+                  - generic [ref=e134]:
+                    - img
+                    - text: Certified Analyst
+                  - generic [ref=e135]:
+                    - img
+                    - text: Joined March 2024
+            - generic [ref=e137]:
+              - generic [ref=e138]:
+                - generic [ref=e139]: MJ
+                - generic [ref=e140]:
+                  - generic [ref=e141]: Marcus Johnson
+                  - generic [ref=e142]: AI Safety Analyst
+                  - generic [ref=e143]:
+                    - img [ref=e144]
+                    - img [ref=e146]
+                    - img [ref=e148]
+                    - img [ref=e150]
+                    - img [ref=e152]
+                  - generic [ref=e154]:
+                    - generic [ref=e155]:
+                      - img [ref=e156]
+                      - text: Austin, TX
+                    - generic [ref=e159]:
+                      - img [ref=e160]
+                      - text: $5,600/mo
+                    - generic [ref=e162]:
+                      - img [ref=e163]
+                      - text: 20hrs/week
+              - generic [ref=e166]:
+                - blockquote [ref=e167]: "\"I'm a former teacher who saw AI replacing educational roles. CSOAI training didn't require coding—just critical thinking. I work part-time while teaching, and the extra income has been life-changing. Plus, I'm helping ensure AI in education is safe for students.\""
+                - generic [ref=e168]:
+                  - generic [ref=e169]:
+                    - img
+                    - text: 89 cases reviewed
+                  - generic [ref=e170]:
+                    - img
+                    - text: Certified Analyst
+                  - generic [ref=e171]:
+                    - img
+                    - text: Joined May 2024
+            - generic [ref=e173]:
+              - generic [ref=e174]:
+                - generic [ref=e175]: PP
+                - generic [ref=e176]:
+                  - generic [ref=e177]: Priya Patel
+                  - generic [ref=e178]: Lead AI Safety Analyst
+                  - generic [ref=e179]:
+                    - img [ref=e180]
+                    - img [ref=e182]
+                    - img [ref=e184]
+                    - img [ref=e186]
+                    - img [ref=e188]
+                  - generic [ref=e190]:
+                    - generic [ref=e191]:
+                      - img [ref=e192]
+                      - text: London, UK
+                    - generic [ref=e195]:
+                      - img [ref=e196]
+                      - text: $12,400/mo
+                    - generic [ref=e198]:
+                      - img [ref=e199]
+                      - text: 35hrs/week
+              - generic [ref=e202]:
+                - blockquote [ref=e203]: "\"After 15 years in compliance, I was worried about job security. CSOAI let me pivot to AI safety—a growing field instead of a shrinking one. The 33-Agent Council system is fascinating to work with, and enterprises pay premium rates for experienced analysts.\""
+                - generic [ref=e204]:
+                  - generic [ref=e205]:
+                    - img
+                    - text: 203 cases reviewed
+                  - generic [ref=e206]:
+                    - img
+                    - text: Certified Analyst
+                  - generic [ref=e207]:
+                    - img
+                    - text: Joined January 2024
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: DK
+                - generic [ref=e212]:
+                  - generic [ref=e213]: David Kim
+                  - generic [ref=e214]: AI Safety Analyst
+                  - generic [ref=e215]:
+                    - img [ref=e216]
+                    - img [ref=e218]
+                    - img [ref=e220]
+                    - img [ref=e222]
+                    - img [ref=e224]
+                  - generic [ref=e226]:
+                    - generic [ref=e227]:
+                      - img [ref=e228]
+                      - text: Toronto, Canada
+                    - generic [ref=e231]:
+                      - img [ref=e232]
+                      - text: $4,800/mo
+                    - generic [ref=e234]:
+                      - img [ref=e235]
+                      - text: 15hrs/week
+              - generic [ref=e238]:
+                - blockquote [ref=e239]: "\"I'm a college student working part-time. CSOAI certification took me 2 weeks, and now I earn $45/hour reviewing AI systems. It's way better than retail or food service, and I'm building a career in a field that's exploding. Already got 3 job offers from companies.\""
+                - generic [ref=e240]:
+                  - generic [ref=e241]:
+                    - img
+                    - text: 56 cases reviewed
+                  - generic [ref=e242]:
+                    - img
+                    - text: Certified Analyst
+                  - generic [ref=e243]:
+                    - img
+                    - text: Joined July 2024
+        - generic [ref=e244]:
+          - generic [ref=e245]:
+            - generic [ref=e246]: Your Path to Success
+            - heading "From Zero to Earning in 3 Steps" [level=2] [ref=e247]
+            - paragraph [ref=e248]: No coding required. No degree required. Just critical thinking and attention to detail.
+          - generic [ref=e249]:
+            - generic [ref=e250]:
+              - generic [ref=e251]: "1"
+              - heading "Complete Training" [level=3] [ref=e252]
+              - paragraph [ref=e253]: Learn EU AI Act, NIST AI RMF, and ISO 42001 frameworks. Understand AI risks, bias detection, and compliance requirements. Takes 4-6 hours, self-paced.
+              - link "Start Training" [ref=e254] [cursor=pointer]:
+                - /url: /training
+                - button "Start Training" [ref=e255]
+            - generic [ref=e256]:
+              - generic [ref=e257]: "2"
+              - heading "Pass Certification" [level=3] [ref=e258]
+              - paragraph [ref=e259]: 50-question exam, 90 minutes, 70% to pass. Unlimited retakes. Get your official CSOAI Watchdog Analyst certificate recognized worldwide.
+              - link "View Exam Details" [ref=e260] [cursor=pointer]:
+                - /url: /certification
+                - button "View Exam Details" [ref=e261]
+            - generic [ref=e262]:
+              - generic [ref=e263]: "3"
+              - heading "Start Earning" [level=3] [ref=e264]
+              - paragraph [ref=e265]: Browse 1,200+ job openings. Apply to companies. Start reviewing AI systems. Get paid $45-150/hour. Work remotely. Set your own schedule.
+              - link "Browse Jobs" [ref=e266] [cursor=pointer]:
+                - /url: /jobs
+                - button "Browse Jobs" [ref=e267]
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - heading "What Do AI Safety Analysts Actually Do?" [level=2] [ref=e271]
+            - paragraph [ref=e272]: "You're the human oversight layer for AI systems. Here's a typical day:"
+          - generic [ref=e273]:
+            - generic [ref=e274]:
+              - img [ref=e275]
+              - heading "Review AI System Documentation" [level=3] [ref=e278]
+              - paragraph [ref=e279]: Companies submit their AI systems for compliance review. You read their documentation, check if they meet EU AI Act/NIST/ISO standards, and identify any red flags.
+            - generic [ref=e280]:
+              - img [ref=e281]
+              - heading "Assess Risk Levels" [level=3] [ref=e284]
+              - paragraph [ref=e285]: Determine if an AI system is low, medium, or high risk. High-risk systems (credit scoring, hiring, medical) require extra scrutiny. You flag systems that don't meet safety thresholds.
+            - generic [ref=e286]:
+              - img [ref=e287]
+              - heading "Identify Bias and Fairness Issues" [level=3] [ref=e290]
+              - paragraph [ref=e291]: Look for bias in training data, algorithmic discrimination, or unfair outcomes across demographic groups. This is where your critical thinking skills matter most.
+            - generic [ref=e292]:
+              - img [ref=e293]
+              - heading "Write Safety Reports" [level=3] [ref=e296]
+              - paragraph [ref=e297]: Document your findings in clear, actionable reports. Recommend approval, rejection, or improvements. Your reports go to the 33-Agent Council for final determination.
+        - generic [ref=e298]:
+          - generic [ref=e299]:
+            - generic [ref=e300]: Transparent Earnings
+            - heading "How Much Can You Really Earn?" [level=2] [ref=e301]
+            - paragraph [ref=e302]: Actual rates from our analyst network. Your earnings depend on experience and case complexity.
+          - generic [ref=e303]:
+            - generic [ref=e304]:
+              - generic [ref=e305]: Entry Level
+              - generic [ref=e306]: $45
+              - generic [ref=e307]: per hour
+              - list [ref=e308]:
+                - listitem [ref=e309]:
+                  - img [ref=e310]
+                  - generic [ref=e313]: Newly certified analysts
+                - listitem [ref=e314]:
+                  - img [ref=e315]
+                  - generic [ref=e318]: Low-risk AI systems
+                - listitem [ref=e319]:
+                  - img [ref=e320]
+                  - generic [ref=e323]: Chatbots, content filters
+                - listitem [ref=e324]:
+                  - img [ref=e325]
+                  - generic [ref=e328]: ~2 hours per case
+              - generic [ref=e329]:
+                - generic [ref=e330]: Example Monthly Income
+                - generic [ref=e331]: $3,600
+                - generic [ref=e332]: 20 hours/week × 4 weeks
+            - generic [ref=e333]:
+              - generic [ref=e334]: Most Common
+              - generic [ref=e335]: Experienced
+              - generic [ref=e336]: $75
+              - generic [ref=e337]: per hour
+              - list [ref=e338]:
+                - listitem [ref=e339]:
+                  - img [ref=e340]
+                  - generic [ref=e343]: 6+ months experience
+                - listitem [ref=e344]:
+                  - img [ref=e345]
+                  - generic [ref=e348]: Medium-risk AI systems
+                - listitem [ref=e349]:
+                  - img [ref=e350]
+                  - generic [ref=e353]: Recommendation engines, analytics
+                - listitem [ref=e354]:
+                  - img [ref=e355]
+                  - generic [ref=e358]: ~3 hours per case
+              - generic [ref=e359]:
+                - generic [ref=e360]: Example Monthly Income
+                - generic [ref=e361]: $7,500
+                - generic [ref=e362]: 25 hours/week × 4 weeks
+            - generic [ref=e363]:
+              - generic [ref=e364]: Expert
+              - generic [ref=e365]: $150
+              - generic [ref=e366]: per hour
+              - list [ref=e367]:
+                - listitem [ref=e368]:
+                  - img [ref=e369]
+                  - generic [ref=e372]: 1+ year experience
+                - listitem [ref=e373]:
+                  - img [ref=e374]
+                  - generic [ref=e377]: High-risk AI systems
+                - listitem [ref=e378]:
+                  - img [ref=e379]
+                  - generic [ref=e382]: Credit scoring, hiring, medical
+                - listitem [ref=e383]:
+                  - img [ref=e384]
+                  - generic [ref=e387]: ~5 hours per case
+              - generic [ref=e388]:
+                - generic [ref=e389]: Example Monthly Income
+                - generic [ref=e390]: $18,000
+                - generic [ref=e391]: 30 hours/week × 4 weeks
+        - generic [ref=e393]:
+          - img [ref=e394]
+          - heading "Why Now is the Perfect Time" [level=2] [ref=e397]
+          - generic [ref=e398]:
+            - paragraph [ref=e399]: The EU AI Act takes full effect in 2026. Every company deploying AI in Europe needs compliance. NIST AI RMF is becoming the US standard. ISO 42001 is the international benchmark.
+            - paragraph [ref=e400]: Demand for AI Safety Analysts is exploding. Companies are hiring now. Early adopters are getting the best positions and highest rates. By 2027, this field will be saturated—but right now, you're early.
+            - paragraph [ref=e401]: AI is taking jobs. This is one it's creating. Instead of competing with AI, you're overseeing it. This is a future-proof career that grows as AI grows.
+        - generic [ref=e403]:
+          - img [ref=e404]
+          - heading "Ready to Start Your New Career?" [level=2] [ref=e406]
+          - paragraph [ref=e407]: Join 2,847 certified analysts earning an average of $67/hour. Training is free. Certification takes 2 weeks. Your first paycheck could be 30 days away.
+          - generic [ref=e408]:
+            - link "Start Free Training Now" [ref=e409] [cursor=pointer]:
+              - /url: /training
+              - button "Start Free Training Now" [ref=e410]:
+                - text: Start Free Training Now
+                - img
+            - link "Browse Job Openings" [ref=e411] [cursor=pointer]:
+              - /url: /jobs
+              - button "Browse Job Openings" [ref=e412]
+          - paragraph [ref=e413]: No credit card required • No coding experience needed • Start earning in weeks
+    - contentinfo [ref=e414]:
+      - generic [ref=e415]:
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - link "CSOAI CSOAI" [ref=e418] [cursor=pointer]:
+              - /url: /
+              - img "CSOAI" [ref=e419]
+              - generic [ref=e420]: CSOAI
+            - paragraph [ref=e421]: Building the future of AI safety through independent training, certification, and transparent oversight.
+            - generic [ref=e422]:
+              - link "Facebook" [ref=e423] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=61586108877167
+                - img [ref=e424]
+              - link "Twitter" [ref=e426] [cursor=pointer]:
+                - /url: https://twitter.com/CsoaiLimited
+                - img [ref=e427]
+              - link "LinkedIn" [ref=e429] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/110448367
+                - img [ref=e430]
+              - link "Email" [ref=e434] [cursor=pointer]:
+                - /url: mailto:contact@csoai.org
+                - img [ref=e435]
+          - generic [ref=e438]:
+            - heading "Platform" [level=3] [ref=e439]
+            - list [ref=e440]:
+              - listitem [ref=e441]:
+                - link "Training Courses" [ref=e442] [cursor=pointer]:
+                  - /url: /training
+              - listitem [ref=e443]:
+                - link "Certification" [ref=e444] [cursor=pointer]:
+                  - /url: /certification
+              - listitem [ref=e445]:
+                - link "Watchdog Reports" [ref=e446] [cursor=pointer]:
+                  - /url: /watchdog
+              - listitem [ref=e447]:
+                - link "Analyst Workbench" [ref=e448] [cursor=pointer]:
+                  - /url: /workbench
+              - listitem [ref=e449]:
+                - link "API Documentation" [ref=e450] [cursor=pointer]:
+                  - /url: /api-docs
+              - listitem [ref=e451]:
+                - link "Dashboard" [ref=e452] [cursor=pointer]:
+                  - /url: /dashboard
+          - generic [ref=e453]:
+            - heading "Frameworks" [level=3] [ref=e454]
+            - list [ref=e455]:
+              - listitem [ref=e456]:
+                - link "SOAI-PDCA Framework" [ref=e457] [cursor=pointer]:
+                  - /url: /soai-pdca
+              - listitem [ref=e458]:
+                - link "CSOAI Standards" [ref=e459] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e460]:
+                - link "Accreditation" [ref=e461] [cursor=pointer]:
+                  - /url: /accreditation
+              - listitem [ref=e462]:
+                - link "EU AI Act" [ref=e463] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e464]:
+                - link "NIST AI RMF" [ref=e465] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e466]:
+                - link "China TC260" [ref=e467] [cursor=pointer]:
+                  - /url: /standards
+          - generic [ref=e468]:
+            - heading "Company" [level=3] [ref=e469]
+            - list [ref=e470]:
+              - listitem [ref=e471]:
+                - link "About Us" [ref=e472] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e473]:
+                - link "Our Mission" [ref=e474] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e475]:
+                - link "Pricing" [ref=e476] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e477]:
+                - link "Blog" [ref=e478] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e479]:
+                - link "Careers" [ref=e480] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e481]:
+                - link "Contact" [ref=e482] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e483]:
+            - heading "Resources" [level=3] [ref=e484]
+            - list [ref=e485]:
+              - listitem [ref=e486]:
+                - link "Documentation" [ref=e487] [cursor=pointer]:
+                  - /url: /knowledge-base
+              - listitem [ref=e488]:
+                - link "Help Center" [ref=e489] [cursor=pointer]:
+                  - /url: /help-center
+              - listitem [ref=e490]:
+                - link "System Status" [ref=e491] [cursor=pointer]:
+                  - /url: /status
+              - listitem [ref=e492]:
+                - link "Community" [ref=e493] [cursor=pointer]:
+                  - /url: /community
+              - listitem [ref=e494]:
+                - link "FAQ" [ref=e495] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e496]:
+                - link "How It Works" [ref=e497] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=e498]:
+                - link "API Keys" [ref=e499] [cursor=pointer]:
+                  - /url: /api-keys
+        - generic [ref=e503]:
+          - generic [ref=e504]:
+            - img [ref=e505]
+            - textbox "Enter your email address" [ref=e508]
+          - button "Subscribe to Newsletter" [disabled]
+        - generic [ref=e509]:
+          - heading "Certifications & Compliance" [level=3] [ref=e510]
+          - generic [ref=e511]:
+            - generic [ref=e512]:
+              - img [ref=e513]
+              - generic [ref=e516]: ISO/IEC 27001:2022
+            - generic [ref=e517]:
+              - img [ref=e518]
+              - generic [ref=e521]: SOC 2 Type II
+            - generic [ref=e522]:
+              - img [ref=e523]
+              - generic [ref=e526]: GDPR Compliant
+            - generic [ref=e527]:
+              - img [ref=e528]
+              - generic [ref=e531]: WCAG 2.1 AA
+        - generic [ref=e532]:
+          - paragraph [ref=e533]: © 2026 CSOAI. All rights reserved.
+          - generic [ref=e534]:
+            - link "Privacy Policy" [ref=e535] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e536] [cursor=pointer]:
+              - /url: /terms
+            - link "Cookie Policy" [ref=e537] [cursor=pointer]:
+              - /url: /cookies
+            - button "Cookie Settings" [ref=e538] [cursor=pointer]:
+              - img [ref=e539]
+              - text: Cookie Settings
+            - link "Accessibility" [ref=e541] [cursor=pointer]:
+              - /url: /accessibility
+        - generic [ref=e542]:
+          - generic [ref=e543]:
+            - heading "CSOAI Legal Structure" [level=4] [ref=e544]
+            - paragraph [ref=e545]: "This platform is operated by CSOAI LTD (Council Safety of Artificial Intelligence LTD), Company Number: 16939677, registered at 86-90 Paul Street, London, EC2A 4NE, United Kingdom. CSOAI standards and frameworks are maintained as an independent Standards Body. We are dedicated to advancing AI safety through independent training, certification, and transparent oversight. We maintain strict independence from all commercial AI vendors and technology companies. Our mission is to serve the public interest by developing and promoting best practices in AI safety and compliance."
+          - generic [ref=e546]:
+            - heading "CEASAI Certification Standards" [level=4] [ref=e547]
+            - paragraph [ref=e548]: CEASAI (Certified Expert in AI Safety) is our professional certification program administered by CSOAI. CEASAI certification represents demonstrated competency in AI safety principles, compliance frameworks, and incident analysis. Certificates are valid for three years from issuance. CSOAI reserves the right to update certification requirements and may require recertification to maintain active status.
+          - generic [ref=e549]:
+            - heading "Independence Statement" [level=4] [ref=e550]
+            - paragraph [ref=e551]: CSOAI is an independent organization with no financial ties to OpenAI, Anthropic, Google, Microsoft, Meta, or any AI vendor. Our only incentive is public safety and workforce development. We do not endorse, promote, or receive compensation for any commercial AI products or services.
+          - generic [ref=e552]:
+            - heading "Data & Privacy" [level=4] [ref=e553]
+            - paragraph [ref=e554]: Your data is protected under industry-standard security practices including encryption, secure authentication, and regular security audits. We comply with GDPR, CCPA, UK Data Protection Act 2018, and other privacy regulations. We never sell your personal information to third parties. For detailed information, please review our Privacy Policy, Cookie Policy, and Data Processing Agreement.
+  - region "Notifications alt+T"
+  - generic [ref=e557]:
+    - generic [ref=e559]:
+      - img [ref=e561]
+      - generic [ref=e563]:
+        - heading "Cookie Preferences" [level=3] [ref=e564]
+        - paragraph [ref=e565]: We use cookies to enhance your experience
+    - generic [ref=e566]:
+      - paragraph [ref=e567]: We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to the use of ALL cookies. You can manage your preferences by clicking "Customize".
+      - button "Customize Cookie Settings" [ref=e569] [cursor=pointer]:
+        - generic [ref=e570]:
+          - img [ref=e571]
+          - generic [ref=e574]: Customize Cookie Settings
+        - img [ref=e575]
+      - generic [ref=e577]:
+        - button "Necessary Only" [ref=e578] [cursor=pointer]
+        - button "Accept All" [ref=e579] [cursor=pointer]
+      - generic [ref=e580]:
+        - link "Privacy Policy" [ref=e581] [cursor=pointer]:
+          - /url: /privacy
+        - generic [ref=e582]: •
+        - link "Cookie Policy" [ref=e583] [cursor=pointer]:
+          - /url: /cookies
+        - generic [ref=e584]: •
+        - link "Terms of Service" [ref=e585] [cursor=pointer]:
+          - /url: /terms
+```

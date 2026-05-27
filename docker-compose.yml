@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: csoai-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: csoai_root_pass
+      MYSQL_DATABASE: csoai_prod
+      MYSQL_USER: csoai_user
+      MYSQL_PASSWORD: csoai_pass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: csoai-app
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: mysql://csoai_user:csoai_pass@mysql:3306/csoai_prod
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-production-jwt-secret}
+      # Add your real keys below or via .env file
+      # STRIPE_SECRET_KEY: 
+      # STRIPE_PUBLISHABLE_KEY: 
+      # RESEND_API_KEY: 
+      # SENTRY_DSN: 
+      # OAUTH_SERVER_URL: 
+      # OWNER_OPEN_ID: 
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.production
+
+volumes:
+  mysql_data:

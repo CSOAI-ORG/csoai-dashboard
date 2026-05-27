@@ -1,0 +1,355 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e5]:
+      - navigation [ref=e6]:
+        - generic [ref=e7]:
+          - link "CSOAI CSOAI" [ref=e8] [cursor=pointer]:
+            - /url: /
+            - img "CSOAI" [ref=e9]
+            - generic [ref=e10]: CSOAI
+          - navigation "Main navigation" [ref=e11]:
+            - link "Home" [ref=e12] [cursor=pointer]:
+              - /url: /
+            - button "Dashboard" [ref=e14] [cursor=pointer]:
+              - text: Dashboard
+              - img [ref=e15]
+            - button "Training" [ref=e18] [cursor=pointer]:
+              - text: Training
+              - img [ref=e19]
+            - button "Certification" [ref=e22] [cursor=pointer]:
+              - text: Certification
+              - img [ref=e23]
+            - button "SOAI-PDCA" [ref=e26] [cursor=pointer]:
+              - text: SOAI-PDCA
+              - img [ref=e27]
+            - button "Watchdog" [ref=e30] [cursor=pointer]:
+              - text: Watchdog
+              - img [ref=e31]
+            - button "Compliance" [ref=e34] [cursor=pointer]:
+              - text: Compliance
+              - img [ref=e35]
+            - button "Enterprise" [ref=e38] [cursor=pointer]:
+              - text: Enterprise
+              - img [ref=e39]
+            - button "Resources" [ref=e42] [cursor=pointer]:
+              - text: Resources
+              - img [ref=e43]
+          - generic [ref=e45]:
+            - link "Support" [ref=e46] [cursor=pointer]:
+              - /url: /support
+              - button "Support" [ref=e47]:
+                - img
+                - text: Support
+            - button "Toggle theme" [ref=e48] [cursor=pointer]:
+              - img
+            - link "Sign In" [ref=e49] [cursor=pointer]:
+              - /url: /login
+              - button "Sign In" [ref=e50]
+            - link "Get Started" [ref=e51] [cursor=pointer]:
+              - /url: /signup
+              - button "Get Started" [ref=e52]
+    - main [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - link "CSOAI Council of AIs" [ref=e57] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e58]:
+              - generic [ref=e59]: CSOAI
+              - generic [ref=e60]: Council of AIs
+          - link "Back to Dashboard" [ref=e61] [cursor=pointer]:
+            - /url: /
+            - button "Back to Dashboard" [ref=e62]
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - generic [ref=e69]: Join the AI Safety Movement
+          - heading "Become an AI Safety Watchdog Analyst" [level=1] [ref=e70]
+          - paragraph [ref=e71]: Are you worried about AI safety? Earn money while protecting humanity. Work from home, set your own hours, and make a real difference.
+          - generic [ref=e72]:
+            - img [ref=e73]
+            - generic [ref=e76]: 100% FREE Training & Certification
+          - generic [ref=e77]:
+            - img [ref=e78]
+            - generic [ref=e83]:
+              - generic [ref=e84]: 0+
+              - generic [ref=e85]: People have signed up
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - generic [ref=e90]: 500+
+            - generic [ref=e91]: AI Safety Incidents Reported Daily
+          - generic [ref=e92]:
+            - generic [ref=e93]: 10,000+
+            - generic [ref=e94]: Companies Using AI Without Oversight
+          - generic [ref=e95]:
+            - generic [ref=e96]: €35M+
+            - generic [ref=e97]: Potential EU AI Act Fines
+          - generic [ref=e98]:
+            - generic [ref=e99]: 1,000+
+            - generic [ref=e100]: Human Reviewers Needed
+        - generic [ref=e102]:
+          - heading "Why Become a Watchdog Analyst?" [level=2] [ref=e103]
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - img [ref=e107]
+              - generic [ref=e110]:
+                - heading "100% FREE Training" [level=3] [ref=e111]
+                - paragraph [ref=e112]: Complete Watchdog Analyst certification at no cost. CSOAI training is always free.
+            - generic [ref=e113]:
+              - img [ref=e115]
+              - generic [ref=e118]:
+                - heading "Work From Home" [level=3] [ref=e119]
+                - paragraph [ref=e120]: 100% remote work. Audit AI systems from anywhere in the world.
+            - generic [ref=e121]:
+              - img [ref=e123]
+              - generic [ref=e126]:
+                - heading "Flexible Hours" [level=3] [ref=e127]
+                - paragraph [ref=e128]: Choose your own schedule. Work 5-40 hours per week.
+            - generic [ref=e129]:
+              - img [ref=e131]
+              - generic [ref=e133]:
+                - heading "Competitive Pay" [level=3] [ref=e134]
+                - paragraph [ref=e135]: Earn money while making AI safer for everyone.
+        - generic [ref=e137]:
+          - heading "What You'll Do" [level=2] [ref=e138]
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - img [ref=e141]
+              - generic [ref=e144]: Review AI safety incidents reported by the public
+            - generic [ref=e145]:
+              - img [ref=e146]
+              - generic [ref=e149]: Analyze cases where AI systems may have caused harm
+            - generic [ref=e150]:
+              - img [ref=e151]
+              - generic [ref=e154]: Make decisions when our 33-agent AI council can't reach consensus
+            - generic [ref=e155]:
+              - img [ref=e156]
+              - generic [ref=e159]: Help improve AI safety standards across industries
+            - generic [ref=e160]:
+              - img [ref=e161]
+              - generic [ref=e164]: Contribute to public accountability reports
+        - generic [ref=e167]:
+          - heading "Express Your Interest" [level=2] [ref=e168]
+          - paragraph [ref=e169]: Sign up now to be notified when positions open. No commitment required.
+          - generic [ref=e170]:
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: Full Name *
+                - textbox "Full Name *" [ref=e174]:
+                  - /placeholder: John Doe
+              - generic [ref=e175]:
+                - generic [ref=e176]: Email *
+                - textbox "Email *" [ref=e177]:
+                  - /placeholder: john@example.com
+                  - text: test-analyst-1769658586393@playwright-test.com
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - generic [ref=e180]: Country
+                - textbox "Country" [ref=e181]:
+                  - /placeholder: United Kingdom
+              - generic [ref=e182]:
+                - generic [ref=e183]: Hours/Week Available
+                - combobox [ref=e184] [cursor=pointer]:
+                  - generic: Select hours
+                  - img
+                - combobox [ref=e185] [cursor=pointer]
+            - generic [ref=e186]:
+              - generic [ref=e187]: Why do you want to become a Watchdog Analyst? *
+              - textbox "Why do you want to become a Watchdog Analyst? *" [active] [ref=e188]:
+                - /placeholder: Tell us about your interest in AI safety and why you'd be a good fit...
+                - text: I am passionate about AI safety and want to contribute to making AI systems safer for everyone. I have experience in technology and believe human oversight is crucial.
+              - paragraph [ref=e189]: Minimum 50 characters
+            - button "Join the Waitlist" [ref=e190] [cursor=pointer]:
+              - text: Join the Waitlist
+              - img
+            - paragraph [ref=e191]: By signing up, you agree to receive updates about the Watchdog Analyst program. We respect your privacy and won't share your information.
+        - generic [ref=e193]:
+          - paragraph [ref=e194]: © 2024 CSOAI - Council of AIs. Building the future of AI safety.
+          - paragraph [ref=e195]: Part of the SOAI (Safety Of AI) ecosystem.
+    - contentinfo [ref=e196]:
+      - generic [ref=e197]:
+        - generic [ref=e198]:
+          - generic [ref=e199]:
+            - link "CSOAI CSOAI" [ref=e200] [cursor=pointer]:
+              - /url: /
+              - img "CSOAI" [ref=e201]
+              - generic [ref=e202]: CSOAI
+            - paragraph [ref=e203]: Building the future of AI safety through independent training, certification, and transparent oversight.
+            - generic [ref=e204]:
+              - link "Facebook" [ref=e205] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=61586108877167
+                - img [ref=e206]
+              - link "Twitter" [ref=e208] [cursor=pointer]:
+                - /url: https://twitter.com/CsoaiLimited
+                - img [ref=e209]
+              - link "LinkedIn" [ref=e211] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/110448367
+                - img [ref=e212]
+              - link "Email" [ref=e216] [cursor=pointer]:
+                - /url: mailto:contact@csoai.org
+                - img [ref=e217]
+          - generic [ref=e220]:
+            - heading "Platform" [level=3] [ref=e221]
+            - list [ref=e222]:
+              - listitem [ref=e223]:
+                - link "Training Courses" [ref=e224] [cursor=pointer]:
+                  - /url: /training
+              - listitem [ref=e225]:
+                - link "Certification" [ref=e226] [cursor=pointer]:
+                  - /url: /certification
+              - listitem [ref=e227]:
+                - link "Watchdog Reports" [ref=e228] [cursor=pointer]:
+                  - /url: /watchdog
+              - listitem [ref=e229]:
+                - link "Analyst Workbench" [ref=e230] [cursor=pointer]:
+                  - /url: /workbench
+              - listitem [ref=e231]:
+                - link "API Documentation" [ref=e232] [cursor=pointer]:
+                  - /url: /api-docs
+              - listitem [ref=e233]:
+                - link "Dashboard" [ref=e234] [cursor=pointer]:
+                  - /url: /dashboard
+          - generic [ref=e235]:
+            - heading "Frameworks" [level=3] [ref=e236]
+            - list [ref=e237]:
+              - listitem [ref=e238]:
+                - link "SOAI-PDCA Framework" [ref=e239] [cursor=pointer]:
+                  - /url: /soai-pdca
+              - listitem [ref=e240]:
+                - link "CSOAI Standards" [ref=e241] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e242]:
+                - link "Accreditation" [ref=e243] [cursor=pointer]:
+                  - /url: /accreditation
+              - listitem [ref=e244]:
+                - link "EU AI Act" [ref=e245] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e246]:
+                - link "NIST AI RMF" [ref=e247] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e248]:
+                - link "China TC260" [ref=e249] [cursor=pointer]:
+                  - /url: /standards
+          - generic [ref=e250]:
+            - heading "Company" [level=3] [ref=e251]
+            - list [ref=e252]:
+              - listitem [ref=e253]:
+                - link "About Us" [ref=e254] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e255]:
+                - link "Our Mission" [ref=e256] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e257]:
+                - link "Pricing" [ref=e258] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e259]:
+                - link "Blog" [ref=e260] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e261]:
+                - link "Careers" [ref=e262] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e263]:
+                - link "Contact" [ref=e264] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e265]:
+            - heading "Resources" [level=3] [ref=e266]
+            - list [ref=e267]:
+              - listitem [ref=e268]:
+                - link "Documentation" [ref=e269] [cursor=pointer]:
+                  - /url: /knowledge-base
+              - listitem [ref=e270]:
+                - link "Help Center" [ref=e271] [cursor=pointer]:
+                  - /url: /help-center
+              - listitem [ref=e272]:
+                - link "System Status" [ref=e273] [cursor=pointer]:
+                  - /url: /status
+              - listitem [ref=e274]:
+                - link "Community" [ref=e275] [cursor=pointer]:
+                  - /url: /community
+              - listitem [ref=e276]:
+                - link "FAQ" [ref=e277] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e278]:
+                - link "How It Works" [ref=e279] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=e280]:
+                - link "API Keys" [ref=e281] [cursor=pointer]:
+                  - /url: /api-keys
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - img [ref=e287]
+            - textbox "Enter your email address" [ref=e290]
+          - button "Subscribe to Newsletter" [disabled]
+        - generic [ref=e291]:
+          - heading "Certifications & Compliance" [level=3] [ref=e292]
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - img [ref=e295]
+              - generic [ref=e298]: ISO/IEC 27001:2022
+            - generic [ref=e299]:
+              - img [ref=e300]
+              - generic [ref=e303]: SOC 2 Type II
+            - generic [ref=e304]:
+              - img [ref=e305]
+              - generic [ref=e308]: GDPR Compliant
+            - generic [ref=e309]:
+              - img [ref=e310]
+              - generic [ref=e313]: WCAG 2.1 AA
+        - generic [ref=e314]:
+          - paragraph [ref=e315]: © 2026 CSOAI. All rights reserved.
+          - generic [ref=e316]:
+            - link "Privacy Policy" [ref=e317] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e318] [cursor=pointer]:
+              - /url: /terms
+            - link "Cookie Policy" [ref=e319] [cursor=pointer]:
+              - /url: /cookies
+            - button "Cookie Settings" [ref=e320] [cursor=pointer]:
+              - img [ref=e321]
+              - text: Cookie Settings
+            - link "Accessibility" [ref=e323] [cursor=pointer]:
+              - /url: /accessibility
+        - generic [ref=e324]:
+          - generic [ref=e325]:
+            - heading "CSOAI Legal Structure" [level=4] [ref=e326]
+            - paragraph [ref=e327]: "This platform is operated by CSOAI LTD (Council Safety of Artificial Intelligence LTD), Company Number: 16939677, registered at 86-90 Paul Street, London, EC2A 4NE, United Kingdom. CSOAI standards and frameworks are maintained as an independent Standards Body. We are dedicated to advancing AI safety through independent training, certification, and transparent oversight. We maintain strict independence from all commercial AI vendors and technology companies. Our mission is to serve the public interest by developing and promoting best practices in AI safety and compliance."
+          - generic [ref=e328]:
+            - heading "CEASAI Certification Standards" [level=4] [ref=e329]
+            - paragraph [ref=e330]: CEASAI (Certified Expert in AI Safety) is our professional certification program administered by CSOAI. CEASAI certification represents demonstrated competency in AI safety principles, compliance frameworks, and incident analysis. Certificates are valid for three years from issuance. CSOAI reserves the right to update certification requirements and may require recertification to maintain active status.
+          - generic [ref=e331]:
+            - heading "Independence Statement" [level=4] [ref=e332]
+            - paragraph [ref=e333]: CSOAI is an independent organization with no financial ties to OpenAI, Anthropic, Google, Microsoft, Meta, or any AI vendor. Our only incentive is public safety and workforce development. We do not endorse, promote, or receive compensation for any commercial AI products or services.
+          - generic [ref=e334]:
+            - heading "Data & Privacy" [level=4] [ref=e335]
+            - paragraph [ref=e336]: Your data is protected under industry-standard security practices including encryption, secure authentication, and regular security audits. We comply with GDPR, CCPA, UK Data Protection Act 2018, and other privacy regulations. We never sell your personal information to third parties. For detailed information, please review our Privacy Policy, Cookie Policy, and Data Processing Agreement.
+  - region "Notifications alt+T"
+  - generic [ref=e339]:
+    - generic [ref=e341]:
+      - img [ref=e343]
+      - generic [ref=e345]:
+        - heading "Cookie Preferences" [level=3] [ref=e346]
+        - paragraph [ref=e347]: We use cookies to enhance your experience
+    - generic [ref=e348]:
+      - paragraph [ref=e349]: We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to the use of ALL cookies. You can manage your preferences by clicking "Customize".
+      - button "Customize Cookie Settings" [ref=e351] [cursor=pointer]:
+        - generic [ref=e352]:
+          - img [ref=e353]
+          - generic [ref=e356]: Customize Cookie Settings
+        - img [ref=e357]
+      - generic [ref=e359]:
+        - button "Necessary Only" [ref=e360] [cursor=pointer]
+        - button "Accept All" [ref=e361] [cursor=pointer]
+      - generic [ref=e362]:
+        - link "Privacy Policy" [ref=e363] [cursor=pointer]:
+          - /url: /privacy
+        - generic [ref=e364]: •
+        - link "Cookie Policy" [ref=e365] [cursor=pointer]:
+          - /url: /cookies
+        - generic [ref=e366]: •
+        - link "Terms of Service" [ref=e367] [cursor=pointer]:
+          - /url: /terms
+```

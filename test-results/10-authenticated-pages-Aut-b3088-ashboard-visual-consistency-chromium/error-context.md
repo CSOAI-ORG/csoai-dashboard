@@ -1,0 +1,703 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#main-content"
+    - banner [ref=e5]:
+      - navigation [ref=e6]:
+        - generic [ref=e7]:
+          - link "CSOAI CSOAI" [ref=e8] [cursor=pointer]:
+            - /url: /
+            - img "CSOAI" [ref=e9]
+            - generic [ref=e10]: CSOAI
+          - navigation "Main navigation" [ref=e11]:
+            - link "Home" [ref=e12] [cursor=pointer]:
+              - /url: /
+            - button "Dashboard" [ref=e14] [cursor=pointer]:
+              - text: Dashboard
+              - img [ref=e15]
+            - button "Training" [ref=e18] [cursor=pointer]:
+              - text: Training
+              - img [ref=e19]
+            - button "Certification" [ref=e22] [cursor=pointer]:
+              - text: Certification
+              - img [ref=e23]
+            - button "SOAI-PDCA" [ref=e26] [cursor=pointer]:
+              - text: SOAI-PDCA
+              - img [ref=e27]
+            - button "Watchdog" [ref=e30] [cursor=pointer]:
+              - text: Watchdog
+              - img [ref=e31]
+            - button "Compliance" [ref=e34] [cursor=pointer]:
+              - text: Compliance
+              - img [ref=e35]
+            - button "Enterprise" [ref=e38] [cursor=pointer]:
+              - text: Enterprise
+              - img [ref=e39]
+            - button "Resources" [ref=e42] [cursor=pointer]:
+              - text: Resources
+              - img [ref=e43]
+          - generic [ref=e45]:
+            - link "Support" [ref=e46] [cursor=pointer]:
+              - /url: /support
+              - button "Support" [ref=e47]:
+                - img
+                - text: Support
+            - button "Toggle theme" [ref=e48] [cursor=pointer]:
+              - img
+            - link "Sign In" [ref=e49] [cursor=pointer]:
+              - /url: /login
+              - button "Sign In" [ref=e50]
+            - link "Get Started" [ref=e51] [cursor=pointer]:
+              - /url: /signup
+              - button "Get Started" [ref=e52]
+    - main [ref=e53]:
+      - generic [ref=e54]:
+        - complementary [ref=e55]:
+          - generic [ref=e56]:
+            - link "CSOAI New Chat" [ref=e57] [cursor=pointer]:
+              - /url: /
+              - button "CSOAI New Chat" [ref=e58]:
+                - img "CSOAI" [ref=e59]
+                - generic [ref=e60]: New Chat
+            - button [ref=e61] [cursor=pointer]:
+              - img
+          - navigation [ref=e62]:
+            - generic [ref=e63]:
+              - heading "Core" [level=3] [ref=e65]
+              - generic [ref=e66]:
+                - link "Dashboard" [ref=e67] [cursor=pointer]:
+                  - /url: /dashboard
+                  - generic [ref=e68]:
+                    - img [ref=e69]
+                    - generic [ref=e74]: Dashboard
+                - link "AI Systems" [ref=e75] [cursor=pointer]:
+                  - /url: /ai-systems
+                  - generic [ref=e76]:
+                    - img [ref=e77]
+                    - generic [ref=e79]: AI Systems
+                - link "Compliance" [ref=e80] [cursor=pointer]:
+                  - /url: /compliance
+                  - generic [ref=e81]:
+                    - img [ref=e82]
+                    - generic [ref=e86]: Compliance
+                - link "33-Agent Council" [ref=e87] [cursor=pointer]:
+                  - /url: /agent-council
+                  - generic [ref=e88]:
+                    - img [ref=e89]
+                    - generic [ref=e94]: 33-Agent Council
+                - link "Analyst Workbench" [ref=e95] [cursor=pointer]:
+                  - /url: /workbench
+                  - generic [ref=e96]:
+                    - img [ref=e97]
+                    - generic [ref=e100]: Analyst Workbench
+            - generic [ref=e101]:
+              - heading "Learning" [level=3] [ref=e103]
+              - generic [ref=e104]:
+                - link "Free Training" [ref=e105] [cursor=pointer]:
+                  - /url: /training-courses
+                  - generic [ref=e106]:
+                    - img [ref=e107]
+                    - generic [ref=e110]: Free Training
+                - link "Paid Courses" [ref=e111] [cursor=pointer]:
+                  - /url: /paid-courses-dashboard
+                  - generic [ref=e112]:
+                    - img [ref=e113]
+                    - generic [ref=e115]: Paid Courses
+                - link "My Courses" [ref=e116] [cursor=pointer]:
+                  - /url: /my-training-courses
+                  - generic [ref=e117]:
+                    - img [ref=e118]
+                    - generic [ref=e121]: My Courses
+                - link "Certificates" [ref=e122] [cursor=pointer]:
+                  - /url: /certificates
+                  - generic [ref=e123]:
+                    - img [ref=e124]
+                    - generic [ref=e127]: Certificates
+                - link "Leaderboard" [ref=e128] [cursor=pointer]:
+                  - /url: /leaderboard
+                  - generic [ref=e129]:
+                    - img [ref=e130]
+                    - generic [ref=e136]: Leaderboard
+                - link "Teams" [ref=e137] [cursor=pointer]:
+                  - /url: /teams
+                  - generic [ref=e138]:
+                    - img [ref=e139]
+                    - generic [ref=e143]: Teams
+            - generic [ref=e144]:
+              - heading "Tools" [level=3] [ref=e146]
+              - generic [ref=e147]:
+                - link "PDCA Cycles" [ref=e148] [cursor=pointer]:
+                  - /url: /pdca
+                  - generic [ref=e149]:
+                    - img [ref=e150]
+                    - generic [ref=e155]: PDCA Cycles
+                - link "Reports" [ref=e156] [cursor=pointer]:
+                  - /url: /reports
+                  - generic [ref=e157]:
+                    - img [ref=e158]
+                    - generic [ref=e161]: Reports
+                - link "API Keys" [ref=e162] [cursor=pointer]:
+                  - /url: /api-keys
+                  - generic [ref=e163]:
+                    - img [ref=e164]
+                    - generic [ref=e168]: API Keys
+                - link "Instructor Dashboard" [ref=e169] [cursor=pointer]:
+                  - /url: /instructor/dashboard
+                  - generic [ref=e170]:
+                    - img [ref=e171]
+                    - generic [ref=e176]: Instructor Dashboard
+                - link "A/B Testing" [ref=e177] [cursor=pointer]:
+                  - /url: /ab-testing
+                  - generic [ref=e178]:
+                    - img [ref=e179]
+                    - generic [ref=e184]: A/B Testing
+            - generic [ref=e185]:
+              - heading "Resources" [level=3] [ref=e187]
+              - generic [ref=e188]:
+                - link "Knowledge Base" [ref=e189] [cursor=pointer]:
+                  - /url: /knowledge-base
+                  - generic [ref=e190]:
+                    - img [ref=e191]
+                    - generic [ref=e201]: Knowledge Base
+                - link "Standards" [ref=e202] [cursor=pointer]:
+                  - /url: /standards
+                  - generic [ref=e203]:
+                    - img [ref=e204]
+                    - generic [ref=e206]: Standards
+                - link "API Docs" [ref=e207] [cursor=pointer]:
+                  - /url: /api-docs
+                  - generic [ref=e208]:
+                    - img [ref=e209]
+                    - generic [ref=e212]: API Docs
+            - button "Search" [ref=e214] [cursor=pointer]:
+              - img
+              - generic [ref=e215]: Search
+          - button "AD Admin User" [ref=e217] [cursor=pointer]:
+            - generic [ref=e218]: AD
+            - generic [ref=e219]: Admin User
+        - generic [ref=e220]:
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - button [ref=e223] [cursor=pointer]:
+                - img
+              - generic [ref=e224]: Dashboard
+            - generic [ref=e225]:
+              - button [ref=e226] [cursor=pointer]:
+                - img
+              - link [ref=e227] [cursor=pointer]:
+                - /url: /settings
+                - button [ref=e228]:
+                  - img
+          - main [ref=e229]:
+            - generic [ref=e231]:
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]:
+                    - heading "Members Dashboard" [level=1] [ref=e236]
+                    - paragraph [ref=e237]: Manage your AI safety training, certification, watchdog reports, and regulatory compliance
+                  - generic [ref=e238]:
+                    - button "Reset Tab Order" [ref=e239] [cursor=pointer]:
+                      - img
+                      - text: Reset Tab Order
+                    - button "Keyboard Shortcuts" [ref=e240] [cursor=pointer]:
+                      - img
+                      - generic [ref=e241]: Keyboard Shortcuts
+                - navigation "Breadcrumb" [ref=e243]:
+                  - link "Dashboard" [ref=e244] [cursor=pointer]:
+                    - /url: /dashboard
+                    - generic [ref=e245]:
+                      - img [ref=e246]
+                      - generic [ref=e249]: Dashboard
+                  - generic [ref=e250]:
+                    - img [ref=e251]
+                    - generic [ref=e253]: Overview
+              - generic [ref=e254]:
+                - generic [ref=e256]:
+                  - tablist [ref=e257]:
+                    - generic [ref=e258]:
+                      - tab "Overview" [selected] [ref=e259] [cursor=pointer]:
+                        - button [ref=e260]:
+                          - img [ref=e261]
+                        - img [ref=e268]
+                        - generic [ref=e273]: Overview
+                      - button "Pin tab" [ref=e274] [cursor=pointer]:
+                        - img [ref=e275]
+                    - generic [ref=e277]:
+                      - tab "Watchdog" [ref=e278] [cursor=pointer]:
+                        - button [ref=e279]:
+                          - img [ref=e280]
+                        - img [ref=e287]
+                        - generic [ref=e290]: Watchdog
+                      - button "Pin tab" [ref=e291] [cursor=pointer]:
+                        - img [ref=e292]
+                    - generic [ref=e294]:
+                      - tab "Training" [ref=e295] [cursor=pointer]:
+                        - button [ref=e296]:
+                          - img [ref=e297]
+                        - img [ref=e304]
+                        - generic [ref=e307]: Training
+                      - button "Pin tab" [ref=e308] [cursor=pointer]:
+                        - img [ref=e309]
+                    - generic [ref=e311]:
+                      - tab "Certification" [ref=e312] [cursor=pointer]:
+                        - button [ref=e313]:
+                          - img [ref=e314]
+                        - img [ref=e321]
+                        - generic [ref=e324]: Certification
+                      - button "Pin tab" [ref=e325] [cursor=pointer]:
+                        - img [ref=e326]
+                    - generic [ref=e328]:
+                      - tab "Regulatory" [ref=e329] [cursor=pointer]:
+                        - button [ref=e330]:
+                          - img [ref=e331]
+                        - img [ref=e338]
+                        - generic [ref=e342]: Regulatory
+                      - button "Pin tab" [ref=e343] [cursor=pointer]:
+                        - img [ref=e344]
+                  - status [ref=e346]
+                - generic [ref=e350]:
+                  - generic [ref=e351]:
+                    - generic [ref=e352]:
+                      - heading "Dashboard" [level=1] [ref=e353]
+                      - paragraph [ref=e354]: Western TC260 - AI Safety Governance for Humanity
+                    - generic [ref=e355]:
+                      - button [ref=e356] [cursor=pointer]:
+                        - img
+                      - button "My Progress" [ref=e357] [cursor=pointer]:
+                        - img
+                        - text: My Progress
+                      - button "Register AI System" [ref=e358] [cursor=pointer]:
+                        - img
+                        - text: Register AI System
+                      - button "Run Assessment" [ref=e359] [cursor=pointer]:
+                        - img
+                        - text: Run Assessment
+                      - button "View Council" [ref=e360] [cursor=pointer]:
+                        - img
+                        - text: View Council
+                      - button "Check Watchdog" [ref=e361] [cursor=pointer]:
+                        - img
+                        - text: Check Watchdog
+                  - generic [ref=e362]:
+                    - generic [ref=e366]:
+                      - generic [ref=e367]:
+                        - paragraph [ref=e368]: Compliance Score
+                        - paragraph [ref=e369]: 78%
+                        - generic [ref=e370]:
+                          - img [ref=e371]
+                          - paragraph [ref=e374]: +5% this week
+                      - img [ref=e376]
+                    - generic [ref=e381]:
+                      - generic [ref=e382]:
+                        - paragraph [ref=e383]: Active AI Systems
+                        - paragraph [ref=e384]: "0"
+                        - paragraph [ref=e386]: 0 pending review
+                      - img [ref=e388]
+                    - generic [ref=e393]:
+                      - generic [ref=e394]:
+                        - paragraph [ref=e395]: Watchdog Reports
+                        - paragraph [ref=e396]: "0"
+                        - paragraph [ref=e398]: Public database
+                      - img [ref=e400]
+                    - generic [ref=e406]:
+                      - generic [ref=e407]:
+                        - paragraph [ref=e408]: Council Sessions
+                        - paragraph [ref=e409]: "0"
+                        - generic [ref=e410]:
+                          - img [ref=e411]
+                          - paragraph [ref=e414]: 0 pending votes
+                      - img [ref=e416]
+                  - generic [ref=e422]:
+                    - generic [ref=e424]:
+                      - img [ref=e425]
+                      - text: SOAI-PDCA Continuous Improvement Loop
+                      - generic [ref=e428]: (Safety Of AI - Plan, Do, Check, Act)
+                    - generic [ref=e429]:
+                      - generic [ref=e432]:
+                        - generic [ref=e433]:
+                          - generic [ref=e434]:
+                            - img [ref=e436]
+                            - generic [ref=e440]:
+                              - img [ref=e441]
+                              - generic [ref=e443]: Pending
+                          - heading "PLAN" [level=3] [ref=e444]
+                          - paragraph [ref=e445]: Planning Phase
+                          - generic [ref=e446]:
+                            - generic [ref=e447]:
+                              - generic [ref=e448]: Progress
+                              - generic [ref=e449]: 0%
+                            - progressbar [ref=e450]
+                          - paragraph [ref=e452]: Define compliance requirements and action items
+                          - list [ref=e453]:
+                            - listitem [ref=e454]: Map EU AI Act requirements
+                            - listitem [ref=e456]: Identify NIST RMF gaps
+                            - listitem [ref=e458]: Set TC260 compliance targets
+                        - generic [ref=e460]:
+                          - generic [ref=e461]:
+                            - img [ref=e463]
+                            - generic [ref=e465]:
+                              - img [ref=e466]
+                              - generic [ref=e468]: Pending
+                          - heading "DO" [level=3] [ref=e469]
+                          - paragraph [ref=e470]: Implementation Phase
+                          - generic [ref=e471]:
+                            - generic [ref=e472]:
+                              - generic [ref=e473]: Progress
+                              - generic [ref=e474]: 0%
+                            - progressbar [ref=e475]
+                          - paragraph [ref=e477]: Execute compliance measures and controls
+                          - list [ref=e478]:
+                            - listitem [ref=e479]: Implement safety controls
+                            - listitem [ref=e481]: Deploy monitoring systems
+                            - listitem [ref=e483]: Train AI systems
+                        - generic [ref=e485]:
+                          - generic [ref=e486]:
+                            - img [ref=e488]
+                            - generic [ref=e491]:
+                              - img [ref=e492]
+                              - generic [ref=e494]: Pending
+                          - heading "CHECK" [level=3] [ref=e495]
+                          - paragraph [ref=e496]: Evaluation Phase
+                          - generic [ref=e497]:
+                            - generic [ref=e498]:
+                              - generic [ref=e499]: Progress
+                              - generic [ref=e500]: 0%
+                            - progressbar [ref=e501]
+                          - paragraph [ref=e503]: Monitor via Watchdog reports and 33-agent council
+                          - list [ref=e504]:
+                            - listitem [ref=e505]: 0 Watchdog reports
+                            - listitem [ref=e507]: 0 Council sessions
+                            - listitem [ref=e509]: Human analyst review
+                        - generic [ref=e511]:
+                          - generic [ref=e512]:
+                            - img [ref=e514]
+                            - generic [ref=e519]:
+                              - img [ref=e520]
+                              - generic [ref=e522]: Pending
+                          - heading "ACT" [level=3] [ref=e523]
+                          - paragraph [ref=e524]: Improvement Phase
+                          - generic [ref=e525]:
+                            - generic [ref=e526]:
+                              - generic [ref=e527]: Progress
+                              - generic [ref=e528]: 0%
+                            - progressbar [ref=e529]
+                          - paragraph [ref=e531]: Apply improvements based on findings
+                          - list [ref=e532]:
+                            - listitem [ref=e533]: Update AI models
+                            - listitem [ref=e535]: Refine safety measures
+                            - listitem [ref=e537]: 0 cycles completed
+                      - generic [ref=e541]:
+                        - img [ref=e542]
+                        - generic [ref=e547]: Continuous improvement cycle powered by SOAI (Safety Of AI)
+                  - generic [ref=e548]:
+                    - generic [ref=e550]:
+                      - generic [ref=e552]:
+                        - generic [ref=e553]:
+                          - img [ref=e554]
+                          - text: Multi-Framework Compliance
+                        - button "View All" [ref=e556] [cursor=pointer]
+                      - generic [ref=e557]:
+                        - generic [ref=e558]:
+                          - generic [ref=e559]:
+                            - generic [ref=e560]:
+                              - text: EU AI Act
+                              - generic [ref=e561]: (113 requirements)
+                            - generic [ref=e563]: In Progress
+                          - generic [ref=e564]:
+                            - progressbar [ref=e565]
+                            - generic [ref=e567]: 72%
+                          - paragraph [ref=e568]: "Deadline: Aug 2026"
+                        - generic [ref=e569]:
+                          - generic [ref=e570]:
+                            - generic [ref=e571]:
+                              - text: NIST AI RMF
+                              - generic [ref=e572]: (72 requirements)
+                            - generic [ref=e574]: Compliant
+                          - generic [ref=e575]:
+                            - progressbar [ref=e576]
+                            - generic [ref=e578]: 85%
+                          - paragraph [ref=e579]: "Deadline: Voluntary"
+                        - generic [ref=e580]:
+                          - generic [ref=e581]:
+                            - generic [ref=e582]:
+                              - text: TC260
+                              - generic [ref=e583]: (56 requirements)
+                            - generic [ref=e585]: In Progress
+                          - generic [ref=e586]:
+                            - progressbar [ref=e587]
+                            - generic [ref=e589]: 68%
+                          - paragraph [ref=e590]: "Deadline: Q2 2025"
+                    - generic [ref=e592]:
+                      - generic [ref=e594]:
+                        - generic [ref=e595]:
+                          - img [ref=e596]
+                          - text: Recent Activity
+                        - button "View All" [ref=e599] [cursor=pointer]
+                      - generic [ref=e602]:
+                        - img [ref=e604]
+                        - generic [ref=e607]:
+                          - paragraph [ref=e608]: System initialized
+                          - paragraph [ref=e609]: CSOAI Platform
+                        - generic [ref=e610]: Today
+                  - generic [ref=e612]:
+                    - generic [ref=e613]:
+                      - generic [ref=e614]:
+                        - generic [ref=e615]:
+                          - img [ref=e616]
+                          - text: Referral Program
+                        - button "Share" [ref=e620] [cursor=pointer]:
+                          - img
+                          - text: Share
+                      - generic [ref=e621]: Earn 20% commission on every referral
+                    - generic [ref=e622]:
+                      - generic [ref=e623]:
+                        - generic [ref=e624]:
+                          - generic [ref=e625]:
+                            - img [ref=e626]
+                            - generic [ref=e631]: Clicks
+                          - generic [ref=e632]: "12"
+                        - generic [ref=e633]:
+                          - generic [ref=e634]:
+                            - img [ref=e635]
+                            - generic [ref=e638]: Conversions
+                          - generic [ref=e639]: "3"
+                        - generic [ref=e640]:
+                          - generic [ref=e641]:
+                            - img [ref=e642]
+                            - generic [ref=e644]: Earnings
+                          - generic [ref=e645]: $7
+                      - generic [ref=e646]:
+                        - generic [ref=e647]: Your Referral Code
+                        - generic [ref=e648]:
+                          - textbox [ref=e649]: REF-ABC123DEF
+                          - button [ref=e650] [cursor=pointer]:
+                            - img
+                      - generic [ref=e651]:
+                        - heading "Recent Conversions" [level=4] [ref=e652]
+                        - generic [ref=e653]:
+                          - generic [ref=e654]:
+                            - generic [ref=e655]:
+                              - paragraph [ref=e656]: john@example.com
+                              - paragraph [ref=e657]: Professional Certification
+                            - generic [ref=e658]:
+                              - paragraph [ref=e659]: +$240.00
+                              - paragraph [ref=e660]: Jan 27
+                          - generic [ref=e661]:
+                            - generic [ref=e662]:
+                              - paragraph [ref=e663]: jane@example.com
+                              - paragraph [ref=e664]: Expert Certification
+                            - generic [ref=e665]:
+                              - paragraph [ref=e666]: +$480.00
+                              - paragraph [ref=e667]: Jan 24
+                      - button "View Full Referral Dashboard" [ref=e668] [cursor=pointer]:
+                        - text: View Full Referral Dashboard
+                        - img
+                  - generic [ref=e672]:
+                    - generic [ref=e673]:
+                      - img [ref=e675]
+                      - generic [ref=e680]:
+                        - heading "Join the AI Safety Movement" [level=3] [ref=e681]
+                        - paragraph [ref=e682]:
+                          - generic [ref=e683]: 0+
+                          - text: people have signed up to become Watchdog Analysts. Work from home, earn money, protect humanity.
+                    - link "Sign Up Now" [ref=e684] [cursor=pointer]:
+                      - /url: /watchdog-signup
+                      - button "Sign Up Now" [ref=e685]:
+                        - text: Sign Up Now
+                        - img
+              - generic [ref=e688]:
+                - img [ref=e690]
+                - generic [ref=e692]:
+                  - heading "Welcome to CSOAI Dashboard!" [level=3] [ref=e693]
+                  - paragraph [ref=e694]: Take a quick tour to discover key features and get started with AI safety governance.
+                  - generic [ref=e695]:
+                    - button "Start Tour" [ref=e696] [cursor=pointer]
+                    - button "Skip" [ref=e697] [cursor=pointer]
+                - button [ref=e698] [cursor=pointer]:
+                  - img
+    - contentinfo [ref=e699]:
+      - generic [ref=e700]:
+        - generic [ref=e701]:
+          - generic [ref=e702]:
+            - link "CSOAI CSOAI" [ref=e703] [cursor=pointer]:
+              - /url: /
+              - img "CSOAI" [ref=e704]
+              - generic [ref=e705]: CSOAI
+            - paragraph [ref=e706]: Building the future of AI safety through independent training, certification, and transparent oversight.
+            - generic [ref=e707]:
+              - link "Facebook" [ref=e708] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=61586108877167
+                - img [ref=e709]
+              - link "Twitter" [ref=e711] [cursor=pointer]:
+                - /url: https://twitter.com/CsoaiLimited
+                - img [ref=e712]
+              - link "LinkedIn" [ref=e714] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/110448367
+                - img [ref=e715]
+              - link "Email" [ref=e719] [cursor=pointer]:
+                - /url: mailto:contact@csoai.org
+                - img [ref=e720]
+          - generic [ref=e723]:
+            - heading "Platform" [level=3] [ref=e724]
+            - list [ref=e725]:
+              - listitem [ref=e726]:
+                - link "Training Courses" [ref=e727] [cursor=pointer]:
+                  - /url: /training
+              - listitem [ref=e728]:
+                - link "Certification" [ref=e729] [cursor=pointer]:
+                  - /url: /certification
+              - listitem [ref=e730]:
+                - link "Watchdog Reports" [ref=e731] [cursor=pointer]:
+                  - /url: /watchdog
+              - listitem [ref=e732]:
+                - link "Analyst Workbench" [ref=e733] [cursor=pointer]:
+                  - /url: /workbench
+              - listitem [ref=e734]:
+                - link "API Documentation" [ref=e735] [cursor=pointer]:
+                  - /url: /api-docs
+              - listitem [ref=e736]:
+                - link "Dashboard" [ref=e737] [cursor=pointer]:
+                  - /url: /dashboard
+          - generic [ref=e738]:
+            - heading "Frameworks" [level=3] [ref=e739]
+            - list [ref=e740]:
+              - listitem [ref=e741]:
+                - link "SOAI-PDCA Framework" [ref=e742] [cursor=pointer]:
+                  - /url: /soai-pdca
+              - listitem [ref=e743]:
+                - link "CSOAI Standards" [ref=e744] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e745]:
+                - link "Accreditation" [ref=e746] [cursor=pointer]:
+                  - /url: /accreditation
+              - listitem [ref=e747]:
+                - link "EU AI Act" [ref=e748] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e749]:
+                - link "NIST AI RMF" [ref=e750] [cursor=pointer]:
+                  - /url: /standards
+              - listitem [ref=e751]:
+                - link "China TC260" [ref=e752] [cursor=pointer]:
+                  - /url: /standards
+          - generic [ref=e753]:
+            - heading "Company" [level=3] [ref=e754]
+            - list [ref=e755]:
+              - listitem [ref=e756]:
+                - link "About Us" [ref=e757] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e758]:
+                - link "Our Mission" [ref=e759] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e760]:
+                - link "Pricing" [ref=e761] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e762]:
+                - link "Blog" [ref=e763] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e764]:
+                - link "Careers" [ref=e765] [cursor=pointer]:
+                  - /url: /careers
+              - listitem [ref=e766]:
+                - link "Contact" [ref=e767] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e768]:
+            - heading "Resources" [level=3] [ref=e769]
+            - list [ref=e770]:
+              - listitem [ref=e771]:
+                - link "Documentation" [ref=e772] [cursor=pointer]:
+                  - /url: /knowledge-base
+              - listitem [ref=e773]:
+                - link "Help Center" [ref=e774] [cursor=pointer]:
+                  - /url: /help-center
+              - listitem [ref=e775]:
+                - link "System Status" [ref=e776] [cursor=pointer]:
+                  - /url: /status
+              - listitem [ref=e777]:
+                - link "Community" [ref=e778] [cursor=pointer]:
+                  - /url: /community
+              - listitem [ref=e779]:
+                - link "FAQ" [ref=e780] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e781]:
+                - link "How It Works" [ref=e782] [cursor=pointer]:
+                  - /url: /how-it-works
+              - listitem [ref=e783]:
+                - link "API Keys" [ref=e784] [cursor=pointer]:
+                  - /url: /api-keys
+        - generic [ref=e788]:
+          - generic [ref=e789]:
+            - img [ref=e790]
+            - textbox "Enter your email address" [ref=e793]
+          - button "Subscribe to Newsletter" [disabled]
+        - generic [ref=e794]:
+          - heading "Certifications & Compliance" [level=3] [ref=e795]
+          - generic [ref=e796]:
+            - generic [ref=e797]:
+              - img [ref=e798]
+              - generic [ref=e801]: ISO/IEC 27001:2022
+            - generic [ref=e802]:
+              - img [ref=e803]
+              - generic [ref=e806]: SOC 2 Type II
+            - generic [ref=e807]:
+              - img [ref=e808]
+              - generic [ref=e811]: GDPR Compliant
+            - generic [ref=e812]:
+              - img [ref=e813]
+              - generic [ref=e816]: WCAG 2.1 AA
+        - generic [ref=e817]:
+          - paragraph [ref=e818]: © 2026 CSOAI. All rights reserved.
+          - generic [ref=e819]:
+            - link "Privacy Policy" [ref=e820] [cursor=pointer]:
+              - /url: /privacy
+            - link "Terms of Service" [ref=e821] [cursor=pointer]:
+              - /url: /terms
+            - link "Cookie Policy" [ref=e822] [cursor=pointer]:
+              - /url: /cookies
+            - button "Cookie Settings" [ref=e823] [cursor=pointer]:
+              - img [ref=e824]
+              - text: Cookie Settings
+            - link "Accessibility" [ref=e826] [cursor=pointer]:
+              - /url: /accessibility
+        - generic [ref=e827]:
+          - generic [ref=e828]:
+            - heading "CSOAI Legal Structure" [level=4] [ref=e829]
+            - paragraph [ref=e830]: "This platform is operated by CSOAI LTD (Council Safety of Artificial Intelligence LTD), Company Number: 16939677, registered at 86-90 Paul Street, London, EC2A 4NE, United Kingdom. CSOAI standards and frameworks are maintained as an independent Standards Body. We are dedicated to advancing AI safety through independent training, certification, and transparent oversight. We maintain strict independence from all commercial AI vendors and technology companies. Our mission is to serve the public interest by developing and promoting best practices in AI safety and compliance."
+          - generic [ref=e831]:
+            - heading "CEASAI Certification Standards" [level=4] [ref=e832]
+            - paragraph [ref=e833]: CEASAI (Certified Expert in AI Safety) is our professional certification program administered by CSOAI. CEASAI certification represents demonstrated competency in AI safety principles, compliance frameworks, and incident analysis. Certificates are valid for three years from issuance. CSOAI reserves the right to update certification requirements and may require recertification to maintain active status.
+          - generic [ref=e834]:
+            - heading "Independence Statement" [level=4] [ref=e835]
+            - paragraph [ref=e836]: CSOAI is an independent organization with no financial ties to OpenAI, Anthropic, Google, Microsoft, Meta, or any AI vendor. Our only incentive is public safety and workforce development. We do not endorse, promote, or receive compensation for any commercial AI products or services.
+          - generic [ref=e837]:
+            - heading "Data & Privacy" [level=4] [ref=e838]
+            - paragraph [ref=e839]: Your data is protected under industry-standard security practices including encryption, secure authentication, and regular security audits. We comply with GDPR, CCPA, UK Data Protection Act 2018, and other privacy regulations. We never sell your personal information to third parties. For detailed information, please review our Privacy Policy, Cookie Policy, and Data Processing Agreement.
+  - region "Notifications alt+T"
+  - generic [ref=e842]:
+    - generic [ref=e844]:
+      - img [ref=e846]
+      - generic [ref=e848]:
+        - heading "Cookie Preferences" [level=3] [ref=e849]
+        - paragraph [ref=e850]: We use cookies to enhance your experience
+    - generic [ref=e851]:
+      - paragraph [ref=e852]: We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking "Accept All", you consent to the use of ALL cookies. You can manage your preferences by clicking "Customize".
+      - button "Customize Cookie Settings" [ref=e854] [cursor=pointer]:
+        - generic [ref=e855]:
+          - img [ref=e856]
+          - generic [ref=e859]: Customize Cookie Settings
+        - img [ref=e860]
+      - generic [ref=e862]:
+        - button "Necessary Only" [ref=e863] [cursor=pointer]
+        - button "Accept All" [ref=e864] [cursor=pointer]
+      - generic [ref=e865]:
+        - link "Privacy Policy" [ref=e866] [cursor=pointer]:
+          - /url: /privacy
+        - generic [ref=e867]: •
+        - link "Cookie Policy" [ref=e868] [cursor=pointer]:
+          - /url: /cookies
+        - generic [ref=e869]: •
+        - link "Terms of Service" [ref=e870] [cursor=pointer]:
+          - /url: /terms
+```
