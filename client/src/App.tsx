@@ -198,6 +198,8 @@ import StudentImportExport from "./pages/admin/StudentImportExport";
 import AnalyticsDashboardPage from "./pages/admin/AnalyticsDashboard";
 import Teams from "./pages/Teams";
 import ByzantineConsensus from "./pages/ByzantineConsensus";
+import CompetitorComparison from "./pages/CompetitorComparison";
+import EUAIActUrgency from "./pages/EUAIActUrgency";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -244,6 +246,8 @@ function App() {
                   <Route path="/how-it-works/compliance" component={ComplianceHowItWorks} />
                   <Route path="/how-it-works/enterprise" component={EnterpriseHowItWorks} />
                   <Route path="/watchdog/help-protect-humanity" component={WatchdogHelpProtectHumanity} />
+                  <Route path="/compare" component={CompetitorComparison} />
+                  <Route path="/eu-ai-act-urgency" component={EUAIActUrgency} />
                   <Route path="/compliance/eu-ai-act" component={EUAIActCompliance} />
                   <Route path="/compliance/nist-ai-rmf" component={NISTAIRMFCompliance} />
                   <Route path="/compliance/tc260" component={TC260Compliance} />
