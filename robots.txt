@@ -1,0 +1,41 @@
+# robots.txt for CSOAI - AI Safety Certification Platform
+
+User-agent: *
+Allow: /
+
+# High-value public pages
+Allow: /about
+Allow: /training
+Allow: /courses
+Allow: /certification
+Allow: /soai-pdca
+Allow: /watchdog
+Allow: /jobs
+Allow: /enterprise
+Allow: /pricing
+Allow: /resources
+Allow: /standards
+Allow: /accreditation
+Allow: /knowledge-base
+Allow: /blog
+Allow: /council-detail
+Allow: /pdca-simulator
+Allow: /leaderboard
+
+# Block authenticated/private areas
+Disallow: /dashboard
+Disallow: /workbench
+Disallow: /settings
+Disallow: /api/
+Disallow: /admin
+
+# Block user-specific pages
+Disallow: /my-courses
+Disallow: /my-applications
+Disallow: /certificates
+
+# Sitemap
+Sitemap: https://councilof.ai/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
