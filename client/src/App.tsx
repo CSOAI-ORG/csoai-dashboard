@@ -200,6 +200,9 @@ import Teams from "./pages/Teams";
 import ByzantineConsensus from "./pages/ByzantineConsensus";
 import CompetitorComparison from "./pages/CompetitorComparison";
 import EUAIActUrgency from "./pages/EUAIActUrgency";
+import Charter from "./pages/Charter";
+import EI3 from "./pages/EI3";
+import Crosswalks from "./pages/Crosswalks";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -409,6 +412,10 @@ function App() {
                   <Route path="/early-access" component={EarlyAccessLanding} />
                   <Route path="/enterprise-plans" component={EnterprisePlansLanding} />
                   <Route path="/council-licensing" component={CouncilLicensingLanding} />
+                  {/* Charter / EI3 / Crosswalks (MEOK ONE substrate) */}
+                  <Route path="/charter" component={Charter} />
+                  <Route path="/ei3" component={EI3} />
+                  <Route path="/crosswalks" component={Crosswalks} />
                   {/* Framework Landing Pages */}
                   <Route path="/frameworks/uk-ai-bill" component={UKAIBill} />
                   <Route path="/frameworks/australia-ai" component={AustraliaAIGovernance} />
