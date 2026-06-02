@@ -1,29 +1,14 @@
-# MCP Page Verification
-Generated: Tue Jun  2 15:05:52 UTC 2026
+# Route Verification — Tue Jun  2 16:09:52 UTC 2026
 
-## https://csoai.org/mcp
+- https://csoai.org/frameworks/eu-ai-act -> HTTP 200
+- https://csoai.org/mcp/ai-bom-mcp -> HTTP 200
+- https://csoai.org/mcp/bias-detection-mcp -> HTTP 200
+
+## sitemap.xml
 ```
-HTTP/2 200 
-accept-ranges: bytes
-access-control-allow-origin: *
-age: 0
-cache-control: public, max-age=0, must-revalidate
-content-disposition: inline; filename="index.html"
-content-type: text/html; charset=utf-8
-date: Tue, 02 Jun 2026 15:05:52 GMT
---- content markers ---
-<title>CSOAI - AI Safety Certification & Compliance Platform</title>
-```
-## https://csoai.org/tools
-```
-HTTP/2 200 
-accept-ranges: bytes
-access-control-allow-origin: *
-age: 0
-cache-control: public, max-age=0, must-revalidate
-content-disposition: inline; filename="index.html"
-content-type: text/html; charset=utf-8
-date: Tue, 02 Jun 2026 15:05:53 GMT
---- content markers ---
-<title>CSOAI - AI Safety Certification & Compliance Platform</title>
+URL count: 360
+Has /frameworks/eu-ai-act: 1
+Has /mcp/ai-bom-mcp: 1
+robots sitemap line: # Sitemap
+Sitemap: https://csoai.org/sitemap.xml
 ```
