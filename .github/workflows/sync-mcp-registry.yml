@@ -28,9 +28,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_ORG_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
-          gh api "/orgs/CSOAI-ORG/repos?per_page=100&type=public" --paginate --slurp \
-            | jq 'add // .' > repos.json
-          echo "Fetched $(jq 'length' repos.json) repos"
+          # /user/repos affiliation is the reliable way to enumerate the org's repos
+          gh api "/user/repos?per_page=100&affiliation=organization_member&sort=updated" --paginate --slurp \
+            | jq 'add | map(select(.full_name | startswith("CSOAI-ORG/")))' > repos.json
+          echo "Fetched $(jq 'length' repos.json) CSOAI-ORG repos"
 
       - name: Regenerate registry
         run: python3 scripts/build_mcp_registry.py repos.json
