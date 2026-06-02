@@ -65,7 +65,7 @@ export default function HomepageMaster() {
             <CountdownTimer />
             
             {/* Free Course CTA Button */}
-            <div className="mt-6">
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
               <Button
                 onClick={() => handleCTA('hero-free-course')}
                 size="lg"
@@ -73,6 +73,15 @@ export default function HomepageMaster() {
               >
                 Start Free Training Now
               </Button>
+              <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-base sm:text-lg px-8 py-6 rounded-xl"
+                >
+                  Book a free EU AI Act diagnostic
+                </Button>
+              </a>
             </div>
           </motion.div>
 

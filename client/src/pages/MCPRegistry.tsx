@@ -49,7 +49,36 @@ export default function MCPRegistry() {
           name="description"
           content={`The CSOAI / MEOK AI Labs MCP fleet: ${registry.total} Model Context Protocol servers for AI governance, compliance, safety and agent infrastructure — mapped to EU AI Act, ISO 42001, NIST AI RMF, DORA, NIS2 and GDPR.`}
         />
+        <link rel="canonical" href="https://csoai.org/mcp" />
+        <meta property="og:title" content={`${registry.total}-MCP Governance Fleet — CSOAI`} />
+        <meta property="og:description" content="Production compliance, safety and agent-infrastructure MCP tools — framework-mapped, audit-ready." />
+        <meta property="og:image" content="https://csoai.org/council-visual.png" />
+        <meta property="og:type" content="website" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "CSOAI MCP Fleet",
+            description: `${registry.total} Model Context Protocol servers for AI governance and compliance.`,
+            brand: { "@type": "Brand", name: "CSOAI" },
+            offers: [
+              { "@type": "Offer", name: "Pro", price: "99", priceCurrency: "USD", url: "https://csoai.org/pricing" },
+              { "@type": "Offer", name: "Enterprise", price: "499", priceCurrency: "USD", url: "https://csoai.org/enterprise" },
+            ],
+          })}
+        </script>
       </Helmet>
+
+      {/* EU AI Act urgency banner */}
+      <div className="bg-rose-600 text-white text-sm">
+        <div className="container max-w-6xl py-2.5 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center">
+          <span className="font-semibold">⏱ EU AI Act GPAI obligations are live (2 Aug 2026).</span>
+          <span className="text-rose-100">Get audit-ready with the fleet —</span>
+          <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer" className="underline font-medium hover:text-white">
+            book a free 15-min diagnostic →
+          </a>
+        </div>
+      </div>
 
       {/* Hero */}
       <div className="bg-gradient-to-br from-white via-emerald-50 to-emerald-100 text-gray-900 py-20">
@@ -150,7 +179,9 @@ export default function MCPRegistry() {
           {filtered.map((s) => (
             <Card key={s.slug} className="p-5 flex flex-col border hover:border-emerald-400 hover:shadow-md transition-all">
               <div className="flex items-start justify-between gap-2 mb-2">
-                <h3 className="font-bold text-base leading-tight">{s.name}</h3>
+                <Link href={`/mcp/${s.slug}`}>
+                  <h3 className="font-bold text-base leading-tight hover:text-emerald-600 cursor-pointer">{s.name}</h3>
+                </Link>
                 {s.meokLabs && <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 text-[10px] shrink-0">MEOK</Badge>}
               </div>
               <p className="text-sm text-gray-600 leading-relaxed flex-1">{s.description}</p>
@@ -160,14 +191,21 @@ export default function MCPRegistry() {
                   <Badge key={fw} className="text-[10px] bg-blue-50 text-blue-700 border-blue-200">{fw}</Badge>
                 ))}
               </div>
-              <a
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 hover:text-emerald-700"
-              >
-                <Github className="h-4 w-4" /> View source <ExternalLink className="h-3 w-3" />
-              </a>
+              <div className="mt-4 flex items-center justify-between">
+                <Link href={`/mcp/${s.slug}`}>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 hover:text-emerald-700 cursor-pointer">
+                    Details <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </Link>
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600"
+                >
+                  <Github className="h-3.5 w-3.5" /> source
+                </a>
+              </div>
             </Card>
           ))}
         </div>
