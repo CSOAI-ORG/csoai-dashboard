@@ -10,6 +10,8 @@ jobs:
     name: Deploy to Vercel
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,47 +19,69 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
 
-      - name: Check token
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          echo "Token length: ${#VERCEL_TOKEN}"
-          if [ -z "$VERCEL_TOKEN" ]; then
-            echo "ERROR: VERCEL_TOKEN is empty!"
-            exit 1
-          fi
-          # Verify token by checking who we are
-          vercel whoami --token=$VERCEL_TOKEN || echo "Token verification failed"
-
       - name: Deploy
         id: deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          set -x  # Enable debug mode
-          echo "Starting deployment..."
-          
-          # Deploy with verbose output
+          echo "Who am I:"
+          vercel whoami --token=$VERCEL_TOKEN
+          echo "Deploying..."
           vercel deploy --prod --yes --token=$VERCEL_TOKEN 2>&1 | tee deploy.log
-          EXIT_CODE=${PIPESTATUS[0]}
-          
-          echo "Vercel exit code: $EXIT_CODE"
-          echo "=== Full deploy log ==="
-          cat deploy.log
-          echo "=== End log ==="
-          
-          # Extract URL
           URL=$(grep -oE 'https://[a-zA-Z0-9._-]+\.vercel\.app' deploy.log | tail -1)
-          echo "Extracted URL: $URL"
           echo "url=$URL" >> "$GITHUB_OUTPUT"
-          
-          if [ -z "$URL" ] && [ $EXIT_CODE -ne 0 ]; then
-            echo "Deployment failed!"
-            exit 1
-          fi
+          echo "DEPLOY_URL=$URL" >> "$GITHUB_ENV"
+
+      - name: Attach custom domains (csoai.org)
+        id: domains
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          # Find the project name from the deploy log / vercel config
+          PROJECT=$(cat .vercel/project.json 2>/dev/null | grep -oE '"name":"[^"]+"' | head -1 | sed 's/"name":"//;s/"//')
+          if [ -z "$PROJECT" ]; then PROJECT="csoai-dashboard"; fi
+          echo "Project: $PROJECT"
+
+          # Add domains (ignore errors if already added)
+          vercel domains add csoai.org "$PROJECT" --token=$VERCEL_TOKEN 2>&1 | tee -a domains.log || true
+          vercel domains add www.csoai.org "$PROJECT" --token=$VERCEL_TOKEN 2>&1 | tee -a domains.log || true
+
+          # Inspect domain to capture required DNS config
+          echo "=== DNS inspect ===" | tee -a domains.log
+          vercel domains inspect csoai.org --token=$VERCEL_TOKEN 2>&1 | tee -a domains.log || true
+
+      - name: Write status file back to repo (so it's readable via API)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          {
+            echo "# Deploy Status"
+            echo ""
+            echo "Generated: $(date -u)"
+            echo ""
+            echo "## Deploy URL"
+            echo '```'
+            echo "${DEPLOY_URL:-unknown}"
+            echo '```'
+            echo ""
+            echo "## Deploy log"
+            echo '```'
+            cat deploy.log 2>/dev/null | tail -40
+            echo '```'
+            echo ""
+            echo "## Domains log"
+            echo '```'
+            cat domains.log 2>/dev/null
+            echo '```'
+          } > DEPLOY_STATUS.md
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add DEPLOY_STATUS.md
+          git commit -m "chore: record deploy status [skip ci]" || echo "no changes"
+          git push origin deploy || echo "push failed"
 
       - name: Summary
         run: |
           echo "### Deployment Result" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "URL: ${{ steps.deploy.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
