@@ -29,7 +29,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_ORG_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           # /user/repos affiliation is the reliable way to enumerate the org's repos
-          gh api "/user/repos?per_page=100&affiliation=organization_member&sort=updated" --paginate --slurp \
+          gh api "/user/repos?per_page=100&affiliation=owner,collaborator,organization_member&sort=updated" --paginate --slurp \
             | jq 'add | map(select(.full_name | startswith("CSOAI-ORG/")))' > repos.json
           echo "Fetched $(jq 'length' repos.json) CSOAI-ORG repos"
 
