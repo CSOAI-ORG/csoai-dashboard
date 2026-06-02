@@ -87,11 +87,19 @@ export default function MCPRegistry() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             The <span className="text-emerald-600">{registry.total}-MCP</span> Governance Fleet
           </h1>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mb-8">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mb-4">
             Every CSOAI tool is powered by Model Context Protocol servers — production compliance, safety and
             agent-infrastructure tools that any AI agent or human can call. Each one emits signed, auditable evidence
             mapped to the major global frameworks.
           </p>
+          <div className="max-w-3xl mb-8 text-sm bg-white border border-emerald-100 rounded-lg p-4 text-gray-600">
+            <span className="font-semibold text-gray-900">Two ways to buy:</span> the{" "}
+            <Link href="/pricing"><span className="text-emerald-700 underline cursor-pointer">CSOAI Platform</span></Link>{" "}
+            (training, certification &amp; the compliance dashboard) is subscribed by the seat on the Pricing page. This{" "}
+            <span className="font-semibold">MCP Fleet</span> is the developer / API layer — call any tool over{" "}
+            <code className="text-emerald-700">api.meok.ai</code> at <span className="font-semibold">Pro $99/mo</span> or{" "}
+            <span className="font-semibold">Enterprise $499/mo</span>.
+          </div>
           <div className="flex flex-wrap gap-4">
             <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-3 shadow-sm border border-emerald-100">
               <Boxes className="h-5 w-5 text-emerald-600" />
