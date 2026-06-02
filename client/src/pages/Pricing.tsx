@@ -270,6 +270,11 @@ export default function Pricing() {
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Choose the plan that fits your AI governance needs. All plans include core compliance features.
           </p>
+          <div className="mt-6">
+            <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-emerald-700 dark:text-emerald-400 font-semibold hover:underline">
+              Not sure which plan? Book a free 15-min EU AI Act diagnostic →
+            </a>
+          </div>
           
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mt-8">

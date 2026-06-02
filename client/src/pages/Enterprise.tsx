@@ -121,6 +121,11 @@ export default function Enterprise() {
                     Get Started Free
                   </Button>
                 </Link>
+                <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-white text-emerald-700 hover:bg-gray-100">
+                    Book a free EU AI Act diagnostic
+                  </Button>
+                </a>
                 <Link href="/api-docs">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                     View API Docs
