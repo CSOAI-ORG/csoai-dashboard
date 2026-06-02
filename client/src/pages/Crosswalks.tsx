@@ -4,7 +4,21 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Helmet } from "react-helmet-async";
-import { Search, Globe, Shield, FileText, ExternalLink, ArrowRight, Calendar } from "lucide-react";
+import { Link } from "wouter";
+import { Search, Globe, Shield, FileText, ExternalLink, ArrowRight, Calendar, Boxes } from "lucide-react";
+
+// Map a crosswalk framework to the MCP-registry framework tag (if MCP tools exist for it)
+function mcpTagFor(name: string): string | null {
+  const n = name.toLowerCase();
+  if (n.includes("eu ai act")) return "EU AI Act";
+  if (n.includes("nist")) return "NIST AI RMF";
+  if (n.includes("42001")) return "ISO 42001";
+  if (n.includes("dora")) return "DORA";
+  if (n.includes("nis2")) return "NIS2";
+  if (n.includes("gdpr")) return "GDPR";
+  if (n.includes("hipaa")) return "HIPAA";
+  return null;
+}
 
 type Framework = {
   slug: string;
@@ -232,6 +246,13 @@ export default function Crosswalks() {
                   Crosswalk <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
+              {mcpTagFor(f.name) && (
+                <Link href={`/mcp?framework=${encodeURIComponent(mcpTagFor(f.name) as string)}`}>
+                  <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-blue-700 dark:text-blue-400 hover:underline cursor-pointer">
+                    <Boxes className="w-3 h-3" /> MCP tools that satisfy this
+                  </span>
+                </Link>
+              )}
             </Card>
           ))}
         </div>

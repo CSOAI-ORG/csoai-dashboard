@@ -2845,7 +2845,7 @@
     {
       "slug": "mcp-get",
       "name": "Mcp Get",
-      "description": "MCP server \u2014 Model Context Protocol tool.",
+      "description": "MCP server - Model Context Protocol tool.",
       "url": "https://github.com/CSOAI-ORG/mcp-get",
       "category": "General AI Automation",
       "frameworks": [],
@@ -3353,7 +3353,7 @@
     {
       "slug": "supply-chain-mcp",
       "name": "Supply Chain",
-      "description": "MCP server \u2014 Model Context Protocol tool.",
+      "description": "MCP server - Model Context Protocol tool.",
       "url": "https://github.com/CSOAI-ORG/supply-chain-mcp",
       "category": "General AI Automation",
       "frameworks": [],

@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Helmet } from "react-helmet-async";
-import { Link } from "wouter";
-import { Search, ExternalLink, ShieldCheck, Boxes, Layers, ArrowRight, Github } from "lucide-react";
+import { Link, useSearch } from "wouter";
+import { Search, ExternalLink, ShieldCheck, Boxes, Layers, ArrowRight, Github, Terminal, Cloud, Plug } from "lucide-react";
 import registry from "@/data/mcpRegistry.json";
 
 type Server = {
@@ -25,9 +25,11 @@ const CATEGORIES = (registry.categories as { name: string; count: number }[]) ||
 const FRAMEWORKS = (registry.frameworkCounts as { name: string; count: number }[]) || [];
 
 export default function MCPRegistry() {
+  const searchString = useSearch();
+  const params = new URLSearchParams(searchString);
   const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [activeFramework, setActiveFramework] = useState<string>("All");
+  const [activeCategory, setActiveCategory] = useState<string>(params.get("category") || "All");
+  const [activeFramework, setActiveFramework] = useState<string>(params.get("framework") || "All");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -76,6 +78,36 @@ export default function MCPRegistry() {
               <ShieldCheck className="h-5 w-5 text-emerald-600" />
               <span className="font-bold text-2xl">{FRAMEWORKS.length}</span>
               <span className="text-gray-600">frameworks covered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* How they run */}
+      <div className="border-b bg-gray-50">
+        <div className="container max-w-5xl py-8">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Three ways to run any MCP</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="flex items-start gap-3">
+              <Terminal className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-sm">PyPI (local / stdio)</p>
+                <code className="text-xs text-gray-500">pip install &lt;name&gt;</code>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Plug className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-sm">Smithery</p>
+                <code className="text-xs text-gray-500">npx @smithery/cli install &lt;name&gt;</code>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Cloud className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
+              <div>
+                <p className="font-semibold text-sm">Hosted gateway</p>
+                <code className="text-xs text-gray-500">api.meok.ai/v1/&lt;slug&gt;/&lt;tool&gt;</code>
+              </div>
             </div>
           </div>
         </div>
@@ -150,9 +182,22 @@ export default function MCPRegistry() {
         <div className="container max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Put the full fleet to work</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Connect your AI agents and compliance teams to all {registry.total} MCP tools through one gated endpoint —
-            with per-user audit trails and signed, framework-mapped evidence on every call.
+            Connect your AI agents and compliance teams to all {registry.total} MCP tools through one gated endpoint
+            (<code className="text-emerald-300">api.meok.ai</code>) — with bearer-token auth, per-user audit trails and
+            signed, framework-mapped evidence on every call.
           </p>
+          <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-8 text-left">
+            <div className="bg-white/10 rounded-xl p-5 border border-white/10">
+              <p className="text-sm text-emerald-300 font-semibold">Pro</p>
+              <p className="text-3xl font-bold">$99<span className="text-base font-normal text-gray-300">/mo</span></p>
+              <p className="text-sm text-gray-300 mt-1">Full MCP suite + EU AI Act tracking</p>
+            </div>
+            <div className="bg-white/10 rounded-xl p-5 border border-white/10">
+              <p className="text-sm text-emerald-300 font-semibold">Enterprise</p>
+              <p className="text-3xl font-bold">$499<span className="text-base font-normal text-gray-300">/mo</span></p>
+              <p className="text-sm text-gray-300 mt-1">Custom dev + SLA + dedicated support</p>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
