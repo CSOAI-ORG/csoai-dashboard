@@ -180,8 +180,8 @@ export const workflowBuilderRouter = router({
       return { success: true };
     }),
 
-  // Get workflow execution history
-  getExecutionHistory: protectedProcedure
+  // Get workflow execution history (per-workflow list)
+  getWorkflowExecutionHistory: protectedProcedure
     .input(z.object({ workflowId: z.number() }))
     .query(async ({ input, ctx }) => {
       const db = await getDb();
