@@ -11,59 +11,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Move domains via Vercel API
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          API="https://api.vercel.com"
-          H="Authorization: Bearer $VERCEL_TOKEN"
-          OLD="prj_T9nqKwDGm0FHrq8nF6m9LcuwELh2"
-          NEW="csoai-dashboard"
-
-          echo "=== OLD project info (the one currently holding csoai.org) ===" | tee move.log
-          curl -s -H "$H" "$API/v9/projects/$OLD" | grep -oE '"name":"[^"]+"' | head -1 | tee -a move.log
-          echo "" | tee -a move.log
-
-          for D in www.csoai.org csoai.org; do
-            echo "=== Removing $D from OLD project ===" | tee -a move.log
-            curl -s -X DELETE -H "$H" "$API/v9/projects/$OLD/domains/$D" | tee -a move.log
-            echo "" | tee -a move.log
-          done
-
-          for D in csoai.org www.csoai.org; do
-            echo "=== Adding $D to NEW project ($NEW) ===" | tee -a move.log
-            curl -s -X POST -H "$H" -H "Content-Type: application/json" \
-              "$API/v10/projects/$NEW/domains" -d "{\"name\":\"$D\"}" | tee -a move.log
-            echo "" | tee -a move.log
-          done
-
-          echo "=== Set www -> apex redirect on NEW project ===" | tee -a move.log
-          curl -s -X PATCH -H "$H" -H "Content-Type: application/json" \
-            "$API/v9/projects/$NEW/domains/www.csoai.org" \
-            -d '{"redirect":"csoai.org","redirectStatusCode":308}' | tee -a move.log
-          echo "" | tee -a move.log
-
-          echo "=== NEW project domains after move ===" | tee -a move.log
-          curl -s -H "$H" "$API/v9/projects/$NEW/domains" | tee -a move.log
-          echo "" | tee -a move.log
-
-          echo "=== Verify csoai.org config ===" | tee -a move.log
-          curl -s -H "$H" "$API/v6/domains/csoai.org/config" | tee -a move.log
-          echo "" | tee -a move.log
-
-      - name: Write status back
+      - name: Verify live site
         run: |
           {
-            echo "# Domain Move Status"
+            echo "# Live Site Verification"
             echo ""
             echo "Generated: $(date -u)"
             echo ""
-            echo '```json'
-            cat move.log
-            echo '```'
-          } > DOMAIN_MOVE_STATUS.md
+            for U in https://csoai.org https://www.csoai.org; do
+              echo "## $U"
+              echo '```'
+              echo "--- Headers ---"
+              curl -s -I --max-time 25 "$U" | head -20
+              echo "--- Title / brand check ---"
+              curl -s -L --max-time 25 "$U" | grep -oiE '<title>[^<]*</title>|csoai|council for the safety' | head -10
+              echo '```'
+              echo ""
+            done
+          } > LIVE_VERIFICATION.md
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add DOMAIN_MOVE_STATUS.md
-          git commit -m "chore: record domain move status [skip ci]" || echo "no changes"
+          git add LIVE_VERIFICATION.md
+          git commit -m "chore: live verification [skip ci]" || echo "no changes"
           git push origin deploy || echo "push failed"
