@@ -1,8 +1,6 @@
 name: Move csoai.org to v2 project
-
 on:
   workflow_dispatch:
-
 jobs:
   move:
     runs-on: ubuntu-latest
@@ -10,27 +8,22 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-
-      - name: Verify live site
+      - name: Verify MCP page live
         run: |
           {
-            echo "# Live Site Verification"
-            echo ""
+            echo "# MCP Page Verification"
             echo "Generated: $(date -u)"
             echo ""
-            for U in https://csoai.org https://www.csoai.org; do
+            for U in https://csoai.org/mcp https://csoai.org/tools; do
               echo "## $U"
               echo '```'
-              echo "--- Headers ---"
-              curl -s -I --max-time 25 "$U" | head -20
-              echo "--- Title / brand check ---"
-              curl -s -L --max-time 25 "$U" | grep -oiE '<title>[^<]*</title>|csoai|council for the safety' | head -10
+              curl -s -I --max-time 25 "$U" | head -8
+              echo "--- content markers ---"
+              curl -s -L --max-time 25 "$U" | grep -oiE '<title>[^<]*</title>|MCP Fleet|Governance Fleet|MCP servers|frameworks covered' | head -8
               echo '```'
-              echo ""
             done
           } > LIVE_VERIFICATION.md
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name "github-actions"; git config user.email "actions@github.com"
           git add LIVE_VERIFICATION.md
-          git commit -m "chore: live verification [skip ci]" || echo "no changes"
-          git push origin deploy || echo "push failed"
+          git commit -m "chore: verify /mcp page [skip ci]" || echo nochange
+          git push origin deploy || echo pushfail
