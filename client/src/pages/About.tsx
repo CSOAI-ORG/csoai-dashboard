@@ -371,9 +371,9 @@ export default function About() {
             {/* Team Member Card */}
             <Card className="p-8 text-center border-2 border-emerald-200 hover:border-emerald-400 transition-colors">
               <div className="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-3xl font-bold">👤</span>
+                <span className="text-white text-3xl font-bold">NT</span>
               </div>
-              <h3 className="text-2xl font-bold mb-2">You</h3>
+              <h3 className="text-2xl font-bold mb-2">Nicholas Templeman</h3>
               <p className="text-emerald-600 font-semibold mb-4">Founder & AI Safety Advocate</p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Visionary leader driving the mission to protect humanity from AI risks while creating thousands of meaningful careers for displaced workers.

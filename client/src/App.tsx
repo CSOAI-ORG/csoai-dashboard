@@ -203,6 +203,9 @@ import EUAIActUrgency from "./pages/EUAIActUrgency";
 import Charter from "./pages/Charter";
 import EI3 from "./pages/EI3";
 import Crosswalks from "./pages/Crosswalks";
+import MCPRegistry from "./pages/MCPRegistry";
+import MCPDetail from "./pages/MCPDetail";
+import FrameworkDetail from "./pages/FrameworkDetail";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -416,6 +419,11 @@ function App() {
                   <Route path="/charter" component={Charter} />
                   <Route path="/ei3" component={EI3} />
                   <Route path="/crosswalks" component={Crosswalks} />
+                  <Route path="/mcp/:slug" component={MCPDetail} />
+                  <Route path="/mcp" component={MCPRegistry} />
+                  <Route path="/mcps" component={MCPRegistry} />
+                  <Route path="/tools" component={MCPRegistry} />
+                  <Route path="/frameworks/:slug" component={FrameworkDetail} />
                   {/* Framework Landing Pages */}
                   <Route path="/frameworks/uk-ai-bill" component={UKAIBill} />
                   <Route path="/frameworks/australia-ai" component={AustraliaAIGovernance} />
