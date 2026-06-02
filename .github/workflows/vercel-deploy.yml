@@ -1,7 +1,5 @@
 name: Vercel Production Deploy
 
-# Runs on the GitHub-hosted runner (which CAN reach Vercel, unlike the dev sandbox).
-# Triggered by pushing to the `deploy` branch, or manually.
 on:
   push:
     branches: [deploy]
@@ -21,31 +19,23 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
 
-      - name: Setup Vercel project
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          # Link to existing project or create new one
-          vercel link --yes --token="$VERCEL_TOKEN" 2>/dev/null || \
-          vercel --version  # Fallback just to confirm CLI works
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
 
-          # Pull environment/settings
-          vercel pull --yes --environment=production --token="$VERCEL_TOKEN" || true
-
-      - name: Build and Deploy
+      - name: Deploy to Vercel
         id: deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          # Direct deploy without prebuilt (simpler, handles first-time)
-          URL=$(vercel deploy --prod --yes --token="$VERCEL_TOKEN" 2>&1 | grep -E "https://.*\.vercel\.app" | tail -1)
-          if [ -z "$URL" ]; then
-            # Fallback: try getting URL differently
-            URL=$(vercel deploy --prod --yes --token="$VERCEL_TOKEN")
-          fi
+          echo "Starting Vercel deploy..."
+          vercel deploy --prod --yes --token="$VERCEL_TOKEN" | tee /tmp/deploy.log
+          URL=$(grep -oE 'https://[a-zA-Z0-9.-]+\.vercel\.app' /tmp/deploy.log | tail -1)
           echo "Deployed to: $URL"
           echo "url=$URL" >> "$GITHUB_OUTPUT"
 
