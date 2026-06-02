@@ -17,29 +17,47 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
 
+      - name: Check token
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          echo "Token length: ${#VERCEL_TOKEN}"
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "ERROR: VERCEL_TOKEN is empty!"
+            exit 1
+          fi
+          # Verify token by checking who we are
+          vercel whoami --token=$VERCEL_TOKEN || echo "Token verification failed"
+
       - name: Deploy
         id: deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          # Direct deploy - Vercel will build on their servers
-          # --confirm creates project if doesn't exist
-          echo "Deploying to Vercel..."
-          vercel deploy --prod --yes --confirm --token=$VERCEL_TOKEN 2>&1 | tee deploy.log
+          set -x  # Enable debug mode
+          echo "Starting deployment..."
           
-          # Extract URL from output
+          # Deploy with verbose output
+          vercel deploy --prod --yes --token=$VERCEL_TOKEN 2>&1 | tee deploy.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          
+          echo "Vercel exit code: $EXIT_CODE"
+          echo "=== Full deploy log ==="
+          cat deploy.log
+          echo "=== End log ==="
+          
+          # Extract URL
           URL=$(grep -oE 'https://[a-zA-Z0-9._-]+\.vercel\.app' deploy.log | tail -1)
-          
-          # If no URL found in expected format, try production URL pattern
-          if [ -z "$URL" ]; then
-            URL=$(grep -oE 'Production: https://[^ ]+' deploy.log | sed 's/Production: //')
-          fi
-          
-          echo "Deployed URL: $URL"
+          echo "Extracted URL: $URL"
           echo "url=$URL" >> "$GITHUB_OUTPUT"
+          
+          if [ -z "$URL" ] && [ $EXIT_CODE -ne 0 ]; then
+            echo "Deployment failed!"
+            exit 1
+          fi
 
       - name: Summary
         run: |
-          echo "### ✅ Deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Deployment Result" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "URL: ${{ steps.deploy.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
