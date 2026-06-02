@@ -4,6 +4,10 @@ User-agent: *
 Allow: /
 
 # High-value public pages
+Allow: /crosswalks
+Allow: /mcp
+Allow: /charter
+Allow: /ei3
 Allow: /about
 Allow: /training
 Allow: /courses
@@ -35,7 +39,7 @@ Disallow: /my-applications
 Disallow: /certificates
 
 # Sitemap
-Sitemap: https://councilof.ai/sitemap.xml
+Sitemap: https://csoai.org/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

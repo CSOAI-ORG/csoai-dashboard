@@ -199,19 +199,19 @@ export default function MCPRegistry() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/pricing">
+            <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
-                View Plans <ArrowRight className="ml-2 h-4 w-4" />
+                Book a free 15-min EU AI Act diagnostic <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <Link href="/pricing">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                View Plans
               </Button>
             </Link>
             <Link href="/enterprise">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 Enterprise &amp; API Access
-              </Button>
-            </Link>
-            <Link href="/crosswalks">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                See Framework Crosswalks
               </Button>
             </Link>
           </div>
