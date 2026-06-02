@@ -47,11 +47,11 @@ export class NotificationFilterService {
       }
 
       if (priority && priority.length > 0) {
-        conditions.push(inArray(notifications.priority, priority));
+        conditions.push(inArray(notifications.priority, priority as any));
       }
 
       if (type && type.length > 0) {
-        conditions.push(inArray(notifications.type, type));
+        conditions.push(inArray(notifications.type, type as any));
       }
 
       if (isRead !== undefined) {
@@ -63,24 +63,24 @@ export class NotificationFilterService {
         conditions.push(or(like(notifications.title, searchTerm), like(notifications.message, searchTerm)));
       }
 
-      let query = db.select().from(notifications);
-      for (const condition of conditions) {
-        query = query.where(condition);
-      }
-
+      const whereClause = and(...conditions);
       const sortColumn = sortBy === 'priority' ? notifications.priority : sortBy === 'type' ? notifications.type : notifications.createdAt;
-      query = query.orderBy(sortOrder === 'desc' ? desc(sortColumn) : sortColumn);
-      query = query.limit(limit).offset(offset);
 
-      const results = await query;
-      let countQuery = db.select({ count: sql`COUNT(*)` }).from(notifications);
-      for (const condition of conditions) {
-        countQuery = countQuery.where(condition);
-      }
-      const countResult = await countQuery;
+      const results = await db
+        .select()
+        .from(notifications)
+        .where(whereClause)
+        .orderBy(sortOrder === 'desc' ? desc(sortColumn) : sortColumn)
+        .limit(limit)
+        .offset(offset);
+
+      const countResult = await db
+        .select({ count: sql<number>`COUNT(*)` })
+        .from(notifications)
+        .where(whereClause);
       const total = (countResult[0] as any)?.count || 0;
 
-      return { notifications: results as FilteredNotification[], total };
+      return { notifications: results as unknown as FilteredNotification[], total };
     } catch (error) {
       console.error('[Filter] Error filtering notifications:', error);
       return { notifications: [], total: 0 };

@@ -196,7 +196,7 @@ async function getUserInfo(userId: number): Promise<{ email: string; name: strin
     .from(users)
     .where(eq(users.id, userId));
   
-  return user || null;
+  return user ? { email: user.email ?? '', name: user.name ?? '' } : null;
 }
 
 /**
