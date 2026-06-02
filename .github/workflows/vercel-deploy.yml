@@ -24,35 +24,39 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          echo "Who am I:"
-          vercel whoami --token=$VERCEL_TOKEN
-          echo "Deploying..."
           vercel deploy --prod --yes --token=$VERCEL_TOKEN 2>&1 | tee deploy.log
           URL=$(grep -oE 'https://[a-zA-Z0-9._-]+\.vercel\.app' deploy.log | tail -1)
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
           echo "DEPLOY_URL=$URL" >> "$GITHUB_ENV"
 
-      - name: Attach custom domains (csoai.org)
-        id: domains
+      - name: Attach domain via Vercel REST API
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          # Find the project name from the deploy log / vercel config
-          PROJECT=$(cat .vercel/project.json 2>/dev/null | grep -oE '"name":"[^"]+"' | head -1 | sed 's/"name":"//;s/"//')
-          if [ -z "$PROJECT" ]; then PROJECT="csoai-dashboard"; fi
-          echo "Project: $PROJECT"
+          PROJECT="csoai-dashboard"
+          API="https://api.vercel.com"
+          H_AUTH="Authorization: Bearer $VERCEL_TOKEN"
 
-          # Add domains (ignore errors if already added)
-          vercel domains add csoai.org "$PROJECT" --token=$VERCEL_TOKEN 2>&1 | tee -a domains.log || true
-          vercel domains add www.csoai.org "$PROJECT" --token=$VERCEL_TOKEN 2>&1 | tee -a domains.log || true
+          echo "=== Project info ===" | tee api.log
+          curl -s -H "$H_AUTH" "$API/v9/projects/$PROJECT" | tee -a api.log
+          echo "" | tee -a api.log
 
-          # Inspect domain to capture required DNS config
-          echo "=== DNS inspect ===" | tee -a domains.log
-          vercel domains inspect csoai.org --token=$VERCEL_TOKEN 2>&1 | tee -a domains.log || true
+          for D in csoai.org www.csoai.org; do
+            echo "=== Add domain $D to project ===" | tee -a api.log
+            curl -s -X POST -H "$H_AUTH" -H "Content-Type: application/json" \
+              "$API/v10/projects/$PROJECT/domains" \
+              -d "{\"name\":\"$D\"}" | tee -a api.log
+            echo "" | tee -a api.log
+          done
 
-      - name: Write status file back to repo (so it's readable via API)
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          echo "=== DNS config recommendation for apex (csoai.org) ===" | tee -a api.log
+          curl -s -H "$H_AUTH" "$API/v6/domains/csoai.org/config" | tee -a api.log
+          echo "" | tee -a api.log
+
+          echo "=== Project domains list ===" | tee -a api.log
+          curl -s -H "$H_AUTH" "$API/v9/projects/$PROJECT/domains" | tee -a api.log
+          echo "" | tee -a api.log
+
+      - name: Write status back to repo
         run: |
           {
             echo "# Deploy Status"
@@ -64,24 +68,14 @@ jobs:
             echo "${DEPLOY_URL:-unknown}"
             echo '```'
             echo ""
-            echo "## Deploy log"
-            echo '```'
-            cat deploy.log 2>/dev/null | tail -40
-            echo '```'
-            echo ""
-            echo "## Domains log"
-            echo '```'
-            cat domains.log 2>/dev/null
+            echo "## Vercel API responses (domains)"
+            echo '```json'
+            cat api.log 2>/dev/null
             echo '```'
           } > DEPLOY_STATUS.md
 
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add DEPLOY_STATUS.md
-          git commit -m "chore: record deploy status [skip ci]" || echo "no changes"
+          git commit -m "chore: record deploy + domain status [skip ci]" || echo "no changes"
           git push origin deploy || echo "push failed"
-
-      - name: Summary
-        run: |
-          echo "### Deployment Result" >> "$GITHUB_STEP_SUMMARY"
-          echo "URL: ${{ steps.deploy.outputs.url }}" >> "$GITHUB_STEP_SUMMARY"
