@@ -164,8 +164,8 @@ export async function predictStudentSuccess(userId: number): Promise<StudentPred
     const progressRate = enrollmentAge > 0 ? avgProgress / enrollmentAge : 0;
 
     // Engagement score
-    const modulesStarted = trainingProgress.filter(p => (p.progress || 0) > 0).length;
-    const modulesCompleted = trainingProgress.filter(p => p.completed).length;
+    const modulesStarted = trainingProgress.filter(p => (p.progressPercent || 0) > 0).length;
+    const modulesCompleted = trainingProgress.filter(p => p.status === 'completed').length;
     const engagementScore = calculateEngagementScore({
       totalLogins: 10, // Would track this in real implementation
       daysActive: trainingProgress.length,
@@ -184,7 +184,7 @@ export async function predictStudentSuccess(userId: number): Promise<StudentPred
     // Activity consistency
     const activityDates = [
       ...enrollments.map(e => new Date(e.enrolledAt)),
-      ...trainingProgress.map(p => new Date(p.startedAt)),
+      ...trainingProgress.filter(p => p.startedAt).map(p => new Date(p.startedAt as string)),
       ...testAttempts.map(t => new Date(t.createdAt)),
     ];
     const activityConsistency = calculateConsistencyScore(activityDates);
