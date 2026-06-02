@@ -8,25 +8,33 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Verify new routes + sitemap
+        with:
+          ref: deploy
+      - name: Submit sitemap URLs to IndexNow
         run: |
-          {
-            echo "# Route Verification — $(date -u)"
-            echo ""
-            for U in https://csoai.org/frameworks/eu-ai-act https://csoai.org/mcp/ai-bom-mcp https://csoai.org/mcp/bias-detection-mcp; do
-              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$U")
-              echo "- $U -> HTTP $code"
-            done
-            echo ""
-            echo "## sitemap.xml"
-            echo '```'
-            echo "URL count: $(curl -s --max-time 20 https://csoai.org/sitemap.xml | grep -c '<loc>')"
-            echo "Has /frameworks/eu-ai-act: $(curl -s --max-time 20 https://csoai.org/sitemap.xml | grep -c 'frameworks/eu-ai-act')"
-            echo "Has /mcp/ai-bom-mcp: $(curl -s --max-time 20 https://csoai.org/sitemap.xml | grep -c 'mcp/ai-bom-mcp')"
-            echo "robots sitemap line: $(curl -s --max-time 20 https://csoai.org/robots.txt | grep -i sitemap)"
-            echo '```'
-          } > LIVE_VERIFICATION.md
+          KEY="fe0b47cda361105205be855f8e1e175b"
+          # Verify key file is live
+          KCHECK=$(curl -s -o /dev/null -w "%{http_code}" "https://csoai.org/${KEY}.txt")
+          echo "Key file status: $KCHECK"
+          # Build URL list from sitemap
+          curl -s https://csoai.org/sitemap.xml | grep -oE '<loc>[^<]+' | sed 's/<loc>//' > urls.txt
+          COUNT=$(wc -l < urls.txt)
+          echo "URLs: $COUNT"
+          python3 - << 'PY'
+import json, urllib.request
+key = "fe0b47cda361105205be855f8e1e175b"
+urls = [u.strip() for u in open("urls.txt") if u.strip()]
+payload = {"host":"csoai.org","key":key,"keyLocation":f"https://csoai.org/{key}.txt","urlList":urls}
+data = json.dumps(payload).encode()
+req = urllib.request.Request("https://api.indexnow.org/indexnow", data=data, headers={"Content-Type":"application/json; charset=utf-8"})
+try:
+    r = urllib.request.urlopen(req, timeout=30)
+    print("IndexNow HTTP", r.status, "submitted", len(urls), "URLs")
+    open("INDEXNOW_STATUS.md","w").write(f"# IndexNow\nSubmitted {len(urls)} URLs — HTTP {r.status}\n")
+except urllib.error.HTTPError as e:
+    print("IndexNow HTTP", e.code, e.read().decode()[:200])
+    open("INDEXNOW_STATUS.md","w").write(f"# IndexNow\nHTTP {e.code} for {len(urls)} URLs\n")
+PY
           git config user.name "github-actions"; git config user.email "actions@github.com"
-          git add LIVE_VERIFICATION.md
-          git commit -m "chore: verify routes [skip ci]" || echo nochange
+          git add INDEXNOW_STATUS.md && git commit -m "chore: indexnow submission [skip ci]" || echo nochange
           git push origin deploy || echo pushfail
