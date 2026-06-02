@@ -33,19 +33,31 @@ jobs:
             | jq 'add | map(select(.full_name | startswith("CSOAI-ORG/")))' > repos.json
           echo "Fetched $(jq 'length' repos.json) CSOAI-ORG repos"
 
-      - name: Regenerate registry
-        run: python3 scripts/build_mcp_registry.py repos.json
+      - name: Regenerate registry + sitemap
+        run: |
+          python3 scripts/build_mcp_registry.py repos.json
+          python3 scripts/build_sitemap.py
 
       - name: Commit if changed
+        id: commit
         run: |
           rm -f repos.json
-          if git diff --quiet -- client/src/data/mcpRegistry.json; then
-            echo "No registry changes."
+          if git diff --quiet -- client/src/data/mcpRegistry.json client/public/sitemap.xml; then
+            echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add client/src/data/mcpRegistry.json
+          git add client/src/data/mcpRegistry.json client/public/sitemap.xml
           COUNT=$(jq '.total' client/src/data/mcpRegistry.json)
-          git commit -m "chore(mcp): auto-sync registry ($COUNT servers)"
+          git commit -m "chore(mcp): auto-sync registry + sitemap ($COUNT servers)"
           git push origin deploy
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Ping IndexNow when content changed
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          echo "Waiting for deploy to publish the new sitemap before notifying search engines..."
+          sleep 420
+          python3 scripts/indexnow.py
