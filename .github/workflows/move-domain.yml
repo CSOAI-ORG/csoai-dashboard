@@ -8,22 +8,25 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Verify MCP page live
+      - name: Verify new routes + sitemap
         run: |
           {
-            echo "# MCP Page Verification"
-            echo "Generated: $(date -u)"
+            echo "# Route Verification — $(date -u)"
             echo ""
-            for U in https://csoai.org/mcp https://csoai.org/tools; do
-              echo "## $U"
-              echo '```'
-              curl -s -I --max-time 25 "$U" | head -8
-              echo "--- content markers ---"
-              curl -s -L --max-time 25 "$U" | grep -oiE '<title>[^<]*</title>|MCP Fleet|Governance Fleet|MCP servers|frameworks covered' | head -8
-              echo '```'
+            for U in https://csoai.org/frameworks/eu-ai-act https://csoai.org/mcp/ai-bom-mcp https://csoai.org/mcp/bias-detection-mcp; do
+              code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$U")
+              echo "- $U -> HTTP $code"
             done
+            echo ""
+            echo "## sitemap.xml"
+            echo '```'
+            echo "URL count: $(curl -s --max-time 20 https://csoai.org/sitemap.xml | grep -c '<loc>')"
+            echo "Has /frameworks/eu-ai-act: $(curl -s --max-time 20 https://csoai.org/sitemap.xml | grep -c 'frameworks/eu-ai-act')"
+            echo "Has /mcp/ai-bom-mcp: $(curl -s --max-time 20 https://csoai.org/sitemap.xml | grep -c 'mcp/ai-bom-mcp')"
+            echo "robots sitemap line: $(curl -s --max-time 20 https://csoai.org/robots.txt | grep -i sitemap)"
+            echo '```'
           } > LIVE_VERIFICATION.md
           git config user.name "github-actions"; git config user.email "actions@github.com"
           git add LIVE_VERIFICATION.md
-          git commit -m "chore: verify /mcp page [skip ci]" || echo nochange
+          git commit -m "chore: verify routes [skip ci]" || echo nochange
           git push origin deploy || echo pushfail
