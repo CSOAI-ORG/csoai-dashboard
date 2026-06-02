@@ -1,0 +1,198 @@
+import { useState, useMemo } from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Helmet } from "react-helmet-async";
+import { Link } from "wouter";
+import { Search, ExternalLink, ShieldCheck, Boxes, Layers, ArrowRight, Github } from "lucide-react";
+import registry from "@/data/mcpRegistry.json";
+
+type Server = {
+  slug: string;
+  name: string;
+  description: string;
+  url: string;
+  category: string;
+  frameworks: string[];
+  language: string;
+  meokLabs: boolean;
+  updatedAt: string | null;
+};
+
+const ALL_SERVERS = (registry.servers as Server[]) || [];
+const CATEGORIES = (registry.categories as { name: string; count: number }[]) || [];
+const FRAMEWORKS = (registry.frameworkCounts as { name: string; count: number }[]) || [];
+
+export default function MCPRegistry() {
+  const [query, setQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [activeFramework, setActiveFramework] = useState<string>("All");
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return ALL_SERVERS.filter((s) => {
+      if (activeCategory !== "All" && s.category !== activeCategory) return false;
+      if (activeFramework !== "All" && !s.frameworks.includes(activeFramework)) return false;
+      if (q && !(`${s.name} ${s.description} ${s.slug}`.toLowerCase().includes(q))) return false;
+      return true;
+    });
+  }, [query, activeCategory, activeFramework]);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>MCP Fleet — {registry.total}+ AI Governance Tools | CSOAI</title>
+        <meta
+          name="description"
+          content={`The CSOAI / MEOK AI Labs MCP fleet: ${registry.total} Model Context Protocol servers for AI governance, compliance, safety and agent infrastructure — mapped to EU AI Act, ISO 42001, NIST AI RMF, DORA, NIS2 and GDPR.`}
+        />
+      </Helmet>
+
+      {/* Hero */}
+      <div className="bg-gradient-to-br from-white via-emerald-50 to-emerald-100 text-gray-900 py-20">
+        <div className="container max-w-5xl">
+          <Badge className="mb-6 bg-emerald-500/20 text-emerald-700 border-emerald-500/30">MEOK A2A Substrate</Badge>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            The <span className="text-emerald-600">{registry.total}-MCP</span> Governance Fleet
+          </h1>
+          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mb-8">
+            Every CSOAI tool is powered by Model Context Protocol servers — production compliance, safety and
+            agent-infrastructure tools that any AI agent or human can call. Each one emits signed, auditable evidence
+            mapped to the major global frameworks.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-3 shadow-sm border border-emerald-100">
+              <Boxes className="h-5 w-5 text-emerald-600" />
+              <span className="font-bold text-2xl">{registry.total}</span>
+              <span className="text-gray-600">MCP servers</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-3 shadow-sm border border-emerald-100">
+              <Layers className="h-5 w-5 text-emerald-600" />
+              <span className="font-bold text-2xl">{CATEGORIES.length}</span>
+              <span className="text-gray-600">categories</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-3 shadow-sm border border-emerald-100">
+              <ShieldCheck className="h-5 w-5 text-emerald-600" />
+              <span className="font-bold text-2xl">{FRAMEWORKS.length}</span>
+              <span className="text-gray-600">frameworks covered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Controls */}
+      <div className="container max-w-6xl py-10">
+        <div className="relative mb-6">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+          <Input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={`Search ${registry.total} MCP tools…`}
+            className="pl-11 h-12 text-base"
+          />
+        </div>
+
+        {/* Category filters */}
+        <div className="flex flex-wrap gap-2 mb-3">
+          <FilterPill label={`All (${ALL_SERVERS.length})`} active={activeCategory === "All"} onClick={() => setActiveCategory("All")} />
+          {CATEGORIES.map((c) => (
+            <FilterPill key={c.name} label={`${c.name} (${c.count})`} active={activeCategory === c.name} onClick={() => setActiveCategory(c.name)} />
+          ))}
+        </div>
+
+        {/* Framework filters */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          <FilterPill label="Any framework" active={activeFramework === "All"} onClick={() => setActiveFramework("All")} variant="framework" />
+          {FRAMEWORKS.map((f) => (
+            <FilterPill key={f.name} label={`${f.name} (${f.count})`} active={activeFramework === f.name} onClick={() => setActiveFramework(f.name)} variant="framework" />
+          ))}
+        </div>
+
+        <p className="text-sm text-gray-500 mb-6">
+          Showing <span className="font-semibold text-gray-900">{filtered.length}</span> of {ALL_SERVERS.length} servers
+        </p>
+
+        {/* Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filtered.map((s) => (
+            <Card key={s.slug} className="p-5 flex flex-col border hover:border-emerald-400 hover:shadow-md transition-all">
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <h3 className="font-bold text-base leading-tight">{s.name}</h3>
+                {s.meokLabs && <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 text-[10px] shrink-0">MEOK</Badge>}
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed flex-1">{s.description}</p>
+              <div className="flex flex-wrap gap-1.5 mt-3">
+                <Badge variant="outline" className="text-[10px] text-gray-600">{s.category}</Badge>
+                {s.frameworks.map((fw) => (
+                  <Badge key={fw} className="text-[10px] bg-blue-50 text-blue-700 border-blue-200">{fw}</Badge>
+                ))}
+              </div>
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 hover:text-emerald-700"
+              >
+                <Github className="h-4 w-4" /> View source <ExternalLink className="h-3 w-3" />
+              </a>
+            </Card>
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <div className="text-center py-20 text-gray-500">No MCP servers match your filters.</div>
+        )}
+      </div>
+
+      {/* Revenue CTA */}
+      <div className="bg-gradient-to-br from-slate-900 to-emerald-900 text-white py-20">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Put the full fleet to work</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Connect your AI agents and compliance teams to all {registry.total} MCP tools through one gated endpoint —
+            with per-user audit trails and signed, framework-mapped evidence on every call.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/pricing">
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                View Plans <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link href="/enterprise">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                Enterprise &amp; API Access
+              </Button>
+            </Link>
+            <Link href="/crosswalks">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                See Framework Crosswalks
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FilterPill({
+  label,
+  active,
+  onClick,
+  variant = "category",
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+  variant?: "category" | "framework";
+}) {
+  const base = "px-3 py-1.5 rounded-full text-xs font-medium border transition-colors cursor-pointer";
+  const on = variant === "framework" ? "bg-blue-600 text-white border-blue-600" : "bg-emerald-600 text-white border-emerald-600";
+  const off = "bg-white text-gray-600 border-gray-200 hover:border-gray-300";
+  return (
+    <button type="button" onClick={onClick} className={`${base} ${active ? on : off}`}>
+      {label}
+    </button>
+  );
+}
