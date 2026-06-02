@@ -113,7 +113,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:48:30Z"
+      "updatedAt": "2026-06-02T16:25:19Z"
     },
     {
       "slug": "ai-self-audit-mcp",
@@ -372,7 +372,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:51:45Z"
+      "updatedAt": "2026-06-02T16:25:14Z"
     },
     {
       "slug": "cra-compliance-mcp",
@@ -423,7 +423,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:52:32Z"
+      "updatedAt": "2026-06-02T16:25:08Z"
     },
     {
       "slug": "csrd-compliance-mcp",
@@ -472,7 +472,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:53:47Z"
+      "updatedAt": "2026-06-02T16:25:06Z"
     },
     {
       "slug": "drone-airspace-governance-mcp",
@@ -498,7 +498,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:54:27Z"
+      "updatedAt": "2026-06-02T15:56:30Z"
     },
     {
       "slug": "fda-samd-mcp",
@@ -545,7 +545,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:55:26Z"
+      "updatedAt": "2026-06-02T16:24:56Z"
     },
     {
       "slug": "gods-eye-geospatial-mcp",
@@ -632,7 +632,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T12:57:05Z"
+      "updatedAt": "2026-06-02T16:25:00Z"
     },
     {
       "slug": "legal-document-ai-mcp",
@@ -991,7 +991,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T13:05:06Z"
+      "updatedAt": "2026-06-02T16:25:02Z"
     },
     {
       "slug": "trust-chain-mcp",
@@ -1037,7 +1037,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T13:07:15Z"
+      "updatedAt": "2026-06-02T16:25:12Z"
     },
     {
       "slug": "yaml-ai-mcp",
@@ -1072,7 +1072,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-14T08:15:39Z"
+      "updatedAt": "2026-06-02T15:27:49Z"
     },
     {
       "slug": "care-membrane-mcp",
@@ -1265,7 +1265,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T13:02:55Z"
+      "updatedAt": "2026-06-02T16:25:10Z"
     },
     {
       "slug": "security-scanner-ai-mcp",
@@ -2136,7 +2136,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-02T15:15:39Z"
+      "updatedAt": "2026-06-02T15:25:12Z"
     },
     {
       "slug": "awesome-mcp-servers-1",
@@ -2719,7 +2719,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-05-31T12:57:02Z"
+      "updatedAt": "2026-06-02T16:24:58Z"
     },
     {
       "slug": "json-ai-mcp",
@@ -2974,7 +2974,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-05-31T13:00:53Z"
+      "updatedAt": "2026-06-02T16:25:16Z"
     },
     {
       "slug": "muckaway-ai-mcp",
