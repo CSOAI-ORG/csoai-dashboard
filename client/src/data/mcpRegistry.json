@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03",
+  "generatedAt": "2026-06-04",
   "total": 303,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -383,7 +383,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:14:55Z"
+      "updatedAt": "2026-06-03T17:36:20Z"
     },
     {
       "slug": "crane-hire-cpcs-mcp",
@@ -434,7 +434,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:14:57Z"
+      "updatedAt": "2026-06-03T17:26:47Z"
     },
     {
       "slug": "devops-ai-mcp",
@@ -458,7 +458,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:14:53Z"
+      "updatedAt": "2026-06-03T17:40:42Z"
     },
     {
       "slug": "dora-nis2-crosswalk-mcp",
@@ -498,7 +498,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:14:48Z"
+      "updatedAt": "2026-06-03T19:22:29Z"
     },
     {
       "slug": "fda-samd-mcp",
@@ -545,7 +545,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:14:58Z"
+      "updatedAt": "2026-06-03T17:27:04Z"
     },
     {
       "slug": "gods-eye-geospatial-mcp",
@@ -632,7 +632,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:15:00Z"
+      "updatedAt": "2026-06-03T17:27:20Z"
     },
     {
       "slug": "legal-document-ai-mcp",
@@ -882,7 +882,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-03T08:14:50Z"
+      "updatedAt": "2026-06-03T17:38:53Z"
     },
     {
       "slug": "nist-rmf-ai-mcp",
