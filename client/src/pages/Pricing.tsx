@@ -225,7 +225,7 @@ export default function Pricing() {
     
     if (tierId === 'enterprise') {
       // Open contact form or email
-      window.location.href = 'mailto:enterprise@coai.dev?subject=Enterprise%20Inquiry';
+      window.location.href = 'mailto:enterprise@csoai.org?subject=Enterprise%20Inquiry';
       return;
     }
     
@@ -455,7 +455,7 @@ export default function Pricing() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  onClick={() => window.location.href = 'mailto:enterprise@coai.dev'}
+                  onClick={() => window.location.href = 'mailto:enterprise@csoai.org'}
                   className="bg-cyan-600 hover:bg-cyan-700"
                 >
                   <Mail className="h-4 w-4 mr-2" />

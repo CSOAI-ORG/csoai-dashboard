@@ -93,7 +93,7 @@ export default function HomepageMaster() {
               <span className="text-emerald-600">The Solution to AI Safety & Tomorrow's Challenges.</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-semibold mt-4 sm:mt-6">Four critical solutions. One unified platform.</p>
-            <p className="text-sm sm:text-base md:text-lg text-red-600 font-semibold mt-3 sm:mt-4">Without 250,000 trained analysts by Feb 2, 2026, enterprises face compliance chaos. Our Byzantine Council ensures safety.</p>
+            <p className="text-sm sm:text-base md:text-lg text-red-600 font-semibold mt-3 sm:mt-4">Without 250,000 trained analysts by Aug 2, 2026, enterprises face compliance chaos. Our Byzantine Council ensures safety.</p>
           </motion.div>
 
           {/* Security & Compliance Badges */}
@@ -105,11 +105,11 @@ export default function HomepageMaster() {
           >
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200">
               <Shield className="w-5 h-5 text-emerald-600" />
-              <span className="text-sm font-semibold text-gray-700">ISO 27001:2022</span>
+              <span className="text-sm font-semibold text-gray-700">Ed25519 Signed Attestations</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200">
               <Lock className="w-5 h-5 text-emerald-600" />
-              <span className="text-sm font-semibold text-gray-700">SOC 2 Type II</span>
+              <span className="text-sm font-semibold text-gray-700">MIT Open Source</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200">
               <CheckCircle className="w-5 h-5 text-emerald-600" />
@@ -181,7 +181,7 @@ export default function HomepageMaster() {
                 <Shield className="w-10 h-10 text-emerald-600 flex-shrink-0" />
                 <div className="text-left">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">✓ AI Safety Oversight</h3>
-                  <p className="text-gray-700 mb-3"><strong>The Problem:</strong> 50,000+ EU enterprises need AI oversight by Feb 2, 2026. Current tools don't work.</p>
+                  <p className="text-gray-700 mb-3"><strong>The Problem:</strong> 50,000+ EU enterprises need AI oversight by Aug 2, 2026. Current tools don't work.</p>
                   <p className="text-emerald-700 font-semibold"><strong>Our Fix:</strong> 33-Agent Byzantine Council + Watchdog program = vendor-independent, impartial AI safety decisions</p>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function HomepageMaster() {
                 <Globe className="w-10 h-10 text-emerald-600 flex-shrink-0" />
                 <div className="text-left">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">✓ Government Ready</h3>
-                  <p className="text-gray-700 mb-3"><strong>The Problem:</strong> EU AI Act enforcement starts Feb 2, 2026. Governments need compliance infrastructure.</p>
+                  <p className="text-gray-700 mb-3"><strong>The Problem:</strong> EU AI Act enforcement starts Aug 2, 2026. Governments need compliance infrastructure.</p>
                   <p className="text-emerald-700 font-semibold"><strong>Our Fix:</strong> Government Portal + SOAI-PDCA framework = ready-to-deploy compliance monitoring for regulators</p>
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function HomepageMaster() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-center text-sm text-gray-600 mb-8"
           >
-            Join 10,000+ early adopters • First 10,000 get free $499 course • EU AI Act enforcement: Feb 2, 2026 • No credit card required
+            Join 10,000+ early adopters • First 10,000 get free $499 course • EU AI Act enforcement: Aug 2, 2026 • No credit card required
           </motion.p>
 
           <motion.div
@@ -884,7 +884,7 @@ export default function HomepageMaster() {
               </Button>
             </div>
 
-            <p className="text-sm mt-8 opacity-75">First 10,000 signups get free $499 course • EU AI Act enforcement: Feb 2, 2025 • Founding member discount: 50% off</p>
+            <p className="text-sm mt-8 opacity-75">First 10,000 signups get free $499 course • EU AI Act enforcement: Aug 2, 2026 • Founding member discount: 50% off</p>
           </motion.div>
         </div>
       </section>
