@@ -546,7 +546,6 @@ export default function EUAIActUrgency() {
                 icon: FileText,
               },
               {
-                label: "Terranova Defense Partnership",
                 value: "Strategic Alliance",
                 icon: Shield,
               },

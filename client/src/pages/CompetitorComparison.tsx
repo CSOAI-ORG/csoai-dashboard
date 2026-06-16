@@ -390,7 +390,6 @@ export default function CompetitorComparison() {
                 <Handshake className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Defense Partnership (Terranova)</h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   Strategic partnership with defense-grade infrastructure ensures our monitoring and consensus systems
                   meet the highest security and resilience standards — standards that civilian compliance software rarely
