@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm build",
+  "buildCommand": "pnpm build && ./node_modules/.bin/esbuild api/index.ts --bundle --platform=node --format=esm --packages=external --outfile=/tmp/apifn.mjs && cp /tmp/apifn.mjs api/index.ts",
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install --no-frozen-lockfile",
   "rewrites": [
