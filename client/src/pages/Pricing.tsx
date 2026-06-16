@@ -308,7 +308,7 @@ export default function Pricing() {
                   <div className={`mx-auto p-3 rounded-xl ${tier.bgColor} w-fit mb-4`}>
                     <Icon className={`h-8 w-8 ${tier.color}`} />
                   </div>
-                  <CardTitle className="text-lg sm:text-xl md:text-2xl text-white">{tier.name}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl md:text-2xl text-gray-900 dark:text-white">{tier.name}</CardTitle>
                   <CardDescription>{tier.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -381,7 +381,7 @@ export default function Pricing() {
         
         {/* Feature Comparison Table */}
         <div className="max-w-6xl mx-auto mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center mb-8">Compare All Features</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">Compare All Features</h2>
           <Card className="bg-white dark:bg-gray-900 border-slate-700 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -389,7 +389,7 @@ export default function Pricing() {
                   <tr className="border-b border-slate-700">
                     <th className="text-left p-4 text-slate-400 font-medium">Feature</th>
                     {PRICING_TIERS.map(tier => (
-                      <th key={tier.id} className="text-center p-4 text-white font-medium">
+                      <th key={tier.id} className="text-center p-4 text-gray-900 dark:text-white font-medium">
                         {tier.name}
                       </th>
                     ))}
@@ -407,7 +407,7 @@ export default function Pricing() {
                         <tr key={`feat-${catIndex}-${featIndex}`} className="border-b border-slate-700/50">
                           <td className="p-4">
                             <div>
-                              <p className="text-white text-sm">{feature.label}</p>
+                              <p className="text-gray-900 dark:text-white text-sm">{feature.label}</p>
                               <p className="text-slate-500 text-xs">{feature.description}</p>
                             </div>
                           </td>
