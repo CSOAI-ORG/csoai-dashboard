@@ -1,0 +1,10 @@
+{
+  "version": "2026-06-16",
+  "provider": "CSOAI — Council for the Safety of AI",
+  "homepage": "https://csoai.org",
+  "registry": "https://csoai.org/mcp",
+  "server_count": 302,
+  "categories": "https://csoai.org/mcp",
+  "auth": "https://meok-attestation-api.vercel.app/provision",
+  "description": "302 MCP servers for AI safety, compliance, governance and agent infrastructure."
+}
