@@ -221,7 +221,7 @@ export default function PaidCourses() {
             Start with our free training modules to get a taste of our teaching style and content quality before purchasing.
           </p>
           <Button
-            onClick={() => setLocation('/free-training')}
+            onClick={() => setLocation('/training')}
             variant="outline"
             size="lg"
             className="border-2 border-gray-400 text-gray-700 hover:bg-gray-200"

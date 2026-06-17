@@ -159,7 +159,7 @@ export default function AdminCMS() {
             </Card>
           </Link>
 
-          <Link href="/admin/cms/lessons">
+          <Link href="/admin/cms">
             <Card className="cursor-pointer hover:bg-accent transition-colors">
               <CardHeader>
                 <CardTitle className="flex items-center">
@@ -167,13 +167,13 @@ export default function AdminCMS() {
                   Manage Lessons
                 </CardTitle>
                 <CardDescription>
-                  Edit lesson content and add new materials
+                  Open a course below to edit its lesson content and materials
                 </CardDescription>
               </CardHeader>
             </Card>
           </Link>
 
-          <Link href="/admin/cms/quizzes">
+          <Link href="/admin/exam-analytics">
             <Card className="cursor-pointer hover:bg-accent transition-colors">
               <CardHeader>
                 <CardTitle className="flex items-center">
@@ -181,7 +181,7 @@ export default function AdminCMS() {
                   Manage Assessments
                 </CardTitle>
                 <CardDescription>
-                  Create and edit quiz questions
+                  Review exam questions, results and analytics
                 </CardDescription>
               </CardHeader>
             </Card>

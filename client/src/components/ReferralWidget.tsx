@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Gift, TrendingUp, Users, DollarSign, Copy, Share2, ArrowRight } from 'lucide-react';
-import { useLocation } from 'wouter';
 
 interface ReferralStats {
   totalClicks: number;
@@ -32,7 +31,6 @@ interface ReferralCodeInfo {
 }
 
 export function ReferralWidget() {
-  const [, setLocation] = useLocation();
   const [stats, setStats] = useState<ReferralStats>({
     totalClicks: 0,
     totalConversions: 0,
@@ -89,7 +87,23 @@ export function ReferralWidget() {
   };
 
   const handleShare = () => {
-    setLocation('/referral');
+    if (!referralCode) return;
+    const shareUrl = `${window.location.origin}/signup?ref=${encodeURIComponent(referralCode.code)}`;
+    if (navigator.share) {
+      navigator
+        .share({
+          title: 'Join CSOAI',
+          text: 'Join me on CSOAI — AI safety certification & compliance.',
+          url: shareUrl,
+        })
+        .catch(() => {
+          /* user dismissed the share sheet — no-op */
+        });
+    } else {
+      navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
   const formatDate = (dateString: string) => {
