@@ -99,7 +99,7 @@ export function Header() {
         { name: 'Canada AI Act', href: '/compliance/canada-ai-act', description: 'Canada regulation' },
         { name: 'Australia AI Governance', href: '/compliance/australia-ai-governance', description: 'Australia framework' },
         { name: 'Run Assessment', href: '/compliance', description: 'Run assessment' },
-        { name: 'MCP Tools', href: '/mcp', description: '300+ compliance MCP servers' },
+        { name: 'MCP Tools', href: '/mcp', description: '271 compliance MCP servers' },
         { name: 'Public Scorecard', href: '/transparency', description: 'Public compliance data' },
       ]
     },
