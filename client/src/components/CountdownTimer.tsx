@@ -17,8 +17,8 @@ export function CountdownTimer() {
 
   useEffect(() => {
     const calculateTimeRemaining = () => {
-      // EU AI Act deadline: February 2, 2026
-      const deadline = new Date('2026-02-02T00:00:00').getTime();
+      // EU AI Act enforcement deadline: August 2, 2026
+      const deadline = new Date('2026-08-02T00:00:00').getTime();
       const now = new Date().getTime();
       const difference = deadline - now;
 

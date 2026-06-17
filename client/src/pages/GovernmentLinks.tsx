@@ -26,7 +26,7 @@ export default function GovernmentLinks() {
           description: 'Comprehensive AI regulation framework for the EU',
           link: 'https://digital-strategy.ec.europa.eu/en/policies/ai-act',
           status: 'Active',
-          deadline: 'Feb 2, 2026'
+          deadline: 'Aug 2, 2026'
         },
         {
           title: 'GDPR',
@@ -334,7 +334,7 @@ export default function GovernmentLinks() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">EU AI Act Enforcement</h4>
-                  <p className="text-gray-600 text-sm">February 2, 2026</p>
+                  <p className="text-gray-600 text-sm">August 2, 2026</p>
                   <p className="text-xs text-gray-500 mt-1">Mandatory compliance deadline for EU enterprises</p>
                 </div>
               </div>

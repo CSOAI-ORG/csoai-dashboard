@@ -393,7 +393,7 @@ export default function HomepageMaster() {
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <p className="text-4xl font-bold mb-2">50,000</p>
-                <p className="text-emerald-100">EU Enterprises need compliance by Feb 2</p>
+                <p className="text-emerald-100">EU Enterprises need compliance by Aug 2</p>
               </div>
               <div>
                 <p className="text-4xl font-bold mb-2">250,000</p>
@@ -540,19 +540,19 @@ export default function HomepageMaster() {
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">The Regulatory Crisis.<br />The Job Opportunity.</h2>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">The EU AI Act compliance deadline is February 2, 2026. 50,000 enterprises must comply. They need 100,000-250,000 AI Safety Analysts. That job category doesn't exist yet. This is the largest employment opportunity of the decade—and the only way to solve the regulatory crisis while protecting humanity.</p>
+            <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">The EU AI Act compliance deadline is August 2, 2026. 50,000 enterprises must comply. They need 100,000-250,000 AI Safety Analysts. That job category doesn't exist yet. This is the largest employment opportunity of the decade—and the only way to solve the regulatory crisis while protecting humanity.</p>
           </motion.div>
 
 
 
           <motion.div {...fadeInUp} className="bg-white bg-opacity-10 border-2 border-white rounded-lg p-10 mb-12">
             <h3 className="text-3xl font-bold text-emerald-600 mb-6 text-center">How CEASAI Solves the Crisis</h3>
-            <p className="text-lg mb-8 max-w-4xl mx-auto text-center leading-relaxed" style={{ color: '#fd0808' }}>If we train 100,000-250,000 AI Safety Analysts through CEASAI by February 2026, we solve the impossible regulatory deadline while creating the largest employment opportunity in a generation and making AI fundamentally safer for everyone.</p>
+            <p className="text-lg mb-8 max-w-4xl mx-auto text-center leading-relaxed" style={{ color: '#fd0808' }}>If we train 100,000-250,000 AI Safety Analysts through CEASAI by August 2026, we solve the impossible regulatory deadline while creating the largest employment opportunity in a generation and making AI fundamentally safer for everyone.</p>
             
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white bg-opacity-5 p-6 rounded-lg border border-white border-opacity-20 hover:bg-opacity-10 transition">
                 <p className="text-emerald-600 font-bold text-lg mb-3">✓ Regulatory Compliance</p>
-                <p className="text-gray-900 text-sm leading-relaxed">50,000 enterprises get access to certified AI Safety Analysts who can audit their systems and ensure compliance before the Feb 2 deadline. No enterprise gets left behind.</p>
+                <p className="text-gray-900 text-sm leading-relaxed">50,000 enterprises get access to certified AI Safety Analysts who can audit their systems and ensure compliance before the Aug 2 deadline. No enterprise gets left behind.</p>
               </div>
               <div className="bg-white bg-opacity-5 p-6 rounded-lg border border-white border-opacity-20 hover:bg-opacity-10 transition">
                 <p className="text-emerald-600 font-bold text-lg mb-3">✓ Mass Employment</p>

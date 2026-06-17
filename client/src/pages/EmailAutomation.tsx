@@ -62,7 +62,7 @@ const EMAIL_TEMPLATES = [
 
 Happy New Year from CSOAI!
 
-As the EU AI Act enforcement deadline approaches (February 2, 2026), we're launching a groundbreaking global AI safety initiative that directly impacts {{country}}.
+As the EU AI Act enforcement deadline approaches (August 2, 2026), we're launching a groundbreaking global AI safety initiative that directly impacts {{country}}.
 
 Key Highlights:
 • 250,000 AI Safety Analysts needed globally

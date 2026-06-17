@@ -25,7 +25,7 @@ export default function RegulatoryCompliance() {
       name: 'EU AI Act',
       region: 'European Union',
       status: 'Active',
-      deadline: 'February 2, 2026',
+      deadline: 'August 2, 2026',
       description: 'Comprehensive AI regulation framework establishing risk-based requirements for AI systems',
       icon: '🇪🇺',
       coverage: '50,000+ EU enterprises',
@@ -210,7 +210,7 @@ export default function RegulatoryCompliance() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-600 text-sm font-semibold">Compliance Deadline</p>
-                <p className="text-2xl font-bold text-gray-900 mt-2">Feb 2, 2026</p>
+                <p className="text-2xl font-bold text-gray-900 mt-2">Aug 2, 2026</p>
               </div>
               <Clock className="h-10 w-10 text-emerald-600" />
             </div>

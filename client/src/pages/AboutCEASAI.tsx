@@ -60,7 +60,7 @@ export default function AboutCEASAI() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                By <strong>February 2, 2026</strong>, the EU AI Act enforcement deadline, enterprises worldwide will need{' '}
+                By <strong>August 2, 2026</strong>, the EU AI Act enforcement deadline, enterprises worldwide will need{' '}
                 <strong className="text-blue-600">250,000 certified AI Safety Analysts</strong> to ensure compliance, 
                 transparency, and safety. CEASAI exists to train, certify, and deploy this critical workforce—preventing 
                 compliance chaos and ensuring AI systems serve humanity responsibly.
