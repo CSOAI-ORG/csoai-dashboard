@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { IncidentReportForm } from '@/components/IncidentReportForm';
 import { CouncilEcosystemVisualization } from '@/components/CouncilEcosystemVisualization';
 import { Activity } from 'lucide-react';
@@ -22,6 +23,83 @@ import {
   Heart,
 } from 'lucide-react';
 
+const HOME_FAQ = [
+  {
+    q: "What is CSOAI?",
+    a: "CSOAI is an open-source AI safety governance framework that includes the Watchdog incident database, 33-Agent Byzantine Council for impartial decisions, and SOAI-PDCA continuous improvement methodology. It's free and available to everyone.",
+  },
+  {
+    q: "What is CEASAI?",
+    a: "CEASAI is a professional certification program built on top of CSOAI. It trains people to become AI Safety Analysts through an 8-week course, 50-question exam (70% pass rate), and employment opportunities on Watchdog and Council cases.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "CSOAI is free (open-source). CEASAI training costs $99-$499 depending on the certification level. First 10,000 signups get the $499 course for free.",
+  },
+  {
+    q: "Can I really earn $45-150/hour?",
+    a: "Yes. Certified AI Safety Analysts earn $45-150/hour depending on experience level. You work on real Watchdog reports and Council cases, helping improve AI safety while earning income.",
+  },
+  {
+    q: "Is CSOAI EU AI Act compliant?",
+    a: "Yes. CSOAI is fully compliant with EU AI Act Article 14 (human oversight requirements). We ensure human experts oversee all critical AI decisions.",
+  },
+  {
+    q: "How do I report AI problems?",
+    a: "Visit the Watchdog Hub and submit a report. You can report anonymously. Your report will be reviewed by the 33-Agent Council and tracked through the SOAI-PDCA improvement cycle.",
+  },
+  {
+    q: "What background do I need?",
+    a: "You don't need a technical background. Our training covers everything from AI basics to compliance frameworks. We accept applications from developers, compliance professionals, researchers, and anyone passionate about AI safety.",
+  },
+  {
+    q: "How long is the certification?",
+    a: "The CEASAI program takes approximately 8 weeks to complete. This includes 5 weeks of self-paced training, 2 weeks of exam preparation, and the final exam. You can work at your own pace.",
+  },
+  {
+    q: "What is the 33-Agent Council?",
+    a: "The 33-Agent Council is a Byzantine consensus system that uses AI agents and human experts to make impartial decisions on AI safety incidents. It ensures no single entity controls outcomes and prevents bias.",
+  },
+  {
+    q: "Can I use CSOAI for my enterprise?",
+    a: "Yes! CSOAI is open-source and free. Enterprises can deploy it internally for compliance monitoring, incident tracking, and AI governance. We also offer enterprise support and custom integrations.",
+  },
+  {
+    q: "How is my data protected?",
+    a: "We use industry-standard encryption, secure authentication, and regular security audits. We comply with GDPR, CCPA, and other privacy regulations. We never sell your data to third parties.",
+  },
+  {
+    q: "What happens after I pass the exam?",
+    a: "After passing, you receive a digital certificate and can start accepting work on Watchdog cases and Council voting. You'll have access to the analyst dashboard and can earn money immediately.",
+  },
+];
+
+const HOME_ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Council for the Safety of AI",
+  alternateName: "CSOAI",
+  url: "https://csoai.org",
+  logo: "https://csoai.org/logo.png",
+  description:
+    "Global AI safety certification platform training and employing AI Safety Analysts to monitor artificial intelligence systems for compliance with EU AI Act, NIST AI RMF, and ISO 42001.",
+  sameAs: [
+    "https://twitter.com/CsoaiLimited",
+    "https://www.linkedin.com/company/110448367",
+    "https://github.com/CSOAI-ORG",
+  ],
+};
+
+const HOME_FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQ.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function HomepageMaster() {
   const [, setLocation] = useLocation();
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
@@ -42,6 +120,10 @@ export default function HomepageMaster() {
 
   return (
     <div className="w-full bg-white">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(HOME_ORG_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(HOME_FAQ_SCHEMA)}</script>
+      </Helmet>
       {/* ============================================
           SECTION 1: HERO - FOUR SOLUTIONS
           ============================================ */}
@@ -768,56 +850,7 @@ export default function HomepageMaster() {
           </motion.div>
 
           <div className="space-y-4">
-            {[
-              {
-                q: "What is CSOAI?",
-                a: "CSOAI is an open-source AI safety governance framework that includes the Watchdog incident database, 33-Agent Byzantine Council for impartial decisions, and SOAI-PDCA continuous improvement methodology. It's free and available to everyone.",
-              },
-              {
-                q: "What is CEASAI?",
-                a: "CEASAI is a professional certification program built on top of CSOAI. It trains people to become AI Safety Analysts through an 8-week course, 50-question exam (70% pass rate), and employment opportunities on Watchdog and Council cases.",
-              },
-              {
-                q: "How much does it cost?",
-                a: "CSOAI is free (open-source). CEASAI training costs $99-$499 depending on the certification level. First 10,000 signups get the $499 course for free.",
-              },
-              {
-                q: "Can I really earn $45-150/hour?",
-                a: "Yes. Certified AI Safety Analysts earn $45-150/hour depending on experience level. You work on real Watchdog reports and Council cases, helping improve AI safety while earning income.",
-              },
-              {
-                q: "Is CSOAI EU AI Act compliant?",
-                a: "Yes. CSOAI is fully compliant with EU AI Act Article 14 (human oversight requirements). We ensure human experts oversee all critical AI decisions.",
-              },
-              {
-                q: "How do I report AI problems?",
-                a: "Visit the Watchdog Hub and submit a report. You can report anonymously. Your report will be reviewed by the 33-Agent Council and tracked through the SOAI-PDCA improvement cycle.",
-              },
-              {
-                q: "What background do I need?",
-                a: "You don't need a technical background. Our training covers everything from AI basics to compliance frameworks. We accept applications from developers, compliance professionals, researchers, and anyone passionate about AI safety.",
-              },
-              {
-                q: "How long is the certification?",
-                a: "The CEASAI program takes approximately 8 weeks to complete. This includes 5 weeks of self-paced training, 2 weeks of exam preparation, and the final exam. You can work at your own pace.",
-              },
-              {
-                q: "What is the 33-Agent Council?",
-                a: "The 33-Agent Council is a Byzantine consensus system that uses AI agents and human experts to make impartial decisions on AI safety incidents. It ensures no single entity controls outcomes and prevents bias.",
-              },
-              {
-                q: "Can I use CSOAI for my enterprise?",
-                a: "Yes! CSOAI is open-source and free. Enterprises can deploy it internally for compliance monitoring, incident tracking, and AI governance. We also offer enterprise support and custom integrations.",
-              },
-              {
-                q: "How is my data protected?",
-                a: "We use industry-standard encryption, secure authentication, and regular security audits. We comply with GDPR, CCPA, and other privacy regulations. We never sell your data to third parties.",
-              },
-              {
-                q: "What happens after I pass the exam?",
-                a: "After passing, you receive a digital certificate and can start accepting work on Watchdog cases and Council voting. You'll have access to the analyst dashboard and can earn money immediately.",
-              },
-            ].map((faq, idx) => (
+            {HOME_FAQ.map((faq, idx) => (
               <motion.div key={idx} {...fadeInUp} className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === idx ? null : idx)}

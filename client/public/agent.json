@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "name_for_human": "CSOAI",
   "name_for_model": "csoai",
-  "description_for_model": "Council for the Safety of AI. AI compliance (EU AI Act, NIST AI RMF, ISO 42001, TC260), certification (CEASAI), and 302 governance MCP servers. Crosswalks across 13 frameworks. Ed25519-signed attestations.",
+  "description_for_model": "Council for the Safety of AI. AI compliance (EU AI Act, NIST AI RMF, ISO 42001, TC260), certification (CEASAI), and 271+ governance MCP servers. Crosswalks across 13 frameworks. Ed25519-signed attestations.",
   "auth": { "type": "service_http", "provision": "https://meok-attestation-api.vercel.app/provision" },
   "api": { "type": "mcp", "manifest": "https://csoai.org/.well-known/mcp.json" },
   "contact_email": "nicholas@csoai.org",

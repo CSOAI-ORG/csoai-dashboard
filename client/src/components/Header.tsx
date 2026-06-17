@@ -224,7 +224,19 @@ export function Header() {
             >
               Home
             </a>
-            
+
+            <a
+              href="/pricing"
+              data-testid="nav-pricing"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
+                isActive('/pricing')
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
+              }`}
+            >
+              Pricing
+            </a>
+
             {navigation.map((item) => (
               <div
                 key={item.name}
@@ -419,7 +431,19 @@ export function Header() {
                 >
                   Home
                 </a>
-                
+
+                <a
+                  href="/pricing"
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors block ${
+                    isActive('/pricing')
+                      ? 'text-emerald-600 bg-emerald-50'
+                      : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pricing
+                </a>
+
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <a

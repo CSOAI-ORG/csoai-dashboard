@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from 'wouter';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -244,8 +245,52 @@ export default function Pricing() {
     return <span className="text-sm font-medium">{value}</span>;
   };
   
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'CSOAI AI Governance Platform',
+    description: 'EU AI Act, NIST AI RMF, ISO 42001 and TC260 compliance, certification and governance MCP tools.',
+    brand: { '@type': 'Brand', name: 'Council for the Safety of AI' },
+    offers: PRICING_TIERS.map((tier) => ({
+      '@type': 'Offer',
+      name: tier.name,
+      description: tier.description,
+      price: tier.monthlyPrice,
+      priceCurrency: 'GBP',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: tier.monthlyPrice,
+        priceCurrency: 'GBP',
+        unitText: 'MONTH',
+      },
+      url: 'https://csoai.org/pricing',
+      availability: 'https://schema.org/InStock',
+    })),
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <Helmet>
+        <title>Pricing — CSOAI | AI Governance Plans</title>
+        <meta name="description" content="CSOAI pricing: Starter £499/mo, Professional £999/mo, Enterprise £1,999/mo. EU AI Act, NIST RMF, ISO 42001 & TC260 compliance, certification and MCP tools." />
+        <link rel="canonical" href="https://csoai.org/pricing" />
+        <meta property="og:title" content="Pricing — CSOAI" />
+        <meta property="og:description" content="AI governance plans: Starter £499, Professional £999, Enterprise £1,999 per month." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://csoai.org/pricing" />
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       {/* Header */}
       <div className="container mx-auto py-16 px-4">
         <div className="text-center mb-12">
