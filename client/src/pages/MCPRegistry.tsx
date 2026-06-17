@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Helmet } from "react-helmet-async";
 import { Link, useSearch } from "wouter";
-import { Search, ExternalLink, ShieldCheck, Boxes, Layers, ArrowRight, Github, Terminal, Cloud, Plug } from "lucide-react";
+import { Search, ExternalLink, ShieldCheck, Boxes, Layers, ArrowRight, Github, Terminal, Cloud, Plug, KeyRound } from "lucide-react";
 import registry from "@/data/mcpRegistry.json";
 
 type Server = {
@@ -108,6 +108,20 @@ export default function MCPRegistry() {
               <span className="font-bold text-2xl">{FRAMEWORKS.length}</span>
               <span className="text-gray-600">frameworks covered</span>
             </div>
+          </div>
+
+          {/* Self-serve developer path */}
+          <div className="flex flex-wrap gap-3 mt-8">
+            <Link href="/signup?source=mcp-api-key">
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
+                <KeyRound className="mr-2 h-4 w-4" aria-hidden="true" /> Get a free API key
+              </Button>
+            </Link>
+            <Link href="/api-docs">
+              <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-700 hover:bg-emerald-50">
+                Read the API docs
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
