@@ -1974,7 +1974,7 @@ export const users = mysqlTable("users", {
 	lastSignedIn: timestamp({ mode: 'string' }).default('CURRENT_TIMESTAMP').notNull(),
 	stripeCustomerId: varchar({ length: 255 }),
 	stripeSubscriptionId: varchar({ length: 255 }),
-	subscriptionTier: mysqlEnum(['free','pro','enterprise']).default('free').notNull(),
+	subscriptionTier: mysqlEnum(['free','starter','pro','enterprise']).default('free').notNull(),
 	subscriptionStatus: mysqlEnum(['active','canceled','past_due','trialing','none']).default('none').notNull(),
 	brand: varchar({ length: 50 }).default('councilof.ai'),
 	foundingMember: tinyint("founding_member").default(0),

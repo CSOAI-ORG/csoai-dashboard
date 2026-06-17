@@ -169,9 +169,19 @@ export function mapSubscriptionStatus(stripeStatus: string): "active" | "cancele
  * Get tier from Stripe price ID
  */
 export function getTierFromPriceId(priceId: string): SubscriptionTier {
+  if (!priceId) return "free";
+  // Primary: match the real configured Stripe price IDs (price_xxx never contains
+  // the tier name, so substring matching alone silently returns "free" and
+  // downgrades paying customers on every subscription.updated event).
+  for (const [tier, cfg] of Object.entries(SUBSCRIPTION_TIERS) as [SubscriptionTier, any][]) {
+    if (priceId === cfg.stripePriceIdMonthly || priceId === cfg.stripePriceIdYearly) {
+      return tier;
+    }
+  }
+  // Fallback: legacy placeholder IDs (price_pro_monthly etc.) used in dev.
   if (priceId.includes("enterprise")) return "enterprise";
-  if (priceId.includes("pro")) return "pro";
   if (priceId.includes("starter")) return "starter";
+  if (priceId.includes("pro")) return "pro";
   return "free";
 }
 

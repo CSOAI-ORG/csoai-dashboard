@@ -209,7 +209,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   }
 
   // Otherwise, this is a platform subscription
-  const tier = (session.metadata?.tier as "pro" | "enterprise") || "pro";
+  const tier = (session.metadata?.tier as "starter" | "pro" | "enterprise") || "pro";
   console.log(`[Stripe Webhook] Platform subscription checkout completed for user ${userId}, tier: ${tier}`);
 
   // Update user with Stripe IDs and subscription info
