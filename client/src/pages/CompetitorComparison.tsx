@@ -29,20 +29,22 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-const competitors = ["CSOAI", "Credo AI", "OneTrust", "Holistic AI", "Fiddler AI", "IBM watsonx"];
+const competitors = ["CSOAI", "Credo AI", "Holistic AI", "IBM watsonx.governance"];
 
 const comparisonData = [
-  { feature: "Professional Certification (CEASAI)", values: ["yes", "no", "no", "no", "no", "no"] },
-  { feature: "System Certification", values: ["yes", "no", "no", "no", "no", "no"] },
-  { feature: "AI Agent Monitoring (33 agents)", values: ["yes", "no", "no", "no", "no", "no"] },
-  { feature: "Byzantine Fault Tolerance", values: ["yes", "no", "no", "no", "no", "no"] },
-  { feature: "Economic Redistribution", values: ["yes", "no", "no", "no", "no", "no"] },
-  { feature: "EU AI Act Compliance Mapping", values: ["yes", "yes", "yes", "yes", "partial", "yes"] },
-  { feature: "NIST AI RMF Mapping", values: ["yes", "yes", "yes", "partial", "partial", "yes"] },
-  { feature: "ISO 42001 Mapping", values: ["yes", "yes", "yes", "partial", "no", "yes"] },
-  { feature: "Bias Detection", values: ["yes", "partial", "partial", "yes", "yes", "yes"] },
-  { feature: "Model Observability", values: ["partial", "partial", "partial", "partial", "yes", "yes"] },
-  { feature: "Pricing", values: ["£3.5K–£150K", "$50K+/yr", "$80K–$300K/yr", "Enterprise", "Enterprise", "Usage-based"] },
+  { feature: "Multi-framework crosswalks (22 frameworks)", values: ["yes", "partial", "partial", "partial"] },
+  { feature: "Public transparency / Watchdog hub", values: ["yes", "no", "no", "no"] },
+  { feature: "Global AI regulation map", values: ["yes", "no", "partial", "no"] },
+  { feature: "Independent certification (CEASAI)", values: ["yes", "no", "no", "no"] },
+  { feature: "Self-serve & transparent pricing", values: ["yes", "no", "no", "no"] },
+  { feature: "Agentic 33-Agent Council monitoring", values: ["yes", "no", "no", "no"] },
+  { feature: "Free EU AI Act risk classifier", values: ["yes", "no", "no", "no"] },
+  { feature: "Byzantine fault-tolerant consensus", values: ["yes", "no", "no", "no"] },
+  { feature: "EU AI Act compliance mapping", values: ["yes", "yes", "yes", "yes"] },
+  { feature: "NIST AI RMF mapping", values: ["yes", "yes", "partial", "yes"] },
+  { feature: "ISO 42001 mapping", values: ["yes", "yes", "partial", "yes"] },
+  { feature: "Bias detection", values: ["yes", "partial", "yes", "yes"] },
+  { feature: "Pricing model", values: ["Self-serve £3.5K–£150K", "Demo-gated", "Demo-gated", "Enterprise / usage-based"] },
 ];
 
 const faqs = [
@@ -93,9 +95,9 @@ export default function CompetitorComparison() {
   const comparisonSchema = {
     "@context": "https://schema.org",
     "@type": "ComparisonTable",
-    name: "CSOAI vs Credo AI, OneTrust, Holistic AI, Fiddler AI, IBM watsonx",
+    name: "CSOAI vs Credo AI, Holistic AI, IBM watsonx.governance",
     description:
-      "Compare CSOAI against Credo AI, OneTrust, Holistic AI and Fiddler. CSOAI is the only AI safety certification body with 33-agent Byzantine monitoring.",
+      "Compare CSOAI against Credo AI, Holistic AI and IBM watsonx.governance. CSOAI leads on breadth (22 framework crosswalks), public transparency, self-serve pricing, free tooling, and 33-agent Byzantine monitoring.",
     about: {
       "@type": "Organization",
       name: "CSOAI",
