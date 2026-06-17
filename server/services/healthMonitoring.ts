@@ -8,6 +8,10 @@ import { serviceStatus, systemIncidents } from "../../drizzle/schema-status";
 import { eq, and, desc } from "drizzle-orm";
 import { notifyIncidentCreated, notifyIncidentResolved } from "./statusNotifications";
 
+function toMySQLDate(d: Date = new Date()): string {
+  return d.toISOString().slice(0, 19).replace('T', ' ');
+}
+
 interface HealthCheckResult {
   serviceName: string;
   isHealthy: boolean;
@@ -40,8 +44,8 @@ export async function runHealthChecks(): Promise<HealthCheckResult[]> {
       .update(serviceStatus)
       .set({
         status: newStatus,
-        lastCheckedAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        lastCheckedAt: toMySQLDate(),
+        updatedAt: toMySQLDate(),
       })
       .where(eq(serviceStatus.id, service.id));
 
@@ -168,7 +172,7 @@ async function handleIncidentLifecycle(service: any, result: HealthCheckResult) 
         severity: 'major',
         status: 'investigating',
         affectedServices: JSON.stringify([service.serviceName]),
-        startedAt: new Date().toISOString(),
+        startedAt: toMySQLDate(),
         reportedBy: null, // Auto-detected, not reported by user
       });
 
@@ -195,8 +199,8 @@ async function handleIncidentLifecycle(service: any, result: HealthCheckResult) 
       .update(systemIncidents)
       .set({
         status: 'resolved',
-        resolvedAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        resolvedAt: toMySQLDate(),
+        updatedAt: toMySQLDate(),
       })
       .where(eq(systemIncidents.id, existingIncident.id));
 
