@@ -12,6 +12,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertCircle, CheckCircle, Clock, Users, TrendingUp, Download } from 'lucide-react';
+import { DeadlineCountdown } from '@/components/DeadlineCountdown';
+import { ComplianceGamification } from '@/components/ComplianceGamification';
 
 interface RemediationAction {
   id: string;
@@ -208,6 +210,16 @@ export const ComplianceRoadmapPage: React.FC = () => {
           Export Roadmap
         </Button>
       </div>
+
+      {/* EU AI Act deadline countdown */}
+      <DeadlineCountdown variant="full" />
+
+      {/* Gamified milestone progress: level, phases conquered, next milestone */}
+      <ComplianceGamification
+        overallScore={overallProgress}
+        frameworks={phases.map((phase) => ({ name: phase.name, score: phase.progress }))}
+        conqueredThreshold={100}
+      />
 
       {/* Overall Progress */}
       <Card>

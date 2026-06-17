@@ -34,6 +34,8 @@ import { useLocation, Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { ReferralWidget } from "@/components/ReferralWidget";
 import { DashboardSkeleton } from "@/components/skeletons/DashboardSkeleton";
+import { DeadlineCountdown } from "@/components/DeadlineCountdown";
+import { ComplianceGamification } from "@/components/ComplianceGamification";
 
 const frameworkCompliance = [
   { name: "EU AI Act", score: 72, status: "In Progress", deadline: "Aug 2026", articles: 113 },
@@ -171,6 +173,11 @@ export default function Dashboard() {
           </div>
         </div>
 
+        {/* EU AI Act deadline urgency loop */}
+        <div className="flex justify-start">
+          <DeadlineCountdown variant="compact" />
+        </div>
+
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" data-testid="dashboard-metrics-grid">
           {metrics.map((metric, idx) => {
@@ -221,6 +228,18 @@ export default function Dashboard() {
             );
           })}
         </div>
+
+        {/* Compliance gamification: level, streak, frameworks conquered, milestone */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 0.15 }}
+        >
+          <ComplianceGamification
+            overallScore={dashboardStats?.complianceScore ?? 78}
+            frameworks={frameworkCompliance.map((f) => ({ name: f.name, score: f.score }))}
+          />
+        </motion.div>
 
         {/* SOAI-PDCA Loop - Enhanced Visualization */}
         <motion.div
