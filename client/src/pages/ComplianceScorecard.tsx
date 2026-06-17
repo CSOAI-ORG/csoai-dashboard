@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams, useLocation } from 'wouter';
+import { toast } from 'sonner';
 import { trpc } from '@/lib/trpc';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,25 +19,88 @@ import {
   TrendingUp,
   Calendar,
   Building2,
-  Cpu
+  Cpu,
+  Loader2
 } from 'lucide-react';
 
 export default function ComplianceScorecard() {
   const { systemId } = useParams<{ systemId: string }>();
   const [, navigate] = useLocation();
-  
+
   const { data: system } = trpc.aiSystems.getById.useQuery(
     { id: parseInt(systemId || '0') },
     { enabled: !!systemId }
   );
-  
+
   const { data: assessments } = trpc.compliance.getAssessments.useQuery(
     { aiSystemId: parseInt(systemId || '0') },
     { enabled: !!systemId }
   );
-  
+
   const { data: frameworks } = trpc.compliance.getFrameworks.useQuery();
-  
+
+  // Reuse the working PDF mutation from Compliance.tsx (returns base64 PDF).
+  const generateReportMutation = trpc.compliance.generateReport.useMutation({
+    onSuccess: (data) => {
+      const link = document.createElement('a');
+      link.href = `data:application/pdf;base64,${data.pdf}`;
+      link.download = data.filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      toast.success('Scorecard PDF downloaded');
+    },
+    onError: (error) => {
+      toast.error('Failed to export PDF', { description: error.message });
+    },
+  });
+
+  const handleExportPdf = () => {
+    // Use the most recent completed assessment as the report basis.
+    const latest = [...completedAssessments].sort(
+      (a, b) =>
+        new Date(b.assessment.createdAt!).getTime() -
+        new Date(a.assessment.createdAt!).getTime()
+    )[0];
+    if (!latest) {
+      toast.error('No completed assessment to export', {
+        description: 'Run an assessment first to generate a PDF scorecard.',
+      });
+      return;
+    }
+    generateReportMutation.mutate({
+      assessmentId: latest.assessment.id,
+      includeEvidence: true,
+      includeRecommendations: true,
+    });
+  };
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    const shareData = {
+      title: `${system?.name ?? 'AI System'} — Compliance Scorecard`,
+      text: `Compliance scorecard for ${system?.name ?? 'this AI system'} on CSOAI.`,
+      url,
+    };
+    // Prefer the native Web Share API where available.
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch {
+        // User cancelled or share failed — fall through to clipboard copy.
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.success('Link copied to clipboard', {
+        description: 'Share this scorecard link with your team.',
+      });
+    } catch {
+      toast.error('Could not copy link', { description: url });
+    }
+  };
+
   if (!system) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8">
@@ -93,13 +157,31 @@ export default function ComplianceScorecard() {
               Back
             </Button>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" className="border-emerald-300 text-emerald-700 hover:bg-emerald-100">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleShare}
+                aria-label="Share this compliance scorecard"
+                className="border-emerald-300 text-emerald-700 hover:bg-emerald-100"
+              >
                 <Share2 className="h-4 w-4 mr-2" />
                 Share
               </Button>
-              <Button variant="outline" size="sm" className="border-emerald-300 text-emerald-700 hover:bg-emerald-100">
-                <Download className="h-4 w-4 mr-2" />
-                Export PDF
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleExportPdf}
+                disabled={generateReportMutation.isPending}
+                aria-label="Export compliance scorecard as PDF"
+                aria-busy={generateReportMutation.isPending}
+                className="border-emerald-300 text-emerald-700 hover:bg-emerald-100"
+              >
+                {generateReportMutation.isPending ? (
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                ) : (
+                  <Download className="h-4 w-4 mr-2" />
+                )}
+                {generateReportMutation.isPending ? 'Exporting…' : 'Export PDF'}
               </Button>
             </div>
           </div>
