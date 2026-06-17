@@ -55,6 +55,7 @@ import { useTabOrdering } from '@/hooks/useTabOrdering';
 import { KeyboardShortcutsIndicator } from '@/components/KeyboardShortcutsIndicator';
 import { PinnedFavoritesWidget } from '@/components/PinnedFavoritesWidget';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import TabErrorBoundary from '@/components/TabErrorBoundary';
 
 // Import feature components
 import Dashboard from './Dashboard';
@@ -457,9 +458,9 @@ export default function MembersDashboard() {
                     currentTab={activeTab}
                   />
                   
-                  <Suspense fallback={<TabLoadingFallback />}>
+                  <TabErrorBoundary><Suspense fallback={<TabLoadingFallback />}>
                     <Dashboard />
-                  </Suspense>
+                  </Suspense></TabErrorBoundary>
                 </motion.div>
               </div>
             )}
@@ -537,10 +538,10 @@ export default function MembersDashboard() {
                   </Card>
 
                   {/* Sub-tab Content */}
-                  <Suspense fallback={<TabLoadingFallback />}>
+                  <TabErrorBoundary><Suspense fallback={<TabLoadingFallback />}>
                     {watchdogSubTab === 'incidents' && <Watchdog />}
                     {watchdogSubTab === 'leaderboard' && <WatchdogLeaderboard />}
-                  </Suspense>
+                  </Suspense></TabErrorBoundary>
                 </motion.div>
               </div>
             </div>
@@ -564,9 +565,9 @@ export default function MembersDashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Suspense fallback={<TabLoadingFallback />}>
+                  <TabErrorBoundary><Suspense fallback={<TabLoadingFallback />}>
                     <Training />
-                  </Suspense>
+                  </Suspense></TabErrorBoundary>
                 </motion.div>
               </div>
             </div>
@@ -590,9 +591,9 @@ export default function MembersDashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Suspense fallback={<TabLoadingFallback />}>
+                  <TabErrorBoundary><Suspense fallback={<TabLoadingFallback />}>
                     <Certification />
-                  </Suspense>
+                  </Suspense></TabErrorBoundary>
                 </motion.div>
               </div>
             </div>
@@ -616,9 +617,9 @@ export default function MembersDashboard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Suspense fallback={<TabLoadingFallback />}>
+                  <TabErrorBoundary><Suspense fallback={<TabLoadingFallback />}>
                     <RegulatoryAuthority />
-                  </Suspense>
+                  </Suspense></TabErrorBoundary>
                 </motion.div>
               </div>
             </div>

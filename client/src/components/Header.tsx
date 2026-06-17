@@ -424,9 +424,11 @@ export function Header() {
         {/* Mobile Menu Overlay */}
         {mobileMenuOpen && (
           <>
-            {/* Backdrop */}
-            <div 
-              className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+            {/* Backdrop — decorative dismiss overlay; the labelled X button is the
+                accessible close path, so hide this from assistive tech. */}
+            <div
+              aria-hidden="true"
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
               onClick={() => setMobileMenuOpen(false)}
             />
             {/* Mobile Menu */}

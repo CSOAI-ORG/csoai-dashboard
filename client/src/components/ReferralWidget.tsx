@@ -204,8 +204,9 @@ export function ReferralWidget() {
                 size="sm"
                 variant="outline"
                 className="border-gray-300"
+                aria-label={copied ? 'Referral code copied' : 'Copy referral code'}
               >
-                {copied ? '✓' : <Copy className="h-4 w-4" />}
+                {copied ? '✓' : <Copy className="h-4 w-4" aria-hidden="true" />}
               </Button>
             </div>
           </div>
