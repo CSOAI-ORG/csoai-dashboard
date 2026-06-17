@@ -308,8 +308,8 @@ function App() {
                   <Route path="/dashboard/training"><Redirect to="/training" /></Route>
                   <Route path="/training-catalog"><Redirect to="/courses" /></Route>
                   <Route path="/training-courses"><Redirect to="/courses" /></Route>
-                  <Route path="/training-courses/:id"><Redirect to="/courses/:id" /></Route>
-                  <Route path="/training-courses/:id/learn"><Redirect to="/courses/:id/learn" /></Route>
+                  <Route path="/training-courses/:id/learn">{(params) => <Redirect to={`/courses/${params.id}/learn`} />}</Route>
+                  <Route path="/training-courses/:id">{(params) => <Redirect to={`/courses/${params.id}`} />}</Route>
                   <Route path="/my-training-courses"><Redirect to="/my-courses" /></Route>
                   <Route path="/dashboard/progress"><Redirect to="/progress" /></Route>
                   <Route path="/home"><Redirect to="/" /></Route>
