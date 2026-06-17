@@ -64,6 +64,7 @@ export const COUNTRY_NAMES: Record<string, string> = {
 // CSOAI tools/features that overlay onto a region from the sidebar (the "use one profile" layer).
 export type OverlayTool = { id: string; label: string; blurb: string; href: string; color: string };
 export const CSOAI_TOOLS: OverlayTool[] = [
+  { id: 'classify', label: 'Classify a system',   blurb: 'Free EU AI Act risk classifier — is your AI high-risk here?', href: '/eu-ai-act-classifier', color: '#34d399' },
   { id: 'assess',   label: 'Run Assessment',      blurb: 'Score this region\'s frameworks against your AI system.', href: '/compliance', color: '#10b981' },
   { id: 'watchdog', label: 'Watchdog',            blurb: 'AI-incident reports & obligations for this jurisdiction.', href: '/watchdog', color: '#38bdf8' },
   { id: 'certify',  label: 'Get Certified',       blurb: 'CEASAI certification mapped to local requirements.',      href: '/certification', color: '#f59e0b' },
