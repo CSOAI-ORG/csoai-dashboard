@@ -21,6 +21,7 @@ import {
   Lock,
   Briefcase,
   Heart,
+  ArrowRight,
 } from 'lucide-react';
 
 const HOME_FAQ = [
@@ -108,8 +109,24 @@ export default function HomepageMaster() {
     document.title = 'CSOAI: AI Safety Certification & Compliance Platform';
   }, []);
 
+  // Intent-aware routing: send each audience to the page that matches their goal,
+  // tagging the source so signup/analytics still attribute correctly.
+  const INTENT_ROUTES: Record<string, string> = {
+    enterprise: '/enterprise',
+    government: '/government-portal',
+    developer: '/mcp',
+    watchdog: '/watchdog/report',
+    pricing: '/pricing',
+  };
+
   const handleCTA = (source: string) => {
-    setLocation(`/signup?source=${encodeURIComponent(source)}`);
+    const dest = INTENT_ROUTES[source];
+    if (dest) {
+      setLocation(`${dest}?source=${encodeURIComponent(source)}`);
+    } else {
+      // analysts / individuals / learners → signup funnel
+      setLocation(`/signup?source=${encodeURIComponent(source)}`);
+    }
   };
 
   const fadeInUp = {
@@ -167,15 +184,60 @@ export default function HomepageMaster() {
             </div>
           </motion.div>
 
-          {/* Main Headline */}
-          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-center mb-12">
+          {/* Main Headline — one dominant value prop */}
+          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-center mb-8 sm:mb-10">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
-              Securing AI's Future.
-              <br />
-              <span className="text-emerald-600">The Solution to AI Safety & Tomorrow's Challenges.</span>
+              Make your AI{' '}
+              <span className="text-emerald-600">EU&nbsp;AI&nbsp;Act compliant</span>
+              <br className="hidden sm:block" />
+              {' '}— with human oversight built in.
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-semibold mt-4 sm:mt-6">Four critical solutions. One unified platform.</p>
-            <p className="text-sm sm:text-base md:text-lg text-red-600 font-semibold mt-3 sm:mt-4">Without 250,000 trained analysts by Aug 2, 2026, enterprises face compliance chaos. Our Byzantine Council ensures safety.</p>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium mt-4 sm:mt-6 max-w-3xl mx-auto">
+              CSOAI is the open platform that certifies AI Safety Analysts, monitors compliance, and gives every AI decision an impartial 33-Agent human-in-the-loop review.
+            </p>
+            <p className="text-sm sm:text-base text-red-600 font-semibold mt-3 sm:mt-4">EU AI Act enforcement begins Aug 2, 2026. Get audit-ready now.</p>
+          </motion.div>
+
+          {/* Choose your path — instant orientation for first-time visitors */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-10 sm:mb-12"
+          >
+            <p className="text-center text-sm font-semibold uppercase tracking-wide text-gray-500 mb-4">Choose your path</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <button
+                type="button"
+                onClick={() => handleCTA('analyst')}
+                className="group text-left bg-white border-2 border-emerald-200 hover:border-emerald-500 rounded-xl p-5 shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+              >
+                <Users className="w-7 h-7 text-emerald-600 mb-2" aria-hidden="true" />
+                <p className="font-bold text-gray-900">Individuals</p>
+                <p className="text-sm text-gray-600 mt-1">Get certified as an AI Safety Analyst and earn $45–150/hr.</p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 mt-3 group-hover:gap-2 transition-all">Start free training <ArrowRight className="w-4 h-4" aria-hidden="true" /></span>
+              </button>
+              <button
+                type="button"
+                onClick={() => handleCTA('enterprise')}
+                className="group text-left bg-white border-2 border-blue-200 hover:border-blue-500 rounded-xl p-5 shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              >
+                <Briefcase className="w-7 h-7 text-blue-600 mb-2" aria-hidden="true" />
+                <p className="font-bold text-gray-900">Compliance teams</p>
+                <p className="text-sm text-gray-600 mt-1">Multi-framework monitoring & audit-ready evidence for your AI.</p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-700 mt-3 group-hover:gap-2 transition-all">See enterprise <ArrowRight className="w-4 h-4" aria-hidden="true" /></span>
+              </button>
+              <button
+                type="button"
+                onClick={() => handleCTA('developer')}
+                className="group text-left bg-white border-2 border-slate-200 hover:border-slate-500 rounded-xl p-5 shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-600 focus-visible:ring-offset-2"
+              >
+                <Zap className="w-7 h-7 text-slate-700 mb-2" aria-hidden="true" />
+                <p className="font-bold text-gray-900">Developers</p>
+                <p className="text-sm text-gray-600 mt-1">Call the governance MCP fleet from any agent via one API.</p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-slate-700 mt-3 group-hover:gap-2 transition-all">Explore the MCP fleet <ArrowRight className="w-4 h-4" aria-hidden="true" /></span>
+              </button>
+            </div>
           </motion.div>
 
           {/* Security & Compliance Badges */}
