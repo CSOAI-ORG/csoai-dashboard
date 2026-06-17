@@ -2,6 +2,32 @@ import { useState } from "react";
 import { ChevronDown, BarChart3, Users, FileText, Settings, Zap, Trophy } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
+const DASHBOARD_HOWTO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to use the CSOAI dashboard",
+  description: "Navigate the CSOAI dashboard step by step: log in, check your overview, start training, prepare for your exam, browse jobs, then apply and earn.",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Log In", text: "Access your dashboard using your email or OAuth credentials." },
+    { "@type": "HowToStep", position: 2, name: "Check Overview", text: "See your certification status, earnings, and recent activity at a glance." },
+    { "@type": "HowToStep", position: 3, name: "Start Training", text: "If new, go to Training Hub and start with Fundamentals module." },
+    { "@type": "HowToStep", position: 4, name: "Prepare for Exam", text: "Review study materials and practice exams before taking the real exam." },
+    { "@type": "HowToStep", position: 5, name: "Browse Jobs", text: "Once certified, explore available AI safety monitoring projects." },
+    { "@type": "HowToStep", position: 6, name: "Apply & Earn", text: "Apply for projects, complete work, and get paid directly to your account." },
+  ],
+};
+
+const DASHBOARD_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://csoai.org/how-it-works" },
+    { "@type": "ListItem", position: 3, name: "Dashboard", item: "https://csoai.org/how-it-works/dashboard" },
+  ],
+};
 
 export default function DashboardHowItWorks() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -114,6 +140,18 @@ export default function DashboardHowItWorks() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>CSOAI Dashboard Guide — Track Progress & Find Jobs</title>
+        <meta name="description" content="Step-by-step guide to the CSOAI dashboard: log in, track certification status, start training, prepare for exams, and find high-paying AI safety jobs." />
+        <link rel="canonical" href="https://csoai.org/how-it-works/dashboard" />
+        <meta property="og:title" content="CSOAI Dashboard Guide — Track Progress & Find Jobs" />
+        <meta property="og:description" content="Master the CSOAI dashboard to track progress, manage certifications and find AI safety work." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/how-it-works/dashboard" />
+        <script type="application/ld+json">{JSON.stringify(DASHBOARD_HOWTO_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(DASHBOARD_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       {/* Header */}
       <div className="bg-emerald-600 text-white py-16">
@@ -250,5 +288,6 @@ export default function DashboardHowItWorks() {
         </div>
       </div>
     </div>
+    </>
   );
 }

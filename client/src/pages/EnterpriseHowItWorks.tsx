@@ -2,6 +2,32 @@ import { useState } from "react";
 import { ChevronDown, Zap, CheckCircle, Users, Shield, TrendingUp, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
+const ENTERPRISE_HOWTO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to deploy CSOAI in your enterprise",
+  description: "The CSOAI enterprise implementation timeline: consultation, assessment, integration planning, implementation, training, and go-live.",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Consultation", text: "Meet with our enterprise team to understand your AI systems and compliance needs." },
+    { "@type": "HowToStep", position: 2, name: "Assessment", text: "Conduct comprehensive assessment of your current compliance status." },
+    { "@type": "HowToStep", position: 3, name: "Integration Planning", text: "Design API integration and compliance framework customization." },
+    { "@type": "HowToStep", position: 4, name: "Implementation", text: "Deploy CSOAI's tools, integrate APIs, and configure compliance rules." },
+    { "@type": "HowToStep", position: 5, name: "Training", text: "Train your teams on CSOAI platform, compliance framework, and best practices." },
+    { "@type": "HowToStep", position: 6, name: "Go Live", text: "Launch monitoring, begin compliance tracking, and start Byzantine Council reviews." },
+  ],
+};
+
+const ENTERPRISE_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://csoai.org/how-it-works" },
+    { "@type": "ListItem", position: 3, name: "Enterprise", item: "https://csoai.org/how-it-works/enterprise" },
+  ],
+};
 
 export default function EnterpriseHowItWorks() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -164,6 +190,18 @@ export default function EnterpriseHowItWorks() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>CSOAI for Enterprise — AI Compliance Implementation</title>
+        <meta name="description" content="Deploy CSOAI across your enterprise: consultation, assessment, API integration, team training and go-live with 33-Agent Council oversight and multi-framework compliance." />
+        <link rel="canonical" href="https://csoai.org/how-it-works/enterprise" />
+        <meta property="og:title" content="CSOAI for Enterprise — AI Compliance Implementation" />
+        <meta property="og:description" content="Integrate CSOAI's compliance framework and Byzantine Council oversight into your enterprise AI operations." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/how-it-works/enterprise" />
+        <script type="application/ld+json">{JSON.stringify(ENTERPRISE_HOWTO_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(ENTERPRISE_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       {/* Header */}
       <div className="bg-emerald-600 text-white py-16">
@@ -334,5 +372,6 @@ export default function EnterpriseHowItWorks() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -2,6 +2,31 @@ import { useState } from "react";
 import { ChevronDown, BookOpen, CheckCircle, Users, Zap, Award, Clock } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
+const TRAINING_HOWTO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to train and certify as a CSOAI AI Safety Analyst",
+  description: "A typical 8-week study timeline to become a certified AI Safety Analyst, from free Watchdog training through to the certification exam.",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Week 1 — Watchdog Training", text: "Complete free Watchdog modules (4 hours). Understand AI safety basics and incident identification." },
+    { "@type": "HowToStep", position: 2, name: "Week 2-3 — Fundamentals Module 1", text: "Study EU AI Act and NIST AI RMF basics. Complete quizzes and case studies." },
+    { "@type": "HowToStep", position: 3, name: "Week 4-5 — Fundamentals Module 2", text: "Learn TC260, compliance principles, and review case studies." },
+    { "@type": "HowToStep", position: 4, name: "Week 6-7 — Practice & Review", text: "Take unlimited practice exams, review weak areas, and prepare for the real exam." },
+    { "@type": "HowToStep", position: 5, name: "Week 8 — Take Certification Exam", text: "Schedule and take your 90-minute proctored exam. Get results instantly." },
+  ],
+};
+
+const TRAINING_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://csoai.org/how-it-works" },
+    { "@type": "ListItem", position: 3, name: "Training", item: "https://csoai.org/how-it-works/training" },
+  ],
+};
 
 export default function TrainingHowItWorks() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -159,6 +184,18 @@ export default function TrainingHowItWorks() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>CSOAI Training Guide — Certify in 8 Weeks</title>
+        <meta name="description" content="Follow the CSOAI 8-week training path to become a certified AI Safety Analyst: free Watchdog modules, EU AI Act & NIST fundamentals, practice exams and certification." />
+        <link rel="canonical" href="https://csoai.org/how-it-works/training" />
+        <meta property="og:title" content="CSOAI Training Guide — Certify in 8 Weeks" />
+        <meta property="og:description" content="A self-paced, 8-week path to certified AI Safety Analyst, from free training to your proctored exam." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/how-it-works/training" />
+        <script type="application/ld+json">{JSON.stringify(TRAINING_HOWTO_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(TRAINING_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       {/* Header */}
       <div className="bg-emerald-600 text-white py-16">
@@ -343,5 +380,6 @@ export default function TrainingHowItWorks() {
         </div>
       </div>
     </div>
+    </>
   );
 }

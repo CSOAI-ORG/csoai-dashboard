@@ -2,6 +2,31 @@ import { useState } from "react";
 import { ChevronDown, CheckCircle, Zap, Shield, TrendingUp, Users, Globe } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
+const COMPLIANCE_HOWTO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to achieve AI compliance with CSOAI",
+  description: "The CSOAI compliance process: assess your AI systems, analyze gaps, implement controls, monitor continuously, and improve with SOAI-PDCA.",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Assessment", text: "Evaluate your AI systems against relevant frameworks." },
+    { "@type": "HowToStep", position: 2, name: "Gap Analysis", text: "Identify areas where you're not yet compliant." },
+    { "@type": "HowToStep", position: 3, name: "Implementation", text: "Deploy controls and safeguards to close gaps." },
+    { "@type": "HowToStep", position: 4, name: "Monitoring", text: "Continuously monitor compliance and incident reports." },
+    { "@type": "HowToStep", position: 5, name: "Improvement", text: "Use SOAI-PDCA to continuously improve compliance." },
+  ],
+};
+
+const COMPLIANCE_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://csoai.org/how-it-works" },
+    { "@type": "ListItem", position: 3, name: "Compliance", item: "https://csoai.org/how-it-works/compliance" },
+  ],
+};
 
 export default function ComplianceHowItWorks() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -160,6 +185,18 @@ export default function ComplianceHowItWorks() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>CSOAI Compliance Guide — EU AI Act & NIST in 5 Steps</title>
+        <meta name="description" content="Achieve multi-framework AI compliance with CSOAI: assess, analyze gaps, implement controls, monitor, and improve with SOAI-PDCA across EU AI Act, NIST & ISO 42001." />
+        <link rel="canonical" href="https://csoai.org/how-it-works/compliance" />
+        <meta property="og:title" content="CSOAI Compliance Guide — EU AI Act & NIST in 5 Steps" />
+        <meta property="og:description" content="Multi-framework AI compliance using CSOAI's methodology and the SOAI-PDCA continuous improvement cycle." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/how-it-works/compliance" />
+        <script type="application/ld+json">{JSON.stringify(COMPLIANCE_HOWTO_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(COMPLIANCE_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       {/* Header */}
       <div className="bg-emerald-600 text-white py-16">
@@ -371,5 +408,6 @@ export default function ComplianceHowItWorks() {
         </div>
       </div>
     </div>
+    </>
   );
 }

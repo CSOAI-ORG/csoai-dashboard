@@ -2,6 +2,32 @@ import { useState } from "react";
 import { ChevronDown, Trophy, CheckCircle, Users, Zap, TrendingUp, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
+const CERT_HOWTO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to get CSOAI certified as an AI Safety Analyst",
+  description: "The CSOAI exam process from enrollment to earning: enroll, study, schedule, take the exam, get results, and start earning.",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Enroll", text: "Choose your certification level and pay (or start free with Watchdog training)." },
+    { "@type": "HowToStep", position: 2, name: "Study", text: "Work through modules at your own pace, complete quizzes and case studies." },
+    { "@type": "HowToStep", position: 3, name: "Schedule", text: "Choose your exam date and time (24/7 availability)." },
+    { "@type": "HowToStep", position: 4, name: "Take Exam", text: "Complete 50 questions in 90 minutes with proctored supervision." },
+    { "@type": "HowToStep", position: 5, name: "Get Results", text: "Receive instant pass/fail notification with detailed feedback." },
+    { "@type": "HowToStep", position: 6, name: "Start Earning", text: "Access premium job board with higher-paying opportunities." },
+  ],
+};
+
+const CERT_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://csoai.org/how-it-works" },
+    { "@type": "ListItem", position: 3, name: "Certification", item: "https://csoai.org/how-it-works/certification" },
+  ],
+};
 
 export default function CertificationHowItWorks() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
@@ -131,6 +157,18 @@ export default function CertificationHowItWorks() {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>CSOAI Certification Guide — Exam Process & Pricing</title>
+        <meta name="description" content="How CSOAI certification works: enroll, study at your own pace, schedule your proctored exam, get instant results, and access higher-paying AI safety jobs." />
+        <link rel="canonical" href="https://csoai.org/how-it-works/certification" />
+        <meta property="og:title" content="CSOAI Certification Guide — Exam Process & Pricing" />
+        <meta property="og:description" content="The certification pathway and exam process to become a certified AI Safety Analyst." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/how-it-works/certification" />
+        <script type="application/ld+json">{JSON.stringify(CERT_HOWTO_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(CERT_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white">
       {/* Header */}
       <div className="bg-emerald-600 text-white py-16">
@@ -319,5 +357,6 @@ export default function CertificationHowItWorks() {
         </div>
       </div>
     </div>
+    </>
   );
 }
