@@ -431,7 +431,7 @@ export function MillionPoundGiveaway() {
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold text-white mb-4">Why We're Giving Away £1 Million</h3>
           <p className="text-slate-400 leading-relaxed">
-            The EU AI Act creates 250,000 new AI Safety Analyst jobs by February 2026. 
+            The EU AI Act creates 250,000 new AI Safety Analyst jobs by August 2026.
             The West needs trained professionals <span className="text-white">now</span>. 
             We've built the certification platform—it costs us nothing for people to learn. 
             By giving away £1M in training, we're investing in humanity's AI safety future 

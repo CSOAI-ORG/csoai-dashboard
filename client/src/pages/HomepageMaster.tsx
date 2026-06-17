@@ -233,7 +233,7 @@ export default function HomepageMaster() {
                 <div className="text-left">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">✓ Enterprise Compliance</h3>
                   <p className="text-gray-700 mb-3"><strong>The Problem:</strong> Enterprises spend €50K-500K/year on fragmented compliance tools. Still not compliant.</p>
-                  <p className="text-emerald-700 font-semibold"><strong>Our Fix:</strong> Multi-framework compliance (EU AI Act, NIST, TC260, ISO 42001) for €99-499/month</p>
+                  <p className="text-emerald-700 font-semibold"><strong>Our Fix:</strong> Multi-framework compliance (EU AI Act, NIST, TC260, ISO 42001) from £499/month</p>
                 </div>
               </div>
             </motion.div>

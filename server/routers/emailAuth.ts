@@ -58,7 +58,7 @@ export const emailAuthRouter = router({
         name: z.string().min(1, "Name is required"),
       })
     )
-    .mutation(async ({ input }) => {
+    .mutation(async ({ input, ctx }) => {
       const { email, password, name } = input;
 
       // Check if user already exists
@@ -85,6 +85,15 @@ export const emailAuthRouter = router({
         loginMethod: "email",
         role: "user",
       });
+
+      // Log the new user straight in — issue a session the same way login does,
+      // so the client can land on /dashboard instead of bouncing to /login.
+      const sessionToken = await sdk.createSessionToken(openId, {
+        name: name || email || "",
+        expiresInMs: ONE_YEAR_MS,
+      });
+      const cookieOptions = getSessionCookieOptions(ctx.req);
+      ctx.res.cookie(COOKIE_NAME, sessionToken, { ...cookieOptions, maxAge: ONE_YEAR_MS });
 
       return {
         success: true,

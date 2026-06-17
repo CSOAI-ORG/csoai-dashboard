@@ -58,7 +58,7 @@ export async function createCheckoutSession(params: {
   userId: number;
   email: string;
   name?: string;
-  tier: "pro" | "enterprise";
+  tier: "starter" | "pro" | "enterprise";
   billingPeriod: "monthly" | "yearly";
   successUrl: string;
   cancelUrl: string;
@@ -171,6 +171,7 @@ export function mapSubscriptionStatus(stripeStatus: string): "active" | "cancele
 export function getTierFromPriceId(priceId: string): SubscriptionTier {
   if (priceId.includes("enterprise")) return "enterprise";
   if (priceId.includes("pro")) return "pro";
+  if (priceId.includes("starter")) return "starter";
   return "free";
 }
 

@@ -207,38 +207,26 @@ export default function Pricing() {
   const checkoutMutation = trpc.stripe.createCheckoutSession.useMutation();
   
   const handleSubscribe = async (tierId: string) => {
-    if (tierId === 'starter') {
-      // Starter tier goes through Stripe checkout
-      try {
-        const result = await checkoutMutation.mutateAsync({
-          tier: 'pro' as 'pro' | 'enterprise', // Map starter to pro for now
-          billingPeriod: isYearly ? 'yearly' : 'monthly',
-        });
-        if (result.url) {
-          window.location.href = result.url;
-        }
-      } catch (error) {
-        console.error('Checkout failed:', error);
-      }
-      return;
-    }
-    
     if (tierId === 'enterprise') {
-      // Open contact form or email
+      // Enterprise is sales-assisted
       window.location.href = 'mailto:enterprise@csoai.org?subject=Enterprise%20Inquiry';
       return;
     }
-    
+
+    // Starter and Pro each check out against their own Stripe price — no tier mapping.
     try {
       const result = await checkoutMutation.mutateAsync({
-        tier: tierId as 'pro' | 'enterprise',
+        tier: tierId as 'starter' | 'pro',
         billingPeriod: isYearly ? 'yearly' : 'monthly',
       });
       if (result.url) {
         window.location.href = result.url;
+      } else {
+        alert('Could not start checkout. Please try again or contact support@csoai.org.');
       }
     } catch (error) {
       console.error('Checkout failed:', error);
+      alert('Checkout failed. Please try again or contact support@csoai.org.');
     }
   };
   

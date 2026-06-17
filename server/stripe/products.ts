@@ -24,15 +24,38 @@ export const SUBSCRIPTION_TIERS = {
       teamMembers: 1,
     },
   },
+  starter: {
+    name: "Starter",
+    description: "For individuals and small teams getting compliant",
+    priceMonthly: 499,
+    priceYearly: 4788, // £399/mo billed yearly (~20% off)
+    stripePriceIdMonthly: process.env.STRIPE_STARTER_MONTHLY_PRICE_ID || "price_starter_monthly",
+    stripePriceIdYearly: process.env.STRIPE_STARTER_YEARLY_PRICE_ID || "price_starter_yearly",
+    features: [
+      "5 AI Systems",
+      "25 compliance assessments",
+      "EU AI Act compliance tracking",
+      "Email support",
+      "PDF report generation",
+      "API access (2,000 calls/month)",
+    ],
+    limits: {
+      aiSystems: 5,
+      apiCalls: 2000,
+      councilSessions: 25,
+      pdcaCycles: 10,
+      teamMembers: 2,
+    },
+  },
   pro: {
-    name: "Pro",
+    name: "Professional",
     description: "For teams managing multiple AI systems",
-    priceMonthly: 39,
-    priceYearly: 390, // ~17% discount
+    priceMonthly: 999,
+    priceYearly: 9588, // £799/mo billed yearly (~20% off)
     stripePriceIdMonthly: process.env.STRIPE_PRO_MONTHLY_PRICE_ID || "price_pro_monthly",
     stripePriceIdYearly: process.env.STRIPE_PRO_YEARLY_PRICE_ID || "price_pro_yearly",
     features: [
-      "10 AI Systems",
+      "25 AI Systems",
       "Multi-framework compliance (EU AI Act, NIST, TC260)",
       "Priority email support",
       "Advanced analytics dashboard",
@@ -42,7 +65,7 @@ export const SUBSCRIPTION_TIERS = {
       "Unlimited PDCA cycles",
     ],
     limits: {
-      aiSystems: 10,
+      aiSystems: 25,
       apiCalls: 10000,
       councilSessions: 100,
       pdcaCycles: -1, // unlimited
@@ -52,8 +75,8 @@ export const SUBSCRIPTION_TIERS = {
   enterprise: {
     name: "Enterprise",
     description: "For organizations with advanced compliance needs",
-    priceMonthly: 159,
-    priceYearly: 1590, // ~17% discount
+    priceMonthly: 1999,
+    priceYearly: 19188, // £1,599/mo billed yearly (~20% off)
     stripePriceIdMonthly: process.env.STRIPE_ENTERPRISE_MONTHLY_PRICE_ID || "price_enterprise_monthly",
     stripePriceIdYearly: process.env.STRIPE_ENTERPRISE_YEARLY_PRICE_ID || "price_enterprise_yearly",
     features: [

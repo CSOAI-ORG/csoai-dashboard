@@ -2673,7 +2673,7 @@ const stripeRouter = router({
   // Create checkout session for subscription
   createCheckoutSession: protectedProcedure
     .input(z.object({
-      tier: z.enum(["pro", "enterprise"]),
+      tier: z.enum(["starter", "pro", "enterprise"]),
       billingPeriod: z.enum(["monthly", "yearly"]),
     }))
     .mutation(async ({ input, ctx }) => {

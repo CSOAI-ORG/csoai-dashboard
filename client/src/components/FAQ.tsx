@@ -95,7 +95,7 @@ export const trainingFAQs: FAQItem[] = [
   },
   {
     question: "Can I earn money after getting certified?",
-    answer: "Absolutely! Certified AI Safety Analysts earn $45-150/hour reviewing AI systems for compliance. With the EU AI Act deadline approaching (Feb 2, 2026), there's massive demand for qualified professionals. Our job board connects certified analysts with enterprises needing compliance support."
+    answer: "Absolutely! Certified AI Safety Analysts earn $45-150/hour reviewing AI systems for compliance. With the EU AI Act Article 50 deadline approaching (Aug 2, 2026), there's massive demand for qualified professionals. Our job board connects certified analysts with enterprises needing compliance support."
   }
 ];
 

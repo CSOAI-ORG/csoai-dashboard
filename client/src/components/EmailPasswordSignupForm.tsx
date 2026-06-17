@@ -37,9 +37,9 @@ export function EmailPasswordSignupForm() {
 
   const registerMutation = trpc.emailAuth.register.useMutation({
     onSuccess: () => {
-      toast.success("Account created successfully! Please log in.");
-      // Use replace to avoid back button issues on mobile
-      window.location.replace("/login");
+      toast.success("Account created — you're signed in.");
+      // Registration now issues a session, so land the user in the app directly.
+      window.location.replace("/dashboard");
     },
     onError: (err) => {
       console.error("[Signup] Error:", err);
