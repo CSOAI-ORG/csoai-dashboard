@@ -261,6 +261,14 @@ export function Header() {
               Reg Map
             </a>
 
+            <a
+              href="/eu-ai-act-classifier"
+              data-testid="nav-classifier"
+              className="px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-colors"
+            >
+              Free Risk Check
+            </a>
+
             {navigation.map((item) => (
               <div
                 key={item.name}

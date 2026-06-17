@@ -82,7 +82,11 @@ export default function RiskAssessment() {
                       <Button
                         variant="ghost"
                         size="icon"
-                        onClick={() => toast.info("Feature coming soon")}
+                        onClick={() =>
+                          type.title.includes("EU AI Act")
+                            ? (window.location.href = "/eu-ai-act-classifier")
+                            : toast.info("Coming soon — meanwhile, run the EU AI Act classifier")
+                        }
                       >
                         <ArrowRight className="h-4 w-4" />
                       </Button>
