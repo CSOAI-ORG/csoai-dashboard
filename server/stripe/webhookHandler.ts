@@ -208,9 +208,20 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     return;
   }
 
-  // Otherwise, this is a platform subscription
-  const tier = (session.metadata?.tier as "starter" | "pro" | "enterprise") || "pro";
-  console.log(`[Stripe Webhook] Platform subscription checkout completed for user ${userId}, tier: ${tier}`);
+  // Otherwise, this is a platform subscription.
+  // Default to "free" (NOT "pro") when tier metadata is absent — never grant a
+  // paid tier for free on a tier-less/anomalous checkout. Legit checkouts always
+  // carry metadata.tier (set server-side in createCheckoutSession).
+  const tier = (session.metadata?.tier as "starter" | "pro" | "enterprise") || "free";
+  if (!session.metadata?.tier) {
+    console.error(`[Stripe Webhook] checkout.session ${session.id} had NO tier metadata — defaulting to free (investigate)`);
+  }
+  const uid = parseInt(userId);
+  if (!Number.isInteger(uid)) {
+    console.error(`[Stripe Webhook] invalid userId '${userId}' on checkout ${session.id} — skipping tier update`);
+    return;
+  }
+  console.log(`[Stripe Webhook] Platform subscription checkout completed for user ${uid}, tier: ${tier}`);
 
   // Update user with Stripe IDs and subscription info
   await db.update(users)
@@ -220,7 +231,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       subscriptionTier: tier,
       subscriptionStatus: "active",
     })
-    .where(eq(users.id, parseInt(userId)));
+    .where(eq(users.id, uid));
 }
 
 async function handleSubscriptionUpdate(subscription: Stripe.Subscription) {
@@ -262,19 +273,30 @@ async function handleSubscriptionUpdate(subscription: Stripe.Subscription) {
   }
 
   // Otherwise, this is a platform subscription
+  const uid = parseInt(userId);
+  if (!Number.isInteger(uid)) {
+    console.error(`[Stripe Webhook] invalid userId '${userId}' on subscription ${subscription.id} — skipping`);
+    return;
+  }
   const status = mapSubscriptionStatus(subscription.status);
   const priceId = subscription.items.data[0]?.price?.id || "";
   const tier = getTierFromPriceId(priceId);
-
-  console.log(`[Stripe Webhook] Platform subscription updated for user ${userId}: ${status}, tier: ${tier}`);
+  // If the price id can't be resolved (e.g. STRIPE_*_PRICE_ID envs unset), DO NOT
+  // downgrade the customer — update status/subscription id only, leave tier intact.
+  const setFields: Record<string, unknown> = {
+    stripeSubscriptionId: subscription.id,
+    subscriptionStatus: status,
+  };
+  if (tier) {
+    setFields.subscriptionTier = tier;
+  } else {
+    console.error(`[Stripe Webhook] could not resolve tier for price '${priceId}' (sub ${subscription.id}) — leaving subscriptionTier unchanged`);
+  }
+  console.log(`[Stripe Webhook] Platform subscription updated for user ${uid}: ${status}, tier: ${tier ?? '(unchanged)'}`);
 
   await db.update(users)
-    .set({
-      stripeSubscriptionId: subscription.id,
-      subscriptionTier: tier,
-      subscriptionStatus: status,
-    })
-    .where(eq(users.id, parseInt(userId)));
+    .set(setFields)
+    .where(eq(users.id, uid));
 }
 
 async function handleSubscriptionCanceled(subscription: Stripe.Subscription) {

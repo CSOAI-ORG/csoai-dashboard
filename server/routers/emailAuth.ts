@@ -61,6 +61,10 @@ export const emailAuthRouter = router({
     .mutation(async ({ input, ctx }) => {
       const { email, password, name } = input;
 
+      // Rate-limit register (same as login) — blunts email-enumeration probing
+      // and bcrypt CPU-DoS via repeated registration attempts.
+      checkRateLimit(email);
+
       // Check if user already exists
       const existingUser = await db.getUserByEmail(email);
       if (existingUser) {

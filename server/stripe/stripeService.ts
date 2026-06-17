@@ -19,8 +19,6 @@ const getStripe = () => {
   return _stripe;
 };
 
-export { stripe };
-
 /**
  * Create or retrieve a Stripe customer for a user
  */
@@ -168,11 +166,13 @@ export function mapSubscriptionStatus(stripeStatus: string): "active" | "cancele
 /**
  * Get tier from Stripe price ID
  */
-export function getTierFromPriceId(priceId: string): SubscriptionTier {
-  if (!priceId) return "free";
-  // Primary: match the real configured Stripe price IDs (price_xxx never contains
-  // the tier name, so substring matching alone silently returns "free" and
-  // downgrades paying customers on every subscription.updated event).
+// Returns null when a real (price_xxx) id can't be resolved, so callers DO NOT
+// silently downgrade a paying customer to free (e.g. when STRIPE_*_PRICE_ID envs
+// aren't populated and configs fall back to placeholders). Caller must treat null
+// as "leave tier unchanged" + log, not as "free".
+export function getTierFromPriceId(priceId: string): SubscriptionTier | null {
+  if (!priceId) return null;
+  // Primary: match the real configured Stripe price IDs.
   for (const [tier, cfg] of Object.entries(SUBSCRIPTION_TIERS) as [SubscriptionTier, any][]) {
     if (priceId === cfg.stripePriceIdMonthly || priceId === cfg.stripePriceIdYearly) {
       return tier;
@@ -182,7 +182,7 @@ export function getTierFromPriceId(priceId: string): SubscriptionTier {
   if (priceId.includes("enterprise")) return "enterprise";
   if (priceId.includes("starter")) return "starter";
   if (priceId.includes("pro")) return "pro";
-  return "free";
+  return null;
 }
 
 /**
