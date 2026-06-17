@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { trpc } from '@/lib/trpc';
+import { toast } from 'sonner';
 import { 
   Check, 
   X, 
@@ -206,7 +207,8 @@ export default function Pricing() {
   
   const { data: user } = trpc.auth.me.useQuery();
   const checkoutMutation = trpc.stripe.createCheckoutSession.useMutation();
-  
+  const [pendingTier, setPendingTier] = useState<string | null>(null);
+
   const handleSubscribe = async (tierId: string) => {
     if (tierId === 'enterprise') {
       // Enterprise is sales-assisted
@@ -214,7 +216,10 @@ export default function Pricing() {
       return;
     }
 
+    if (pendingTier) return; // guard against double-clicks firing multiple sessions
+
     // Starter and Pro each check out against their own Stripe price — no tier mapping.
+    setPendingTier(tierId);
     try {
       const result = await checkoutMutation.mutateAsync({
         tier: tierId as 'starter' | 'pro',
@@ -223,11 +228,13 @@ export default function Pricing() {
       if (result.url) {
         window.location.href = result.url;
       } else {
-        alert('Could not start checkout. Please try again or contact support@csoai.org.');
+        toast.error('Could not start checkout. Please try again or contact support@csoai.org.');
+        setPendingTier(null);
       }
     } catch (error) {
       console.error('Checkout failed:', error);
-      alert('Checkout failed. Please try again or contact support@csoai.org.');
+      toast.error('Checkout failed. Please try again or contact support@csoai.org.');
+      setPendingTier(null);
     }
   };
   
@@ -355,16 +362,17 @@ export default function Pricing() {
                     )}
                   </div>
                   
-                  <Button 
+                  <Button
                     onClick={() => handleSubscribe(tier.id)}
                     data-testid={`pricing-subscribe-${tier.id}`}
+                    disabled={pendingTier === tier.id}
                     className={`w-full mb-6 ${
-                      tier.popular 
-                        ? 'bg-cyan-600 hover:bg-cyan-700' 
+                      tier.popular
+                        ? 'bg-cyan-600 hover:bg-cyan-700'
                         : 'bg-emerald-600 hover:bg-emerald-700'
                     }`}
                   >
-                    {tier.cta}
+                    {pendingTier === tier.id ? 'Redirecting…' : tier.cta}
                   </Button>
                   
                   <div className="text-left space-y-3">

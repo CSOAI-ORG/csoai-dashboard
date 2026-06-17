@@ -32,7 +32,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Fallback framework data for display
 const defaultFrameworks = [
@@ -88,10 +88,17 @@ export default function Compliance() {
   });
 
   // Fetch frameworks from API
-  const { data: apiFrameworks, isLoading: frameworksLoading } = trpc.compliance.getFrameworks.useQuery();
+  const { data: apiFrameworks, isLoading: frameworksLoading, isError: frameworksError } = trpc.compliance.getFrameworks.useQuery();
   const { data: summary } = trpc.compliance.getSummary.useQuery();
-  const { data: aiSystems } = trpc.aiSystems.list.useQuery();
-  const { data: assessmentsData } = trpc.compliance.getAssessments.useQuery({});
+  const { data: aiSystems, isLoading: aiSystemsLoading } = trpc.aiSystems.list.useQuery();
+  const { data: assessmentsData, isLoading: assessmentsLoading } = trpc.compliance.getAssessments.useQuery({});
+
+  // Surface a silent framework-load failure (falls back to the standard set) instead of swallowing it.
+  useEffect(() => {
+    if (frameworksError) {
+      toast.error("Couldn't load live frameworks", { description: "Showing the standard framework set." });
+    }
+  }, [frameworksError]);
 
   // Generate report mutation
   const generateReportMutation = trpc.compliance.generateReport.useMutation({
@@ -371,7 +378,12 @@ export default function Compliance() {
                       {system.name}
                     </SelectItem>
                   ))}
-                  {(!aiSystems || aiSystems.length === 0) && (
+                  {aiSystemsLoading && (
+                    <SelectItem value="loading" disabled>
+                      Loading systems…
+                    </SelectItem>
+                  )}
+                  {!aiSystemsLoading && (!aiSystems || aiSystems.length === 0) && (
                     <SelectItem value="none" disabled>
                       No AI systems registered
                     </SelectItem>
@@ -438,6 +450,10 @@ export default function Compliance() {
                         {a.aiSystemName} - {a.frameworkName}
                       </SelectItem>
                     ))
+                  ) : assessmentsLoading ? (
+                    <SelectItem value="loading" disabled>
+                      Loading assessments…
+                    </SelectItem>
                   ) : (
                     <SelectItem value="none" disabled>
                       No assessments available
