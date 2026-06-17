@@ -249,6 +249,18 @@ export function Header() {
               System
             </a>
 
+            <a
+              href="/opengridworks"
+              data-testid="nav-opengridworks"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
+                isActive('/opengridworks') || isActive('/map')
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
+              }`}
+            >
+              Reg Map
+            </a>
+
             {navigation.map((item) => (
               <div
                 key={item.name}

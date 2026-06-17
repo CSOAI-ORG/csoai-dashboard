@@ -202,6 +202,7 @@ import CompetitorComparison from "./pages/CompetitorComparison";
 import EUAIActUrgency from "./pages/EUAIActUrgency";
 import Charter from "./pages/Charter";
 import SystemMap from "./pages/SystemMap";
+import OpenGridWorks from "./pages/OpenGridWorks";
 import EI3 from "./pages/EI3";
 import Crosswalks from "./pages/Crosswalks";
 import MCPRegistry from "./pages/MCPRegistry";
@@ -419,6 +420,8 @@ function App() {
                   {/* Charter / EI3 / Crosswalks (MEOK ONE substrate) */}
                   <Route path="/charter" component={Charter} />
                   <Route path="/system" component={SystemMap} />
+                  <Route path="/opengridworks" component={OpenGridWorks} />
+                  <Route path="/map" component={OpenGridWorks} />
                   <Route path="/ei3" component={EI3} />
                   <Route path="/crosswalks" component={Crosswalks} />
                   <Route path="/mcp/:slug" component={MCPDetail} />
