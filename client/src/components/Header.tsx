@@ -109,7 +109,7 @@ export function Header() {
       submenu: [
         { name: 'How It Works', href: '/how-it-works/enterprise', description: 'Enterprise solutions' },
         { name: 'Pricing', href: '/pricing', description: 'Plans & pricing' },
-        { name: 'MCP Fleet', href: '/mcp', description: '300+ governance MCP tools' },
+        { name: 'MCP Fleet', href: '/mcp', description: '271 governance MCP tools' },
         { name: 'API Docs', href: '/api-docs', description: 'Developer docs' },
         { name: 'Onboarding', href: '/enterprise-onboarding', description: 'Get started' },
       ]
@@ -235,6 +235,18 @@ export function Header() {
               }`}
             >
               Pricing
+            </a>
+
+            <a
+              href="/system"
+              data-testid="nav-system"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
+                isActive('/system')
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
+              }`}
+            >
+              System
             </a>
 
             {navigation.map((item) => (
