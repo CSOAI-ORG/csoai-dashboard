@@ -8,7 +8,7 @@ import Stripe from "stripe";
 import { getDb } from "../db";
 import { users, courseEnrollments, courseBundles, courses } from "../../drizzle/schema";
 import { sendEnrollmentConfirmationEmail } from '../services/courseEmailService';
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { mapSubscriptionStatus, getTierFromPriceId } from "./stripeService";
 
 // Lazy initialization of Stripe to avoid errors when API key is not available (e.g., in tests)
@@ -188,9 +188,22 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
           console.log(`[Stripe Webhook] Expanding bundle ${bundle.id} into ${courseIds.length} individual course enrollments`);
           
           for (const courseId of courseIds) {
+            const cid = parseInt(courseId);
+            // Idempotency: Stripe redelivers events at-least-once. Skip if this
+            // bundle's course enrollment already exists (else retries duplicate it).
+            const [dupe] = await db
+              .select()
+              .from(courseEnrollments)
+              .where(and(
+                eq(courseEnrollments.userId, enrollment.userId),
+                eq(courseEnrollments.courseId, cid),
+                eq(courseEnrollments.bundleId, enrollment.bundleId),
+              ))
+              .limit(1);
+            if (dupe) continue;
             await db.insert(courseEnrollments).values({
               userId: enrollment.userId,
-              courseId: parseInt(courseId),
+              courseId: cid,
               bundleId: enrollment.bundleId,
               enrollmentType: 'course',
               paymentStatus: 'completed',
