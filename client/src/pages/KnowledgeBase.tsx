@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import DashboardLayout from '@/components/DashboardLayout';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -116,6 +117,27 @@ const SCENARIOS = [
   },
 ];
 
+const KB_ARTICLE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'CSOAI AI Safety Knowledge Base',
+  description:
+    'A library of real-world AI safety incident scenarios — bias, privacy, misinformation, safety failures, transparency and accountability — with lessons learned and mappings to the EU AI Act, NIST AI RMF and TC260.',
+  author: { '@type': 'Organization', name: 'CSOAI' },
+  publisher: { '@type': 'Organization', name: 'CSOAI', url: 'https://csoai.org' },
+  url: 'https://csoai.org/knowledge-base',
+  about: SCENARIO_CATEGORIES.map((c) => c.name),
+};
+
+const KB_BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://csoai.org/' },
+    { '@type': 'ListItem', position: 2, name: 'Knowledge Base', item: 'https://csoai.org/knowledge-base' },
+  ],
+};
+
 export default function KnowledgeBase() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -145,6 +167,17 @@ export default function KnowledgeBase() {
   
   return (
     <DashboardLayout>
+      <Helmet>
+        <title>AI Safety Knowledge Base — Incidents & Lessons</title>
+        <meta name="description" content="Learn from real AI safety incidents: bias, privacy, deepfakes and safety failures, mapped to EU AI Act, NIST AI RMF & TC260, with lessons and council insights." />
+        <link rel="canonical" href="https://csoai.org/knowledge-base" />
+        <meta property="og:title" content="AI Safety Knowledge Base — Incidents & Lessons" />
+        <meta property="og:description" content="Real-world AI safety scenarios, lessons learned and framework mappings from the CSOAI Byzantine Council." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/knowledge-base" />
+        <script type="application/ld+json">{JSON.stringify(KB_ARTICLE_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(KB_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
       <div className="space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">

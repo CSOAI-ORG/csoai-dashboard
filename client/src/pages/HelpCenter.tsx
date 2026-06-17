@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -7,10 +8,6 @@ import { Search, ChevronDown, MessageCircle, Mail, Phone, BookOpen, AlertCircle,
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
-  useEffect(() => {
-    document.title = 'Help Center - CSOAI';
-  }, []);
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -109,8 +106,29 @@ export default function HelpCenter() {
     },
   ];
 
+  const helpFaqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
   return (
     <div className="w-full bg-white">
+      <Helmet>
+        <title>CSOAI Help Center — Support, Guides & Answers</title>
+        <meta name="description" content="Get help with CSOAI: account setup, training & certification, the Watchdog program, compliance frameworks and incident reporting. Search guides or contact support." />
+        <link rel="canonical" href="https://csoai.org/help-center" />
+        <meta property="og:title" content="CSOAI Help Center — Support, Guides & Answers" />
+        <meta property="og:description" content="Browse help articles and FAQs for CSOAI, or contact our support team for assistance." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://csoai.org/help-center" />
+        <script type="application/ld+json">{JSON.stringify(helpFaqSchema)}</script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-white">
         <div className="max-w-4xl mx-auto text-center">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -201,6 +201,21 @@ export default function FAQ() {
     }
   ];
 
+  const faqSchema = useMemo(() => ({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.flatMap(category =>
+      category.items.map(item => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer.replace(/\*\*/g, "").replace(/•/g, "-").replace(/\n+/g, " ").trim(),
+        },
+      }))
+    ),
+  }), []);
+
   const filteredFaqs = faqs.map(category => ({
     ...category,
     items: category.items.filter(item =>
@@ -217,8 +232,14 @@ export default function FAQ() {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>FAQ - CSOAI & CEASAI | Frequently Asked Questions</title>
-        <meta name="description" content="Get answers to common questions about CSOAI platform, CEASAI certifications, pricing, exams, and the £1M training giveaway." />
+        <title>CSOAI FAQ — Certification, Pricing & Exams Answered</title>
+        <meta name="description" content="Answers on CSOAI & CEASAI: certification tiers, course pricing, exam pass marks, earnings, the 33-Agent Council and the £1M training giveaway. Get started free." />
+        <link rel="canonical" href="https://csoai.org/faq" />
+        <meta property="og:title" content="CSOAI FAQ — Certification, Pricing & Exams Answered" />
+        <meta property="og:description" content="Everything about CSOAI & CEASAI: certifications, pricing, exams, earnings and how AI safety analysts get certified." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://csoai.org/faq" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       {/* Header */}

@@ -2,6 +2,28 @@ import { Book, Code, Server, Database, Shield, Zap, FileText, ExternalLink } fro
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
+import { Helmet } from 'react-helmet-async';
+
+const DOCS_ARTICLE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'CSOAI Technical Documentation',
+  description:
+    'Architecture, API references and integration guides for the CSOAI platform — the 33-Agent Byzantine Council, SOAI-PDCA framework and Watchdog incident reporting.',
+  author: { '@type': 'Organization', name: 'CSOAI' },
+  publisher: { '@type': 'Organization', name: 'CSOAI', url: 'https://csoai.org' },
+  url: 'https://csoai.org/docs',
+  about: ['AI safety', 'Byzantine consensus', 'SOAI-PDCA', 'AI compliance API'],
+};
+
+const DOCS_BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://csoai.org/' },
+    { '@type': 'ListItem', position: 2, name: 'Documentation', item: 'https://csoai.org/docs' },
+  ],
+};
 
 export default function Documentation() {
   const fadeInUp = {
@@ -12,6 +34,18 @@ export default function Documentation() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Helmet>
+        <title>CSOAI Documentation — APIs, Architecture & Guides</title>
+        <meta name="description" content="Developer docs for CSOAI: REST API & SDK references, the 33-Agent Byzantine Council, SOAI-PDCA and Watchdog architecture. Integrate AI compliance in minutes." />
+        <link rel="canonical" href="https://csoai.org/docs" />
+        <meta property="og:title" content="CSOAI Documentation — APIs, Architecture & Guides" />
+        <meta property="og:description" content="API references, SDKs and architecture docs for integrating with the CSOAI AI-safety platform." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/docs" />
+        <script type="application/ld+json">{JSON.stringify(DOCS_ARTICLE_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(DOCS_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -463,6 +497,16 @@ print(f"System ID: {system.id}")`}</pre>
               <Link href="/api-docs">
                 <a className="inline-block bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-900 transition">
                   View API Docs
+                </a>
+              </Link>
+              <Link href="/knowledge-base">
+                <a className="inline-block bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-900 transition">
+                  Knowledge Base
+                </a>
+              </Link>
+              <Link href="/faq">
+                <a className="inline-block bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-900 transition">
+                  FAQ
                 </a>
               </Link>
             </div>

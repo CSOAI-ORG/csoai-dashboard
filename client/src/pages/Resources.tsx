@@ -3,6 +3,26 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Helmet } from "react-helmet-async";
+
+const RESOURCES_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "CSOAI Implementation Resources",
+  description:
+    "Free guides, templates and video tutorials for implementing AI governance — registration, PDCA cycles, compliance checklists and the 33-Agent Council, aligned to the EU AI Act, NIST AI RMF and ISO/IEC 42001.",
+  url: "https://csoai.org/resources",
+  isPartOf: { "@type": "Organization", name: "CSOAI", url: "https://csoai.org" },
+};
+
+const RESOURCES_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "Resources", item: "https://csoai.org/resources" },
+  ],
+};
 
 export default function Resources() {
   const guides = [
@@ -143,6 +163,18 @@ export default function Resources() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      <Helmet>
+        <title>AI Governance Resources — Free Guides & Templates</title>
+        <meta name="description" content="Download free AI governance guides, compliance checklists, PDCA worksheets and video tutorials for the EU AI Act, NIST AI RMF and ISO/IEC 42001. All free to use." />
+        <link rel="canonical" href="https://csoai.org/resources" />
+        <meta property="og:title" content="AI Governance Resources — Free Guides & Templates" />
+        <meta property="og:description" content="Free implementation guides, templates and tutorials to achieve AI compliance across major frameworks." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://csoai.org/resources" />
+        <script type="application/ld+json">{JSON.stringify(RESOURCES_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(RESOURCES_BREADCRUMB_SCHEMA)}</script>
+      </Helmet>
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-green-900 to-green-700 text-white py-16">
         <div className="container">
