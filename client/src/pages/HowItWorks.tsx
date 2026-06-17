@@ -21,6 +21,43 @@ import {
   Briefcase
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import HowItWorksInfographic from "@/components/HowItWorksInfographic";
+
+const HOWITWORKS_HOWTO_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How CSOAI ensures AI safety",
+  description:
+    "How the CSOAI regulatory body delivers AI safety: register an AI system, run a compliance assessment, get reviewed by the 33-Agent Byzantine Council, earn Watchdog certification, and improve continuously with SOAI-PDCA.",
+  totalTime: "PT10M",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Register AI System", text: "Add your AI system and classify its risk level in minutes." },
+    { "@type": "HowToStep", position: 2, name: "Run Compliance Assessment", text: "Auto-assess against the EU AI Act, NIST AI RMF, ISO 42001 and TC260." },
+    { "@type": "HowToStep", position: 3, name: "33-Agent Council Reviews", text: "A Byzantine-fault-tolerant council of 33 agents from 12 providers votes on the verdict." },
+    { "@type": "HowToStep", position: 4, name: "Get Watchdog Certification", text: "Receive a verifiable certification and a public transparency record." },
+    { "@type": "HowToStep", position: 5, name: "Continuous PDCA", text: "Plan-Do-Check-Act keeps your system compliant as regulations evolve." },
+  ],
+};
+
+const HOWITWORKS_FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Is CSOAI a government agency?", acceptedAnswer: { "@type": "Answer", text: "No. CSOAI is operated by CEASAI Limited, an independent UK company. We work with governments but are not part of any government. Our independence ensures impartiality." } },
+    { "@type": "Question", name: "How is CSOAI different from AI companies?", acceptedAnswer: { "@type": "Answer", text: "AI companies build AI. We regulate it. We have no financial ties to OpenAI, Google, Microsoft, or any AI vendor. Our only incentive is public safety—not selling AI products." } },
+    { "@type": "Question", name: "What authority does CSOAI have?", acceptedAnswer: { "@type": "Answer", text: "We are a standards body, similar to ISO or BSI. We develop standards, certify professionals, and provide compliance infrastructure. Governments and enterprises adopt our frameworks voluntarily—or as required by regulations like the EU AI Act." } },
+    { "@type": "Question", name: "Why should I trust CSOAI?", acceptedAnswer: { "@type": "Answer", text: "Our 33-Agent Council uses 12 different AI providers—no single vendor can manipulate outcomes. Every decision is public. Our analysts are certified professionals. And we have no commercial incentive to favor any AI company." } },
+  ],
+};
+
+const HOWITWORKS_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://csoai.org/" },
+    { "@type": "ListItem", position: 2, name: "How It Works", item: "https://csoai.org/how-it-works" },
+  ],
+};
 
 export default function HowItWorks() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,10 +86,16 @@ export default function HowItWorks() {
   return (
     <>
       <Helmet>
-        <title>How CSOAI Works - AI Safety Regulatory Body | CSOAI</title>
-        <meta name="description" content="Learn how CSOAI operates as an independent regulatory body for AI safety. We provide oversight, compliance frameworks, and certification to ensure AI systems are safe for humanity." />
-        <meta name="og:title" content="How CSOAI Works - AI Safety Regulatory Body" />
-        <meta name="og:description" content="CSOAI is an independent regulatory body ensuring AI safety through oversight, compliance, and certification." />
+        <title>How CSOAI Works — AI Safety Oversight in 5 Steps</title>
+        <meta name="description" content="See how CSOAI keeps AI safe: register a system, run a compliance assessment, get a 33-Agent Council review, earn certification, improve continuously. Start free." />
+        <link rel="canonical" href="https://csoai.org/how-it-works" />
+        <meta property="og:title" content="How CSOAI Works — AI Safety Oversight in 5 Steps" />
+        <meta property="og:description" content="Register, assess, get reviewed by the 33-Agent Council, certify, and improve with SOAI-PDCA. The independent AI safety regulator explained." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://csoai.org/how-it-works" />
+        <script type="application/ld+json">{JSON.stringify(HOWITWORKS_HOWTO_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(HOWITWORKS_FAQ_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(HOWITWORKS_BREADCRUMB_SCHEMA)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-white">
@@ -73,7 +116,12 @@ export default function HowItWorks() {
 
         {/* Main Content */}
         <div className="container max-w-5xl py-20">
-          
+
+          {/* Visual journey infographic */}
+          <div className="mb-20">
+            <HowItWorksInfographic />
+          </div>
+
           {/* What is CSOAI Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -305,6 +353,31 @@ export default function HowItWorks() {
                 <h3 className="font-bold text-gray-900 mb-2">Why should I trust CSOAI?</h3>
                 <p className="text-gray-600">Our 33-Agent Council uses 12 different AI providers—no single vendor can manipulate outcomes. Every decision is public. Our analysts are certified professionals. And we have no commercial incentive to favor any AI company.</p>
               </Card>
+            </div>
+          </div>
+
+          {/* Learn More — internal links */}
+          <div className="mb-20">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Learn More</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/docs">
+                <Card className="p-5 border border-gray-200 hover:border-emerald-300 transition-colors cursor-pointer h-full">
+                  <h3 className="font-bold text-gray-900 mb-1">Technical Documentation</h3>
+                  <p className="text-sm text-gray-600">Architecture, APIs and integration guides for the 33-Agent Council and SOAI-PDCA.</p>
+                </Card>
+              </Link>
+              <Link href="/knowledge-base">
+                <Card className="p-5 border border-gray-200 hover:border-emerald-300 transition-colors cursor-pointer h-full">
+                  <h3 className="font-bold text-gray-900 mb-1">Knowledge Base</h3>
+                  <p className="text-sm text-gray-600">Real AI safety incidents, lessons learned and framework mappings.</p>
+                </Card>
+              </Link>
+              <Link href="/faq">
+                <Card className="p-5 border border-gray-200 hover:border-emerald-300 transition-colors cursor-pointer h-full">
+                  <h3 className="font-bold text-gray-900 mb-1">Frequently Asked Questions</h3>
+                  <p className="text-sm text-gray-600">Pricing, certification, exams and how the platform works.</p>
+                </Card>
+              </Link>
             </div>
           </div>
 
