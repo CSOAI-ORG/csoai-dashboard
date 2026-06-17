@@ -163,24 +163,29 @@ export default function HomepageMaster() {
             </p>
             <CountdownTimer />
             
-            {/* Free Course CTA Button */}
+            {/* Lead-magnet CTAs — free, ungated, the top of the funnel */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <Button
-                onClick={() => handleCTA('hero-free-course')}
-                size="lg"
-                className="bg-red-600 hover:bg-red-700 text-white font-bold text-base sm:text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Training Now
-              </Button>
-              <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer">
+              <a href="/eu-ai-act-classifier">
+                <Button
+                  size="lg"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base sm:text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Free EU AI Act Risk Check →
+                </Button>
+              </a>
+              <a href="/opengridworks">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-base sm:text-lg px-8 py-6 rounded-xl"
                 >
-                  Book a free EU AI Act diagnostic
+                  Explore the regulation map
                 </Button>
               </a>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 justify-center text-xs text-gray-500">
+              <button onClick={() => handleCTA('hero-free-course')} className="hover:text-emerald-700 underline-offset-2 hover:underline">Start free training</button>
+              <a href="https://cal.com/csoai/august-audit" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-700 underline-offset-2 hover:underline">Book a free diagnostic</a>
             </div>
           </motion.div>
 
