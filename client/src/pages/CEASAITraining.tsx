@@ -60,7 +60,7 @@ export default function CEASAITraining() {
   const benefits = [
     "Industry-recognized certification",
     "Global job opportunities",
-    "Competitive compensation ($45-150/hr)",
+    "Competitive compensation",
     "100% remote work",
     "Flexible schedule",
     "Continuous learning"
@@ -225,17 +225,17 @@ export default function CEASAITraining() {
             <div className="space-y-4">
               <Card className="p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">Entry Level (0-6 months)</h3>
-                <p className="text-gray-600">$45/hour • Basic compliance assessments • Supervised reviews</p>
+                <p className="text-gray-600">Basic compliance assessments • Supervised reviews</p>
               </Card>
               
               <Card className="p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">Intermediate (6-18 months)</h3>
-                <p className="text-gray-600">$75/hour • Complex assessments • Incident analysis • Mentoring</p>
+                <p className="text-gray-600">Complex assessments • Incident analysis • Mentoring</p>
               </Card>
               
               <Card className="p-6 border border-gray-200">
                 <h3 className="font-bold text-gray-900 mb-2">Advanced (18+ months)</h3>
-                <p className="text-gray-600">$100-150/hour • Specialist roles • Leadership • Training others</p>
+                <p className="text-gray-600">Specialist roles • Leadership • Training others</p>
               </Card>
             </div>
           </div>

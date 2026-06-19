@@ -83,7 +83,7 @@ https://csoai.org/join?ref=${referralCode}
 
 You'll get:
 ✅ Industry-recognized certification
-✅ Job board access ($45-$150/hr opportunities)
+✅ Job board access
 ✅ Government integration
 ✅ Career advancement
 
@@ -94,7 +94,7 @@ Your Friend`,
 
     social: `🚀 I'm earning 20% commission by referring analysts to CSOAI!
 
-Join me and earn $45-$150/hr reviewing AI systems for compliance.
+Join me reviewing AI systems for compliance.
 
 Get 20% off with my referral link:
 https://csoai.org/join?ref=${referralCode}
@@ -108,7 +108,7 @@ https://csoai.org/join?ref=${referralCode}
 
 Benefits:
 • Industry-recognized certification
-• Job opportunities ($45-$150/hr)
+• Job opportunities
 • Government compliance oversight
 • Career advancement in AI governance
 

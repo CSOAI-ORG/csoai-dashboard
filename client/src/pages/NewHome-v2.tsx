@@ -66,8 +66,8 @@ export default function NewHomeV2() {
                 <div className="text-gray-700 dark:text-gray-400">Training & Certification</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">$45-150/hr</div>
-                <div className="text-gray-700 dark:text-gray-400">Analyst Earnings</div>
+                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">3 Frameworks</div>
+                <div className="text-gray-700 dark:text-gray-400">EU AI Act · NIST · ISO 42001</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">100% Remote</div>
@@ -96,7 +96,7 @@ export default function NewHomeV2() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">For Individuals</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Free training on EU AI Act, NIST, and ISO standards. Get certified, find remote work, and earn $45-150/hour monitoring AI systems for safety and compliance.
+                  Free training on EU AI Act, NIST, and ISO standards. Get certified, find remote work, and monitor AI systems for safety and compliance.
                 </p>
                 <Link href="/training">
                   <a className="text-green-600 font-semibold hover:text-green-700 flex items-center">
@@ -175,9 +175,9 @@ export default function NewHomeV2() {
                 <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">
                   3
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Start Earning</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Start Reviewing</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Browse available positions, apply with your certification, and start monitoring AI systems. Work remotely, set your hours, earn $45-150/hour.
+                  Browse available positions, apply with your certification, and start monitoring AI systems. Work remotely and set your own hours.
                 </p>
               </div>
             </div>

@@ -75,14 +75,6 @@ export default function About() {
       },
       {
         "@type": "Question",
-        "name": "How much can I earn?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Entry-level analysts start at $45/hour. Experienced analysts earn $75-150/hour depending on expertise and case complexity. All work is remote, and you set your own hours. Many analysts work part-time while maintaining other jobs."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Why should companies trust CSOAI?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -187,7 +179,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
-                  <span>New career path for displaced workers ($45-150/hr)</span>
+                  <span>New career path for displaced workers</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
@@ -236,9 +228,9 @@ export default function About() {
               <div className="inline-flex p-4 bg-emerald-100 rounded-full mb-4">
                 <Zap className="h-8 w-8 text-emerald-600" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Earn</h3>
+              <h3 className="text-xl font-bold mb-3">Contribute</h3>
               <p className="text-gray-600">
-                Start earning $45-150/hour reviewing AI systems. Work remotely, set your own hours, make an impact.
+                Review AI systems for safety and compliance. Work remotely, set your own hours, make an impact.
               </p>
             </Card>
           </div>
@@ -444,15 +436,6 @@ export default function About() {
                 You review AI systems for compliance with safety frameworks (EU AI Act, NIST AI RMF, ISO 42001). 
                 This includes checking documentation, assessing risk levels, identifying bias, and writing safety reports. 
                 You work with our 33-Agent Council system to make final safety determinations.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="text-xl font-bold mb-3">How much can I earn?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Entry-level analysts start at $45/hour. Experienced analysts earn $75-150/hour depending on expertise 
-                and case complexity. All work is remote, and you set your own hours. Many analysts work part-time 
-                while maintaining other jobs.
               </p>
             </Card>
 

@@ -65,7 +65,6 @@ Happy New Year from CSOAI!
 As the EU AI Act enforcement deadline approaches (August 2, 2026), we're launching a groundbreaking global AI safety initiative that directly impacts {{country}}.
 
 Key Highlights:
-• 250,000 AI Safety Analysts needed globally
 • First-ever independent AI safety certification body
 • Government partnership opportunities starting at £500K/year
 • Free training for the first 10,000 analysts
@@ -126,7 +125,7 @@ gov@csoai.org`,
 
 I've been following your work on {{topic}} and believe there's a meaningful collaboration opportunity.
 
-CSOAI is launching the world's first AI Safety Analyst certification program, creating 250,000 new jobs in the AI safety sector.
+CSOAI is launching the world's first AI Safety Analyst certification program in the AI safety sector.
 
 We'd love to explore:
 • Sponsored content about AI safety careers

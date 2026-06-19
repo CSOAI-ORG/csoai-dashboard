@@ -64,7 +64,7 @@ export default function NewHome() {
           </p>
           
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Join the global movement protecting humanity from AI risks while earning from home. Get ahead of the curve now—no coding required, just critical thinking and our comprehensive training.
+            Join the global movement protecting humanity from AI risks, working from home. Get ahead of the curve now—no coding required, just critical thinking and our comprehensive training.
           </p>
           
           {/* CTA Buttons */}
@@ -226,14 +226,13 @@ export default function NewHome() {
               <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="h-8 w-8 text-gray-900 dark:text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Earn</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Review</h3>
               <p className="text-gray-600 mb-6">
-                Get paid per report reviewed. Work from anywhere, set your own hours. 
-                Average $45/hour.
+                Review AI systems for compliance. Work from anywhere, set your own hours.
               </p>
               <Link href="/workbench">
                 <Button variant="ghost" className="text-green-600 hover:text-green-700">
-                  Start Earning →
+                  Start Reviewing →
                 </Button>
               </Link>
             </Card>
@@ -246,8 +245,8 @@ export default function NewHome() {
               <div className="text-gray-600">Training & Certification</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-black text-green-600 mb-2">$45/hr</div>
-              <div className="text-gray-600">Competitive Pay</div>
+              <div className="text-4xl font-black text-green-600 mb-2">3</div>
+              <div className="text-gray-600">Frameworks Covered</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-black text-gray-900 mb-2">100%</div>
@@ -325,7 +324,7 @@ export default function NewHome() {
                 ))}
               </div>
               <p className="text-gray-700 mb-4">
-                "I transitioned from teaching to AI safety with zero technical background. CSOAI's courses made complex concepts accessible. Now I work from home, set my own hours, and earn 40% more than I did teaching."
+                "I transitioned from teaching to AI safety with zero technical background. CSOAI's courses made complex concepts accessible. Now I work from home and set my own hours."
               </p>
               <Badge className="bg-green-100 text-green-800">Certified in 2023</Badge>
             </Card>
@@ -989,7 +988,7 @@ export default function NewHome() {
             Ready to Protect Humanity?
           </h2>
           <p className="text-xl text-gray-900 dark:text-white mb-12 max-w-2xl mx-auto">
-            Be among the first certified analysts earning while making AI safer for everyone
+            Be among the first certified analysts making AI safer for everyone
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

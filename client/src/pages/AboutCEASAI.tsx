@@ -29,11 +29,7 @@ export default function AboutCEASAI() {
           </p>
           
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">250,000</div>
-              <div className="text-sm text-gray-600">Target Analysts</div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">124</div>
               <div className="text-sm text-gray-600">Countries</div>
@@ -61,8 +57,8 @@ export default function AboutCEASAI() {
               <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
                 By <strong>August 2, 2026</strong>, the EU AI Act enforcement deadline, enterprises worldwide will need{' '}
-                <strong className="text-blue-600">250,000 certified AI Safety Analysts</strong> to ensure compliance, 
-                transparency, and safety. CEASAI exists to train, certify, and deploy this critical workforce—preventing 
+                <strong className="text-blue-600">certified AI Safety Analysts</strong> to ensure compliance,
+                transparency, and safety. CEASAI exists to train, certify, and deploy this critical workforce—preventing
                 compliance chaos and ensuring AI systems serve humanity responsibly.
               </p>
             </div>

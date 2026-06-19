@@ -146,7 +146,7 @@ export default function Signup() {
                   {signupSource === 'watchdog' && '👁️ Watchdog Program'}
                 </h3>
                 <p className="text-xs md:text-sm text-blue-800">
-                  {signupSource === 'analyst' && 'Get certified as an AI Safety Analyst. Earn $45-150/hr remote work.'}
+                  {signupSource === 'analyst' && 'Get certified as an AI Safety Analyst and review AI systems for compliance.'}
                   {signupSource === 'enterprise' && 'Access multi-framework compliance tools for EU AI Act, NIST, TC260, and ISO 42001.'}
                   {signupSource === 'government' && 'Deploy real-time AI monitoring and compliance tracking infrastructure.'}
                   {signupSource === 'watchdog' && 'Report AI incidents publicly and join our analyst network.'}

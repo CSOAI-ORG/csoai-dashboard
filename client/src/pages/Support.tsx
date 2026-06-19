@@ -128,11 +128,10 @@ Need more specific help with exam preparation?`
 1. Complete the CEASAI training program
 2. Pass the certification exam (70% minimum)
 3. Apply through **Watchdog → Analyst Jobs**
-4. Start reviewing incidents and earning
+4. Start reviewing incidents
 
 **Analyst Benefits:**
 • Remote work, flexible hours
-• $45-150/hour depending on experience
 • Meaningful work protecting humanity
 
 Would you like more details about the analyst program?`
@@ -328,7 +327,7 @@ Is there anything else I can help you with in the meantime?`,
     },
     {
       question: 'How do I become a Watchdog Analyst?',
-      answer: 'Complete the CEASAI training program, pass the certification exam with at least 70%, then apply through the Watchdog → Analyst Jobs page. Analysts earn $45-150/hour reviewing AI safety incidents.',
+      answer: 'Complete the CEASAI training program, pass the certification exam with at least 70%, then apply through the Watchdog → Analyst Jobs page. Analysts review AI safety incidents for compliance.',
     },
     {
       question: 'Can I get a refund?',

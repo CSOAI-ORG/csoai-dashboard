@@ -1,6 +1,6 @@
 /**
  * CSOAI Watchdog Page
- * Career-focused landing page for AI Safety Analysts with testimonials and earnings proof
+ * Career-focused landing page for AI Safety Analysts with testimonials
  */
 
 import { useState, useEffect } from 'react';
@@ -9,14 +9,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { 
-  Eye, 
-  DollarSign, 
-  Clock, 
-  MapPin, 
-  TrendingUp, 
+  Eye,
+  Clock,
+  MapPin,
+  TrendingUp,
   Star,
   CheckCircle2,
-  Users,
   Shield,
   Briefcase,
   Award,
@@ -79,9 +77,8 @@ export default function Watchdog() {
       role: "Senior AI Safety Analyst",
       avatar: "SC",
       rating: 5,
-      monthlyEarnings: "$8,200",
       hoursPerWeek: 25,
-      quote: "I was laid off from my marketing job when AI took over content creation. CSOAI gave me a new career path in 3 months. Now I earn more than I did before, work from home, and actually feel like I'm making a difference protecting people from AI risks.",
+      quote: "I was laid off from my marketing job when AI took over content creation. CSOAI gave me a new career path in 3 months. Now I work from home and actually feel like I'm making a difference protecting people from AI risks.",
       casesReviewed: 147,
       joinedDate: "March 2024"
     },
@@ -91,9 +88,8 @@ export default function Watchdog() {
       role: "AI Safety Analyst",
       avatar: "MJ",
       rating: 5,
-      monthlyEarnings: "$5,600",
       hoursPerWeek: 20,
-      quote: "I'm a former teacher who saw AI replacing educational roles. CSOAI training didn't require coding—just critical thinking. I work part-time while teaching, and the extra income has been life-changing. Plus, I'm helping ensure AI in education is safe for students.",
+      quote: "I'm a former teacher who saw AI replacing educational roles. CSOAI training didn't require coding—just critical thinking. I work part-time while teaching, and I'm helping ensure AI in education is safe for students.",
       casesReviewed: 89,
       joinedDate: "May 2024"
     },
@@ -103,7 +99,6 @@ export default function Watchdog() {
       role: "Lead AI Safety Analyst",
       avatar: "PP",
       rating: 5,
-      monthlyEarnings: "$12,400",
       hoursPerWeek: 35,
       quote: "After 15 years in compliance, I was worried about job security. CSOAI let me pivot to AI safety—a growing field instead of a shrinking one. The 33-Agent Council system is fascinating to work with, and enterprises pay premium rates for experienced analysts.",
       casesReviewed: 203,
@@ -115,19 +110,18 @@ export default function Watchdog() {
       role: "AI Safety Analyst",
       avatar: "DK",
       rating: 5,
-      monthlyEarnings: "$4,800",
       hoursPerWeek: 15,
-      quote: "I'm a college student working part-time. CSOAI certification took me 2 weeks, and now I earn $45/hour reviewing AI systems. It's way better than retail or food service, and I'm building a career in a field that's exploding. Already got 3 job offers from companies.",
+      quote: "I'm a college student working part-time. CSOAI certification took me 2 weeks, and now I review AI systems for compliance. It's way better than retail or food service, and I'm building a career in a field that's growing fast.",
       casesReviewed: 56,
       joinedDate: "July 2024"
     }
   ];
 
   const stats = [
-    { label: "Active Analysts", value: "2,847", icon: Users },
-    { label: "Average Hourly Rate", value: "$67", icon: DollarSign },
-    { label: "Cases Reviewed", value: "18,392", icon: Shield },
-    { label: "Job Openings", value: "1,203", icon: Briefcase }
+    { label: "Frameworks Covered", value: "3", icon: Shield },
+    { label: "EU AI Act Deadline", value: "Aug 2", icon: Clock },
+    { label: "Certification Levels", value: "3", icon: Award },
+    { label: "Remote", value: "100%", icon: Briefcase }
   ];
 
   return (
@@ -143,7 +137,7 @@ export default function Watchdog() {
               Become an AI Safety Analyst
             </h1>
             <p className="text-2xl text-gray-300 leading-relaxed mb-4 max-w-4xl mx-auto">
-              Earn $45-150/hour monitoring AI systems for compliance. Work remotely, set your own hours, 
+              Monitor AI systems for compliance. Work remotely, set your own hours,
               and protect humanity from AI risks—while building a future-proof career.
             </p>
             <p className="text-xl text-emerald-300 font-semibold mb-10">
@@ -189,8 +183,7 @@ export default function Watchdog() {
             <Badge className="mb-4 bg-emerald-50 text-emerald-600 border-emerald-200">Real Stories</Badge>
             <h2 className="text-4xl font-bold font-display mb-4 tracking-tight">Meet Our Certified Analysts</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from real people who transformed their careers with CSOAI certification. 
-              These aren't actors—they're working analysts earning real income.
+              Hear from people who transformed their careers with CSOAI certification.
             </p>
           </div>
 
@@ -215,10 +208,6 @@ export default function Watchdog() {
                         <div className="flex items-center gap-2 text-gray-600">
                           <MapPin className="h-4 w-4" />
                           {testimonial.location}
-                        </div>
-                        <div className="flex items-center gap-2 text-emerald-600 font-semibold">
-                          <DollarSign className="h-4 w-4" />
-                          {testimonial.monthlyEarnings}/mo
                         </div>
                         <div className="flex items-center gap-2 text-gray-600">
                           <Clock className="h-4 w-4" />
@@ -259,7 +248,7 @@ export default function Watchdog() {
       <div className="container py-20 max-w-6xl">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-emerald-50 text-emerald-600 border-emerald-200">Your Path to Success</Badge>
-          <h2 className="text-4xl font-bold mb-4">From Zero to Earning in 3 Steps</h2>
+          <h2 className="text-4xl font-bold mb-4">From Zero to Certified in 3 Steps</h2>
           <p className="text-xl text-gray-600">
             No coding required. No degree required. Just critical thinking and attention to detail.
           </p>
@@ -298,10 +287,10 @@ export default function Watchdog() {
             <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-3xl font-bold text-purple-600 mx-auto mb-6">
               3
             </div>
-            <h3 className="text-2xl font-bold mb-4">Start Earning</h3>
+            <h3 className="text-2xl font-bold mb-4">Start Reviewing</h3>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Browse 1,200+ job openings. Apply to companies. Start reviewing AI systems. 
-              Get paid $45-150/hour. Work remotely. Set your own schedule.
+              Browse the job board. Apply to companies. Start reviewing AI systems.
+              Work remotely. Set your own schedule.
             </p>
             <Link href="/jobs">
               <Button variant="outline" className="w-full">Browse Jobs</Button>
@@ -363,18 +352,17 @@ export default function Watchdog() {
       {/* Earnings Breakdown */}
       <div className="container py-20 max-w-6xl">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-emerald-50 text-emerald-600 border-emerald-200">Transparent Earnings</Badge>
-          <h2 className="text-4xl font-bold mb-4">How Much Can You Really Earn?</h2>
+          <Badge className="mb-4 bg-emerald-50 text-emerald-600 border-emerald-200">Certification Tiers</Badge>
+          <h2 className="text-4xl font-bold mb-4">What Each Tier Reviews</h2>
           <p className="text-xl text-gray-600">
-            Actual rates from our analyst network. Your earnings depend on experience and case complexity.
+            Your scope of work grows with experience and certification level.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="p-8 border-2 border-gray-200">
             <Badge className="mb-4 bg-gray-100 text-gray-700">Entry Level</Badge>
-            <div className="text-5xl font-bold text-gray-900 mb-2">$45</div>
-            <div className="text-gray-600 mb-6">per hour</div>
+            <div className="text-2xl font-bold text-gray-900 mb-6">Newly Certified</div>
             <ul className="space-y-3 text-sm text-gray-600">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
@@ -393,11 +381,6 @@ export default function Watchdog() {
                 <span>~2 hours per case</span>
               </li>
             </ul>
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Example Monthly Income</div>
-              <div className="text-2xl font-bold text-gray-900">$3,600</div>
-              <div className="text-xs text-gray-500">20 hours/week × 4 weeks</div>
-            </div>
           </Card>
 
           <Card className="p-8 border-4 border-emerald-500 relative">
@@ -405,8 +388,7 @@ export default function Watchdog() {
               Most Common
             </Badge>
             <Badge className="mb-4 bg-emerald-50 text-emerald-700">Experienced</Badge>
-            <div className="text-5xl font-bold text-emerald-600 mb-2">$75</div>
-            <div className="text-gray-600 mb-6">per hour</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-6">6+ Months</div>
             <ul className="space-y-3 text-sm text-gray-600">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
@@ -425,17 +407,11 @@ export default function Watchdog() {
                 <span>~3 hours per case</span>
               </li>
             </ul>
-            <div className="mt-6 p-4 bg-emerald-50 rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Example Monthly Income</div>
-              <div className="text-2xl font-bold text-emerald-600">$7,500</div>
-              <div className="text-xs text-gray-500">25 hours/week × 4 weeks</div>
-            </div>
           </Card>
 
           <Card className="p-8 border-2 border-purple-200 bg-purple-50/30">
             <Badge className="mb-4 bg-purple-100 text-purple-700">Expert</Badge>
-            <div className="text-5xl font-bold text-purple-600 mb-2">$150</div>
-            <div className="text-gray-600 mb-6">per hour</div>
+            <div className="text-2xl font-bold text-purple-600 mb-6">1+ Year</div>
             <ul className="space-y-3 text-sm text-gray-600">
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
@@ -454,11 +430,6 @@ export default function Watchdog() {
                 <span>~5 hours per case</span>
               </li>
             </ul>
-            <div className="mt-6 p-4 bg-purple-100 rounded-lg">
-              <div className="text-sm text-gray-600 mb-1">Example Monthly Income</div>
-              <div className="text-2xl font-bold text-purple-600">$18,000</div>
-              <div className="text-xs text-gray-500">30 hours/week × 4 weeks</div>
-            </div>
           </Card>
         </div>
       </div>
@@ -492,8 +463,8 @@ export default function Watchdog() {
           <Heart className="h-16 w-16 text-emerald-600 mx-auto mb-6" />
           <h2 className="text-4xl font-bold mb-6">Ready to Start Your New Career?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Join 2,847 certified analysts earning an average of $67/hour. Training is free. 
-            Certification takes 2 weeks. Your first paycheck could be 30 days away.
+            Join our network of certified AI Safety Analysts. Training is free.
+            Certification takes 2 weeks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/training">
@@ -509,7 +480,7 @@ export default function Watchdog() {
             </Link>
           </div>
           <p className="text-sm text-gray-500 mt-6">
-            No credit card required • No coding experience needed • Start earning in weeks
+            No credit card required • No coding experience needed • Get certified in weeks
           </p>
         </Card>
       </div>

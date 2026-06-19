@@ -324,7 +324,7 @@ export default function HowItWorks() {
               <Card className="p-6 text-center border-2 border-emerald-100">
                 <div className="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl">4</div>
                 <h3 className="font-bold text-gray-900 mb-2">Work</h3>
-                <p className="text-sm text-gray-600">Start earning £45-150/hour remotely</p>
+                <p className="text-sm text-gray-600">Start your AI Safety Analyst work remotely</p>
               </Card>
             </div>
           </div>

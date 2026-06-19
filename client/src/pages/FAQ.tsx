@@ -107,20 +107,20 @@ export default function FAQ() {
       category: "Work & Earnings",
       items: [
         {
-          question: "How much can I earn as an AI Safety Analyst?",
-          answer: "Earnings vary by certification level and experience:\n\n• **Fundamentals certified**: £35-50/hour (entry-level incident review)\n• **Professional certified**: £50-85/hour (multi-framework compliance auditing)\n• **Expert certified**: £85-150/hour (government consulting, policy development)\n\nAll work is remote and flexible. Experienced Expert-certified analysts with specialized skills (e.g., healthcare AI, financial AI) can earn £150-250/hour in consulting roles. Government contracts typically pay £75-120/hour."
+          question: "What kind of work can I do as an AI Safety Analyst?",
+          answer: "The scope of work grows with your certification level:\n\n• **Fundamentals certified**: entry-level incident review\n• **Professional certified**: multi-framework compliance auditing\n• **Expert certified**: government consulting and policy development\n\nAll work is remote and flexible. Expert-certified analysts with specialized skills (e.g., healthcare AI, financial AI) can take on consulting roles, and Expert certification is recognised for government contract work."
         },
         {
           question: "How do I find jobs after certification?",
-          answer: "After certification, you can:\n\n1. **Browse our job board**: Active listings from enterprises needing analysts\n2. **Get matched automatically**: Our platform matches your skills to open roles\n3. **Government contracts**: Expert-certified analysts get priority for government auditor positions\n4. **Direct enterprise access**: Companies can hire you directly through the platform\n5. **Consulting opportunities**: Build your own practice with white-label licensing (Expert only)\n\nMost certified analysts find their first paid work within 2-4 weeks of certification."
+          answer: "After certification, you can:\n\n1. **Browse our job board**: Active listings from enterprises needing analysts\n2. **Get matched automatically**: Our platform matches your skills to open roles\n3. **Government contracts**: Expert-certified analysts get priority for government auditor positions\n4. **Direct enterprise access**: Companies can hire you directly through the platform\n5. **Consulting opportunities**: Build your own practice with white-label licensing (Expert only)"
         },
         {
           question: "Can I work part-time?",
           answer: "Yes, 100% flexible. You set your own hours and choose which jobs to take. Many analysts work part-time (10-20 hours/week) while maintaining other jobs or studying. Our platform supports:\n\n• Part-time (10-20 hours/week)\n• Full-time (40+ hours/week)\n• Project-based (one-off audits)\n• Retainer agreements (ongoing monitoring)\n\nYou control your schedule completely."
         },
         {
-          question: "What if I don't get hired after certification?",
-          answer: "We have a large and growing network of enterprises needing analysts. Most certified analysts find work within 2-4 weeks. If you don't, we offer:\n\n• **Free career support**: Resume review, interview prep, portfolio building\n• **Direct introductions**: We connect you with hiring partners\n• **Skill gap analysis**: Identify areas for improvement\n• **Guaranteed interview program**: Expert-certified analysts get guaranteed interviews with 3 partner companies\n\nOur goal is 100% employment for certified analysts. We succeed when you succeed."
+          question: "What support do I get finding work after certification?",
+          answer: "We have a large and growing network of enterprises needing analysts. If you don't, we offer:\n\n• **Free career support**: Resume review, interview prep, portfolio building\n• **Direct introductions**: We connect you with hiring partners\n• **Skill gap analysis**: Identify areas for improvement\n\nWe succeed when you succeed."
         }
       ]
     },

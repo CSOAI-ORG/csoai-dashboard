@@ -19,7 +19,6 @@ import {
   FileCheck,
   Scale,
   Clock,
-  DollarSign,
   Home as HomeIcon,
   Laptop,
   Award,
@@ -63,7 +62,6 @@ const frameworks = [
 const benefits = [
   { icon: HomeIcon, title: "Work From Home", description: "Flexible remote work" },
   { icon: Clock, title: "Flexible Hours", description: "Set your own schedule" },
-  { icon: DollarSign, title: "Earn Money", description: "Get paid per case reviewed" },
   { icon: Award, title: "Get Certified", description: "Free training & certification" },
 ];
 

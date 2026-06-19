@@ -50,10 +50,10 @@ export default function WatchdogHelpProtectHumanity() {
       cost: "Free"
     },
     {
-      step: "5. Earn Money",
-      description: "Get paid $45-150/hour for AI safety monitoring and compliance assessment work",
+      step: "5. Take On Cases",
+      description: "Take on AI safety monitoring and compliance assessment work as a certified analyst",
       time: "Flexible",
-      cost: "Earn $1,800-6,000+/month"
+      cost: "Remote"
     }
   ];
 
@@ -147,8 +147,8 @@ export default function WatchdogHelpProtectHumanity() {
       answer: "Report any AI system that: discriminates unfairly, makes incorrect decisions, violates privacy, lacks transparency, operates outside its intended use, or violates regulatory frameworks like EU AI Act or NIST RMF."
     },
     {
-      question: "How much can I earn as a Watchdog Analyst?",
-      answer: "Entry-level analysts earn $45/hour, experienced analysts $75/hour, and experts $150/hour. Most work is remote and flexible. You can earn $1,800-6,000+ per month depending on hours worked."
+      question: "What does a Watchdog Analyst do?",
+      answer: "Watchdog Analysts review AI systems and report incidents for compliance with frameworks like the EU AI Act and NIST RMF. Most work is remote and flexible — you choose your hours."
     },
     {
       question: "Is this a full-time job or part-time?",
@@ -171,7 +171,7 @@ export default function WatchdogHelpProtectHumanity() {
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Help Protect Humanity from AI</h1>
           <p className="text-xl text-emerald-100">
-            Become a Watchdog Analyst and earn $45-150/hour while ensuring AI systems are safe, fair, and compliant
+            Become a Watchdog Analyst and help ensure AI systems are safe, fair, and compliant
           </p>
         </div>
       </div>
@@ -277,25 +277,21 @@ export default function WatchdogHelpProtectHumanity() {
               <Shield className="w-12 h-12 text-emerald-600 mb-4" />
               <h3 className="text-xl font-bold text-emerald-900 mb-3">Compliance Reviews</h3>
               <p className="text-gray-700 mb-4">Evaluate AI systems for compliance with EU AI Act, NIST RMF, TC260, and other frameworks. Identify gaps and recommend improvements.</p>
-              <p className="text-sm text-emerald-700 bg-white p-3 rounded border-l-4 border-emerald-600">Earn: $50-100/hour</p>
             </Card>
             <Card className="p-8 border-2 border-emerald-200">
               <AlertCircle className="w-12 h-12 text-emerald-600 mb-4" />
               <h3 className="text-xl font-bold text-emerald-900 mb-3">Incident Investigation</h3>
               <p className="text-gray-700 mb-4">Investigate reported AI incidents, gather evidence, assess severity, and document findings for the Byzantine Council.</p>
-              <p className="text-sm text-emerald-700 bg-white p-3 rounded border-l-4 border-emerald-600">Earn: $60-120/hour</p>
             </Card>
             <Card className="p-8 border-2 border-emerald-200">
               <BookOpen className="w-12 h-12 text-emerald-600 mb-4" />
               <h3 className="text-xl font-bold text-emerald-900 mb-3">Documentation</h3>
               <p className="text-gray-700 mb-4">Write clear, detailed reports and assessments that will be published publicly for full transparency.</p>
-              <p className="text-sm text-emerald-700 bg-white p-3 rounded border-l-4 border-emerald-600">Earn: $45-75/hour</p>
             </Card>
             <Card className="p-8 border-2 border-emerald-200">
               <Users className="w-12 h-12 text-emerald-600 mb-4" />
               <h3 className="text-xl font-bold text-emerald-900 mb-3">Community Engagement</h3>
               <p className="text-gray-700 mb-4">Participate in forums, help train new analysts, and contribute to the global AI safety community.</p>
-              <p className="text-sm text-emerald-700 bg-white p-3 rounded border-l-4 border-emerald-600">Earn: $40-60/hour</p>
             </Card>
           </div>
         </div>
@@ -331,7 +327,7 @@ export default function WatchdogHelpProtectHumanity() {
         <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white p-12 rounded-lg text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Protect Humanity from AI?</h2>
           <p className="text-lg mb-8 text-emerald-100">
-            Start with free training today. No experience necessary. Earn while you help keep AI safe.
+            Start with free training today. No experience necessary. Help keep AI safe.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

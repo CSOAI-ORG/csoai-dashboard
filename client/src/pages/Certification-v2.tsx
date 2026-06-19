@@ -80,9 +80,9 @@ export default function CertificationV2() {
                   <DollarSign className="h-6 w-6 text-emerald-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Immediate Earning Potential</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Flexible Remote Work</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Start earning $45-150/hour reviewing AI systems for compliance. Work remotely from anywhere, set your own hours, and get paid per report reviewed.
+                    Review AI systems for compliance. Work remotely from anywhere, set your own hours, and get paid per report reviewed.
                   </p>
                 </div>
               </div>
@@ -338,15 +338,15 @@ export default function CertificationV2() {
               Career Outcomes
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              What certified analysts are earning and achieving
+              What certified analysts are achieving
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">$45-150</div>
-              <div className="text-gray-600 mb-4">Hourly Rate Range</div>
-              <p className="text-sm text-gray-500">Entry-level analysts start at $45/hr, experienced analysts earn up to $150/hr</p>
+              <div className="text-4xl font-bold text-green-600 mb-2">Certified</div>
+              <div className="text-gray-600 mb-4">AI Safety Analyst</div>
+              <p className="text-sm text-gray-500">Review AI systems for compliance with EU AI Act, NIST AI RMF, and ISO 42001 frameworks</p>
             </Card>
 
             <Card className="p-8 text-center">

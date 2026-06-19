@@ -126,7 +126,7 @@ export async function sendWelcomeEmail(
         <ul>
           <li><strong>Complete Training:</strong> Access 5 comprehensive modules covering EU AI Act, NIST AI RMF, and ISO 42001</li>
           <li><strong>Get Certified:</strong> Pass the 50-question certification exam (70% passing score)</li>
-          <li><strong>Start Earning:</strong> Begin reviewing AI systems at $45-150/hour as a certified analyst</li>
+          <li><strong>Get to Work:</strong> Begin reviewing AI systems as a certified analyst</li>
           <li><strong>Join the Council:</strong> Participate in the 33-Agent Byzantine consensus system</li>
         </ul>
       </div>
@@ -136,7 +136,7 @@ export async function sendWelcomeEmail(
       </div>
       
       <p><strong>Why CSOAI Matters:</strong></p>
-      <p>The EU AI Act enforcement deadline is August 2, 2026, and the world needs 250,000 trained AI Safety Analysts. You're joining at a critical moment in AI governance history.</p>
+      <p>The EU AI Act enforcement deadline is August 2, 2026, and the world needs trained AI Safety Analysts. You're joining at a critical moment in AI governance history.</p>
       
       <p>Our platform combines:</p>
       <ul>
@@ -372,7 +372,7 @@ export async function sendCertificationEmail(
       <div class="next-steps">
         <h3>🚀 What's Next?</h3>
         <ul>
-          <li><strong>Start Earning:</strong> Access the Analyst Workbench to review AI safety cases at $45-150/hour</li>
+          <li><strong>Get to Work:</strong> Access the Analyst Workbench to review AI safety cases</li>
           <li><strong>Share Your Achievement:</strong> Add your certification to LinkedIn and your resume</li>
           <li><strong>Join the Council:</strong> Participate in the 33-Agent Byzantine consensus system for critical decisions</li>
           <li><strong>Monitor Incidents:</strong> Use the Watchdog system to report and track AI safety incidents</li>
@@ -382,18 +382,9 @@ export async function sendCertificationEmail(
       
       <p><strong>Certificate Verification:</strong></p>
       <p>Your certificate can be verified by anyone using the certificate ID above. Employers and organizations can visit our verification page to confirm your credentials instantly.</p>
-      
-      <p><strong>Earning Potential:</strong></p>
-      <ul>
-        <li>Entry-level analysts: $45-75/hour</li>
-        <li>Experienced analysts: $75-120/hour</li>
-        <li>Top-tier analysts: $120-150/hour</li>
-      </ul>
-      
-      <p>Your earning rate increases as you complete more reviews and maintain high accuracy scores.</p>
-      
+
       <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 25px 0; border-radius: 4px;">
-        <p style="margin: 0;"><strong>⚡ Urgent:</strong> The EU AI Act enforcement deadline is August 2, 2026. Enterprises are actively seeking certified analysts. Start reviewing cases now to maximize your earning potential!</p>
+        <p style="margin: 0;"><strong>⚡ Urgent:</strong> The EU AI Act enforcement deadline is August 2, 2026. Enterprises are actively seeking certified analysts. Start reviewing cases now!</p>
       </div>
       
       <p>Welcome to the global community of AI Safety Analysts. Together, we're building a safer AI future for humanity.</p>

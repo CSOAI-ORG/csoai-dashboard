@@ -36,25 +36,25 @@ export default function CertificationHowItWorks() {
     {
       level: "Watchdog Analyst",
       requirement: "Complete free Watchdog training",
-      benefits: "Access to job board, $45/hour entry-level positions",
+      benefits: "Access to job board, entry-level positions",
       duration: "4 hours"
     },
     {
       level: "CEASAI Fundamentals",
       requirement: "Pass 50-question exam (70% pass rate)",
-      benefits: "$45-75/hour positions, basic compliance reviews",
+      benefits: "Job board positions, basic compliance reviews",
       duration: "6-8 weeks study + 90 min exam"
     },
     {
       level: "CEASAI Professional",
       requirement: "Pass advanced exam covering all frameworks",
-      benefits: "$75-120/hour positions, complex compliance projects",
+      benefits: "Job board positions, complex compliance projects",
       duration: "10-12 weeks study + 90 min exam"
     },
     {
       level: "CEASAI Expert",
       requirement: "Pass master-level exam + capstone project",
-      benefits: "$120-150/hour positions, enterprise contracts, consulting",
+      benefits: "Enterprise contracts, consulting",
       duration: "14-16 weeks study + 90 min exam + capstone"
     }
   ];

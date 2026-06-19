@@ -99,7 +99,7 @@ export default function PaidCoursesDashboard() {
                 AI Safety Certification Training
               </h1>
               <p className="text-lg text-muted-foreground">
-                Master global AI safety frameworks. Get certified. Start earning $45-150/hour as an AI Safety Analyst.
+                Master global AI safety frameworks. Get certified as an AI Safety Analyst.
               </p>
             </div>
           </div>

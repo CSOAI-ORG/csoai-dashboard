@@ -55,7 +55,7 @@ export function startTour() {
         element: '[href="/jobs"]',
         popover: {
           title: "Step 3: Find Jobs",
-          description: "Browse available AI Safety Analyst positions. Earn $45-150/hour working remotely. Apply directly through the platform with your certification.",
+          description: "Browse available AI Safety Analyst positions. Apply directly through the platform with your certification.",
           side: "bottom",
           align: "start",
         },

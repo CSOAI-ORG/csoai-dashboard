@@ -38,8 +38,8 @@ const HOME_FAQ = [
     a: "CSOAI is free (open-source). CEASAI training costs $99-$499 depending on the certification level. First 10,000 signups get the $499 course for free.",
   },
   {
-    q: "Can I really earn $45-150/hour?",
-    a: "Yes. Certified AI Safety Analysts earn $45-150/hour depending on experience level. You work on real Watchdog reports and Council cases, helping improve AI safety while earning income.",
+    q: "What does a certified AI Safety Analyst do?",
+    a: "Certified AI Safety Analysts work on real Watchdog reports and Council cases, reviewing AI systems for compliance and helping improve AI safety.",
   },
   {
     q: "Is CSOAI EU AI Act compliant?",
@@ -71,7 +71,7 @@ const HOME_FAQ = [
   },
   {
     q: "What happens after I pass the exam?",
-    a: "After passing, you receive a digital certificate and can start accepting work on Watchdog cases and Council voting. You'll have access to the analyst dashboard and can earn money immediately.",
+    a: "After passing, you receive a digital certificate and can start accepting work on Watchdog cases and Council voting. You'll have access to the analyst dashboard right away.",
   },
 ];
 
@@ -159,7 +159,7 @@ export default function HomepageMaster() {
             </p>
             
             <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 mb-2 sm:mb-3">
-              <span className="text-red-700 font-bold">EU AI Act Enforcement Deadline</span> — We need <span className="font-bold text-red-800">250,000 AI Safety Analysts</span> in:
+              <span className="text-red-700 font-bold">EU AI Act Enforcement Deadline</span> — get certified as an AI Safety Analyst before time runs out:
             </p>
             <CountdownTimer />
             
@@ -219,7 +219,7 @@ export default function HomepageMaster() {
               >
                 <Users className="w-7 h-7 text-emerald-600 mb-2" aria-hidden="true" />
                 <p className="font-bold text-gray-900">Individuals</p>
-                <p className="text-sm text-gray-600 mt-1">Get certified as an AI Safety Analyst and earn $45–150/hr.</p>
+                <p className="text-sm text-gray-600 mt-1">Get certified as an AI Safety Analyst.</p>
                 <span className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 mt-3 group-hover:gap-2 transition-all">Start free training <ArrowRight className="w-4 h-4" aria-hidden="true" /></span>
               </button>
               <button
@@ -346,9 +346,9 @@ export default function HomepageMaster() {
               <div className="flex items-start gap-4">
                 <TrendingUp className="w-10 h-10 text-emerald-600 flex-shrink-0" />
                 <div className="text-left">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">✓ 250,000 New Jobs</h3>
-                  <p className="text-gray-700 mb-3"><strong>The Problem:</strong> AI is displacing workers. No new jobs are being created at scale.</p>
-                  <p className="text-emerald-700 font-semibold"><strong>Our Fix:</strong> CEASAI training program creates AI Safety Analysts earning $45-150/hr, remote, meaningful work</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">✓ A New Career Path</h3>
+                  <p className="text-gray-700 mb-3"><strong>The Problem:</strong> AI is displacing workers, and there's a shortage of people qualified to keep AI systems safe and compliant.</p>
+                  <p className="text-emerald-700 font-semibold"><strong>Our Fix:</strong> The CEASAI training program certifies AI Safety Analysts for remote, meaningful work reviewing AI systems for compliance.</p>
                 </div>
               </div>
             </motion.div>
@@ -401,8 +401,8 @@ export default function HomepageMaster() {
                 <p className="text-emerald-100">EU Enterprises need compliance by Aug 2</p>
               </div>
               <div>
-                <p className="text-4xl font-bold mb-2">250,000</p>
-                <p className="text-emerald-100">AI Safety Analysts needed (0 exist today)</p>
+                <p className="text-4xl font-bold mb-2">Aug 2</p>
+                <p className="text-emerald-100">EU AI Act enforcement deadline (2026)</p>
               </div>
               <div>
                 <p className="text-4xl font-bold mb-2">33</p>
@@ -472,8 +472,8 @@ export default function HomepageMaster() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Problem 1: AI is Taking Jobs</h3>
                   <p className="text-gray-700 mb-4">AI automation is displacing workers, but AI safety requires human expertise.</p>
                   <div className="bg-white p-4 rounded border-l-4 border-red-600">
-                    <p className="font-semibold text-gray-900 mb-2">Our Solution: Create 10,000+ AI Safety Analyst Jobs</p>
-                    <p className="text-gray-600">$45-150/hr • Remote work • Meaningful careers protecting humanity</p>
+                    <p className="font-semibold text-gray-900 mb-2">Our Solution: A New AI Safety Analyst Career Path</p>
+                    <p className="text-gray-600">Remote work • Meaningful careers protecting humanity</p>
                   </div>
                 </div>
               </div>
@@ -544,24 +544,24 @@ export default function HomepageMaster() {
       <section className="py-20 px-4 bg-emerald-600">
         <div className="max-w-6xl mx-auto">
           <motion.div {...fadeInUp} className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">The Regulatory Crisis.<br />The Job Opportunity.</h2>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">The EU AI Act compliance deadline is August 2, 2026. 50,000 enterprises must comply. They need 100,000-250,000 AI Safety Analysts. That job category doesn't exist yet. This is the largest employment opportunity of the decade—and the only way to solve the regulatory crisis while protecting humanity.</p>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">The Regulatory Crisis.<br />The Career Opportunity.</h2>
+            <p className="text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">The EU AI Act compliance deadline is August 2, 2026. Enterprises across the EU must comply, and there's a shortage of professionals qualified to audit AI systems for safety and compliance. AI Safety Analyst is an emerging career path—and the way to help solve the regulatory crisis while protecting humanity.</p>
           </motion.div>
 
 
 
           <motion.div {...fadeInUp} className="bg-white bg-opacity-10 border-2 border-white rounded-lg p-10 mb-12">
             <h3 className="text-3xl font-bold text-emerald-600 mb-6 text-center">How CEASAI Solves the Crisis</h3>
-            <p className="text-lg mb-8 max-w-4xl mx-auto text-center leading-relaxed" style={{ color: '#fd0808' }}>If we train 100,000-250,000 AI Safety Analysts through CEASAI by August 2026, we solve the impossible regulatory deadline while creating the largest employment opportunity in a generation and making AI fundamentally safer for everyone.</p>
+            <p className="text-lg mb-8 max-w-4xl mx-auto text-center leading-relaxed" style={{ color: '#fd0808' }}>By training AI Safety Analysts through CEASAI ahead of the August 2026 deadline, we help enterprises meet the regulatory requirements, open up a new career path, and make AI fundamentally safer for everyone.</p>
             
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white bg-opacity-5 p-6 rounded-lg border border-white border-opacity-20 hover:bg-opacity-10 transition">
                 <p className="text-emerald-600 font-bold text-lg mb-3">✓ Regulatory Compliance</p>
-                <p className="text-gray-900 text-sm leading-relaxed">50,000 enterprises get access to certified AI Safety Analysts who can audit their systems and ensure compliance before the Aug 2 deadline. No enterprise gets left behind.</p>
+                <p className="text-gray-900 text-sm leading-relaxed">Enterprises get access to certified AI Safety Analysts who can audit their systems and ensure compliance before the Aug 2 deadline. No enterprise gets left behind.</p>
               </div>
               <div className="bg-white bg-opacity-5 p-6 rounded-lg border border-white border-opacity-20 hover:bg-opacity-10 transition">
-                <p className="text-emerald-600 font-bold text-lg mb-3">✓ Mass Employment</p>
-                <p className="text-gray-900 text-sm leading-relaxed">250,000 new remote jobs created at $45-150/hour. Career paths for developers, researchers, compliance professionals, and anyone passionate about AI safety. Meaningful work that protects humanity.</p>
+                <p className="text-emerald-600 font-bold text-lg mb-3">✓ A New Career Path</p>
+                <p className="text-gray-900 text-sm leading-relaxed">Remote career paths for developers, researchers, compliance professionals, and anyone passionate about AI safety. Meaningful work that protects humanity.</p>
               </div>
               <div className="bg-white bg-opacity-5 p-6 rounded-lg border border-white border-opacity-20 hover:bg-opacity-10 transition">
                 <p className="text-emerald-600 font-bold text-lg mb-3">✓ AI Safety</p>
@@ -571,7 +571,7 @@ export default function HomepageMaster() {
           </motion.div>
 
           <motion.div {...fadeInUp} className="text-center">
-            <p className="text-gray-900 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">This isn't just a business opportunity. This is the solution to an impossible regulatory crisis. This is how we create 250,000 meaningful jobs. This is how we protect humanity as AI grows. The time to act is now.</p>
+            <p className="text-gray-900 text-lg mb-8 max-w-3xl mx-auto leading-relaxed">This isn't just a business opportunity. This is the solution to an impossible regulatory crisis. This is how we create meaningful careers. This is how we protect humanity as AI grows. The time to act is now.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={() => handleCTA('analyst')} className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 text-lg font-bold">
                 Become an AI Safety Analyst
@@ -841,7 +841,7 @@ export default function HomepageMaster() {
             <motion.div {...fadeInUp} className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-lg border-2 border-emerald-300">
               <Users className="w-10 h-10 text-emerald-600 mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Worried About AI Safety?</h3>
-              <p className="text-gray-700 mb-6">Get involved. Learn AI safety in 8 weeks. Get certified. Earn $45-150/hour. Help protect humanity.</p>
+              <p className="text-gray-700 mb-6">Get involved. Learn AI safety in 8 weeks. Get certified. Help protect humanity.</p>
               <div className="bg-white p-4 rounded mb-6 border-l-4 border-emerald-600">
                 <p className="font-semibold text-gray-900 mb-2">First 10,000 signups get:</p>
                 <ul className="text-gray-600 space-y-1">

@@ -27,7 +27,7 @@ export default function TrainingV2() {
             </h1>
             
             <p className="text-xl text-gray-800 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Master the three major global AI safety frameworks—EU AI Act, NIST AI RMF, and ISO 42001. Get certified and start earning $45-150/hour monitoring AI systems for compliance.
+              Master the three major global AI safety frameworks—EU AI Act, NIST AI RMF, and ISO 42001. Get certified and start monitoring AI systems for compliance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -99,9 +99,9 @@ export default function TrainingV2() {
               <div className="w-14 h-14 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
                 <Users className="h-7 w-7 text-emerald-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Immediate Earnings</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Start Reviewing</h3>
               <p className="text-gray-600 leading-relaxed">
-                After certification, start earning $45-150/hour reviewing AI systems. Work remotely, set your own hours, and contribute to global AI safety.
+                After certification, start reviewing AI systems. Work remotely, set your own hours, and contribute to global AI safety.
               </p>
             </Card>
           </div>

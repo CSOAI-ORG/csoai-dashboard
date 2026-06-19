@@ -242,7 +242,7 @@ export default function WatchdogIncidentReportPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-gray-700">
-                  Help review and investigate AI safety incidents. Get paid $45-150/hour.
+                  Help review and investigate AI safety incidents as a certified analyst.
                 </p>
                 <Link href="/watchdog" className="block w-full">
                   <Button className="w-full" variant="outline" asChild>

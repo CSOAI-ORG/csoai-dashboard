@@ -94,8 +94,8 @@ export const trainingFAQs: FAQItem[] = [
     answer: "We offer flexible payment options: pay the full amount upfront for the best value, or spread payments over 3, 6, or 12 months. Monthly payments are calculated so the total equals the one-time price. For example, a £499 course can be paid as £166.33/month for 3 months."
   },
   {
-    question: "Can I earn money after getting certified?",
-    answer: "Absolutely! Certified AI Safety Analysts earn $45-150/hour reviewing AI systems for compliance. With the EU AI Act Article 50 deadline approaching (Aug 2, 2026), there's massive demand for qualified professionals. Our job board connects certified analysts with enterprises needing compliance support."
+    question: "What can I do after getting certified?",
+    answer: "Certified AI Safety Analysts review AI systems for compliance. With the EU AI Act Article 50 deadline approaching (Aug 2, 2026), there's strong demand for qualified professionals. Our job board connects certified analysts with enterprises needing compliance support."
   }
 ];
 

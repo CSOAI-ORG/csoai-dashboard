@@ -230,7 +230,7 @@ ${referralUrl}
 
 You'll get:
 ✅ Industry-recognized certification
-✅ Job board access ($45-$150/hr opportunities)
+✅ Job board access
 ✅ Government integration
 ✅ Career advancement
 
@@ -242,7 +242,7 @@ ${userName}
       socialTemplate: `
 🚀 I'm becoming a certified AI Safety Analyst with CSOAI!
 
-Join me and earn $45-$150/hr reviewing AI systems for compliance.
+Join me reviewing AI systems for compliance.
 
 Get 20% off with my referral link:
 ${referralUrl}
@@ -257,7 +257,7 @@ ${referralUrl}
 
 Benefits:
 • Industry-recognized certification
-• Job opportunities ($45-$150/hr)
+• Job opportunities
 • Government compliance oversight
 • Career advancement in AI governance
 

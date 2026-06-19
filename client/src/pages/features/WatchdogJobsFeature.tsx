@@ -4,7 +4,7 @@
  */
 
 import { motion } from "framer-motion";
-import { Briefcase, TrendingUp, DollarSign, Globe, Clock, Home, CheckCircle, ArrowRight, GraduationCap } from "lucide-react";
+import { Briefcase, TrendingUp, Globe, Clock, Home, CheckCircle, ArrowRight, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -28,9 +28,9 @@ export default function WatchdogJobsFeature() {
       description: "AI Safety Analyst projected to be a top 10 job by 2045 as AI systems proliferate globally."
     },
     {
-      icon: DollarSign,
-      title: "Competitive Pay",
-      description: "Entry-level: $45k-65k/year. Mid-level: $65k-95k/year. Senior: $95k-150k+/year."
+      icon: GraduationCap,
+      title: "Clear Career Path",
+      description: "Progress from Junior Analyst to Principal Analyst as you gain experience and add certifications."
     }
   ];
 
@@ -77,28 +77,24 @@ export default function WatchdogJobsFeature() {
     {
       level: "Junior Analyst",
       experience: "0-2 years",
-      salary: "$45k-65k",
       description: "Entry-level position reviewing straightforward AI systems under supervision.",
       requirements: ["EU AI Act certification", "Basic understanding of AI concepts", "Strong attention to detail"]
     },
     {
       level: "Analyst",
       experience: "2-4 years",
-      salary: "$65k-85k",
       description: "Independent review of moderate-complexity AI systems and mentoring juniors.",
       requirements: ["2+ certifications", "Proven track record", "Domain expertise developing"]
     },
     {
       level: "Senior Analyst",
       experience: "4-7 years",
-      salary: "$85k-110k",
       description: "Lead complex assessments, make final approval decisions, guide team strategy.",
       requirements: ["All 3 certifications", "Deep technical knowledge", "Leadership skills"]
     },
     {
       level: "Principal Analyst",
       experience: "7+ years",
-      salary: "$110k-150k+",
       description: "Set organizational policy, handle highest-risk systems, represent company to regulators.",
       requirements: ["Extensive experience", "Industry recognition", "Strategic thinking"]
     }
@@ -136,7 +132,7 @@ export default function WatchdogJobsFeature() {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Become an AI Safety Analyst - one of the fastest-growing careers of the next 20 years.
-              Protect humanity from AI risks while earning a competitive salary from anywhere in the world.
+              Protect humanity from AI risks while building a meaningful career from anywhere in the world.
             </p>
             <div className="flex gap-4 justify-center">
               <Link href="/watchdog-signup">
@@ -276,10 +272,9 @@ export default function WatchdogJobsFeature() {
                         <p className="text-muted-foreground">{level.description}</p>
                       </div>
                       <div className="text-right">
-                        <Badge variant="secondary" className="text-lg px-3 py-1 mb-2">
-                          {level.salary}
+                        <Badge variant="secondary" className="text-lg px-3 py-1">
+                          {level.experience}
                         </Badge>
-                        <p className="text-sm text-muted-foreground">{level.experience}</p>
                       </div>
                     </div>
                   </CardHeader>
