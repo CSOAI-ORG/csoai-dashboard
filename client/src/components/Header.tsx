@@ -99,7 +99,7 @@ export function Header() {
         { name: 'Canada AI Act', href: '/compliance/canada-ai-act', description: 'Canada regulation' },
         { name: 'Australia AI Governance', href: '/compliance/australia-ai-governance', description: 'Australia framework' },
         { name: 'Run Assessment', href: '/compliance', description: 'Run assessment' },
-        { name: 'MCP Tools', href: '/mcp', description: '271 compliance MCP servers' },
+        { name: 'MCP Tools', href: '/mcp', description: '293 compliance MCP servers' },
         { name: 'Public Scorecard', href: '/transparency', description: 'Public compliance data' },
       ]
     },
@@ -109,7 +109,7 @@ export function Header() {
       submenu: [
         { name: 'How It Works', href: '/how-it-works/enterprise', description: 'Enterprise solutions' },
         { name: 'Pricing', href: '/pricing', description: 'Plans & pricing' },
-        { name: 'MCP Fleet', href: '/mcp', description: '271 governance MCP tools' },
+        { name: 'MCP Fleet', href: '/mcp', description: '293 governance MCP tools' },
         { name: 'API Docs', href: '/api-docs', description: 'Developer docs' },
         { name: 'Onboarding', href: '/enterprise-onboarding', description: 'Get started' },
       ]

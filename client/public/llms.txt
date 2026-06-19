@@ -1,15 +1,15 @@
 # CSOAI — Council for the Safety of AI
-> The ISO for AI Safety. AI Act / NIST RMF / ISO 42001 / TC260 compliance, certification, and a registry of 271+ governance MCP servers — all on one platform.
+> The ISO for AI Safety. AI Act / NIST RMF / ISO 42001 / TC260 compliance, certification, and a registry of 293+ governance MCP servers — all on one platform.
 
 ## What CSOAI provides
 - Compliance: EU AI Act, NIST AI RMF, ISO 42001, TC260 — crosswalked across frameworks
 - Certification: CEASAI (Certified Expert in AI Safety), Watchdog certs — Ed25519-signed
-- 271+ MCP servers (Model Context Protocol) for AI governance, compliance, and agent infrastructure
+- 293+ MCP servers (Model Context Protocol) for AI governance, compliance, and agent infrastructure
 - 52-Article Charter; 33-agent Byzantine council; PDCA framework
 
 ## Key pages
 - Home: https://csoai.org/
-- MCP Registry (271+ servers): https://csoai.org/mcp
+- MCP Registry (293+ servers): https://csoai.org/mcp
 - Pricing: https://csoai.org/pricing
 - Certification: https://csoai.org/certification
 - Charter (52 articles): https://csoai.org/charter

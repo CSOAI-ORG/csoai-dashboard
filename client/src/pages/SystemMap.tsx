@@ -76,9 +76,9 @@ const LAYERS: Layer[] = [
     subtitle: 'How agents and machines plug into the system',
     nodes: [
       {
-        id: 'mcp', label: '271 MCP Tools', tag: 'callable surface',
+        id: 'mcp', label: '293 MCP Tools', tag: 'callable surface',
         blurb: 'The compliance/governance capabilities as MCP servers.',
-        detail: '271 published Model Context Protocol servers expose CSOAI’s tools to any AI agent, IDE or workflow (Claude, Cursor, Kimi, A2A clients). This is how the platform’s intelligence is consumed programmatically.',
+        detail: '293 published Model Context Protocol servers expose CSOAI’s tools to any AI agent, IDE or workflow (Claude, Cursor, Kimi, A2A clients). This is how the platform’s intelligence is consumed programmatically.',
         href: '/mcp', Icon: Boxes,
       },
       {
@@ -109,7 +109,7 @@ const SYSTEM_SCHEMA = {
   '@type': 'WebPage',
   name: 'CSOAI System Map — the integrated AI-safety platform',
   description:
-    'Interactive map of the CSOAI platform: the 33-Agent Byzantine Council, Watchdog, SOAI-PDCA, Compliance, CEASAI, 271 MCP tools, Layer-0 protocol, and the vertical estate — all integrated into one system.',
+    'Interactive map of the CSOAI platform: the 33-Agent Byzantine Council, Watchdog, SOAI-PDCA, Compliance, CEASAI, 293 MCP tools, Layer-0 protocol, and the vertical estate — all integrated into one system.',
   url: 'https://csoai.org/system',
   isPartOf: { '@type': 'Organization', name: 'Council for the Safety of AI', url: 'https://csoai.org' },
 };
@@ -121,7 +121,7 @@ export default function SystemMap() {
     <div className="min-h-screen bg-gradient-to-b from-[#070b14] to-[#0c1322] text-slate-100">
       <Helmet>
         <title>System Map — CSOAI | One integrated AI-safety platform</title>
-        <meta name="description" content="The CSOAI Dome: 33-Agent Council, Watchdog, SOAI-PDCA, Compliance, CEASAI, 271 MCP tools and Layer-0 protocol — every component integrated into one system." />
+        <meta name="description" content="The CSOAI Dome: 33-Agent Council, Watchdog, SOAI-PDCA, Compliance, CEASAI, 293 MCP tools and Layer-0 protocol — every component integrated into one system." />
         <link rel="canonical" href="https://csoai.org/system" />
         <meta property="og:title" content="CSOAI System Map — the integrated AI-safety platform" />
         <meta property="og:image" content="https://csoai.org/og-image.png" />
