@@ -48,9 +48,20 @@ export async function upsertUser(user: InsertUser): Promise<void> {
 
     textFields.forEach(assignNullable);
 
+    // Normalize to MySQL DATETIME literal ("YYYY-MM-DD HH:MM:SS").
+    // Callers pass JS `new Date().toISOString()` ("...T...Z"), which MySQL's
+    // timestamp column rejects, failing the whole upsert. That failure inside
+    // authenticateRequest dropped ctx.user and surfaced as "Please login
+    // (10001)" on every protected procedure for email-auth users.
+    const toMysqlDatetime = (v: string): string =>
+      /\dT\d/.test(v) || v.endsWith("Z")
+        ? new Date(v).toISOString().slice(0, 19).replace("T", " ")
+        : v;
+
     if (user.lastSignedIn !== undefined) {
-      values.lastSignedIn = user.lastSignedIn;
-      updateSet.lastSignedIn = user.lastSignedIn;
+      const normalizedTs = toMysqlDatetime(user.lastSignedIn);
+      values.lastSignedIn = normalizedTs;
+      updateSet.lastSignedIn = normalizedTs;
     }
     if (user.role !== undefined) {
       values.role = user.role;

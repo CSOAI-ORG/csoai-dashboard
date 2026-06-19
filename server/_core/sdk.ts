@@ -293,10 +293,17 @@ class SDKServer {
       throw ForbiddenError("User not found");
     }
 
-    await db.upsertUser({
-      openId: user.openId,
-      lastSignedIn: signedInAt,
-    });
+    // Best-effort "last seen" touch — must never fail authentication. The user
+    // is already resolved; if this write errors (e.g. transient DB issue) we
+    // still consider the request authenticated rather than 401 the caller.
+    try {
+      await db.upsertUser({
+        openId: user.openId,
+        lastSignedIn: signedInAt,
+      });
+    } catch (error) {
+      console.warn("[Auth] Failed to update lastSignedIn (non-fatal):", String(error));
+    }
 
     return user;
   }
