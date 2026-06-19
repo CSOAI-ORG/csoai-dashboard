@@ -1,0 +1,499 @@
+[
+  {
+    "at": "2026-06-19T11:27:58.054Z",
+    "kind": "guidance",
+    "frameworkSlug": "eu-ai-act",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "[baseline] European Commission — AI Office / Digital Strategy news: 2026 State of the Digital Decade report shows progress but urges closing structural gaps to reach 2030 goals",
+    "source": "https://digital-strategy.ec.europa.eu/en/news/2026-state-digital-decade-report-shows-progress-urges-closing-structural-gaps-reach-2030-goals"
+  },
+  {
+    "at": "2026-06-19T11:27:58.783Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GBR"
+    ],
+    "summary": "[baseline] GOV.UK — AI regulation announcements (DSIT): AI to speed up cancer diagnosis for millions of NHS patients",
+    "source": "https://www.gov.uk/government/news/ai-to-speed-up-cancer-diagnosis-for-millions-of-nhs-patients"
+  },
+  {
+    "at": "2026-06-19T11:27:59.125Z",
+    "kind": "guidance",
+    "frameworkSlug": "nist-ai-rmf",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "[baseline] NIST — AI news & AI Risk Management Framework updates: NIST Expands Its Library of ‘Chemical Fingerprints’ to Identify Unknown Substances",
+    "source": "https://www.nist.gov/news-events/news/2026/06/nist-expands-its-library-chemical-fingerprints-identify-unknown-substances"
+  },
+  {
+    "at": "2026-06-19T11:28:00.844Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "[baseline] US FTC — press releases (AI/algorithmic enforcement): FTC Takes Action to Protect Americans from Higher Drug Costs in Aurobindo, Lannett Deal",
+    "source": "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-takes-action-protect-americans-higher-drug-costs-aurobindo-lannett-deal"
+  },
+  {
+    "at": "2026-06-19T11:44:12.555Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1347: Council Decision (EU) 2026/1347 of 4 June 2026 on the conclusion, on behalf of the European Union, of the United Nations Convention against Cybercrime; Strengthening International Cooperation for Combating Certain Crimes C",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1347"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1385: Council Decision (EU) 2026/1385 of 8 July 2025 on the existence of an excessive deficit in Austria",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1385"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R1073R(01): Corrigendum to Commission Delegated Regulation (EU) 2026/1073 of 6 March 2026 amending and correcting Delegated Regulation (EU) 2023/361 supplementing Regulation (EU) 2016/429 of the European Parliament and the Counci",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1073R(01)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32020R0359R(10)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32020R0359R(10)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:22026A01348: United Nations Convention against Cybercrime; Strengthening International Cooperation for Combating Certain Crimes Committed by Means of Information and Communications Technology Systems and for the Sharing of Evidence in",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:22026A01348"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:42025X2412R(01): Berichtigung der UN-Regelung Nr. 41 — Einheitliche Bedingungen für die Genehmigung der Krafträder hinsichtlich ihrer Geräuschentwicklung [2025/2412] (ABl. L, 2025/2412, 12.12.2025)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:42025X2412R(01)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32019R1747R(10)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32019R1747R(10)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D0696R(01): Corrigendum to Council Decision (CFSP) 2026/696 of 14 March 2026 amending Decision 2014/145/CFSP concerning restrictive measures in respect of actions undermining or threatening the territorial integrity, sovereignty ",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D0696R(01)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32024R2076R(09)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32024R2076R(09)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32024D0847R(02): Corrigendum to Council Decision (CFSP) 2024/847 of 12 March 2024 amending Decision 2014/145/CFSP concerning restrictive measures in respect of actions undermining or threatening the territorial integrity, sovereignty ",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32024D0847R(02)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32024R0849R(02): Corrigendum to Council Implementing Regulation (EU) 2024/849 of 12 March 2024 implementing Regulation (EU) No 269/2014 concerning restrictive measures in respect of actions undermining or threatening the territorial i",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32024R0849R(02)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1084R(01): Corrigendum to Council Decision (CFSP) 2026/1084 of 12 May 2026 amending Decision (CFSP) 2021/1143 on a European Union Military Assistance Mission in Mozambique (EUMAM Mozambique) (OJ L, 2026/1084, 13.5.2026)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1084R(01)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R0695R(02): Corrigendum to Council Implementing Regulation (EU) 2026/695 of 14 March 2026 implementing Regulation (EU) No 269/2014 concerning restrictive measures in respect of actions undermining or threatening the territorial i",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R0695R(02)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32024L1619R(02)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32024L1619R(02)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1387: Commission Implementing Decision (EU) 2026/1387 of 17 June 2026 amending Implementing Decision (EU) 2025/638 concerning certain emergency measures relating to infection with peste des petits ruminants virus in Romania (not",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1387"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R1341: Commission Implementing Regulation (EU) 2026/1341 of 17 June 2026 initiating a review of Commission Implementing Regulation (EU) 2021/1266 imposing a definitive anti-dumping duty on imports of biodiesel originating in the ",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1341"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1377: Commission Implementing Decision (EU) 2026/1377 of 11 May 2026 amending Implementing Decision (EU) 2019/961 authorising a provisional measure taken by the French Republic in accordance with Article 129 of Regulation (EC) N",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1377"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32015L2366R(08)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32015L2366R(08)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.556Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1389: Commission Implementing Decision (EU) 2026/1389 of 17 June 2026 concerning certain interim emergency measures relating to infection with peste des petits ruminants virus in Croatia (notified under document C(2026) 4337)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1389"
+  },
+  {
+    "at": "2026-06-19T11:44:12.557Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:22026D1252: Decision No 1/2026 of the Joint European Union/Switzerland Air Transport Committee set up under the Agreement between the European Community and the Swiss Confederation on Air Transport of 15 June 2026 replacing the Annex ",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:22026D1252"
+  },
+  {
+    "at": "2026-06-19T11:44:12.557Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R1337: Commission Implementing Regulation (EU) 2026/1337 of 17 June 2026 granting a Union authorisation for the biocidal product family Ecolab Glut Family in accordance with Regulation (EU) No 528/2012 of the European Parliament ",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1337"
+  },
+  {
+    "at": "2026-06-19T11:44:12.557Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32019L0878R(07)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32019L0878R(07)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.557Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R1339: Commission Regulation (EU) 2026/1339 of 17 June 2026 correcting Regulation (EC) No 396/2005 of the European Parliament and of the Council as regards maximum residue levels for fenpyrazamine in or on certain products",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1339"
+  },
+  {
+    "at": "2026-06-19T11:44:12.557Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32014L0059R(19)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32014L0059R(19)"
+  },
+  {
+    "at": "2026-06-19T11:44:12.557Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:E2026C0052: EFTA Surveillance Authority Decision of 4 March 2026 amending the substantive rules in the field of State aid by amending the Guidelines on certain State aid measures in the context of the system for greenhouse gas emissio",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:E2026C0052"
+  },
+  {
+    "at": "2026-06-19T11:44:14.404Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "[baseline] European Parliament — press releases (AI/digital): Press release - EP leaders visit Dublin ahead of the Irish EU presidency",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260618IPR45738/"
+  },
+  {
+    "at": "2026-06-19T11:44:14.604Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "[baseline] France CNIL — actualités (data protection / AI): Sécurité des données : les règles essentielles pour protéger les données et votre activité",
+    "source": "https://www.cnil.fr/fr/securite-des-donnees-les-regles-essentielles"
+  },
+  {
+    "at": "2026-06-19T11:44:14.795Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "ITA"
+    ],
+    "summary": "[baseline] Italy Garante — news (data protection / AI enforcement): NEWSLETTER del 17 giugno 2026 - Passeggeri a mobilità ridotta, il Garante privacy sanziona Emirates - Telecamere di sicurezza urbana, Garante: usi ulteriori solo se previsti dalla legge - Foto dei minori sui social: serve il consenso di ent",
+    "source": "https://www.gpdp.it/garante/doc.jsp?ID=10261301"
+  },
+  {
+    "at": "2026-06-19T11:44:15.834Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GBR"
+    ],
+    "summary": "[baseline] UK ICO — news & blogs (AI, data protection): Government cuts red tape to revolutionise public services with cutting-edge tech",
+    "source": "https://www.gov.uk/government/news/government-cuts-red-tape-to-revolutionise-public-services-with-cutting-edge-tech"
+  },
+  {
+    "at": "2026-06-19T11:44:16.377Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GBR"
+    ],
+    "summary": "[baseline] UK CMA — news (AI / foundation models competition): Fake and misleading reviews: 5 businesses under CMA investigation",
+    "source": "https://www.gov.uk/government/news/fake-and-misleading-reviews-5-businesses-under-cma-investigation"
+  },
+  {
+    "at": "2026-06-19T11:44:17.236Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Agency Information Collection Activities; Proposed Collection; Comment Request; Fraud.gov Federal Program Waste, Fraud, and Abuse Tip Intake and Referral System",
+    "source": "https://www.federalregister.gov/documents/2026/06/17/2026-12218/agency-information-collection-activities-proposed-collection-comment-request-fraudgov-federal"
+  },
+  {
+    "at": "2026-06-19T11:44:17.237Z",
+    "kind": "amendment",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Proposed Rule] General Services Acquisition Regulation; Acquisition of Information and Communication Technology; Notice of Listening Sessions and Request for Comments",
+    "source": "https://www.federalregister.gov/documents/2026/06/17/2026-12205/general-services-acquisition-regulation-acquisition-of-information-and-communication-technology"
+  },
+  {
+    "at": "2026-06-19T11:44:17.237Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Notice Announcing Centers Aligned With Areas of National Need Program Competition",
+    "source": "https://www.federalregister.gov/documents/2026/06/12/2026-11893/notice-announcing-centers-aligned-with-areas-of-national-need-program-competition"
+  },
+  {
+    "at": "2026-06-19T11:44:17.237Z",
+    "kind": "amendment",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Proposed Rule] Prediction Markets; Public Interest Determinations",
+    "source": "https://www.federalregister.gov/documents/2026/06/12/2026-11854/prediction-markets-public-interest-determinations"
+  },
+  {
+    "at": "2026-06-19T11:44:17.237Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Statement of Organization, Functions, and Delegations of Authority",
+    "source": "https://www.federalregister.gov/documents/2026/06/11/2026-11743/statement-of-organization-functions-and-delegations-of-authority"
+  },
+  {
+    "at": "2026-06-19T11:44:17.237Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] HHS Request for Comment on Chronic Disease of Addiction",
+    "source": "https://www.federalregister.gov/documents/2026/06/10/2026-11602/hhs-request-for-comment-on-chronic-disease-of-addiction"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Modernizing Federal Workforce Information Tools: Request for Information (RFI) on Online Career Tools and the Occupational Information Network (O*NET) Program",
+    "source": "https://www.federalregister.gov/documents/2026/06/09/2026-11542/modernizing-federal-workforce-information-tools-request-for-information-rfi-on-online-career-tools"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "amendment",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Proposed Rule] Approval and Promulgation of Air Quality Implementation Plans; Wyoming; Regional Haze Federal Implementation Plan",
+    "source": "https://www.federalregister.gov/documents/2026/06/08/2026-11436/approval-and-promulgation-of-air-quality-implementation-plans-wyoming-regional-haze-federal"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Presidential Document] Promoting Advanced Artificial Intelligence Innovation and Security",
+    "source": "https://www.federalregister.gov/documents/2026/06/05/2026-11415/promoting-advanced-artificial-intelligence-innovation-and-security"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "amendment",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Proposed Rule] Reforming the High-Cost Program for an All-IP Future, Connect America Fund: A National Broadband Plan for Our Future High-Cost Universal Support",
+    "source": "https://www.federalregister.gov/documents/2026/06/05/2026-11353/reforming-the-high-cost-program-for-an-all-ip-future-connect-america-fund-a-national-broadband-plan"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] DNP Select Income Fund Inc., et al.",
+    "source": "https://www.federalregister.gov/documents/2026/06/05/2026-11287/dnp-select-income-fund-inc-et-al"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Notice Announcing Fund for the Improvement of Postsecondary Education-Postsecondary Student Success Grants Program Competition",
+    "source": "https://www.federalregister.gov/documents/2026/06/03/2026-11110/notice-announcing-fund-for-the-improvement-of-postsecondary-education-postsecondary-student-success"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Standards Participation and Representation Kudos (SPARK) Pilot Program",
+    "source": "https://www.federalregister.gov/documents/2026/06/03/2026-11098/standards-participation-and-representation-kudos-spark-pilot-program"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Request for Information: Shaping the Future of the Bureau of Transportation Statistics",
+    "source": "https://www.federalregister.gov/documents/2026/06/01/2026-10815/request-for-information-shaping-the-future-of-the-bureau-of-transportation-statistics"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] NIST Artificial Intelligence Consortium",
+    "source": "https://www.federalregister.gov/documents/2026/05/29/2026-10779/nist-artificial-intelligence-consortium"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Proposal Review Panel for Physics; Committee Renewal",
+    "source": "https://www.federalregister.gov/documents/2026/05/29/2026-10698/proposal-review-panel-for-physics-committee-renewal"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Proposal Review Panel for Computer and Network Systems; Committee Renewal",
+    "source": "https://www.federalregister.gov/documents/2026/05/29/2026-10697/proposal-review-panel-for-computer-and-network-systems-committee-renewal"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Proposal Review Panel for Mathematical Sciences; Committee Renewal",
+    "source": "https://www.federalregister.gov/documents/2026/05/29/2026-10696/proposal-review-panel-for-mathematical-sciences-committee-renewal"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Proposal Review Panel for Materials Research; Committee Renewal",
+    "source": "https://www.federalregister.gov/documents/2026/05/29/2026-10695/proposal-review-panel-for-materials-research-committee-renewal"
+  },
+  {
+    "at": "2026-06-19T11:44:17.238Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Proposal Review Panel for Information and Intelligent Systems; Committee Renewal",
+    "source": "https://www.federalregister.gov/documents/2026/05/29/2026-10694/proposal-review-panel-for-information-and-intelligent-systems-committee-renewal"
+  },
+  {
+    "at": "2026-06-19T11:44:44.493Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "[baseline] Canada ISED — departmental news (AI & Data Act / AISI Canada): Government of Canada tables new legislation to protect children’s data, strengthen privacy and build trust in the digital economy",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/government-of-canada-tables-new-legislation-to-protect-childrens-data-strengthen-privacy-and-build-trust-in-the-digital-economy.html"
+  }
+]
