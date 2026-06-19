@@ -86,7 +86,6 @@ import Blog from "./pages/Blog";
 import Recommendations from "./pages/Recommendations";
 import MarketingHome from "./pages/MarketingHome";
 import Standards from "./pages/Standards";
-import WatchdogPublic from "./pages/WatchdogPublic";
 import PublicWatchdogHub from "./pages/PublicWatchdogHub";
 import CouncilDetail from "./pages/CouncilDetail";
 import Resources from "./pages/Resources";
@@ -183,7 +182,6 @@ import AustraliaAIGovernanceCompliance from "./pages/AustraliaAIGovernanceCompli
 import GovernmentLinks from "./pages/GovernmentLinks";
 import RegulatoryCompliance from "./pages/RegulatoryCompliance";
 import GlobalAISafetyInitiative from "./pages/GlobalAISafetyInitiative";
-import BlogIndex from "./pages/BlogIndex";
 import GovernmentCRM from "./pages/GovernmentCRM";
 import EmailAutomation from "./pages/EmailAutomation";
 import EmailSchedules from "./pages/admin/EmailSchedules";
@@ -380,7 +378,7 @@ function App() {
                   <Route path="/enterprise-onboarding" component={EnterpriseOnboarding} />
                   <Route path="/pricing" component={Pricing} />
              <Route path="/watchdog-leaderboard" component={WatchdogLeaderboard} />
-      <Route path="/public-watchdog" component={WatchdogPublic} />               <Route path="/regulator" component={RegulatorDashboard} />
+      <Route path="/regulator" component={RegulatorDashboard} />
                   <Route path="/blog" component={Blog} />
                   <Route path="/recommendations" component={Recommendations} />
                   <Route path="/accreditation" component={Accreditation} />
@@ -439,7 +437,6 @@ function App() {
                   {/* Watchdog Incident Reporting */}
                   <Route path="/watchdog/incident" component={WatchdogIncidentReport} />
                   {/* Blog and CRM Pages */}
-                  <Route path="/blog" component={BlogIndex} />
                   <Route path="/admin/government-crm" component={GovernmentCRM} />
                   <Route path="/admin/email-automation" component={EmailAutomation} />
                   {/* Government & Regulatory Pages */}
