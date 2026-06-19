@@ -18,20 +18,45 @@ const EU_SLUGS = ['eu-ai-act','dora','nis2','cra','gdpr'];
 
 export const COUNTRY_FRAMEWORKS: Record<string, string[]> = {
   ...Object.fromEntries(EU27.map((c) => [c, EU_SLUGS])),
-  GBR: ['uk-aisi','gdpr'],                          // UK — no comprehensive statute; AISI + UK GDPR
-  USA: ['nist-ai-rmf','hipaa','colorado-ai-act'],  // US — no federal AI law; voluntary RMF + Colorado state law
+  GBR: ['uk-aisi','uk-ai-approach','gdpr'],          // UK — no comprehensive statute; AISI + pro-innovation approach + UK GDPR
+  // US — no federal AI law; voluntary RMF + Colorado + sub-national state statutes (several binding/in force)
+  USA: ['nist-ai-rmf','hipaa','colorado-ai-act','california-sb1001-bots','california-ab2013-training-data','california-sb942-transparency','illinois-bipa','illinois-hb3773-employment','nyc-local-law-144','texas-traiga','utah-ai-policy-act'],
   KOR: ['korea-ai-basic-act'],                      // South Korea — binding (in force 22 Jan 2026)
   CHN: ['china-genai-measures'],                    // China — binding CAC GenAI/deep-synthesis/algorithm rules
   JPN: ['japan-ai-promotion-act'],                  // Japan — in force but non-punitive (binding:false)
   SGP: ['singapore-agentic-ai'],                    // Singapore — voluntary Model AI Governance + agentic guidance
-  CAN: ['canada-aida'],                             // Canada — AIDA lapsed 2025 (not binding)
+  CAN: ['canada-aida','quebec-law-25-adm'],         // Canada — AIDA lapsed (not binding) + Quebec Law 25 ADM (binding, in force)
   AUS: ['australia-voluntary-ai-standard'],         // Australia — voluntary standard; mandatory guardrails pending
   IND: ['india-it-synthetic-rules'],                // India — binding AI/deepfake content rules; no horizontal AI law
+  // National AI statutes in force (binding)
+  VNM: ['vietnam-ai-law'],                          // Vietnam — binding AI Law in force 1 Mar 2026
+  TWN: ['taiwan-ai-basic-act'],                     // Taiwan — binding AI Basic Act (framework) in force 14 Jan 2026
+  PER: ['peru-ai-law'],                             // Peru — binding AI law + in-force implementing regulation
+  // National bills / voluntary frameworks (not binding AI law)
+  BRA: ['brazil-pl2338'],                           // Brazil — risk-based AI bill, pending in Chamber
+  CHL: ['chile-ai-bill'],                           // Chile — AI bill passed lower house, in Senate
+  CHE: ['switzerland-ai-approach'],                 // Switzerland — sectoral + CoE Convention ratification (no statute)
+  NOR: ['norway-ai-eea'],                           // Norway — EU AI Act pending EEA incorporation; KI-loven draft
+  ARE: ['uae-ai-charter'],                          // UAE — voluntary charter/strategy (DIFC Reg 10 free-zone only)
+  SAU: ['saudi-sdaia-ai-ethics'],                   // Saudi Arabia — voluntary SDAIA ethics principles
+  ISR: ['israel-ai-policy'],                        // Israel — voluntary AI policy & ethics
+  EGY: ['egypt-ai-charter'],                        // Egypt — voluntary charter + strategy
+  TUR: ['turkey-ai-bill'],                          // Turkey — draft AI law pending
+  NGA: ['nigeria-ai-strategy'],                     // Nigeria — voluntary national AI strategy
+  KEN: ['kenya-ai-strategy'],                       // Kenya — voluntary national AI strategy
+  ZAF: ['south-africa-ai-policy'],                  // South Africa — draft AI policy framework
+  RWA: ['rwanda-ai-policy'],                        // Rwanda — voluntary national AI policy
+  IDN: ['indonesia-ai-ethics'],                     // Indonesia — voluntary AI ethics circular
+  PHL: ['philippines-ai-bills'],                    // Philippines — AI bills pending
+  NZL: ['new-zealand-algorithm-charter'],           // New Zealand — voluntary algorithm charter
+  PAK: ['pakistan-ai-policy'],                      // Pakistan — voluntary national AI policy
+  MYS: ['malaysia-ai-guidelines'],                  // Malaysia — voluntary AI governance & ethics guidelines
+  THA: ['thailand-ai-draft'],                       // Thailand — draft AI law (status contested)
 };
 
 // Frameworks that apply everywhere (standards, intergovernmental, voluntary, AI-company specs).
 export const GLOBAL_SLUGS = FRAMEWORKS
-  .filter((f) => ['ISO/IEC','OECD','UNESCO','IEEE','G7/G20','FLI','AI Company','CSOAI Original','CSOAI','Council of Europe','Amnesty','Université de Montréal','BAAI'].includes(f.region))
+  .filter((f) => ['ISO/IEC','OECD','UNESCO','IEEE','G7/G20','FLI','AI Company','CSOAI Original','CSOAI','Council of Europe','Amnesty','Université de Montréal','BAAI','Intergovernmental','Regional Bloc'].includes(f.region))
   .map((f) => f.slug);
 
 export function frameworkBySlug(slug: string): Framework | undefined {
@@ -62,6 +87,12 @@ export const COUNTRY_NAMES: Record<string, string> = {
   USA: 'United States', GBR: 'United Kingdom', KOR: 'South Korea', SGP: 'Singapore',
   CHN: 'China', CAN: 'Canada', DEU: 'Germany', FRA: 'France', ITA: 'Italy', ESP: 'Spain',
   NLD: 'Netherlands', IRL: 'Ireland', POL: 'Poland', SWE: 'Sweden',
+  JPN: 'Japan', IND: 'India', AUS: 'Australia', VNM: 'Vietnam', TWN: 'Taiwan',
+  PER: 'Peru', BRA: 'Brazil', CHL: 'Chile', CHE: 'Switzerland', NOR: 'Norway',
+  ARE: 'United Arab Emirates', SAU: 'Saudi Arabia', ISR: 'Israel', EGY: 'Egypt',
+  TUR: 'Turkey', NGA: 'Nigeria', KEN: 'Kenya', ZAF: 'South Africa', RWA: 'Rwanda',
+  IDN: 'Indonesia', PHL: 'Philippines', NZL: 'New Zealand', PAK: 'Pakistan',
+  MYS: 'Malaysia', THA: 'Thailand',
 };
 
 // CSOAI tools/features that overlay onto a region from the sidebar (the "use one profile" layer).
