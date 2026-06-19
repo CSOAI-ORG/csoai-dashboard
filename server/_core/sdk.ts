@@ -212,19 +212,20 @@ class SDKServer {
       });
       const { openId, appId, name } = payload as Record<string, unknown>;
 
-      if (
-        !isNonEmptyString(openId) ||
-        !isNonEmptyString(appId) ||
-        !isNonEmptyString(name)
-      ) {
-        console.warn("[Auth] Session payload missing required fields");
+      // Only `openId` is load-bearing — it's the DB lookup key used to resolve
+      // the user. `appId` and `name` are informational and are legitimately
+      // empty for email/password sessions (VITE_APP_ID is unset for those),
+      // so requiring them here wrongly rejected every email-auth session and
+      // surfaced as "Please login (10001)" on protected procedures.
+      if (!isNonEmptyString(openId)) {
+        console.warn("[Auth] Session payload missing openId");
         return null;
       }
 
       return {
         openId,
-        appId,
-        name,
+        appId: isNonEmptyString(appId) ? appId : "",
+        name: isNonEmptyString(name) ? name : "",
       };
     } catch (error) {
       console.warn("[Auth] Session verification failed", String(error));
