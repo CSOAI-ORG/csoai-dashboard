@@ -2,13 +2,19 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { geoEqualEarth, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages } from 'lucide-react';
+import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages, Building2, Clock, Cpu } from 'lucide-react';
 import { FRAMEWORKS } from '@/data/frameworks';
 import {
   WORLD_ATLAS_URL, isoFromNumeric, coverageLevel,
   COUNTRY_FRAMEWORKS, COUNTRY_NAMES, CSOAI_TOOLS, GLOBAL_SLUGS, frameworkBySlug,
 } from '@/data/regulationsGeo';
 import { I18nProvider, useI18n, LANGUAGE_NAMES, LOCALES, type Locale } from '@/i18n';
+import { ENTITIES, entitiesForCountry } from '@/data/intel/entities';
+import { deadlinesForJurisdiction, nextDeadline } from '@/data/intel/deadlines';
+import { signalsForEntity } from '@/data/intel/risk';
+// NOTE: the company/deadline UI strings below are intentionally English for now —
+// localizing them means adding keys to all 12 locale dicts (a follow-on i18n pass),
+// same call as leaving framework legal content in source.
 
 /**
  * OpenGridWorks — a MEOK-Dome-styled world map of AI regulation. Every country is
@@ -61,6 +67,8 @@ function OpenGridWorksInner() {
   const [err, setErr] = useState<string | null>(null);
   const [selNum, setSelNum] = useState<number | null>(null);
   const [hovered, setHovered] = useState<Picked | null>(null);
+  const [selEntity, setSelEntity] = useState<string | null>(null);
+  const [hoverEnt, setHoverEnt] = useState<string | null>(null);
   const [activeFw, setActiveFw] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState('');
   const [view, setView] = useState({ k: 1, x: 0, y: 0 });
@@ -165,6 +173,20 @@ function OpenGridWorksInner() {
   const selNational = (selPick?.iso ? (COUNTRY_FRAMEWORKS[selPick.iso] || []) : []).map(frameworkBySlug).filter(Boolean) as any[];
   const selGlobal = GLOBAL_SLUGS.map(frameworkBySlug).filter(Boolean) as any[];
 
+  // intelligence layer: live deadline clocks, the companies in this country, and the
+  // single headline binding deadline anywhere (the "our AI already knows" banner).
+  const headlineDeadline = useMemo(() => nextDeadline(), []);
+  const selDeadlines = useMemo(
+    () => (selPick?.iso ? deadlinesForJurisdiction(selPick.iso).filter((d) => (d.daysOut ?? -1) >= 0).slice(0, 6) : []),
+    [selPick?.iso],
+  );
+  const selCompanies = useMemo(() => (selPick?.iso ? entitiesForCountry(selPick.iso) : []), [selPick?.iso]);
+  const selectEntity = (e: typeof ENTITIES[number]) => {
+    const g = geos.find((x) => isoFromNumeric(x.id) === e.jurisdiction);
+    if (g) { setSelNum(parseInt(String(g.id), 10)); flyTo(g, 4); }
+    setSelEntity(e.slug);
+  };
+
   const isDimmed = (iso?: string) => {
     if (!activeFw.size) return false;
     if (!iso) return true;
@@ -200,7 +222,13 @@ function OpenGridWorksInner() {
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Open<span className="text-emerald-400">Grid</span>Works</h1>
           <div className="ms-auto"><LanguageSwitcher /></div>
         </div>
-        <p className="text-slate-400 mb-6 max-w-2xl">{t('subtitle')}</p>
+        <p className="text-slate-400 mb-3 max-w-2xl">{t('subtitle')}</p>
+        {headlineDeadline && (
+          <div className="mb-6 inline-flex items-center gap-2 text-xs rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 text-amber-200" data-testid="headline-deadline">
+            <Clock className="w-4 h-4 shrink-0" />
+            <span>Next binding deadline: <b>{headlineDeadline.label}</b> — {headlineDeadline.date} ({headlineDeadline.daysOut} days out)</span>
+          </div>
+        )}
 
         <div className="grid lg:grid-cols-[260px_1fr] gap-4">
           {/* Sidebar */}
@@ -277,6 +305,20 @@ function OpenGridWorksInner() {
                         onClick={() => { if (!drag.current?.moved) setSelNum(num); }} />
                     );
                   })}
+                  {/* Entity layer — real AI/robotics companies as markers (Wave B) */}
+                  {proj && ENTITIES.map((e) => {
+                    if (!e.geo) return null;
+                    const p = proj([e.geo.lon, e.geo.lat]);
+                    if (!p) return null;
+                    const active = hoverEnt === e.slug || selEntity === e.slug;
+                    return (
+                      <circle key={e.slug} cx={p[0]} cy={p[1]} r={(active ? 4 : 2.4) / view.k}
+                        fill={active ? '#fbbf24' : '#f59e0b'} stroke="#0b1220" strokeWidth={0.5 / view.k} opacity={0.92}
+                        style={{ cursor: 'pointer' }}
+                        onMouseEnter={() => setHoverEnt(e.slug)} onMouseLeave={() => setHoverEnt(null)}
+                        onClick={(ev) => { ev.stopPropagation(); if (!drag.current?.moved) selectEntity(e); }} />
+                    );
+                  })}
                 </g>
                 {hovered && (
                   <text x={12} y={H - 14} className="fill-slate-200" fontSize={13} fontWeight={600}>
@@ -284,6 +326,14 @@ function OpenGridWorksInner() {
                     {hovered.iso ? '' : t('hoverGlobalSuffix')}
                   </text>
                 )}
+                {hoverEnt && (() => {
+                  const e = ENTITIES.find((x) => x.slug === hoverEnt);
+                  return e ? (
+                    <text x={12} y={H - 32} className="fill-amber-300" fontSize={12} fontWeight={600}>
+                      {e.name}{e.sector ? ` · ${e.sector}` : ''} · {e.systems?.length || 0} system(s) · {e.inScope?.length || 0} in scope
+                    </text>
+                  ) : null;
+                })()}
               </svg>
             )}
 
@@ -358,6 +408,64 @@ function OpenGridWorksInner() {
                 ))}
               </div>
             </details>
+
+            {/* Live compliance deadlines for this jurisdiction (Wave: deadline radar) */}
+            {selDeadlines.length > 0 && (
+              <div className="mt-5">
+                <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2"><Clock className="w-4 h-4" /> Compliance deadlines ({selDeadlines.length})</div>
+                <div className="space-y-1.5">
+                  {selDeadlines.map((d, i) => (
+                    <div key={i} className="flex items-center justify-between gap-3 rounded-lg border border-slate-800 bg-slate-800/20 px-3 py-2">
+                      <span className="text-[12px] text-slate-300">{d.label}</span>
+                      <span className={`text-[11px] tabular-nums shrink-0 ${d.binding ? 'text-amber-300' : 'text-slate-500'}`}>{d.date} · {d.daysOut}d</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* AI & robotics companies operating here (Wave: entity registry + risk) */}
+            {selCompanies.length > 0 && (
+              <div className="mt-5">
+                <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2"><Building2 className="w-4 h-4" /> AI &amp; robotics companies here ({selCompanies.length})</div>
+                <div className="space-y-2">
+                  {selCompanies.map((e) => {
+                    const open = selEntity === e.slug;
+                    const sigs = open ? signalsForEntity(e) : [];
+                    return (
+                      <div key={e.slug} className="rounded-xl border border-slate-800 bg-slate-800/30">
+                        <button onClick={() => setSelEntity(open ? null : e.slug)} className="w-full text-start p-3" data-testid={`entity-${e.slug}`}>
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="font-semibold text-sm">{e.name}</span>
+                            <span className="text-[10px] text-slate-500 shrink-0">{e.inScope?.length || 0} in scope</span>
+                          </div>
+                          {e.sector && <div className="text-[11px] text-slate-500 mt-0.5">{e.sector}</div>}
+                          {e.systems && e.systems.length > 0 && (
+                            <div className="flex flex-wrap gap-1 mt-1.5">
+                              {e.systems.slice(0, 4).map((s, i) => (
+                                <span key={i} className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/40 text-slate-300 inline-flex items-center gap-1"><Cpu className="w-3 h-3" />{s.name}{s.riskTier ? ` · ${s.riskTier}` : ''}</span>
+                              ))}
+                            </div>
+                          )}
+                        </button>
+                        {open && sigs.length > 0 && (
+                          <div className="border-t border-slate-800 p-3 space-y-1.5">
+                            <div className="text-[10px] uppercase tracking-wide text-slate-500">Help-first signals — scope + deadline, not a verdict</div>
+                            {sigs.slice(0, 5).map((s, i) => (
+                              <div key={i} className="text-[11px] text-slate-400 flex gap-1.5">
+                                <span className={`inline-block w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${s.band === 'in-scope' ? 'bg-amber-400' : s.band === 'attested' ? 'bg-emerald-400' : 'bg-slate-500'}`} />
+                                <span>{s.rationale}</span>
+                              </div>
+                            ))}
+                            <a href="/compliance" className="text-[11px] text-emerald-400 hover:underline inline-block mt-1">Help this organisation comply →</a>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             <div className="mt-5 grid grid-cols-2 gap-2">
               {CSOAI_TOOLS.map((t) => (
