@@ -495,5 +495,50 @@
     ],
     "summary": "[baseline] Canada ISED — departmental news (AI & Data Act / AISI Canada): Government of Canada tables new legislation to protect children’s data, strengthen privacy and build trust in the digital economy",
     "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/government-of-canada-tables-new-legislation-to-protect-childrens-data-strengthen-privacy-and-build-trust-in-the-digital-economy.html"
+  },
+  {
+    "at": "2026-06-19T11:54:45.684Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32013R1024R(06)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32013R1024R(06)"
+  },
+  {
+    "at": "2026-06-19T11:54:47.467Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - Press conference: European Democracy Shield findings and recommendations",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260619IPR45814/"
+  },
+  {
+    "at": "2026-06-19T12:06:35.108Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "[baseline] European Data Protection Board — news & guidelines: Coordinated Supervision Committee extends scope to include Eurodac",
+    "source": "https://www.edpb.europa.eu/news/news/2026/coordinated-supervision-committee-extends-scope-include-eurodac_en"
+  },
+  {
+    "at": "2026-06-19T12:06:42.858Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "[baseline] Japan Digital Agency (デジタル庁) — news & updates RSS: マイナンバーカード・インフォ（民間事業者向け情報）Vol.140、Vol.141を更新しました",
+    "source": "https://www.digital.go.jp/policies/mynumber/private-business/info"
+  },
+  {
+    "at": "2026-06-19T12:06:43.629Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "[baseline] Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u�d�g�L�����p�ψ���񍐁i�āj�v�ɑ΂���ӌ���W�̌���",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban09_02000591.html"
   }
 ]
