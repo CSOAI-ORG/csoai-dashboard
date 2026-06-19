@@ -3,7 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Radar, Clock, Globe2, Filter, ChevronRight, AlertTriangle } from 'lucide-react';
 import { upcomingDeadlines, nextDeadline } from '@/data/intel/deadlines';
 import { COUNTRY_NAMES } from '@/data/regulationsGeo';
+import { I18nProvider, useI18n } from '@/i18n';
+import type { Dict } from '@/i18n/locales/en';
 import type { DeadlineEvent } from '@/data/intel/types';
+
+type TFn = (key: keyof Dict, vars?: Record<string, string | number>) => string;
 
 /**
  * RegulationRadar (/radar) — the global AI-regulation deadline radar. It turns the live
@@ -14,8 +18,8 @@ import type { DeadlineEvent } from '@/data/intel/types';
  */
 
 // Friendly name for a jurisdiction code ('GLOBAL' is a sentinel, not an ISO3).
-function jurisdictionName(code: string): string {
-  if (code === 'GLOBAL') return 'Global';
+function jurisdictionName(code: string, t: TFn): string {
+  if (code === 'GLOBAL') return t('global');
   return COUNTRY_NAMES[code] || code;
 }
 
@@ -27,18 +31,19 @@ function fmtDate(iso: string): string {
 }
 
 // Countdown label + urgency colour from daysOut.
-function countdown(days: number): { label: string; tone: string } {
-  if (days <= 0) return { label: 'in force', tone: 'text-rose-300' };
-  if (days === 1) return { label: '1 day', tone: 'text-rose-300' };
-  if (days <= 30) return { label: `${days} days`, tone: 'text-rose-300' };
-  if (days <= 90) return { label: `${days} days`, tone: 'text-amber-300' };
-  if (days <= 365) return { label: `${days} days`, tone: 'text-emerald-300' };
-  return { label: `${days} days`, tone: 'text-slate-400' };
+function countdown(days: number, t: TFn): { label: string; tone: string } {
+  if (days <= 0) return { label: t('inForce'), tone: 'text-rose-300' };
+  if (days === 1) return { label: t('oneDay'), tone: 'text-rose-300' };
+  if (days <= 30) return { label: t('daysCountdown', { days }), tone: 'text-rose-300' };
+  if (days <= 90) return { label: t('daysCountdown', { days }), tone: 'text-amber-300' };
+  if (days <= 365) return { label: t('daysCountdown', { days }), tone: 'text-emerald-300' };
+  return { label: t('daysCountdown', { days }), tone: 'text-slate-400' };
 }
 
 function DeadlineRow({ d }: { d: DeadlineEvent }) {
+  const { t } = useI18n();
   const days = d.daysOut ?? 0;
-  const cd = countdown(days);
+  const cd = countdown(days, t);
   // first listed jurisdiction drives the deep-link into the map
   const region = d.jurisdictions[0] && d.jurisdictions[0] !== 'GLOBAL' ? d.jurisdictions[0] : undefined;
   const href = region ? `/opengridworks?region=${region}` : '/opengridworks';
@@ -61,13 +66,13 @@ function DeadlineRow({ d }: { d: DeadlineEvent }) {
               d.binding ? 'bg-rose-500/20 text-rose-300' : 'bg-slate-700/50 text-slate-400'
             }`}
           >
-            {d.binding ? 'Binding' : 'Voluntary'}
+            {d.binding ? t('bindingBadge') : t('voluntaryBadge')}
           </span>
         </div>
         <div className="mt-1 flex flex-wrap gap-1">
           {d.jurisdictions.slice(0, 6).map((j) => (
             <span key={j} className="text-[10px] px-1.5 py-0.5 rounded bg-slate-800/70 text-slate-300">
-              {jurisdictionName(j)}
+              {jurisdictionName(j, t)}
             </span>
           ))}
           {d.jurisdictions.length > 6 && (
@@ -83,6 +88,15 @@ function DeadlineRow({ d }: { d: DeadlineEvent }) {
 }
 
 export default function RegulationRadar() {
+  return (
+    <I18nProvider>
+      <RegulationRadarInner />
+    </I18nProvider>
+  );
+}
+
+function RegulationRadarInner() {
+  const { t } = useI18n();
   const [bindingOnly, setBindingOnly] = useState(false);
   const [juris, setJuris] = useState<string>('ALL');
 
@@ -98,10 +112,10 @@ export default function RegulationRadar() {
     codes.sort((a, b) => {
       if (a === 'GLOBAL') return -1;
       if (b === 'GLOBAL') return 1;
-      return jurisdictionName(a).localeCompare(jurisdictionName(b));
+      return jurisdictionName(a, t).localeCompare(jurisdictionName(b, t));
     });
     return codes;
-  }, [all]);
+  }, [all, t]);
 
   const rows = useMemo(
     () =>
@@ -135,10 +149,7 @@ export default function RegulationRadar() {
             Regulation <span className="text-emerald-400">Radar</span>
           </h1>
         </div>
-        <p className="text-slate-400 mb-6 max-w-2xl">
-          Every upcoming AI-regulation deadline on Earth, on one clock — soonest first. The OS is already
-          aware when each obligation bites, so you never get surprised by a cliff.
-        </p>
+        <p className="text-slate-400 mb-6 max-w-2xl">{t('radarSubtitle')}</p>
 
         {/* Headline: the single next binding deadline anywhere */}
         {headline && (
@@ -152,21 +163,21 @@ export default function RegulationRadar() {
             className="block mb-6 rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-500/10 to-slate-900/40 p-5 hover:border-amber-400/60 transition"
           >
             <div className="flex items-center gap-2 text-[11px] uppercase tracking-wider text-amber-300/80 mb-2">
-              <AlertTriangle className="w-4 h-4" /> Next binding deadline anywhere
+              <AlertTriangle className="w-4 h-4" /> {t('nextBindingAnywhere')}
             </div>
             <div className="flex items-end justify-between gap-4 flex-wrap">
               <div>
                 <div className="text-lg font-bold text-slate-100">{headline.label}</div>
                 <div className="text-sm text-slate-400 mt-0.5">
                   {fmtDate(headline.date)} ·{' '}
-                  {headline.jurisdictions.map(jurisdictionName).join(', ')}
+                  {headline.jurisdictions.map((j) => jurisdictionName(j, t)).join(', ')}
                 </div>
               </div>
               <div className="text-right">
                 <div className="text-3xl font-extrabold tabular-nums text-amber-300">
                   {Math.max(0, headline.daysOut ?? 0)}
                 </div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-500">days out</div>
+                <div className="text-[10px] uppercase tracking-wider text-slate-500">{t('daysOutShort')}</div>
               </div>
             </div>
           </a>
@@ -175,7 +186,7 @@ export default function RegulationRadar() {
         {/* Filters */}
         <div className="flex flex-wrap items-center gap-3 mb-5">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
-            <Filter className="w-4 h-4" /> Filter
+            <Filter className="w-4 h-4" /> {t('filter')}
           </div>
           <button
             onClick={() => setBindingOnly((v) => !v)}
@@ -186,7 +197,7 @@ export default function RegulationRadar() {
                 : 'border-slate-700 text-slate-400 hover:border-slate-500'
             }`}
           >
-            {bindingOnly ? 'Binding only ✓' : 'Binding only'}
+            {bindingOnly ? t('bindingOnlyActive') : t('bindingOnly')}
           </button>
           <label className="flex items-center gap-2 text-xs text-slate-400">
             <Globe2 className="w-4 h-4 shrink-0" />
@@ -196,17 +207,17 @@ export default function RegulationRadar() {
               data-testid="jurisdiction-picker"
               className="bg-slate-800/60 border border-slate-700 rounded-md px-2 py-1.5 text-sm text-slate-200 outline-none focus:border-emerald-500/60 cursor-pointer"
             >
-              <option value="ALL">All jurisdictions</option>
+              <option value="ALL">{t('allJurisdictions')}</option>
               {jurisdictionOptions.map((j) => (
                 <option key={j} value={j}>
-                  {jurisdictionName(j)}
+                  {jurisdictionName(j, t)}
                 </option>
               ))}
             </select>
           </label>
           <span className="ms-auto text-xs text-slate-500 flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5" />
-            {rows.length} upcoming · {bindingCount} binding
+            {t('radarCount', { upcoming: rows.length, binding: bindingCount })}
           </span>
         </div>
 
@@ -219,14 +230,11 @@ export default function RegulationRadar() {
           </div>
         ) : (
           <div className="rounded-xl border border-slate-800 bg-slate-900/40 p-8 text-center text-slate-500 text-sm">
-            No upcoming deadlines match these filters. Try clearing the jurisdiction or binding filter.
+            {t('radarEmpty')}
           </div>
         )}
 
-        <p className="mt-8 text-[11px] text-slate-600 max-w-2xl">
-          Dates are parsed from each framework's published effective text. Countdowns are computed live
-          against today. This radar tracks <em>when obligations take effect</em> — it is not legal advice.
-        </p>
+        <p className="mt-8 text-[11px] text-slate-600 max-w-2xl">{t('radarFootnote')}</p>
       </div>
     </div>
   );

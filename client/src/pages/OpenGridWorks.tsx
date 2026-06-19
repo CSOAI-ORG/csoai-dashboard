@@ -19,9 +19,9 @@ import { loadAdmin1, hasAdmin1, type Admin1Feature } from '@/data/intel/admin1';
 //  - LABEL_ZOOM:  at/above this scale company markers gain a name label (de-cluttered)
 const ADMIN1_ZOOM = 3;
 const LABEL_ZOOM = 4;
-// NOTE: the company/deadline UI strings below are intentionally English for now —
-// localizing them means adding keys to all 12 locale dicts (a follow-on i18n pass),
-// same call as leaving framework legal content in source.
+// The company/deadline/dashboard UI chrome below is localized via the i18n dict
+// (keys in locales/en.ts). Framework *legal content* (names, descriptions, effective
+// dates) is still left as-authored in source — that stays an accuracy-driven choice.
 
 /**
  * OpenGridWorks — a MEOK-Dome-styled world map of AI regulation. Every country is
@@ -251,7 +251,7 @@ function OpenGridWorksInner() {
         {headlineDeadline && (
           <div className="mb-6 inline-flex items-center gap-2 text-xs rounded-lg border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 text-amber-200" data-testid="headline-deadline">
             <Clock className="w-4 h-4 shrink-0" />
-            <span>Next binding deadline: <b>{headlineDeadline.label}</b> — {headlineDeadline.date} ({headlineDeadline.daysOut} days out)</span>
+            <span>{t('headlineDeadlinePrefix')}: <b>{headlineDeadline.label}</b> — {headlineDeadline.date} ({t('daysOut', { days: headlineDeadline.daysOut ?? 0 })})</span>
           </div>
         )}
 
@@ -381,7 +381,7 @@ function OpenGridWorksInner() {
                   const e = ENTITIES.find((x) => x.slug === hoverEnt);
                   return e ? (
                     <text x={12} y={H - 32} className="fill-amber-300" fontSize={12} fontWeight={600}>
-                      {e.name}{e.sector ? ` · ${e.sector}` : ''} · {e.systems?.length || 0} system(s) · {e.inScope?.length || 0} in scope
+                      {e.name}{e.sector ? ` · ${e.sector}` : ''} · {t('entityHoverSystems', { count: e.systems?.length || 0 })} · {t('inScopeCount', { count: e.inScope?.length || 0 })}
                     </text>
                   ) : null;
                 })()}
@@ -463,7 +463,7 @@ function OpenGridWorksInner() {
             {/* Live compliance deadlines for this jurisdiction (Wave: deadline radar) */}
             {selDeadlines.length > 0 && (
               <div className="mt-5">
-                <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2"><Clock className="w-4 h-4" /> Compliance deadlines ({selDeadlines.length})</div>
+                <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2"><Clock className="w-4 h-4" /> {t('complianceDeadlines', { count: selDeadlines.length })}</div>
                 <div className="space-y-1.5">
                   {selDeadlines.map((d, i) => (
                     <div key={i} className="flex items-center justify-between gap-3 rounded-lg border border-slate-800 bg-slate-800/20 px-3 py-2">
@@ -478,7 +478,7 @@ function OpenGridWorksInner() {
             {/* AI & robotics companies operating here (Wave: entity registry + risk) */}
             {selCompanies.length > 0 && (
               <div className="mt-5">
-                <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2"><Building2 className="w-4 h-4" /> AI &amp; robotics companies here ({selCompanies.length})</div>
+                <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 flex items-center gap-2"><Building2 className="w-4 h-4" /> {t('companiesHere', { count: selCompanies.length })}</div>
                 <div className="space-y-2">
                   {selCompanies.map((e) => {
                     const open = selEntity === e.slug;
@@ -488,7 +488,7 @@ function OpenGridWorksInner() {
                         <button onClick={() => setSelEntity(open ? null : e.slug)} className="w-full text-start p-3" data-testid={`entity-${e.slug}`}>
                           <div className="flex items-center justify-between gap-2">
                             <span className="font-semibold text-sm">{e.name}</span>
-                            <span className="text-[10px] text-slate-500 shrink-0">{e.inScope?.length || 0} in scope</span>
+                            <span className="text-[10px] text-slate-500 shrink-0">{t('inScopeCount', { count: e.inScope?.length || 0 })}</span>
                           </div>
                           {e.sector && <div className="text-[11px] text-slate-500 mt-0.5">{e.sector}</div>}
                           {e.systems && e.systems.length > 0 && (
@@ -501,14 +501,14 @@ function OpenGridWorksInner() {
                         </button>
                         {open && sigs.length > 0 && (
                           <div className="border-t border-slate-800 p-3 space-y-1.5">
-                            <div className="text-[10px] uppercase tracking-wide text-slate-500">Help-first signals — scope + deadline, not a verdict</div>
+                            <div className="text-[10px] uppercase tracking-wide text-slate-500">{t('helpFirstSignals')}</div>
                             {sigs.slice(0, 5).map((s, i) => (
                               <div key={i} className="text-[11px] text-slate-400 flex gap-1.5">
                                 <span className={`inline-block w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${s.band === 'in-scope' ? 'bg-amber-400' : s.band === 'attested' ? 'bg-emerald-400' : 'bg-slate-500'}`} />
                                 <span>{s.rationale}</span>
                               </div>
                             ))}
-                            <a href="/compliance" className="text-[11px] text-emerald-400 hover:underline inline-block mt-1">Help this organisation comply →</a>
+                            <a href="/compliance" className="text-[11px] text-emerald-400 hover:underline inline-block mt-1">{t('helpComply')}</a>
                           </div>
                         )}
                       </div>
