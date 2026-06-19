@@ -2,12 +2,13 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { geoEqualEarth, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck } from 'lucide-react';
+import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages } from 'lucide-react';
 import { FRAMEWORKS } from '@/data/frameworks';
 import {
   WORLD_ATLAS_URL, isoFromNumeric, coverageLevel,
   COUNTRY_FRAMEWORKS, COUNTRY_NAMES, CSOAI_TOOLS, GLOBAL_SLUGS, frameworkBySlug,
 } from '@/data/regulationsGeo';
+import { I18nProvider, useI18n, LANGUAGE_NAMES, LOCALES, type Locale } from '@/i18n';
 
 /**
  * OpenGridWorks — a MEOK-Dome-styled world map of AI regulation. Every country is
@@ -22,7 +23,40 @@ const HEAT = ['#1e293b', '#0e7490', '#0f766e', '#10b981']; // 0..3 coverage
 
 type Picked = { num: number; iso?: string; name: string };
 
+// Compact language switcher — names render in their own script. Persists on change
+// (the provider writes to localStorage) and re-renders the whole page, flipping to
+// RTL automatically for Arabic via the wrapper's dir attribute.
+function LanguageSwitcher() {
+  const { locale, setLocale, t } = useI18n();
+  return (
+    <label className="flex items-center gap-2 text-xs text-slate-400">
+      <Languages className="w-4 h-4 shrink-0" aria-hidden="true" />
+      <span className="sr-only">{t('language')}</span>
+      <select
+        value={locale}
+        onChange={(e) => setLocale(e.target.value as Locale)}
+        aria-label={t('language')}
+        data-testid="language-switcher"
+        className="bg-slate-800/60 border border-slate-700 rounded-md px-2 py-1 text-sm text-slate-200 outline-none focus:border-emerald-500/60 cursor-pointer"
+      >
+        {(Object.keys(LOCALES) as Locale[]).map((l) => (
+          <option key={l} value={l}>{LANGUAGE_NAMES[l]}</option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
 export default function OpenGridWorks() {
+  return (
+    <I18nProvider>
+      <OpenGridWorksInner />
+    </I18nProvider>
+  );
+}
+
+function OpenGridWorksInner() {
+  const { t, dir } = useI18n();
   const [geos, setGeos] = useState<any[]>([]);
   const [err, setErr] = useState<string | null>(null);
   const [selNum, setSelNum] = useState<number | null>(null);
@@ -151,7 +185,7 @@ export default function OpenGridWorks() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-100">
+    <div dir={dir} className="min-h-screen bg-[#070b14] text-slate-100">
       <Helmet>
         <title>OpenGridWorks — Global AI Regulation Map | CSOAI</title>
         <meta name="description" content="Zoom anywhere on the world and see which AI regulations apply — EU AI Act, NIST, ISO 42001, Korea AI Act and more — with CSOAI crosswalks and tools overlaid. Every country live. Compliance, made navigable." />
@@ -164,8 +198,9 @@ export default function OpenGridWorks() {
         <div className="flex items-center gap-3 mb-1">
           <Globe2 className="w-7 h-7 text-emerald-400" />
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Open<span className="text-emerald-400">Grid</span>Works</h1>
+          <div className="ms-auto"><LanguageSwitcher /></div>
         </div>
-        <p className="text-slate-400 mb-6 max-w-2xl">The world's AI regulations, mapped. Click any country to see the frameworks that bind there, the global standards that apply everywhere, and CSOAI crosswalks — then overlay your tools from the sidebar. One profile, the whole planet.</p>
+        <p className="text-slate-400 mb-6 max-w-2xl">{t('subtitle')}</p>
 
         <div className="grid lg:grid-cols-[260px_1fr] gap-4">
           {/* Sidebar */}
@@ -175,7 +210,7 @@ export default function OpenGridWorks() {
               <div className="flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-800/40 px-2.5 py-1.5 focus-within:border-emerald-500/60">
                 <Search className="w-4 h-4 text-slate-500 shrink-0" />
                 <input list="ogw-countries" value={query} onChange={(e) => { setQuery(e.target.value); }}
-                  placeholder="Find a country…" aria-label="Search for a country" data-testid="country-search"
+                  placeholder={t('searchPlaceholder')} aria-label={t('searchAria')} data-testid="country-search"
                   className="bg-transparent outline-none text-sm w-full placeholder:text-slate-600" />
               </div>
               <datalist id="ogw-countries">
@@ -183,7 +218,7 @@ export default function OpenGridWorks() {
               </datalist>
             </form>
 
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3"><Layers className="w-4 h-4" /> Framework overlay</div>
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3"><Layers className="w-4 h-4" /> {t('frameworkOverlay')}</div>
             <div className="flex flex-wrap gap-1.5 mb-5">
               {bindingFw.map((f) => (
                 <button key={f.slug} onClick={() => toggleFw(f.slug)} data-testid={`fw-${f.slug}`}
@@ -192,7 +227,7 @@ export default function OpenGridWorks() {
                 </button>
               ))}
             </div>
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">CSOAI tools</div>
+            <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">{t('csoaiTools')}</div>
             <div className="space-y-2">
               {CSOAI_TOOLS.map((t) => (
                 <a key={t.id} href={selPick ? `${t.href}?region=${selPick.iso || selPick.num}` : t.href} data-testid={`tool-${t.id}`}
@@ -210,16 +245,16 @@ export default function OpenGridWorks() {
           {/* Map */}
           <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-b from-[#0a1120] to-[#0c1322] overflow-hidden">
             <div className="absolute top-3 left-3 z-10 text-xs text-slate-400 bg-black/40 rounded-lg px-3 py-1.5 border border-slate-800">
-              {coveredCount} jurisdictions with AI-specific law · {FRAMEWORKS.length} frameworks · {countryList.length || '—'} countries live · drag to pan, scroll to zoom
+              {t('statusBar', { jurisdictions: coveredCount, frameworks: FRAMEWORKS.length, countries: countryList.length || t('statusLoading') })}
             </div>
             <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
-              <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k * 1.3) }))} aria-label="Zoom in" className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Plus className="w-4 h-4" /></button>
-              <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k / 1.3) }))} aria-label="Zoom out" className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Minus className="w-4 h-4" /></button>
-              <button onClick={reset} aria-label="Reset view" className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><RotateCcw className="w-4 h-4" /></button>
+              <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k * 1.3) }))} aria-label={t('zoomIn')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Plus className="w-4 h-4" /></button>
+              <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k / 1.3) }))} aria-label={t('zoomOut')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Minus className="w-4 h-4" /></button>
+              <button onClick={reset} aria-label={t('resetView')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><RotateCcw className="w-4 h-4" /></button>
             </div>
 
-            {err && <div className="p-8 text-center text-rose-400 text-sm">Couldn't load the map atlas ({err}). Check the connection and reload.</div>}
-            {!err && !path && <div className="p-8 text-center text-slate-500 text-sm animate-pulse">Loading world atlas…</div>}
+            {err && <div className="p-8 text-center text-rose-400 text-sm">{t('atlasError', { error: err })}</div>}
+            {!err && !path && <div className="p-8 text-center text-slate-500 text-sm animate-pulse">{t('atlasLoading')}</div>}
 
             {path && (
               <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto touch-none select-none" style={{ cursor: drag.current ? 'grabbing' : 'grab' }}
@@ -245,7 +280,8 @@ export default function OpenGridWorks() {
                 </g>
                 {hovered && (
                   <text x={12} y={H - 14} className="fill-slate-200" fontSize={13} fontWeight={600}>
-                    {hovered.name} · {(hovered.iso && COUNTRY_FRAMEWORKS[hovered.iso]?.length) || 0} national framework(s){hovered.iso ? '' : ' · global standards apply'}
+                    {t('hoverNational', { name: hovered.name, count: (hovered.iso && COUNTRY_FRAMEWORKS[hovered.iso]?.length) || 0 })}
+                    {hovered.iso ? '' : t('hoverGlobalSuffix')}
                   </text>
                 )}
               </svg>
@@ -253,9 +289,9 @@ export default function OpenGridWorks() {
 
             {/* legend */}
             <div className="absolute bottom-3 left-3 z-10 flex items-center gap-2 text-[11px] text-slate-400 bg-black/40 rounded-lg px-3 py-1.5 border border-slate-800">
-              <span>Regulation density:</span>
-              {['none', 'light', 'moderate', 'dense'].map((lab, i) => (
-                <span key={lab} className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm" style={{ background: HEAT[i] }} />{lab}</span>
+              <span>{t('legendDensity')}</span>
+              {(['densityNone', 'densityLight', 'densityModerate', 'densityDense'] as const).map((key, i) => (
+                <span key={key} className="flex items-center gap-1"><span className="w-3 h-3 rounded-sm" style={{ background: HEAT[i] }} />{t(key)}</span>
               ))}
             </div>
           </div>
@@ -267,38 +303,49 @@ export default function OpenGridWorks() {
         <div className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-slate-900 border-l border-emerald-500/30 shadow-2xl overflow-y-auto">
           <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-5 py-4 flex items-center justify-between">
             <div>
-              <div className="text-[10px] uppercase tracking-wide text-slate-500">Region</div>
+              <div className="text-[10px] uppercase tracking-wide text-slate-500">{t('region')}</div>
               <h2 className="text-xl font-bold">{selPick.name}</h2>
             </div>
-            <button onClick={() => setSelNum(null)} aria-label="Close region panel" className="text-slate-500 hover:text-slate-200"><X className="w-5 h-5" /></button>
+            <button onClick={() => setSelNum(null)} aria-label={t('closePanel')} className="text-slate-500 hover:text-slate-200"><X className="w-5 h-5" /></button>
           </div>
           <div className="p-5">
             {/* National / bloc */}
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">National / bloc AI law ({selNational.length})</div>
+            <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">{t('nationalLaw', { count: selNational.length })}</div>
             {selNational.length > 0 ? (
               <div className="space-y-2.5">
                 {selNational.map((f) => (
                   <div key={f.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 p-3">
                     <div className="flex items-start justify-between gap-2">
                       <span className="font-semibold text-sm">{f.name}</span>
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded shrink-0 ${f.binding ? 'bg-rose-500/20 text-rose-300' : 'bg-slate-700/50 text-slate-400'}`}>{f.binding ? 'binding' : 'voluntary'}</span>
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded shrink-0 ${f.binding ? 'bg-rose-500/20 text-rose-300' : 'bg-slate-700/50 text-slate-400'}`}>{f.binding ? t('binding') : t('voluntary')}</span>
                     </div>
-                    {f.effective && <div className="text-[11px] text-amber-300/80 mt-1">Effective: {f.effective}</div>}
+                    {/* f.effective date + f.description are framework content — left as-authored (legal accuracy). Only the "Effective:" label is localized. */}
+                    {f.effective && <div className="text-[11px] text-amber-300/80 mt-1">{t('effective', { date: f.effective })}</div>}
                     <p className="text-[11px] text-slate-400 mt-1">{f.description}</p>
-                    <a href="/crosswalks" className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1.5">CSOAI crosswalk <ExternalLink className="w-3 h-3" /></a>
+                    <a href="/crosswalks" className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1.5">{t('csoaiCrosswalk')} <ExternalLink className="w-3 h-3" /></a>
                   </div>
                 ))}
               </div>
             ) : (
               <div className="rounded-xl border border-slate-800 bg-slate-800/20 p-3 text-[12px] text-slate-400 flex gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span>No AI-specific binding law catalogued here yet. The global standards below still apply, and CSOAI is monitoring this jurisdiction — <a href="/watchdog" className="text-emerald-400 hover:underline">flag a development</a>.</span>
+                {/* honest empty-state: split the localized template around {flagLink} to inject the anchor */}
+                {(() => {
+                  const [before, after] = t('emptyState').split('{flagLink}');
+                  return (
+                    <span>
+                      {before}
+                      <a href="/watchdog" className="text-emerald-400 hover:underline">{t('emptyStateFlagLink')}</a>
+                      {after}
+                    </span>
+                  );
+                })()}
               </div>
             )}
 
             {/* Global standards that apply everywhere */}
             <details className="mt-5" open={selNational.length === 0}>
-              <summary className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 cursor-pointer select-none">Global standards that also apply ({selGlobal.length})</summary>
+              <summary className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 cursor-pointer select-none">{t('globalStandards', { count: selGlobal.length })}</summary>
               <div className="space-y-2 mt-2">
                 {selGlobal.map((f) => (
                   <div key={f.slug} className="rounded-lg border border-slate-800 bg-slate-800/20 p-2.5">
