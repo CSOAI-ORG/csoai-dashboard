@@ -201,6 +201,8 @@ import EUAIActUrgency from "./pages/EUAIActUrgency";
 import Charter from "./pages/Charter";
 import SystemMap from "./pages/SystemMap";
 import OpenGridWorks from "./pages/OpenGridWorks";
+import RegulationRadar from "./pages/RegulationRadar";
+import Landscape from "./pages/Landscape";
 import EUAIActClassifier from "./pages/EUAIActClassifier";
 import EI3 from "./pages/EI3";
 import Crosswalks from "./pages/Crosswalks";
@@ -421,6 +423,8 @@ function App() {
                   <Route path="/system" component={SystemMap} />
                   <Route path="/opengridworks" component={OpenGridWorks} />
                   <Route path="/map" component={OpenGridWorks} />
+                  <Route path="/radar" component={RegulationRadar} />
+                  <Route path="/landscape" component={Landscape} />
                   <Route path="/eu-ai-act-classifier" component={EUAIActClassifier} />
                   <Route path="/classifier" component={EUAIActClassifier} />
                   <Route path="/ei3" component={EI3} />
