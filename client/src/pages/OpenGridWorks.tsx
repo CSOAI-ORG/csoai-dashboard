@@ -2,32 +2,35 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { geoEqualEarth, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers } from 'lucide-react';
+import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck } from 'lucide-react';
 import { FRAMEWORKS } from '@/data/frameworks';
 import {
-  WORLD_ATLAS_URL, isoFromNumeric, frameworksForCountry, coverageLevel,
-  COUNTRY_FRAMEWORKS, COUNTRY_NAMES, CSOAI_TOOLS,
+  WORLD_ATLAS_URL, isoFromNumeric, coverageLevel,
+  COUNTRY_FRAMEWORKS, COUNTRY_NAMES, CSOAI_TOOLS, GLOBAL_SLUGS, frameworkBySlug,
 } from '@/data/regulationsGeo';
 
 /**
- * OpenGridWorks — a MEOK-Dome-styled world map of AI regulation. Zoom anywhere,
- * see which frameworks (EU AI Act / NIST / ISO 42001 / …) apply to a region, the
- * CSOAI crosswalk for each, and overlay CSOAI tools from the sidebar. Compliance,
- * made navigable. Vector (no API key); a Google-Maps tile layer can swap in later
- * with a Maps key for street/county zoom.
+ * OpenGridWorks — a MEOK-Dome-styled world map of AI regulation. Every country is
+ * live: click anywhere to see the frameworks (EU AI Act / NIST / ISO 42001 / …) that
+ * bind there, the global standards that apply everywhere, the CSOAI crosswalk for each,
+ * and overlay CSOAI tools from the sidebar. Search flies to any nation; selections are
+ * shareable via ?region=. Vector (no API key); a tile layer can swap in later.
  */
 
 const W = 960, H = 500;
 const HEAT = ['#1e293b', '#0e7490', '#0f766e', '#10b981']; // 0..3 coverage
 
+type Picked = { num: number; iso?: string; name: string };
+
 export default function OpenGridWorks() {
   const [geos, setGeos] = useState<any[]>([]);
   const [err, setErr] = useState<string | null>(null);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [hovered, setHovered] = useState<string | null>(null);
+  const [selNum, setSelNum] = useState<number | null>(null);
+  const [hovered, setHovered] = useState<Picked | null>(null);
   const [activeFw, setActiveFw] = useState<Set<string>>(new Set());
+  const [query, setQuery] = useState('');
   const [view, setView] = useState({ k: 1, x: 0, y: 0 });
-  const drag = useRef<{ x: number; y: number; ox: number; oy: number } | null>(null);
+  const drag = useRef<{ x: number; y: number; ox: number; oy: number; moved: boolean } | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -42,11 +45,58 @@ export default function OpenGridWorks() {
     return () => { alive = false; };
   }, []);
 
-  const path = useMemo(() => {
-    if (!geos.length) return null;
-    const proj = geoEqualEarth().fitSize([W, H], { type: 'FeatureCollection', features: geos } as any);
-    return geoPath(proj);
+  const { path, proj } = useMemo(() => {
+    if (!geos.length) return { path: null as any, proj: null as any };
+    const p = geoEqualEarth().fitSize([W, H], { type: 'FeatureCollection', features: geos } as any);
+    return { path: geoPath(p), proj: p };
   }, [geos]);
+
+  // name for any feature: atlas-provided name is authoritative for the whole planet
+  const nameOf = (g: any): string => g?.properties?.name || COUNTRY_NAMES[isoFromNumeric(g?.id) || ''] || String(g?.id ?? '');
+  const pick = (g: any): Picked => ({ num: parseInt(String(g.id), 10), iso: isoFromNumeric(g.id), name: nameOf(g) });
+
+  // sorted country list for the search box (every nation in the atlas)
+  const countryList = useMemo(
+    () => geos.map(pick).filter((c) => c.name && !Number.isNaN(c.num)).sort((a, b) => a.name.localeCompare(b.name)),
+    [geos],
+  );
+
+  const geoByNum = (n: number | null) => (n == null ? undefined : geos.find((g) => parseInt(String(g.id), 10) === n));
+  const selGeo = geoByNum(selNum);
+  const selPick = selGeo ? pick(selGeo) : null;
+
+  // center + zoom the map on a feature (used by search "fly to")
+  const flyTo = useCallback((g: any, k = 3.2) => {
+    if (!proj || !path) return;
+    const c = path.centroid(g);
+    if (!c || Number.isNaN(c[0])) return;
+    setView({ k, x: W / 2 - c[0] * k, y: H / 2 - c[1] * k });
+  }, [proj, path]);
+
+  // deep-link: open ?region=<ISO3|numeric> once geos load
+  useEffect(() => {
+    if (!geos.length) return;
+    const r = new URLSearchParams(window.location.search).get('region');
+    if (!r) return;
+    const g = geos.find((x) => {
+      const n = parseInt(String(x.id), 10);
+      return String(n) === r || isoFromNumeric(n) === r.toUpperCase();
+    });
+    if (g) { setSelNum(parseInt(String(g.id), 10)); flyTo(g); }
+  }, [geos, flyTo]);
+
+  // keep URL shareable + Esc to close
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (selPick) url.searchParams.set('region', selPick.iso || String(selPick.num));
+    else url.searchParams.delete('region');
+    window.history.replaceState(null, '', url.toString());
+  }, [selNum]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setSelNum(null);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   const clampZoom = (k: number) => Math.max(1, Math.min(8, k));
   const onWheel = useCallback((e: React.WheelEvent) => {
@@ -62,40 +112,49 @@ export default function OpenGridWorks() {
   }, []);
   const onDown = (e: React.PointerEvent) => {
     (e.target as Element).setPointerCapture?.(e.pointerId);
-    drag.current = { x: e.clientX, y: e.clientY, ox: view.x, oy: view.y };
+    drag.current = { x: e.clientX, y: e.clientY, ox: view.x, oy: view.y, moved: false };
   };
   const onMove = (e: React.PointerEvent) => {
     if (!drag.current) return;
     const sc = (e.currentTarget as Element).getBoundingClientRect();
     const dx = ((e.clientX - drag.current.x) / sc.width) * W;
     const dy = ((e.clientY - drag.current.y) / sc.height) * H;
+    if (Math.abs(e.clientX - drag.current.x) + Math.abs(e.clientY - drag.current.y) > 3) drag.current.moved = true;
     setView((v) => ({ ...v, x: drag.current!.ox + dx, y: drag.current!.oy + dy }));
   };
   const onUp = () => { drag.current = null; };
-  const reset = () => setView({ k: 1, x: 0, y: 0 });
+  const reset = () => { setView({ k: 1, x: 0, y: 0 }); };
 
   const coveredCount = Object.values(COUNTRY_FRAMEWORKS).filter((f) => f.length).length;
-  const selFw = selected ? frameworksForCountry(selected) : [];
-  const selName = selected ? (COUNTRY_NAMES[selected] || selected) : '';
 
-  // a country is dimmed if a framework filter is active and it doesn't carry one of them
+  // panel data: national/bloc frameworks vs the global standards that apply everywhere
+  const selNational = (selPick?.iso ? (COUNTRY_FRAMEWORKS[selPick.iso] || []) : []).map(frameworkBySlug).filter(Boolean) as any[];
+  const selGlobal = GLOBAL_SLUGS.map(frameworkBySlug).filter(Boolean) as any[];
+
   const isDimmed = (iso?: string) => {
     if (!activeFw.size) return false;
     if (!iso) return true;
     const fws = (COUNTRY_FRAMEWORKS[iso] || []);
     return ![...activeFw].some((s) => fws.includes(s));
   };
-
   const toggleFw = (slug: string) =>
     setActiveFw((s) => { const n = new Set(s); n.has(slug) ? n.delete(slug) : n.add(slug); return n; });
 
   const bindingFw = FRAMEWORKS.filter((f) => f.binding).slice(0, 12);
 
+  // search: jump to the first country whose name matches
+  const runSearch = (q: string) => {
+    const t = q.trim().toLowerCase();
+    if (!t) return;
+    const hit = countryList.find((c) => c.name.toLowerCase() === t) || countryList.find((c) => c.name.toLowerCase().startsWith(t)) || countryList.find((c) => c.name.toLowerCase().includes(t));
+    if (hit) { const g = geoByNum(hit.num); setSelNum(hit.num); g && flyTo(g); }
+  };
+
   return (
     <div className="min-h-screen bg-[#070b14] text-slate-100">
       <Helmet>
         <title>OpenGridWorks — Global AI Regulation Map | CSOAI</title>
-        <meta name="description" content="Zoom anywhere on the world and see which AI regulations apply — EU AI Act, NIST, ISO 42001, Korea AI Act and more — with CSOAI crosswalks and tools overlaid. Compliance, made navigable." />
+        <meta name="description" content="Zoom anywhere on the world and see which AI regulations apply — EU AI Act, NIST, ISO 42001, Korea AI Act and more — with CSOAI crosswalks and tools overlaid. Every country live. Compliance, made navigable." />
         <link rel="canonical" href="https://csoai.org/opengridworks" />
         <meta property="og:title" content="OpenGridWorks — Global AI Regulation Map" />
         <meta property="og:image" content="https://csoai.org/og-image.png" />
@@ -106,11 +165,24 @@ export default function OpenGridWorks() {
           <Globe2 className="w-7 h-7 text-emerald-400" />
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Open<span className="text-emerald-400">Grid</span>Works</h1>
         </div>
-        <p className="text-slate-400 mb-6 max-w-2xl">The world's AI regulations, mapped. Zoom into a region to see its frameworks and CSOAI crosswalks, then overlay your tools from the sidebar — one profile, the whole planet.</p>
+        <p className="text-slate-400 mb-6 max-w-2xl">The world's AI regulations, mapped. Click any country to see the frameworks that bind there, the global standards that apply everywhere, and CSOAI crosswalks — then overlay your tools from the sidebar. One profile, the whole planet.</p>
 
         <div className="grid lg:grid-cols-[260px_1fr] gap-4">
           {/* Sidebar */}
           <aside className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 h-fit">
+            {/* Search */}
+            <form onSubmit={(e) => { e.preventDefault(); runSearch(query); }} className="mb-4">
+              <div className="flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-800/40 px-2.5 py-1.5 focus-within:border-emerald-500/60">
+                <Search className="w-4 h-4 text-slate-500 shrink-0" />
+                <input list="ogw-countries" value={query} onChange={(e) => { setQuery(e.target.value); }}
+                  placeholder="Find a country…" aria-label="Search for a country" data-testid="country-search"
+                  className="bg-transparent outline-none text-sm w-full placeholder:text-slate-600" />
+              </div>
+              <datalist id="ogw-countries">
+                {countryList.map((c) => <option key={c.num} value={c.name} />)}
+              </datalist>
+            </form>
+
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3"><Layers className="w-4 h-4" /> Framework overlay</div>
             <div className="flex flex-wrap gap-1.5 mb-5">
               {bindingFw.map((f) => (
@@ -123,7 +195,7 @@ export default function OpenGridWorks() {
             <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">CSOAI tools</div>
             <div className="space-y-2">
               {CSOAI_TOOLS.map((t) => (
-                <a key={t.id} href={selected ? `${t.href}?region=${selected}` : t.href} data-testid={`tool-${t.id}`}
+                <a key={t.id} href={selPick ? `${t.href}?region=${selPick.iso || selPick.num}` : t.href} data-testid={`tool-${t.id}`}
                   className="block rounded-lg border border-slate-700 bg-slate-800/40 hover:border-emerald-500/60 p-2.5 transition group">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full" style={{ background: t.color }} />
@@ -138,7 +210,7 @@ export default function OpenGridWorks() {
           {/* Map */}
           <div className="relative rounded-2xl border border-slate-800 bg-gradient-to-b from-[#0a1120] to-[#0c1322] overflow-hidden">
             <div className="absolute top-3 left-3 z-10 text-xs text-slate-400 bg-black/40 rounded-lg px-3 py-1.5 border border-slate-800">
-              {coveredCount} jurisdictions mapped · {FRAMEWORKS.length} frameworks · drag to pan, scroll to zoom
+              {coveredCount} jurisdictions with AI-specific law · {FRAMEWORKS.length} frameworks · {countryList.length || '—'} countries live · drag to pan, scroll to zoom
             </div>
             <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
               <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k * 1.3) }))} aria-label="Zoom in" className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Plus className="w-4 h-4" /></button>
@@ -151,28 +223,29 @@ export default function OpenGridWorks() {
 
             {path && (
               <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto touch-none select-none" style={{ cursor: drag.current ? 'grabbing' : 'grab' }}
-                onWheel={onWheel} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerLeave={onUp}>
+                onWheel={onWheel} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerLeave={() => { onUp(); setHovered(null); }}>
                 <g transform={`translate(${view.x} ${view.y}) scale(${view.k})`}>
                   {geos.map((g, i) => {
                     const iso = isoFromNumeric(g.id);
                     const lvl = iso ? coverageLevel(iso) : 0;
                     const dim = isDimmed(iso);
-                    const isSel = iso && iso === selected;
+                    const num = parseInt(String(g.id), 10);
+                    const isSel = num === selNum;
                     return (
                       <path key={i} d={path(g) || undefined}
-                        fill={iso ? HEAT[lvl] : '#141c2e'}
-                        stroke={isSel ? '#34d399' : '#0b1220'} strokeWidth={isSel ? 1.4 / view.k : 0.4 / view.k}
+                        fill={isSel ? '#34d399' : HEAT[lvl]}
+                        stroke={isSel ? '#a7f3d0' : '#0b1220'} strokeWidth={isSel ? 1.4 / view.k : 0.4 / view.k}
                         opacity={dim ? 0.25 : 1}
-                        style={{ transition: 'opacity .2s, fill .2s', cursor: iso ? 'pointer' : 'grab' }}
-                        onMouseEnter={() => setHovered(iso || null)}
+                        style={{ transition: 'opacity .2s, fill .2s', cursor: 'pointer' }}
+                        onMouseEnter={() => setHovered(pick(g))}
                         onMouseLeave={() => setHovered(null)}
-                        onClick={() => iso && setSelected(iso)} />
+                        onClick={() => { if (!drag.current?.moved) setSelNum(num); }} />
                     );
                   })}
                 </g>
                 {hovered && (
-                  <text x={12} y={H - 14} className="fill-slate-300" fontSize={13} fontWeight={600}>
-                    {COUNTRY_NAMES[hovered] || hovered} · {(COUNTRY_FRAMEWORKS[hovered] || []).length} regional framework(s)
+                  <text x={12} y={H - 14} className="fill-slate-200" fontSize={13} fontWeight={600}>
+                    {hovered.name} · {(hovered.iso && COUNTRY_FRAMEWORKS[hovered.iso]?.length) || 0} national framework(s){hovered.iso ? '' : ' · global standards apply'}
                   </text>
                 )}
               </svg>
@@ -190,33 +263,58 @@ export default function OpenGridWorks() {
       </div>
 
       {/* Region detail panel */}
-      {selected && (
+      {selPick && (
         <div className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-slate-900 border-l border-emerald-500/30 shadow-2xl overflow-y-auto">
           <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-5 py-4 flex items-center justify-between">
             <div>
               <div className="text-[10px] uppercase tracking-wide text-slate-500">Region</div>
-              <h2 className="text-xl font-bold">{selName}</h2>
+              <h2 className="text-xl font-bold">{selPick.name}</h2>
             </div>
-            <button onClick={() => setSelected(null)} aria-label="Close region panel" className="text-slate-500 hover:text-slate-200"><X className="w-5 h-5" /></button>
+            <button onClick={() => setSelNum(null)} aria-label="Close region panel" className="text-slate-500 hover:text-slate-200"><X className="w-5 h-5" /></button>
           </div>
           <div className="p-5">
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">Applicable AI frameworks ({selFw.length})</div>
-            <div className="space-y-2.5">
-              {selFw.map((f) => (
-                <div key={f.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 p-3">
-                  <div className="flex items-start justify-between gap-2">
-                    <span className="font-semibold text-sm">{f.name}</span>
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded shrink-0 ${f.binding ? 'bg-rose-500/20 text-rose-300' : 'bg-slate-700/50 text-slate-400'}`}>{f.binding ? 'binding' : 'voluntary'}</span>
+            {/* National / bloc */}
+            <div className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">National / bloc AI law ({selNational.length})</div>
+            {selNational.length > 0 ? (
+              <div className="space-y-2.5">
+                {selNational.map((f) => (
+                  <div key={f.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 p-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="font-semibold text-sm">{f.name}</span>
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded shrink-0 ${f.binding ? 'bg-rose-500/20 text-rose-300' : 'bg-slate-700/50 text-slate-400'}`}>{f.binding ? 'binding' : 'voluntary'}</span>
+                    </div>
+                    {f.effective && <div className="text-[11px] text-amber-300/80 mt-1">Effective: {f.effective}</div>}
+                    <p className="text-[11px] text-slate-400 mt-1">{f.description}</p>
+                    <a href="/crosswalks" className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1.5">CSOAI crosswalk <ExternalLink className="w-3 h-3" /></a>
                   </div>
-                  {f.effective && <div className="text-[11px] text-amber-300/80 mt-1">Effective: {f.effective}</div>}
-                  <p className="text-[11px] text-slate-400 mt-1">{f.description}</p>
-                  <a href="/crosswalks" className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1.5">CSOAI crosswalk <ExternalLink className="w-3 h-3" /></a>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-xl border border-slate-800 bg-slate-800/20 p-3 text-[12px] text-slate-400 flex gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <span>No AI-specific binding law catalogued here yet. The global standards below still apply, and CSOAI is monitoring this jurisdiction — <a href="/watchdog" className="text-emerald-400 hover:underline">flag a development</a>.</span>
+              </div>
+            )}
+
+            {/* Global standards that apply everywhere */}
+            <details className="mt-5" open={selNational.length === 0}>
+              <summary className="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3 cursor-pointer select-none">Global standards that also apply ({selGlobal.length})</summary>
+              <div className="space-y-2 mt-2">
+                {selGlobal.map((f) => (
+                  <div key={f.slug} className="rounded-lg border border-slate-800 bg-slate-800/20 p-2.5">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="font-semibold text-[13px]">{f.name}</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded shrink-0 bg-slate-700/50 text-slate-400">{f.region}</span>
+                    </div>
+                    <p className="text-[11px] text-slate-500 mt-1">{f.description}</p>
+                  </div>
+                ))}
+              </div>
+            </details>
+
             <div className="mt-5 grid grid-cols-2 gap-2">
               {CSOAI_TOOLS.map((t) => (
-                <a key={t.id} href={`${t.href}?region=${selected}`} className="rounded-lg border border-slate-700 bg-slate-800/40 hover:border-emerald-500/60 px-3 py-2 text-xs font-semibold transition">{t.label} →</a>
+                <a key={t.id} href={`${t.href}?region=${selPick.iso || selPick.num}`} className="rounded-lg border border-slate-700 bg-slate-800/40 hover:border-emerald-500/60 px-3 py-2 text-xs font-semibold transition">{t.label} →</a>
               ))}
             </div>
           </div>
