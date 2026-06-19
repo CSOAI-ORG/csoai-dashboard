@@ -10,7 +10,7 @@ const tiers = [
   {
     id: "pro" as const,
     name: "Professional",
-    price: "$199",
+    price: "£999",
     period: "/month",
     description: "Advanced features for growing organizations",
     icon: Rocket,
@@ -30,7 +30,7 @@ const tiers = [
   {
     id: "enterprise" as const,
     name: "Enterprise",
-    price: "$999",
+    price: "£1,999",
     period: "/month",
     description: "Complete solution for large-scale AI governance",
     icon: Building2,

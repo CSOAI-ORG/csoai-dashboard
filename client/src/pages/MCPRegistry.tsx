@@ -241,12 +241,12 @@ export default function MCPRegistry() {
           <div className="grid sm:grid-cols-2 gap-4 max-w-xl mx-auto mb-8 text-left">
             <div className="bg-white/10 rounded-xl p-5 border border-white/10">
               <p className="text-sm text-emerald-300 font-semibold">Pro</p>
-              <p className="text-3xl font-bold">$99<span className="text-base font-normal text-gray-300">/mo</span></p>
+              <p className="text-3xl font-bold">£999<span className="text-base font-normal text-gray-300">/mo</span></p>
               <p className="text-sm text-gray-300 mt-1">Full MCP suite + EU AI Act tracking</p>
             </div>
             <div className="bg-white/10 rounded-xl p-5 border border-white/10">
               <p className="text-sm text-emerald-300 font-semibold">Enterprise</p>
-              <p className="text-3xl font-bold">$499<span className="text-base font-normal text-gray-300">/mo</span></p>
+              <p className="text-3xl font-bold">£1,999<span className="text-base font-normal text-gray-300">/mo</span></p>
               <p className="text-sm text-gray-300 mt-1">Custom dev + SLA + dedicated support</p>
             </div>
           </div>
