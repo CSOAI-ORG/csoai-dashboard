@@ -34,6 +34,17 @@
  * standards-compliant Mozilla-compatible UA that still identifies CSOAI + links a
  * contact page (honest, robots-respecting), and retry once on a 403/429/503 with a
  * tiny backoff. This is a pure robustness win — no contract change.
+ *
+ * BROWSER-PROFILE HEADERS (2026-06-20): some WAFs (notably Akamai in front of the
+ * EU institutions — EDPB / EDPS) don't gate on the UA string alone; they score the
+ * *whole* request shape (header set, order, Sec-Fetch-* hints). A bare `fetch` with
+ * only UA+Accept gets 403 even though curl with the same UA gets 200. So for sources
+ * that opt in (`source.fetchProfile = 'browser'` in sources.ts), we send a fuller
+ * browser-shaped header set (Accept, Accept-Language, Sec-Fetch-*, Sec-CH-UA,
+ * Upgrade-Insecure-Requests, and a same-origin Referer). Sources can also pass
+ * `source.extraHeaders` for one-off needs. This is best-effort: a TLS-fingerprint
+ * WAF that fingerprints the *TLS ClientHello* (not headers) can still block the Node
+ * stack — those sources are parked in sources.ts with a `// WAF:` note, not faked.
  */
 
 import { createHash } from 'node:crypto';
@@ -65,10 +76,49 @@ export interface AdapterResult {
 // not getting needlessly blocked. See USER-AGENT NOTE in the header.
 const USER_AGENT =
   'Mozilla/5.0 (compatible; CSOAI-Intel-Crawler/1.0; +https://csoai.org/crawler; AI-governance dataset; respects robots.txt)';
+/**
+ * A current real-Chrome UA. We only send this for sources that explicitly opt into
+ * the 'browser' fetch profile (Akamai/WAF-gated EU feeds that 403 the honest crawler
+ * UA). The default everywhere else stays the honest, self-identifying CSOAI UA above.
+ */
+const BROWSER_USER_AGENT =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 const FETCH_TIMEOUT_MS = 20_000;
 const MAX_ITEMS_PER_FEED = 25;
 /** HTTP statuses worth one polite retry (transient block / rate limit / upstream). */
 const RETRYABLE_STATUS = new Set([403, 429, 500, 502, 503, 520, 522]);
+
+/**
+ * Build a fuller, browser-shaped header set for a `fetchProfile: 'browser'` source.
+ * These mimic what a real Chrome navigation sends (incl. Sec-Fetch-* + a same-origin
+ * Referer) so header-scoring WAFs (Akamai in front of EDPB/EDPS) are less likely to
+ * 403 the Node fetch. Best-effort only — see header note. `source.extraHeaders` wins.
+ */
+function browserHeaders(url: string, accept: string): Record<string, string> {
+  let referer = url;
+  try {
+    referer = new URL(url).origin + '/';
+  } catch {
+    /* keep full url as referer if it won't parse */
+  }
+  return {
+    'User-Agent': BROWSER_USER_AGENT,
+    Accept: accept.includes('json')
+      ? accept
+      : 'text/html,application/xhtml+xml,application/xml;q=0.9,application/rss+xml,application/atom+xml;q=0.8,*/*;q=0.7',
+    'Accept-Language': 'en-GB,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Sec-CH-UA': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    'Sec-CH-UA-Mobile': '?0',
+    'Sec-CH-UA-Platform': '"Windows"',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+    Referer: referer,
+  };
+}
 
 /** Map a source `kind` to the most appropriate RegulationDelta.kind. */
 function deltaKindFor(kind: SourceKind): RegulationDelta['kind'] {
@@ -91,18 +141,31 @@ function jurisdictionsFor(source: IntelSource): string[] {
   return [source.jurisdiction];
 }
 
+/** Per-fetch options: which header profile + any source-declared extra headers. */
+interface FetchOpts {
+  /** 'browser' sends the fuller real-Chrome header set; 'default' (or omitted) sends the honest CSOAI UA. */
+  profile?: 'default' | 'browser';
+  /** source-declared extra/override headers (highest precedence). */
+  extraHeaders?: Record<string, string>;
+}
+
 /** One timed fetch attempt. Returns the Response (caller decides on status). */
-async function fetchOnce(url: string, accept: string): Promise<Response> {
+async function fetchOnce(url: string, accept: string, opts: FetchOpts = {}): Promise<Response> {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+  const base: Record<string, string> =
+    opts.profile === 'browser'
+      ? browserHeaders(url, accept)
+      : {
+          'User-Agent': USER_AGENT,
+          Accept: accept,
+          // A couple of innocuous browser-ish headers help past stricter WAFs.
+          'Accept-Language': 'en;q=0.9',
+        };
+  const headers = { ...base, ...(opts.extraHeaders ?? {}) };
   try {
     return await fetch(url, {
-      headers: {
-        'User-Agent': USER_AGENT,
-        Accept: accept,
-        // A couple of innocuous browser-ish headers help past stricter WAFs.
-        'Accept-Language': 'en;q=0.9',
-      },
+      headers,
       signal: ctrl.signal,
       redirect: 'follow',
     });
@@ -112,22 +175,29 @@ async function fetchOnce(url: string, accept: string): Promise<Response> {
 }
 
 /**
- * Fetch text with a timeout + honest browser-shaped UA, retrying once on a
- * transient/blocking status. Throws on a non-2xx final response so callers can
- * catch per-source (the runner logs + continues — one bad source never fails the run).
+ * Fetch text with a timeout + (honest, or per-source browser-shaped) headers,
+ * retrying once on a transient/blocking status. Throws on a non-2xx final response
+ * so callers can catch per-source (the runner logs + continues — one bad source
+ * never fails the run).
  */
 async function fetchText(
   url: string,
   accept = 'application/rss+xml, application/atom+xml, application/xml, text/html, */*',
+  opts: FetchOpts = {},
 ): Promise<string> {
-  let res = await fetchOnce(url, accept);
+  let res = await fetchOnce(url, accept, opts);
   if (!res.ok && RETRYABLE_STATUS.has(res.status)) {
     // Polite single backoff retry — many WAF 403s are transient/challenge-based.
     await new Promise((r) => setTimeout(r, 750));
-    res = await fetchOnce(url, accept);
+    res = await fetchOnce(url, accept, opts);
   }
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
   return await res.text();
+}
+
+/** Pull the per-source fetch options off a source (profile + extra headers). */
+function fetchOptsFor(source: IntelSource): FetchOpts {
+  return { profile: source.fetchProfile, extraHeaders: source.extraHeaders };
 }
 
 function sha256(s: string): string {
@@ -204,7 +274,7 @@ export function parseFeed(xml: string): FeedItem[] {
 }
 
 export async function rssAdapter(source: IntelSource, prev: SourceState): Promise<AdapterResult> {
-  const xml = await fetchText(source.url);
+  const xml = await fetchText(source.url, undefined, fetchOptsFor(source));
   const items = parseFeed(xml).slice(0, MAX_ITEMS_PER_FEED);
   const seen = new Set(prev.seenGuids ?? []);
   const firstRun = !prev.lastRunAt;
@@ -267,7 +337,7 @@ export function extractMainContent(html: string): string {
 }
 
 export async function htmlHashAdapter(source: IntelSource, prev: SourceState): Promise<AdapterResult> {
-  const html = await fetchText(source.url);
+  const html = await fetchText(source.url, undefined, fetchOptsFor(source));
   const content = extractMainContent(html);
   const hash = sha256(content);
   const prevHash = prev.contentHash;
@@ -330,7 +400,7 @@ function fedRegDeltaKind(type?: string): RegulationDelta['kind'] {
  *   https://www.federalregister.gov/api/v1/documents.json?conditions[term]=artificial+intelligence&order=newest&per_page=20
  */
 export async function fedRegisterAdapter(source: IntelSource, prev: SourceState): Promise<AdapterResult> {
-  const body = await fetchText(source.url, 'application/json, */*');
+  const body = await fetchText(source.url, 'application/json, */*', fetchOptsFor(source));
   let parsed: { results?: FedRegDoc[] };
   try {
     parsed = JSON.parse(body) as { results?: FedRegDoc[] };

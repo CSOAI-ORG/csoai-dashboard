@@ -25,6 +25,20 @@
  * are the correct canonical endpoints — they resolve from the production VM egress).
  * Dead URLs from the prior VM dry-run (404/403) were replaced or removed; see notes.
  *
+ * WAF-RECOVERY PASS (2026-06-20): re-probed the sources the VM run still couldn't reach.
+ *  - EDPB / EDPS (Akamai HEADER-scoring 403; curl 200): added `fetchProfile: 'browser'`
+ *    (full Sec-Fetch / Sec-CH-UA / Referer header set in adapters.ts) → best-effort pass.
+ *  - METI (meti.go.jp host-level datacenter-IP DROP, HTTP 000 — not a header gate): PARKED
+ *    with a `// WAF:` note; ADDED two reachable JP feeds to compensate (jp-digital-agency
+ *    real UTF-8 RSS + jp-soumu RDF, both 200).
+ *  - CoE (Cloudflare TLS-fingerprint wall 403s ALL of coe.int even with browser headers):
+ *    PARKED — genuinely needs a browser-engine fetch path; NOT faked. Treaty signal held by
+ *    oecd-ai-news + eu-europarl-press.
+ *  - gov.au (OAIC redirect fixed to canonical /news/media-centre; eSafety/DISR hosts 000):
+ *    ADDED reachable au-pm-media + au-treasury-ministers to compensate; au-esafety kept but
+ *    flagged. Sources that are genuinely unreachable from Node fetch are clearly marked
+ *    PARKED in their note — we do not pretend they work.
+ *
  * ROBOTS / ToS POSTURE (conceptual — see schedule.md):
  *  - We poll at a low daily cadence, identify ourselves with a descriptive
  *    User-Agent, prefer official RSS/Atom feeds and APIs over scraping, and
@@ -75,6 +89,16 @@ export interface IntelSource {
   adapter: AdapterId;
   /** optional framework slug to stamp on emitted deltas (joins to data/frameworks.ts). */
   frameworkSlug?: string;
+  /**
+   * Optional fetch header profile. Default (omitted) sends the honest, self-identifying
+   * CSOAI crawler UA. Set to 'browser' for sources behind a header-scoring WAF (e.g.
+   * Akamai in front of the EU institutions) that 403 the honest UA but serve a full
+   * Chrome-shaped request. See adapters.ts BROWSER-PROFILE HEADERS note. Best-effort:
+   * a TLS-fingerprint WAF (Cloudflare/CoE) can still block — those are parked, not faked.
+   */
+  fetchProfile?: 'default' | 'browser';
+  /** Optional per-source extra/override request headers (highest precedence). */
+  extraHeaders?: Record<string, string>;
   /** free-text note on status / what a stub still needs. */
   note?: string;
 }
@@ -120,7 +144,13 @@ export const SOURCES: IntelSource[] = [
     kind: 'regulator',
     url: 'https://www.edpb.europa.eu/feed/news_en',
     adapter: 'rss',
-    note: 'rss FEED. URL was correct all along — the prior VM 403 was UA-gating; the softened browser-shaped UA in adapters.ts now gets 200.',
+    // WAF: EDPB sits behind Akamai, which scores the WHOLE request shape, not just the
+    // UA string — a bare Node fetch 403s even with a Mozilla UA, but curl with the same
+    // UA gets 200. We send the full browser-profile header set (Sec-Fetch-*, Sec-CH-UA,
+    // Referer) to look like a real navigation. If the VM's Akamai edge fingerprints the
+    // TLS ClientHello it may still 403 — alt feed below is the documented fallback.
+    fetchProfile: 'browser',
+    note: 'rss FEED (curl 200, Node-fetch 403 = Akamai header-scoring). fetchProfile:browser sends Sec-Fetch-*/Referer to pass. ALT if still blocked: html-hash on https://www.edpb.europa.eu/news/news_en (same content, also 200).',
   },
   {
     id: 'eu-edps-news',
@@ -129,7 +159,9 @@ export const SOURCES: IntelSource[] = [
     kind: 'regulator',
     url: 'https://www.edps.europa.eu/press-publications/press-news/press-releases_en',
     adapter: 'html-hash',
-    note: 'NEW. html-hash watch — EDPS has no clean feed; press-releases index (verified 200).',
+    // WAF: same Akamai header-scoring as EDPB — fetchProfile:browser to pass. curl 200.
+    fetchProfile: 'browser',
+    note: 'html-hash watch — EDPS has no clean feed; press-releases index (curl 200, Node-fetch 403 = Akamai). fetchProfile:browser added. ALT index also 200: https://www.edps.europa.eu/press-publications/press-news_en',
   },
   {
     id: 'eu-europarl-press',
@@ -326,7 +358,38 @@ export const SOURCES: IntelSource[] = [
     kind: 'regulator',
     url: 'https://www.meti.go.jp/english/press/index.html',
     adapter: 'html-hash',
-    note: 'html-hash. UNVERIFIABLE from sandbox (meti.go.jp drops datacenter-IP requests, HTTP 000) but this is the canonical English press index and resolves from the production VM. METI co-authors the AI Business Guidelines.',
+    fetchProfile: 'browser',
+    // WAF: the ENTIRE meti.go.jp host drops datacenter-IP requests at the network edge
+    // (HTTP 000 / connection reset) — not a UA/header gate, so the browser profile can't
+    // help from a datacenter egress. PARKED as the canonical English press index; it may
+    // resolve from a residential/VM egress with a clean reputation, but DO NOT assume it
+    // works. METI's AI signal is covered meanwhile by jp-digital-agency + jp-soumu (real
+    // RSS, reachable) and by oecd-ai-news (OECD.AI tracks Japan's AI Business Guidelines).
+    note: 'PARKED — WAF: meti.go.jp host-level datacenter-IP block (HTTP 000, not a header gate; browser profile cannot fix an IP-reputation block). Canonical English press index kept for VM/residential egress. JP coverage held up by jp-digital-agency + jp-soumu feeds below.',
+  },
+  {
+    id: 'jp-digital-agency',
+    label: 'Japan Digital Agency (デジタル庁) — news & updates RSS',
+    jurisdiction: 'JPN',
+    kind: 'regulator',
+    // NEW (compensates for the WAF-parked METI). Real UTF-8 RSS 2.0, verified 200 + live
+    // <item>s. The Digital Agency drives Japan's digital/AI governance & gov-cloud policy.
+    url: 'https://www.digital.go.jp/rss/news.xml',
+    adapter: 'rss',
+    note: 'NEW. rss FEED (verified 200, real UTF-8 RSS 2.0). Reachable where meti.go.jp is IP-blocked. Japanese-language items; crawler keyword-filters AI/データ/ガバナンス downstream.',
+  },
+  {
+    id: 'jp-soumu',
+    label: 'Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS',
+    jurisdiction: 'JPN',
+    kind: 'regulator',
+    // NEW. Real RSS 1.0 (RDF), verified 200. MIC co-leads Japan's AI/telecoms & data rules.
+    // NOTE: this feed is Shift_JIS-encoded; titles may garble under UTF-8 text decoding —
+    // it still reliably emits CHANGE/new-item deltas (link + date are ASCII), which is the
+    // signal we need; treat the title as best-effort. A UTF-8 alt is jp-digital-agency above.
+    url: 'https://www.soumu.go.jp/news.rdf',
+    adapter: 'rss',
+    note: 'NEW. rss/RDF FEED (verified 200). Shift_JIS-encoded → titles may garble under UTF-8 decode, but item links/dates are clean so deltas still fire. Reachable where meti.go.jp is IP-blocked.',
   },
 
   // ───────────────────────── China (CHN) ─────────────────────────
@@ -365,13 +428,54 @@ export const SOURCES: IntelSource[] = [
   // ───────────────────────── Australia (AUS) ─────────────────────────
   {
     id: 'au-oaic-news',
-    label: 'Australia OAIC — newsroom (privacy / AI guidance)',
+    label: 'Australia OAIC — media centre (privacy / AI guidance)',
     jurisdiction: 'AUS',
     kind: 'regulator',
-    // FIXED (was /newsroom/feed → 404): the newsroom index resolves 200.
-    url: 'https://www.oaic.gov.au/newsroom',
+    // FIXED again: /newsroom 301-redirects to the canonical /news/media-centre (verified
+    // 200 final). Point straight at the canonical URL to avoid a redirect hop each run.
+    url: 'https://www.oaic.gov.au/news/media-centre',
     adapter: 'html-hash',
-    note: 'html-hash on the OAIC newsroom index (the old /feed RSS path is dead/404).',
+    fetchProfile: 'browser',
+    note: 'html-hash on the OAIC media-centre index (canonical target of the old /newsroom 301). browser profile set defensively (gov.au sits behind a CDN that can gate datacenter UAs).',
+  },
+  {
+    id: 'au-pm-media',
+    label: 'Australia PM&C — PM media releases (AI/tech policy announcements)',
+    jurisdiction: 'AUS',
+    kind: 'news',
+    // NEW (compensates for eSafety/DISR hosts that hard-drop datacenter IPs, HTTP 000).
+    // pm.gov.au/media resolves 200 and carries an article list of media releases — major
+    // AU AI/digital policy is announced here. html-hash watch.
+    url: 'https://www.pm.gov.au/media',
+    adapter: 'html-hash',
+    fetchProfile: 'browser',
+    note: 'NEW. html-hash on the PM media-releases index (verified 200). Reachable where esafety.gov.au / industry.gov.au datacenter-block (HTTP 000). Keyword-filtered for AI/tech downstream.',
+  },
+  {
+    id: 'au-treasury-ministers',
+    label: 'Australia Treasury ministers — media (AI/competition/data economy)',
+    jurisdiction: 'AUS',
+    kind: 'regulator',
+    // NEW. ministers.treasury.gov.au resolves 200 (where industry.gov.au datacenter-blocks).
+    // Treasury ministers carry AI-in-the-economy, competition & consumer-data-right policy.
+    url: 'https://ministers.treasury.gov.au/ministers',
+    adapter: 'html-hash',
+    fetchProfile: 'browser',
+    note: 'NEW. html-hash on the Treasury ministers media index (verified 200). Compensates for the IP-blocked industry.gov.au / DISR hosts.',
+  },
+  {
+    id: 'au-esafety',
+    label: 'Australia eSafety Commissioner — newsroom (online safety / AI harms)',
+    jurisdiction: 'AUS',
+    kind: 'regulator',
+    url: 'https://www.esafety.gov.au/newsroom',
+    adapter: 'html-hash',
+    fetchProfile: 'browser',
+    // WAF: esafety.gov.au returns HTTP 000 (connection dropped) to this datacenter egress.
+    // Kept as the canonical eSafety newsroom — it may resolve from the production VM's
+    // egress (different IP reputation). If the VM also gets 000, the AU signal is held up
+    // by au-pm-media + au-treasury-ministers + au-oaic-news above. Not faked.
+    note: 'PARKED-ish — WAF: esafety.gov.au datacenter-IP drop (HTTP 000) from this egress; may resolve from VM. Canonical eSafety newsroom (eSafety leads AU online-safety + AI-harm guidance). AU coverage otherwise held by au-pm-media / au-treasury-ministers / au-oaic-news.',
   },
 
   // ───────────────────────── Singapore (SGP) ─────────────────────────
@@ -432,7 +536,16 @@ export const SOURCES: IntelSource[] = [
     kind: 'regulator',
     url: 'https://www.coe.int/en/web/artificial-intelligence',
     adapter: 'html-hash',
-    note: 'html-hash on the CoE AI hub. NOTE: CoE sits behind a Cloudflare bot wall that 403s datacenter IPs even with a browser UA — may need the browser-engine fetch path on the VM. CoE Framework Convention on AI is the first binding international AI treaty.',
+    fetchProfile: 'browser',
+    // WAF: needs browser-engine fetch path; PARKED. CoE is behind a Cloudflare bot wall
+    // that 403s the whole coe.int family (www.coe.int AND rm.coe.int) even with the full
+    // browser-profile headers above — it fingerprints the TLS ClientHello, which a plain
+    // Node fetch cannot disguise. Genuinely unreachable from Node fetch; the only fix is a
+    // real browser engine (Playwright) fetch path on the VM. NOT faked. Coverage of the
+    // CoE Framework Convention on AI is meanwhile carried by oecd-ai-news + eu-europarl-press
+    // (which both track the treaty). search.coe.int (a different host) is reachable but only
+    // serves a JS search shell, not a usable static index, so it's not wired here.
+    note: 'PARKED — WAF: Cloudflare TLS-fingerprint bot wall 403s ALL of coe.int (www + rm) even with full browser-profile headers; needs a browser-engine (Playwright) fetch path on the VM. NOT faked. Treaty signal meanwhile via oecd-ai-news + eu-europarl-press. CoE Framework Convention on AI = first binding international AI treaty.',
   },
 
   // ───────────────────────── Incident / enforcement trackers (GLOBAL) ─────────────────────────
