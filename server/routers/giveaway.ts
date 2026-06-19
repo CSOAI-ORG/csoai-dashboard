@@ -191,8 +191,8 @@ export const giveawayRouter = router({
       })
       .from(giveawayApplications);
 
-    // Calculate days remaining until Feb 2, 2026
-    const deadline = new Date("2026-02-02");
+    // Calculate days remaining until Aug 2, 2026
+    const deadline = new Date("2026-08-02");
     const now = new Date();
     const daysRemaining = Math.max(0, Math.ceil((deadline.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
 

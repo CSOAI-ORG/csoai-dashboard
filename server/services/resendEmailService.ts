@@ -136,7 +136,7 @@ export async function sendWelcomeEmail(
       </div>
       
       <p><strong>Why CSOAI Matters:</strong></p>
-      <p>The EU AI Act enforcement deadline is February 2, 2026, and the world needs 250,000 trained AI Safety Analysts. You're joining at a critical moment in AI governance history.</p>
+      <p>The EU AI Act enforcement deadline is August 2, 2026, and the world needs 250,000 trained AI Safety Analysts. You're joining at a critical moment in AI governance history.</p>
       
       <p>Our platform combines:</p>
       <ul>
@@ -393,7 +393,7 @@ export async function sendCertificationEmail(
       <p>Your earning rate increases as you complete more reviews and maintain high accuracy scores.</p>
       
       <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 15px; margin: 25px 0; border-radius: 4px;">
-        <p style="margin: 0;"><strong>⚡ Urgent:</strong> The EU AI Act enforcement deadline is February 2, 2026. Enterprises are actively seeking certified analysts. Start reviewing cases now to maximize your earning potential!</p>
+        <p style="margin: 0;"><strong>⚡ Urgent:</strong> The EU AI Act enforcement deadline is August 2, 2026. Enterprises are actively seeking certified analysts. Start reviewing cases now to maximize your earning potential!</p>
       </div>
       
       <p>Welcome to the global community of AI Safety Analysts. Together, we're building a safer AI future for humanity.</p>

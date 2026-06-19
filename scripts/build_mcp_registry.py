@@ -17,6 +17,15 @@ from collections import Counter
 
 OUT_PATH = "client/src/data/mcpRegistry.json"
 
+# Third-party "awesome list" aggregator repos that get scraped into the org but
+# are NOT MEOK MCP products — exclude so the public catalogue only lists real servers.
+EXCLUDE_SLUGS = {
+    "appcypher-awesome-mcp-servers", "awesome-devops-mcp-servers", "awesome-mcp-list",
+    "awesome-mcp-security", "awesome-mcp-servers", "awesome-mcp-servers-1",
+    "awesome-mcp-servers-2", "best-of-mcp-servers", "wong2-awesome-mcp-servers",
+}
+EXCLUDE_PATTERN = re.compile(r"awesome|best-of-mcp", re.I)
+
 CATEGORIES = [
     ("Compliance & Regulatory", r"eu ai act|iso 42001|iso/iec 42001|nist|dora|nis2|gdpr|hipaa|compliance|regulat|article \d|aml|basel|cra |audit|attestation|incident|bill of materials|ai-bom|self-audit"),
     ("Safety & Security", r"firewall|prompt injection|bias|red.?team|threat|vulnerab|security|guard|watermark|safety|moderation|content"),
@@ -80,7 +89,10 @@ def main():
         sys.exit(2)
 
     repos = load_repos(sys.argv[1])
-    mcps = [r for r in repos if "mcp" in (r.get("name") or "").lower()]
+    mcps = [r for r in repos
+            if "mcp" in (r.get("name") or "").lower()
+            and (r.get("name") or "").lower() not in EXCLUDE_SLUGS
+            and not EXCLUDE_PATTERN.search(r.get("name") or "")]
 
     registry = []
     for r in mcps:

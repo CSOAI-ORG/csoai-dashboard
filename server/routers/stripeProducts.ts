@@ -38,7 +38,7 @@ const FRAMEWORKS = [
     name: "EU AI Act",
     description: "Master Europe's first comprehensive AI regulation",
     region: "EU",
-    deadline: "2026-02-02",
+    deadline: "2026-08-02",
   },
   {
     id: "nist-ai-rmf",

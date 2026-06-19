@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-06-02",
-  "total": 302,
+  "total": 293,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "name": "Safety & Security",
-      "count": 21
+      "count": 20
     },
     {
       "name": "Agent Infrastructure (A2A)",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Developer & Ops Tools",
-      "count": 28
+      "count": 27
     },
     {
       "name": "AI Content & Creative",
@@ -37,7 +37,7 @@
     },
     {
       "name": "General AI Automation",
-      "count": 130
+      "count": 123
     }
   ],
   "frameworkCounts": [
@@ -1064,17 +1064,6 @@
       "updatedAt": "2026-05-31T12:47:55Z"
     },
     {
-      "slug": "awesome-mcp-security",
-      "name": "Awesome Mcp Security",
-      "description": "\ud83d\udd25\ud83d\udd12 Awesome MCP (Model Context Protocol) Security \ud83d\udda5\ufe0f",
-      "url": "https://github.com/CSOAI-ORG/awesome-mcp-security",
-      "category": "Safety & Security",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-14T08:15:39Z"
-    },
-    {
       "slug": "care-membrane-mcp",
       "name": "Care Membrane",
       "description": "AI Safety evaluation toolkit: care scoring, threat detection, burnout analysis, relationship prediction, and care membrane probe framework.",
@@ -1732,17 +1721,6 @@
       "updatedAt": "2026-05-31T12:48:47Z"
     },
     {
-      "slug": "awesome-devops-mcp-servers",
-      "name": "Awesome Devops Mcp Servers",
-      "description": "A curated list of awesome MCP servers focused on DevOps tools and capabilities.",
-      "url": "https://github.com/CSOAI-ORG/awesome-devops-mcp-servers",
-      "category": "Developer & Ops Tools",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-14T08:16:52Z"
-    },
-    {
       "slug": "backup-ai-mcp",
       "name": "Backup Ai",
       "description": "File backup scheduler MCP \u2014 incremental backups, verification, retention policies, cross-cloud replication. MIT.",
@@ -2104,72 +2082,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-05-31T12:47:10Z"
-    },
-    {
-      "slug": "appcypher-awesome-mcp-servers",
-      "name": "Appcypher Awesome Mcp Servers",
-      "description": "Awesome MCP Servers - A curated list of Model Context Protocol servers",
-      "url": "https://github.com/CSOAI-ORG/appcypher-awesome-mcp-servers",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-21T04:07:05Z"
-    },
-    {
-      "slug": "awesome-mcp-list",
-      "name": "Awesome Mcp List",
-      "description": "A concise list for mcp servers",
-      "url": "https://github.com/CSOAI-ORG/awesome-mcp-list",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-14T08:16:56Z"
-    },
-    {
-      "slug": "awesome-mcp-servers",
-      "name": "Awesome Mcp Servers",
-      "description": "A collection of MCP servers.",
-      "url": "https://github.com/CSOAI-ORG/awesome-mcp-servers",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-02T15:15:39Z"
-    },
-    {
-      "slug": "awesome-mcp-servers-1",
-      "name": "Awesome Mcp Servers 1",
-      "description": "A comprehensive collection of Model Context Protocol (MCP) servers",
-      "url": "https://github.com/CSOAI-ORG/awesome-mcp-servers-1",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-26T05:03:34Z"
-    },
-    {
-      "slug": "awesome-mcp-servers-2",
-      "name": "Awesome Mcp Servers 2",
-      "description": "A collection of MCP servers",
-      "url": "https://github.com/CSOAI-ORG/awesome-mcp-servers-2",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-14T08:16:48Z"
-    },
-    {
-      "slug": "best-of-mcp-servers",
-      "name": "Best Of Mcp Servers",
-      "description": "\ud83c\udfc6  A ranked list of MCP servers. Updated weekly.",
-      "url": "https://github.com/CSOAI-ORG/best-of-mcp-servers",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-13T11:17:31Z"
     },
     {
       "slug": "calendar-ai-mcp",
@@ -3492,17 +3404,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-05-31T13:07:24Z"
-    },
-    {
-      "slug": "wong2-awesome-mcp-servers",
-      "name": "Wong2 Awesome Mcp Servers",
-      "description": "A curated list of Model Context Protocol (MCP) servers",
-      "url": "https://github.com/CSOAI-ORG/wong2-awesome-mcp-servers",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-05-21T04:04:31Z"
     },
     {
       "slug": "workout-planner-ai-mcp",

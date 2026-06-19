@@ -33,7 +33,7 @@ export default function FAQ() {
         },
         {
           question: "Is the Watchdog program really free?",
-          answer: "Yes! The CSOAI Watchdog program is 100% FREE. This includes:\n\n• Free Watchdog Analyst training (5 introductory modules)\n• Free certification exam\n• Free digital certificate\n• Access to report AI safety incidents\n• Community forum access\n• Participation in the £1M training giveaway (until Feb 2, 2026)\n\nThe paid CEASAI courses (£499-£1,999) are optional professional certifications for those who want advanced training and career advancement."
+          answer: "Yes! The CSOAI Watchdog program is 100% FREE. This includes:\n\n• Free Watchdog Analyst training (5 introductory modules)\n• Free certification exam\n• Free digital certificate\n• Access to report AI safety incidents\n• Community forum access\n• Participation in the £1M training giveaway (until Aug 2, 2026)\n\nThe paid CEASAI courses (£499-£1,999) are optional professional certifications for those who want advanced training and career advancement."
         },
         {
           question: "Do I need any prior experience to become an AI Safety Analyst?",
@@ -45,7 +45,7 @@ export default function FAQ() {
         },
         {
           question: "What is the £1M training giveaway?",
-          answer: "Until February 2, 2026, we're giving away £1,000,000 worth of FREE AI Safety Analyst training to build a global community of certified analysts. This includes:\n\n• Free access to all 5 Fundamentals modules (normally £499 value)\n• Free certification exam\n• Free digital certificate\n• Priority job placement after certification\n\nAfter Feb 2, 2026, only the basic Watchdog training remains free. Sign up NOW to claim your spot!"
+          answer: "Until August 2, 2026, we're giving away £1,000,000 worth of FREE AI Safety Analyst training to build a global community of certified analysts. This includes:\n\n• Free access to all 5 Fundamentals modules (normally £499 value)\n• Free certification exam\n• Free digital certificate\n• Priority job placement after certification\n\nAfter Aug 2, 2026, only the basic Watchdog training remains free. Sign up NOW to claim your spot!"
         }
       ]
     },
@@ -187,15 +187,15 @@ export default function FAQ() {
         },
         {
           question: "What is your business model for the £1M giveaway?",
-          answer: "The £1M training giveaway (until Feb 2, 2026) is a strategic investment:\n\n**Cost**: £1M in free training (10,000 analysts × £100 cost per analyst)\n**Return**: \n• 10,000 certified analysts create network effects\n• Enterprises pay £999-£9,999/month to access this analyst network\n• Governments license our platform for £100K-£1M per country\n• Analysts become advocates, driving enterprise adoption\n\n**Example**: If just 100 enterprises sign up at £2,999/month, that's £3.6M annual recurring revenue. If 10 governments license at £500K each, that's £5M. Total addressable market: 124+ countries without AI safety frameworks.\n\nThe giveaway is customer acquisition. The real revenue comes from enterprise and government services.\n\nThis is why we're confident in a Series A valuation of £10-20M."
+          answer: "The £1M training giveaway (until Aug 2, 2026) is a strategic investment:\n\n**Cost**: £1M in free training (10,000 analysts × £100 cost per analyst)\n**Return**: \n• 10,000 certified analysts create network effects\n• Enterprises pay £999-£9,999/month to access this analyst network\n• Governments license our platform for £100K-£1M per country\n• Analysts become advocates, driving enterprise adoption\n\n**Example**: If just 100 enterprises sign up at £2,999/month, that's £3.6M annual recurring revenue. If 10 governments license at £500K each, that's £5M. Total addressable market: 124+ countries without AI safety frameworks.\n\nThe giveaway is customer acquisition. The real revenue comes from enterprise and government services.\n\nThis is why we're confident in a Series A valuation of £10-20M."
         },
         {
           question: "Why should I trust CSOAI over other AI safety platforms?",
           answer: "Unlike other platforms, CSOAI is:\n\n1. **Open source**: You can audit our code (github.com/optimobile/coai-dashboard)\n2. **Multi-vendor**: 33 agents from 12+ providers (no single-vendor bias)\n3. **Human-verified**: Real certified analysts, not just automated checks\n4. **Globally aligned**: Supports 12+ regulatory frameworks, not just one\n5. **Transparent**: All council votes are public\n6. **Non-profit mission**: We're building for humanity, not just profit\n7. **Government-grade**: Being adopted as the standard for national AI safety programs\n\nOther platforms are closed-source, single-vendor (e.g., OpenAI's safety tools only use OpenAI models), and lack human oversight. We're building the infrastructure that AI companies need and humanity deserves."
         },
         {
-          question: "What happens after the £1M giveaway ends on Feb 2, 2026?",
-          answer: "After February 2, 2026:\n\n• **Free Watchdog training remains free**: Basic incident reporting and community access\n• **CEASAI courses return to full price**: £499/£999/£1,999 for Fundamentals/Professional/Expert\n• **Early adopters get lifetime benefits**: Anyone who signs up before Feb 2 gets:\n  - Lifetime access to all Fundamentals modules (£499 value)\n  - Priority job placement\n  - Founding member badge\n  - 50% discount on future course upgrades\n\n**Sign up NOW to lock in your free training before the deadline!**\n\nThis is a limited-time opportunity to become a certified AI Safety Analyst at no cost. After Feb 2, you'll pay £499+ for the same training."
+          question: "What happens after the £1M giveaway ends on Aug 2, 2026?",
+          answer: "After August 2, 2026:\n\n• **Free Watchdog training remains free**: Basic incident reporting and community access\n• **CEASAI courses return to full price**: £499/£999/£1,999 for Fundamentals/Professional/Expert\n• **Early adopters get lifetime benefits**: Anyone who signs up before Aug 2 gets:\n  - Lifetime access to all Fundamentals modules (£499 value)\n  - Priority job placement\n  - Founding member badge\n  - 50% discount on future course upgrades\n\n**Sign up NOW to lock in your free training before the deadline!**\n\nThis is a limited-time opportunity to become a certified AI Safety Analyst at no cost. After Aug 2, you'll pay £499+ for the same training."
         }
       ]
     }

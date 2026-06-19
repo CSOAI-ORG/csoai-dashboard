@@ -313,7 +313,7 @@ export function CEASAIPricing() {
             Master 5 core frameworks or all 13 modules to earn the <strong className="text-white">Global AI Safety Analyst Expert</strong> certification. Qualified for government auditor roles in 124+ countries.
           </p>
           <p className="text-sm text-emerald-400 font-semibold">
-            🎁 £1M Training Giveaway until Feb 2, 2026 - Fundamentals tier FREE for early adopters!
+            🎁 £1M Training Giveaway until Aug 2, 2026 - Fundamentals tier FREE for early adopters!
           </p>
         </div>
 
