@@ -32,8 +32,19 @@ export function Header() {
   const menuItemsRef = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const navigation = [
-    { 
-      name: 'Dashboard', 
+    {
+      name: 'Atlas',
+      href: '/opengridworks',
+      submenu: [
+        { name: 'World Map', href: '/opengridworks', description: 'AI regulation across 177 countries — live, 12 languages' },
+        { name: 'Deadline Radar', href: '/radar', description: 'Every upcoming AI-law deadline worldwide' },
+        { name: "What's Changed", href: '/feed', description: 'Live regulation updates, crawled daily' },
+        { name: 'Landscape', href: '/landscape', description: 'Aggregate compliance intelligence (regulators)' },
+        { name: 'Outreach', href: '/outreach', description: 'Help-first readiness queue' },
+      ]
+    },
+    {
+      name: 'Dashboard',
       href: '/dashboard',
       submenu: [
         { name: 'Overview', href: '/dashboard', description: 'Your dashboard' },
