@@ -12,6 +12,13 @@ import { I18nProvider, useI18n, LANGUAGE_NAMES, LOCALES, type Locale } from '@/i
 import { ENTITIES, entitiesForCountry } from '@/data/intel/entities';
 import { deadlinesForJurisdiction, nextDeadline } from '@/data/intel/deadlines';
 import { signalsForEntity } from '@/data/intel/risk';
+import { loadAdmin1, hasAdmin1, type Admin1Feature } from '@/data/intel/admin1';
+
+// Wave C zoom thresholds — drive progressive "fly into the country" behaviour:
+//  - ADMIN1_ZOOM: at/above this scale we lazily fetch + overlay sub-national borders
+//  - LABEL_ZOOM:  at/above this scale company markers gain a name label (de-cluttered)
+const ADMIN1_ZOOM = 3;
+const LABEL_ZOOM = 4;
 // NOTE: the company/deadline UI strings below are intentionally English for now —
 // localizing them means adding keys to all 12 locale dicts (a follow-on i18n pass),
 // same call as leaving framework legal content in source.
@@ -72,6 +79,7 @@ function OpenGridWorksInner() {
   const [activeFw, setActiveFw] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState('');
   const [view, setView] = useState({ k: 1, x: 0, y: 0 });
+  const [admin1, setAdmin1] = useState<Admin1Feature[]>([]); // Wave C: sub-national borders, lazy
   const drag = useRef<{ x: number; y: number; ox: number; oy: number; moved: boolean } | null>(null);
 
   useEffect(() => {
@@ -139,6 +147,23 @@ function OpenGridWorksInner() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, []);
+
+  // Wave C: lazily fetch admin-1 boundaries the first time the user deep-zooms into a
+  // country we have sub-national geometry for. loadAdmin1() is memoised + self-healing on
+  // failure, so this fires at most once and degrades silently if the CDN is unreachable.
+  const deepInto = view.k >= ADMIN1_ZOOM && hasAdmin1(selPick?.iso);
+  useEffect(() => {
+    if (!deepInto || admin1.length) return;
+    let alive = true;
+    loadAdmin1().then((feats) => { if (alive) setAdmin1(feats); });
+    return () => { alive = false; };
+  }, [deepInto, admin1.length]);
+
+  // Only draw the focused country's provinces (≤ ~85 paths) rather than all 294.
+  const selAdmin1 = useMemo(
+    () => (deepInto && selPick?.iso ? admin1.filter((f) => f.properties?.adm0_a3 === selPick.iso) : []),
+    [deepInto, admin1, selPick?.iso],
+  );
 
   const clampZoom = (k: number) => Math.max(1, Math.min(8, k));
   const onWheel = useCallback((e: React.WheelEvent) => {
@@ -305,18 +330,44 @@ function OpenGridWorksInner() {
                         onClick={() => { if (!drag.current?.moved) setSelNum(num); }} />
                     );
                   })}
-                  {/* Entity layer — real AI/robotics companies as markers (Wave B) */}
+                  {/* Wave C: admin-1 drill-down — thin, low-opacity sub-national borders for
+                      the focused country only (no recolor; the country heat shows through).
+                      Renders only when deep-zoomed + data loaded; empty otherwise (graceful). */}
+                  {path && selAdmin1.map((f, i) => (
+                    <path key={`a1-${i}`} d={path(f as any) || undefined}
+                      fill="none" stroke="#7dd3fc" strokeWidth={0.5 / view.k} opacity={0.35}
+                      pointerEvents="none" style={{ transition: 'opacity .2s' }} />
+                  ))}
+
+                  {/* Entity layer — real AI/robotics companies as markers (Wave B).
+                      Wave C: markers grow slightly with zoom; a name label appears once
+                      zoomed in enough (LABEL_ZOOM) that labels won't badly overlap. */}
                   {proj && ENTITIES.map((e) => {
                     if (!e.geo) return null;
                     const p = proj([e.geo.lon, e.geo.lat]);
                     if (!p) return null;
                     const active = hoverEnt === e.slug || selEntity === e.slug;
+                    // grow markers as we zoom in (clamped), and screen-stable via /view.k
+                    const grow = Math.min(view.k, 4);
+                    const r = (active ? 3 + grow : 1.6 + grow * 0.7) / view.k;
+                    // label once deep enough, OR always for the active marker
+                    const showLabel = active || view.k >= LABEL_ZOOM;
                     return (
-                      <circle key={e.slug} cx={p[0]} cy={p[1]} r={(active ? 4 : 2.4) / view.k}
-                        fill={active ? '#fbbf24' : '#f59e0b'} stroke="#0b1220" strokeWidth={0.5 / view.k} opacity={0.92}
-                        style={{ cursor: 'pointer' }}
-                        onMouseEnter={() => setHoverEnt(e.slug)} onMouseLeave={() => setHoverEnt(null)}
-                        onClick={(ev) => { ev.stopPropagation(); if (!drag.current?.moved) selectEntity(e); }} />
+                      <g key={e.slug}>
+                        <circle cx={p[0]} cy={p[1]} r={r}
+                          fill={active ? '#fbbf24' : '#f59e0b'} stroke="#0b1220" strokeWidth={0.5 / view.k} opacity={0.92}
+                          style={{ cursor: 'pointer' }}
+                          onMouseEnter={() => setHoverEnt(e.slug)} onMouseLeave={() => setHoverEnt(null)}
+                          onClick={(ev) => { ev.stopPropagation(); if (!drag.current?.moved) selectEntity(e); }} />
+                        {showLabel && (
+                          <text x={p[0] + r + 1.5 / view.k} y={p[1] + 3 / view.k}
+                            fontSize={9 / view.k} fontWeight={600}
+                            fill={active ? '#fde68a' : '#fcd34d'} pointerEvents="none"
+                            style={{ paintOrder: 'stroke', stroke: '#0b1220', strokeWidth: 2 / view.k }}>
+                            {e.name}
+                          </text>
+                        )}
+                      </g>
                     );
                   })}
                 </g>
