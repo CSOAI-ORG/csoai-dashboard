@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19",
+  "generatedAt": "2026-06-20",
   "total": 348,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -84,7 +84,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:56:26Z"
+      "updatedAt": "2026-06-20T02:32:19Z"
     },
     {
       "slug": "ai-bom-mcp",
@@ -327,7 +327,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-12T18:43:58Z"
+      "updatedAt": "2026-06-19T18:43:35Z"
     },
     {
       "slug": "canada-aida-ai-mcp",
@@ -703,7 +703,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-15T13:57:10Z"
+      "updatedAt": "2026-06-20T00:02:49Z"
     },
     {
       "slug": "mcp-spec-compliance-mcp",
@@ -979,7 +979,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:57:14Z"
+      "updatedAt": "2026-06-20T08:52:16Z"
     },
     {
       "slug": "meok-haulage-governance-bridge-mcp",
@@ -1058,7 +1058,7 @@
       ],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-13T09:02:40Z"
+      "updatedAt": "2026-06-20T09:02:34Z"
     },
     {
       "slug": "meok-nis2-nl-register-mcp",
@@ -1278,7 +1278,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-16T05:51:22Z"
+      "updatedAt": "2026-06-20T09:02:38Z"
     },
     {
       "slug": "risk-assessment-ai-mcp",
@@ -1429,7 +1429,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T12:16:21Z"
+      "updatedAt": "2026-06-20T06:22:24Z"
     },
     {
       "slug": "ci-cd-generator-ai-mcp",
@@ -1622,7 +1622,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:57:46Z"
+      "updatedAt": "2026-06-20T07:12:15Z"
     },
     {
       "slug": "writing-assistant-ai-mcp",
@@ -2053,7 +2053,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:57:47Z"
+      "updatedAt": "2026-06-20T02:02:27Z"
     },
     {
       "slug": "social-media-ai-mcp",
@@ -2141,7 +2141,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:56:35Z"
+      "updatedAt": "2026-06-20T01:42:28Z"
     },
     {
       "slug": "changelog-ai-mcp",
@@ -2174,7 +2174,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:56:41Z"
+      "updatedAt": "2026-06-20T09:02:28Z"
     },
     {
       "slug": "csv-analytics-mcp",
@@ -2229,7 +2229,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-15T13:56:57Z"
+      "updatedAt": "2026-06-20T07:52:20Z"
     },
     {
       "slug": "icon-generator-ai-mcp",
@@ -2438,7 +2438,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-16T05:49:29Z"
+      "updatedAt": "2026-06-20T07:32:17Z"
     },
     {
       "slug": "plagiarism-checker-ai-mcp",
@@ -2603,7 +2603,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:56:40Z"
+      "updatedAt": "2026-06-20T05:02:22Z"
     },
     {
       "slug": "clipboard-ai-mcp",
@@ -2746,7 +2746,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:56:53Z"
+      "updatedAt": "2026-06-20T08:32:23Z"
     },
     {
       "slug": "customer-support-ai-mcp",
@@ -2955,7 +2955,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-15T14:40:45Z"
+      "updatedAt": "2026-06-20T07:32:23Z"
     },
     {
       "slug": "fitness-ai-mcp",
@@ -2966,7 +2966,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-15T14:40:46Z"
+      "updatedAt": "2026-06-20T04:12:18Z"
     },
     {
       "slug": "flashcard-ai-mcp",
@@ -3175,7 +3175,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:57:08Z"
+      "updatedAt": "2026-06-20T08:32:21Z"
     },
     {
       "slug": "legacy-engineering-mcp",
@@ -3617,7 +3617,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T13:57:27Z"
+      "updatedAt": "2026-06-20T00:52:13Z"
     },
     {
       "slug": "planthire-ai-mcp",
@@ -3980,7 +3980,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-15T13:58:04Z"
+      "updatedAt": "2026-06-20T09:22:19Z"
     },
     {
       "slug": "voice-audio-mcp",
