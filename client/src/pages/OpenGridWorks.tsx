@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { geoEqualEarth, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages, Building2, Clock, Cpu } from 'lucide-react';
+import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages, Building2, Clock, Cpu, Wrench, ListChecks, Plug, ChevronDown, ChevronRight, Terminal, BookOpen, Link2 } from 'lucide-react';
 import { FRAMEWORKS } from '@/data/frameworks';
 import {
   WORLD_ATLAS_URL, isoFromNumeric, coverageLevel,
@@ -13,6 +13,8 @@ import { ENTITIES, entitiesForCountry } from '@/data/intel/entities';
 import { deadlinesForJurisdiction, nextDeadline } from '@/data/intel/deadlines';
 import { signalsForEntity } from '@/data/intel/risk';
 import { loadAdmin1, hasAdmin1, type Admin1Feature } from '@/data/intel/admin1';
+import { WORKFLOWS, workflowsForFramework, type Workflow } from '@/data/intel/workflows';
+import { INTEGRATIONS, integrationsForFramework, type Integration } from '@/data/intel/integrations';
 
 // Wave C zoom thresholds — drive progressive "fly into the country" behaviour:
 //  - ADMIN1_ZOOM: at/above this scale we lazily fetch + overlay sub-national borders
@@ -80,6 +82,8 @@ function OpenGridWorksInner() {
   const [query, setQuery] = useState('');
   const [view, setView] = useState({ k: 1, x: 0, y: 0 });
   const [admin1, setAdmin1] = useState<Admin1Feature[]>([]); // Wave C: sub-national borders, lazy
+  const [drawer, setDrawer] = useState<null | 'tools' | 'workflows' | 'integrations'>(null);
+  const [openWf, setOpenWf] = useState<string | null>(null);
   const drag = useRef<{ x: number; y: number; ox: number; oy: number; moved: boolean } | null>(null);
 
   useEffect(() => {
@@ -198,6 +202,21 @@ function OpenGridWorksInner() {
   const selNational = (selPick?.iso ? (COUNTRY_FRAMEWORKS[selPick.iso] || []) : []).map(frameworkBySlug).filter(Boolean) as any[];
   const selGlobal = GLOBAL_SLUGS.map(frameworkBySlug).filter(Boolean) as any[];
 
+  // Tools drawer — workflows + integrations, context-scoped to the selected jurisdiction's frameworks
+  const selFwSlugs = selPick?.iso ? (COUNTRY_FRAMEWORKS[selPick.iso] || []) : [];
+  const drawerWorkflows = useMemo<Workflow[]>(() => {
+    if (!selFwSlugs.length) return WORKFLOWS;
+    const seen = new Set<string>(); const out: Workflow[] = [];
+    selFwSlugs.forEach((s) => workflowsForFramework(s).forEach((w) => { if (!seen.has(w.slug)) { seen.add(w.slug); out.push(w); } }));
+    return out.length ? out : WORKFLOWS;
+  }, [selPick?.iso]); // eslint-disable-line react-hooks/exhaustive-deps
+  const drawerIntegrations = useMemo<Integration[]>(() => {
+    if (!selFwSlugs.length) return INTEGRATIONS;
+    const fwScoped = new Set<string>();
+    selFwSlugs.forEach((s) => integrationsForFramework(s).forEach((i) => fwScoped.add(i.slug)));
+    return INTEGRATIONS.filter((i) => fwScoped.has(i.slug) || !i.frameworks?.length);
+  }, [selPick?.iso]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // intelligence layer: live deadline clocks, the companies in this country, and the
   // single headline binding deadline anywhere (the "our AI already knows" banner).
   const headlineDeadline = useMemo(() => nextDeadline(), []);
@@ -301,6 +320,7 @@ function OpenGridWorksInner() {
               {t('statusBar', { jurisdictions: coveredCount, frameworks: FRAMEWORKS.length, countries: countryList.length || t('statusLoading') })}
             </div>
             <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
+              <button onClick={() => setDrawer((d) => (d ? null : 'tools'))} aria-label="Tools, workflows & integrations" title="Tools, workflows & integrations" data-testid="open-tools-drawer" className="w-8 h-8 grid place-items-center rounded-lg bg-emerald-600/80 border border-emerald-500 hover:bg-emerald-500 mb-1"><Wrench className="w-4 h-4" /></button>
               <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k * 1.3) }))} aria-label={t('zoomIn')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Plus className="w-4 h-4" /></button>
               <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k / 1.3) }))} aria-label={t('zoomOut')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Minus className="w-4 h-4" /></button>
               <button onClick={reset} aria-label={t('resetView')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><RotateCcw className="w-4 h-4" /></button>
@@ -398,6 +418,96 @@ function OpenGridWorksInner() {
           </div>
         </div>
       </div>
+
+      {/* Tools / Workflows / Integrations drawer */}
+      {drawer && (
+        <div className="fixed inset-y-0 left-0 z-50 w-full max-w-md bg-slate-900 border-r border-emerald-500/30 shadow-2xl overflow-y-auto" data-testid="tools-drawer">
+          <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-5 py-4 flex items-center justify-between">
+            <div>
+              <div className="text-[10px] uppercase tracking-wide text-slate-500">CSOAI Atlas</div>
+              <h2 className="text-xl font-bold">Tools &amp; Integrations</h2>
+            </div>
+            <button onClick={() => setDrawer(null)} aria-label="Close tools drawer" className="text-slate-500 hover:text-slate-200"><X className="w-5 h-5" /></button>
+          </div>
+          <div className="p-5">
+            <div className="flex gap-2 mb-5 border-b border-slate-800 pb-2">
+              <button onClick={() => setDrawer('workflows')} className={`px-3 py-1.5 text-xs font-semibold rounded-md transition inline-flex items-center gap-1 ${drawer !== 'integrations' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-slate-200'}`}>
+                <ListChecks className="w-3.5 h-3.5" /> Workflows
+              </button>
+              <button onClick={() => setDrawer('integrations')} className={`px-3 py-1.5 text-xs font-semibold rounded-md transition inline-flex items-center gap-1 ${drawer === 'integrations' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-slate-200'}`}>
+                <Plug className="w-3.5 h-3.5" /> Integrations
+              </button>
+            </div>
+
+            {drawer !== 'integrations' ? (
+              <div className="space-y-4">
+                <div className="text-xs text-slate-500">
+                  {selPick ? `Context-scoped to ${selPick.name}.` : 'Showing all workflows. Select a country to scope them.'}
+                </div>
+                {drawerWorkflows.length === 0 && <div className="text-sm text-slate-500">No workflows for this jurisdiction yet.</div>}
+                {drawerWorkflows.map((w) => {
+                  const open = openWf === w.slug;
+                  return (
+                    <div key={w.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 overflow-hidden">
+                      <button onClick={() => setOpenWf(open ? null : w.slug)} className="w-full text-start p-3 flex items-start justify-between gap-2">
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2">
+                            <span className="font-semibold text-sm">{w.title}</span>
+                            {w.estMinutes && <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400 shrink-0">{w.estMinutes} min</span>}
+                          </div>
+                          <p className="text-[11px] text-slate-400 mt-1">{w.description}</p>
+                        </div>
+                        {open ? <ChevronDown className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" /> : <ChevronRight className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />}
+                      </button>
+                      {open && (
+                        <div className="border-t border-slate-800 px-3 pb-3">
+                          <div className="text-[10px] uppercase tracking-wide text-slate-500 mt-2 mb-1">Steps</div>
+                          <ol className="space-y-2">
+                            {w.steps.map((s, idx) => (
+                              <li key={idx} className="text-[11px] text-slate-300 flex gap-2">
+                                <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-emerald-900/40 text-emerald-400 text-[9px] shrink-0 mt-0.5">{idx + 1}</span>
+                                <span>
+                                  <span className="font-medium text-slate-200">{s.title}</span>
+                                  <span className="text-slate-500"> — {s.description}</span>
+                                  {s.cite && <span className="text-amber-300/80 ml-1">({s.cite})</span>}
+                                  {s.href && <a href={s.href} className="text-emerald-400 hover:underline ml-1 inline-flex items-center gap-0.5">Go <ExternalLink className="w-3 h-3" /></a>}
+                                </span>
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="text-xs text-slate-500">
+                  {selPick ? `Integrations available for ${selPick.name}.` : 'All protocol and data integrations.'}
+                </div>
+                {drawerIntegrations.map((i) => (
+                  <div key={i.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 p-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <span className="font-semibold text-sm">{i.name}</span>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400 shrink-0 uppercase">{i.kind}</span>
+                    </div>
+                    <p className="text-[11px] text-slate-400 mt-1">{i.description}</p>
+                    <div className="mt-2 text-[11px] text-slate-300 flex items-start gap-1.5">
+                      <Terminal className="w-3.5 h-3.5 shrink-0 mt-0.5 text-emerald-500" />
+                      <span>{i.connect}</span>
+                    </div>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                      {i.endpoint && <a href={i.endpoint} className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1"><Link2 className="w-3 h-3" /> Endpoint</a>}
+                      {i.docsUrl && <a href={i.docsUrl} className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1"><BookOpen className="w-3 h-3" /> Docs</a>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Region detail panel */}
       {selPick && (
