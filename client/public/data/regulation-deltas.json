@@ -540,5 +540,86 @@
     ],
     "summary": "[baseline] Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u�d�g�L�����p�ψ���񍐁i�āj�v�ɑ΂���ӌ���W�̌���",
     "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban09_02000591.html"
+  },
+  {
+    "at": "2026-06-20T07:00:13.466Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Foreign-Trade Zone (FTZ) 18, Notification of Proposed Production Activity; Super Micro Computer, Inc.; (High-Performance Computing Systems); San Jose, Fremont, and Milpitas, California",
+    "source": "https://www.federalregister.gov/documents/2026/06/22/2026-12508/foreign-trade-zone-ftz-18-notification-of-proposed-production-activity-super-micro-computer-inc"
+  },
+  {
+    "at": "2026-06-20T07:00:13.466Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Public Notice: Design Challenge for National Memorial to Fallen Highway Workers in Work Zones",
+    "source": "https://www.federalregister.gov/documents/2026/06/22/2026-12440/public-notice-design-challenge-for-national-memorial-to-fallen-highway-workers-in-work-zones"
+  },
+  {
+    "at": "2026-06-20T07:00:13.466Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Self-Regulatory Organizations; NYSE Arca, Inc.; Notice of Filing and Immediate Effectiveness of Proposed Rule Changes To Amend Certain Representations Relating to United States Copper Index Fund",
+    "source": "https://www.federalregister.gov/documents/2026/06/22/2026-12404/self-regulatory-organizations-nyse-arca-inc-notice-of-filing-and-immediate-effectiveness-of-proposed"
+  },
+  {
+    "at": "2026-06-20T07:00:13.466Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Agency Information Collection Activities: Comment Request",
+    "source": "https://www.federalregister.gov/documents/2026/06/22/2026-12360/agency-information-collection-activities-comment-request"
+  },
+  {
+    "at": "2026-06-20T07:00:41.327Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Valdez to announce major federal investments to support women entrepreneurs in Alberta and across Canada",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/minister-valdez-to-announce-major-federal-investments-to-support-women-entrepreneurs-in-alberta-and-across-canada.html"
+  },
+  {
+    "at": "2026-06-20T07:00:41.327Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Joly to hold teleconference during visit to Japan, following engagements in China",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/minister-joly-to-hold-teleconference-during-visit-to-japan-following-engagements-in-china.html"
+  },
+  {
+    "at": "2026-06-20T07:00:47.347Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "BRA"
+    ],
+    "summary": "Brazil ANPD — notícias (data protection / AI bill PL 2338): page content changed (hash 56d94ac5 → c40f8e1b) — review for new/updated material.",
+    "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  },
+  {
+    "at": "2026-06-20T07:00:48.128Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "ISO/IEC JTC 1/SC 42 — Artificial Intelligence standards committee: page content changed (hash db64fb58 → 3d3b2ac2) — review for new/updated material.",
+    "source": "https://www.iso.org/committee/6794475.html"
+  },
+  {
+    "at": "2026-06-20T07:00:50.475Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 5afd5bf7 → 54f8b37c) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
