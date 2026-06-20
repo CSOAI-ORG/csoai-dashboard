@@ -106,3 +106,9 @@ temp/
 *.sqlite
 *.sqlite3
 .vercel
+
+# Playwright / E2E artifacts
+test-results/
+playwright-report/
+e2e/*-snapshots/
+*.webm

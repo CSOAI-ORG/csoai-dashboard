@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { geoEqualEarth, geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
-import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages, Building2, Clock, Cpu, Wrench, ListChecks, Plug, ChevronDown, ChevronRight, Terminal, BookOpen, Link2 } from 'lucide-react';
+import { Plus, Minus, RotateCcw, X, ExternalLink, Globe2, Layers, Search, ShieldCheck, Languages, Building2, Clock, Cpu, Wrench, ListChecks, Plug, ChevronDown, ChevronRight, Terminal, BookOpen, Link2, Copy, Check, Keyboard, Filter, Bot, Webhook, FileJson } from 'lucide-react';
 import { FRAMEWORKS } from '@/data/frameworks';
 import {
   WORLD_ATLAS_URL, isoFromNumeric, coverageLevel,
@@ -37,6 +37,21 @@ const W = 960, H = 500;
 const HEAT = ['#1e293b', '#0e7490', '#0f766e', '#10b981']; // 0..3 coverage
 
 type Picked = { num: number; iso?: string; name: string };
+
+// Integration kind icon — maps the catalogue kind to a small visual cue in the drawer.
+function KindIcon({ kind }: { kind: string }) {
+  const props = { className: 'w-3 h-3', 'aria-hidden': true };
+  switch (kind) {
+    case 'mcp': return <Cpu {...props} />;
+    case 'agent': return <Bot {...props} />;
+    case 'protocol': return <Link2 {...props} />;
+    case 'attestation': return <ShieldCheck {...props} />;
+    case 'data-feed': return <Globe2 {...props} />;
+    case 'webhook': return <Webhook {...props} />;
+    case 'crosswalk': return <Layers {...props} />;
+    default: return <Plug {...props} />;
+  }
+}
 
 // Compact language switcher — names render in their own script. Persists on change
 // (the provider writes to localStorage) and re-renders the whole page, flipping to
@@ -84,6 +99,8 @@ function OpenGridWorksInner() {
   const [admin1, setAdmin1] = useState<Admin1Feature[]>([]); // Wave C: sub-national borders, lazy
   const [drawer, setDrawer] = useState<null | 'tools' | 'workflows' | 'integrations'>(null);
   const [openWf, setOpenWf] = useState<string | null>(null);
+  const [drawerQuery, setDrawerQuery] = useState('');
+  const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
   const drag = useRef<{ x: number; y: number; ox: number; oy: number; moved: boolean } | null>(null);
 
   useEffect(() => {
@@ -98,6 +115,22 @@ function OpenGridWorksInner() {
       .catch((e) => alive && setErr(String(e)));
     return () => { alive = false; };
   }, []);
+
+  // Keyboard shortcuts: `t` toggles the tools drawer, `Escape` closes it.
+  // Ignored when focus is in an input/textarea/select so we don't hijack typing.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement)?.tagName?.toLowerCase();
+      const typing = tag === 'input' || tag === 'textarea' || tag === 'select' || (e.target as HTMLElement)?.isContentEditable;
+      if (e.key === 'Escape' && drawer) { setDrawer(null); }
+      if (e.key.toLowerCase() === 't' && !e.ctrlKey && !e.metaKey && !e.altKey && !typing) {
+        e.preventDefault();
+        setDrawer((d) => (d ? null : 'tools'));
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [drawer]);
 
   const { path, proj } = useMemo(() => {
     if (!geos.length) return { path: null as any, proj: null as any };
@@ -204,18 +237,48 @@ function OpenGridWorksInner() {
 
   // Tools drawer — workflows + integrations, context-scoped to the selected jurisdiction's frameworks
   const selFwSlugs = selPick?.iso ? (COUNTRY_FRAMEWORKS[selPick.iso] || []) : [];
+  const qNorm = drawerQuery.trim().toLowerCase();
+  const matchesQuery = (text: string) => !qNorm || text.toLowerCase().includes(qNorm);
   const drawerWorkflows = useMemo<Workflow[]>(() => {
-    if (!selFwSlugs.length) return WORKFLOWS;
-    const seen = new Set<string>(); const out: Workflow[] = [];
-    selFwSlugs.forEach((s) => workflowsForFramework(s).forEach((w) => { if (!seen.has(w.slug)) { seen.add(w.slug); out.push(w); } }));
-    return out.length ? out : WORKFLOWS;
-  }, [selPick?.iso]); // eslint-disable-line react-hooks/exhaustive-deps
+    let base: Workflow[];
+    if (!selFwSlugs.length) { base = WORKFLOWS; }
+    else {
+      const seen = new Set<string>(); const out: Workflow[] = [];
+      selFwSlugs.forEach((s) => workflowsForFramework(s).forEach((w) => { if (!seen.has(w.slug)) { seen.add(w.slug); out.push(w); } }));
+      base = out.length ? out : WORKFLOWS;
+    }
+    if (!qNorm) return base;
+    return base.filter((w) =>
+      matchesQuery(w.title) ||
+      matchesQuery(w.description) ||
+      matchesQuery(w.trigger) ||
+      w.steps.some((s) => matchesQuery(s.title) || matchesQuery(s.description) || matchesQuery(s.cite || ''))
+    );
+  }, [selPick?.iso, qNorm]);
   const drawerIntegrations = useMemo<Integration[]>(() => {
-    if (!selFwSlugs.length) return INTEGRATIONS;
-    const fwScoped = new Set<string>();
-    selFwSlugs.forEach((s) => integrationsForFramework(s).forEach((i) => fwScoped.add(i.slug)));
-    return INTEGRATIONS.filter((i) => fwScoped.has(i.slug) || !i.frameworks?.length);
-  }, [selPick?.iso]); // eslint-disable-line react-hooks/exhaustive-deps
+    let base: Integration[];
+    if (!selFwSlugs.length) { base = INTEGRATIONS; }
+    else {
+      const fwScoped = new Set<string>();
+      selFwSlugs.forEach((s) => integrationsForFramework(s).forEach((i) => fwScoped.add(i.slug)));
+      base = INTEGRATIONS.filter((i) => fwScoped.has(i.slug) || !i.frameworks?.length);
+    }
+    if (!qNorm) return base;
+    return base.filter((i) =>
+      matchesQuery(i.name) ||
+      matchesQuery(i.description) ||
+      matchesQuery(i.kind) ||
+      matchesQuery(i.connect) ||
+      matchesQuery(i.endpoint || '')
+    );
+  }, [selPick?.iso, qNorm]);
+
+  // Group integrations by kind for the drawer
+  const integrationGroups = useMemo(() => {
+    const groups: Record<string, Integration[]> = {};
+    drawerIntegrations.forEach((i) => { (groups[i.kind] ||= []).push(i); });
+    return Object.entries(groups).sort(([a], [b]) => a.localeCompare(b));
+  }, [drawerIntegrations]);
 
   // intelligence layer: live deadline clocks, the companies in this country, and the
   // single headline binding deadline anywhere (the "our AI already knows" banner).
@@ -421,21 +484,47 @@ function OpenGridWorksInner() {
 
       {/* Tools / Workflows / Integrations drawer */}
       {drawer && (
-        <div className="fixed inset-y-0 left-0 z-50 w-full max-w-md bg-slate-900 border-r border-emerald-500/30 shadow-2xl overflow-y-auto" data-testid="tools-drawer">
-          <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-5 py-4 flex items-center justify-between">
-            <div>
+        <>
+        {/* Backdrop — click to close, swipe/keyboard handled below */}
+        <div className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm" onClick={() => setDrawer(null)} aria-hidden="true" data-testid="tools-backdrop" />
+        <div className="fixed inset-y-0 left-0 z-50 w-full sm:max-w-md bg-slate-900 border-r border-emerald-500/30 shadow-2xl overflow-y-auto" data-testid="tools-drawer" role="dialog" aria-modal="true" aria-label="Tools and integrations">
+          <div className="sticky top-0 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-4 sm:px-5 py-4 flex items-center justify-between gap-3">
+            <div className="min-w-0">
               <div className="text-[10px] uppercase tracking-wide text-slate-500">CSOAI Atlas</div>
-              <h2 className="text-xl font-bold">Tools &amp; Integrations</h2>
+              <h2 className="text-lg sm:text-xl font-bold">Tools &amp; Integrations</h2>
             </div>
-            <button onClick={() => setDrawer(null)} aria-label="Close tools drawer" className="text-slate-500 hover:text-slate-200"><X className="w-5 h-5" /></button>
+            <div className="flex items-center gap-2">
+              <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-slate-500 px-1.5 py-0.5 rounded border border-slate-700 bg-slate-800/50" title="Press T to toggle"><Keyboard className="w-3 h-3" /> T</span>
+              <button onClick={() => setDrawer(null)} aria-label="Close tools drawer" className="text-slate-500 hover:text-slate-200 p-1 rounded-md hover:bg-slate-800"><X className="w-5 h-5" /></button>
+            </div>
           </div>
-          <div className="p-5">
+          <div className="p-4 sm:p-5">
+            {/* Search */}
+            <div className="relative mb-4">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-500" aria-hidden="true" />
+              <input
+                type="text"
+                value={drawerQuery}
+                onChange={(e) => setDrawerQuery(e.target.value)}
+                placeholder={drawer === 'integrations' ? 'Search integrations…' : 'Search workflows…'}
+                className="w-full bg-slate-800/60 border border-slate-700 rounded-lg pl-9 pr-3 py-2 text-sm text-slate-200 placeholder:text-slate-600 outline-none focus:border-emerald-500/60"
+                data-testid="tools-search"
+                aria-label={drawer === 'integrations' ? 'Search integrations' : 'Search workflows'}
+              />
+              {drawerQuery && (
+                <button onClick={() => setDrawerQuery('')} aria-label="Clear search" className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 p-1">
+                  <X className="w-3 h-3" />
+                </button>
+              )}
+            </div>
+
+            {/* Tabs */}
             <div className="flex gap-2 mb-5 border-b border-slate-800 pb-2">
-              <button onClick={() => setDrawer('workflows')} className={`px-3 py-1.5 text-xs font-semibold rounded-md transition inline-flex items-center gap-1 ${drawer !== 'integrations' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-slate-200'}`}>
-                <ListChecks className="w-3.5 h-3.5" /> Workflows
+              <button onClick={() => setDrawer('workflows')} className={`px-3 py-1.5 text-xs font-semibold rounded-md transition inline-flex items-center gap-1 ${drawer !== 'integrations' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-slate-200'}`} data-testid="tab-workflows">
+                <ListChecks className="w-3.5 h-3.5" /> Workflows <span className="text-[10px] opacity-80">({drawerWorkflows.length})</span>
               </button>
-              <button onClick={() => setDrawer('integrations')} className={`px-3 py-1.5 text-xs font-semibold rounded-md transition inline-flex items-center gap-1 ${drawer === 'integrations' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-slate-200'}`}>
-                <Plug className="w-3.5 h-3.5" /> Integrations
+              <button onClick={() => setDrawer('integrations')} className={`px-3 py-1.5 text-xs font-semibold rounded-md transition inline-flex items-center gap-1 ${drawer === 'integrations' ? 'bg-emerald-600 text-white' : 'text-slate-400 hover:text-slate-200'}`} data-testid="tab-integrations">
+                <Plug className="w-3.5 h-3.5" /> Integrations <span className="text-[10px] opacity-80">({drawerIntegrations.length})</span>
               </button>
             </div>
 
@@ -444,69 +533,122 @@ function OpenGridWorksInner() {
                 <div className="text-xs text-slate-500">
                   {selPick ? `Context-scoped to ${selPick.name}.` : 'Showing all workflows. Select a country to scope them.'}
                 </div>
-                {drawerWorkflows.length === 0 && <div className="text-sm text-slate-500">No workflows for this jurisdiction yet.</div>}
-                {drawerWorkflows.map((w) => {
-                  const open = openWf === w.slug;
-                  return (
-                    <div key={w.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 overflow-hidden">
-                      <button onClick={() => setOpenWf(open ? null : w.slug)} className="w-full text-start p-3 flex items-start justify-between gap-2">
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className="font-semibold text-sm">{w.title}</span>
-                            {w.estMinutes && <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400 shrink-0">{w.estMinutes} min</span>}
+                {drawerWorkflows.length === 0 ? (
+                  <div className="rounded-xl border border-slate-800 bg-slate-800/20 p-4 text-center">
+                    <Filter className="w-6 h-6 text-slate-600 mx-auto mb-2" />
+                    <div className="text-sm text-slate-400">No workflows match {drawerQuery ? `"${drawerQuery}"` : 'this context'}.</div>
+                    {drawerQuery && <button onClick={() => setDrawerQuery('')} className="text-xs text-emerald-400 hover:underline mt-2">Clear search</button>}
+                  </div>
+                ) : (
+                  drawerWorkflows.map((w) => {
+                    const open = openWf === w.slug;
+                    const triggerColor = w.trigger === 'high-risk' ? 'bg-rose-500/20 text-rose-300' : w.trigger === 'incident' ? 'bg-amber-500/20 text-amber-300' : w.trigger === 'certification' ? 'bg-violet-500/20 text-violet-300' : 'bg-slate-700/50 text-slate-400';
+                    return (
+                      <div key={w.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 overflow-hidden" data-testid={`workflow-${w.slug}`}>
+                        <button onClick={() => setOpenWf(open ? null : w.slug)} className="w-full text-start p-3 flex items-start justify-between gap-2">
+                          <div className="min-w-0">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="font-semibold text-sm">{w.title}</span>
+                              <span className={`text-[9px] px-1.5 py-0.5 rounded uppercase tracking-wide ${triggerColor}`}>{w.trigger}</span>
+                              {w.estMinutes && <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400 shrink-0">{w.estMinutes} min</span>}
+                            </div>
+                            <p className="text-[11px] text-slate-400 mt-1">{w.description}</p>
                           </div>
-                          <p className="text-[11px] text-slate-400 mt-1">{w.description}</p>
-                        </div>
-                        {open ? <ChevronDown className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" /> : <ChevronRight className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />}
-                      </button>
-                      {open && (
-                        <div className="border-t border-slate-800 px-3 pb-3">
-                          <div className="text-[10px] uppercase tracking-wide text-slate-500 mt-2 mb-1">Steps</div>
-                          <ol className="space-y-2">
-                            {w.steps.map((s, idx) => (
-                              <li key={idx} className="text-[11px] text-slate-300 flex gap-2">
-                                <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-emerald-900/40 text-emerald-400 text-[9px] shrink-0 mt-0.5">{idx + 1}</span>
-                                <span>
-                                  <span className="font-medium text-slate-200">{s.title}</span>
-                                  <span className="text-slate-500"> — {s.description}</span>
-                                  {s.cite && <span className="text-amber-300/80 ml-1">({s.cite})</span>}
-                                  {s.href && <a href={s.href} className="text-emerald-400 hover:underline ml-1 inline-flex items-center gap-0.5">Go <ExternalLink className="w-3 h-3" /></a>}
-                                </span>
-                              </li>
-                            ))}
-                          </ol>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                          {open ? <ChevronDown className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" /> : <ChevronRight className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />}
+                        </button>
+                        {open && (
+                          <div className="border-t border-slate-800 px-3 pb-3">
+                            <div className="text-[10px] uppercase tracking-wide text-slate-500 mt-2 mb-1">Steps</div>
+                            <ol className="space-y-2">
+                              {w.steps.map((s, idx) => (
+                                <li key={idx} className="text-[11px] text-slate-300 flex gap-2">
+                                  <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-emerald-900/40 text-emerald-400 text-[9px] shrink-0 mt-0.5">{idx + 1}</span>
+                                  <span>
+                                    <span className="font-medium text-slate-200">{s.title}</span>
+                                    <span className="text-slate-500"> — {s.description}</span>
+                                    {s.cite && <span className="text-amber-300/80 ml-1">({s.cite})</span>}
+                                    {s.href && <a href={s.href} className="text-emerald-400 hover:underline ml-1 inline-flex items-center gap-0.5">Go <ExternalLink className="w-3 h-3" /></a>}
+                                  </span>
+                                </li>
+                              ))}
+                            </ol>
+                            <a
+                              href={w.steps[0]?.href || '/compliance'}
+                              className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition"
+                              data-testid={`workflow-start-${w.slug}`}
+                            >
+                              Start workflow <ExternalLink className="w-3 h-3" />
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })
+                )}
               </div>
             ) : (
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="text-xs text-slate-500">
                   {selPick ? `Integrations available for ${selPick.name}.` : 'All protocol and data integrations.'}
                 </div>
-                {drawerIntegrations.map((i) => (
-                  <div key={i.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 p-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <span className="font-semibold text-sm">{i.name}</span>
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400 shrink-0 uppercase">{i.kind}</span>
-                    </div>
-                    <p className="text-[11px] text-slate-400 mt-1">{i.description}</p>
-                    <div className="mt-2 text-[11px] text-slate-300 flex items-start gap-1.5">
-                      <Terminal className="w-3.5 h-3.5 shrink-0 mt-0.5 text-emerald-500" />
-                      <span>{i.connect}</span>
-                    </div>
-                    <div className="mt-2 flex flex-wrap gap-2">
-                      {i.endpoint && <a href={i.endpoint} className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1"><Link2 className="w-3 h-3" /> Endpoint</a>}
-                      {i.docsUrl && <a href={i.docsUrl} className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1"><BookOpen className="w-3 h-3" /> Docs</a>}
-                    </div>
+                {drawerIntegrations.length === 0 ? (
+                  <div className="rounded-xl border border-slate-800 bg-slate-800/20 p-4 text-center">
+                    <Filter className="w-6 h-6 text-slate-600 mx-auto mb-2" />
+                    <div className="text-sm text-slate-400">No integrations match {drawerQuery ? `"${drawerQuery}"` : 'this context'}.</div>
+                    {drawerQuery && <button onClick={() => setDrawerQuery('')} className="text-xs text-emerald-400 hover:underline mt-2">Clear search</button>}
                   </div>
-                ))}
+                ) : (
+                  integrationGroups.map(([kind, items]) => (
+                    <div key={kind} data-testid={`integration-group-${kind}`}>
+                      <div className="text-[10px] uppercase tracking-wide text-emerald-400 mb-2 flex items-center gap-1.5">
+                        <KindIcon kind={kind} /> {kind.replace(/-/g, ' ')}
+                      </div>
+                      <div className="space-y-3">
+                        {items.map((i) => (
+                          <div key={i.slug} className="rounded-xl border border-slate-800 bg-slate-800/30 p-3" data-testid={`integration-${i.slug}`}>
+                            <div className="flex items-start justify-between gap-2">
+                              <span className="font-semibold text-sm">{i.name}</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/50 text-slate-400 shrink-0 uppercase inline-flex items-center gap-1"><KindIcon kind={i.kind} /> {i.kind}</span>
+                            </div>
+                            <p className="text-[11px] text-slate-400 mt-1">{i.description}</p>
+                            {i.frameworks && i.frameworks.length > 0 && (
+                              <div className="mt-2 flex flex-wrap gap-1">
+                                {i.frameworks.map((fw) => (
+                                  <span key={fw} className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-900/30 text-emerald-400/80">{fw}</span>
+                                ))}
+                              </div>
+                            )}
+                            <div className="mt-2 text-[11px] text-slate-300 flex items-start gap-1.5">
+                              <Terminal className="w-3.5 h-3.5 shrink-0 mt-0.5 text-emerald-500" />
+                              <span>{i.connect}</span>
+                            </div>
+                            <div className="mt-2 flex flex-wrap items-center gap-2">
+                              {i.endpoint && (
+                                <>
+                                  <a href={i.endpoint} className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1"><Link2 className="w-3 h-3" /> Endpoint</a>
+                                  <button
+                                    onClick={() => { navigator.clipboard.writeText(i.endpoint!); setCopiedSlug(i.slug); setTimeout(() => setCopiedSlug((s) => s === i.slug ? null : s), 1500); }}
+                                    aria-label="Copy endpoint URL"
+                                    className="text-[11px] text-slate-400 hover:text-emerald-400 inline-flex items-center gap-1 p-1 rounded hover:bg-slate-800"
+                                    data-testid={`copy-endpoint-${i.slug}`}
+                                  >
+                                    {copiedSlug === i.slug ? <><Check className="w-3 h-3 text-emerald-400" /> Copied</> : <><Copy className="w-3 h-3" /> Copy</>}
+                                  </button>
+                                </>
+                              )}
+                              {i.docsUrl && <a href={i.docsUrl} className="text-[11px] text-emerald-400 hover:underline inline-flex items-center gap-1"><BookOpen className="w-3 h-3" /> Docs</a>}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                )}
               </div>
             )}
           </div>
         </div>
+        </>
       )}
 
       {/* Region detail panel */}
