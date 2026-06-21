@@ -212,6 +212,7 @@ import MCPRegistry from "./pages/MCPRegistry";
 import MCPDetail from "./pages/MCPDetail";
 import FrameworkDetail from "./pages/FrameworkDetail";
 import Press from "./pages/Press";
+import HorusIntel from "./pages/HorusIntel";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -415,6 +416,7 @@ function App() {
                   <Route path="/help" component={HelpCenter} />
                   <Route path="/contact" component={Contact} />
                   <Route path="/press" component={Press} />
+                  <Route path="/horus" component={HorusIntel} />
                   <Route path="/privacy" component={PrivacyPolicy} />
                   <Route path="/terms" component={TermsOfService} />
                   <Route path="/cookies" component={CookiePolicy} />
