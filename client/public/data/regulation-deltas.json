@@ -621,5 +621,32 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 5afd5bf7 → 54f8b37c) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-06-21T07:00:36.506Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CHN"
+    ],
+    "summary": "China CAC — Cyberspace Administration news (algorithm/genAI rules): page content changed (hash 0e57457d → 21a023a8) — review for new/updated material.",
+    "source": "https://www.cac.gov.cn/"
+  },
+  {
+    "at": "2026-06-21T07:00:58.522Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "AUS"
+    ],
+    "summary": "Australia PM&C — PM media releases (AI/tech policy announcements): page content changed (hash 16cca677 → d8495de8) — review for new/updated material.",
+    "source": "https://www.pm.gov.au/media"
+  },
+  {
+    "at": "2026-06-21T07:01:21.884Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 54f8b37c → 49d9b00e) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
