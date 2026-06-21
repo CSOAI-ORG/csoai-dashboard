@@ -17,6 +17,20 @@ export class TestHelpers {
   }
 
   /**
+   * Dismiss the cookie-consent banner if it appears.
+   * Call this after navigation in any test that needs to click behind the banner.
+   */
+  async acceptCookies() {
+    const accept = this.page.locator('button', { hasText: /Accept All/i }).or(
+      this.page.getByRole('button', { name: /Accept All/i })
+    );
+    if (await accept.isVisible().catch(() => false)) {
+      await accept.click();
+      await accept.waitFor({ state: 'hidden', timeout: 3000 }).catch(() => {});
+    }
+  }
+
+  /**
    * Get element by data-testid attribute
    */
   getByTestId(testId: string): Locator {

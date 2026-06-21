@@ -25,7 +25,7 @@ export const statusRouter = router({
       let query = db
         .select()
         .from(systemIncidents)
-        .where(eq(systemIncidents.isPublic, true))
+        .where(eq(systemIncidents.isPublic, 1))
         .orderBy(desc(systemIncidents.startedAt))
         .limit(input.limit);
 
@@ -35,7 +35,7 @@ export const statusRouter = router({
           .from(systemIncidents)
           .where(
             and(
-              eq(systemIncidents.isPublic, true),
+              eq(systemIncidents.isPublic, 1),
               sql`${systemIncidents.status} != 'resolved'`
             )
           )
@@ -93,7 +93,7 @@ export const statusRouter = router({
         reporterEmail: input.reporterEmail || null,
         reporterName: input.reporterName || null,
         status: 'investigating',
-        isPublic: true,
+        isPublic: 1,
       });
 
       const incidentId = Number((result as any)[0]?.insertId || 0);
@@ -241,10 +241,10 @@ export const statusRouter = router({
       const result = await db.insert(statusSubscriptions).values({
         email: input.email,
         services: input.services ? JSON.stringify(input.services) : null,
-        notifyOnIncident: input.notifyOnIncident,
-        notifyOnResolution: input.notifyOnResolution,
-        notifyOnMaintenance: input.notifyOnMaintenance,
-        isActive: true,
+        notifyOnIncident: input.notifyOnIncident ? 1 : 0,
+        notifyOnResolution: input.notifyOnResolution ? 1 : 0,
+        notifyOnMaintenance: input.notifyOnMaintenance ? 1 : 0,
+        isActive: 1,
       });
 
       const subscriptionId = Number((result as any)[0]?.insertId || 0);

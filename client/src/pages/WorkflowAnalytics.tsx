@@ -114,7 +114,7 @@ export default function WorkflowAnalytics() {
   const successRate = totalExecutions > 0 ? ((successfulExecutions / totalExecutions) * 100).toFixed(1) : "0.0";
   const avgExecutionTime = stats?.avgExecutionTime || 0;
   const totalWorkflows = workflows?.length || 0;
-  const activeWorkflows = workflows?.filter(w => w.status === "active").length || 0;
+  const activeWorkflows = workflows?.filter(w => w.isActive === 1).length || 0;
 
   // Prepare chart data
   const statusDistributionData = [

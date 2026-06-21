@@ -77,7 +77,8 @@ export const workflowBuilderRouter = router({
         isActive: input.isActive ? 1 : 0,
       });
 
-      const id = Number((result as any)[0]?.insertId ?? result.insertId);
+      const rawInsertId = (result as any).insertId ?? (result as any)[0]?.insertId;
+      const id = typeof rawInsertId === 'bigint' ? Number(rawInsertId) : Number(rawInsertId);
       return { id, success: true };
     }),
 
@@ -98,7 +99,11 @@ export const workflowBuilderRouter = router({
       const db = await getDb();
       if (!db) throw new Error("Database not available");
 
-      const { id, ...updates } = input;
+      const { id, isActive, ...rest } = input;
+      const updates: any = { ...rest };
+      if (typeof isActive === 'boolean') {
+        updates.isActive = isActive ? 1 : 0;
+      }
 
       await db
         .update(emailWorkflows)
@@ -280,7 +285,8 @@ export const workflowBuilderRouter = router({
       // TODO: Trigger actual workflow execution in background
       // For now, just create the execution record
 
-      const executionId = typeof result.insertId === 'bigint' ? Number(result.insertId) : Number(result.insertId);
+      const rawExecInsertId = (result as any).insertId ?? (result as any)[0]?.insertId;
+      const executionId = typeof rawExecInsertId === 'bigint' ? Number(rawExecInsertId) : Number(rawExecInsertId);
       return { executionId, success: true };
     }),
 
@@ -403,7 +409,7 @@ export const workflowBuilderRouter = router({
       // Build query conditions
       const conditions = [
         eq(emailWorkflows.userId, ctx.user.id),
-        gte(workflowExecutions.createdAt, startDate),
+        gte(workflowExecutions.createdAt, startDate.toISOString()),
       ];
 
       if (input.workflowId) {
@@ -497,7 +503,7 @@ export const workflowBuilderRouter = router({
       // Build query conditions
       const conditions = [
         eq(emailWorkflows.userId, ctx.user.id),
-        gte(workflowExecutions.createdAt, startDate),
+        gte(workflowExecutions.createdAt, startDate.toISOString()),
       ];
 
       if (input.workflowId) {

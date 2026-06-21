@@ -64,7 +64,7 @@ export default function Billing() {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
   const [, setLocation] = useLocation();
   const [confirmationOpen, setConfirmationOpen] = useState(false);
-  const [selectedTier, setSelectedTier] = useState<{ key: "pro" | "enterprise"; name: string; price: number; features: string[] } | null>(null);
+  const [selectedTier, setSelectedTier] = useState<{ key: "pro" | "enterprise"; name: string; price: number; features: readonly string[] } | null>(null);
   
   // Check for success/cancel URL params
   useEffect(() => {
@@ -110,7 +110,7 @@ export default function Billing() {
     },
   });
 
-  const handleSubscribe = (tier: "pro" | "enterprise", tierData: { name: string; price: number; features: string[] }) => {
+  const handleSubscribe = (tier: "pro" | "enterprise", tierData: { name: string; price: number; features: readonly string[] }) => {
     setSelectedTier({ key: tier, name: tierData.name, price: tierData.price, features: tierData.features });
     setConfirmationOpen(true);
   };
@@ -375,7 +375,7 @@ export default function Billing() {
           planName={selectedTier.name}
           planPrice={selectedTier.price}
           billingPeriod={billingPeriod}
-          features={selectedTier.features}
+          features={selectedTier.features as string[]}
           isLoading={checkoutMutation.isPending}
         />
       )}

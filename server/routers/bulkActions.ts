@@ -162,8 +162,7 @@ export const bulkActionsRouter = router({
         .update(userTrainingProgress)
         .set({
           status: 'not_started',
-          progress: 0,
-          timeSpentMinutes: 0,
+          progressPercent: 0,
           completedAt: null,
           updatedAt: new Date().toISOString(),
         })

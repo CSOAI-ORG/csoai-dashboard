@@ -46,7 +46,7 @@ export const workflowAnalyticsRouter = router({
       // Build query conditions
       const conditions = [
         eq(emailWorkflows.userId, ctx.user.id),
-        gte(workflowExecutions.createdAt, startDate),
+        gte(workflowExecutions.createdAt, startDate.toISOString()),
       ];
 
       if (input.workflowId) {
@@ -140,7 +140,7 @@ export const workflowAnalyticsRouter = router({
       // Build query conditions
       const conditions = [
         eq(emailWorkflows.userId, ctx.user.id),
-        gte(workflowExecutions.createdAt, startDate),
+        gte(workflowExecutions.createdAt, startDate.toISOString()),
       ];
 
       if (input.workflowId) {
@@ -271,7 +271,7 @@ export const workflowAnalyticsRouter = router({
             .where(
               and(
                 eq(workflowExecutions.workflowId, workflow.id),
-                gte(workflowExecutions.createdAt, startDate)
+                gte(workflowExecutions.createdAt, startDate.toISOString())
               )
             );
 

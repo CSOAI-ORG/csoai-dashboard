@@ -207,9 +207,9 @@ export default function WorkflowTemplates() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {template.tags && Array.isArray(template.tags) && template.tags.length > 0 && (
+                    {Array.isArray(template.tags) && (template.tags as string[]).length > 0 && (
                       <div className="flex flex-wrap gap-1">
-                        {(template.tags as string[]).map((tag, idx) => (
+                        {(template.tags as string[]).map((tag: string, idx: number) => (
                           <Badge key={idx} variant="secondary" className="text-xs">
                             {tag}
                           </Badge>

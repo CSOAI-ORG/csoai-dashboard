@@ -195,7 +195,7 @@ export const emailTemplatesRouter = router({
         createdBy: ctx.user.id,
       });
 
-      const templateId = Number(result[0].insertId);
+      const templateId = Number((result as any).insertId);
 
       // Create initial version
       await db.insert(emailTemplateVersions).values({
@@ -300,7 +300,7 @@ export const emailTemplatesRouter = router({
   preview: protectedProcedure
     .input(z.object({
       id: z.number(),
-      sampleData: z.record(z.any()),
+      sampleData: z.record(z.string(), z.any()),
     }))
     .mutation(async ({ input }) => {
       const db = await getDb();
@@ -348,7 +348,7 @@ export const emailTemplatesRouter = router({
     .input(z.object({
       templateId: z.number(),
       previewName: z.string().min(1).max(255),
-      sampleData: z.record(z.any()),
+      sampleData: z.record(z.string(), z.any()),
     }))
     .mutation(async ({ input, ctx }) => {
       const db = await getDb();
@@ -380,7 +380,7 @@ export const emailTemplatesRouter = router({
       });
 
       return {
-        id: Number(result[0].insertId),
+        id: Number((result as any).insertId),
         success: true,
       };
     }),

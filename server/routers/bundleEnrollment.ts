@@ -214,11 +214,11 @@ export const bundleEnrollmentRouter = router({
             appliedCoupon = coupon;
             
             if (coupon.discountType === "percentage") {
-              const discount = (finalAmount * coupon.discountValue) / 100;
+              const discount = (finalAmount * Number(coupon.discountValue)) / 100;
               finalAmount = Math.max(0, finalAmount - discount);
             } else {
               // Fixed amount discount (convert from dollars to cents if needed)
-              finalAmount = Math.max(0, finalAmount - (coupon.discountValue * 100));
+              finalAmount = Math.max(0, finalAmount - (Number(coupon.discountValue) * 100));
             }
           }
         }
@@ -232,7 +232,7 @@ export const bundleEnrollmentRouter = router({
       // If final amount is 0, enroll directly without payment
       if (finalAmount === 0) {
         // Create bundle enrollment
-        const [bundleEnrollment] = await db.insert(courseEnrollments).values({
+        const bundleEnrollmentResult = await db.insert(courseEnrollments).values({
           userId,
           bundleId: input.bundleId,
           enrollmentType: "bundle",
@@ -243,6 +243,7 @@ export const bundleEnrollmentRouter = router({
           status: "enrolled",
           progress: 0,
         });
+        const bundleEnrollmentId = Number((bundleEnrollmentResult as any).insertId);
 
         // Create individual course enrollments
         const courseIds = Array.isArray(bundle.courseIds) 
@@ -268,7 +269,7 @@ export const bundleEnrollmentRouter = router({
           await db.insert(couponUsage).values({
             couponId: appliedCoupon.id,
             userId,
-            orderId: bundleEnrollment.insertId,
+            orderId: bundleEnrollmentId,
           });
 
           await db
@@ -295,7 +296,7 @@ export const bundleEnrollmentRouter = router({
 
         return {
           success: true,
-          enrollmentId: bundleEnrollment.insertId,
+          enrollmentId: bundleEnrollmentId,
           paymentRequired: false,
           message: "Successfully enrolled in bundle",
         };
@@ -324,7 +325,7 @@ export const bundleEnrollmentRouter = router({
       });
 
       // Create pending enrollment
-      const [pendingEnrollment] = await db.insert(courseEnrollments).values({
+      const pendingEnrollmentResult = await db.insert(courseEnrollments).values({
         userId,
         bundleId: input.bundleId,
         enrollmentType: "bundle",
@@ -337,10 +338,11 @@ export const bundleEnrollmentRouter = router({
         status: "enrolled",
         progress: 0,
       });
+      const pendingEnrollmentId = Number((pendingEnrollmentResult as any).insertId);
 
       return {
         success: true,
-        enrollmentId: pendingEnrollment.insertId,
+        enrollmentId: pendingEnrollmentId,
         paymentRequired: true,
         checkoutUrl: url,
         sessionId,
@@ -575,10 +577,10 @@ export const bundleEnrollmentRouter = router({
       let finalPrice: number;
 
       if (coupon.discountType === "percentage") {
-        discountAmount = Math.round((originalPrice * coupon.discountValue) / 100);
+        discountAmount = Math.round((originalPrice * Number(coupon.discountValue)) / 100);
         finalPrice = Math.max(0, originalPrice - discountAmount);
       } else {
-        discountAmount = coupon.discountValue * 100; // Convert to cents
+        discountAmount = Number(coupon.discountValue) * 100; // Convert to cents
         finalPrice = Math.max(0, originalPrice - discountAmount);
       }
 

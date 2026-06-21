@@ -14,6 +14,7 @@ test.describe('Watchdog Analyst Signup Flow', () => {
     // Navigate to signup page
     await page.goto('/watchdog-signup');
     await helpers.waitForNavigation();
+    await helpers.acceptCookies();
     
     // Verify page loaded
     await expect(page.locator('body')).toBeVisible();
@@ -29,6 +30,7 @@ test.describe('Watchdog Analyst Signup Flow', () => {
     
     await page.goto('/watchdog-signup');
     await helpers.waitForNavigation();
+    await helpers.acceptCookies();
     
     // Find submit button
     const submitButton = page.locator('button[type="submit"]')
@@ -54,6 +56,7 @@ test.describe('Watchdog Analyst Signup Flow', () => {
     
     await page.goto('/watchdog-signup');
     await helpers.waitForNavigation();
+    await helpers.acceptCookies();
     
     // Generate unique email for this test run
     const timestamp = Date.now();
@@ -99,6 +102,7 @@ test.describe('Watchdog Analyst Signup Flow', () => {
     
     await page.goto('/watchdog-signup');
     await helpers.waitForNavigation();
+    await helpers.acceptCookies();
     
     // Use a known test email
     const testEmail = 'duplicate-test@example.com';

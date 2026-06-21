@@ -7,7 +7,8 @@ import { eq } from "drizzle-orm";
 export const emailPreferencesRouter = router({
   // Get user's email preferences
   getPreferences: protectedProcedure.query(async ({ ctx }) => {
-    const db = getDb();
+    const db = await getDb();
+    if (!db) throw new Error("Database unavailable");
     const userId = ctx.user.id;
 
     let prefs = await db
@@ -59,7 +60,8 @@ export const emailPreferencesRouter = router({
       })
     )
     .mutation(async ({ ctx, input }) => {
-      const db = getDb();
+      const db = await getDb();
+      if (!db) throw new Error("Database unavailable");
       const userId = ctx.user.id;
 
       // Ensure preferences exist

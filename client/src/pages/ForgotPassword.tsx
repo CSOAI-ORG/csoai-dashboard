@@ -76,7 +76,7 @@ export default function ForgotPassword() {
         </CardHeader>
 
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4" data-testid="forgot-password-form">
             {requestResetMutation.isError && (
               <Alert variant="destructive">
                 <AlertDescription>
@@ -90,6 +90,7 @@ export default function ForgotPassword() {
               <Input
                 id="email"
                 type="email"
+                data-testid="forgot-password-email"
                 placeholder="you@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -101,6 +102,7 @@ export default function ForgotPassword() {
 
             <Button
               type="submit"
+              data-testid="forgot-password-submit"
               className="w-full"
               disabled={requestResetMutation.isPending}
             >

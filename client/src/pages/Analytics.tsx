@@ -100,7 +100,7 @@ export default function Analytics() {
     groupBy,
     aiSystemId: selectedAISystem !== 'all' ? parseInt(selectedAISystem) : undefined,
     incidentType: selectedIncidentType !== 'all' ? selectedIncidentType as 'bias' | 'privacy' | 'safety' | 'misinformation' | 'manipulation' | 'other' : undefined,
-    severity: selectedSeverity !== 'all' ? selectedSeverity : undefined,
+    severity: selectedSeverity !== 'all' ? (selectedSeverity as 'low' | 'medium' | 'high' | 'critical') : undefined,
   });
 
   const { data: complianceHistory, isLoading: complianceLoading } = trpc.analytics.getComplianceHistory.useQuery({

@@ -140,7 +140,7 @@ function ConditionNode({ data }: { data: any }) {
 }
 
 export default function WorkflowBuilder() {
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [selectedWorkflow, setSelectedWorkflow] = useState<number | null>(null);
   const [workflowName, setWorkflowName] = useState('');
@@ -406,7 +406,7 @@ export default function WorkflowBuilder() {
                         className="h-8 w-8 p-0"
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleToggleWorkflow(workflow.id, workflow.isActive);
+                          handleToggleWorkflow(workflow.id, workflow.isActive === 1);
                         }}
                       >
                         {workflow.isActive ? (

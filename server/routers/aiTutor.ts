@@ -158,7 +158,7 @@ export const aiTutorRouter = router({
         .slice(0, 5);
 
       // Get next question - prioritize weak areas
-      let whereConditions: any[] = [eq(testQuestions.isActive, true)];
+      let whereConditions: any[] = [eq(testQuestions.isActive, 1)];
       
       if (input.testId) {
         whereConditions.push(eq(testQuestions.testId, input.testId));
@@ -381,7 +381,7 @@ Please provide a brief, helpful response as JSON:
     const tests = await db
       .select()
       .from(certificationTests)
-      .where(eq(certificationTests.isActive, true));
+      .where(eq(certificationTests.isActive, 1));
 
     return tests.map((t: any) => ({
       id: t.id,
@@ -429,7 +429,7 @@ Please provide a brief, helpful response as JSON:
         .where(
           module?.id
             ? eq(testQuestions.moduleId, module.id)
-            : eq(testQuestions.isActive, true)
+            : eq(testQuestions.isActive, 1)
         )
         .limit(50);
 
@@ -525,7 +525,7 @@ Format your response as JSON:
     const modules = await db
       .select()
       .from(trainingModules)
-      .where(eq(trainingModules.isActive, true));
+      .where(eq(trainingModules.isActive, 1));
 
     const moduleStats = modules.map((module: any) => {
       const moduleAttempts = attempts.filter((a: any) => a.testId === module.id);
@@ -604,7 +604,7 @@ Format your response as JSON:
         : await db
             .select()
             .from(certificationTests)
-            .where(eq(certificationTests.isActive, true))
+            .where(eq(certificationTests.isActive, 1))
             .limit(1);
 
       if (!test) {

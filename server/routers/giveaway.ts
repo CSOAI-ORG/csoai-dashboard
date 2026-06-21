@@ -70,7 +70,7 @@ export const giveawayRouter = router({
         .insert(giveawayApplications)
         .values({
           email: input.email.toLowerCase(),
-          name: input.name || null,
+          name: input.name || "",
           company: input.company || null,
           jobTitle: input.jobTitle || null,
           country: input.country || null,

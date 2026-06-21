@@ -497,3 +497,39 @@ export class ComplianceExportService {
     return str;
   }
 }
+
+import { getDb } from "../db";
+import { auditLogs } from "../../drizzle/schema";
+
+export interface PersistableAuditLog {
+  userId?: number | null;
+  action: string;
+  entityType: string;
+  entityId?: number | null;
+  details?: Record<string, any>;
+  ipAddress?: string;
+}
+
+/**
+ * Persist an audit log entry to the database.
+ * Failures are logged but never thrown so audit cannot break user flows.
+ */
+export async function persistAuditLog(entry: PersistableAuditLog): Promise<void> {
+  try {
+    const db = await getDb();
+    if (!db) {
+      console.warn("[Audit] Database unavailable; skipping audit log persistence");
+      return;
+    }
+    await db.insert(auditLogs).values({
+      userId: entry.userId ?? null,
+      action: entry.action.slice(0, 100),
+      entityType: entry.entityType.slice(0, 100),
+      entityId: entry.entityId ?? null,
+      details: entry.details ? JSON.stringify(entry.details) : null,
+      ipAddress: entry.ipAddress?.slice(0, 45) ?? null,
+    });
+  } catch (error) {
+    console.error("[Audit] Failed to persist audit log:", error);
+  }
+}

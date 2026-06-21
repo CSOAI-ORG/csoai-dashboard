@@ -9,7 +9,15 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { login, TEST_USER } from './helpers';
+import { login, TEST_USER, TestHelpers } from './helpers';
+
+// Accept cookies before every visual test so the banner does not block clicks/screenshots.
+test.beforeEach(async ({ page }) => {
+  const helpers = new TestHelpers(page);
+  await page.goto('/');
+  await page.waitForLoadState('networkidle');
+  await helpers.acceptCookies();
+});
 
 // Configure visual comparison settings
 const SCREENSHOT_OPTIONS = {
@@ -353,7 +361,8 @@ test.describe('Visual Regression Tests - Navigation States', () => {
     await page.waitForTimeout(500);
     
     // Screenshot of sidebar navigation
-    const sidebar = page.locator('[data-testid="main-navigation"]');
+    const sidebar = page.locator('[data-testid="main-navigation"]').nth(0);
+    await expect(sidebar).toBeVisible();
     await expect(sidebar).toHaveScreenshot('sidebar-navigation.png', {
       threshold: COMPARISON_THRESHOLD,
     });
@@ -369,7 +378,8 @@ test.describe('Visual Regression Tests - Navigation States', () => {
     await navItem.hover();
     await page.waitForTimeout(200);
     
-    const sidebar = page.locator('[data-testid="main-navigation"]');
+    const sidebar = page.locator('[data-testid="main-navigation"]').nth(0);
+    await expect(sidebar).toBeVisible();
     await expect(sidebar).toHaveScreenshot('sidebar-navigation-hover.png', {
       threshold: COMPARISON_THRESHOLD,
     });

@@ -54,7 +54,7 @@ export const regionalAnalyticsRouter = router({
       assessmentId: z.number(),
       courseId: z.number(),
       moduleId: z.number(),
-      answers: z.record(z.number()), // questionId -> selectedAnswer
+      answers: z.record(z.string(), z.number()), // questionId -> selectedAnswer
       timeSpentSeconds: z.number(),
     }))
     .mutation(async ({ input, ctx }) => {
@@ -101,7 +101,7 @@ export const regionalAnalyticsRouter = router({
         score: score.toString(),
         totalQuestions: questions.length,
         correctAnswers,
-        passed,
+        passed: passed ? 1 : 0,
         timeSpentSeconds: input.timeSpentSeconds,
         answers: input.answers as any,
         attemptNumber,
@@ -109,7 +109,7 @@ export const regionalAnalyticsRouter = router({
       });
       
       return {
-        attemptId: Number(result.insertId),
+        attemptId: Number((result as any).insertId ?? (result as any)[0]?.insertId),
         score,
         passed,
         correctAnswers,
@@ -149,7 +149,7 @@ export const regionalAnalyticsRouter = router({
       const db = await getDb();
       if (!db) return [];
       
-      const conditions = [eq(certificateTemplates.isActive, true)];
+      const conditions = [eq(certificateTemplates.isActive, 1)];
       if (input.regionId) conditions.push(eq(certificateTemplates.regionId, input.regionId));
       if (input.frameworkCode) conditions.push(eq(certificateTemplates.frameworkCode, input.frameworkCode));
       
@@ -222,7 +222,7 @@ export const regionalAnalyticsRouter = router({
       const db = await getDb();
       if (!db) return [];
       
-      const conditions = [eq(certificateIssuances.isRevoked, false)];
+      const conditions = [eq(certificateIssuances.isRevoked, 0)];
       if (input.regionId) conditions.push(eq(certificateIssuances.regionId, input.regionId));
       if (input.courseId) conditions.push(eq(certificateIssuances.courseId, input.courseId));
       if (input.frameworkCode) conditions.push(eq(certificateIssuances.frameworkCode, input.frameworkCode));
@@ -242,7 +242,7 @@ export const regionalAnalyticsRouter = router({
       const db = await getDb();
       if (!db) return { totalIssued: 0, averageScore: 0, totalDownloads: 0, totalVerifications: 0 };
       
-      const conditions = [eq(certificateIssuances.isRevoked, false)];
+      const conditions = [eq(certificateIssuances.isRevoked, 0)];
       if (input.regionId) conditions.push(eq(certificateIssuances.regionId, input.regionId));
       if (input.frameworkCode) conditions.push(eq(certificateIssuances.frameworkCode, input.frameworkCode));
       

@@ -347,7 +347,7 @@ describe('Forum Mentions, Search, and Analytics', () => {
       const solvedPosts = await db
         .select()
         .from(forumPosts)
-        .where(eq(forumPosts.isSolution, true));
+        .where(eq(forumPosts.isSolution, 1));
 
       expect(solvedPosts.length).toBeGreaterThan(0);
     });
@@ -364,7 +364,7 @@ describe('Forum Mentions, Search, and Analytics', () => {
       const solvedPosts = await db
         .select()
         .from(forumPosts)
-        .where(eq(forumPosts.isSolution, true));
+        .where(eq(forumPosts.isSolution, 1));
 
       const solutionRate = threads.length > 0 
         ? (solvedPosts.length / threads.length) * 100 

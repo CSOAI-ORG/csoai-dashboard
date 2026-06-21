@@ -9,7 +9,7 @@ import { router, publicProcedure } from '../_core/trpc.js';
 import { z } from 'zod';
 import {
   startVotingSession,
-  recordAgentVote,
+  recordVote,
   getSessionMetrics,
   getVoteHistory,
   getActiveSessions,
@@ -58,7 +58,7 @@ export const byzantineRealtimeRouter = router({
       })
     )
     .mutation(async ({ input }) => {
-      await recordAgentVote(
+      await recordVote(
         input.sessionId,
         {
           sessionId: input.sessionId,

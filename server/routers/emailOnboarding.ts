@@ -56,8 +56,8 @@ export const emailOnboardingRouter = router({
 
       const [sequence] = await db.insert(emailSequences).values({
         userId: ctx.user.id,
-        sequenceId: input.sequenceType,
-        step: 1,
+        sequenceType: input.sequenceType,
+        currentStep: 1,
         status: "pending",
         createdAt: new Date().toISOString(),
       }).$returningId() as { id: number }[];

@@ -36,8 +36,8 @@ export default function EmailPreferences() {
   const updateMutation = trpc.emailOnboarding.updateEmailPreferences.useMutation();
 
   // Also fetch from emailPreferences router for achievement settings
-  const { data: achievementPrefs } = trpc.emailPreferences.get.useQuery();
-  const updateAchievementMutation = trpc.emailPreferences.update.useMutation();
+  const { data: achievementPrefs } = trpc.emailPreferences.getPreferences.useQuery();
+  const updateAchievementMutation = trpc.emailPreferences.updatePreferences.useMutation();
 
   useEffect(() => {
     if (userPrefs) {
@@ -55,9 +55,9 @@ export default function EmailPreferences() {
     if (achievementPrefs) {
       setPreferences(prev => ({
         ...prev,
-        achievementEmails: achievementPrefs.achievementsEnabled !== 0,
-        streakReminders: achievementPrefs.streakRemindersEnabled !== 0,
-        progressReports: achievementPrefs.progressReportsEnabled !== 0,
+        achievementEmails: achievementPrefs.achievementsEnabled,
+        streakReminders: achievementPrefs.achievementsEnabled,
+        progressReports: achievementPrefs.progressReportsEnabled,
       }));
     }
   }, [achievementPrefs]);
@@ -72,8 +72,7 @@ export default function EmailPreferences() {
     if (['achievementEmails', 'streakReminders', 'progressReports'].includes(key)) {
       try {
         await updateAchievementMutation.mutateAsync({
-          achievementsEnabled: key === 'achievementEmails' ? value : preferences.achievementEmails,
-          streakRemindersEnabled: key === 'streakReminders' ? value : preferences.streakReminders,
+          achievementsEnabled: key === 'achievementEmails' || key === 'streakReminders' ? value : preferences.achievementEmails,
           progressReportsEnabled: key === 'progressReports' ? value : preferences.progressReports,
         });
         toast({

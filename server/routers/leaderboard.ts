@@ -56,14 +56,13 @@ export const leaderboardRouter = router({
         // Get user details
         for (const result of results) {
           const [user] = await db
-            .select({ name: users.name, avatarUrl: users.avatarUrl })
+            .select({ name: users.name })
             .from(users)
             .where(eq(users.id, result.userId));
           
           leaderboardData.push({
             ...result,
             userName: user?.name || 'Anonymous',
-            avatarUrl: user?.avatarUrl,
           });
         }
       } else if (category === 'hours') {
@@ -81,7 +80,7 @@ export const leaderboardRouter = router({
         let rank = 1;
         for (const result of results) {
           const [user] = await db
-            .select({ name: users.name, avatarUrl: users.avatarUrl })
+            .select({ name: users.name })
             .from(users)
             .where(eq(users.id, result.userId));
           
@@ -90,7 +89,6 @@ export const leaderboardRouter = router({
             userId: result.userId,
             score: Math.round((result.score || 0) / 60), // Convert to hours
             userName: user?.name || 'Anonymous',
-            avatarUrl: user?.avatarUrl,
           });
         }
       } else if (category === 'badges') {
@@ -108,7 +106,7 @@ export const leaderboardRouter = router({
         let rank = 1;
         for (const result of results) {
           const [user] = await db
-            .select({ name: users.name, avatarUrl: users.avatarUrl })
+            .select({ name: users.name })
             .from(users)
             .where(eq(users.id, result.userId));
           
@@ -117,7 +115,6 @@ export const leaderboardRouter = router({
             userId: result.userId,
             score: result.score,
             userName: user?.name || 'Anonymous',
-            avatarUrl: user?.avatarUrl,
           });
         }
       } else if (category === 'courses') {
@@ -136,7 +133,7 @@ export const leaderboardRouter = router({
         let rank = 1;
         for (const result of results) {
           const [user] = await db
-            .select({ name: users.name, avatarUrl: users.avatarUrl })
+            .select({ name: users.name })
             .from(users)
             .where(eq(users.id, result.userId));
           
@@ -145,7 +142,6 @@ export const leaderboardRouter = router({
             userId: result.userId,
             score: result.score,
             userName: user?.name || 'Anonymous',
-            avatarUrl: user?.avatarUrl,
           });
         }
       }

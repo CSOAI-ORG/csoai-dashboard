@@ -6,8 +6,8 @@ const originalArrayFrom = Array.from;
     return [];
   }
   return mapFn 
-    ? originalArrayFrom.call(Array, arrayLike, mapFn, thisArg) 
-    : originalArrayFrom.call(Array, arrayLike, undefined, undefined);
+    ? originalArrayFrom(arrayLike, mapFn, thisArg) 
+    : originalArrayFrom(arrayLike);
 };
 
 import * as Sentry from "@sentry/react";

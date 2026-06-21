@@ -126,7 +126,7 @@ export const abTestingRouter = router({
         createdBy: ctx.user.id,
       });
 
-      const experimentId = experimentResult[0].insertId;
+      const experimentId = Number((experimentResult as any).insertId);
 
       // Create variants
       for (const variant of input.variants) {
@@ -214,7 +214,7 @@ export const abTestingRouter = router({
         experimentId: z.number(),
         studentId: z.number(),
         outcome: z.enum(["success", "failure"]),
-        metrics: z.record(z.any()).optional(),
+        metrics: z.record(z.string(), z.any()).optional(),
       })
     )
     .mutation(async ({ input }) => {

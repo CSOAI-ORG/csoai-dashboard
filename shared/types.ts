@@ -48,12 +48,7 @@ export interface ComplianceStatus {
   status: "compliant" | "non-compliant" | "under-review" | "flagged";
   lastAudit: Date | string;
   nextAuditDue: Date | string;
-  frameworks: {
-    euAiAct: number;
-    nistRmf: number;
-    iso42001: number;
-    tc260: number;
-  };
+  frameworks: Record<string, number>;
   updatedAt: Date | string;
 }
 

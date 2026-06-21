@@ -61,7 +61,7 @@ export default function EmailSchedulesIntegrated() {
     isActive: filterStatus === "all" ? undefined : filterStatus === "active",
   });
 
-  const { data: runs } = trpc.emailScheduling.getRuns.useQuery(
+  const { data: runs } = trpc.emailScheduling.getRunHistory.useQuery(
     { scheduleId: selectedScheduleId! },
     { enabled: !!selectedScheduleId && viewRunsDialogOpen }
   );
@@ -87,7 +87,7 @@ export default function EmailSchedulesIntegrated() {
     },
   });
 
-  const runSchedule = trpc.emailScheduling.runNow.useMutation({
+  const runSchedule = trpc.emailScheduling.triggerManual.useMutation({
     onSuccess: () => {
       toast.success("Schedule triggered successfully");
       refetch();
@@ -116,7 +116,7 @@ export default function EmailSchedulesIntegrated() {
   };
 
   const handleRunNow = async (id: number) => {
-    await runSchedule.mutateAsync({ id });
+    await runSchedule.mutateAsync({ scheduleId: id });
   };
 
   const getPriorityColor = (priority: string) => {
@@ -203,7 +203,7 @@ export default function EmailSchedulesIntegrated() {
               <div>
                 <p className="text-sm text-muted-foreground">Active</p>
                 <p className="text-2xl font-bold">
-                  {schedules?.filter((s) => s.isActive).length || 0}
+                  {schedules?.filter((s) => s.isActive === 1).length || 0}
                 </p>
               </div>
             </div>
@@ -291,8 +291,8 @@ export default function EmailSchedulesIntegrated() {
                   </TableCell>
                   <TableCell>
                     <Switch
-                      checked={schedule.isActive}
-                      onCheckedChange={() => handleToggleActive(schedule.id, schedule.isActive)}
+                      checked={schedule.isActive === 1}
+                      onCheckedChange={() => handleToggleActive(schedule.id, schedule.isActive === 1)}
                     />
                   </TableCell>
                   <TableCell>{schedule.sendCount.toLocaleString()}</TableCell>
@@ -311,7 +311,7 @@ export default function EmailSchedulesIntegrated() {
                         variant="ghost"
                         size="sm"
                         onClick={() => handleRunNow(schedule.id)}
-                        disabled={!schedule.isActive}
+                        disabled={schedule.isActive !== 1}
                       >
                         <Play className="h-4 w-4" />
                       </Button>

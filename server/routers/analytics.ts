@@ -48,7 +48,6 @@ export const analyticsRouter = router({
         eventType: input.eventType,
         userId: input.userId || null,
         metadata: input.metadata ? JSON.stringify(input.metadata) : null,
-        timestamp: new Date().toISOString(),
         createdAt: new Date().toISOString(),
       });
 
@@ -137,7 +136,7 @@ export const analyticsRouter = router({
       const successRate = totalTransactions > 0 ? (successfulTransactions / totalTransactions) * 100 : 0;
       const totalRevenue = metrics
         .filter(m => m.status === 'completed')
-        .reduce((sum, m) => sum + parseFloat(m.amount), 0);
+        .reduce((sum, m) => sum + parseFloat(m.amount ?? '0'), 0);
       const averageTransactionValue = successfulTransactions > 0 ? totalRevenue / successfulTransactions : 0;
 
       return {
@@ -191,7 +190,7 @@ export const analyticsRouter = router({
 
       // Aggregate completion stats
       const enrolledCount = stats.length;
-      const completedCount = stats.filter(s => s.certificateIssued === 1).length;
+      const completedCount = stats.filter(s => s.completedAt != null).length;
       const completionRate = enrolledCount > 0 ? (completedCount / enrolledCount) * 100 : 0;
 
       return {

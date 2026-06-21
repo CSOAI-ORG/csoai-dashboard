@@ -34,10 +34,10 @@ export const studentAnalyticsRouter = router({
         conditions.push(eq(courses.framework, frameworkId));
       }
       if (startDate) {
-        conditions.push(gte(userTrainingProgress.completedAt, new Date(startDate)));
+        conditions.push(gte(userTrainingProgress.completedAt, new Date(startDate).toISOString()));
       }
       if (endDate) {
-        conditions.push(lte(userTrainingProgress.completedAt, new Date(endDate)));
+        conditions.push(lte(userTrainingProgress.completedAt, new Date(endDate).toISOString()));
       }
 
       // Get all modules with completion stats, joining through courses for framework
@@ -118,10 +118,10 @@ export const studentAnalyticsRouter = router({
       // Build where conditions
       const conditions = [sql`${userTestAttempts.completedAt} IS NOT NULL`];
       if (startDate) {
-        conditions.push(gte(userTestAttempts.completedAt, new Date(startDate)));
+        conditions.push(gte(userTestAttempts.completedAt, new Date(startDate).toISOString()));
       }
       if (endDate) {
-        conditions.push(lte(userTestAttempts.completedAt, new Date(endDate)));
+        conditions.push(lte(userTestAttempts.completedAt, new Date(endDate).toISOString()));
       }
 
       // Get quiz scores grouped by test
@@ -202,10 +202,10 @@ export const studentAnalyticsRouter = router({
         conditions.push(eq(courses.framework, frameworkId));
       }
       if (startDate) {
-        conditions.push(gte(userTrainingProgress.completedAt, new Date(startDate)));
+        conditions.push(gte(userTrainingProgress.completedAt, new Date(startDate).toISOString()));
       }
       if (endDate) {
-        conditions.push(lte(userTrainingProgress.completedAt, new Date(endDate)));
+        conditions.push(lte(userTrainingProgress.completedAt, new Date(endDate).toISOString()));
       }
 
       // Get time-to-completion data
@@ -324,10 +324,10 @@ export const studentAnalyticsRouter = router({
         dateConditions.push(eq(courses.framework, frameworkId));
       }
       if (startDate) {
-        dateConditions.push(gte(userTrainingProgress.completedAt, new Date(startDate)));
+        dateConditions.push(gte(userTrainingProgress.completedAt, new Date(startDate).toISOString()));
       }
       if (endDate) {
-        dateConditions.push(lte(userTrainingProgress.completedAt, new Date(endDate)));
+        dateConditions.push(lte(userTrainingProgress.completedAt, new Date(endDate).toISOString()));
       }
 
       // Total enrolled students
@@ -347,10 +347,10 @@ export const studentAnalyticsRouter = router({
       // Total certificates issued
       const certConditions = [];
       if (startDate) {
-        certConditions.push(gte(userCertificates.issuedAt, new Date(startDate)));
+        certConditions.push(gte(userCertificates.issuedAt, new Date(startDate).toISOString()));
       }
       if (endDate) {
-        certConditions.push(lte(userCertificates.issuedAt, new Date(endDate)));
+        certConditions.push(lte(userCertificates.issuedAt, new Date(endDate).toISOString()));
       }
 
       const certQuery = db
@@ -388,10 +388,10 @@ export const studentAnalyticsRouter = router({
       const scoreConditions = [];
       scoreConditions.push(sql`${userTestAttempts.completedAt} IS NOT NULL`);
       if (startDate) {
-        scoreConditions.push(gte(userTestAttempts.completedAt, new Date(startDate)));
+        scoreConditions.push(gte(userTestAttempts.completedAt, new Date(startDate).toISOString()));
       }
       if (endDate) {
-        scoreConditions.push(lte(userTestAttempts.completedAt, new Date(endDate)));
+        scoreConditions.push(lte(userTestAttempts.completedAt, new Date(endDate).toISOString()));
       }
 
       const scoreQuery = db

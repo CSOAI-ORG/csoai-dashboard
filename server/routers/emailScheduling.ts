@@ -71,7 +71,7 @@ export const emailSchedulingRouter = router({
       const conditions = [];
       
       if (input?.isActive !== undefined) {
-        conditions.push(eq(emailSchedules.isActive, input.isActive));
+        conditions.push(eq(emailSchedules.isActive, input.isActive ? 1 : 0));
       }
       
       if (input?.triggerType) {
@@ -118,15 +118,17 @@ export const emailSchedulingRouter = router({
         throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Database not available' });
       }
 
+      const values = {
+        ...input,
+        createdBy: ctx.user.id,
+        isActive: input.isActive === undefined ? 1 : (input.isActive ? 1 : 0),
+        triggerCondition: input.triggerCondition as any,
+        audienceFilter: input.audienceFilter as any,
+      };
       const [newSchedule] = await db
         .insert(emailSchedules)
-        .values({
-          ...input,
-          createdBy: ctx.user.id,
-          triggerCondition: input.triggerCondition as any,
-          audienceFilter: input.audienceFilter as any,
-        })
-        .$returningId();
+        .values(values as any)
+        .$returningId() as any;
 
       return newSchedule;
     }),
@@ -142,13 +144,15 @@ export const emailSchedulingRouter = router({
 
       const { id, ...updates } = input;
 
+      const updateValues: any = {
+        ...updates,
+        triggerCondition: updates.triggerCondition as any,
+        audienceFilter: updates.audienceFilter as any,
+      };
+      if (updates.isActive !== undefined) updateValues.isActive = updates.isActive ? 1 : 0;
       await db
         .update(emailSchedules)
-        .set({
-          ...updates,
-          triggerCondition: updates.triggerCondition as any,
-          audienceFilter: updates.audienceFilter as any,
-        })
+        .set(updateValues)
         .where(eq(emailSchedules.id, id));
 
       return { success: true };
@@ -181,7 +185,7 @@ export const emailSchedulingRouter = router({
 
       await db
         .update(emailSchedules)
-        .set({ isActive: input.isActive })
+        .set({ isActive: input.isActive ? 1 : 0 })
         .where(eq(emailSchedules.id, input.id));
 
       return { success: true };
@@ -219,7 +223,7 @@ export const emailSchedulingRouter = router({
           status: 'pending',
           startedAt: new Date().toISOString(),
         })
-        .$returningId();
+        .$returningId() as { id: number }[];
 
       // Get target users based on audience filter
       let targetUsers: any[] = [];
@@ -362,9 +366,8 @@ async function getTargetUsers(db: NonNullable<Awaited<ReturnType<typeof getDb>>>
     case 'cohort':
       if (audienceFilter.cohortIds && audienceFilter.cohortIds.length > 0) {
         query = query
-          .innerJoin(courseEnrollments, eq(users.id, courseEnrollments.userId))
-          .innerJoin(userCohorts, eq(courseEnrollments.cohortId, userCohorts.id))
-          .where(inArray(userCohorts.id, audienceFilter.cohortIds)) as any;
+          .innerJoin(userCohorts, eq(users.id, userCohorts.userId))
+          .where(inArray(userCohorts.cohortId, audienceFilter.cohortIds)) as any;
       }
       break;
 
@@ -380,7 +383,7 @@ async function getTargetUsers(db: NonNullable<Awaited<ReturnType<typeof getDb>>>
       if (audienceFilter.inactiveDays) {
         const cutoffDate = new Date();
         cutoffDate.setDate(cutoffDate.getDate() - audienceFilter.inactiveDays);
-        query = query.where(lte(users.lastLoginAt, cutoffDate.toISOString())) as any;
+        query = query.where(lte(users.lastSignedIn, cutoffDate.toISOString())) as any;
       }
       break;
 

@@ -17,24 +17,27 @@ export default function PublicCertificateVerify() {
   const [certificateNumber, setCertificateNumber] = useState('');
   const [searchTriggered, setSearchTriggered] = useState(false);
 
-  const { data: certificate, isLoading, error } = trpc.certification.verifyCertificate.useQuery(
-    { certificateNumber },
-    { 
-      enabled: searchTriggered && certificateNumber.length > 0,
-      retry: false,
-    }
-  );
+  const verifyMutation = trpc.certificates.verifyCertificate.useMutation();
+  const certificate = verifyMutation.data?.valid ? verifyMutation.data.certificate : null;
+  const isLoading = verifyMutation.isPending;
+  const error = verifyMutation.error;
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (certificateNumber.trim()) {
       setSearchTriggered(true);
+      try {
+        await verifyMutation.mutateAsync({ certificateNumber });
+      } catch {
+        // Error state is handled by the mutation
+      }
     }
   };
 
   const handleReset = () => {
     setCertificateNumber('');
     setSearchTriggered(false);
+    verifyMutation.reset();
   };
 
   return (
@@ -95,7 +98,7 @@ export default function PublicCertificateVerify() {
         )}
 
         {/* Error State */}
-        {searchTriggered && error && (
+        {searchTriggered && !isLoading && (error || (verifyMutation.data && !verifyMutation.data.valid)) && (
           <Card className="border-red-200 bg-red-50">
             <CardContent className="py-8">
               <div className="flex flex-col items-center text-center gap-4">
@@ -122,7 +125,7 @@ export default function PublicCertificateVerify() {
         )}
 
         {/* Success State */}
-        {searchTriggered && certificate && !isLoading && (
+        {searchTriggered && !isLoading && verifyMutation.data?.valid && certificate && (
           <Card className="border-emerald-200 bg-emerald-50">
             <CardContent className="py-8">
               <div className="flex flex-col items-center text-center gap-6">
@@ -170,7 +173,7 @@ export default function PublicCertificateVerify() {
                     <div>
                       <div className="text-sm text-gray-600">Issue Date</div>
                       <div className="font-semibold text-gray-900">
-                        {new Date(certificate.issueDate).toLocaleDateString('en-US', {
+                        {new Date(certificate.issuedAt).toLocaleDateString('en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric'
@@ -184,11 +187,15 @@ export default function PublicCertificateVerify() {
                     <div>
                       <div className="text-sm text-gray-600">Valid Until</div>
                       <div className="font-semibold text-gray-900">
-                        {new Date(certificate.expiryDate).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
+                        {(() => {
+                          const expiry = new Date(certificate.issuedAt);
+                          expiry.setFullYear(expiry.getFullYear() + 1);
+                          return expiry.toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          });
+                        })()}
                         <span className="ml-2 text-sm text-gray-600">
                           (1 year validity)
                         </span>

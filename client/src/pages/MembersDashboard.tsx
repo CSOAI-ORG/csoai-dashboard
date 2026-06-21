@@ -628,8 +628,8 @@ export default function MembersDashboard() {
 
         {/* Onboarding Tour */}
         <OnboardingTour
+          tourId="members-dashboard-tour"
           steps={tourSteps}
-          storageKey="members-dashboard-tour"
         />
       </div>
     </DashboardLayout>

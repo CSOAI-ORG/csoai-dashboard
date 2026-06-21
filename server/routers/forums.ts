@@ -244,8 +244,8 @@ export const forumsRouter = router({
         userId,
         title: input.title,
         content: input.content,
-        isPinned: false,
-        isLocked: false,
+        isPinned: 0,
+        isLocked: 0,
         viewCount: 0,
         replyCount: 0,
         lastActivityAt: now,
@@ -296,11 +296,11 @@ export const forumsRouter = router({
         userId,
         parentPostId: input.parentPostId || null,
         content: input.content,
-        isEdited: false,
+        isEdited: 0,
         editedAt: null,
         likeCount: 0,
-        isInstructorPost: false,
-        isSolution: false,
+        isInstructorPost: 0,
+        isSolution: 0,
         createdAt: now,
         updatedAt: now,
       });
@@ -325,7 +325,7 @@ export const forumsRouter = router({
           threadId: input.threadId,
           postId: safePostId,
           type: 'reply',
-          isRead: false,
+          isRead: 0,
           createdAt: now,
         });
 
@@ -353,7 +353,7 @@ export const forumsRouter = router({
             threadId: input.threadId,
             postId: safePostId,
             type: 'reply',
-            isRead: false,
+            isRead: 0,
             createdAt: now,
           });
         }
@@ -378,7 +378,7 @@ export const forumsRouter = router({
               threadId: input.threadId,
               postId: safePostId,
               type: 'mention',
-              isRead: false,
+              isRead: 0,
               createdAt: now,
             });
           }
@@ -425,7 +425,7 @@ export const forumsRouter = router({
         .update(forumPosts)
         .set({
           content: input.content,
-          isEdited: true,
+          isEdited: 1,
           editedAt: now,
           updatedAt: now,
         })
@@ -496,7 +496,7 @@ export const forumsRouter = router({
             threadId: post[0].threadId,
             postId: input.postId,
             type: 'like',
-            isRead: false,
+            isRead: 0,
             createdAt: now,
           });
         }
@@ -546,13 +546,13 @@ export const forumsRouter = router({
       // Unmark any existing solutions
       await db
         .update(forumPosts)
-        .set({ isSolution: false })
+        .set({ isSolution: 0 })
         .where(eq(forumPosts.threadId, post[0].threadId));
 
       // Mark this post as solution
       await db
         .update(forumPosts)
-        .set({ isSolution: true, updatedAt: now })
+        .set({ isSolution: 1, updatedAt: now })
         .where(eq(forumPosts.id, input.postId));
 
       // Create notification for post author
@@ -562,7 +562,7 @@ export const forumsRouter = router({
           threadId: post[0].threadId,
           postId: input.postId,
           type: 'solution_marked',
-          isRead: false,
+          isRead: 0,
           createdAt: now,
         });
 
@@ -620,7 +620,7 @@ export const forumsRouter = router({
 
       await db
         .update(forumNotifications)
-        .set({ isRead: true })
+        .set({ isRead: 1 })
         .where(
           and(
             eq(forumNotifications.id, input.notificationId),
@@ -642,7 +642,7 @@ export const forumsRouter = router({
 
       await db
         .update(forumNotifications)
-        .set({ isRead: true })
+        .set({ isRead: 1 })
         .where(eq(forumNotifications.userId, userId));
 
       return { success: true };
@@ -758,7 +758,7 @@ export const forumsRouter = router({
         .select({ count: sql`COUNT(DISTINCT ${forumThreads.id})` })
         .from(forumThreads)
         .leftJoin(forumPosts, eq(forumPosts.threadId, forumThreads.id))
-        .where(and(dateFilter, eq(forumPosts.isSolution, true)))
+        .where(and(dateFilter, eq(forumPosts.isSolution, 1)))
         .$dynamic();
 
       if (input.courseId) {

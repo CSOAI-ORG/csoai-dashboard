@@ -1,20 +1,14 @@
 /**
  * Byzantine Council Real-Time Voting Service
- * 
+ *
  * Implements low-latency, real-time voting for the 33-Agent Council
  * with streaming updates and live AI inference integration.
- * 
- * Architecture:
- * - WebSocket connections for live updates
- * - Event streaming for voting progress
- * - Low-latency alert system for critical decisions
- * - Live AI inference integration via Forge API
  */
 
-import { broadcastToUsers, broadcastToAll, RealtimeMessage } from '../websocket/server.js';
+import { broadcastToUsers, RealtimeMessage } from '../websocket/server.js';
 import { getDb } from '../db.js';
 import { councilSessions, councilVotes, realtimeEvents } from '../../drizzle/schema.js';
-import { eq, and } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 
 export interface VotingEvent {
   sessionId: number;
@@ -51,6 +45,21 @@ const activeSessions = new Map<number, CouncilVotingSession>();
 
 // Store for vote history with timestamps
 const voteHistory = new Map<number, VotingEvent[]>();
+
+function mapResultToStatus(
+  result: 'approved' | 'rejected' | 'deadlocked'
+): 'consensus_reached' | 'escalated_to_human' | 'completed' {
+  if (result === 'approved' || result === 'rejected') return 'consensus_reached';
+  return 'escalated_to_human';
+}
+
+function mapResultToFinalDecision(
+  result: 'approved' | 'rejected' | 'deadlocked'
+): 'approved' | 'rejected' | 'escalated' {
+  if (result === 'approved') return 'approved';
+  if (result === 'rejected') return 'rejected';
+  return 'escalated';
+}
 
 /**
  * Start a new Byzantine Council voting session
@@ -105,9 +114,11 @@ export async function startVotingSession(
   if (db) {
     try {
       await db.insert(realtimeEvents).values({
-        eventType: 'voting_session_started',
-        eventData: JSON.stringify(session),
+        eventType: 'council_decision',
+        title: 'Voting session started',
+        description: `Council voting session ${sessionId} started for report ${reportId}`,
         severity: 'info',
+        data: { event: 'voting_session_started', session },
       });
     } catch (error) {
       console.error('Failed to log voting session start:', error);
@@ -119,64 +130,56 @@ export async function startVotingSession(
 
 /**
  * Record a vote from an AI agent
- * Updates session metrics and broadcasts real-time updates
+ * Updates session metrics and checks for consensus
  */
-export async function recordAgentVote(
+export async function recordVote(
   sessionId: number,
   votingEvent: VotingEvent,
   userIds: number[]
 ): Promise<void> {
   const session = activeSessions.get(sessionId);
-  if (!session) {
-    console.error(`Session ${sessionId} not found`);
-    return;
-  }
+  if (!session) return;
 
-  // Record vote in history
+  // Update vote history
   const history = voteHistory.get(sessionId) || [];
   history.push(votingEvent);
   voteHistory.set(sessionId, history);
 
-  // Update session metrics
-  session.votesReceived++;
+  // Update metrics
+  session.votesReceived = history.length;
 
-  // Calculate consensus metrics
   const approvals = history.filter((v) => v.decision === 'approve').length;
   const rejections = history.filter((v) => v.decision === 'reject').length;
   const abstentions = history.filter((v) => v.decision === 'abstain').length;
 
-  session.liveMetrics.approvalRate = (approvals / session.votesReceived) * 100;
-  session.liveMetrics.rejectionRate = (rejections / session.votesReceived) * 100;
-  session.liveMetrics.abstentionRate = (abstentions / session.votesReceived) * 100;
-
-  // Update latency metrics
-  const latencies = history.map((v) => v.latency);
+  session.liveMetrics.approvalRate = (approvals / history.length) * 100;
+  session.liveMetrics.rejectionRate = (rejections / history.length) * 100;
+  session.liveMetrics.abstentionRate = (abstentions / history.length) * 100;
   session.liveMetrics.averageLatency =
-    latencies.reduce((a, b) => a + b, 0) / latencies.length;
-  session.liveMetrics.maxLatency = Math.max(...latencies);
+    history.reduce((sum, v) => sum + v.latency, 0) / history.length;
+  session.liveMetrics.maxLatency = Math.max(...history.map((v) => v.latency));
 
   // Check for consensus
   if (approvals >= session.votesRequired) {
     session.currentConsensus = 'approved';
     await finalizeVotingSession(sessionId, 'approved', userIds);
-  } else if (rejections >= session.votesRequired) {
-    session.currentConsensus = 'rejected';
-    await finalizeVotingSession(sessionId, 'rejected', userIds);
-  } else if (session.votesReceived === session.totalAgents) {
-    // All votes received
-    if (approvals > rejections) {
-      session.currentConsensus = 'approved';
-      await finalizeVotingSession(sessionId, 'approved', userIds);
-    } else if (rejections > approvals) {
-      session.currentConsensus = 'rejected';
-      await finalizeVotingSession(sessionId, 'rejected', userIds);
-    } else {
-      session.currentConsensus = 'deadlocked';
-      await finalizeVotingSession(sessionId, 'deadlocked', userIds);
-    }
+    return;
   }
 
-  // Broadcast real-time vote update
+  if (rejections >= session.votesRequired) {
+    session.currentConsensus = 'rejected';
+    await finalizeVotingSession(sessionId, 'rejected', userIds);
+    return;
+  }
+
+  // Check for deadlock (all votes in and no consensus)
+  if (session.votesReceived >= session.totalAgents) {
+    session.currentConsensus = 'deadlocked';
+    await finalizeVotingSession(sessionId, 'deadlocked', userIds);
+    return;
+  }
+
+  // Broadcast vote update
   const message: RealtimeMessage = {
     type: 'compliance_update',
     data: {
@@ -204,8 +207,9 @@ export async function recordAgentVote(
         sessionId,
         agentId: votingEvent.agentId,
         decision: votingEvent.decision,
-        confidence: votingEvent.confidence,
+        confidence: String(votingEvent.confidence),
         reasoning: votingEvent.reasoning,
+        latencyMs: votingEvent.latency,
       });
     } catch (error) {
       console.error('Failed to store council vote:', error);
@@ -268,21 +272,24 @@ async function finalizeVotingSession(
       await db
         .update(councilSessions)
         .set({
-          status: result,
-          completedAt: new Date(completionTime),
+          status: mapResultToStatus(result),
+          finalDecision: mapResultToFinalDecision(result),
+          completedAt: new Date(completionTime).toISOString().slice(0, 19).replace('T', ' '),
         })
         .where(eq(councilSessions.id, sessionId));
 
       await db.insert(realtimeEvents).values({
-        eventType: 'voting_session_completed',
-        eventData: JSON.stringify({
+        eventType: 'council_decision',
+        title: 'Voting session completed',
+        description: alertMessage,
+        severity,
+        data: {
           result,
           sessionId,
           reportId: session.reportId,
           totalDuration,
           metrics: session.liveMetrics,
-        }),
-        severity,
+        },
       });
     } catch (error) {
       console.error('Failed to finalize voting session:', error);
@@ -343,10 +350,19 @@ export async function streamComplianceAlert(
   const db = await getDb();
   if (db) {
     try {
+      const eventTypeMap: Record<string, typeof realtimeEvents.$inferInsert.eventType> = {
+        violation: 'enforcement_action',
+        risk: 'risk_alert',
+        approval: 'council_decision',
+        rejection: 'council_decision',
+      };
+
       await db.insert(realtimeEvents).values({
-        eventType: alert.type,
-        eventData: JSON.stringify(alert),
+        eventType: eventTypeMap[alert.type] || 'risk_alert',
+        title: alert.type.toUpperCase(),
+        description: alert.message,
         severity: alert.severity,
+        data: alert,
       });
     } catch (error) {
       console.error('Failed to log compliance alert:', error);

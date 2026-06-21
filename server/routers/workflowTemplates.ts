@@ -92,12 +92,11 @@ export const workflowTemplatesRouter = router({
         triggerType: templateData.triggerType,
         triggerConfig: input.customizations?.triggerConfig || templateData.triggerConfig,
         workflowData: input.customizations?.workflowData || templateData.workflowData,
-        isActive: false, // Start inactive so user can review
+        isActive: 0, // Start inactive so user can review
       });
 
-      const workflowId = typeof workflowResult.insertId === 'bigint' 
-        ? Number(workflowResult.insertId) 
-        : Number(workflowResult.insertId);
+      const rawInsertId = (workflowResult as any).insertId ?? (workflowResult as any)[0]?.insertId;
+      const workflowId = typeof rawInsertId === 'bigint' ? Number(rawInsertId) : Number(rawInsertId);
 
       // Track template usage
       await db.insert(templateUsage).values({

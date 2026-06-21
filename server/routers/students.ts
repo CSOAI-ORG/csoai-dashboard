@@ -411,4 +411,87 @@ export const studentsRouter = router({
         graduationDate: row.student.graduationDate || '',
       }));
     }),
+
+  // Export students to CSV
+  exportToCSV: protectedProcedure
+    .input(z.object({ cohortId: z.number().optional() }))
+    .mutation(async ({ input }) => {
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Database not available' });
+
+      const conditions: any[] = [];
+      if (input.cohortId) {
+        conditions.push(eq(students.cohortId, input.cohortId));
+      }
+      const where = conditions.length > 0 ? and(...conditions) : undefined;
+
+      const items = await db.select({
+        student: students,
+        cohort: cohorts,
+      })
+        .from(students)
+        .leftJoin(cohorts, eq(students.cohortId, cohorts.id))
+        .where(where)
+        .orderBy(desc(students.enrollmentDate));
+
+      const headers = ['Student Number', 'First Name', 'Last Name', 'Email', 'Phone', 'Status', 'Cohort', 'GPA', 'Total Credits', 'Enrollment Date'];
+      const rows = items.map((row: any) => [
+        row.student.studentNumber || '',
+        row.student.firstName,
+        row.student.lastName,
+        row.student.email,
+        row.student.phone || '',
+        row.student.status,
+        row.cohort?.name || 'Unassigned',
+        row.student.gpa || '',
+        row.student.totalCredits || '',
+        row.student.enrollmentDate || '',
+      ]);
+
+      const escape = (val: any) => {
+        const str = String(val ?? '');
+        if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+          return `"${str.replace(/"/g, '""')}"`;
+        }
+        return str;
+      };
+
+      const csv = [headers.join(','), ...rows.map((r) => r.map(escape).join(','))].join('\n');
+      return { csv };
+    }),
+
+  // Bulk create students from import
+  bulkCreate: protectedProcedure
+    .input(z.object({
+      students: z.array(z.object({
+        name: z.string().min(1),
+        email: z.string().email(),
+        cohortId: z.number().optional(),
+      })),
+    }))
+    .mutation(async ({ input }) => {
+      const db = await getDb();
+      if (!db) throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Database not available' });
+
+      let createdCount = 0;
+      for (const s of input.students) {
+        const existing = await db.select()
+          .from(students)
+          .where(eq(students.email, s.email))
+          .limit(1);
+
+        if (existing.length > 0) continue;
+
+        await db.insert(students).values({
+          firstName: s.name,
+          lastName: '',
+          email: s.email,
+          cohortId: s.cohortId,
+          status: 'active',
+        } as any);
+        createdCount++;
+      }
+
+      return { success: true, createdCount };
+    }),
 });

@@ -280,7 +280,7 @@ export default function TrainingCourses() {
                       {/* Modules Count */}
                       <div className="mt-4 pt-4 border-t">
                         <p className="text-sm text-muted-foreground">
-                          {course.modules.length} modules • {course.modules.reduce((acc, m) => acc + m.lessons.length, 0)} lessons
+                          {course.modules.length} modules • {course.modules.reduce((acc: number, m: any) => acc + m.lessons.length, 0)} lessons
                         </p>
                       </div>
 

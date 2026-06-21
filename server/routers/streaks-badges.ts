@@ -176,7 +176,7 @@ export const streaksBadgesRouter = router({
     const allBadges = await db
       .select()
       .from(badges)
-      .where(eq(badges.isActive, true));
+      .where(eq(badges.isActive, 1));
 
     return allBadges;
   }),

@@ -17,7 +17,7 @@ export default function ForumAnalytics() {
   const [selectedCourseId, setSelectedCourseId] = useState<number | undefined>(undefined);
 
   // Fetch available courses
-  const { data: courses } = trpc.courses.getAll.useQuery();
+  const { data: courses } = trpc.courses.getCatalog.useQuery({});
 
   return (
     <DashboardLayout>

@@ -150,11 +150,12 @@ export const workflowSchedulingRouter = router({
         startDate: input.startDate || null,
         endDate: input.endDate || null,
         maxExecutions: input.maxExecutions || null,
-        isActive: input.isActive,
+        isActive: input.isActive ? 1 : 0,
         nextExecutionAt: nextExecutionAt ? nextExecutionAt.toISOString() : null,
       });
 
-      const id = typeof result.insertId === 'bigint' ? Number(result.insertId) : Number(result.insertId);
+      const rawInsertId = (result as any).insertId ?? (result as any)[0]?.insertId;
+      const id = typeof rawInsertId === 'bigint' ? Number(rawInsertId) : Number(rawInsertId);
 
       // Log the creation
       await db.insert(scheduleStatusLog).values({
@@ -261,7 +262,7 @@ export const workflowSchedulingRouter = router({
 
       await db
         .update(workflowSchedules)
-        .set({ isActive: input.isActive })
+        .set({ isActive: input.isActive ? 1 : 0 })
         .where(
           and(
             eq(workflowSchedules.id, input.id),
@@ -368,7 +369,7 @@ export const workflowSchedulingRouter = router({
         .where(
           and(
             eq(workflowSchedules.userId, ctx.user.id),
-            eq(workflowSchedules.isActive, true),
+            eq(workflowSchedules.isActive, 1),
             or(
               isNull(workflowSchedules.nextExecutionAt),
               lte(workflowSchedules.nextExecutionAt, now)

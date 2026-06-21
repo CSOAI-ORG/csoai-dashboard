@@ -260,7 +260,7 @@ export const lessonProgressRouter = router({
           lessonId: input.lessonId,
           quizId: answer.quizId,
           selectedAnswer: answer.selectedAnswer,
-          isCorrect,
+          isCorrect: isCorrect ? 1 : 0,
           attemptedAt: now,
         });
       }
@@ -290,7 +290,7 @@ export const lessonProgressRouter = router({
         totalQuestions,
         correctAnswers: correctCount,
         score: score.toFixed(2),
-        passed,
+        passed: passed ? 1 : 0,
         attemptNumber,
         completedAt: now,
       });
@@ -329,7 +329,7 @@ export const lessonProgressRouter = router({
       return {
         success: true,
         score,
-        passed,
+        passed: passed ? 1 : 0,
         correctAnswers: correctCount,
         totalQuestions,
         attemptNumber,

@@ -1,7 +1,7 @@
 import { router, protectedProcedure } from "../_core/trpc";
 import { z } from "zod";
 import { getDb } from "../db";
-import { users, userCohorts, courseEnrollments, courses, userTrainingProgress, userCertificates, trainingModules } from "../../drizzle/schema";
+import { users, userCohorts, cohorts, courseEnrollments, courses, userTrainingProgress, userCertificates, trainingModules } from "../../drizzle/schema";
 import { eq, and, inArray } from "drizzle-orm";
 
 // ============================================
@@ -23,8 +23,8 @@ export const csvExportRouter = router({
       // Get cohort info
       const [cohort] = await db
         .select()
-        .from(userCohorts)
-        .where(eq(userCohorts.id, input.cohortId))
+        .from(cohorts)
+        .where(eq(cohorts.id, input.cohortId))
         .limit(1);
 
       if (!cohort) {
@@ -197,8 +197,8 @@ export const csvExportRouter = router({
           userName: users.name,
           userEmail: users.email,
           userCreatedAt: users.createdAt,
-          cohortId: userCohorts.id,
-          cohortName: userCohorts.name,
+          cohortId: cohorts.id,
+          cohortName: cohorts.name,
           enrollmentStatus: courseEnrollments.status,
           enrolledAt: courseEnrollments.enrolledAt,
           completedAt: courseEnrollments.completedAt,
@@ -208,6 +208,7 @@ export const csvExportRouter = router({
         .from(users)
         .leftJoin(courseEnrollments, eq(users.id, courseEnrollments.userId))
         .leftJoin(userCohorts, eq(users.id, userCohorts.userId))
+        .leftJoin(cohorts, eq(userCohorts.cohortId, cohorts.id))
         .leftJoin(courses, eq(courseEnrollments.courseId, courses.id));
 
       // Build CSV

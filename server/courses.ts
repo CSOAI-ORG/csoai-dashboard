@@ -484,6 +484,10 @@ export const coursesRouter = router({
 
       // Send completion certificate email
       try {
+        if (!enrollment.courseId) {
+          throw new Error("No course associated with enrollment");
+        }
+
         // Get course details
         const [course] = await db
           .select()

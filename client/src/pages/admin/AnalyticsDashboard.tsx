@@ -53,12 +53,11 @@ export default function AnalyticsDashboard() {
   const [autoRefresh, setAutoRefresh] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
 
-  const { data: cohorts } = trpc.cohorts.getCohorts.useQuery();
-  const { data: students, refetch: refetchStudents } = trpc.students.getStudents.useQuery();
-  const { data: analyticsData, refetch: refetchAnalytics } = trpc.studentAnalytics.getOverview.useQuery({
-    timeRange: parseInt(timeRange),
-    cohortId: selectedCohort === 'all' ? undefined : parseInt(selectedCohort),
-  });
+  const { data: cohortsData } = trpc.cohorts.list.useQuery({});
+  const cohorts = cohortsData?.items;
+  const { data: studentsData, refetch: refetchStudents } = trpc.students.list.useQuery({});
+  const students = studentsData?.items;
+  const { data: analyticsData, refetch: refetchAnalytics } = trpc.studentAnalytics.getAnalyticsSummary.useQuery({});
 
   // Auto-refresh polling
   useEffect(() => {

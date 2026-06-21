@@ -87,10 +87,10 @@ export async function triggerEmailSequence(
     // Create email sequence record
     const result = await db.insert(emailSequences).values({
       userId,
-      sequenceId: sequenceType,
-      step: 1,
-      status: "pending",
-      createdAt: new Date().toISOString(),
+      sequenceType,
+      currentStep: 1,
+      status: "active",
+      metadata: metadata || null,
     });
 
     // Send first email in sequence
@@ -111,9 +111,10 @@ export async function triggerEmailSequence(
       }
     }
 
+    const rawInsertId = (result as any).insertId ?? (result as any)[0]?.insertId;
     return {
       success: true,
-      sequenceId: (result as any)[0]?.insertId || 0,
+      sequenceId: typeof rawInsertId === "bigint" ? Number(rawInsertId) : Number(rawInsertId),
     };
   } catch (error) {
     console.error("Failed to trigger email sequence:", error);
@@ -132,25 +133,25 @@ export async function processScheduledEmails(): Promise<void> {
     const db = await getDb();
     if (!db) throw new Error("Database not available");
 
-    // Get all pending sequences
-    const pendingSequences = await db
+    // Get all active sequences
+    const activeSequences = await db
       .select()
       .from(emailSequences)
-      .where(eq(emailSequences.status, "pending"));
+      .where(eq(emailSequences.status, "active"));
 
-    console.log(`[EmailAutomation] Processing ${pendingSequences.length} pending sequences`);
+    console.log(`[EmailAutomation] Processing ${activeSequences.length} active sequences`);
 
-    for (const sequence of pendingSequences) {
-      const config = defaultSequenceConfig[sequence.sequenceId];
+    for (const sequence of activeSequences) {
+      const config = defaultSequenceConfig[sequence.sequenceType];
       if (!config) continue;
 
-      const currentStep = sequence.step;
+      const currentStep = sequence.currentStep;
       const stepConfig = config[currentStep - 1];
       if (!stepConfig) {
         // Sequence completed
         await db
           .update(emailSequences)
-          .set({ status: "sent" })
+          .set({ status: "completed" })
           .where(eq(emailSequences.id, sequence.id));
         continue;
       }
@@ -185,8 +186,8 @@ export async function processScheduledEmails(): Promise<void> {
           await db
             .update(emailSequences)
             .set({
-              step: currentStep + 1,
-              sentDate: new Date().toISOString(),
+              currentStep: currentStep + 1,
+              updatedAt: new Date().toISOString().slice(0, 19).replace("T", " "),
             })
             .where(eq(emailSequences.id, sequence.id));
         }
@@ -210,12 +211,12 @@ export async function cancelEmailSequence(
 
     await db
       .update(emailSequences)
-      .set({ status: "bounced" }) // Using bounced as cancelled equivalent
+      .set({ status: "cancelled" })
       .where(
         and(
           eq(emailSequences.userId, userId),
-          eq(emailSequences.sequenceId, sequenceType),
-          eq(emailSequences.status, "pending")
+          eq(emailSequences.sequenceType, sequenceType),
+          eq(emailSequences.status, "active")
         )
       );
 
@@ -246,7 +247,7 @@ export async function getEmailSequenceStatus(
       .where(
         and(
           eq(emailSequences.userId, userId),
-          eq(emailSequences.sequenceId, sequenceType)
+          eq(emailSequences.sequenceType, sequenceType)
         )
       )
       .limit(1);
@@ -255,8 +256,8 @@ export async function getEmailSequenceStatus(
 
     const config = defaultSequenceConfig[sequenceType];
     return {
-      active: sequence[0].status === "pending",
-      currentStep: sequence[0].step,
+      active: sequence[0].status === "active",
+      currentStep: sequence[0].currentStep,
       totalSteps: config?.length || 0,
     };
   } catch (error) {
