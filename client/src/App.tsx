@@ -211,6 +211,7 @@ import Crosswalks from "./pages/Crosswalks";
 import MCPRegistry from "./pages/MCPRegistry";
 import MCPDetail from "./pages/MCPDetail";
 import FrameworkDetail from "./pages/FrameworkDetail";
+import Press from "./pages/Press";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -413,6 +414,7 @@ function App() {
                   <Route path="/help-center" component={HelpCenter} />
                   <Route path="/help" component={HelpCenter} />
                   <Route path="/contact" component={Contact} />
+                  <Route path="/press" component={Press} />
                   <Route path="/privacy" component={PrivacyPolicy} />
                   <Route path="/terms" component={TermsOfService} />
                   <Route path="/cookies" component={CookiePolicy} />
