@@ -648,5 +648,284 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 54f8b37c → 49d9b00e) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-06-22T07:00:12.250Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690502",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690502"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690500",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690500"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601391: Commission Implementing Regulation (EU) 2026/1391 of 16 June 2026 on the approval of an amendment to the product specification of the traditional speciality guaranteed Moules de bouchot",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601391"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601400: Council Decision (EU) 2026/1400 of 16 June 2026 appointing a member and an alternate member, proposed by the Republic of Austria, of the Committee of the Regions",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601400"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690501",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690501"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690511: Corrigendum to Commission Implementing Decision (EU) 2026/1231 of 11 June 2026 amending Implementing Decision (EU) 2021/1182 as regards harmonised standards for biological evaluation of medical devices, symbols to be used wi",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690511"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690499",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690499"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690504",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690504"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690498",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690498"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690497",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690497"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601395: Regulation (EU) 2026/1395 of the European Parliament and of the Council of 17 June 2026 on applying a generalised scheme of tariff preferences and repealing Regulation (EU) No 978/2012",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601395"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690509",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690509"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690503",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690503"
+  },
+  {
+    "at": "2026-06-22T07:00:12.251Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601349: Decision of the General Court of 29 April 2026 on the broadcasting of hearings of oral argument and of hearings in which judgments or Opinions are delivered [2026/1349]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601349"
+  },
+  {
+    "at": "2026-06-22T07:00:34.527Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 松本大臣記者会見（令和8年6月19日）要旨を掲載しました",
+    "source": "https://www.digital.go.jp/speech/minister-260619-01"
+  },
+  {
+    "at": "2026-06-22T07:00:34.527Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 企画競争：国機関等（地方公共団体も含む）に係る公共サービスメッシュ機関間情報連携サービスへの円滑な移行のための方針検討を掲載しました",
+    "source": "https://www.digital.go.jp/procurement"
+  },
+  {
+    "at": "2026-06-22T07:00:34.527Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 一般競争入札：令和8年度デジタル社会の推進に必要な指針類の整備に係る調査研究を掲載しました",
+    "source": "https://www.digital.go.jp/procurement"
+  },
+  {
+    "at": "2026-06-22T07:00:34.527Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 公共調達の適正化に係る情報について令和8年4月分を更新しました",
+    "source": "https://www.digital.go.jp/procurement/proper-public-procurement"
+  },
+  {
+    "at": "2026-06-22T07:00:34.527Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 松本大臣記者会見（令和8年6月22日）動画を掲載しました",
+    "source": "https://www.digital.go.jp/speech/minister-260622-01"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@���ʐM�Z�p���ȉ�@�d�g���p���ψ���@��n�Ǔ��]�����@��Ɣǁi��12��j�̊J�Âɂ���",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban16_04000944.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���h����ɂ�����AI�����}�b�`���O�C�x���g�̊J��",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001230.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�s���E�X���s���R�c��@�X���s�����ȉ�i��104��j",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/yusei/02ryutsu01_04000510.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@���ʐM��������@��������ψ���i��2��j",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/housou_seisaku/kaigidai02kai.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��10�񓝌v�쐬�v���Z�X����",
+    "source": "https://www.soumu.go.jp/main_sosiki/singi/toukei/tokeisakuseipurosesu/kaigi/02shingi05_02000819.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �ߘa8�N�x�n�������R�c��i6��17���j�c���v�|",
+    "source": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00928.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �ё�����b�t�c��L�҉�̊T�v",
+    "source": "https://www.soumu.go.jp/menu_news/kaiken/01koho01_02001551.html"
+  },
+  {
+    "at": "2026-06-22T07:00:35.338Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �ߘa8�N�x�n�������R�c��i5��13���j�c���v�|",
+    "source": "https://www.soumu.go.jp/main_sosiki/singi/chizai/02zaisei02_04001397_00927.html"
+  },
+  {
+    "at": "2026-06-22T07:00:37.154Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CHN"
+    ],
+    "summary": "China CAC — Cyberspace Administration news (algorithm/genAI rules): page content changed (hash 21a023a8 → 0b79d919) — review for new/updated material.",
+    "source": "https://www.cac.gov.cn/"
+  },
+  {
+    "at": "2026-06-22T07:00:59.232Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "AUS"
+    ],
+    "summary": "Australia PM&C — PM media releases (AI/tech policy announcements): page content changed (hash d8495de8 → a4b1fbee) — review for new/updated material.",
+    "source": "https://www.pm.gov.au/media"
+  },
+  {
+    "at": "2026-06-22T07:01:04.914Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "ISO/IEC JTC 1/SC 42 — Artificial Intelligence standards committee: page content changed (hash 3d3b2ac2 → 4db20315) — review for new/updated material.",
+    "source": "https://www.iso.org/committee/6794475.html"
+  },
+  {
+    "at": "2026-06-22T07:01:07.080Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 49d9b00e → 0d2c24d8) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
