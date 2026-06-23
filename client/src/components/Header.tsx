@@ -56,8 +56,8 @@ export function Header() {
         { name: 'A/B Testing', href: '/ab-testing', description: 'Experiment management' },
       ]
     },
-    { 
-      name: 'Training', 
+    {
+      name: 'Training',
       href: '/training',
       submenu: [
         { name: 'How It Works', href: '/how-it-works/training', description: 'Training pipeline' },
@@ -66,8 +66,8 @@ export function Header() {
         { name: 'Paid Courses', href: '/paid-courses', description: 'Premium training programs' },
       ]
     },
-    { 
-      name: 'Certification', 
+    {
+      name: 'Certification',
       href: '/certification',
       submenu: [
         { name: 'How It Works', href: '/how-it-works/certification', description: 'Certification pathway' },
@@ -76,8 +76,8 @@ export function Header() {
         { name: 'Review Past Exams', href: '/certification/review', description: 'Review attempts' },
       ]
     },
-    { 
-      name: 'SOAI-PDCA', 
+    {
+      name: 'SOAI-PDCA',
       href: '/soai-pdca',
       submenu: [
         { name: 'Framework', href: '/soai-pdca', description: 'Learn about SOAI-PDCA' },
@@ -85,8 +85,8 @@ export function Header() {
         { name: 'Simulator', href: '/pdca-simulator', description: 'Interactive demo' },
       ]
     },
-    { 
-      name: 'Watchdog', 
+    {
+      name: 'Watchdog',
       href: '/watchdog',
       submenu: [
         { name: 'Help Protect Humanity', href: '/watchdog/help-protect-humanity', description: 'Join the movement' },
@@ -97,8 +97,8 @@ export function Header() {
         { name: 'Leaderboard', href: '/watchdog-leaderboard', description: 'Top analysts' },
       ]
     },
-    { 
-      name: 'Compliance', 
+    {
+      name: 'Compliance',
       href: '/compliance',
       submenu: [
         { name: 'How It Works', href: '/how-it-works/compliance', description: 'Compliance methodology' },
@@ -114,8 +114,8 @@ export function Header() {
         { name: 'Public Scorecard', href: '/transparency', description: 'Public compliance data' },
       ]
     },
-    { 
-      name: 'Enterprise', 
+    {
+      name: 'Enterprise',
       href: '/enterprise',
       submenu: [
         { name: 'How It Works', href: '/how-it-works/enterprise', description: 'Enterprise solutions' },
@@ -125,8 +125,8 @@ export function Header() {
         { name: 'Onboarding', href: '/enterprise-onboarding', description: 'Get started' },
       ]
     },
-    { 
-      name: 'Resources', 
+    {
+      name: 'Resources',
       href: '/resources',
       submenu: [
         { name: 'Main How It Works', href: '/how-it-works', description: 'Complete pipeline' },
@@ -273,6 +273,18 @@ export function Header() {
             </a>
 
             <a
+              href="/layer0"
+              data-testid="nav-layer0"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
+                isActive('/layer0')
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
+              }`}
+            >
+              Layer 0
+            </a>
+
+            <a
               href="/eu-ai-act-classifier"
               data-testid="nav-classifier"
               className="px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-colors"
@@ -319,18 +331,18 @@ export function Header() {
                     {item.name}
                   </a>
                 )}
-                
+
                 {/* Mega Menu Dropdown */}
                 {activeDropdown === item.name && item.submenu && (
-                  <div 
+                  <div
                     className="absolute left-0 top-full mt-1 w-72 max-h-[80vh] overflow-y-auto bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
                     role="menu"
                     aria-label={`${item.name} submenu`}
                   >
                     {item.submenu.map((subItem, idx) => (
-                      <a 
-                        key={subItem.name} 
-                        href={subItem.href} 
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
                         ref={(el) => { menuItemsRef.current[idx] = el; }}
                         className="block px-4 py-3 hover:bg-gray-50 transition-colors focus:bg-emerald-50 focus:outline-none"
                         role="menuitem"
@@ -355,7 +367,7 @@ export function Header() {
                 Support
               </Button>
             </Link>
-            
+
             {/* Theme Toggle */}
             <Button
               variant="ghost"
@@ -379,7 +391,7 @@ export function Header() {
                     Dashboard
                   </Button>
                 </Link>
-                
+
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="sm" className="text-gray-700">
@@ -489,6 +501,18 @@ export function Header() {
                   Pricing
                 </a>
 
+                <a
+                  href="/layer0"
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors block ${
+                    isActive('/layer0')
+                      ? 'text-emerald-600 bg-emerald-50'
+                      : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Layer 0
+                </a>
+
                 {navigation.map((item) => (
                   <div key={item.name}>
                     <a
@@ -518,7 +542,7 @@ export function Header() {
                     )}
                   </div>
                 ))}
-                
+
                 {/* Support Link in Mobile */}
                 <Link href="/support">
                   <Button
@@ -531,7 +555,7 @@ export function Header() {
                     Support
                   </Button>
                 </Link>
-                
+
                 <div className="pt-4 border-t border-gray-200 space-y-2">
                   {user ? (
                     <>
