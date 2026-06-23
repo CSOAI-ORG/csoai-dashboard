@@ -76,3 +76,6 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+
+
+<!-- rebrand-emerald preview: trigger Vercel preview build of emerald main (no functional change) -->
