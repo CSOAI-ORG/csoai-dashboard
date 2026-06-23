@@ -927,5 +927,492 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 49d9b00e → 0d2c24d8) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-06-23T07:00:09.656Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601411: Council Decision (EU) 2026/1411 of 22 June 2026 on the position to be taken on behalf of the European Union within the World Forum for Harmonization of Vehicle Regulations of the United Nations Economic Commission for Europe",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601411"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601402: Council Implementing Regulation (EU) 2026/1402 of 22 June 2026 implementing Regulation (EU) 2015/735 concerning restrictive measures in respect of the situation in South Sudan",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601402"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601399: Council Decision (CFSP) 2026/1399 of 22 June 2026 amending Decision (CFSP) 2024/1472 on a European Union Diplomatic Academy",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601399"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601401: Council Implementing Decision (CFSP) 2026/1401 of 22 June 2026 implementing Decision (CFSP) 2015/740 concerning restrictive measures in view of the situation in South Sudan",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601401"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1390: Council Implementing Decision (CFSP) 2026/1390 of 22 June 2026 implementing Decision 2014/450/CFSP concerning restrictive measures in view of the situation in Sudan",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1390"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1396: Council Decision (CFSP) 2026/1396 of 22 June 2026 amending Decision (CFSP) 2023/2135 concerning restrictive measures in view of activities undermining the stability and political transition of Sudan",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1396"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R1393: Council Implementing Regulation (EU) 2026/1393 of 22 June 2026 implementing Article 15(1) of Regulation (EU) No 747/2014 concerning restrictive measures in view of the situation in Sudan",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1393"
+  },
+  {
+    "at": "2026-06-23T07:00:09.657Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026R1394: Council Implementing Regulation (EU) 2026/1394 of 22 June 2026 implementing Regulation (EU) 2023/2147 concerning restrictive measures in view of activities undermining the stability and political transition of Sudan",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R1394"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: EDPB gets a new look: discover the new website and brand identity",
+    "source": "https://www.edpb.europa.eu/news/edpb-gets-a-new-look-discover-the-new-website-and-brand-identity_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: Coordinated Supervision Committee extends scope to include Eurodac",
+    "source": "https://www.edpb.europa.eu/news/coordinated-supervision-committee-extends-scope-to-include-eurodac_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: EDPB meets with EU Commissioner McGrath and adopts common data breach notification template",
+    "source": "https://www.edpb.europa.eu/news/edpb-meets-with-eu-commissioner-mcgrath-and-adopts-common-data-breach-notification-template_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: The Italian SA imposed a 40 000 EUR fine on a company for violating the confidentiality of a employee's email account after the end of his employment",
+    "source": "https://www.edpb.europa.eu/news/the-italian-sa-imposed-a-40-000-eur-fine-on-a-company-for-violating-the-confidentiality-of-a_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: The Italian SA fined Poste Vita for data breach",
+    "source": "https://www.edpb.europa.eu/news/the-italian-sa-fined-poste-vita-for-data-breach_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: Imposition of fine on a telecommunications company for violations of data subject’s rights",
+    "source": "https://www.edpb.europa.eu/news/imposition-of-fine-on-a-telecommunications-company-for-violations-of-data-subjects-rights_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: The Italian Supervisory Authority fined a company 120 000 EUR for tracking five employees who drove company cars",
+    "source": "https://www.edpb.europa.eu/news/the-italian-supervisory-authority-fined-a-company-120-000-eur-for-tracking-five-employees-who_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: Italian SA fines a company for post-sick leave questionnaires",
+    "source": "https://www.edpb.europa.eu/news/italian-sa-fines-a-company-for-post-sick-leave-questionnaires_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: The Italian Supervisory Authority has fined Verisure Italia for unlawful processing of personal data for direct marketing purposes",
+    "source": "https://www.edpb.europa.eu/news/the-italian-supervisory-authority-has-fined-verisure-italia-for-unlawful-processing-of_en"
+  },
+  {
+    "at": "2026-06-23T07:00:09.966Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: EDPB and EDPS support strengthening EU’s cybersecurity and easing compliance while protecting individuals’ personal data",
+    "source": "https://www.edpb.europa.eu/news/edpb-and-edps-support-strengthening-eus-cybersecurity-and-easing-compliance-while-protecting_en"
+  },
+  {
+    "at": "2026-06-23T07:00:10.154Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - Brussels dialogue with Russian pro-democracy and anti-war actors",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260622IPR45916/"
+  },
+  {
+    "at": "2026-06-23T07:00:10.154Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - Combating child sexual abuse: agreement on updated rules",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260622IPR45906/"
+  },
+  {
+    "at": "2026-06-23T07:00:10.691Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "ESP"
+    ],
+    "summary": "Spain AEPD — notas de prensa (data protection / AI): page content changed (hash 7a19f16f → 76a8c3ed) — review for new/updated material.",
+    "source": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa"
+  },
+  {
+    "at": "2026-06-23T07:00:11.533Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GBR"
+    ],
+    "summary": "UK AI Safety Institute — publications & updates: page content changed (hash 08b1b9be → b4b5f2eb) — review for new/updated material.",
+    "source": "https://www.aisi.gov.uk/work"
+  },
+  {
+    "at": "2026-06-23T07:00:12.206Z",
+    "kind": "guidance",
+    "frameworkSlug": "nist-ai-rmf",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "NIST — AI news & AI Risk Management Framework updates: NIST Releases Technical Findings on What Caused the 2021 Partial Collapse of Champlain Towers South",
+    "source": "https://www.nist.gov/news-events/news/2026/06/nist-releases-technical-findings-what-caused-2021-partial-collapse"
+  },
+  {
+    "at": "2026-06-23T07:00:14.787Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "California Attorney General — news (AI/privacy enforcement): page content changed (hash 2cfe4737 → 48319364) — review for new/updated material.",
+    "source": "https://oag.ca.gov/news"
+  },
+  {
+    "at": "2026-06-23T07:00:14.970Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US FTC — press releases (AI/algorithmic enforcement): FTC Approves Final Consent Order in Pest-Control Noncompete Matter",
+    "source": "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-approves-final-consent-order-pest-control-noncompete-matter"
+  },
+  {
+    "at": "2026-06-23T07:00:15.808Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "Texas Attorney General — news (TRAIGA / AI enforcement): page content changed (hash 0c2b052e → ccd72a1f) — review for new/updated material.",
+    "source": "https://www.texasattorneygeneral.gov/news"
+  },
+  {
+    "at": "2026-06-23T07:00:18.034Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "KOR"
+    ],
+    "summary": "Korea PIPC — Personal Information Protection Commission news: page content changed (hash e3937d33 → 37e9021c) — review for new/updated material.",
+    "source": "https://www.pipc.go.kr/eng/user/ltn/new/newsList.do"
+  },
+  {
+    "at": "2026-06-23T07:00:18.319Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan METI — press releases (AI governance / guidelines): page content changed (hash a18e66e0 → 00328d71) — review for new/updated material.",
+    "source": "https://www.meti.go.jp/english/press/index.html"
+  },
+  {
+    "at": "2026-06-23T07:00:18.364Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: JP PINTの「グローバルの取組（Japan Peppol Team Meeting）」を更新しました",
+    "source": "https://www.digital.go.jp/policies/electronic_invoice/global-activities"
+  },
+  {
+    "at": "2026-06-23T07:00:18.364Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 公的個人認証サービス（JPKI）： 最新の利用者情報（4情報）提供サービスの資料を更新しました",
+    "source": "https://www.digital.go.jp/policies/mynumber/private-business/jpki-introduction"
+  },
+  {
+    "at": "2026-06-23T07:00:18.364Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 高等学校入学者選抜事務手続のデジタル化に関するダッシュボードを更新しました",
+    "source": "https://www.digital.go.jp/resources/govdashboard/high-school-entrance-examinations-digitalization"
+  },
+  {
+    "at": "2026-06-23T07:00:18.364Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 企画競争：病院情報システム等の刷新に向けた標準仕様策定業務を掲載しました",
+    "source": "https://www.digital.go.jp/procurement"
+  },
+  {
+    "at": "2026-06-23T07:00:18.364Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 松本大臣記者会見（令和8年6月22日）要旨を掲載しました",
+    "source": "https://www.digital.go.jp/speech/minister-260622-01"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���㖳���ʐM�ψ���񍐁i�āj�ɑ΂���ӌ���W�̌���",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000789.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �q���ʐM�V�X�e���ψ���񍐁i�āj�ɑ΂���ӌ���W�̌���",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban15_02000329.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@���ʐM�Z�p���ȉ�i��197��j�̊J�Âɂ���",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02tsushin10_04000722.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c�� ���ʐM�Z�p���ȉ� IP�l�b�g���[�N�ݔ��ψ���i��94��j�J�Èē�",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban05_04000788.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �ߘa8�N5���̔M���ǂɂ��~�}������",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001228.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���菬�d�͖����ǂ̗p�r�A�d�g�̌^���y�ю��g�����тɋ󒆐��d�͂��߂錏�̈ꕔ���������鍐���ē��ɌW��ӌ���W�̌���",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban14_02000786.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@�d�C�ʐM���Ɛ�������@���j�o�[�T���T�[�r�X����ψ���i��54��j�E���j�o�[�T���T�[�r�X���x�ɂ������t���E���S���̎Z�蓙�Ɋւ��郏�[�L���O�O���[�v�i��11��j �����",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/usf_seisaku/02kiban02_04000896.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u�T�[�r�X�Y�Ɠ��ԓ��v�����v2026�N�i�ߘa8�N�j4�����i����j",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01toukei05_01000342.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �����^�]����́g�������ITS�ʐM�h������i��3����11��j�z�z����",
+    "source": "https://www.soumu.go.jp/main_sosiki/kenkyu/Next_Generation_ITS/02kiban14_04001334.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u�����o�ς̎����ƌ��S�Ŏ����\\�Ȓn���s������Ղ̊m���̂��߂̒n���ō������v�ɂ��Ă̈ӌ��v�̒�o",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01zaisei02_02000416.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@���ʐM�Z�p���ȉ�@�d�g�L�����p�ψ���g�ѓd�b�����g���̗L�����p�Ɋւ��錟����Ɣǁi��4��j",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/kaisai/02kiban14_04001337.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��ʐE�i�����n�j �| �����K������X�V���܂����B",
+    "source": "https://www.soumu.go.jp/menu_syokai/saiyou/j2syu_houmon.html"
+  },
+  {
+    "at": "2026-06-23T07:00:19.167Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c�� �d�C�ʐM���Ɛ������� �ڑ�����ψ���(��83��) �z�z����",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/setsuzoku_seisaku/02kiban03_04001182.html"
+  },
+  {
+    "at": "2026-06-23T07:00:41.608Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Valdez announces new funding for the Women Entrepreneurship Strategy",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/minister-valdez-announces-new-funding-for-the-women-entrepreneurship-strategy.html"
+  },
+  {
+    "at": "2026-06-23T07:00:41.611Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Backgrounder: Government of Canada to help bring high-speed Internet access to Manitoba communities",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/backgrounder-government-of-canada-to-help-bring-high-speed-internet-access-to-manitoba-communities.html"
+  },
+  {
+    "at": "2026-06-23T07:00:41.611Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Canada expanding high-speed Internet access in rural and remote areas in Manitoba",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/canada-expanding-high-speed-internet-access-in-rural-and-remote-areas-in-manitoba.html"
+  },
+  {
+    "at": "2026-06-23T07:00:41.611Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Solomon to announce an investment in health data infrastructure",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/minister-solomon-to-announce-an-investment-in-health-data-infrastructure.html"
+  },
+  {
+    "at": "2026-06-23T07:00:41.611Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Government of Canada launched the Strategic Response Fund call for proposals to support domestic food security and strengthen Canadian industry",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/government-of-canada-launched-the-strategic-response-fund-call-for-proposals-to-support-domestic-food-security-and-strengthen-canadian-industry.html"
+  },
+  {
+    "at": "2026-06-23T07:00:43.322Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "AUS"
+    ],
+    "summary": "Australia PM&C — PM media releases (AI/tech policy announcements): page content changed (hash a4b1fbee → cd16e9c7) — review for new/updated material.",
+    "source": "https://www.pm.gov.au/media"
+  },
+  {
+    "at": "2026-06-23T07:00:49.405Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "ISO/IEC JTC 1/SC 42 — Artificial Intelligence standards committee: page content changed (hash 4db20315 → 022cfe89) — review for new/updated material.",
+    "source": "https://www.iso.org/committee/6794475.html"
+  },
+  {
+    "at": "2026-06-23T07:00:52.334Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 0d2c24d8 → 8c91567d) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
