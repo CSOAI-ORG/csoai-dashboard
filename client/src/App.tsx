@@ -86,6 +86,7 @@ import Blog from "./pages/Blog";
 import Recommendations from "./pages/Recommendations";
 import MarketingHome from "./pages/MarketingHome";
 import Standards from "./pages/Standards";
+import Layer0 from "./pages/Layer0";
 import PublicWatchdogHub from "./pages/PublicWatchdogHub";
 import CouncilDetail from "./pages/CouncilDetail";
 import Resources from "./pages/Resources";
@@ -246,6 +247,7 @@ function App() {
                   {/* <Route path="/referral" component={ReferralLandingPage} /> */}
                   <Route path="/marketing" component={MarketingHome} />
                   <Route path="/standards" component={Standards} />
+                  <Route path="/layer0" component={Layer0} />
                   <Route path="/resources" component={Resources} />
                   <Route path="/security" component={Security} />
                   <Route path="/docs" component={Documentation} />
