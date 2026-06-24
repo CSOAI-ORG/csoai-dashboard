@@ -358,10 +358,17 @@ describe("Exam System Enhancements", () => {
 });
 
 describe("Phase 12 - Question Randomization & Timed Practice", () => {
-  let db: Awaited<ReturnType<typeof getDb>>;
+  let db: Awaited<ReturnType<typeof getDb>> | null = null;
+  let dbAvailable = false;
 
   beforeAll(async () => {
-    db = await getDb();
+    try {
+      db = await getDb();
+      dbAvailable = !!db;
+    } catch (error) {
+      console.log('\u26a0\ufe0f Database not available, tests will be skipped');
+      dbAvailable = false;
+    }
   });
 
   describe("Question Randomization", () => {
