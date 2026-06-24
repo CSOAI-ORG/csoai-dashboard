@@ -101,6 +101,10 @@ function OpenGridWorksInner() {
   const [openWf, setOpenWf] = useState<string | null>(null);
   const [drawerQuery, setDrawerQuery] = useState('');
   const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+  // In-component immersive view: when on, overlays the MapLibre 3D governance globe
+  // (+ Sovereign Town live feed) served as a static asset at /globe.html. Default off,
+  // so the proven d3 vector map stays the canonical view — zero regression when unused.
+  const [globe3d, setGlobe3d] = useState(false);
   const drag = useRef<{ x: number; y: number; ox: number; oy: number; moved: boolean } | null>(null);
 
   useEffect(() => {
@@ -382,12 +386,23 @@ function OpenGridWorksInner() {
             <div className="absolute top-3 left-3 z-10 text-xs text-slate-400 bg-black/40 rounded-lg px-3 py-1.5 border border-slate-800">
               {t('statusBar', { jurisdictions: coveredCount, frameworks: FRAMEWORKS.length, countries: countryList.length || t('statusLoading') })}
             </div>
-            <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
+            <div className="absolute top-3 right-3 z-30 flex flex-col gap-1">
+              <button onClick={() => setGlobe3d((g) => !g)} aria-label="Toggle immersive 3D governance globe" title="3D governance globe + Sovereign Town (beta)" data-testid="toggle-globe3d" className={`w-8 h-8 grid place-items-center rounded-lg mb-1 border transition ${globe3d ? 'bg-emerald-500 border-emerald-400 text-white' : 'bg-slate-800/80 border-slate-700 hover:border-emerald-500'}`}><Globe2 className="w-4 h-4" /></button>
               <button onClick={() => setDrawer((d) => (d ? null : 'tools'))} aria-label="Tools, workflows & integrations" title="Tools, workflows & integrations" data-testid="open-tools-drawer" className="w-8 h-8 grid place-items-center rounded-lg bg-emerald-600/80 border border-emerald-500 hover:bg-emerald-500 mb-1"><Wrench className="w-4 h-4" /></button>
               <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k * 1.3) }))} aria-label={t('zoomIn')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Plus className="w-4 h-4" /></button>
               <button onClick={() => setView((v) => ({ ...v, k: clampZoom(v.k / 1.3) }))} aria-label={t('zoomOut')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><Minus className="w-4 h-4" /></button>
               <button onClick={reset} aria-label={t('resetView')} className="w-8 h-8 grid place-items-center rounded-lg bg-slate-800/80 border border-slate-700 hover:border-emerald-500"><RotateCcw className="w-4 h-4" /></button>
             </div>
+
+            {/* In-component immersive globe — MapLibre 3D + Sovereign Town live feed, served
+                at /globe.html. Mounted as an overlay so the d3 vector map underneath keeps its
+                state; toggling back is instant. Beta: lives one canvas with the rest of the OS. */}
+            {globe3d && (
+              <div className="absolute inset-0 z-20 bg-[#05080e]" data-testid="globe3d-overlay">
+                <div className="absolute top-3 left-3 z-10 text-[11px] text-emerald-300/90 bg-black/50 rounded-lg px-3 py-1.5 border border-emerald-500/30 pointer-events-none">3D Governance Globe + Sovereign Town · beta</div>
+                <iframe src="/globe.html" title="CSOAI 3D Governance Globe + Sovereign Town" className="w-full h-full" style={{ border: 0, minHeight: 560, display: 'block' }} loading="lazy" />
+              </div>
+            )}
 
             {err && <div className="p-8 text-center text-rose-400 text-sm">{t('atlasError', { error: err })}</div>}
             {!err && !path && <div className="p-8 text-center text-slate-500 text-sm animate-pulse">{t('atlasLoading')}</div>}
