@@ -37,6 +37,8 @@ export function Header() {
       href: '/opengridworks',
       submenu: [
         { name: 'World Map', href: '/opengridworks', description: 'AI regulation across 177 countries — live, 12 languages' },
+        { name: 'Globe (beta)', href: '/globe.html', description: 'Immersive 3D governance globe + Sovereign Town' },
+        { name: 'Layer 0', href: '/layer0', description: 'The 8 trust layers — CSOAI is Layer 0' },
         { name: 'Deadline Radar', href: '/radar', description: 'Every upcoming AI-law deadline worldwide' },
         { name: "What's Changed", href: '/feed', description: 'Live regulation updates, crawled daily' },
         { name: 'Landscape', href: '/landscape', description: 'Aggregate compliance intelligence (regulators)' },
@@ -273,15 +275,11 @@ export function Header() {
             </a>
 
             <a
-              href="/layer0"
-              data-testid="nav-layer0"
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
-                isActive('/layer0')
-                  ? 'text-emerald-600 bg-emerald-50'
-                  : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
-              }`}
+              href="/globe.html"
+              data-testid="nav-globe"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap text-gray-700 hover:text-emerald-600 hover:bg-gray-50`}
             >
-              Layer 0
+              Globe
             </a>
 
             <a
@@ -502,15 +500,11 @@ export function Header() {
                 </a>
 
                 <a
-                  href="/layer0"
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors block ${
-                    isActive('/layer0')
-                      ? 'text-emerald-600 bg-emerald-50'
-                      : 'text-gray-700 hover:text-emerald-600 hover:bg-gray-50'
-                  }`}
+                  href="/globe.html"
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors block text-gray-700 hover:text-emerald-600 hover:bg-gray-50`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Layer 0
+                  Globe (beta)
                 </a>
 
                 {navigation.map((item) => (
