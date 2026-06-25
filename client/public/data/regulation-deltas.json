@@ -1837,5 +1837,527 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 8c91567d → 7724b9c6) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-06-25T07:00:22.753Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601247: Decision of the EEA Joint Committee No 100/2026 of 20 March 2026 amending Annex XIII (Transport) to the EEA Agreement [2026/1247]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601247"
+  },
+  {
+    "at": "2026-06-25T07:00:22.754Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601257: Decision of the EEA Joint Committee No 60/2026 of 20 March 2026 amending Annex I (Veterinary and phytosanitary matters) to the EEA Agreement [2026/1257]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601257"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601240: Decision of the EEA Joint Committee No 92/2026 of 20 March 2026 amending Annex IX (Financial services) to the EEA Agreement [2026/1240]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601240"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601232: Decision of the EEA Joint Committee No 104/2026",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601232"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601326: Decision of the EEA Joint Committee No 74/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1326]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601326"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601292: Decision of the EEA Joint Committee No 87/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1292]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601292"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601261: Decision of the EEA Joint Committee No 68/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1261]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601261"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601325: Decision of the EEA Joint Committee No 77/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1325]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601325"
+  },
+  {
+    "at": "2026-06-25T07:00:22.755Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601265: Decision of the EEA Joint Committee No 72/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1265]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601265"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601236: Decision of the EEA Joint Committee No 103/2026 of 20 March 2026 amending Annex XVI (Procurement) to the EEA Agreement [2026/1236]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601236"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601246: Decision of the EEA Joint Committee No 101/2026 of 20 March 2026 amending Annex XV (State aid) to the EEA Agreement [2026/1246]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601246"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601302: Decision of the EEA Joint Committee No 110/2026 of 20 March 2026 amending Annex XXI (Statistics) to the EEA Agreement [2026/1302]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601302"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601290: Decision of the EEA Joint Committee No 86/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1290]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601290"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601242: Decision of the EEA Joint Committee No 93/2026 of 20 March 2026 amending Annex IX (Financial services) to the EEA Agreement [2026/1242]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601242"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601294: Decision of the EEA Joint Committee No 91/2026 of 20 March 2026 amending Annex IX (Financial services) to the EEA Agreement [2026/1294]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601294"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690510",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690510"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601379: Commission Implementing Decision (EU) 2026/1379 of 23 June 2026 terminating the anti-dumping procedure concerning imports of certain polyethylene terephthalate (PET) originating in Vietnam",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601379"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601263: Decision of the EEA Joint Committee No 71/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1263]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601263"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601264: Decision of the EEA Joint Committee No 70/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1264]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601264"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601320: Decision of the EEA Joint Committee No 76/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1320]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601320"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690517: Corrigendum to Council Implementing Regulation (CFSP) 2026/1225 of 8 June 2026 implementing Regulation (EU) 2023/1529 concerning restrictive measures in view of Iran’s military support to Russia’s war of aggression against U",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690517"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601321: Decision of the EEA Joint Committee No 73/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1321]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601321"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601298: Decision of the EEA Joint Committee No 69/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1298]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601298"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601297: Decision of the EEA Joint Committee No 82/2026 of 20 March 2026 amending Annex II (Technical regulations, standards, testing and certification) to the EEA Agreement [2026/1297]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601297"
+  },
+  {
+    "at": "2026-06-25T07:00:22.756Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601293: Decision of the EEA Joint Committee No 90/2026 of 20 March 2026 amending Annex IX (Financial services) to the EEA Agreement [2026/1293]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601293"
+  },
+  {
+    "at": "2026-06-25T07:00:23.118Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: Supporting GDPR consistency: EDPB launches dedicated form",
+    "source": "https://www.edpb.europa.eu/news/supporting-gdpr-consistency-edpb-launches-dedicated-form_en"
+  },
+  {
+    "at": "2026-06-25T07:00:23.397Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - East Asia: stronger cooperation to boost EU’s security and competitiveness",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260624IPR46106/"
+  },
+  {
+    "at": "2026-06-25T07:00:23.397Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - Cardiovascular health: MEPs call on EU to boost disease prevention",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260622IPR45934/"
+  },
+  {
+    "at": "2026-06-25T07:00:23.734Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Quatre auteurs reçoivent le deuxième prix CNIL/EHESS pour leur recherche sur la réception du règlement IA par les citoyens européens",
+    "source": "https://www.cnil.fr/fr/prix-ehess-cnil-2026"
+  },
+  {
+    "at": "2026-06-25T07:00:23.735Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Informations publiques",
+    "source": "https://www.cnil.fr/fr/informations-publiques"
+  },
+  {
+    "at": "2026-06-25T07:00:23.735Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Remise du prix « Protection de la vie privée » 2026 par la CNIL et l’Inria",
+    "source": "https://www.cnil.fr/fr/prix-inria-cnil-2026"
+  },
+  {
+    "at": "2026-06-25T07:00:23.735Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Victimes de violations de données : restez vigilants face aux offres d’accompagnement",
+    "source": "https://www.cnil.fr/fr/vigilance-accompagnement-violation-de-donnees"
+  },
+  {
+    "at": "2026-06-25T07:00:24.074Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "ESP"
+    ],
+    "summary": "Spain AEPD — notas de prensa (data protection / AI): page content changed (hash 76a8c3ed → 7e28f6f3) — review for new/updated material.",
+    "source": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa"
+  },
+  {
+    "at": "2026-06-25T07:00:28.004Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "California Attorney General — news (AI/privacy enforcement): page content changed (hash 10fa48cd → 8c54d513) — review for new/updated material.",
+    "source": "https://oag.ca.gov/news"
+  },
+  {
+    "at": "2026-06-25T07:00:31.145Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan METI — press releases (AI governance / guidelines): page content changed (hash 88dccb54 → a2d8dd29) — review for new/updated material.",
+    "source": "https://www.meti.go.jp/english/press/index.html"
+  },
+  {
+    "at": "2026-06-25T07:00:31.199Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 企画競争：令和8年度スマートフォン端末のセキュリティ診断に係る業務委託を掲載しました",
+    "source": "https://www.digital.go.jp/procurement"
+  },
+  {
+    "at": "2026-06-25T07:00:31.199Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: デジタル改革共創プラットフォームへの参加登録方法について、システムメンテナンス情報を掲載しました",
+    "source": "https://www.digital.go.jp/get-involved/co-creation-platform/register"
+  },
+  {
+    "at": "2026-06-25T07:00:31.199Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 予算執行に係る「補助金等の交付決定に係る情報（令和7年度下半期分）」および「令和7年度の庁費及び職員旅費・タクシー代の支出状況」を掲載しました",
+    "source": "https://www.digital.go.jp/budget"
+  },
+  {
+    "at": "2026-06-25T07:00:31.199Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 令和8年（2026年）第2回政策評価・行政事業レビュー有識者会議の議事概要を掲載しました",
+    "source": "https://www.digital.go.jp/policies/assessment/project-review/2026/0d104099-dc1f-4e57-bf21-f3da121df6ee"
+  },
+  {
+    "at": "2026-06-25T07:00:31.199Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 岩手県沖を震源とする地震に関する対応状況について",
+    "source": "https://www.digital.go.jp/news/e591de4f-a608-4578-82a3-2b2750ca5792"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�s���E�X���s���R�c��@�X���s�����ȉ�i��104��j�z�z�����E�c���T�v�E�c���^",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/yusei/yusei_gyousei/02ryutsu01_04000511.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʂ̌�t�`���ɌW��\\�j�[�l�b�g���[�N�R�~���j�P�[�V�����Y������Ђւ̎w��",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban08_03000454.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��茧����k���Ƃ���n�k�Ɋւ����Q�󋵓��ɂ��āi��5��j",
+    "source": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000671.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��茧����k���Ƃ���n�k�Ɋւ����Q�󋵓��ɂ��āi��4��j",
+    "source": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000670.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��茧����k���Ƃ���n�k�Ɋւ����Q�󋵓��ɂ��āi��3��j",
+    "source": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000669.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��茧����k���Ƃ���n�k�Ɋւ����Q�󋵓��ɂ��āi��2��j",
+    "source": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000668.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��茧����k���Ƃ���n�k�Ɋւ����Q�󋵓��ɂ��āi��1��j",
+    "source": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000667.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �f�W�^����Ԃɂ������񗬒ʂ̏��ۑ�ւ̑Ώ��Ɋւ��錟����@���M�ҏ��J�����[�L���O�O���[�v�i��3��j�J�Èē�",
+    "source": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000580.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u���ʐM�����헪�������c��@���Ԏ��܂Ƃ߁v�̌��\\",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01tsushin01_02000348.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��ʐE�Z�p�n�i���ʐM�s���j�̏����X�V���܂���",
+    "source": "https://www.soumu.go.jp/menu_syokai/saiyou/i2syu.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: KDDI������Ђɑ΂���񍐒���",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000281.html"
+  },
+  {
+    "at": "2026-06-25T07:00:32.180Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �f�W�^����Ԃɂ������񗬒ʂ̏��ۑ�ւ̑Ώ��Ɋւ��錟���� ���M�ҏ��J�����[�L���O�O���[�v�i��2��j�z�t����",
+    "source": "https://www.soumu.go.jp/main_sosiki/kenkyu/digital_shokadai/02ryutsu02_04000582.html"
+  },
+  {
+    "at": "2026-06-25T07:00:34.194Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CHN"
+    ],
+    "summary": "China CAC — Cyberspace Administration news (algorithm/genAI rules): page content changed (hash b4c5078d → ca704403) — review for new/updated material.",
+    "source": "https://www.cac.gov.cn/"
+  },
+  {
+    "at": "2026-06-25T07:00:54.483Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Valdez to announce artificial intelligence investment",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/minister-valdez-to-announce-artificial-intelligence-investment.html"
+  },
+  {
+    "at": "2026-06-25T07:00:56.249Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "AUS"
+    ],
+    "summary": "Australia PM&C — PM media releases (AI/tech policy announcements): page content changed (hash 21318ad3 → 48c2be91) — review for new/updated material.",
+    "source": "https://www.pm.gov.au/media"
+  },
+  {
+    "at": "2026-06-25T07:01:00.930Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "BRA"
+    ],
+    "summary": "Brazil ANPD — notícias (data protection / AI bill PL 2338): page content changed (hash ff206a9f → 36fbdb3b) — review for new/updated material.",
+    "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  },
+  {
+    "at": "2026-06-25T07:01:00.999Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "ISO/IEC JTC 1/SC 42 — Artificial Intelligence standards committee: page content changed (hash cd90db13 → 022cfe89) — review for new/updated material.",
+    "source": "https://www.iso.org/committee/6794475.html"
+  },
+  {
+    "at": "2026-06-25T07:01:03.281Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 7724b9c6 → 839204cf) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
