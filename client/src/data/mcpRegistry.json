@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26",
+  "generatedAt": "2026-06-27",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -436,7 +436,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:49:51Z"
+      "updatedAt": "2026-06-27T04:51:12Z"
     },
     {
       "slug": "csrd-compliance-mcp",
@@ -511,7 +511,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-25T06:36:59Z"
+      "updatedAt": "2026-06-27T04:53:12Z"
     },
     {
       "slug": "eu-cra-mcp",
@@ -1276,7 +1276,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:17:51Z"
+      "updatedAt": "2026-06-27T05:52:03Z"
     },
     {
       "slug": "pci-dss-mcp",
@@ -2578,17 +2578,6 @@
       "updatedAt": "2026-05-14T08:16:56Z"
     },
     {
-      "slug": "awesome-mcp-servers",
-      "name": "Awesome Mcp Servers",
-      "description": "A collection of MCP servers.",
-      "url": "https://github.com/CSOAI-ORG/awesome-mcp-servers",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-17T05:50:25Z"
-    },
-    {
       "slug": "awesome-mcp-servers-1",
       "name": "Awesome Mcp Servers 1",
       "description": "A comprehensive collection of Model Context Protocol (MCP) servers",
@@ -2609,6 +2598,17 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-05-14T08:16:48Z"
+    },
+    {
+      "slug": "awesome-mcp-servers-csoai",
+      "name": "Awesome Mcp Servers Csoai",
+      "description": "A collection of MCP servers.",
+      "url": "https://github.com/CSOAI-ORG/awesome-mcp-servers-csoai",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-27T05:50:32Z"
     },
     {
       "slug": "best-of-mcp-servers",
