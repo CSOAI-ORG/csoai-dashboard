@@ -2836,5 +2836,158 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 839204cf → 6dc30ac4) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-06-27T07:00:07.092Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1462: Council Decision (EU) 2026/1462 of 25 June 2026 on the financial contributions to be paid by the parties to the European Development Fund as a second instalment for 2026",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1462"
+  },
+  {
+    "at": "2026-06-27T07:00:07.092Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:22026D1246: Decision of the EEA Joint Committee No 101/2026 of 20 March 2026 amending Annex XV (State aid) to the EEA Agreement [2026/1246]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:22026D1246"
+  },
+  {
+    "at": "2026-06-27T07:00:07.748Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Technologies émergentes et protection des mineurs : les autorités de protection des données du G7 s’accordent sur des principes clés",
+    "source": "https://www.cnil.fr/fr/g7-technologies-protection-mineurs"
+  },
+  {
+    "at": "2026-06-27T07:00:07.992Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "ITA"
+    ],
+    "summary": "Italy Garante — news (data protection / AI enforcement): COMUNICATO STAMPA - G7 privacy: Principi comuni a tutela dei minori online e per un'IA rispettosa dei diritti",
+    "source": "https://www.gpdp.it/garante/doc.jsp?ID=10264387"
+  },
+  {
+    "at": "2026-06-27T07:00:08.334Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "DEU"
+    ],
+    "summary": "Germany BfDI — press releases (federal data protection): page content changed (hash 3278922d → 281b03b1) — review for new/updated material.",
+    "source": "https://www.bfdi.bund.de/EN/BfDI/Presse/Pressemitteilungen/pressemitteilungen_node.html"
+  },
+  {
+    "at": "2026-06-27T07:00:10.563Z",
+    "kind": "amendment",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Proposed Rule] Modernizing Security Requirements",
+    "source": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements"
+  },
+  {
+    "at": "2026-06-27T07:00:12.776Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "California Attorney General — news (AI/privacy enforcement): page content changed (hash bf3a3fb0 → 3f0c2178) — review for new/updated material.",
+    "source": "https://oag.ca.gov/news"
+  },
+  {
+    "at": "2026-06-27T07:00:16.037Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 山梨県東部・富士五湖を震源とする地震に関する対応状況について",
+    "source": "https://www.digital.go.jp/news/d31994e4-a969-4197-9ca6-38c498877411"
+  },
+  {
+    "at": "2026-06-27T07:00:16.796Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �R������k���Ƃ���n�k�Ɋւ����Q�󋵓��ɂ��āi��3��j",
+    "source": "https://www.soumu.go.jp/menu_kyotsuu/important/kinkyu01_000674.html"
+  },
+  {
+    "at": "2026-06-27T07:00:16.796Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@���ʐM�Z�p���ȉ�@�d�g���p���ψ���@��n�Ǔ��]�����@��Ɣǁi��12��j�����z�z",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/denpa_kankyou/kichikyoku/02kiban16_04000945.html"
+  },
+  {
+    "at": "2026-06-27T07:00:18.459Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CHN"
+    ],
+    "summary": "China CAC — Cyberspace Administration news (algorithm/genAI rules): page content changed (hash a11b6926 → 8c9a56a1) — review for new/updated material.",
+    "source": "https://www.cac.gov.cn/"
+  },
+  {
+    "at": "2026-06-27T07:00:38.824Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Canada and Germany to strengthen collaboration on semiconductors",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/canada-and-germany-to-strengthen-collaboration-on-semiconductors.html"
+  },
+  {
+    "at": "2026-06-27T07:00:38.824Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Joly to attend an announcement with Minerai de fer Québec (Champion Iron)",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/06/minister-joly-to-attend-an-announcement-with-minerai-de-fer-quebec-champion-iron.html"
+  },
+  {
+    "at": "2026-06-27T07:00:40.699Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "AUS"
+    ],
+    "summary": "Australia PM&C — PM media releases (AI/tech policy announcements): page content changed (hash 9c803eab → 5d7da182) — review for new/updated material.",
+    "source": "https://www.pm.gov.au/media"
+  },
+  {
+    "at": "2026-06-27T07:00:45.393Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "BRA"
+    ],
+    "summary": "Brazil ANPD — notícias (data protection / AI bill PL 2338): page content changed (hash eee2eac0 → b68d1716) — review for new/updated material.",
+    "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  },
+  {
+    "at": "2026-06-27T07:00:48.736Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 6dc30ac4 → 0fb711e2) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-06-27T07:00:49.825Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "AIAAIC — AI, Algorithmic & Automation Incidents & Controversies repository: page content changed (hash 2259e21a → 3aa18bfe) — review for new/updated material.",
+    "source": "https://www.aiaaic.org/aiaaic-repository"
   }
 ]
