@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27",
+  "generatedAt": "2026-06-28",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -1176,7 +1176,7 @@
       ],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:36:24Z"
+      "updatedAt": "2026-06-27T23:32:41Z"
     },
     {
       "slug": "mica-crypto-mcp",
@@ -3444,7 +3444,7 @@
       "frameworks": [],
       "language": "HTML",
       "meokLabs": true,
-      "updatedAt": "2026-06-20T11:22:46Z"
+      "updatedAt": "2026-06-27T11:23:03Z"
     },
     {
       "slug": "meal-planner-ai-mcp",
@@ -3666,7 +3666,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:37:33Z"
+      "updatedAt": "2026-06-28T03:20:21Z"
     },
     {
       "slug": "music-production-ai-mcp",
@@ -3831,7 +3831,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:40:31Z"
+      "updatedAt": "2026-06-28T03:21:57Z"
     },
     {
       "slug": "project-management-ai-mcp",
