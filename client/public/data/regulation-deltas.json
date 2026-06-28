@@ -2989,5 +2989,41 @@
     ],
     "summary": "AIAAIC — AI, Algorithmic & Automation Incidents & Controversies repository: page content changed (hash 2259e21a → 3aa18bfe) — review for new/updated material.",
     "source": "https://www.aiaaic.org/aiaaic-repository"
+  },
+  {
+    "at": "2026-06-28T07:00:08.448Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:22026D1240: Decision of the EEA Joint Committee No 92/2026 of 20 March 2026 amending Annex IX (Financial services) to the EEA Agreement [2026/1240]",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:22026D1240"
+  },
+  {
+    "at": "2026-06-28T07:00:14.980Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "Texas Attorney General — news (TRAIGA / AI enforcement): page content changed (hash 15408a33 → 73b9f977) — review for new/updated material.",
+    "source": "https://www.texasattorneygeneral.gov/news"
+  },
+  {
+    "at": "2026-06-28T07:00:41.240Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "AUS"
+    ],
+    "summary": "Australia PM&C — PM media releases (AI/tech policy announcements): page content changed (hash 5d7da182 → 225fe6d7) — review for new/updated material.",
+    "source": "https://www.pm.gov.au/media"
+  },
+  {
+    "at": "2026-06-28T07:00:48.500Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 0fb711e2 → 7a069f8d) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
