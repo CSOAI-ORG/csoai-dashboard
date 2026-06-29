@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-28",
+  "generatedAt": "2026-06-29",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
       "name": "Compliance & Regulatory",
-      "count": 112
+      "count": 128
     },
     {
       "name": "Safety & Security",
@@ -37,37 +37,37 @@
     },
     {
       "name": "General AI Automation",
-      "count": 161
+      "count": 145
     }
   ],
   "frameworkCounts": [
     {
       "name": "EU AI Act",
-      "count": 35
+      "count": 40
     },
     {
       "name": "GDPR",
-      "count": 11
-    },
-    {
-      "name": "NIS2",
-      "count": 9
+      "count": 17
     },
     {
       "name": "DORA",
-      "count": 8
+      "count": 12
+    },
+    {
+      "name": "NIS2",
+      "count": 12
     },
     {
       "name": "NIST AI RMF",
-      "count": 7
+      "count": 8
     },
     {
       "name": "ISO 42001",
-      "count": 6
+      "count": 7
     },
     {
       "name": "HIPAA",
-      "count": 4
+      "count": 5
     },
     {
       "name": "OWASP LLM",
@@ -138,6 +138,20 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-15T14:39:18Z"
+    },
+    {
+      "slug": "acord-bridge-mcp",
+      "name": "Acord Bridge",
+      "description": "ACORD insurance \u2192 AI governance. Solvency II + GDPR + EU AI Act. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/acord-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "EU AI Act",
+        "GDPR"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:24:13Z"
     },
     {
       "slug": "agent-audit-logger-mcp",
@@ -271,6 +285,19 @@
       "updatedAt": "2026-06-26T05:27:13Z"
     },
     {
+      "slug": "as400-bridge-mcp",
+      "name": "As400 Bridge",
+      "description": "IBM AS/400 enterprise \u2192 AI governance. SOX + DORA. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/as400-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "DORA"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:27:16Z"
+    },
+    {
       "slug": "basel-ai-overlay-mcp",
       "name": "Basel AI Overlay",
       "description": "Basel III + SR 11-7 + ECB TRIM AI/ML model risk MCP for banks. MIT",
@@ -352,6 +379,32 @@
       "updatedAt": "2026-06-26T05:28:11Z"
     },
     {
+      "slug": "cics-bridge-mcp",
+      "name": "Cics Bridge",
+      "description": "CICS mainframe \u2192 AI governance. SOX + PCI-DSS + DORA. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/cics-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "DORA"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:28:29Z"
+    },
+    {
+      "slug": "cobol-bridge-mcp",
+      "name": "Cobol Bridge",
+      "description": "Mainframe \u2192 AI governance. EU AI Act Art. 12 audit + Ed25519-signed. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/cobol-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "EU AI Act"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:28:51Z"
+    },
+    {
       "slug": "concrete-pump-cpa-mcp",
       "name": "Concrete Pump Cpa",
       "description": "UK concrete pump operator compliance MCP. CPA standards + BS EN 12001 ground bearing. MIT",
@@ -390,7 +443,7 @@
     {
       "slug": "cra-compliance-mcp",
       "name": "Cra Compliance",
-      "description": "EU Cyber Resilience Act (Reg 2024/2847) compliance MCP for products with digital elements. CE marking, vulnerability disclosure, SBOM. MIT",
+      "description": "EU Cyber Resilience Act (Reg 2024/2847) \u2192 AI governance. CE marking + SBOM. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/cra-compliance-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [],
@@ -418,7 +471,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:37:23Z"
+      "updatedAt": "2026-06-28T19:12:42Z"
     },
     {
       "slug": "csoai-governance-crosswalk-mcp",
@@ -459,6 +512,20 @@
       "language": "Python",
       "meokLabs": true,
       "updatedAt": "2026-06-15T14:40:13Z"
+    },
+    {
+      "slug": "dlms-bridge-mcp",
+      "name": "Dlms Bridge",
+      "description": "DLMS/COSEM energy \u2192 AI governance. IEC 62056 + NIS2 + GDPR. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/dlms-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "NIS2",
+        "GDPR"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:30:37Z"
     },
     {
       "slug": "dora-compliance-mcp",
@@ -597,6 +664,19 @@
       "updatedAt": "2026-06-16T05:44:31Z"
     },
     {
+      "slug": "gs1-bridge-mcp",
+      "name": "Gs1 Bridge",
+      "description": "GS1/EPCIS retail traceability \u2192 AI governance. EU AI Act. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/gs1-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "EU AI Act"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:31:51Z"
+    },
+    {
       "slug": "haulage-uk-compliance-mcp",
       "name": "Haulage Uk Compliance",
       "description": "UK haulage compliance MCP. Operator Licence, tachograph, drivers' hours, DVSA roadside checks. MIT",
@@ -649,6 +729,20 @@
       "updatedAt": "2026-06-26T05:32:42Z"
     },
     {
+      "slug": "hl7-fhir-bridge-mcp",
+      "name": "Hl7 Fhir Bridge",
+      "description": "HL7/FHIR healthcare \u2192 AI governance. HIPAA + EU MDR + GDPR. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/hl7-fhir-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "GDPR",
+        "HIPAA"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:32:44Z"
+    },
+    {
       "slug": "hr-management-ai-mcp",
       "name": "Hr Management Ai",
       "description": "Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding checklists, and compliance checking. By MEOK AI Labs.",
@@ -671,6 +765,32 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:50:57Z"
+    },
+    {
+      "slug": "iso20022-bridge-mcp",
+      "name": "Iso20022 Bridge",
+      "description": "ISO 20022 / SWIFT payments \u2192 AI governance. PSD2 + DORA + AML. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/iso20022-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "DORA"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:33:17Z"
+    },
+    {
+      "slug": "iso8583-bridge-mcp",
+      "name": "Iso8583 Bridge",
+      "description": "ISO 8583 cards \u2192 AI governance. PCI-DSS + DORA. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/iso8583-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "DORA"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:33:20Z"
     },
     {
       "slug": "legal-document-ai-mcp",
@@ -697,10 +817,12 @@
     {
       "slug": "ll144-bias-audit-mcp",
       "name": "Ll144 Bias Audit",
-      "description": "NYC Local Law 144 AEDT bias audit \u2014 selection rate, impact ratio (4/5ths), public summary \u2014 governed + signed.",
+      "description": "NYC Local Law 144 bias audit + EU AI Act bias-check. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/ll144-bias-audit-mcp",
       "category": "Compliance & Regulatory",
-      "frameworks": [],
+      "frameworks": [
+        "EU AI Act"
+      ],
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T04:47:59Z"
@@ -1087,7 +1209,7 @@
     {
       "slug": "meok-omnibus-tracker-mcp",
       "name": "Meok Omnibus Tracker",
-      "description": "EU AI Act + GDPR + DORA Digital Omnibus tracker \u2014 track all 8 cliff dates, 14 article changes, and the live status of every regulatory delay. By MEOK AI Labs.",
+      "description": "EU AI Act + GDPR + DORA Digital Omnibus tracker. 8 cliff dates + 14 article changes. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/meok-omnibus-tracker-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
@@ -1096,7 +1218,7 @@
         "GDPR"
       ],
       "language": "Python",
-      "meokLabs": true,
+      "meokLabs": false,
       "updatedAt": "2026-06-26T05:51:20Z"
     },
     {
@@ -1179,17 +1301,6 @@
       "updatedAt": "2026-06-27T23:32:41Z"
     },
     {
-      "slug": "mica-crypto-mcp",
-      "name": "Mica Crypto",
-      "description": "EU MiCA (Reg 2023/1114) compliance MCP for crypto-asset issuers, exchanges, CASPs. MIT",
-      "url": "https://github.com/CSOAI-ORG/mica-crypto-mcp",
-      "category": "Compliance & Regulatory",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:51:28Z"
-    },
-    {
       "slug": "mifid-ii-ai-mcp",
       "name": "Mifid Ii Ai",
       "description": "MiFID II Article 17 algorithmic trading compliance MCP. MIT",
@@ -1201,6 +1312,57 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:51:36Z"
+    },
+    {
+      "slug": "mismo-bridge-mcp",
+      "name": "Mismo Bridge",
+      "description": "MISMO mortgage \u2192 AI governance. ECOA + EU AI Act. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/mismo-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "EU AI Act"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:36:49Z"
+    },
+    {
+      "slug": "model-scoreboard-mcp",
+      "name": "Model Scoreboard",
+      "description": "AI model leaderboard + evidence-based routing. NIST + ISO 42001. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/model-scoreboard-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "ISO 42001",
+        "NIST AI RMF"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:37:16Z"
+    },
+    {
+      "slug": "mqtt-bridge-mcp",
+      "name": "Mqtt Bridge",
+      "description": "MQTT/IoT \u2192 AI governance. IEC 62443 + NIS2. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/mqtt-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "NIS2"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:37:25Z"
+    },
+    {
+      "slug": "nacha-bridge-mcp",
+      "name": "Nacha Bridge",
+      "description": "NACHA/ACH US payments \u2192 AI governance. OFAC + AML. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/nacha-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:37:42Z"
     },
     {
       "slug": "nis2-compliance-mcp",
@@ -1219,7 +1381,7 @@
     {
       "slug": "nist-iso42001-crosswalk-mcp",
       "name": "Nist Iso42001 Crosswalk",
-      "description": "NIST AI RMF <-> ISO/IEC 42001 crosswalk, both directions \u2014 governed + signed. CSOAI Layer-0.",
+      "description": "NIST AI RMF \u2194 ISO/IEC 42001:2023 crosswalk. The named crosswalk. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/nist-iso42001-crosswalk-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
@@ -1266,9 +1428,22 @@
       "updatedAt": "2026-06-07T07:57:06Z"
     },
     {
+      "slug": "oracle-bridge-mcp",
+      "name": "Oracle Bridge",
+      "description": "Oracle PL/SQL \u2192 AI governance. SOX + GDPR. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/oracle-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "GDPR"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:38:44Z"
+    },
+    {
       "slug": "oscal-generator-mcp",
       "name": "Oscal Generator",
-      "description": "Machine-readable NIST OSCAL generator + FedRAMP RFC-0024 readiness \u2014 governed + signed. CSOAI Layer-0.",
+      "description": "Machine-readable NIST OSCAL + Ed25519 signer. FedRAMP RFC-0024. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/oscal-generator-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
@@ -1306,7 +1481,7 @@
     {
       "slug": "regulatory-webhook-mcp",
       "name": "Regulatory Webhook",
-      "description": "Regulatory change monitoring MCP \u2014 subscribe to EU AI Act, NIS2, DORA updates. Webhook notifications. MIT.",
+      "description": "Push-notify EU AI Act / NIS2 / DORA updates via webhook. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/regulatory-webhook-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
@@ -1332,9 +1507,22 @@
       "updatedAt": "2026-06-26T05:42:44Z"
     },
     {
+      "slug": "sap-bridge-mcp",
+      "name": "Sap Bridge",
+      "description": "SAP ERP \u2192 AI governance. SOX + GDPR. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/sap-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "GDPR"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:42:54Z"
+    },
+    {
       "slug": "sbom-cyclonedx-mcp",
       "name": "Sbom Cyclonedx",
-      "description": "SBOM generation in CycloneDX 1.6 + SPDX 2.3. Required by EO 14028, NIS2, CRA. MIT",
+      "description": "SBOM CycloneDX 1.6 + SPDX 2.3. EO 14028 / NIS2 / CRA. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/sbom-cyclonedx-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
@@ -1343,6 +1531,32 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:43:01Z"
+    },
+    {
+      "slug": "scada-bridge-mcp",
+      "name": "Scada Bridge",
+      "description": "SCADA/OT industrial \u2192 AI governance. IEC 62443 + NIS2. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/scada-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "NIS2"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:43:04Z"
+    },
+    {
+      "slug": "sip-bridge-mcp",
+      "name": "Sip Bridge",
+      "description": "SIP telephony \u2192 AI governance. STIR/SHAKEN + GDPR. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/sip-bridge-mcp",
+      "category": "Compliance & Regulatory",
+      "frameworks": [
+        "GDPR"
+      ],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-26T05:43:58Z"
     },
     {
       "slug": "skip-hire-ai-mcp",
@@ -1358,7 +1572,7 @@
     {
       "slug": "slsa-supply-chain-mcp",
       "name": "Slsa Supply Chain",
-      "description": "SLSA v1.0 supply chain levels MCP. Provenance attestation. MIT",
+      "description": "SLSA v1.0 supply chain levels + provenance attestation. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/slsa-supply-chain-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [],
@@ -1402,7 +1616,7 @@
     {
       "slug": "uk-ai-bill-compliance-mcp",
       "name": "Uk AI Bill Compliance",
-      "description": "UK AI Bill 2026 compliance MCP. 5 principles framework (Safety, Transparency, Fairness, Accountability, Contestability). MIT",
+      "description": "UK AI Bill 2026 \u2192 AI governance. 5 principles framework. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/uk-ai-bill-compliance-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [],
@@ -1413,7 +1627,7 @@
     {
       "slug": "watermarking-authenticity-mcp",
       "name": "Watermarking Authenticity",
-      "description": "EU AI Act Article 50 watermarking + C2PA 2.1 MCP. 2 Dec 2026 deadline (compressed by May 2026 Omnibus). MIT",
+      "description": "EU AI Act Art.50 watermarking + C2PA 2.1. 2 Dec 2026 deadline. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/watermarking-authenticity-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
@@ -2534,17 +2748,6 @@
       "updatedAt": "2026-06-15T14:38:59Z"
     },
     {
-      "slug": "acord-bridge-mcp",
-      "name": "Acord Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/acord-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:24:13Z"
-    },
-    {
       "slug": "appcypher-awesome-mcp-servers",
       "name": "Appcypher Awesome Mcp Servers",
       "description": "Awesome MCP Servers - A curated list of Model Context Protocol servers",
@@ -2554,17 +2757,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-05-21T04:07:05Z"
-    },
-    {
-      "slug": "as400-bridge-mcp",
-      "name": "As400 Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/as400-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:27:16Z"
     },
     {
       "slug": "awesome-mcp-list",
@@ -2608,7 +2800,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-27T05:50:32Z"
+      "updatedAt": "2026-06-29T09:24:59Z"
     },
     {
       "slug": "best-of-mcp-servers",
@@ -2631,17 +2823,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:28:03Z"
-    },
-    {
-      "slug": "cics-bridge-mcp",
-      "name": "Cics Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/cics-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:28:29Z"
     },
     {
       "slug": "citation-finder-ai-mcp",
@@ -2686,17 +2867,6 @@
       "language": "Python",
       "meokLabs": true,
       "updatedAt": "2026-06-15T14:39:35Z"
-    },
-    {
-      "slug": "cobol-bridge-mcp",
-      "name": "Cobol Bridge",
-      "description": "COBOL \u2192 modern stack migration MCP. Real parser, cyclomatic complexity, phase planner. MIT",
-      "url": "https://github.com/CSOAI-ORG/cobol-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:28:51Z"
     },
     {
       "slug": "code-reviewer-ai-mcp",
@@ -2886,17 +3056,6 @@
       "updatedAt": "2026-06-26T05:49:58Z"
     },
     {
-      "slug": "dlms-bridge-mcp",
-      "name": "Dlms Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/dlms-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:30:37Z"
-    },
-    {
       "slug": "docker-helper-ai-mcp",
       "name": "Docker Helper Ai",
       "description": "Docker Helper MCP \u2014 automation tooling for docker helper. MIT.",
@@ -2921,7 +3080,7 @@
     {
       "slug": "edi-bridge-mcp",
       "name": "Edi Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
+      "description": "EDI/EDIFACT B2B \u2192 AI governance. SOX. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/edi-bridge-mcp",
       "category": "General AI Automation",
       "frameworks": [],
@@ -3064,7 +3223,7 @@
     {
       "slug": "fix-bridge-mcp",
       "name": "Fix Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
+      "description": "FIX trading \u2192 AI governance. MiFID II Art. 17. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/fix-bridge-mcp",
       "category": "General AI Automation",
       "frameworks": [],
@@ -3150,17 +3309,6 @@
       "updatedAt": "2026-06-15T14:41:00Z"
     },
     {
-      "slug": "gs1-bridge-mcp",
-      "name": "Gs1 Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/gs1-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:31:51Z"
-    },
-    {
       "slug": "habit-tracker-ai-mcp",
       "name": "Habit Tracker Ai",
       "description": "Track habits, streaks, and build accountability.",
@@ -3181,17 +3329,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:50:36Z"
-    },
-    {
-      "slug": "hl7-fhir-bridge-mcp",
-      "name": "Hl7 Fhir Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/hl7-fhir-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:32:44Z"
     },
     {
       "slug": "html-parser-ai-mcp",
@@ -3247,28 +3384,6 @@
       "language": "Python",
       "meokLabs": true,
       "updatedAt": "2026-06-26T05:50:50Z"
-    },
-    {
-      "slug": "iso20022-bridge-mcp",
-      "name": "Iso20022 Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/iso20022-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:33:17Z"
-    },
-    {
-      "slug": "iso8583-bridge-mcp",
-      "name": "Iso8583 Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/iso8583-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:33:20Z"
     },
     {
       "slug": "json-ai-mcp",
@@ -3603,15 +3718,15 @@
       "updatedAt": "2026-06-26T05:36:16Z"
     },
     {
-      "slug": "mismo-bridge-mcp",
-      "name": "Mismo Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/mismo-bridge-mcp",
+      "slug": "mica-crypto-mcp",
+      "name": "Mica Crypto",
+      "description": "EU MiCA (Reg 2023/1114) \u2192 AI governance. Crypto-asset issuers, exchanges, CASPs. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "url": "https://github.com/CSOAI-ORG/mica-crypto-mcp",
       "category": "General AI Automation",
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:36:49Z"
+      "updatedAt": "2026-06-26T05:51:28Z"
     },
     {
       "slug": "mitre-attack-mcp",
@@ -3636,28 +3751,6 @@
       "updatedAt": "2026-06-13T16:32:50Z"
     },
     {
-      "slug": "model-scoreboard-mcp",
-      "name": "Model Scoreboard",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/model-scoreboard-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:37:16Z"
-    },
-    {
-      "slug": "mqtt-bridge-mcp",
-      "name": "Mqtt Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/mqtt-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:37:25Z"
-    },
-    {
       "slug": "muckaway-ai-mcp",
       "name": "Muckaway Ai",
       "description": "MEOK AI Labs \u2014 Waste logistics & skip hire MCP Server. UK \u00a36B waste management market.",
@@ -3678,17 +3771,6 @@
       "language": "Python",
       "meokLabs": true,
       "updatedAt": "2026-06-26T05:37:40Z"
-    },
-    {
-      "slug": "nacha-bridge-mcp",
-      "name": "Nacha Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/nacha-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:37:42Z"
     },
     {
       "slug": "note-taking-ai-mcp",
@@ -3744,17 +3826,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-22T06:17:08Z"
-    },
-    {
-      "slug": "oracle-bridge-mcp",
-      "name": "Oracle Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/oracle-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:38:44Z"
     },
     {
       "slug": "otp-ai-mcp",
@@ -3933,28 +4004,6 @@
       "updatedAt": "2026-06-26T05:42:51Z"
     },
     {
-      "slug": "sap-bridge-mcp",
-      "name": "Sap Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/sap-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:42:54Z"
-    },
-    {
-      "slug": "scada-bridge-mcp",
-      "name": "Scada Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/scada-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:43:04Z"
-    },
-    {
       "slug": "scam-detector-mcp",
       "name": "Scam Detector",
       "description": "By [MEOK AI Labs](https://meok.ai) | The only MCP server for scam and fraud detection.",
@@ -4001,24 +4050,13 @@
     {
       "slug": "sigstore-cosign-mcp",
       "name": "Sigstore Cosign",
-      "description": "Sigstore cosign + Rekor transparency log verification MCP. MIT",
+      "description": "Sigstore cosign + Rekor transparency log verification. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/sigstore-cosign-mcp",
       "category": "General AI Automation",
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:43:55Z"
-    },
-    {
-      "slug": "sip-bridge-mcp",
-      "name": "Sip Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
-      "url": "https://github.com/CSOAI-ORG/sip-bridge-mcp",
-      "category": "General AI Automation",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-06-26T05:43:58Z"
     },
     {
       "slug": "slack-enterprise-mcp",
@@ -4122,7 +4160,7 @@
     {
       "slug": "tax-bridge-mcp",
       "name": "Tax Bridge",
-      "description": "MCP server - Model Context Protocol tool.",
+      "description": "Tax / e-invoicing \u2192 AI governance. SOX + HMRC MTD. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/tax-bridge-mcp",
       "category": "General AI Automation",
       "frameworks": [],
