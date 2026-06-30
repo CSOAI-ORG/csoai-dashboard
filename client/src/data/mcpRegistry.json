@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29",
+  "generatedAt": "2026-06-30",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -47,15 +47,15 @@
     },
     {
       "name": "GDPR",
-      "count": 17
+      "count": 18
     },
     {
       "name": "DORA",
-      "count": 12
+      "count": 14
     },
     {
       "name": "NIS2",
-      "count": 12
+      "count": 14
     },
     {
       "name": "NIST AI RMF",
@@ -71,7 +71,7 @@
     },
     {
       "name": "OWASP LLM",
-      "count": 4
+      "count": 3
     }
   ],
   "servers": [
@@ -476,16 +476,17 @@
     {
       "slug": "csoai-governance-crosswalk-mcp",
       "name": "Csoai Governance Crosswalk",
-      "description": "AI governance crosswalk MCP \u2014 map controls across 13 frameworks (EU AI Act, ISO 42001, NIST AI RMF, GDPR, SOC 2, HIPAA, FedRAMP, CCPA, PIPEDA, DPDPA, LGPD, CSA, OWASP).",
+      "description": "13-framework \u00d7 52-article regulatory crosswalk (NIST AI RMF \u2194 ISO/IEC 42001 \u2194 EU AI Act \u2194 DORA \u2194 NIS2 \u2194 GDPR \u2194 MiCA \u2194 Solvency II \u2194 HIPAA \u2194 SOX \u2194 PCI-DSS \u2194 CRA). Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 bleeding edge \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/csoai-governance-crosswalk-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
         "EU AI Act",
         "ISO 42001",
         "NIST AI RMF",
+        "DORA",
+        "NIS2",
         "GDPR",
-        "HIPAA",
-        "OWASP LLM"
+        "HIPAA"
       ],
       "language": "Python",
       "meokLabs": false,
@@ -570,11 +571,14 @@
     {
       "slug": "eu-ai-act-compliance-mcp",
       "name": "Eu AI Act Compliance",
-      "description": "EU AI Act compliance MCP with 410 verbatim articles from EUR-Lex. Risk classification, 42-point audit, Article 11 docs, penalty calculator. MIT",
+      "description": "410 verbatim EU AI Act articles + 28 article-level reg MCPs (Art.12 / Art.50 / GDPR Art.9 / DORA Art.17 / NIS2 Art.21 / CRA). Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 bleeding edge \u00b7 world-leading.",
       "url": "https://github.com/CSOAI-ORG/eu-ai-act-compliance-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
-        "EU AI Act"
+        "EU AI Act",
+        "DORA",
+        "NIS2",
+        "GDPR"
       ],
       "language": "Python",
       "meokLabs": false,
