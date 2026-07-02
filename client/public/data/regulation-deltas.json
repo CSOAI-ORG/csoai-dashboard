@@ -4241,5 +4241,293 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 10dbfe2e → f29d932d) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-07-02T07:00:06.318Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601520: Decision (EU) 2026/1520 of the European Central Bank of 23 June 2026 granting authorisation to sign agreements with customers of TARGET-ECB (ECB/2026/14)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601520"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32017R0392R(02): Berichtigung der Delegierten Verordnung (EU) 2017/392 der Kommission vom 11. November 2016 zur Ergänzung der Verordnung (EU) Nr. 909/2014 des Europäischen Parlaments und des Rates durch technische Regulierungsstandard",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32017R0392R(02)"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690543: Berichtigung des Beschlusses (GASP) 2021/698 des Rates vom 30. April 2021 über die Sicherheitssysteme und -dienste, die im Rahmen des Weltraumprogramms der Union eingerichtet, betrieben und genutzt werden und die Sicherheit ",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690543"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32016R1199R(10)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32016R1199R(10)"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601428: Commission Implementing Decision (EU) 2026/1428 of 1 July 2026 amending the Annex to Decision 2002/994/EC concerning certain protective measures with regard to the products of animal origin imported from China",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601428"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601538: Decision (EU) 2026/1538 of the European Central Bank of 23 June 2026 delegating the decision-making powers in matters related to agreements with customers of TARGET-ECB (ECB/2026/13)",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601538"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601537: Council Decision (EU) 2026/1537 of 29 June 2026 appointing two European Prosecutors of the European Public Prosecutor’s Office",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601537"
+  },
+  {
+    "at": "2026-07-02T07:00:06.319Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601527: Council Decision (EU) 2026/1527 of 26 June 2026 authorising the opening of negotiations for an agreement between the Union and the Republic of India on the participation of the Republic of India in Union programmes and the a",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601527"
+  },
+  {
+    "at": "2026-07-02T07:00:06.324Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202690542",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202690542"
+  },
+  {
+    "at": "2026-07-02T07:00:06.324Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: OJ:L_202601511: Council Decision (EU) 2026/1511 of 25 June 2026 on the position to be adopted on behalf of the European Union within the EEA Joint Committee concerning an amendment to Protocol 31 to the EEA Agreement on cooperation in speci",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=OJ:L_202601511"
+  },
+  {
+    "at": "2026-07-02T07:00:06.539Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Data Protection Board — news & guidelines: EDPB and AMLA to develop Joint Guidelines on partnerships for information sharing",
+    "source": "https://www.edpb.europa.eu/news/edpb-and-amla-to-develop-joint-guidelines-on-partnerships-for-information-sharing_en"
+  },
+  {
+    "at": "2026-07-02T07:00:06.677Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - EU institutions receive Ombudsman Award for user-friendly EU Law Tracker",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260630IPR46218/"
+  },
+  {
+    "at": "2026-07-02T07:00:06.677Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - EU-wide survey: An insecure world raises high expectations on the EU",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260629IPR46203/"
+  },
+  {
+    "at": "2026-07-02T07:00:06.763Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "ENISA — EU cybersecurity agency news (AI security): page content changed (hash 0c32ac8e → 10b6b0d9) — review for new/updated material.",
+    "source": "https://www.enisa.europa.eu/news"
+  },
+  {
+    "at": "2026-07-02T07:00:14.395Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Public Inquiry",
+    "source": "https://www.federalregister.gov/documents/2026/07/01/2026-13235/public-inquiry"
+  },
+  {
+    "at": "2026-07-02T07:00:16.818Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "California Attorney General — news (AI/privacy enforcement): page content changed (hash 48a85daf → b4306a6a) — review for new/updated material.",
+    "source": "https://oag.ca.gov/news"
+  },
+  {
+    "at": "2026-07-02T07:00:17.126Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US FTC — press releases (AI/algorithmic enforcement): FTC Seeks Public Comment on Policy Statement Addressing AI Accuracy",
+    "source": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy"
+  },
+  {
+    "at": "2026-07-02T07:00:17.954Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "Texas Attorney General — news (TRAIGA / AI enforcement): page content changed (hash c8a65711 → 8949f0ff) — review for new/updated material.",
+    "source": "https://www.texasattorneygeneral.gov/news"
+  },
+  {
+    "at": "2026-07-02T07:00:19.965Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "KOR"
+    ],
+    "summary": "Korea PIPC — Personal Information Protection Commission news: page content changed (hash 37e9021c → 9f228e32) — review for new/updated material.",
+    "source": "https://www.pipc.go.kr/eng/user/ltn/new/newsList.do"
+  },
+  {
+    "at": "2026-07-02T07:00:20.124Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 国や東京都のために働くことに興味をお持ちの方へ：デジタル庁とGovTech東京が開催するキャリアミートアップイベントの募集を開始しました",
+    "source": "https://www.digital.go.jp/news/50faa5d0-d0ca-431a-b005-f6e5568324c4"
+  },
+  {
+    "at": "2026-07-02T07:00:20.124Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: 第2回デジタル・サイバーセキュリティワーキンググループに会議資料を掲載しました",
+    "source": "https://www.digital.go.jp/councils/digital-cybersecurity/e2ab2aca-0107-4b72-b06b-eb67a970baca"
+  },
+  {
+    "at": "2026-07-02T07:00:20.124Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: アジャイル開発に関する有識者検討会（第5回）の会議資料等を掲載しました",
+    "source": "https://www.digital.go.jp/councils/procurement-agile-opensource/agile-review-meeting/75b6aca0-27c7-457f-8513-b4127b9d04e9"
+  },
+  {
+    "at": "2026-07-02T07:00:20.124Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan Digital Agency (デジタル庁) — news & updates RSS: オープンソース化・OSS利活用に関する有識者検討会（第5回）の会議資料等を掲載しました",
+    "source": "https://www.digital.go.jp/councils/procurement-agile-opensource/opensource-review-meeting/d90e5cd7-8a26-4d5e-8c8e-e6802c3c663b"
+  },
+  {
+    "at": "2026-07-02T07:00:20.941Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u����d�C�ʐM�ɂ����̗��ʂɂ���Ĕ������錠���N�Q���ւ̑Ώ��Ɋւ���@����26���Ɋւ���K�C�h���C���v�i����āj�ɂ��Ă̈ӌ���W",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01ryutsu02_02000481.html"
+  },
+  {
+    "at": "2026-07-02T07:00:20.941Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �u���O�����^���N�̗\\�h�ۑS�Ɋւ��钲��������v�̊J��",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01shoubo01_02001224.html"
+  },
+  {
+    "at": "2026-07-02T07:00:20.941Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ���ʐM�R�c��@���ʐM�Z�p���ȉ�i��197��j�z�t�����E�c���T�v�E�c���^",
+    "source": "https://www.soumu.go.jp/main_sosiki/joho_tsusin/policyreports/joho_tsusin/bunkakai/02tsushin10_04000726.html"
+  },
+  {
+    "at": "2026-07-02T07:00:20.941Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �n�������̂̃f�W�^���g�����X�t�H�[���[�V�������i�ɌW�錟����i��39��j",
+    "source": "https://www.soumu.go.jp/main_sosiki/kenkyu/chiho_dx/02gyosei04_04000194.html"
+  },
+  {
+    "at": "2026-07-02T07:00:20.941Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: ��7��O�c�@�c���I������R�c��",
+    "source": "https://www.soumu.go.jp/main_sosiki/singi/senkyoku/02gyosei14_04000259.html"
+  },
+  {
+    "at": "2026-07-02T07:00:20.941Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �n�������c�̂ɂ�����l�ވ琬�Ɋւ��錤����i��1��j",
+    "source": "https://www.soumu.go.jp/main_sosiki/kenkyu/chiho_jinzai_ikusei_r08/dai01kai.html"
+  },
+  {
+    "at": "2026-07-02T07:00:22.843Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CHN"
+    ],
+    "summary": "China CAC — Cyberspace Administration news (algorithm/genAI rules): page content changed (hash 81e44d44 → 1ab6d9db) — review for new/updated material.",
+    "source": "https://www.cac.gov.cn/"
+  },
+  {
+    "at": "2026-07-02T07:00:49.139Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "BRA"
+    ],
+    "summary": "Brazil ANPD — notícias (data protection / AI bill PL 2338): page content changed (hash ba0795bb → 194de9ff) — review for new/updated material.",
+    "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  },
+  {
+    "at": "2026-07-02T07:00:52.351Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash f29d932d → 0a59d94a) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
