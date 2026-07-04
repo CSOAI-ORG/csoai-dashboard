@@ -5141,5 +5141,149 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 0a59d94a → 4a23964c) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-07-04T07:00:17.833Z",
+    "kind": "new-instrument",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "EU Official Journal — L series (new legislation) RSS: CELEX:32026D1542: Council Decision (CFSP) 2026/1542 of 3 July 2026 amending Decision (CFSP) 2018/1544 concerning restrictive measures against the proliferation and use of chemical weapons",
+    "source": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1542"
+  },
+  {
+    "at": "2026-07-04T07:00:18.235Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "EUR"
+    ],
+    "summary": "European Parliament — press releases (AI/digital): Press release - Press conference on updated air passenger rights on Tuesday at 14.00",
+    "source": "https://www.europarl.europa.eu/news/en/press-room/20260702IPR46251/"
+  },
+  {
+    "at": "2026-07-04T07:00:18.470Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Le métier de DPO à l’heure de l’intelligence artificielle : publication des résultats de l’enquête",
+    "source": "https://www.cnil.fr/fr/enquete-dpo-ia"
+  },
+  {
+    "at": "2026-07-04T07:00:18.470Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "FRA"
+    ],
+    "summary": "France CNIL — actualités (data protection / AI): Ordre du jour de la séance plénière du 2 juillet 2026",
+    "source": "https://www.cnil.fr/fr/ordre-du-jour-de-la-seance-pleniere-du-2-juillet-2026"
+  },
+  {
+    "at": "2026-07-04T07:00:20.786Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US Federal Register — AI documents (JSON API): [Notice] Implementing Voluntary Agreements Under the Defense Production Act",
+    "source": "https://www.federalregister.gov/documents/2026/07/06/2026-13486/implementing-voluntary-agreements-under-the-defense-production-act"
+  },
+  {
+    "at": "2026-07-04T07:00:23.505Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "California Attorney General — news (AI/privacy enforcement): page content changed (hash e4f0b1f3 → 7ce2520d) — review for new/updated material.",
+    "source": "https://oag.ca.gov/news"
+  },
+  {
+    "at": "2026-07-04T07:00:23.637Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US FTC — press releases (AI/algorithmic enforcement): FTC Approves Final Consent Order in Micromarket Kiosks Deal",
+    "source": "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-approves-final-consent-order-micromarket-kiosks-deal"
+  },
+  {
+    "at": "2026-07-04T07:00:24.321Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "Texas Attorney General — news (TRAIGA / AI enforcement): page content changed (hash 8949f0ff → eddc4059) — review for new/updated material.",
+    "source": "https://www.texasattorneygeneral.gov/news"
+  },
+  {
+    "at": "2026-07-04T07:00:46.191Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �ߘa8�N7��4���t�@�����Ȑl��",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kanbo01_02001147.html"
+  },
+  {
+    "at": "2026-07-04T07:00:46.191Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "JPN"
+    ],
+    "summary": "Japan MIC / Soumu (総務省) — news (AI, telecoms, data governance) RSS: �����R�~���j�P�[�V�����Y������Ћy�ъ�����ЃG�f�B�I���ɂ��g�ѓd�b�s�����p�h�~�@�ᔽ�ɌW�鐥�����ߓ�",
+    "source": "https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000282.html"
+  },
+  {
+    "at": "2026-07-04T07:00:48.124Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CHN"
+    ],
+    "summary": "China CAC — Cyberspace Administration news (algorithm/genAI rules): page content changed (hash bb7f8b27 → 817bd1be) — review for new/updated material.",
+    "source": "https://www.cac.gov.cn/"
+  },
+  {
+    "at": "2026-07-04T07:01:08.019Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada OPC — Office of the Privacy Commissioner news: page content changed (hash 38e64664 → 154d11ae) — review for new/updated material.",
+    "source": "https://www.priv.gc.ca/en/opc-news/news-and-announcements/"
+  },
+  {
+    "at": "2026-07-04T07:01:08.749Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Parliamentary Secretary Ménard to announce next steps of Buy Canadian policy",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/07/parliamentary-secretary-menard-to-announce-next-steps-of-buy-canadian-policy.html"
+  },
+  {
+    "at": "2026-07-04T07:01:08.749Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "CAN"
+    ],
+    "summary": "Canada ISED — departmental news (AI & Data Act / AISI Canada): Minister Valdez signs Canada–Philippines memorandum of understanding on tourism cooperation",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/07/minister-valdez-signs-canadaphilippines-memorandum-of-understanding-on-tourism-cooperation.html"
+  },
+  {
+    "at": "2026-07-04T07:01:15.127Z",
+    "kind": "guidance",
+    "jurisdictions": [
+      "BRA"
+    ],
+    "summary": "Brazil ANPD — notícias (data protection / AI bill PL 2338): page content changed (hash 5620e484 → e5b62438) — review for new/updated material.",
+    "source": "https://www.gov.br/anpd/pt-br/assuntos/noticias"
+  },
+  {
+    "at": "2026-07-04T07:01:18.856Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 4a23964c → c9d1a117) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
