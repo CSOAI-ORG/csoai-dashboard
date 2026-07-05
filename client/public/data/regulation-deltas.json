@@ -5285,5 +5285,23 @@
     ],
     "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash 4a23964c → c9d1a117) — review for new/updated material.",
     "source": "https://oecd.ai/en/incidents"
+  },
+  {
+    "at": "2026-07-05T07:00:14.362Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "USA"
+    ],
+    "summary": "US FTC — press releases (AI/algorithmic enforcement): FTC Sues to Stop Sprawling Enterprise Operating Unlawful Subscription Schemes",
+    "source": "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-sues-stop-sprawling-enterprise-operating-unlawful-subscription-schemes"
+  },
+  {
+    "at": "2026-07-05T07:00:50.357Z",
+    "kind": "enforcement",
+    "jurisdictions": [
+      "GLOBAL"
+    ],
+    "summary": "OECD AI Incidents Monitor (AIM): page content changed (hash c9d1a117 → 98dd43b8) — review for new/updated material.",
+    "source": "https://oecd.ai/en/incidents"
   }
 ]
