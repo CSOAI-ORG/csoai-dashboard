@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11",
+  "generatedAt": "2026-07-12",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -3563,7 +3563,7 @@
       "frameworks": [],
       "language": "HTML",
       "meokLabs": true,
-      "updatedAt": "2026-06-27T11:23:03Z"
+      "updatedAt": "2026-07-11T11:22:51Z"
     },
     {
       "slug": "meal-planner-ai-mcp",
