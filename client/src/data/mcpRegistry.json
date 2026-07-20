@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19",
+  "generatedAt": "2026-07-20",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -341,7 +341,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:27:47Z"
+      "updatedAt": "2026-07-19T08:52:30Z"
     },
     {
       "slug": "c2pa-watermark-mcp",
@@ -471,7 +471,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-28T19:12:42Z"
+      "updatedAt": "2026-07-19T19:28:11Z"
     },
     {
       "slug": "csoai-governance-crosswalk-mcp",
@@ -1955,7 +1955,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:25:51Z"
+      "updatedAt": "2026-07-19T12:52:32Z"
     },
     {
       "slug": "agent-orchestrator-mcp",
@@ -1999,7 +1999,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:29:21Z"
+      "updatedAt": "2026-07-19T08:52:30Z"
     },
     {
       "slug": "eudi-wallet-mcp",
@@ -2065,7 +2065,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:48:32Z"
+      "updatedAt": "2026-07-19T15:22:36Z"
     },
     {
       "slug": "agent-commerce-payments-mcp",
@@ -2441,7 +2441,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-21T15:52:32Z"
+      "updatedAt": "2026-07-19T15:52:37Z"
     },
     {
       "slug": "currency-converter-ai-mcp",
@@ -2639,7 +2639,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:46:09Z"
+      "updatedAt": "2026-07-19T09:32:35Z"
     },
     {
       "slug": "validator-ai-mcp",
@@ -2914,7 +2914,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:49:36Z"
+      "updatedAt": "2026-07-19T22:42:36Z"
     },
     {
       "slug": "config-validator-ai-mcp",
@@ -2958,7 +2958,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-21T17:42:22Z"
+      "updatedAt": "2026-07-19T17:42:35Z"
     },
     {
       "slug": "cron-ai-mcp",
@@ -3277,7 +3277,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-21T20:12:21Z"
+      "updatedAt": "2026-07-19T20:12:32Z"
     },
     {
       "slug": "geolocation-ai-mcp",
@@ -3464,7 +3464,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-21T18:42:29Z"
+      "updatedAt": "2026-07-19T19:25:34Z"
     },
     {
       "slug": "logistics-ai-mcp",
@@ -3607,7 +3607,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-21T23:42:18Z"
+      "updatedAt": "2026-07-19T23:42:41Z"
     },
     {
       "slug": "meok-abci-bridge-mcp",
@@ -3829,7 +3829,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-22T06:17:08Z"
+      "updatedAt": "2026-07-20T06:19:10Z"
     },
     {
       "slug": "otp-ai-mcp",
@@ -3873,7 +3873,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:39:45Z"
+      "updatedAt": "2026-07-19T16:32:35Z"
     },
     {
       "slug": "performance-ai-mcp",
@@ -3884,7 +3884,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:39:52Z"
+      "updatedAt": "2026-07-19T10:02:47Z"
     },
     {
       "slug": "pet-care-ai-mcp",
@@ -4071,7 +4071,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:44:12Z"
+      "updatedAt": "2026-07-19T20:22:34Z"
     },
     {
       "slug": "sleep-tracker-ai-mcp",
@@ -4082,7 +4082,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:44:20Z"
+      "updatedAt": "2026-07-19T11:32:31Z"
     },
     {
       "slug": "slugify-ai-mcp",
@@ -4159,7 +4159,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:45:51Z"
+      "updatedAt": "2026-07-19T22:42:33Z"
     },
     {
       "slug": "tax-bridge-mcp",
@@ -4225,7 +4225,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:46:47Z"
+      "updatedAt": "2026-07-19T10:12:35Z"
     },
     {
       "slug": "unit-converter-ai-mcp",
@@ -4258,7 +4258,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-26T05:47:32Z"
+      "updatedAt": "2026-07-19T20:52:30Z"
     },
     {
       "slug": "vector-knowledge-graph-mcp",
@@ -4291,7 +4291,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:48:17Z"
+      "updatedAt": "2026-07-19T12:22:29Z"
     },
     {
       "slug": "web-research-mcp",
@@ -4302,7 +4302,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:48:24Z"
+      "updatedAt": "2026-07-19T13:12:28Z"
     },
     {
       "slug": "wong2-awesome-mcp-servers",
