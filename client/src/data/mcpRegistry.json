@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22",
+  "generatedAt": "2026-07-23",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -151,7 +151,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:24:13Z"
+      "updatedAt": "2026-07-23T03:53:46Z"
     },
     {
       "slug": "agent-audit-logger-mcp",
@@ -389,7 +389,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:28:29Z"
+      "updatedAt": "2026-07-23T05:24:08Z"
     },
     {
       "slug": "cobol-bridge-mcp",
@@ -781,7 +781,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:33:17Z"
+      "updatedAt": "2026-07-23T01:43:46Z"
     },
     {
       "slug": "iso8583-bridge-mcp",
@@ -794,7 +794,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:33:20Z"
+      "updatedAt": "2026-07-23T07:53:52Z"
     },
     {
       "slug": "legal-document-ai-mcp",
@@ -1355,7 +1355,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:37:25Z"
+      "updatedAt": "2026-07-23T00:23:55Z"
     },
     {
       "slug": "nacha-bridge-mcp",
@@ -1442,7 +1442,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:38:44Z"
+      "updatedAt": "2026-07-23T01:14:06Z"
     },
     {
       "slug": "oscal-generator-mcp",
@@ -3090,7 +3090,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:30:55Z"
+      "updatedAt": "2026-07-23T03:33:51Z"
     },
     {
       "slug": "email-automation-mcp",
@@ -3233,7 +3233,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:31:38Z"
+      "updatedAt": "2026-07-23T07:53:58Z"
     },
     {
       "slug": "flashcard-ai-mcp",
