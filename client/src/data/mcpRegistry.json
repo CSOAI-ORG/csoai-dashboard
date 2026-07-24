@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23",
+  "generatedAt": "2026-07-24",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -295,7 +295,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:27:16Z"
+      "updatedAt": "2026-07-23T12:24:08Z"
     },
     {
       "slug": "basel-ai-overlay-mcp",
@@ -744,7 +744,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:32:44Z"
+      "updatedAt": "2026-07-23T14:05:19Z"
     },
     {
       "slug": "hr-management-ai-mcp",
@@ -794,7 +794,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-23T07:53:52Z"
+      "updatedAt": "2026-07-23T07:53:57Z"
     },
     {
       "slug": "legal-document-ai-mcp",
@@ -1366,7 +1366,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:37:42Z"
+      "updatedAt": "2026-07-23T08:44:05Z"
     },
     {
       "slug": "nis2-compliance-mcp",
@@ -1521,7 +1521,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:42:54Z"
+      "updatedAt": "2026-07-23T19:34:09Z"
     },
     {
       "slug": "sbom-cyclonedx-mcp",
@@ -1547,7 +1547,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:43:04Z"
+      "updatedAt": "2026-07-23T10:14:23Z"
     },
     {
       "slug": "sip-bridge-mcp",
@@ -1560,7 +1560,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:43:58Z"
+      "updatedAt": "2026-07-23T21:34:15Z"
     },
     {
       "slug": "skip-hire-ai-mcp",
