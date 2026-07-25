@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24",
+  "generatedAt": "2026-07-25",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -354,7 +354,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-10T18:44:12Z"
+      "updatedAt": "2026-07-24T18:44:21Z"
     },
     {
       "slug": "canada-aida-ai-mcp",
@@ -840,7 +840,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-18T00:03:00Z"
+      "updatedAt": "2026-07-25T00:03:06Z"
     },
     {
       "slug": "mcp-spec-compliance-mcp",
@@ -1685,7 +1685,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-18T06:22:37Z"
+      "updatedAt": "2026-07-25T06:22:53Z"
     },
     {
       "slug": "ci-cd-generator-ai-mcp",
@@ -1878,7 +1878,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-18T07:12:31Z"
+      "updatedAt": "2026-07-25T07:12:53Z"
     },
     {
       "slug": "writing-assistant-ai-mcp",
@@ -2320,7 +2320,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-18T02:02:40Z"
+      "updatedAt": "2026-07-25T02:02:58Z"
     },
     {
       "slug": "stock-analyzer-ai-mcp",
@@ -2397,7 +2397,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-18T01:42:29Z"
+      "updatedAt": "2026-07-25T01:42:44Z"
     },
     {
       "slug": "changelog-ai-mcp",
@@ -2485,7 +2485,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-18T07:52:29Z"
+      "updatedAt": "2026-07-25T07:52:43Z"
     },
     {
       "slug": "icon-generator-ai-mcp",
@@ -2694,7 +2694,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-18T07:32:33Z"
+      "updatedAt": "2026-07-25T07:33:04Z"
     },
     {
       "slug": "plagiarism-checker-ai-mcp",
@@ -2859,7 +2859,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-18T05:02:36Z"
+      "updatedAt": "2026-07-25T05:02:49Z"
     },
     {
       "slug": "clipboard-ai-mcp",
@@ -3211,7 +3211,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-18T07:32:42Z"
+      "updatedAt": "2026-07-25T07:32:47Z"
     },
     {
       "slug": "fitness-ai-mcp",
@@ -3222,7 +3222,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-18T04:12:31Z"
+      "updatedAt": "2026-07-25T04:12:49Z"
     },
     {
       "slug": "fix-bridge-mcp",
@@ -3895,7 +3895,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-18T00:52:26Z"
+      "updatedAt": "2026-07-25T00:53:01Z"
     },
     {
       "slug": "planthire-ai-mcp",
