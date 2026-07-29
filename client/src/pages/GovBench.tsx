@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { SovCard } from "@/components/SovCard";
 import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -82,6 +83,9 @@ export default function GovBench() {
                 <Database className="mr-2 h-4 w-4" /> Get the data
               </a>
             </Button>
+          </div>
+          <div className="mt-8 max-w-xl">
+            <SovCard compact />
           </div>
         </div>
       </div>

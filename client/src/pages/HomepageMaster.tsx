@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { SovCard } from "@/components/SovCard";
 import { MeasuredProof } from "@/components/MeasuredProof";
 import { Helmet } from 'react-helmet-async';
 import { IncidentReportForm } from '@/components/IncidentReportForm';
@@ -203,6 +204,11 @@ export default function HomepageMaster() {
             </p>
             <p className="text-sm sm:text-base text-red-600 font-semibold mt-3 sm:mt-4">EU AI Act enforcement begins Aug 2, 2026. Get audit-ready now.</p>
           </motion.div>
+
+          {/* Ask SOV — the assistant sits ABOVE the proof: answer first, evidence second */}
+          <div className="mx-auto mb-10 max-w-2xl">
+            <SovCard />
+          </div>
 
           {/* Measured proof — the credibility anchor, above the fold-ish */}
           <MeasuredProof />

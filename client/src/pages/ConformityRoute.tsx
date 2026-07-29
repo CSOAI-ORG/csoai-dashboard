@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SovCard } from "@/components/SovCard";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { Scale, AlertTriangle, CheckCircle2, ShieldAlert, ArrowRight } from "lucide-react";
@@ -151,6 +152,9 @@ export default function ConformityRoute() {
             is the exception — and biometrics are the case that always requires one. This reads
             Article 43 and tells you which, with the provision cited.
           </p>
+          <div className="mt-8 max-w-xl">
+            <SovCard compact />
+          </div>
         </div>
       </div>
 
