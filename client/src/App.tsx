@@ -93,6 +93,7 @@ import CouncilDetail from "./pages/CouncilDetail";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import GovBench from "./pages/GovBench";
+import ConformityRoute from "./pages/ConformityRoute";
 import AboutCEASAI from "./pages/AboutCEASAI";
 import HowItWorks from "./pages/HowItWorks";
 import CookieConsent from "./components/CookieConsent";
@@ -256,6 +257,7 @@ function App() {
                   <Route path="/global-ai-safety-initiative" component={GlobalAISafetyInitiative} />
                   <Route path="/about" component={About} />
                   <Route path="/govbench" component={GovBench} />
+                  <Route path="/conformity-route" component={ConformityRoute} />
                   <Route path="/about-ceasai" component={AboutCEASAI} />
                   <Route path="/how-it-works" component={HowItWorks} />
                   <Route path="/how-it-works/dashboard" component={DashboardHowItWorks} />
