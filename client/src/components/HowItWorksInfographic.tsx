@@ -38,7 +38,7 @@ const STEPS: Step[] = [
   {
     n: 3,
     label: "33-Agent Council Reviews",
-    blurb: "A Byzantine-fault-tolerant council of 33 agents votes on the verdict.",
+    blurb: "A multi-leg council of 33 agents votes on the verdict.",
     Icon: Network,
   },
   {

@@ -201,7 +201,7 @@ export default function NewHomeV2() {
                 Why CSOAI?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The only platform combining human expertise with Byzantine fault-tolerant AI consensus
+                The only platform combining human expertise with multi-leg AI consensus
               </p>
             </div>
 

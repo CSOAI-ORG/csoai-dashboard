@@ -216,7 +216,7 @@ export default function Documentation() {
                     <div>
                       <h5 className="font-semibold text-gray-900 mb-2">Architecture</h5>
                       <ul className="space-y-1 text-gray-700">
-                        <li>• Byzantine fault tolerance</li>
+                        <li>• multi-leg council review</li>
                         <li>• Distributed voting mechanism</li>
                         <li>• Quorum-based consensus</li>
                         <li>• Weighted voting by expertise</li>

@@ -92,6 +92,10 @@ import CouncilDetail from "./pages/CouncilDetail";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import GovBench from "./pages/GovBench";
+import Benchmarks from "./pages/Benchmarks";
+import Instrument from "./pages/Instrument";
+import ProvenanceFinding from "./pages/ProvenanceFinding";
+import RefutationLedger from "./pages/RefutationLedger";
 import ConformityRoute from "./pages/ConformityRoute";
 import AboutCEASAI from "./pages/AboutCEASAI";
 import HowItWorks from "./pages/HowItWorks";
@@ -254,6 +258,10 @@ function App() {
                   <Route path="/docs" component={Documentation} />
                   <Route path="/global-ai-safety-initiative" component={GlobalAISafetyInitiative} />
                   <Route path="/about" component={About} />
+                  <Route path="/benchmarks" component={Benchmarks} />
+                  <Route path="/instrument" component={Instrument} />
+                  <Route path="/provenance-finding" component={ProvenanceFinding} />
+                  <Route path="/refutation-ledger" component={RefutationLedger} />
                   <Route path="/govbench" component={GovBench} />
                   <Route path="/conformity-route" component={ConformityRoute} />
                   <Route path="/about-ceasai" component={AboutCEASAI} />

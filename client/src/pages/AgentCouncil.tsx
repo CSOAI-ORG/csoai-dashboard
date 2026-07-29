@@ -1,6 +1,6 @@
 /*
  * CSOAI 33-Agent Council Page
- * Visualize the Byzantine fault-tolerant voting system
+ * Visualize the multi-leg voting system
  * Connected to real backend API
  */
 
@@ -152,7 +152,7 @@ export default function AgentCouncil() {
           <div>
             <h1 className="text-2xl font-semibold font-primary" data-testid="agent-council-title">33-Agent Council</h1>
             <p className="text-muted-foreground text-sm">
-              Byzantine fault-tolerant voting system (22/33 consensus required)
+              multi-leg voting system (22/33 consensus required)
             </p>
           </div>
           <Dialog open={isVoteDialogOpen} onOpenChange={setIsVoteDialogOpen}>
@@ -172,7 +172,7 @@ export default function AgentCouncil() {
               <div className="space-y-4 py-4">
                 <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3 text-sm">
                   <strong>⚡ Real LLM Voting:</strong> This will trigger all 33 agents (OpenAI, Anthropic, Google) 
-                  to vote on your proposal using Byzantine fault-tolerant consensus.
+                  to vote on your proposal using multi-leg consensus.
                 </div>
                 
                 <div className="space-y-2">

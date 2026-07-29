@@ -37,7 +37,7 @@ export function GovernanceSection() {
               <ul className="space-y-3 text-slate-300 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-blue-400 font-bold mt-0.5">•</span>
-                  <span><strong className="text-white">Center:</strong> CSOAI AI Byzantine Council - 33 agents with Byzantine fault-tolerant voting</span>
+                  <span><strong className="text-white">Center:</strong> CSOAI AI Byzantine Council - 33 agents with multi-leg voting</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-amber-400 font-bold mt-0.5">•</span>

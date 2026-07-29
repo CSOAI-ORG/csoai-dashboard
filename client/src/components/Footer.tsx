@@ -3,6 +3,7 @@
  * Professional footer with CSOAI branding and comprehensive links
  */
 
+import { BuiltOnFooter } from "@/components/BuiltOnFooter";
 import { Link } from 'wouter';
 import { Twitter, Linkedin, Mail, CheckCircle, Cookie, Facebook } from 'lucide-react';
 import { NewsletterSignup } from './NewsletterSignup';
@@ -73,6 +74,8 @@ export function Footer() {
   ];
 
   return (
+    <>
+      <BuiltOnFooter />
     <footer className="bg-white border-t border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
@@ -215,5 +218,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

@@ -23,13 +23,36 @@ const HF = "https://huggingface.co/datasets/Nicholastempleman/govbench";
 const HF_ITEMS = "https://huggingface.co/datasets/Nicholastempleman/govbench-items";
 const SPACE = "https://nicholastempleman-sov33-benchmark.static.hf.space";
 
+/**
+ * Re-measured 2026-07-29 on ONE self-consistent run of 193 items, with per-item rows retained
+ * and a CLUSTER-ROBUST interval (items inside a dimension share a rubric and grader, so
+ * sd/√n overstated precision — design effect 1.92, effective n ≈ 100 of 193).
+ *
+ * The previous table was a splice: its three rows summed to 186 and came from an earlier run,
+ * while the total above them came from a 195-item run. These rows partition their own run —
+ * 6 + 14 + 173 = 193 — which is the only way a layer table means anything.
+ *
+ * The gate row is the retraction. It previously read +34.84 and was the largest number in the
+ * estate. Source: benchmark-results/layer_attribution.json.
+ */
 const LAYERS = [
-  { layer: "Deterministic gate", n: 31, delta: "+34.84", ci: "[+17.50, +52.18]", good: true },
-  { layer: "Knowledge base", n: 14, delta: "+19.64", ci: "[+6.87, +32.41]", good: true },
-  { layer: "Tuned model", n: 141, delta: "+9.42", ci: "[+4.82, +14.03]", good: true },
+  { layer: "Deterministic gate", n: 6, delta: "−20.00", ci: "[−65.26, +25.26]", good: false },
+  { layer: "Knowledge base", n: 14, delta: "+19.64", ci: "[+9.24, +30.04]", good: true },
+  { layer: "Tuned model", n: 173, delta: "+6.50", ci: "[+1.06, +11.95]", good: true },
 ];
 
 const REFUTED = [
+  {
+    claim: "The deterministic gate is the strongest component of the pipeline",
+    result: "Δ −20.00",
+    ci: "[−65.26, +25.26]",
+    verdict:
+      "Retracted 2026-07-29. Previously published as +34.84 — the largest number we had. " +
+      "Re-measured on a clean run it fires 6 times, not 31, and adds nothing: the base model " +
+      "already refuses all four plain-harm items, and its only measurable effects are two " +
+      "false blocks. The earlier figure was measured on a gate that had overfitted to its own " +
+      "battery; fixing the overfitting removed the benefit.",
+  },
   {
     claim: "Per-dimension expert routing beats one good model",
     result: "Δ +0.90",
@@ -57,7 +80,7 @@ export default function GovBench() {
         <title>GovBench — an AI governance benchmark that publishes its own limits | CSOAI</title>
         <meta
           name="description"
-          content="174 items, 26 dimensions, 10 models. Open data on HuggingFace. Publishes its resolution limit and the experiments that refute its own architecture."
+          content="193 items, 26 dimensions, 10 models. Open data on HuggingFace. Publishes its resolution limit and the experiments that refute its own architecture."
         />
       </Helmet>
 
@@ -119,8 +142,15 @@ export default function GovBench() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-3xl">
             Not a model — the composed pipeline (gate → retrieve → answer → verify → attest →
-            mark) against the same items answered by a raw base model. n=195, paired, judged by
+            mark) against the same items answered by a raw base model. n=193, paired, judged by
             an analysis written <em>before</em> the run existed.
+          </p>
+          <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-3xl text-sm">
+            Intervals are <strong>cluster-robust</strong>. Items inside a dimension share a
+            rubric and a grader, so treating 193 items as 193 independent draws overstates
+            precision — the measured design effect is <strong>1.92</strong>, giving an honest
+            effective n of <strong>≈100</strong>. Every row below is computed from the same run
+            and they partition it: 6 + 14 + 173 = 193.
           </p>
 
           <Card className="overflow-hidden">
@@ -139,7 +169,8 @@ export default function GovBench() {
                     <tr key={l.layer}>
                       <td className="p-3">{l.layer}</td>
                       <td className="p-3 tabular-nums text-gray-500">{l.n}</td>
-                      <td className="p-3 tabular-nums font-semibold text-emerald-700 dark:text-emerald-400">
+                      <td className={`p-3 tabular-nums font-semibold ${
+                        l.good ? "text-emerald-700 dark:text-emerald-400" : "text-rose-600"}`}>
                         {l.delta}
                       </td>
                       <td className="p-3 tabular-nums text-gray-500">{l.ci}</td>
@@ -147,17 +178,17 @@ export default function GovBench() {
                   ))}
                   <tr className="bg-emerald-50 dark:bg-emerald-950/40 font-bold">
                     <td className="p-3">Whole system</td>
-                    <td className="p-3 tabular-nums">195</td>
-                    <td className="p-3 tabular-nums text-emerald-700 dark:text-emerald-400">+12.21</td>
-                    <td className="p-3 tabular-nums">[+7.42, +17.00]</td>
+                    <td className="p-3 tabular-nums">193</td>
+                    <td className="p-3 tabular-nums text-emerald-700 dark:text-emerald-400">+6.63</td>
+                    <td className="p-3 tabular-nums">[+1.05, +12.21]</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </Card>
           <p className="text-xs text-gray-500 mt-3">
-            Wins 64 · losses 20 · ties 102 · sign test p&lt;0.0001. Dropping the single largest
-            item moves the headline to +11.75, so it does not rest on one case.
+            Wins 55 · losses 25 · ties 113 · sign test p=0.0011. Dropping the single largest
+            item moves the headline to +6.15, so it does not rest on one case.
           </p>
         </section>
 
@@ -229,7 +260,7 @@ inspect eval govbench_inspect.py --model ollama/qwen2.5:0.5b`}</code>
           <div className="flex flex-wrap gap-4 mt-6 text-sm">
             <a className="text-emerald-700 dark:text-emerald-400 hover:underline" href={HF_ITEMS}
                target="_blank" rel="noopener noreferrer">
-              174 items, 26 dimensions →
+              193 items, 26 dimensions →
             </a>
             <a className="text-emerald-700 dark:text-emerald-400 hover:underline" href={HF}
                target="_blank" rel="noopener noreferrer">

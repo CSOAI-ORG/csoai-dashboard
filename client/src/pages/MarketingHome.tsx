@@ -215,7 +215,7 @@ export default function MarketingHome() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">33-Agent Council</h3>
                   <p className="text-muted-foreground mb-4">
-                    Byzantine fault-tolerant consensus with 5 LLM providers (OpenAI, Anthropic, Google, Kimi,
+                    multi-leg consensus with 5 LLM providers (OpenAI, Anthropic, Google, Kimi,
                     DeepSeek). Tolerates up to 10 malicious agents.
                   </p>
                   <Button variant="link" className="p-0">

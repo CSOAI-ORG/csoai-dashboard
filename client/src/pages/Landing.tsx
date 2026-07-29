@@ -39,7 +39,7 @@ const features = [
   {
     icon: Users,
     title: "33-Agent Council",
-    description: "Byzantine fault-tolerant AI voting system for unbiased decisions",
+    description: "multi-leg AI voting system for unbiased decisions",
   },
   {
     icon: Eye,
@@ -386,7 +386,7 @@ export default function Landing() {
                   </div>
                   <h3 className="font-semibold mb-2">Live AI Inference</h3>
                   <p className="text-sm text-muted-foreground">
-                    33 AI agents vote simultaneously with integrated LLM reasoning for Byzantine fault-tolerant consensus.
+                    33 AI agents vote simultaneously with integrated LLM reasoning for multi-leg consensus.
                   </p>
                 </CardContent>
               </Card>
@@ -423,9 +423,9 @@ export default function Landing() {
                 <Zap className="h-5 w-5 text-emerald-600" />
               </div>
               <div>
-                <h3 className="font-semibold mb-2">Byzantine Fault Tolerance</h3>
+                <h3 className="font-semibold mb-2">multi-leg council review</h3>
                 <p className="text-sm text-muted-foreground">
-                  Our 33-Agent Council uses Byzantine fault-tolerant consensus to ensure unbiased decisions even if 1/3 of agents are compromised. Real-time voting ensures decisions are made in seconds, not hours.
+                  Our 33-Agent Council uses multi-leg consensus to ensure unbiased decisions even if 1/3 of agents are compromised. Real-time voting ensures decisions are made in seconds, not hours.
                 </p>
               </div>
             </div>

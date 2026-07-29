@@ -107,7 +107,7 @@ export default function EUAIActCompliance() {
     },
     {
       question: "Can we get certified for EU AI Act compliance?",
-      answer: "Yes! After Byzantine Council review and CEASAI assessment, you receive a compliance certificate. This demonstrates to regulators and customers that you meet EU AI Act requirements."
+      answer: "Not by us, and — as of now — not by anyone. EU AI Act conformity certificates are issued by notified bodies, and as of April 2026 zero had been designated; no JTC 21 harmonised standard yet grants presumption of conformity either. Anyone offering you an EU AI Act certificate today cannot deliver what it implies. What we provide is attestation-support: signed, provision-anchored evidence of how your system actually behaves, which is what you will need when a conformity route opens — and what a market-surveillance authority can act on now."
     },
     {
       question: "What happens if we don't comply?",

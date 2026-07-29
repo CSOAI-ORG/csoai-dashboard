@@ -39,7 +39,7 @@ const comparisonData = [
   { feature: "Self-serve & transparent pricing", values: ["yes", "no", "no", "no"] },
   { feature: "Agentic 33-Agent Council monitoring", values: ["yes", "no", "no", "no"] },
   { feature: "Free EU AI Act risk classifier", values: ["yes", "no", "no", "no"] },
-  { feature: "Byzantine fault-tolerant consensus", values: ["yes", "no", "no", "no"] },
+  { feature: "multi-leg consensus", values: ["yes", "no", "no", "no"] },
   { feature: "EU AI Act compliance mapping", values: ["yes", "yes", "yes", "yes"] },
   { feature: "NIST AI RMF mapping", values: ["yes", "yes", "partial", "yes"] },
   { feature: "ISO 42001 mapping", values: ["yes", "yes", "partial", "yes"] },
@@ -61,12 +61,12 @@ const faqs = [
   {
     question: "How is Byzantine consensus relevant to AI safety?",
     answer:
-      "Byzantine fault tolerance means multiple independent agents must agree before a safety decision is finalized. CSOAI deploys 33 AI agents across 12 different providers — no single vendor can bias, compromise, or override a decision. This is the same cryptographic principle used in blockchain and military systems. Competitors rely on single-vendor models; CSOAI relies on democratic consensus.",
+      "multi-leg council review means multiple independent agents must agree before a safety decision is finalized. CSOAI deploys 33 AI agents across 12 different providers — no single vendor can bias, compromise, or override a decision. This is the same cryptographic principle used in blockchain and military systems. Competitors rely on single-vendor models; CSOAI relies on democratic consensus.",
   },
   {
     question: "Is CSOAI a replacement for compliance tools?",
     answer:
-      "No — we certify that you're USING them correctly. Think of it like accounting: QuickBooks manages your books, but only an auditor can certify your financial statements. Credo AI, OneTrust, and IBM watsonx are your 'QuickBooks' for AI compliance. CSOAI is your auditor, certifier, and ongoing safety monitor.",
+      "No — we measure whether they are being used correctly. Think of it like accounting: QuickBooks manages your books, and an auditor examines them. We are the examination, not the certificate — no accredited certification chain exists for AI Act conformity yet. Credo AI, OneTrust, and IBM watsonx are your 'QuickBooks' for AI compliance. CSOAI is your auditor, certifier, and ongoing safety monitor.",
   },
 ];
 
@@ -294,7 +294,7 @@ export default function CompetitorComparison() {
                   <Shield className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Compliance tools document risk. CSOAI certifies safety.
+                  Compliance tools document risk. CSOAI measures it.
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   Credo AI writes reports. OneTrust builds checklists. But neither can issue a CEASAI certificate that
