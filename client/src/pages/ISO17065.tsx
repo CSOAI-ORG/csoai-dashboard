@@ -15,7 +15,7 @@ export default function ISO17065() {
               International Accreditation Standard
             </h1>
             <p className="text-xl text-gray-700 mb-8">
-              CSOAI is ISO 17065 certified, making our training and audits recognized globally as credible third-party verification.
+              CSOAI is not ISO/IEC 17065 accredited, and says so plainly. No accreditation chain exists for EU AI Act conformity — as of April 2026 zero notified bodies had been designated and no JTC 21 deliverable grants presumption of conformity. What we provide is measurement: deterministic, provision-anchored, cryptographically signed evidence a competent authority can verify itself.
             </p>
             <div className="flex justify-center gap-4">
               <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
@@ -347,7 +347,7 @@ export default function ISO17065() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Verify Your Compliance?</h2>
             <p className="text-lg text-blue-100 mb-8">
-              Request an audit from CSOAI and get your AI systems certified by an internationally recognized accreditation body.
+              Request an assessment from CSOAI and receive signed, provision-anchored evidence about your AI system. We are not an accreditation body and issue no certificates of conformity — the evidence is yours to present to one.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">

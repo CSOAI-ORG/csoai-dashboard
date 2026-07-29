@@ -58,7 +58,7 @@ const suggestionPrompts = [
     subtitle: "33-agent voting status",
     icon: Users,
     action: "/agent-council",
-    prompt: "Explain how the 33-Agent Council Byzantine fault-tolerant voting system works."
+    prompt: "Explain how the 33-Agent Council multi-leg voting system works."
   },
   {
     title: "Check Watchdog reports",

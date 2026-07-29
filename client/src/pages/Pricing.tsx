@@ -192,7 +192,7 @@ const FAQ = [
   },
   {
     question: 'How does the 33-Agent Council work?',
-    answer: 'Our AI council evaluates safety scenarios using 33 specialized agents representing different stakeholder perspectives (regulators, ethicists, engineers, affected communities, etc.). Using Byzantine fault-tolerant consensus, they provide balanced recommendations that inform compliance decisions.',
+    answer: 'Our AI council evaluates safety scenarios using 33 specialized agents representing different stakeholder perspectives (regulators, ethicists, engineers, affected communities, etc.). Using multi-leg consensus, they provide balanced recommendations that inform compliance decisions.',
   },
   {
     question: 'Can I get a custom enterprise quote?',

@@ -34,7 +34,7 @@ const LAYERS: Layer[] = [
       {
         id: 'council', label: '33-Agent Byzantine Council', tag: 'consensus core',
         blurb: 'Impartial multi-agent consensus on every AI-safety decision.',
-        detail: 'A Byzantine fault-tolerant council of 33 agents + human experts. No single entity controls an outcome — every Watchdog case and compliance verdict is decided by consensus, which is what makes CSOAI rulings defensible.',
+        detail: 'A multi-leg council of 33 agents + human experts. No single entity controls an outcome — every Watchdog case and compliance verdict is decided by consensus, which is what makes CSOAI rulings defensible.',
         href: '/dashboard', Icon: Network,
       },
     ],

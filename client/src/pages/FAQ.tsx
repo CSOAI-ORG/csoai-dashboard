@@ -62,7 +62,7 @@ export default function FAQ() {
         },
         {
           question: "What's the difference between the 13 modules and the 33-Agent Council?",
-          answer: "Great question! These are completely different:\n\n**13 Training Modules** = Your education content:\n• 5 Fundamentals modules (£499 tier)\n• 8 Regional framework modules (£999 tier adds 5 of these)\n• All 13 modules = Expert tier (£1,999)\n\n**33-Agent Byzantine Council** = Our voting/decision system:\n• 33 AI agents from 12+ different providers (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, xAI, etc.)\n• They vote on incident reports and compliance decisions\n• Requires 23 of 33 agents to agree (Byzantine fault tolerance)\n• Prevents single-vendor bias or manipulation\n\nThe 33 agents are the MECHANISM, not the training content."
+          answer: "Great question! These are completely different:\n\n**13 Training Modules** = Your education content:\n• 5 Fundamentals modules (£499 tier)\n• 8 Regional framework modules (£999 tier adds 5 of these)\n• All 13 modules = Expert tier (£1,999)\n\n**33-Agent Byzantine Council** = Our voting/decision system:\n• 33 AI agents from 12+ different providers (OpenAI, Anthropic, Google, Meta, Mistral, Cohere, xAI, etc.)\n• They vote on incident reports and compliance decisions\n• Requires 23 of 33 agents to agree (multi-leg council review)\n• Prevents single-vendor bias or manipulation\n\nThe 33 agents are the MECHANISM, not the training content."
         },
         {
           question: "Can I upgrade from Fundamentals to Professional or Expert later?",
@@ -129,11 +129,11 @@ export default function FAQ() {
       items: [
         {
           question: "What is the 33-Agent Byzantine Council?",
-          answer: "Our 33-Agent Council uses AI models from 12+ different providers:\n\n• OpenAI (GPT-4, GPT-4o)\n• Anthropic (Claude 3.5 Sonnet, Claude 3 Opus)\n• Google DeepMind (Gemini 2.0 Flash, Gemini 1.5 Pro)\n• Meta AI (Llama 3.1, Llama 3.2)\n• Mistral AI (Mistral Large, Mistral Medium)\n• Cohere (Command R+)\n• xAI (Grok-2)\n• And more...\n\nEvery safety decision requires **23 of 33 agents to agree** (Byzantine fault tolerance). This prevents any single vendor from manipulating outcomes and ensures unbiased assessments. If OpenAI is compromised, the other 32 agents catch it."
+          answer: "Our 33-Agent Council uses AI models from 12+ different providers:\n\n• OpenAI (GPT-4, GPT-4o)\n• Anthropic (Claude 3.5 Sonnet, Claude 3 Opus)\n• Google DeepMind (Gemini 2.0 Flash, Gemini 1.5 Pro)\n• Meta AI (Llama 3.1, Llama 3.2)\n• Mistral AI (Mistral Large, Mistral Medium)\n• Cohere (Command R+)\n• xAI (Grok-2)\n• And more...\n\nEvery safety decision requires **23 of 33 agents to agree** (multi-leg council review). This prevents any single vendor from manipulating outcomes and ensures unbiased assessments. If OpenAI is compromised, the other 32 agents catch it."
         },
         {
           question: "Why do you use multiple AI providers instead of just one?",
-          answer: "Single-vendor AI safety tools can be biased or manipulated. By using 12+ providers, we ensure:\n\n• **Unbiased assessments**: No single company controls the outcome\n• **Redundancy**: If one provider fails, others continue working\n• **Cross-validation**: Different models catch different issues\n• **Protection against manipulation**: Vendor can't rig results in their favor\n• **Regulatory compliance**: Meets EU AI Act requirements for independent oversight\n\nThis is called Byzantine fault tolerance - the same principle used in blockchain and military systems."
+          answer: "Single-vendor AI safety tools can be biased or manipulated. By using 12+ providers, we ensure:\n\n• **Unbiased assessments**: No single company controls the outcome\n• **Redundancy**: If one provider fails, others continue working\n• **Cross-validation**: Different models catch different issues\n• **Protection against manipulation**: Vendor can't rig results in their favor\n• **Regulatory compliance**: Meets EU AI Act requirements for independent oversight\n\nThis is called multi-leg council review - the same principle used in blockchain and military systems."
         },
         {
           question: "How do you integrate with government regulators?",
@@ -175,7 +175,7 @@ export default function FAQ() {
       items: [
         {
           question: "Who founded CSOAI and why?",
-          answer: "CSOAI was founded by AI safety researchers and compliance experts who believe the world needs a transparent, unbiased platform for AI governance. We're building the Western equivalent of China's TC260 system - but open source, transparent, and globally accessible.\n\nOur mission: **Make AI safe for humanity by creating a global network of certified AI Safety Analysts who can audit, monitor, and improve AI systems before they cause harm.**\n\nWe believe AI safety is too important to be controlled by any single company, government, or ideology. That's why we're open source and use Byzantine fault tolerance."
+          answer: "CSOAI was founded by AI safety researchers and compliance experts who believe the world needs a transparent, unbiased platform for AI governance. We're building the Western equivalent of China's TC260 system - but open source, transparent, and globally accessible.\n\nOur mission: **Make AI safe for humanity by creating a global network of certified AI Safety Analysts who can audit, monitor, and improve AI systems before they cause harm.**\n\nWe believe AI safety is too important to be controlled by any single company, government, or ideology. That's why we're open source and use multi-leg council review."
         },
         {
           question: "Is CSOAI open source?",

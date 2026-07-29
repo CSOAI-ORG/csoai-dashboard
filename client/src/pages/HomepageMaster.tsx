@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { CountdownTimer } from '@/components/CountdownTimer';
+import { SovereignConsole } from '@/components/SovereignConsole';
 import {
   ChevronDown,
   Users,
@@ -153,17 +153,24 @@ export default function HomepageMaster() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-red-100 to-orange-100 border-2 border-red-400 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-6 sm:mb-8 text-center shadow-lg"
+            className="bg-gradient-to-r from-emerald-50 to-white border-2 border-emerald-300 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-6 sm:mb-8 text-center shadow-lg"
           >
             {/* Free Course Giveaway Announcement */}
             <p className="text-sm sm:text-base md:text-lg font-bold text-emerald-700 mb-3">
               🎁 First 10,000 signups get full training FREE (£1,999 value). Use code <strong>FOUNDING10K</strong> at checkout.
             </p>
             
-            <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 mb-2 sm:mb-3">
-              <span className="text-red-700 font-bold">EU AI Act Enforcement Deadline</span> — get certified as an AI Safety Analyst before time runs out:
+            {/* The countdown that was here is gone, and deliberately. A clock is a claim about
+                urgency; a working instrument is a demonstration. And since the Digital Omnibus
+                (Reg (EU) 2026/1744, in force 27 July 2026) deferred the Annex III high-risk
+                obligations to 2 Dec 2027 while leaving Article 50 on 2 Aug 2026, a single
+                countdown to "the deadline" now points at the wrong one. */}
+            <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-900 mb-3">
+              <span className="text-emerald-800 font-bold">Article 50 applies 2 August 2026</span>{" "}
+              — and we measured what a marking is actually worth: <strong>0 of 108 survived</strong>.
+              Ask the instrument about your own system, free, in your browser.
             </p>
-            <CountdownTimer />
+            <SovereignConsole />
             
             {/* Lead-magnet CTAs — free, ungated, the top of the funnel */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">

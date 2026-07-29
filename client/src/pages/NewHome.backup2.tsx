@@ -89,7 +89,7 @@ export default function NewHome() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-emerald-400" />
-              <span>Byzantine Fault-Tolerant Consensus</span>
+              <span>multi-leg Consensus</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-purple-400" />
@@ -117,7 +117,7 @@ export default function NewHome() {
               What is CSOAI?
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-              CSOAI (Council for Safety of AI) is the world's first comprehensive platform revolutionizing the relationship between humanity and artificial intelligence. We create <strong>transparency, accountability, and safety</strong> for AI systems through a unique combination of human expertise and Byzantine fault-tolerant AI consensus.
+              CSOAI (Council for Safety of AI) is the world's first comprehensive platform revolutionizing the relationship between humanity and artificial intelligence. We create <strong>transparency, accountability, and safety</strong> for AI systems through a unique combination of human expertise and multi-leg AI consensus.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               Our platform serves <strong>everyone</strong>—governments ensuring regulatory compliance, enterprises building trustworthy AI, individuals pursuing AI safety careers, and the public holding AI systems accountable. One platform. Complete coverage. Full transparency.
@@ -638,7 +638,7 @@ export default function NewHome() {
               33-Agent Council: <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Human Oversight Meets AI Efficiency</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We've created a transparent AI safety council with Byzantine fault-tolerant consensus. 
+              We've created a transparent AI safety council with multi-leg consensus. 
               Every decision is made by 33 AI agents across 5 providers, with human analysts providing oversight.
             </p>
           </div>

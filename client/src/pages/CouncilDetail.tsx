@@ -31,7 +31,7 @@ export default function CouncilDetail() {
             <Card className="border-emerald-200">
               <CardHeader>
                 <Shield className="h-10 w-10 text-emerald-600 mb-2" />
-                <CardTitle>Byzantine Fault Tolerant</CardTitle>
+                <CardTitle>multi-leg</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -104,7 +104,7 @@ export default function CouncilDetail() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">Byzantine Consensus Algorithm</h3>
                 <p className="text-gray-600 text-lg">
-                  The system uses Byzantine Fault Tolerant (BFT) consensus, which means it can reach agreement even if up to 10 agents are compromised, malfunctioning, or malicious. Consensus requires at least <strong>23 of 33 agents</strong> to agree (⅔ + 1 supermajority).
+                  The system uses multi-leg (BFT) consensus, which means it can reach agreement even if up to 10 agents are compromised, malfunctioning, or malicious. Consensus requires at least <strong>23 of 33 agents</strong> to agree (⅔ + 1 supermajority).
                 </p>
               </div>
             </div>

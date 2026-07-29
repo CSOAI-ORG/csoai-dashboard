@@ -86,7 +86,7 @@ export default function About() {
         "name": "How is CSOAI different from other AI safety organizations?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most AI safety organizations focus on research or advocacy. CSOAI is the only platform that combines training, certification, job creation, and operational oversight. We're not just talking about AI safety—we're building the workforce to enforce it."
+          "text": "Most AI safety organizations focus on research or advocacy. CSOAI is the only platform that combines training, certification, job creation, and operational oversight. We're not just talking about AI safety—we're building the instrument that measures it, and the workforce trained to use it."
         }
       }
     ]
@@ -274,7 +274,7 @@ export default function About() {
             <Card className="p-8 border-l-4 border-purple-500">
               <h3 className="text-2xl font-bold mb-4">🔄 SOAI-PDCA: Continuous Improvement</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We don't just certify once and forget. Our SOAI-PDCA framework (Safety Oversight AI + Plan-Do-Check-Act) 
+                We don't just measure once and forget. Our SOAI-PDCA framework (Safety Oversight AI + Plan-Do-Check-Act) 
                 ensures continuous monitoring and improvement. AI systems are reviewed regularly, not just at launch.
               </p>
               <p className="text-sm text-gray-500">
@@ -453,7 +453,7 @@ export default function About() {
               <p className="text-gray-600 leading-relaxed">
                 Most AI safety organizations focus on research or advocacy. CSOAI is the only platform that combines 
                 training, certification, job creation, and operational oversight. We're not just talking about AI safety—we're 
-                building the workforce to enforce it.
+                building the instrument that measures it.
               </p>
             </Card>
           </div>

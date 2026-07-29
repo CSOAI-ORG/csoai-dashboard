@@ -38,7 +38,7 @@ const releases = [
     date: "July 4, 2026 target",
     tag: "51 MCP servers",
     description:
-      "Full compliance attestation product for enterprise AI governance. 51 MCP servers, BFT council coordination, tri-brain architecture. Launching Independence Day.",
+      "Full compliance attestation product for enterprise AI governance. 51 MCP servers, Council of AI coordination, tri-brain architecture. Launching Independence Day.",
     link: "https://proofof.ai",
     linkText: "proofof.ai",
   },

@@ -33,7 +33,7 @@ const HOWITWORKS_HOWTO_SCHEMA = {
   step: [
     { "@type": "HowToStep", position: 1, name: "Register AI System", text: "Add your AI system and classify its risk level in minutes." },
     { "@type": "HowToStep", position: 2, name: "Run Compliance Assessment", text: "Auto-assess against the EU AI Act, NIST AI RMF, ISO 42001 and TC260." },
-    { "@type": "HowToStep", position: 3, name: "33-Agent Council Reviews", text: "A Byzantine-fault-tolerant council of 33 agents from 12 providers votes on the verdict." },
+    { "@type": "HowToStep", position: 3, name: "33-Agent Council Reviews", text: "A multi-leg council of 33 agents from 12 providers votes on the verdict." },
     { "@type": "HowToStep", position: 4, name: "Get Watchdog Certification", text: "Receive a verifiable certification and a public transparency record." },
     { "@type": "HowToStep", position: 5, name: "Continuous PDCA", text: "Plan-Do-Check-Act keeps your system compliant as regulations evolve." },
   ],
@@ -149,7 +149,7 @@ export default function HowItWorks() {
                 <Gavel className="h-10 w-10 text-emerald-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Regulatory</h3>
                 <p className="text-gray-600">
-                  We set standards, enforce compliance, and hold AI systems accountable to safety requirements.
+                  We publish open measurement standards and supply the signed evidence regulators enforce with. Enforcement powers sit with market-surveillance authorities and the AI Office — never with us.
                 </p>
               </Card>
               
@@ -256,7 +256,7 @@ export default function HowItWorks() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Governments</h3>
                   <p className="text-gray-600">
-                    We provide the compliance infrastructure governments need to enforce AI regulations like the EU AI Act. Our SOAI-PDCA framework is ready-to-deploy for regulators.
+                    We provide the measurement instrument governments use when enforcing regulations like the EU AI Act — dashboards, evidence viewers and drift feeds. They enforce; we supply the evidence.
                   </p>
                 </div>
               </div>
