@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { MeasuredProof } from "@/components/MeasuredProof";
 import { Helmet } from 'react-helmet-async';
 import { IncidentReportForm } from '@/components/IncidentReportForm';
 import { CouncilEcosystemVisualization } from '@/components/CouncilEcosystemVisualization';
@@ -202,6 +203,9 @@ export default function HomepageMaster() {
             </p>
             <p className="text-sm sm:text-base text-red-600 font-semibold mt-3 sm:mt-4">EU AI Act enforcement begins Aug 2, 2026. Get audit-ready now.</p>
           </motion.div>
+
+          {/* Measured proof — the credibility anchor, above the fold-ish */}
+          <MeasuredProof />
 
           {/* Choose your path — instant orientation for first-time visitors */}
           <motion.div
