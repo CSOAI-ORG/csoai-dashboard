@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Building2, Landmark, GraduationCap, Info } from "lucide-react";
+import { Check, ArrowRight, Building2, Landmark, GraduationCap, Info, Users, Cpu } from "lucide-react";
 
 /**
  * PricingOpen — rebuilt 2026-07-29 from
@@ -48,6 +48,7 @@ const ALWAYS_FREE = [
   { icon: Landmark, who: "Government & regulators", why: "You are the constituency that must verify compliance and currently has no tooling. Charging you would forfeit the entire point." },
   { icon: GraduationCap, who: "Academic & non-profit", why: "Research and public-interest work should not meet a paywall." },
   { icon: Building2, who: "Individuals & SMEs", why: "The free ceilings are set so most organisations never reach a paid line at all." },
+  { icon: Users, who: "Deployers checking a vendor", why: "If you are trying to find out whether a system you bought is compliant, you should never hit a paywall doing it." },
 ];
 
 export default function PricingOpen() {
@@ -65,11 +66,18 @@ export default function PricingOpen() {
           </span>
           <h1 className="mt-5 text-4xl sm:text-6xl font-black tracking-tight text-gray-900">
             Free for almost everyone.
+            <br />
+            <span className="text-emerald-600">Big AI companies pay.</span>
           </h1>
           <p className="mt-5 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
             The benchmark, the regulation corpus, the risk check and every training course are
-            free and open-source. You pay only where we carry real cost or custody on your
-            behalf — and most organisations never will.
+            free and open-source — for the people the regulation is meant to protect, and for
+            the regulators who have to verify it.
+          </p>
+          <p className="mt-4 text-base text-gray-600 max-w-2xl mx-auto">
+            Frontier labs and large AI providers pay, because they are the high-volume users
+            whose systems create the risk this exists to measure. That is the only asymmetry
+            in our pricing, and it is deliberate.
           </p>
         </div>
       </div>
@@ -107,10 +115,13 @@ export default function PricingOpen() {
               <span className="text-4xl font-black text-gray-900">Usage</span>
               <span className="text-gray-500">based</span>
             </div>
-            <h2 className="mt-2 text-xl font-bold text-gray-900">Pro</h2>
+            <h2 className="mt-2 flex items-center gap-2 text-xl font-bold text-gray-900">
+              <Cpu className="h-5 w-5 text-gray-400" /> Pro — frontier labs &amp; large providers
+            </h2>
             <p className="mt-1 text-sm text-gray-600">
               Metered on what you use. No seat licences — charging per person taxes the exact
-              behaviour this exists to encourage.
+              behaviour this exists to encourage. If you are a large AI provider, you are the
+              volume, and you are who this tier is for.
             </p>
             <ul className="mt-6 space-y-4">
               {PRO.map((p) => (
