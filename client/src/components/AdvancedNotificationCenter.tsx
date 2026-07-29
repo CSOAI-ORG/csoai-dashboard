@@ -49,6 +49,8 @@ export function AdvancedNotificationCenter() {
     },
   });
 
+  const [loadError, setLoadError] = useState<string | null>(null);
+
   const fetchNotifications = async () => {
     setLoading(true);
     try {
@@ -64,9 +66,22 @@ export function AdvancedNotificationCenter() {
       if (response.ok) {
         const data = await response.json();
         setNotifications(data.notifications);
+        setLoadError(null);
+      } else {
+        // 2026-07-29 — this branch did not exist. /api/notifications/filtered has NO server
+        // route (the notifications router is tRPC-only, at /api/trpc/notifications.*), so
+        // every call 404s. With only `if (response.ok)` the failure was swallowed and the
+        // panel rendered an empty list — a user could not tell "you have no notifications"
+        // from "this feature is broken". Absence of data presented as a valid empty state.
+        setLoadError(
+          response.status === 404
+            ? 'Notifications are unavailable — this endpoint is not deployed.'
+            : `Could not load notifications (HTTP ${response.status}).`
+        );
       }
     } catch (error) {
       console.error('Failed to fetch notifications:', error);
+      setLoadError('Could not reach the notifications service.');
     } finally {
       setLoading(false);
     }
@@ -239,6 +254,15 @@ export function AdvancedNotificationCenter() {
 
         {loading ? (
           <div className="text-center py-8">Loading...</div>
+        ) : loadError ? (
+          // An error must be VISIBLE, not just recorded in state. Rendering "No notifications
+          // found" while the fetch is 404-ing tells the user the opposite of the truth.
+          <div className="text-center py-8">
+            <p className="text-sm font-medium text-amber-700">{loadError}</p>
+            <p className="mt-1 text-xs text-gray-500">
+              This is a service problem, not an empty inbox.
+            </p>
+          </div>
         ) : notifications.length === 0 ? (
           <div className="text-center py-8 text-gray-500">No notifications found</div>
         ) : (
