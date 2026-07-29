@@ -101,12 +101,32 @@ export default function Accreditation() {
                 className="h-32 w-32"
               />
             </div>
+            {/* 2026-07-29 — previous copy read: "Global AI Safety Accreditation Authority /
+                CSOAI is the world's first independent accreditation body for AI Safety
+                professionals, recognized across 120+ countries..."
+
+                None of that is substantiated. CSOAI holds no external accreditation — no
+                ISO/IEC 17065, no national accreditation body, no IAF mutual recognition —
+                and "recognized across 120+ countries" has no basis. It sat on a page that
+                also invites organisations to "demonstrate compliance to regulators", which
+                is the combination that turns marketing copy into a liability.
+
+                A self-marked badge carries no regulatory weight. Saying so plainly is also
+                the only position consistent with GovBench, which publishes its own limits. */}
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Global AI Safety Accreditation Authority
+              AI Safety Professional Training &amp; Assessment
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              CSOAI is the world's first independent accreditation body for AI Safety professionals,
-              recognized across 120+ countries and aligned with all major regulatory frameworks.
+            <p className="text-xl text-blue-100 mb-4">
+              CSOAI trains and assesses AI safety practitioners against the EU AI Act, NIST AI
+              RMF and ISO/IEC 42001, and issues cryptographically verifiable records of that
+              assessment.
+            </p>
+            <p className="text-sm text-blue-100/90 mb-8 max-w-2xl mx-auto">
+              <strong>What this is not:</strong> CSOAI is not an accredited certification body.
+              We hold no ISO/IEC 17065 accreditation and no national or IAF recognition, so a
+              CSOAI record is evidence of training and assessment — not a regulatory
+              certification, and not a substitute for conformity assessment by a notified body
+              where one is required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/training">

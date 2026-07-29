@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { GreenfieldCarousel } from './GreenfieldCarousel';
 
 interface TimeRemaining {
   days: number;
@@ -14,6 +15,7 @@ export function CountdownTimer() {
     minutes: 0,
     seconds: 0,
   });
+  const [expired, setExpired] = useState(false);
 
   useEffect(() => {
     const calculateTimeRemaining = () => {
@@ -30,7 +32,12 @@ export function CountdownTimer() {
           seconds: Math.floor((difference / 1000) % 60),
         });
       } else {
+        // 2026-07-29 — there was no expired branch. After 2 Aug 2026 this rendered
+        // 00:00:00:00 forever on the homepage hero, which reads as a broken site rather
+        // than an elapsed deadline. A countdown with no terminal state is a component that
+        // cannot report the one outcome it is guaranteed to reach.
         setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        setExpired(true);
       }
     };
 
@@ -39,6 +46,13 @@ export function CountdownTimer() {
 
     return () => clearInterval(timer);
   }, []);
+
+  if (expired) {
+    // The deadline has passed. Rather than a dead 00:00:00:00, the hero becomes a ten-slide
+    // explainer so a first-time visitor can understand the whole proposition — the three
+    // greenfields, what is measured, and the results that refute our own architecture.
+    return <GreenfieldCarousel />;
+  }
 
   return (
     <div data-testid="countdown-timer" className="flex items-center justify-center gap-2 text-center">
