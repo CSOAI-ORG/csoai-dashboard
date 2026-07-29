@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28",
+  "generatedAt": "2026-07-29",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -43,7 +43,7 @@
   "frameworkCounts": [
     {
       "name": "EU AI Act",
-      "count": 40
+      "count": 41
     },
     {
       "name": "GDPR",
@@ -1447,15 +1447,16 @@
     {
       "slug": "oscal-generator-mcp",
       "name": "Oscal Generator",
-      "description": "Machine-readable NIST OSCAL + Ed25519 signer. FedRAMP RFC-0024. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "description": "MCP server emitting Ed25519-signed NIST OSCAL for EU AI Act Article 12 record-keeping. Includes an offline verifier \u2014 check the signatures yourself.",
       "url": "https://github.com/CSOAI-ORG/oscal-generator-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
+        "EU AI Act",
         "NIST AI RMF"
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-27T05:52:03Z"
+      "updatedAt": "2026-07-28T10:01:10Z"
     },
     {
       "slug": "pci-dss-mcp",
