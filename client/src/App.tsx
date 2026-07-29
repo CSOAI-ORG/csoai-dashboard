@@ -80,6 +80,7 @@ import ComplianceScorecard from "./pages/ComplianceScorecard";
 import KnowledgeBase from "./pages/KnowledgeBase";
 import EnterpriseOnboarding from "./pages/EnterpriseOnboarding";
 import Pricing from "./pages/Pricing";
+import PricingOpen from "./pages/PricingOpen";
 import WatchdogLeaderboard from "./pages/WatchdogLeaderboard";
 import RegulatorDashboard from "./pages/RegulatorDashboard";
 import Blog from "./pages/Blog";
@@ -386,7 +387,8 @@ function App() {
                   <Route path="/scorecard/:systemId" component={ComplianceScorecard} />
                   <Route path="/knowledge-base" component={KnowledgeBase} />
                   <Route path="/enterprise-onboarding" component={EnterpriseOnboarding} />
-                  <Route path="/pricing" component={Pricing} />
+                  <Route path="/pricing" component={PricingOpen} />
+                  <Route path="/pricing-legacy" component={Pricing} />
              <Route path="/watchdog-leaderboard" component={WatchdogLeaderboard} />
       <Route path="/regulator" component={RegulatorDashboard} />
                   <Route path="/blog" component={Blog} />
