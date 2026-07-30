@@ -184,7 +184,7 @@ function StepsView() {
           Human chooses — Article 14
         </div>
         <div className="text-xs mt-1" style={{ color: "var(--csoai-muted)" }}>
-          The human-in-the-loop is the only judgement in the pipeline. Divergence is shown, never adjudicated automatically.
+          The human-in-the-loop is a judgement in the pipeline. Divergence is shown, never adjudicated automatically.
         </div>
       </div>
     </>
@@ -275,7 +275,7 @@ function LegacyView({ branches, onSelect }: { branches: LegacyBranch[]; onSelect
             Divergence at step {divergencePoint + 1}
           </div>
           <div className="text-xs mt-1" style={{ color: "var(--csoai-muted)" }}>
-            The human chooses. Article 14 is the only judgement in the loop.
+            The human chooses. Article 14 is a judgement in the loop.
           </div>
         </div>
       )}

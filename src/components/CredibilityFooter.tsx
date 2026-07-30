@@ -93,7 +93,7 @@ export default function CredibilityFooter() {
             What We Don&apos;t Claim
           </h3>
           <ul className="text-sm space-y-1" style={{ color: "var(--csoai-muted)" }}>
-            <li>Not a certifier &middot; not an enforcer &middot; no accreditation chain</li>
+            <li>Not a certifier &middot; no enforcement role &middot; no accreditation chain</li>
             <li>Our own systems are scored on this board, no exemption</li>
             <li>We measure. Others enforce. The distinction is the business.</li>
           </ul>
