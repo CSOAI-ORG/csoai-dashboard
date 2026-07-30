@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { MOCK_DECISION_RECORDS } from "@/lib/mock-data";
+import { useState, useEffect } from "react";
+import { fetchDecisionRecords } from "@/lib/d1-client";
 import type { DecisionRecord } from "@/lib/types";
 
 const KIND_COLORS: Record<string, string> = {
@@ -23,10 +23,17 @@ const VERDICT_BADGES: Record<string, { bg: string; text: string }> = {
 };
 
 export default function LedgerPage() {
+  const [records, setRecords] = useState<DecisionRecord[]>([]);
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<string>("all");
   const [expanded, setExpanded] = useState<string | null>(null);
 
-  const records = MOCK_DECISION_RECORDS;
+  useEffect(() => {
+    fetchDecisionRecords().then((data) => {
+      setRecords(data);
+      setLoading(false);
+    });
+  }, []);
   const filtered = filter === "all"
     ? records
     : records.filter(r => r.kind === filter || r.verdict === filter);
@@ -34,9 +41,19 @@ export default function LedgerPage() {
   const stats = {
     total: records.length,
     refutations: records.filter(r => r.kind === "refutation" && r.verdict === "REFUTED").length,
-    selfKilled: records.filter(r => r.kind === "refutation" && r.verdict === "REFUTED").length,
+    selfKilled: records.filter(r => r.kind === "refutation" && r.verdict === "REFUTED" && r.decided_by === "lane").length,
     open: records.filter(r => r.verdict === "OPEN").length,
   };
+
+  if (loading) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading ledger...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="py-8 px-4">

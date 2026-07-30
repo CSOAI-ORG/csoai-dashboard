@@ -1,6 +1,9 @@
-import { MOCK_GAP_CELLS } from "@/lib/mock-data";
-import type { GapCell, Axis, Mode } from "@/lib/types";
-import { AXES, MODES, INSTRUMENTS } from "@/lib/constants";
+"use client";
+
+import { useState, useEffect } from "react";
+import { fetchGapCells } from "@/lib/d1-client";
+import type { GapCell, Axis, Mode, CoverageStatus } from "@/lib/types";
+import { AXES, MODES } from "@/lib/constants";
 
 const COVERAGE_COLORS: Record<string, string> = {
   covered: "var(--csoai-green)",
@@ -9,18 +12,60 @@ const COVERAGE_COLORS: Record<string, string> = {
   queued: "var(--csoai-accent)",
 };
 
+const COVERAGE_SYMBOLS: Record<string, string> = {
+  covered: "\u2713",
+  partial: "~",
+  absent: "\u2717",
+  queued: "\u25CB",
+};
+
+const GAP_REASONS: Record<string, string> = {
+  no_benchmark: "No benchmark exists",
+  wrong_granularity: "Wrong granularity",
+  speaker_only: "Speaker-only coverage",
+  bare_model_only: "Bare model only",
+  judgement_based: "Judgement-based",
+};
+
 export default function GapPage() {
-  const totalProvisions = INSTRUMENTS.reduce((sum, i) => sum + i.provisions, 0);
-  const absent = MOCK_GAP_CELLS.filter((c) => c.field_coverage === "absent").length;
-  const partial = MOCK_GAP_CELLS.filter((c) => c.field_coverage === "partial").length;
-  const covered = MOCK_GAP_CELLS.filter((c) => c.field_coverage === "covered").length;
+  const [cells, setCells] = useState<GapCell[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [filterAxis, setFilterAxis] = useState<Axis | "all">("all");
+  const [filterMode, setFilterMode] = useState<Mode | "all">("all");
+  const [filterCoverage, setFilterCoverage] = useState<CoverageStatus | "all">("all");
+
+  useEffect(() => {
+    fetchGapCells().then((data) => {
+      setCells(data);
+      setLoading(false);
+    });
+  }, []);
+
+  const filtered = cells.filter((c) => {
+    if (filterAxis !== "all" && c.axis !== filterAxis) return false;
+    if (filterMode !== "all" && c.mode !== filterMode) return false;
+    if (filterCoverage !== "all" && c.field_coverage !== filterCoverage) return false;
+    return true;
+  });
+
+  const absent = cells.filter((c) => c.field_coverage === "absent").length;
+  const partial = cells.filter((c) => c.field_coverage === "partial").length;
+  const covered = cells.filter((c) => c.field_coverage === "covered").length;
+
+  if (loading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading gap map...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">Gap Map</h1>
         <p className="text-lg" style={{ color: "var(--csoai-muted)" }}>
-          <span style={{ color: "var(--csoai-red)" }}>{absent}</span> of {MOCK_GAP_CELLS.length} measured cells have{" "}
+          <span style={{ color: "var(--csoai-red)" }}>{absent}</span> of {cells.length} measured cells have{" "}
           <strong>no field coverage</strong> — no benchmark anywhere measures this provision.
         </p>
         <p className="text-sm mt-1" style={{ color: "var(--csoai-amber)" }}>
@@ -31,7 +76,7 @@ export default function GapPage() {
       {/* Summary */}
       <div className="grid grid-cols-3 gap-4 mb-8">
         {[
-          { label: "Absent (no coverage)", count: absent, color: "var(--csoai-red)" },
+          { label: "Absent (blind spots)", count: absent, color: "var(--csoai-red)" },
           { label: "Partial", count: partial, color: "var(--csoai-amber)" },
           { label: "Covered", count: covered, color: "var(--csoai-green)" },
         ].map((s) => (
@@ -46,95 +91,130 @@ export default function GapPage() {
         ))}
       </div>
 
-      {/* Matrix */}
-      <div className="overflow-x-auto">
+      {/* Filters */}
+      <div className="flex flex-wrap gap-4 mb-6 p-4 rounded-lg border" style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-surface)" }}>
+        <div>
+          <label className="text-xs block mb-1" style={{ color: "var(--csoai-muted)" }}>Axis</label>
+          <div className="flex gap-1">
+            <FilterButton active={filterAxis === "all"} onClick={() => setFilterAxis("all")}>All</FilterButton>
+            {AXES.map((a) => (
+              <FilterButton key={a.id} active={filterAxis === a.id} onClick={() => setFilterAxis(a.id)}>
+                {a.id[0].toUpperCase()}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
+        <div>
+          <label className="text-xs block mb-1" style={{ color: "var(--csoai-muted)" }}>Mode</label>
+          <div className="flex gap-1">
+            <FilterButton active={filterMode === "all"} onClick={() => setFilterMode("all")}>All</FilterButton>
+            {MODES.map((m) => (
+              <FilterButton key={m.id} active={filterMode === m.id} onClick={() => setFilterMode(m.id)}>
+                {m.label}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
+        <div>
+          <label className="text-xs block mb-1" style={{ color: "var(--csoai-muted)" }}>Coverage</label>
+          <div className="flex gap-1">
+            <FilterButton active={filterCoverage === "all"} onClick={() => setFilterCoverage("all")}>All</FilterButton>
+            {(["absent", "partial", "covered"] as const).map((s) => (
+              <FilterButton key={s} active={filterCoverage === s} onClick={() => setFilterCoverage(s)}>
+                {s[0].toUpperCase() + s.slice(1)}
+              </FilterButton>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Table */}
+      <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "var(--csoai-border)" }}>
         <table className="w-full text-sm">
           <thead>
-            <tr>
-              <th className="text-left p-2" style={{ color: "var(--csoai-muted)" }}>Provision</th>
-              <th className="text-left p-2" style={{ color: "var(--csoai-muted)" }}>Instrument</th>
-              {AXES.map((axis) =>
-                MODES.map((mode) => (
-                  <th
-                    key={`${axis.id}-${mode.id}`}
-                    className="text-center p-2 text-xs"
-                    style={{ color: "var(--csoai-muted)" }}
-                  >
-                    {axis.id.charAt(0).toUpperCase()}:{mode.id.charAt(0).toUpperCase()}
-                  </th>
-                ))
-              )}
+            <tr style={{ background: "var(--csoai-surface)" }}>
+              <th className="text-left p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Provision</th>
+              <th className="text-left p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Instrument</th>
+              <th className="text-left p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Axis</th>
+              <th className="text-left p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Mode</th>
+              <th className="text-center p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Field</th>
+              <th className="text-center p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>GSPC</th>
+              <th className="text-left p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Gap Reason</th>
+              <th className="text-left p-3 text-xs font-semibold" style={{ color: "var(--csoai-muted)" }}>Source</th>
             </tr>
           </thead>
           <tbody>
-            {groupedRows(MOCK_GAP_CELLS).map(([key, cells]) => {
-              const [provision, instrument] = key.split("|");
-              return (
-                <tr key={key} className="border-t" style={{ borderColor: "var(--csoai-border)" }}>
-                  <td className="p-2 font-mono text-xs">{provision}</td>
-                  <td className="p-2 text-xs" style={{ color: "var(--csoai-muted)" }}>{instrument}</td>
-                  {AXES.map((axis) =>
-                    MODES.map((mode) => {
-                      const cell = cells.find(
-                        (c) => c.axis === axis.id && c.mode === mode.id
-                      );
-                      return (
-                        <td key={`${axis.id}-${mode.id}`} className="p-2 text-center">
-                          {cell ? (
-                            <span
-                              className="inline-block w-6 h-6 rounded text-xs font-bold leading-6"
-                              style={{
-                                background: `${COVERAGE_COLORS[cell.field_coverage]}20`,
-                                color: COVERAGE_COLORS[cell.field_coverage],
-                              }}
-                              title={cell.gap_reason || cell.field_coverage}
-                            >
-                              {cell.field_coverage === "covered"
-                                ? "\u2713"
-                                : cell.field_coverage === "partial"
-                                ? "~"
-                                : "\u2717"}
-                            </span>
-                          ) : (
-                            <span className="text-xs" style={{ color: "var(--csoai-muted)" }}>—</span>
-                          )}
-                        </td>
-                      );
-                    })
+            {filtered.map((cell, i) => (
+              <tr key={i} className="border-t transition-colors hover:opacity-90" style={{ borderColor: "var(--csoai-border)" }}>
+                <td className="p-3 font-mono text-xs">{cell.provision}</td>
+                <td className="p-3 text-xs" style={{ color: "var(--csoai-muted)" }}>{cell.instrument}</td>
+                <td className="p-3">
+                  <span className="text-xs px-1.5 py-0.5 rounded" style={{ background: "rgba(59,130,246,0.15)", color: "var(--csoai-accent)" }}>
+                    {cell.axis[0].toUpperCase()}
+                  </span>
+                </td>
+                <td className="p-3 text-xs" style={{ color: "var(--csoai-muted)" }}>{cell.mode}</td>
+                <td className="p-3 text-center">
+                  <CoverageBadge status={cell.field_coverage} />
+                </td>
+                <td className="p-3 text-center">
+                  <CoverageBadge status={cell.gspc_coverage} />
+                </td>
+                <td className="p-3 text-xs" style={{ color: cell.gap_reason ? "var(--csoai-amber)" : "var(--csoai-muted)" }}>
+                  {cell.gap_reason ? GAP_REASONS[cell.gap_reason] || cell.gap_reason : "—"}
+                </td>
+                <td className="p-3 text-xs" style={{ color: "var(--csoai-muted)" }}>
+                  {cell.field_source || "—"}
+                  {cell.field_granularity && (
+                    <span className="ml-1 text-xs" style={{ color: "var(--csoai-amber)" }}>({cell.field_granularity})</span>
                   )}
-                </tr>
-              );
-            })}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
 
-      {/* Legend */}
-      <div className="mt-6 flex items-center gap-6 text-xs" style={{ color: "var(--csoai-muted)" }}>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded" style={{ background: `${COVERAGE_COLORS.covered}40` }} />
-          Covered
+      {filtered.length === 0 && (
+        <div className="text-center py-8 text-sm" style={{ color: "var(--csoai-muted)" }}>
+          No cells match the current filters.
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded" style={{ background: `${COVERAGE_COLORS.partial}40` }} />
-          Partial
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded" style={{ background: `${COVERAGE_COLORS.absent}40` }} />
-          Absent (blind spot)
-        </div>
+      )}
+
+      <div className="mt-4 text-xs" style={{ color: "var(--csoai-muted)" }}>
+        Showing {filtered.length} of {cells.length} cells
       </div>
     </div>
   );
 }
 
-function groupedRows(cells: GapCell[]): [string, GapCell[]][] {
-  const map = new Map<string, GapCell[]>();
-  for (const cell of cells) {
-    const key = `${cell.provision}|${cell.instrument}`;
-    const arr = map.get(key) || [];
-    arr.push(cell);
-    map.set(key, arr);
-  }
-  return Array.from(map.entries());
+function CoverageBadge({ status }: { status: string }) {
+  return (
+    <span
+      className="inline-flex items-center justify-center w-6 h-6 rounded text-xs font-bold"
+      style={{
+        background: `${COVERAGE_COLORS[status] || "var(--csoai-muted)"}20`,
+        color: COVERAGE_COLORS[status] || "var(--csoai-muted)",
+      }}
+      title={status}
+    >
+      {COVERAGE_SYMBOLS[status] || "?"}
+    </span>
+  );
+}
+
+function FilterButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
+  return (
+    <button
+      onClick={onClick}
+      className="px-2 py-1 text-xs rounded transition-colors"
+      style={{
+        background: active ? "rgba(59,130,246,0.2)" : "var(--csoai-bg)",
+        color: active ? "var(--csoai-accent)" : "var(--csoai-muted)",
+        border: active ? "1px solid var(--csoai-accent)" : "1px solid var(--csoai-border)",
+      }}
+    >
+      {children}
+    </button>
+  );
 }

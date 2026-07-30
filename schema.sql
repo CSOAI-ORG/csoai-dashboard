@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS crosswalk_entry (
   obligation_type TEXT,
   axis TEXT NOT NULL CHECK (axis IN ('governance', 'safety', 'provenance', 'continuity')),
   mode TEXT NOT NULL CHECK (mode IN ('speaker', 'actor')),
-  coverage_status TEXT NOT NULL DEFAULT 'absent' CHECK (coverage_status IN ('covered', 'partial', 'absent')),
+  coverage_status TEXT NOT NULL DEFAULT 'absent' CHECK (coverage_status IN ('covered', 'partial', 'absent', 'queued')),
   sources TEXT,  -- JSON array
   gap_reason TEXT,
   gspc_action TEXT,

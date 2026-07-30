@@ -1,4 +1,4 @@
-import type { Env } from '../types';
+import type { Env } from '../workers-types';
 
 interface WatcherRow {
   source: string;

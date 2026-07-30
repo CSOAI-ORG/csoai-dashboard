@@ -1,4 +1,4 @@
-import type { Env } from '../types';
+import type { Env } from '../workers-types';
 
 export async function handleChain(request: Request, env: Env, path: string): Promise<Response> {
   const method = request.method;

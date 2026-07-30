@@ -1,4 +1,4 @@
-import type { Env, DriftEvent } from '../types';
+import type { Env, DriftEvent } from '../workers-types';
 
 function parseJsonField<T>(value: string | null): T | null {
   if (!value) return null;

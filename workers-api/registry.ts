@@ -1,4 +1,4 @@
-import type { Env, Registrant, RegisteredSystem, EvidencePack } from '../types';
+import type { Env, Registrant, RegisteredSystem, EvidencePack } from '../workers-types';
 
 function generateId(prefix: string): string {
   return `${prefix}-${crypto.randomUUID()}`;

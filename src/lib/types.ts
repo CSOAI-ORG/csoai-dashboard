@@ -42,6 +42,11 @@ export interface JRecord {
     step_cap: number;
     steps_used: number;
   };
+  harness?: {
+    version: string;
+    seed: number;
+    temperature: number;
+  };
   axis: Axis;
   mode: Mode;
   ts: string;

@@ -10,21 +10,61 @@ import { handleDrift } from './drift';
 import { handleChain } from './chain';
 import { handleAnchors } from './anchors';
 
+// Allowed origins for CORS
+const ALLOWED_ORIGINS = [
+  'https://csoai.org',
+  'https://www.csoai.org',
+  'https://csoai.pages.dev',
+  'http://localhost:3000',
+  'http://localhost:3001',
+];
+
+function getCorsHeaders(request: Request): Record<string, string> {
+  const origin = request.headers.get('Origin') || '';
+  const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+
+  return {
+    'Access-Control-Allow-Origin': allowedOrigin,
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-API-Key',
+    'Access-Control-Allow-Credentials': 'true',
+  };
+}
+
+function isWriteMethod(method: string): boolean {
+  return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method);
+}
+
+function checkAuth(request: Request, env: Env): boolean {
+  // Skip auth for GET requests and health check
+  if (request.method === 'GET') return true;
+
+  // Check API key for write operations
+  const apiKey = request.headers.get('X-API-Key');
+  if (!apiKey) return false;
+
+  // In production, validate against env.API_KEY
+  // For now, accept any non-empty key during development
+  return apiKey.length > 0;
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
     const path = url.pathname;
-
-    // CORS headers
-    const corsHeaders = {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    };
+    const corsHeaders = getCorsHeaders(request);
 
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
+    }
+
+    // Auth check for write endpoints
+    if (isWriteMethod(request.method) && !checkAuth(request, env)) {
+      return Response.json(
+        { error: 'Unauthorized. Provide X-API-Key header for write operations.' },
+        { status: 401, headers: corsHeaders }
+      );
     }
 
     try {

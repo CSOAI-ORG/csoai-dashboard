@@ -63,7 +63,10 @@ export default function JSpacePanel({ record, compact = false }: JSpacePanelProp
           <span style={{ color: "var(--csoai-accent)" }}>&#9656;</span>
           <span style={{ color: "var(--csoai-muted)" }}>probe sent</span>
           <span>
-            {record.subject.model} &middot; seed 42 &middot; temp 0.0
+            {record.subject.model}
+            {record.harness && (
+              <> &middot; seed {record.harness.seed} &middot; temp {record.harness.temperature}</>
+            )}
           </span>
         </div>
 

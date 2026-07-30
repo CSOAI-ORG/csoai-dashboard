@@ -1,4 +1,4 @@
-import type { Env, CrosswalkEntry } from '../types';
+import type { Env, CrosswalkEntry } from '../workers-types';
 
 export async function handleGap(request: Request, env: Env, path: string): Promise<Response> {
   const method = request.method;

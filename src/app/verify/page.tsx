@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MOCK_DECISION_RECORDS } from "@/lib/mock-data";
+import { MOCK_J_RECORDS } from "@/lib/mock-data";
+import { verifyChain } from "@/lib/verify";
 
 export default function VerifyPage() {
   const [result, setResult] = useState<{
@@ -15,15 +16,23 @@ export default function VerifyPage() {
   const handleVerify = async () => {
     setIsVerifying(true);
 
-    // Simulate verification (in production, this calls the chain API)
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    setResult({
-      valid: true,
-      records_checked: MOCK_DECISION_RECORDS.length,
-      message: `Chain intact — ${MOCK_DECISION_RECORDS.length} records, no tampering detected`,
-      mode: "tamper-evidence",
-    });
+    try {
+      // Real client-side verification using SHA-256 hash chain
+      const chainResult = await verifyChain(MOCK_J_RECORDS);
+      setResult({
+        valid: chainResult.valid,
+        records_checked: chainResult.records_checked,
+        message: chainResult.message,
+        mode: chainResult.mode,
+      });
+    } catch (error) {
+      setResult({
+        valid: false,
+        records_checked: 0,
+        message: `Verification failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        mode: "tamper-evidence",
+      });
+    }
 
     setIsVerifying(false);
   };
@@ -59,10 +68,13 @@ export default function VerifyPage() {
                 className="text-2xl font-bold mb-2"
                 style={{ color: result.valid ? "var(--csoai-green)" : "var(--csoai-red)" }}
               >
-                {result.valid ? "✓ CHAIN INTACT" : "✗ CHAIN BROKEN"}
+                {result.valid ? "\u2713 CHAIN INTACT" : "\u2717 CHAIN BROKEN"}
               </div>
               <div className="text-sm mb-4" style={{ color: "var(--csoai-text)" }}>
                 {result.message}
+              </div>
+              <div className="text-xs mb-2" style={{ color: "var(--csoai-muted)" }}>
+                Records checked: {result.records_checked}
               </div>
               <div
                 className="inline-block px-3 py-1 rounded text-sm"
@@ -86,7 +98,7 @@ export default function VerifyPage() {
           }}
         >
           <h3 className="font-semibold mb-2" style={{ color: "var(--csoai-amber)" }}>
-            ⚠️ What This Verifies
+            What This Verifies
           </h3>
           <div className="text-sm space-y-2" style={{ color: "var(--csoai-text)" }}>
             <p>

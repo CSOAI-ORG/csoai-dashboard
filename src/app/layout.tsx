@@ -4,9 +4,8 @@ import Navbar from "@/components/Navbar";
 import CredibilityFooter from "@/components/CredibilityFooter";
 
 export const metadata: Metadata = {
-  title: "CSOAI — AI Compliance Measurement",
-  description: "Measuring whether AI systems comply with the law. Deterministic, signed, anchored.",
-  keywords: ["AI", "compliance", "measurement", "governance", "EU AI Act", "GSPC"],
+  title: "CSOAI — The Measurement Body",
+  description: "Measuring what the measurement layer misses. Governance, Safety, Provenance, Continuity — deterministic, signed, anchored to the law.",
 };
 
 export default function RootLayout({
@@ -17,8 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
+        <a href="#main-content" className="skip-to-content">
+          Skip to content
+        </a>
         <Navbar />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           {children}
         </main>
         <CredibilityFooter />

@@ -23,6 +23,33 @@ body {
   margin: 0;
 }
 
+/* Skip to content link for keyboard users */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--csoai-accent);
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--csoai-accent);
+  outline-offset: 2px;
+}
+
+/* Remove focus ring for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* J-space panel animations */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
@@ -56,4 +83,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background: var(--csoai-border);
   border-radius: 3px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-dot {
+    animation: none;
+  }
 }

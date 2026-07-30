@@ -1,6 +1,8 @@
 "use client";
 
-import { MOCK_WATCHERS } from "@/lib/mock-data";
+import { useState, useEffect } from "react";
+import { fetchWatchers } from "@/lib/d1-client";
+import type { WatcherStatus } from "@/lib/types";
 
 const STATUS_COLORS: Record<string, string> = {
   LIVE: "var(--csoai-green)",
@@ -11,8 +13,28 @@ const STATUS_COLORS: Record<string, string> = {
 };
 
 export default function AnchorsPage() {
-  const liveCount = MOCK_WATCHERS.filter(w => w.status === "LIVE").length;
-  const totalCount = MOCK_WATCHERS.length;
+  const [watchers, setWatchers] = useState<WatcherStatus[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchWatchers().then((data) => {
+      setWatchers(data);
+      setLoading(false);
+    });
+  }, []);
+
+  const liveCount = watchers.filter(w => w.status === "LIVE").length;
+  const totalCount = watchers.length;
+
+  if (loading) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading anchors...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="py-8 px-4">
@@ -33,8 +55,8 @@ export default function AnchorsPage() {
           {[
             { label: "Total Watchers", value: totalCount, color: "var(--csoai-text)" },
             { label: "Live", value: liveCount, color: "var(--csoai-green)" },
-            { label: "Throttled", value: MOCK_WATCHERS.filter(w => w.status === "THROTTLED").length, color: "var(--csoai-amber)" },
-            { label: "Unreachable", value: MOCK_WATCHERS.filter(w => w.status === "CITED").length, color: "var(--csoai-muted)" },
+            { label: "Throttled", value: watchers.filter(w => w.status === "THROTTLED").length, color: "var(--csoai-amber)" },
+            { label: "Other", value: watchers.filter(w => w.status !== "LIVE" && w.status !== "THROTTLED").length, color: "var(--csoai-muted)" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -53,7 +75,7 @@ export default function AnchorsPage() {
 
         {/* Watcher List */}
         <div className="space-y-4">
-          {MOCK_WATCHERS.map((watcher) => (
+          {watchers.map((watcher) => (
             <div
               key={watcher.source}
               className="border rounded-lg p-6"
