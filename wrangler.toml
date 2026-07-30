@@ -1,0 +1,12 @@
+name = "csoai-gspc-api"
+main = "src/worker/index.ts"
+compatibility_date = "2024-12-18"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "csoai-gspc"
+database_id = "placeholder-replace-with-actual-id"

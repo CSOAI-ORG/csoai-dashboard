@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --csoai-bg: #0a0a0f;
+  --csoai-surface: #12121a;
+  --csoai-border: #1e1e2e;
+  --csoai-text: #e2e8f0;
+  --csoai-muted: #64748b;
+  --csoai-accent: #3b82f6;
+  --csoai-green: #22c55e;
+  --csoai-red: #ef4444;
+  --csoai-amber: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--csoai-bg);
+  color: var(--csoai-text);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+}
+
+/* J-space panel animations */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* MapLibre overrides */
+.maplibregl-popup-content {
+  background: var(--csoai-surface) !important;
+  color: var(--csoai-text) !important;
+  border: 1px solid var(--csoai-border) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: var(--csoai-surface) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--csoai-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--csoai-border);
+  border-radius: 3px;
+}
