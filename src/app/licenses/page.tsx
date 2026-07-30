@@ -41,6 +41,7 @@ export default function LicensesPage() {
               </tbody>
             </table>
           </div>
+          </div>
         </section>
 
         {/* Data Sources */}
