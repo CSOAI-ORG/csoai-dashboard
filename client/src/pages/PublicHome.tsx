@@ -52,7 +52,7 @@ export default function PublicHome() {
           </div>
 
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" onClick={() => window.location.href = '/home'}>Sign In</Button>
+            <Button variant="ghost" size="sm" onClick={() => window.location.href = '/login'} data-testid="sign-in-button">Sign In</Button>
             <Button size="sm" onClick={() => window.location.href = '/watchdog-signup'}>Become a Watchdog</Button>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function PublicHome() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <Button size="lg" className="gap-2" onClick={() => window.location.href = '/home'}>
+              <Button size="lg" className="gap-2" onClick={() => window.location.href = '/risk-assessment'} data-testid="start-compliance-check-button">
                 Start Compliance Check
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -495,7 +495,7 @@ export default function PublicHome() {
                 Achieve compliance before the August 2026 EU AI Act deadline. 
                 Avoid €35M fines with proactive governance.
               </p>
-              <Button variant="outline" size="sm" onClick={() => window.location.href = '/home'}>Start Assessment</Button>
+              <Button variant="outline" size="sm" onClick={() => window.location.href = '/risk-assessment'} data-testid="start-assessment-button">Start Assessment</Button>
             </div>
 
             <div className="text-center">

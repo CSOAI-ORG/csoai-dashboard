@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import DashboardLayout from "@/components/DashboardLayout";
+import { useLocation } from "wouter";
 
 const assessmentTypes = [
   {
@@ -17,6 +18,8 @@ const assessmentTypes = [
     icon: FileText,
     articles: "113 articles",
     time: "~45 min",
+    href: "/eu-ai-act-classifier",
+    available: true,
   },
   {
     title: "NIST AI RMF Assessment",
@@ -24,6 +27,8 @@ const assessmentTypes = [
     icon: FileText,
     articles: "7 characteristics",
     time: "~30 min",
+    href: "/compliance/nist-ai-rmf",
+    available: true,
   },
   {
     title: "TC260 Assessment",
@@ -31,6 +36,8 @@ const assessmentTypes = [
     icon: FileText,
     articles: "14 measures",
     time: "~35 min",
+    href: "/compliance/tc260",
+    available: true,
   },
   {
     title: "Multi-Framework Assessment",
@@ -38,13 +45,17 @@ const assessmentTypes = [
     icon: AlertTriangle,
     articles: "All frameworks",
     time: "~90 min",
+    href: "/compliance",
+    available: true,
   },
 ];
 
 export default function RiskAssessment() {
+  const [, navigate] = useLocation();
+
   return (
     <DashboardLayout>
-      <div className="p-6 space-y-6">
+      <div className="p-6 space-y-6" data-testid="risk-assessment-page">
         <div>
           <h1 className="text-2xl font-semibold font-primary">Risk Assessment</h1>
           <p className="text-muted-foreground text-sm">
@@ -62,7 +73,11 @@ export default function RiskAssessment() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: idx * 0.05 }}
               >
-                <Card className="bg-card border-border hover:bg-accent/30 transition-colors cursor-pointer h-full">
+                <Card
+                  className="bg-card border-border hover:bg-accent/30 transition-colors cursor-pointer h-full"
+                  onClick={() => navigate(type.href)}
+                  data-testid={`assessment-card-${type.title.toLowerCase().replace(/\s+/g, '-')}`}
+                >
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
                       <div className="p-2 rounded-lg bg-secondary">
@@ -79,15 +94,7 @@ export default function RiskAssessment() {
                           <span>{type.time}</span>
                         </div>
                       </div>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() =>
-                          type.title.includes("EU AI Act")
-                            ? (window.location.href = "/eu-ai-act-classifier")
-                            : toast.info("Coming soon — meanwhile, run the EU AI Act classifier")
-                        }
-                      >
+                      <Button variant="ghost" size="icon" aria-label={`Start ${type.title}`}>
                         <ArrowRight className="h-4 w-4" />
                       </Button>
                     </div>

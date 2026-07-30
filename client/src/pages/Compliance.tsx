@@ -400,7 +400,7 @@ export default function Compliance() {
                 </SelectTrigger>
                 <SelectContent>
                   {frameworks.map((fw) => (
-                    <SelectItem key={fw.id || fw.name} value={fw.name}>
+                    <SelectItem key={fw.id || fw.name} value={String(fw.id)}>
                       {fw.name}
                     </SelectItem>
                   ))}
