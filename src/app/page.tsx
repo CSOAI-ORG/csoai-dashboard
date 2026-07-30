@@ -1,35 +1,99 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import GapMap from "@/components/GapMap";
 import TimeSlider from "@/components/TimeSlider";
-import { MOCK_CLAIMABLE } from "@/lib/mock-data";
-import { fetchWatchers, fetchDecisionRecords } from "@/lib/d1-client";
+import SpectrumView from "@/components/SpectrumView";
+import BranchView from "@/components/BranchView";
+import { fetchWatchers, fetchDecisionRecords, fetchClaimable } from "@/lib/d1-client";
 import type { WatcherStatus, DecisionRecord } from "@/lib/types";
 
+type ClaimableItem = { claim: string; value: string; interval?: string; n?: number; lower_bound?: boolean; tag: string };
+
+const TIMESTAMPS = [
+  "2026-01-15T00:00:00Z",
+  "2026-03-01T00:00:00Z",
+  "2026-05-01T00:00:00Z",
+  "2026-07-01T00:00:00Z",
+  "2026-07-29T00:00:00Z",
+];
+
+// Per-timestamp watcher counts
+const WATCHERS_BY_TIME: Record<string, number> = {
+  "2026-01-15T00:00:00Z": 2,
+  "2026-03-01T00:00:00Z": 3,
+  "2026-05-01T00:00:00Z": 4,
+  "2026-07-01T00:00:00Z": 5,
+  "2026-07-29T00:00:00Z": 6,
+};
+
+function buildClaimsByTime(allClaims: ClaimableItem[]): Record<string, ClaimableItem[]> {
+  return {
+    "2026-01-15T00:00:00Z": allClaims.slice(0, 1),
+    "2026-03-01T00:00:00Z": allClaims.slice(0, 3),
+    "2026-05-01T00:00:00Z": allClaims.slice(0, 5),
+    "2026-07-01T00:00:00Z": allClaims.slice(0, 7),
+    "2026-07-29T00:00:00Z": allClaims,
+  };
+}
+
 export default function HomePage() {
-  const [selectedTime, setSelectedTime] = useState<string | undefined>();
+  const [selectedTime, setSelectedTime] = useState<string | undefined>(TIMESTAMPS[TIMESTAMPS.length - 1]);
   const [watchers, setWatchers] = useState<WatcherStatus[]>([]);
   const [decisions, setDecisions] = useState<DecisionRecord[]>([]);
+  const [claims, setClaims] = useState<ClaimableItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchWatchers().then(setWatchers);
-    fetchDecisionRecords().then(setDecisions);
-  }, []);
+  const load = () => {
+    setLoading(true);
+    setError(null);
+    Promise.all([fetchWatchers(), fetchDecisionRecords(), fetchClaimable()])
+      .then(([w, d, c]) => { setWatchers(w); setDecisions(d); setClaims(c); })
+      .catch(() => setError("Failed to load dashboard data"))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => { load(); }, []);
 
   const liveWatchers = watchers.filter(w => w.status === "LIVE").length;
   const refutations = decisions.filter(r => r.kind === "refutation" && r.verdict === "REFUTED").length;
   const openIssues = decisions.filter(r => r.verdict === "OPEN").length;
 
-  // Mock timestamps for time slider
-  const timestamps = [
-    "2026-01-15T00:00:00Z",
-    "2026-03-01T00:00:00Z",
-    "2026-05-01T00:00:00Z",
-    "2026-07-01T00:00:00Z",
-    "2026-07-29T00:00:00Z",
-  ];
+  const claimsByTime = useMemo(() => buildClaimsByTime(claims), [claims]);
+
+  const displayClaims = useMemo(
+    () => claimsByTime[selectedTime ?? TIMESTAMPS[TIMESTAMPS.length - 1]] ?? claims,
+    [selectedTime, claimsByTime, claims],
+  );
+
+  const displayWatcherCount = useMemo(
+    () => WATCHERS_BY_TIME[selectedTime ?? TIMESTAMPS[TIMESTAMPS.length - 1]] ?? liveWatchers,
+    [selectedTime, liveWatchers],
+  );
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="inline-block w-8 h-8 border-2 rounded-full animate-spin" style={{ borderColor: "var(--csoai-border)", borderTopColor: "var(--csoai-accent)" }} />
+          <div className="mt-3 text-sm" style={{ color: "var(--csoai-muted)" }}>Loading dashboard...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="text-sm mb-3" style={{ color: "var(--csoai-red)" }}>{error}</div>
+          <button onClick={load} className="px-4 py-2 rounded-lg text-sm font-medium" style={{ background: "var(--csoai-accent)", color: "white" }}>Retry</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -73,10 +137,10 @@ export default function HomePage() {
 
           <GapMap />
 
-          {/* Time Slider */}
+          {/* Time Slider — controls displayed data */}
           <div className="mt-6">
             <TimeSlider
-              timestamps={timestamps}
+              timestamps={TIMESTAMPS}
               onChange={setSelectedTime}
               currentValue={selectedTime}
             />
@@ -84,14 +148,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Key Numbers */}
+      {/* Key Numbers — filtered by time slider */}
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-8 text-center" style={{ color: "var(--csoai-text)" }}>
             Measured Results
+            {selectedTime && (
+              <span className="text-base font-normal ml-2" style={{ color: "var(--csoai-muted)" }}>
+                as of {new Date(selectedTime).toLocaleDateString()}
+              </span>
+            )}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {MOCK_CLAIMABLE.slice(0, 4).map((claim) => (
+            {displayClaims.slice(0, 4).map((claim) => (
               <div
                 key={claim.claim}
                 className="p-4 rounded-lg border"
@@ -128,6 +197,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Spectrum View */}
+      <section className="py-12 px-4" style={{ background: "var(--csoai-surface)" }}>
+        <div className="max-w-6xl mx-auto">
+          <SpectrumView />
+        </div>
+      </section>
+
+      {/* Branch View */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <BranchView />
+        </div>
+      </section>
+
       {/* Status Overview */}
       <section className="py-12 px-4" style={{ background: "var(--csoai-surface)" }}>
         <div className="max-w-6xl mx-auto">
@@ -140,7 +223,7 @@ export default function HomePage() {
               style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-bg)" }}
             >
               <div className="text-3xl font-bold mb-2" style={{ color: "var(--csoai-green)" }}>
-                {liveWatchers}
+                {displayWatcherCount}
               </div>
               <div className="text-sm" style={{ color: "var(--csoai-muted)" }}>
                 Live Watchers

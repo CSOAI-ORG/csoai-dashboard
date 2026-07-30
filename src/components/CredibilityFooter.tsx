@@ -1,6 +1,25 @@
-import { MOCK_WATCHERS } from "@/lib/mock-data";
+"use client";
+
+import { useState, useEffect } from "react";
+import { fetchWatchers } from "@/lib/d1-client";
+import type { WatcherStatus } from "@/lib/types";
 
 export default function CredibilityFooter() {
+  const [watchers, setWatchers] = useState<WatcherStatus[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const load = () => {
+    setLoading(true);
+    setError(null);
+    fetchWatchers()
+      .then(setWatchers)
+      .catch(() => setError("Failed to load watcher data"))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => { load(); }, []);
+
   return (
     <footer className="border-t mt-auto" style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-surface)" }}>
       <div className="max-w-7xl mx-auto px-4 py-8">
@@ -9,24 +28,33 @@ export default function CredibilityFooter() {
           <h3 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "var(--csoai-muted)" }}>
             Anchored To
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-            {MOCK_WATCHERS.map((w) => (
-              <div key={w.source} className="flex items-center gap-2 text-sm">
-                <span
-                  className="w-2 h-2 rounded-full animate-pulse-dot"
-                  style={{
-                    background: w.status === "LIVE" ? "var(--csoai-green)" :
-                                w.status === "THROTTLED" ? "var(--csoai-amber)" :
-                                "var(--csoai-muted)",
-                  }}
-                />
-                <span style={{ color: "var(--csoai-text)" }}>{w.source}</span>
-                <span className="text-xs" style={{ color: "var(--csoai-muted)" }}>
-                  {w.provisions_tracked} provisions · last checked {formatTimeAgo(w.last_checked)}
-                </span>
-              </div>
-            ))}
-          </div>
+          {loading ? (
+            <div className="text-sm" style={{ color: "var(--csoai-muted)" }}>Loading anchors...</div>
+          ) : error ? (
+            <div className="flex items-center gap-2 text-sm">
+              <span style={{ color: "var(--csoai-red)" }}>{error}</span>
+              <button onClick={load} className="underline text-xs" style={{ color: "var(--csoai-accent)" }}>Retry</button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {watchers.map((w) => (
+                <div key={w.source} className="flex items-center gap-2 text-sm">
+                  <span
+                    className="w-2 h-2 rounded-full animate-pulse-dot"
+                    style={{
+                      background: w.status === "LIVE" ? "var(--csoai-green)" :
+                                  w.status === "THROTTLED" ? "var(--csoai-amber)" :
+                                  "var(--csoai-muted)",
+                    }}
+                  />
+                  <span style={{ color: "var(--csoai-text)" }}>{w.source}</span>
+                  <span className="text-xs" style={{ color: "var(--csoai-muted)" }}>
+                    {w.provisions_tracked} provisions · last checked {formatTimeAgo(w.last_checked)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Built With */}

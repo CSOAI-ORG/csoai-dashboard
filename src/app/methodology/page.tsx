@@ -1,6 +1,19 @@
-import { MOCK_CLAIMABLE } from "@/lib/mock-data";
+"use client";
+
+import { useState, useEffect } from "react";
+import { fetchClaimable } from "@/lib/d1-client";
 
 export default function MethodologyPage() {
+  const [claims, setClaims] = useState<{ claim: string; value: string; interval?: string; n?: number; lower_bound?: boolean; tag: string }[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchClaimable().then((data) => {
+      setClaims(data);
+      setLoading(false);
+    });
+  }, []);
+
   return (
     <div className="py-8 px-4">
       <div className="max-w-4xl mx-auto">
@@ -139,7 +152,7 @@ export default function MethodologyPage() {
                 </tr>
               </thead>
               <tbody>
-                {MOCK_CLAIMABLE.map((claim) => (
+                {claims.map((claim) => (
                   <tr key={claim.claim} className="border-t" style={{ borderColor: "var(--csoai-border)" }}>
                     <td className="px-4 py-3 text-sm" style={{ color: "var(--csoai-text)" }}>{claim.claim}</td>
                     <td className="px-4 py-3 text-sm font-mono" style={{ color: "var(--csoai-accent)" }}>{claim.value}</td>

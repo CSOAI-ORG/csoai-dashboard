@@ -1,4 +1,30 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { fetchDecisionRecords } from "@/lib/d1-client";
+import type { DecisionRecord } from "@/lib/types";
+
 export default function CorrectionsPage() {
+  const [corrections, setCorrections] = useState<DecisionRecord[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchDecisionRecords({ kind: "correction" }).then((data) => {
+      setCorrections(data);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="animate-pulse" style={{ color: "var(--csoai-muted)" }}>Loading corrections...</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="py-8 px-4">
       <div className="max-w-4xl mx-auto">
@@ -10,76 +36,68 @@ export default function CorrectionsPage() {
           The history of being wrong <em>is</em> the ledger.
         </p>
 
-        {/* The Three Corrections from Today */}
+        {/* Corrections from data layer */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4" style={{ color: "var(--csoai-text)" }}>
-            2026-07-29 — Three Corrections Caught
+            Published Corrections
           </h2>
-          <div className="space-y-4">
-            {[
-              {
-                id: "DR-0001",
-                drift: "The CI",
-                what: "24.2% → '3.43%' → ?",
-                resolution: "Asset is the unit, n=12. One-sided 22.1%. Nine transforms of one asset are one deterministic fact restated. Cell-level 3.43% assumes independence that doesn't hold.",
-                note: "Pinned DR-0012.",
-              },
-              {
-                id: "DR-0003",
-                drift: "0/108 measured or modelled?",
-                what: "Confusion between measured and modelled results",
-                resolution: "MEASURED. Traced to provbench.py — real c2pa SDK 0.90.1, real signing, real transforms, three-state outcomes. A modelled look-alike file was conflated with it. No refutation #8.",
-                note: "Confirmed.",
-              },
-              {
-                id: "DR-0004",
-                drift: "Cron 'deployed'",
-                what: "Claimed as live when it was only authored",
-                resolution: "AUTHORED. Never pushed, never triggered. Overclaimed twice. Now an earned flag — settable only by a remote run writing a signed proof.",
-                note: "Stays OPEN until deployed.",
-              },
-            ].map((correction) => (
-              <div
-                key={correction.id}
-                className="p-6 rounded-lg border"
-                style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-surface)" }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="font-mono text-sm" style={{ color: "var(--csoai-muted)" }}>
-                    {correction.id}
-                  </span>
-                  <span
-                    className="px-2 py-0.5 rounded text-xs"
-                    style={{ background: "rgba(234,179,8,0.1)", color: "var(--csoai-amber)" }}
-                  >
-                    correction
-                  </span>
-                </div>
+          {corrections.length === 0 ? (
+            <div className="p-6 rounded-lg border" style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-surface)" }}>
+              <div style={{ color: "var(--csoai-muted)" }}>No corrections published yet.</div>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {corrections.map((record) => (
+                <div
+                  key={record.record_id}
+                  className="p-6 rounded-lg border"
+                  style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-surface)" }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="font-mono text-sm" style={{ color: "var(--csoai-muted)" }}>
+                      {record.record_id}
+                    </span>
+                    <span
+                      className="px-2 py-0.5 rounded text-xs"
+                      style={{ background: "rgba(234,179,8,0.1)", color: "var(--csoai-amber)" }}
+                    >
+                      {record.kind}
+                    </span>
+                    <span
+                      className="px-2 py-0.5 rounded text-xs"
+                      style={{
+                        background: record.verdict === "OPEN" ? "rgba(234,179,8,0.1)" : "rgba(34,197,94,0.1)",
+                        color: record.verdict === "OPEN" ? "var(--csoai-amber)" : "var(--csoai-green)",
+                      }}
+                    >
+                      {record.verdict}
+                    </span>
+                  </div>
 
-                <div className="mb-4">
-                  <div className="font-semibold mb-1" style={{ color: "var(--csoai-text)" }}>
-                    Drift: {correction.drift}
+                  <div className="mb-4">
+                    <div className="font-semibold mb-1" style={{ color: "var(--csoai-text)" }}>
+                      {record.claim}
+                    </div>
                   </div>
-                  <div className="text-sm" style={{ color: "var(--csoai-muted)" }}>
-                    {correction.what}
-                  </div>
-                </div>
 
-                <div className="mb-4">
-                  <div className="text-sm font-medium mb-1" style={{ color: "var(--csoai-muted)" }}>
-                    Resolution
+                  <div className="mb-4">
+                    <div className="text-sm font-medium mb-1" style={{ color: "var(--csoai-muted)" }}>
+                      Evidence
+                    </div>
+                    <div className="text-sm" style={{ color: "var(--csoai-text)" }}>
+                      {record.evidence}
+                    </div>
                   </div>
-                  <div className="text-sm" style={{ color: "var(--csoai-text)" }}>
-                    {correction.resolution}
-                  </div>
-                </div>
 
-                <div className="text-xs" style={{ color: "var(--csoai-muted)" }}>
-                  {correction.note}
+                  <div className="flex items-center gap-4 text-xs" style={{ color: "var(--csoai-muted)" }}>
+                    <span>Decided by: {record.decided_by}</span>
+                    <span>Date: {record.decided_on}</span>
+                    {record.sigil_link && <span>Signed: {record.sigil_link}</span>}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* The Discipline */}

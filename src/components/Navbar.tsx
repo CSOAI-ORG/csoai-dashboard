@@ -10,10 +10,10 @@ const NAV_ITEMS = [
   { href: "/arena", label: "Arena" },
   { href: "/ledger", label: "Ledger" },
   { href: "/gap", label: "Gap Map" },
+  { href: "/drift", label: "Drift" },
+  { href: "/registry", label: "Registry" },
   { href: "/anchors", label: "Anchors" },
   { href: "/methodology", label: "Methodology" },
-  { href: "/licenses", label: "Licenses" },
-  { href: "/corrections", label: "Corrections" },
   { href: "/verify", label: "Verify" },
 ];
 

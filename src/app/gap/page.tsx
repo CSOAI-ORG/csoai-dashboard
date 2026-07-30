@@ -30,16 +30,21 @@ const GAP_REASONS: Record<string, string> = {
 export default function GapPage() {
   const [cells, setCells] = useState<GapCell[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [filterAxis, setFilterAxis] = useState<Axis | "all">("all");
   const [filterMode, setFilterMode] = useState<Mode | "all">("all");
   const [filterCoverage, setFilterCoverage] = useState<CoverageStatus | "all">("all");
 
-  useEffect(() => {
-    fetchGapCells().then((data) => {
-      setCells(data);
-      setLoading(false);
-    });
-  }, []);
+  const load = () => {
+    setLoading(true);
+    setError(null);
+    fetchGapCells()
+      .then(setCells)
+      .catch(() => setError("Failed to load gap data"))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => { load(); }, []);
 
   const filtered = cells.filter((c) => {
     if (filterAxis !== "all" && c.axis !== filterAxis) return false;
@@ -54,8 +59,22 @@ export default function GapPage() {
 
   if (loading) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading gap map...</div>
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="inline-block w-8 h-8 border-2 rounded-full animate-spin" style={{ borderColor: "var(--csoai-border)", borderTopColor: "var(--csoai-accent)" }} />
+          <div className="mt-3 text-sm" style={{ color: "var(--csoai-muted)" }}>Loading gap map...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="text-sm mb-3" style={{ color: "var(--csoai-red)" }}>{error}</div>
+          <button onClick={load} className="px-4 py-2 rounded-lg text-sm font-medium" style={{ background: "var(--csoai-accent)", color: "white" }}>Retry</button>
+        </div>
       </div>
     );
   }

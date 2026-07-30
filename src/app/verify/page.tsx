@@ -1,41 +1,30 @@
 "use client";
 
-import { useState } from "react";
-import { MOCK_J_RECORDS } from "@/lib/mock-data";
-import { verifyChain } from "@/lib/verify";
+import { useState, useEffect } from "react";
+import { fetchJRecords } from "@/lib/d1-client";
+import VerifyButton from "@/components/VerifyButton";
+import type { JRecord } from "@/lib/types";
 
 export default function VerifyPage() {
-  const [result, setResult] = useState<{
-    valid: boolean;
-    records_checked: number;
-    message: string;
-    mode: string;
-  } | null>(null);
-  const [isVerifying, setIsVerifying] = useState(false);
+  const [records, setRecords] = useState<JRecord[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const handleVerify = async () => {
-    setIsVerifying(true);
+  useEffect(() => {
+    fetchJRecords().then((data) => {
+      setRecords(data);
+      setLoading(false);
+    });
+  }, []);
 
-    try {
-      // Real client-side verification using SHA-256 hash chain
-      const chainResult = await verifyChain(MOCK_J_RECORDS);
-      setResult({
-        valid: chainResult.valid,
-        records_checked: chainResult.records_checked,
-        message: chainResult.message,
-        mode: chainResult.mode,
-      });
-    } catch (error) {
-      setResult({
-        valid: false,
-        records_checked: 0,
-        message: `Verification failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
-        mode: "tamper-evidence",
-      });
-    }
-
-    setIsVerifying(false);
-  };
+  if (loading) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-2xl mx-auto">
+          <div className="animate-pulse" style={{ color: "var(--csoai-muted)" }}>Loading records...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="py-8 px-4">
@@ -53,40 +42,11 @@ export default function VerifyPage() {
           className="p-8 rounded-lg border text-center mb-8"
           style={{ borderColor: "var(--csoai-border)", background: "var(--csoai-surface)" }}
         >
-          <button
-            onClick={handleVerify}
-            disabled={isVerifying}
-            className="px-8 py-4 rounded-lg text-lg font-medium transition-opacity hover:opacity-90 disabled:opacity-50"
-            style={{ background: "var(--csoai-accent)", color: "white" }}
-          >
-            {isVerifying ? "Verifying..." : "Verify Chain ↓"}
-          </button>
+          <VerifyButton records={records} />
 
-          {result && (
-            <div className="mt-6">
-              <div
-                className="text-2xl font-bold mb-2"
-                style={{ color: result.valid ? "var(--csoai-green)" : "var(--csoai-red)" }}
-              >
-                {result.valid ? "\u2713 CHAIN INTACT" : "\u2717 CHAIN BROKEN"}
-              </div>
-              <div className="text-sm mb-4" style={{ color: "var(--csoai-text)" }}>
-                {result.message}
-              </div>
-              <div className="text-xs mb-2" style={{ color: "var(--csoai-muted)" }}>
-                Records checked: {result.records_checked}
-              </div>
-              <div
-                className="inline-block px-3 py-1 rounded text-sm"
-                style={{
-                  background: "rgba(59,130,246,0.1)",
-                  color: "var(--csoai-accent)",
-                }}
-              >
-                Mode: {result.mode}
-              </div>
-            </div>
-          )}
+          <div className="mt-4 text-xs" style={{ color: "var(--csoai-muted)" }}>
+            {records.length} records available for verification
+          </div>
         </div>
 
         {/* Important Note */}

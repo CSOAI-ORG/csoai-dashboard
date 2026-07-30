@@ -1,7 +1,7 @@
 // D1 Client — connects to the Cloudflare Worker API
 // In development, uses mock data. In production, calls the worker.
 
-import { MOCK_J_RECORDS, MOCK_DECISION_RECORDS, MOCK_GAP_CELLS, MOCK_WATCHERS, MOCK_CLAIMABLE } from './mock-data';
+import { MOCK_J_RECORDS, MOCK_DECISION_RECORDS, MOCK_GAP_CELLS, MOCK_WATCHERS, MOCK_CLAIMABLE, MOCK_REGISTRANTS, MOCK_DRIFT_EVENTS } from './mock-data';
 import type { JRecord, DecisionRecord, GapCell, WatcherStatus } from './types';
 
 const WORKER_URL = process.env.NEXT_PUBLIC_WORKER_URL || '';
@@ -89,6 +89,16 @@ export async function fetchWatchers(): Promise<WatcherStatus[]> {
   return data.watchers || [];
 }
 
+export async function fetchClaimable(): Promise<typeof MOCK_CLAIMABLE> {
+  if (USE_MOCK) {
+    return MOCK_CLAIMABLE;
+  }
+
+  // In production, this would come from a dedicated endpoint
+  // For now, return mock data
+  return MOCK_CLAIMABLE;
+}
+
 export async function submitProbe(probe: {
   model: string;
   prompt?: string;
@@ -129,4 +139,33 @@ export async function submitProbe(probe: {
   });
 
   return response.json();
+}
+
+export async function fetchRegistrants(): Promise<typeof MOCK_REGISTRANTS> {
+  if (USE_MOCK) {
+    return MOCK_REGISTRANTS;
+  }
+
+  const response = await fetch(`${WORKER_URL}/api/registry/registrants`);
+  const data = await response.json();
+  return data.registrants || [];
+}
+
+export async function fetchDriftEvents(params?: {
+  instrument?: string;
+  limit?: number;
+}): Promise<typeof MOCK_DRIFT_EVENTS> {
+  if (USE_MOCK) {
+    let events = MOCK_DRIFT_EVENTS;
+    if (params?.instrument) events = events.filter(e => e.instrument === params.instrument);
+    return events.slice(0, params?.limit || 50);
+  }
+
+  const searchParams = new URLSearchParams();
+  if (params?.instrument) searchParams.set('instrument', params.instrument);
+  if (params?.limit) searchParams.set('limit', String(params.limit));
+
+  const response = await fetch(`${WORKER_URL}/api/drift/public?${searchParams}`);
+  const data = await response.json();
+  return data.events || [];
 }

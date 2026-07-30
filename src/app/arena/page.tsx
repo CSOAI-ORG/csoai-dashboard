@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { MOCK_J_RECORDS } from "@/lib/mock-data";
+import { fetchJRecords } from "@/lib/d1-client";
 import JSpacePanel from "@/components/JSpacePanel";
 import McpToolCard from "@/components/McpToolCard";
 import SpectrumView from "@/components/SpectrumView";
@@ -13,12 +13,47 @@ export default function ArenaPage() {
   const [selectedAxis, setSelectedAxis] = useState<string>("safety");
   const [selectedMode, setSelectedMode] = useState<string>("speaker");
   const [selectedRecord, setSelectedRecord] = useState<JRecord | null>(null);
+  const [records, setRecords] = useState<JRecord[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const records = MOCK_J_RECORDS;
+  const load = () => {
+    setLoading(true);
+    setError(null);
+    fetchJRecords()
+      .then(setRecords)
+      .catch(() => setError("Failed to load arena records"))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => { load(); }, []);
+
   const filtered = records.filter(r =>
     (selectedAxis === "all" || r.axis === selectedAxis) &&
     (selectedMode === "all" || r.mode === selectedMode)
   );
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="inline-block w-8 h-8 border-2 rounded-full animate-spin" style={{ borderColor: "var(--csoai-border)", borderTopColor: "var(--csoai-accent)" }} />
+          <div className="mt-3 text-sm" style={{ color: "var(--csoai-muted)" }}>Loading arena...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="text-center">
+          <div className="text-sm mb-3" style={{ color: "var(--csoai-red)" }}>{error}</div>
+          <button onClick={load} className="px-4 py-2 rounded-lg text-sm font-medium" style={{ background: "var(--csoai-accent)", color: "white" }}>Retry</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="py-8 px-4">
@@ -206,17 +241,17 @@ export default function ArenaPage() {
                 {
                   id: "compliant",
                   name: "Compliant Path",
-                  records: MOCK_J_RECORDS.filter(r => r.mode === "actor" && r.verdict === "PASS"),
+                  records: records.filter(r => r.mode === "actor" && r.verdict === "PASS"),
                 },
                 {
                   id: "violating",
                   name: "Violating Path",
-                  records: MOCK_J_RECORDS.filter(r => r.mode === "actor" && r.verdict === "FAIL"),
+                  records: records.filter(r => r.mode === "actor" && r.verdict === "FAIL"),
                 },
                 {
                   id: "incomplete",
                   name: "Incomplete Path",
-                  records: MOCK_J_RECORDS.filter(r => r.mode === "actor" && r.verdict === "INCOMPLETE"),
+                  records: records.filter(r => r.mode === "actor" && r.verdict === "INCOMPLETE"),
                 },
               ].filter(b => b.records.length > 0)}
             />
