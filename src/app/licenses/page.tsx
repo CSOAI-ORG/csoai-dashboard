@@ -11,29 +11,27 @@ export default function LicensesPage() {
           <h2 className="text-2xl font-bold mb-4" style={{ color: "var(--csoai-text)" }}>
             Open Source Dependencies
           </h2>
-          <div
-            className="border rounded-lg overflow-hidden"
-            style={{ borderColor: "var(--csoai-border)" }}
-          >
-            <table className="w-full">
-              <thead>
-                <tr style={{ background: "var(--csoai-surface)" }}>
-                  <th className="px-4 py-3 text-left text-sm font-medium" style={{ color: "var(--csoai-muted)" }}>Package</th>
-                  <th className="px-4 py-3 text-left text-sm font-medium" style={{ color: "var(--csoai-muted)" }}>License</th>
-                  <th className="px-4 py-3 text-left text-sm font-medium" style={{ color: "var(--csoai-muted)" }}>Purpose</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { name: "Next.js", license: "MIT", purpose: "Web framework" },
-                  { name: "React", license: "MIT", purpose: "UI library" },
-                  { name: "Tailwind CSS", license: "MIT", purpose: "Styling" },
-                  { name: "MapLibre GL JS", license: "BSD-3-Clause", purpose: "Map rendering" },
-                  { name: "deck.gl", license: "MIT", purpose: "Data visualization overlays" },
-                  { name: "Cloudflare Workers", license: "Apache-2.0", purpose: "Edge compute" },
-                  { name: "DuckDB-WASM", license: "MIT", purpose: "Client-side analytics" },
-                  { name: "@noble/ed25519", license: "MIT", purpose: "Signature verification" },
-                ].map((dep) => (
+          <div className="overflow-x-auto">
+            <div
+              className="border rounded-lg overflow-hidden"
+              style={{ borderColor: "var(--csoai-border)" }}
+            >
+              <table className="w-full">
+                <thead>
+                  <tr style={{ background: "var(--csoai-surface)" }}>
+                    <th className="px-4 py-3 text-left text-sm font-medium" style={{ color: "var(--csoai-muted)" }}>Package</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium" style={{ color: "var(--csoai-muted)" }}>License</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium" style={{ color: "var(--csoai-muted)" }}>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Next.js", license: "MIT", purpose: "Web framework" },
+                    { name: "React", license: "MIT", purpose: "UI library" },
+                    { name: "Tailwind CSS", license: "MIT", purpose: "Styling" },
+                    { name: "Cloudflare Workers", license: "Apache-2.0", purpose: "Edge compute" },
+                    { name: "@noble/ed25519", license: "MIT", purpose: "Signature verification" },
+                  ].map((dep) => (
                   <tr key={dep.name} className="border-t" style={{ borderColor: "var(--csoai-border)" }}>
                     <td className="px-4 py-3 text-sm font-mono" style={{ color: "var(--csoai-text)" }}>{dep.name}</td>
                     <td className="px-4 py-3 text-sm" style={{ color: "var(--csoai-muted)" }}>{dep.license}</td>

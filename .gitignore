@@ -8,3 +8,5 @@ out/
 .wrangler.toml
 dist/
 *.tsbuildinfo
+workers-api/
+workers-types/

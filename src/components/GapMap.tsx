@@ -61,6 +61,8 @@ export default function GapMap() {
         viewBox="-180 -60 360 140"
         className="w-full h-auto"
         style={{ background: "var(--csoai-bg)" }}
+        role="img"
+        aria-label="Jurisdiction coverage map showing field coverage density across EU, UK, US, and International regions"
       >
         {/* Grid lines */}
         {[-150, -100, -50, 0, 50, 100, 150].map(x => (

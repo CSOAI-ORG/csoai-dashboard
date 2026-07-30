@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Check banned strings
+        run: |
+          if rg -i "enforcer|we enforce|certified|certification|emergence|emergent|nothing exists|the only|unsafe|non-compliant|verified authentic|C2PA is broken|kill switch" src/ --glob '!**/constants.ts' --quiet; then
+            echo "ERROR: Banned strings found in frontend code"
+            exit 1
+          fi
