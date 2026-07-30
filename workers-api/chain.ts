@@ -5,6 +5,16 @@ export async function handleChain(request: Request, env: Env, path: string): Pro
   const db = env.DB;
   const url = new URL(request.url);
 
+  // GET /api/chain — chain overview
+  if (path === '/api/chain' && method === 'GET') {
+    const total = await db.prepare('SELECT COUNT(*) as count FROM decision_record').first();
+    return Response.json({
+      endpoints: ['/api/chain/status', '/api/chain/verify/:id', '/api/chain/history/:claim', '/api/chain/verify-batch'],
+      total_records: (total as any)?.count || 0,
+      mode: 'tamper-evidence',
+    });
+  }
+
   // GET /api/chain/verify/:id — verify a single record's chain position
   const verifyMatch = path.match(/^\/api\/chain\/verify\/(.+)$/);
   if (verifyMatch && method === 'GET') {

@@ -19,7 +19,7 @@ INSERT INTO decision_record (id, schema_version, kind, claim, verdict, evidence,
 -- Watcher Status
 INSERT INTO watcher_status (source, last_checked, last_hash, status, uri) VALUES
 ('UK legislation.gov.uk', '2026-07-29T10:00:00Z', 'a3f9e8d7c6b5a4938271605f4e3d2c1b0a9f8e7d6c5b4a39281706f5e4d3c2b1', 'LIVE', 'https://www.legislation.gov.uk'),
-('EU EUR-Lex CELLAR', '2026-07-28T03:11:00Z', 'b1a09f8e7d6c5b4a39281706f5e4d3c2b1a09f8e7d6c5b4a39281706f5e4d3c2', 'THROTTLED', 'https://eur-lex.europa.eu'),
+('EU EUR-Lex CELLAR', '2026-07-28T03:11:00Z', 'b1a09f8e7d6c5b4a39281706f5e4d3c2b1a09f8e7d6c5b4a39281706f5e4d3c2', 'STALE', 'https://eur-lex.europa.eu'),
 ('C2PA Specification 2.4', '2026-07-29T10:00:00Z', 'c5b4a39281706f5e4d3c2b1a09f8e7d6c5b4a39281706f5e4d3c2b1a09f8e7d6', 'LIVE', 'https://spec.c2pa.org'),
 ('NIST IR 8547 / FIPS 204', '2026-07-29T10:00:00Z', 'd6c5b4a39281706f5e4d3c2b1a09f8e7d6c5b4a39281706f5e4d3c2b1a09f8e7', 'LIVE', 'https://csrc.nist.gov'),
 ('RFC 9964 (ML-DSA for COSE)', '2026-07-29T10:00:00Z', 'e7d6c5b4a39281706f5e4d3c2b1a09f8e7d6c5b4a39281706f5e4d3c2b1a09f8', 'LIVE', 'https://www.rfc-editor.org/rfc/rfc9964'),

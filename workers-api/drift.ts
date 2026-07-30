@@ -10,6 +10,15 @@ export async function handleDrift(request: Request, env: Env, path: string): Pro
   const db = env.DB;
   const url = new URL(request.url);
 
+  // GET /api/drift — drift overview
+  if (path === '/api/drift' && method === 'GET') {
+    const total = await db.prepare('SELECT COUNT(*) as count FROM drift_event').first();
+    return Response.json({
+      endpoints: ['/api/drift/public', '/api/drift/private', '/api/drift/event/:id', '/api/drift/summary'],
+      total_events: (total as any)?.count || 0,
+    });
+  }
+
   // GET /api/drift/public — public drift feed
   if (path === '/api/drift/public' && method === 'GET') {
     const limit = parseInt(url.searchParams.get('limit') || '50');

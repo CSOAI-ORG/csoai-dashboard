@@ -15,6 +15,8 @@ const ALLOWED_ORIGINS = [
   'https://csoai.org',
   'https://www.csoai.org',
   'https://csoai.pages.dev',
+  'https://35e9306f.csoai-dashboard.pages.dev',
+  'https://csoai-dashboard.pages.dev',
   'http://localhost:3000',
   'http://localhost:3001',
 ];
