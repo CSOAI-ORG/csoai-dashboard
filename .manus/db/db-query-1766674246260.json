@@ -1,0 +1,28 @@
+{
+  "query": "SELECT id, title, framework, JSON_EXTRACT(modules, '$[1].title') as module2_title \nFROM courses \nWHERE JSON_EXTRACT(modules, '$[1].title') IN ('Trustworthy AI Characteristics', 'AIMS Requirements and Structure');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, JSON_EXTRACT(modules, '$[1].title') as module2_title \nFROM courses \nWHERE JSON_EXTRACT(modules, '$[1].title') IN ('Trustworthy AI Characteristics', 'AIMS Requirements and Structure');",
+  "rows": [
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "module2_title": "\"Trustworthy AI Characteristics\""
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "module2_title": "\"AIMS Requirements and Structure\""
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "module2_title": "\"Trustworthy AI Characteristics\""
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tmodule2_title\n2\tHigh-Risk AI Systems\tEU AI Act\t\"Trustworthy AI Characteristics\"\n3\tEU AI Act Conformity Assessment\tEU AI Act\t\"AIMS Requirements and Structure\"\n90001\tNIST AI RMF Fundamentals\tNIST AI RMF\t\"Trustworthy AI Characteristics\"\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

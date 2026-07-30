@@ -1,0 +1,165 @@
+{
+  "query": "SELECT id, title, framework FROM courses ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework FROM courses ORDER BY id;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "framework": "NIST AI RMF"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "framework": "NIST AI RMF"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "framework": "NIST AI RMF"
+    },
+    {
+      "id": "9",
+      "title": "UK AI Safety Institute Overview",
+      "framework": "UK AI Safety Institute"
+    },
+    {
+      "id": "10",
+      "title": "AI Safety Evaluation",
+      "framework": "UK AI Safety Institute"
+    },
+    {
+      "id": "11",
+      "title": "Sector-Specific AI Guidance",
+      "framework": "UK AI Safety Institute"
+    },
+    {
+      "id": "12",
+      "title": "AIDA Fundamentals",
+      "framework": "AIDA"
+    },
+    {
+      "id": "13",
+      "title": "AI Impact Assessment",
+      "framework": "AIDA"
+    },
+    {
+      "id": "14",
+      "title": "AI Ethics Framework Fundamentals",
+      "framework": "AI Ethics Framework"
+    },
+    {
+      "id": "15",
+      "title": "AI Safety Standard Implementation",
+      "framework": "AI Ethics Framework"
+    },
+    {
+      "id": "30001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "30002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "30003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "30004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "30005",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "60001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "60002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF"
+    },
+    {
+      "id": "90002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "framework": "iso_42001"
+    },
+    {
+      "id": "120002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "150001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "150002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "150003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "150004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "180001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\n1\tEU AI Act Fundamentals\tEU AI Act\n2\tHigh-Risk AI Systems\tEU AI Act\n3\tEU AI Act Conformity Assessment\tEU AI Act\n4\tEU AI Act for Deployers\tEU AI Act\n5\tNIST AI RMF Fundamentals\tNIST AI RMF\n6\tAI Risk Governance\tNIST AI RMF\n7\tAI Risk Assessment & Measurement\tNIST AI RMF\n8\tFederal AI Regulations\tNIST AI RMF\n9\tUK AI Safety Institute Overview\tUK AI Safety Institute\n10\tAI Safety Evaluation\tUK AI Safety Institute\n11\tSector-Specific AI Guidance\tUK AI Safety Institute\n12\tAIDA Fundamentals\tAIDA\n13\tAI Impact Assessment\tAIDA\n14\tAI Ethics Framework Fundamentals\tAI Ethics Framework\n15\tAI Safety Standard Implementation\tAI Ethics Framework\n30001\tTest AI Safety Course\tEU AI Act\n30002\tTest AI Safety Course\tEU AI Act\n30003\tTest AI Safety Course\tEU AI Act\n30004\tTest AI Safety Course\tEU AI Act\n30005\tTest AI Safety Course\tEU AI Act\n60001\tEU AI Act Fundamentals\tEU AI Act\n60002\tTest AI Safety Course\tEU AI Act\n90001\tNIST AI RMF Fundamentals\tNIST AI RMF\n90002\tTest AI Safety Course\tEU AI Act\n120001\tISO 42001 AI Management System Fundamentals\tiso_42001\n120002\tTest AI Safety Course\tEU AI Act\n150001\tTest AI Safety Course\tEU AI Act\n150002\tTest AI Safety Course\tEU AI Act\n150003\tTest AI Safety Course\tEU AI Act\n150004\tTest AI Safety Course\tEU AI Act\n180001\tTest AI Safety Course\tEU AI Act\n",
+  "stderr": "",
+  "execution_time_ms": 58
+}

@@ -1,0 +1,17 @@
+{
+  "query": "SELECT \n  id, \n  title,\n  JSON_LENGTH(modules) as module_count,\n  JSON_EXTRACT(modules, '$[1].title') as module2_title,\n  LENGTH(JSON_EXTRACT(modules, '$[1].content')) as module2_content_length\nFROM courses \nWHERE id = 2;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT \n  id, \n  title,\n  JSON_LENGTH(modules) as module_count,\n  JSON_EXTRACT(modules, '$[1].title') as module2_title,\n  LENGTH(JSON_EXTRACT(modules, '$[1].content')) as module2_content_length\nFROM courses \nWHERE id = 2;",
+  "rows": [
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "module_count": "8",
+      "module2_title": "\"Trustworthy AI Characteristics\"",
+      "module2_content_length": "36791"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tmodule_count\tmodule2_title\tmodule2_content_length\n2\tHigh-Risk AI Systems\t8\t\"Trustworthy AI Characteristics\"\t36791\n",
+  "stderr": "",
+  "execution_time_ms": 61
+}

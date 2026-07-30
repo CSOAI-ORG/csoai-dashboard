@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `analytics_events` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `userId` int(11) DEFAULT NULL,\n  `eventType` varchar(100) NOT NULL,\n  `eventData` json DEFAULT NULL,\n  `sessionId` varchar(255) DEFAULT NULL,\n  `ipAddress` varchar(45) DEFAULT NULL,\n  `userAgent` text DEFAULT NULL,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_event_type` (`eventType`),\n  KEY `idx_user_id` (`userId`),\n  KEY `idx_created_at` (`createdAt`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `analytics_events` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `userId` int(11) DEFAULT NULL,\n  `eventType` varchar(100) NOT NULL,\n  `eventData` json DEFAULT NULL,\n  `sessionId` varchar(255) DEFAULT NULL,\n  `ipAddress` varchar(45) DEFAULT NULL,\n  `userAgent` text DEFAULT NULL,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_event_type` (`eventType`),\n  KEY `idx_user_id` (`userId`),\n  KEY `idx_created_at` (`createdAt`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 194
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `email_logs` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `queueId` int NOT NULL,\n  `userId` int NOT NULL,\n  `toEmail` varchar(255) NOT NULL,\n  `subject` varchar(255) NOT NULL,\n  `templateKey` varchar(100),\n  `status` enum('sent', 'delivered', 'opened', 'clicked', 'bounced', 'complained') NOT NULL,\n  `externalId` varchar(255),\n  `eventData` json,\n  `occurredAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_queueId` (`queueId`),\n  KEY `idx_userId` (`userId`),\n  KEY `idx_status` (`status`),\n  KEY `idx_occurredAt` (`occurredAt`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `email_logs` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `queueId` int NOT NULL,\n  `userId` int NOT NULL,\n  `toEmail` varchar(255) NOT NULL,\n  `subject` varchar(255) NOT NULL,\n  `templateKey` varchar(100),\n  `status` enum('sent', 'delivered', 'opened', 'clicked', 'bounced', 'complained') NOT NULL,\n  `externalId` varchar(255),\n  `eventData` json,\n  `occurredAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_queueId` (`queueId`),\n  KEY `idx_userId` (`userId`),\n  KEY `idx_status` (`status`),\n  KEY `idx_occurredAt` (`occurredAt`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1689
+}

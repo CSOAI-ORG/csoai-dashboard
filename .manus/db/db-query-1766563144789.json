@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO certification_tests (code, title, description, passingScore, timeLimitMinutes, totalQuestions, isActive) VALUES \n('WATCHDOG_BASIC', 'Watchdog Analyst Basic Certification', 'Comprehensive exam covering AI safety fundamentals, regulatory frameworks (EU AI Act, NIST RMF, TC260), ethical considerations, and incident analysis procedures. Required to become a certified Watchdog Analyst.', 70, 60, 50, true);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO certification_tests (code, title, description, passingScore, timeLimitMinutes, totalQuestions, isActive) VALUES \n('WATCHDOG_BASIC', 'Watchdog Analyst Basic Certification', 'Comprehensive exam covering AI safety fundamentals, regulatory frameworks (EU AI Act, NIST RMF, TC260), ethical considerations, and incident analysis procedures. Required to become a certified Watchdog Analyst.', 70, 60, 50, true);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 92
+}

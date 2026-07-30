@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, title, framework, level FROM courses ORDER BY id DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, level FROM courses ORDER BY id DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "framework": "iso_42001",
+      "level": "fundamentals"
+    },
+    {
+      "id": "90002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals"
+    },
+    {
+      "id": "60002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals"
+    },
+    {
+      "id": "60001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tlevel\n120001\tISO 42001 AI Management System Fundamentals\tiso_42001\tfundamentals\n90002\tTest AI Safety Course\tEU AI Act\tfundamentals\n90001\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\n60002\tTest AI Safety Course\tEU AI Act\tfundamentals\n60001\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

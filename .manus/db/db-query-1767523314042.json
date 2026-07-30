@@ -1,0 +1,510 @@
+{
+  "query": "SELECT id, title, price, price3Month, price6Month, price12Month, stripePriceId, stripePriceId3Month FROM courses WHERE regionId = 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, price, price3Month, price6Month, price12Month, stripePriceId, stripePriceId3Month FROM courses WHERE regionId = 1;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC1uDuEg5HakgPeb4AHmzf",
+      "stripePriceId3Month": "price_1SlC1uDuEg5HakgPdgCJ1A2n"
+    },
+    {
+      "id": "660001",
+      "title": "Test Analytics Course",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "660004",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "660005",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "660006",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690002",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690003",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690004",
+      "title": "Test Analytics Course",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690006",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690007",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690009",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690010",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690012",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690014",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690015",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690017",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690018",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690020",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690021",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690023",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690024",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690026",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690027",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690029",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690030",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690032",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690033",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690035",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690036",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690038",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690039",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690041",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690042",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690043",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690045",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690046",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690048",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690049",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690051",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690052",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690054",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690055",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690057",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690058",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690060",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690061",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690063",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690064",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690066",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    },
+    {
+      "id": "690067",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tprice\tprice3Month\tprice6Month\tprice12Month\tstripePriceId\tstripePriceId3Month\n100001\tEU AI Act Fundamentals\t49900\tNULL\tNULL\tNULL\tprice_1SlC1uDuEg5HakgPeb4AHmzf\tprice_1SlC1uDuEg5HakgPdgCJ1A2n\n660001\tTest Analytics Course\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n660004\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n660005\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n660006\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690002\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690003\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690004\tTest Analytics Course\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690006\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690007\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690009\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690010\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690012\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690014\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690015\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690017\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690018\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690020\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690021\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690023\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690024\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690026\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690027\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690029\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690030\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690032\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690033\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690035\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690036\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690038\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690039\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690041\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690042\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690043\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690045\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690046\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690048\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690049\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690051\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690052\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690054\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690055\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690057\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690058\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690060\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690061\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690063\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690064\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690066\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n690067\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 63
+}

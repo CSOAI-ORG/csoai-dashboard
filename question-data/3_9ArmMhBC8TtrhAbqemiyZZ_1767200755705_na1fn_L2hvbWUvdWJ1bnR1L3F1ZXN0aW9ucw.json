@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "According to the UK's pro-innovation approach to AI regulation, what is the primary mechanism for governing AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A new, all-encompassing AI Act."
+      },
+      {
+        "id": "B",
+        "text": "Empowering existing regulators to apply a set of cross-sectoral principles."
+      },
+      {
+        "id": "C",
+        "text": "A self-regulatory framework led by the tech industry."
+      },
+      {
+        "id": "D",
+        "text": "A moratorium on the development of new AI models."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The UK government's white paper, 'A pro-innovation approach to AI regulation', outlines a strategy that leverages the expertise of existing regulators, guiding them with five cross-sectoral principles rather than creating a new overarching law.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "What is the name of the UK government body established to advance AI safety in the public interest?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI Council"
+      },
+      {
+        "id": "B",
+        "text": "The Centre for Data Ethics and Innovation"
+      },
+      {
+        "id": "C",
+        "text": "The AI Safety Institute"
+      },
+      {
+        "id": "D",
+        "text": "The Alan Turing Institute"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The UK government established the AI Safety Institute (AISI) as the first state-backed organization dedicated to advancing AI safety, as mentioned in the government's response to the AI regulation consultation.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK's AI regulation white paper proposes five cross-sectoral principles. Which of the following is NOT one of them?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Safety, security and robustness"
+      },
+      {
+        "id": "B",
+        "text": "Appropriate transparency and explainability"
+      },
+      {
+        "id": "C",
+        "text": "Fairness"
+      },
+      {
+        "id": "D",
+        "text": "Mandatory open-sourcing of all AI models"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "The five principles are: Safety, security and robustness; Appropriate transparency and explainability; Fairness; Accountability and governance; and Contestability and redress. Mandatory open-sourcing is not a principle.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary purpose of the AI sandbox mentioned in the UK's AI regulatory framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To prosecute companies that violate AI regulations"
+      },
+      {
+        "id": "B",
+        "text": "To provide a controlled environment for businesses to test innovative AI products and services"
+      },
+      {
+        "id": "C",
+        "text": "To develop the UK's sovereign AI capabilities"
+      },
+      {
+        "id": "D",
+        "text": "To ban the use of certain high-risk AI applications"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI sandbox is designed to support innovation by allowing businesses to test their AI solutions in a safe and controlled environment with regulatory guidance.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government's response to the AI regulation consultation mentions a 'statutory duty to regard'. What does this refer to?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A requirement for AI developers to disregard any regulations that stifle innovation."
+      },
+      {
+        "id": "B",
+        "text": "A legal obligation for regulators to consider the five cross-sectoral principles when making decisions about AI."
+      },
+      {
+        "id": "C",
+        "text": "A duty for citizens to report any misuse of AI to the authorities."
+      },
+      {
+        "id": "D",
+        "text": "A requirement for all UK businesses to appoint an AI safety officer."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'statutory duty to regard' would legally require regulators to have due regard to the five principles when exercising their functions in relation to AI.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the proposed AI Authority in the UK's regulatory framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To replace all existing regulators and centralize AI governance."
+      },
+      {
+        "id": "B",
+        "text": "To act as a central body to monitor and assess risks across the economy, and to support and coordinate the activities of individual regulators."
+      },
+      {
+        "id": "C",
+        "text": "To provide funding for AI startups."
+      },
+      {
+        "id": "D",
+        "text": "To develop and sell the UK's own foundation models."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The proposed AI Authority is intended to provide central coordination and risk monitoring, supporting the existing sectoral regulators rather than replacing them.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK's approach to AI regulation is described as 'pro-innovation'. What does this mean in practice?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "There will be no regulation of AI in the UK."
+      },
+      {
+        "id": "B",
+        "text": "Regulation will be designed to build trust and confidence in AI, thereby fostering innovation and adoption."
+      },
+      {
+        "id": "C",
+        "text": "Only large tech companies will be allowed to develop AI."
+      },
+      {
+        "id": "D",
+        "text": "The government will provide all the funding for AI research and development."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'pro-innovation' approach aims to create a regulatory environment that supports the growth of the AI sector by ensuring that AI is developed and used in a trustworthy and responsible manner.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "What is the significance of the Bletchley Declaration, which was agreed at the AI Safety Summit hosted by the UK?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It banned the use of AI in warfare."
+      },
+      {
+        "id": "B",
+        "text": "It established a global AI regulator."
+      },
+      {
+        "id": "C",
+        "text": "It was a landmark international agreement on shared responsibility for mitigating the risks of frontier AI."
+      },
+      {
+        "id": "D",
+        "text": "It mandated that all AI models must be explainable."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The Bletchley Declaration, agreed at the AI Safety Summit, was a significant international commitment to cooperate on AI safety and research.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government has committed to investing in what to support its AI ambitions?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A national chain of AI-themed amusement parks."
+      },
+      {
+        "id": "B",
+        "text": "The next generation of supercomputers."
+      },
+      {
+        "id": "C",
+        "text": "A fleet of self-driving cars for every citizen."
+      },
+      {
+        "id": "D",
+        "text": "A personal AI assistant for every government employee."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The government has committed over \u00a31.5 billion to build the next generation of supercomputers to support the UK's AI sector.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of the 'AI and Digital Hub' pilot scheme launched by the Digital Regulation Cooperation Forum (DRCF)?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To provide free laptops to all UK citizens."
+      },
+      {
+        "id": "B",
+        "text": "A new advisory service to support businesses in launching AI and digital innovations."
+      },
+      {
+        "id": "C",
+        "text": "A social media platform for AI researchers."
+      },
+      {
+        "id": "D",
+        "text": "A government-run online store for AI software."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI and Digital Hub is a pilot advisory service run by expert regulators to help businesses navigate the regulatory landscape and launch innovative AI and digital products.",
+    "difficulty": "easy",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based financial services company is developing a new AI-powered tool to assess creditworthiness. Which regulator would be primarily responsible for overseeing this AI application?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Information Commissioner's Office (ICO)"
+      },
+      {
+        "id": "B",
+        "text": "The Financial Conduct Authority (FCA)"
+      },
+      {
+        "id": "C",
+        "text": "The Competition and Markets Authority (CMA)"
+      },
+      {
+        "id": "D",
+        "text": "The AI Safety Institute (AISI)"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The UK's sector-based approach means the regulator for a specific industry is responsible for overseeing AI within that sector. In this case, the Financial Conduct Authority (FCA) would be the primary regulator for an AI tool used in financial services.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A developer of a highly capable general-purpose AI system in the UK is asked to provide information about their model's safety testing to the AI Safety Institute. Under the proposed regulatory framework, what is the legal basis for this request?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It is a voluntary measure that the developer can choose to comply with."
+      },
+      {
+        "id": "B",
+        "text": "It is a mandatory requirement under the proposed binding measures for developers of highly capable general-purpose AI."
+      },
+      {
+        "id": "C",
+        "text": "It is a contractual obligation based on the developer's terms of service."
+      },
+      {
+        "id": "D",
+        "text": "It is a recommendation from the AI Council with no legal weight."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The government is considering targeted, binding requirements for developers of highly capable general-purpose AI models, which would include mandatory reporting and information sharing with bodies like the AI Safety Institute.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based healthcare provider wants to use an AI system to diagnose diseases. What is a key consideration for them under the 'Appropriate transparency and explainability' principle?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI model must be 100% accurate in all cases."
+      },
+      {
+        "id": "B",
+        "text": "The source code of the AI model must be made publicly available."
+      },
+      {
+        "id": "C",
+        "text": "The healthcare provider must be able to explain how the AI system reached its diagnosis to both clinicians and patients."
+      },
+      {
+        "id": "D",
+        "text": "The AI system must be developed in the UK."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The principle of 'Appropriate transparency and explainability' requires that the decisions made by AI systems can be understood by the people who use and are affected by them. In a healthcare context, this means being able to explain the reasoning behind an AI-assisted diagnosis.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A social media company uses an AI algorithm to moderate content. A user believes their content was unfairly removed. Which principle of the UK's AI regulation framework is most relevant to this situation?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Safety, security and robustness"
+      },
+      {
+        "id": "B",
+        "text": "Contestability and redress"
+      },
+      {
+        "id": "C",
+        "text": "Fairness"
+      },
+      {
+        "id": "D",
+        "text": "Accountability and governance"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The principle of 'Contestability and redress' ensures that individuals have a way to challenge decisions made by AI systems and to seek redress if they have been harmed.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government's response to the AI regulation consultation states that regulators should publish their strategic approach to AI by a certain date. What was that date?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "31 December 2023"
+      },
+      {
+        "id": "B",
+        "text": "30 April 2024"
+      },
+      {
+        "id": "C",
+        "text": "31 December 2024"
+      },
+      {
+        "id": "D",
+        "text": "30 April 2025"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The government's response to the consultation asked a number of regulators to publish an update outlining their strategic approach to AI by 30 April 2024.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK university is developing a new AI model for use in scientific research. They want to ensure they are following best practices for AI safety. Which UK-based organization would be the most appropriate to consult with?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Health and Safety Executive (HSE)"
+      },
+      {
+        "id": "B",
+        "text": "The AI Safety Institute (AISI)"
+      },
+      {
+        "id": "C",
+        "text": "The National Cyber Security Centre (NCSC)"
+      },
+      {
+        "id": "D",
+        "text": "The Centre for Data Ethics and Innovation (CDEI)"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI Safety Institute (AISI) is the UK's primary body for AI safety research and evaluation, making it the most appropriate organization for a university to consult on AI safety best practices.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK's AI regulation framework emphasizes international cooperation. Which of the following is an example of this?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The UK's withdrawal from all international treaties on technology."
+      },
+      {
+        "id": "B",
+        "text": "The hosting of the AI Safety Summit and the Bletchley Declaration."
+      },
+      {
+        "id": "C",
+        "text": "A ban on the import of all foreign-made AI systems."
+      },
+      {
+        "id": "D",
+        "text": "The creation of a UK-only internet."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The UK has actively sought to lead the international conversation on AI safety, as demonstrated by hosting the first AI Safety Summit and the resulting Bletchley Declaration, which promotes international collaboration on AI governance.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A company developing a foundation model in the UK is concerned about the potential for their model to be misused for malicious purposes. What is the most relevant principle from the UK's AI regulation framework that they should consider?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fairness"
+      },
+      {
+        "id": "B",
+        "text": "Safety, security and robustness"
+      },
+      {
+        "id": "C",
+        "text": "Appropriate transparency and explainability"
+      },
+      {
+        "id": "D",
+        "text": "Contestability and redress"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The principle of 'Safety, security and robustness' directly addresses the need to prevent AI systems from being misused for malicious purposes and to ensure they are resilient to attacks.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government has announced funding to 'jumpstart regulators' AI capabilities'. What is the intended outcome of this funding?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To hire more lawyers to prosecute AI companies."
+      },
+      {
+        "id": "B",
+        "text": "To provide regulators with the technical expertise and tools to address AI risks in their domains."
+      },
+      {
+        "id": "C",
+        "text": "To build a new headquarters for all UK regulators."
+      },
+      {
+        "id": "D",
+        "text": "To fund a marketing campaign to promote the UK's AI industry."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The funding is intended to help regulators develop the necessary skills and resources to effectively oversee the use of AI in their respective sectors.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based company is using an AI-powered recruitment tool. They are concerned about potential bias in the hiring process. Which principle of the UK's AI regulation framework is most relevant to this concern?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Safety, security and robustness"
+      },
+      {
+        "id": "B",
+        "text": "Appropriate transparency and explainability"
+      },
+      {
+        "id": "C",
+        "text": "Fairness"
+      },
+      {
+        "id": "D",
+        "text": "Accountability and governance"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The principle of 'Fairness' is directly concerned with preventing AI systems from creating discriminatory or unfair outcomes.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK's AI regulation white paper emphasizes a 'context-based' approach. What does this mean?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AI regulation will only apply to certain contexts, such as healthcare and finance."
+      },
+      {
+        "id": "B",
+        "text": "The specific application of the regulatory principles will depend on the context in which the AI is used."
+      },
+      {
+        "id": "C",
+        "text": "AI regulation will be based on the context of the AI model's training data."
+      },
+      {
+        "id": "D",
+        "text": "AI regulation will only be applied in the context of a formal legal dispute."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A 'context-based' approach means that the regulatory response will be tailored to the specific circumstances of how and where the AI is being used, rather than a one-size-fits-all approach.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the Digital Regulation Cooperation Forum (DRCF) in the UK's AI regulatory landscape?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To develop and enforce all AI regulations in the UK."
+      },
+      {
+        "id": "B",
+        "text": "To bring together key regulators to ensure a coordinated and coherent approach to digital regulation, including AI."
+      },
+      {
+        "id": "C",
+        "text": "To provide funding for AI research."
+      },
+      {
+        "id": "D",
+        "text": "To represent the UK in international negotiations on AI."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The DRCF is a forum for cooperation between the UK's main digital regulators, including the CMA, FCA, ICO, and Ofcom, to ensure a joined-up approach to regulating the digital economy.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI system that will be used to make decisions about social security benefits. Which of the following is a key requirement under the 'Accountability and governance' principle?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company must be able to identify who is responsible for the AI system and its outcomes."
+      },
+      {
+        "id": "B",
+        "text": "The AI system must be developed by a UK-based company."
+      },
+      {
+        "id": "C",
+        "text": "The AI system must be approved by the Prime Minister."
+      },
+      {
+        "id": "D",
+        "text": "The AI system must be able to operate without any human oversight."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The 'Accountability and governance' principle requires clear lines of responsibility for AI systems, so that someone can be held accountable for their decisions and outcomes.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government's response to the AI regulation consultation mentions a 'cross-economy AI risk register'. What is the purpose of this register?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To list all the companies that are developing AI in the UK."
+      },
+      {
+        "id": "B",
+        "text": "To identify and assess the most significant AI risks across the entire economy."
+      },
+      {
+        "id": "C",
+        "text": "To register all AI models that are being used in the UK."
+      },
+      {
+        "id": "D",
+        "text": "To provide a list of approved AI vendors for government contracts."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The cross-economy AI risk register is a tool for the government to monitor and assess AI-related risks across different sectors, enabling a more proactive and coordinated response.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based news organization is using an AI tool to generate news articles. What is a key ethical consideration for them under the UK's AI regulatory framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensuring the AI tool is not used to create and spread misinformation."
+      },
+      {
+        "id": "B",
+        "text": "Making sure the AI tool is as profitable as possible."
+      },
+      {
+        "id": "C",
+        "text": "Keeping the use of the AI tool a secret from the public."
+      },
+      {
+        "id": "D",
+        "text": "Only using the AI tool to write positive news stories."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The use of AI in news generation raises significant ethical concerns about the potential for spreading misinformation and disinformation. The UK's regulatory framework, with its emphasis on safety, security, and robustness, would require the news organization to take steps to mitigate this risk.",
+    "difficulty": "medium",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based company has developed a powerful foundation model that exceeds the compute threshold for mandatory safety evaluations. The company argues that its model is intended for a narrow range of commercial applications and therefore should be exempt from these requirements. What is the most likely response from the UK regulator?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The regulator will grant an exemption because the company has a good compliance record."
+      },
+      {
+        "id": "B",
+        "text": "The regulator will insist on the safety evaluations, as the compute threshold is a primary indicator of a model's potential for harm, regardless of its intended use."
+      },
+      {
+        "id": "C",
+        "text": "The regulator will refer the matter to the AI Authority for a final decision."
+      },
+      {
+        "id": "D",
+        "text": "The regulator will allow the company to self-certify the safety of its model."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The UK's proposed framework for highly capable general-purpose AI includes mandatory safety evaluations for models that exceed a certain compute threshold. This is because the sheer power of these models, regardless of their intended application, presents a significant potential for misuse or unintended consequences. Therefore, the regulator is unlikely to grant an exemption based on the developer's stated intentions.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based AI company is found to have breached the 'Fairness' principle in its recruitment tool, leading to discriminatory hiring practices. The company claims that it was unaware of the bias and that its model was a 'black box'. What is the likely legal outcome?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company will be absolved of all responsibility because the bias was unintentional."
+      },
+      {
+        "id": "B",
+        "text": "The company will be held accountable, as the 'Accountability and governance' principle requires clear lines of responsibility, and the lack of explainability is not a valid defense."
+      },
+      {
+        "id": "C",
+        "text": "The case will be dismissed because 'black box' models are not currently regulated in the UK."
+      },
+      {
+        "id": "D",
+        "text": "The company will be required to pay a small fine but will not have to change its hiring practices."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The UK's AI regulation framework emphasizes both 'Fairness' and 'Accountability and governance'. A company cannot simply claim ignorance due to the 'black box' nature of its AI. It is the company's responsibility to ensure its systems are fair and to have governance structures in place to address issues like bias. The lack of explainability would be seen as a failure of governance, not an excuse.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A foreign company wants to offer its AI-powered medical diagnostic tool to the UK market. The tool has been approved by regulators in its home country. What is the most likely process for the company to get its product approved in the UK?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The UK will automatically accept the foreign approval under a mutual recognition agreement."
+      },
+      {
+        "id": "B",
+        "text": "The company will have to go through the full UK regulatory approval process, which will be overseen by the Medicines and Healthcare products Regulatory Agency (MHRA)."
+      },
+      {
+        "id": "C",
+        "text": "The company can bypass the MHRA and get approval directly from the AI Safety Institute."
+      },
+      {
+        "id": "D",
+        "text": "The company only needs to register its product with the Department of Health and Social Care."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "While the UK is committed to international cooperation, it also maintains its own regulatory standards, especially in high-risk sectors like healthcare. A foreign company would need to seek approval from the relevant UK regulator, in this case the MHRA, which would assess the AI tool against UK standards.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based AI company is developing a new foundation model and wants to use the UK's AI Sandbox to test it. What is the most important prerequisite for the company to be accepted into the sandbox?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company must have a minimum of 100 employees."
+      },
+      {
+        "id": "B",
+        "text": "The company's project must be genuinely innovative and present a novel regulatory challenge."
+      },
+      {
+        "id": "C",
+        "text": "The company must be a member of a specific trade association."
+      },
+      {
+        "id": "D",
+        "text": "The company must have already secured a government contract."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI Sandbox is designed to support innovation by helping businesses with novel AI products and services navigate the regulatory landscape. Therefore, a key criterion for acceptance is that the project is innovative and raises new questions for regulators.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government is considering introducing a statutory duty for regulators to have 'due regard' to the five cross-sectoral principles for AI. What is the most significant legal implication of this?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It would make the principles legally binding on regulators, and their decisions could be challenged in court if they fail to consider them."
+      },
+      {
+        "id": "B",
+        "text": "It would be a symbolic gesture with no real legal effect."
+      },
+      {
+        "id": "C",
+        "text": "It would give regulators the power to create new criminal offenses related to AI."
+      },
+      {
+        "id": "D",
+        "text": "It would transfer all responsibility for AI regulation from the government to the regulators."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A statutory duty to have 'due regard' would mean that regulators are legally required to take the five principles into account when making decisions about AI. This would make their decisions subject to judicial review, and they could be challenged in court if they are found to have ignored the principles.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based company is developing an AI system that will be used to control critical national infrastructure. The company is concerned about the potential for the system to be hacked. Which of the following is the most important measure for the company to take?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To ensure the system is compliant with the 'Fairness' principle."
+      },
+      {
+        "id": "B",
+        "text": "To conduct a thorough safety and security risk assessment and implement robust cybersecurity measures."
+      },
+      {
+        "id": "C",
+        "text": "To make the system's source code publicly available to allow for public scrutiny."
+      },
+      {
+        "id": "D",
+        "text": "To obtain insurance to cover any potential damages from a cyberattack."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "For an AI system controlling critical national infrastructure, the most important consideration is its safety, security, and robustness. This would involve a comprehensive risk assessment and the implementation of strong cybersecurity measures to protect against hacking and other malicious attacks.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based company is developing a new AI-powered chatbot for use in customer service. The company wants to ensure that the chatbot is transparent about its identity as an AI. What is the most effective way to achieve this?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To give the chatbot a human-sounding name."
+      },
+      {
+        "id": "B",
+        "text": "To program the chatbot to deny that it is an AI."
+      },
+      {
+        "id": "C",
+        "text": "To include a clear and upfront disclosure to users that they are interacting with an AI."
+      },
+      {
+        "id": "D",
+        "text": "To make the chatbot's responses as human-like as possible."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The principle of 'Appropriate transparency and explainability' requires that it should be clear to users when they are interacting with an AI. The most effective way to achieve this is to provide a clear and upfront disclosure.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "A UK-based company is using an AI system to make decisions about who to interview for a job. A candidate who was not selected for an interview wants to challenge the decision. What is the most important thing for the company to be able to provide to the candidate?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A copy of the AI's source code."
+      },
+      {
+        "id": "B",
+        "text": "A detailed explanation of the criteria used by the AI to make its decision."
+      },
+      {
+        "id": "C",
+        "text": "The names of the other candidates who were selected for an interview."
+      },
+      {
+        "id": "D",
+        "text": "A guarantee that the AI is 100% unbiased."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The principle of 'Contestability and redress' requires that individuals should be able to challenge decisions made by AI systems. To do this effectively, they need to understand the basis on which the decision was made. Therefore, the company should be able to provide a detailed explanation of the criteria used by the AI.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK's AI Safety Institute (AISI) is tasked with evaluating the safety of frontier AI models. What is the most significant challenge that the AISI faces in carrying out this task?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A lack of funding from the government."
+      },
+      {
+        "id": "B",
+        "text": "The difficulty of keeping up with the rapid pace of AI development and the emergence of new and unforeseen risks."
+      },
+      {
+        "id": "C",
+        "text": "A lack of cooperation from AI developers."
+      },
+      {
+        "id": "D",
+        "text": "The absence of any international standards for AI safety."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The rapid and unpredictable nature of AI development is a major challenge for any organization tasked with ensuring its safety. The AISI will need to be highly agile and adaptable to keep up with the latest advances and to identify and mitigate new risks as they emerge.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  },
+  {
+    "questionText": "The UK government has stated that it wants to avoid a 'one-size-fits-all' approach to AI regulation. What is the most likely reason for this?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The government does not have the resources to implement a comprehensive AI regulation."
+      },
+      {
+        "id": "B",
+        "text": "The risks and opportunities of AI vary significantly across different sectors and applications."
+      },
+      {
+        "id": "C",
+        "text": "The government wants to give AI companies complete freedom to innovate without any regulatory oversight."
+      },
+      {
+        "id": "D",
+        "text": "The government believes that AI is not a significant enough technology to warrant its own specific regulation."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A 'one-size-fits-all' approach to AI regulation would be inappropriate because the risks and benefits of AI are highly context-dependent. A flexible, sector-based approach allows for more targeted and proportionate regulation that is tailored to the specific needs of different industries and applications.",
+    "difficulty": "hard",
+    "category": "UK_AI_BILL",
+    "points": 1
+  }
+]

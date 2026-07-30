@@ -1,0 +1,35 @@
+{
+  "query": "SELECT cs.id as session_id, cs.subjectId as report_id, wr.title FROM council_sessions cs JOIN watchdog_reports wr ON cs.subjectId = wr.id ORDER BY cs.id DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT cs.id as session_id, cs.subjectId as report_id, wr.title FROM council_sessions cs JOIN watchdog_reports wr ON cs.subjectId = wr.id ORDER BY cs.id DESC LIMIT 5;",
+  "rows": [
+    {
+      "session_id": "5",
+      "report_id": "1",
+      "title": "Gender bias detected in job recommendation AI"
+    },
+    {
+      "session_id": "4",
+      "report_id": "2",
+      "title": "AI chatbot providing medical advice without disclaimer"
+    },
+    {
+      "session_id": "3",
+      "report_id": "3",
+      "title": "Privacy concern: AI assistant storing conversation history"
+    },
+    {
+      "session_id": "2",
+      "report_id": "4",
+      "title": "AI content moderation flagging legitimate news as misinformation"
+    },
+    {
+      "session_id": "1",
+      "report_id": "5",
+      "title": "Facial recognition system showing racial bias in accuracy"
+    }
+  ],
+  "messages": [],
+  "stdout": "session_id\treport_id\ttitle\n5\t1\tGender bias detected in job recommendation AI\n4\t2\tAI chatbot providing medical advice without disclaimer\n3\t3\tPrivacy concern: AI assistant storing conversation history\n2\t4\tAI content moderation flagging legitimate news as misinformation\n1\t5\tFacial recognition system showing racial bias in accuracy\n",
+  "stderr": "",
+  "execution_time_ms": 51
+}

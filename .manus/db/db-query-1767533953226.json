@@ -1,0 +1,18 @@
+{
+  "query": "SELECT id, userId, bundleId, enrollmentType, paymentStatus, status FROM course_enrollments WHERE enrollmentType = 'bundle';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, userId, bundleId, enrollmentType, paymentStatus, status FROM course_enrollments WHERE enrollmentType = 'bundle';",
+  "rows": [
+    {
+      "id": "330035",
+      "userId": "1",
+      "bundleId": "1",
+      "enrollmentType": "bundle",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tbundleId\tenrollmentType\tpaymentStatus\tstatus\n330035\t1\t1\tbundle\tcompleted\tenrolled\n",
+  "stderr": "",
+  "execution_time_ms": 395
+}

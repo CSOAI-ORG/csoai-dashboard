@@ -1,0 +1,118 @@
+{
+  "query": "SELECT id, title, framework, JSON_LENGTH(modules) as module_count FROM courses WHERE JSON_LENGTH(modules) > 0 ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, JSON_LENGTH(modules) as module_count FROM courses WHERE JSON_LENGTH(modules) > 0 ORDER BY id;",
+  "rows": [
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "module_count": "8"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "module_count": "8"
+    },
+    {
+      "id": "30001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "30002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "30003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "30004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "30005",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "60001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "module_count": "8"
+    },
+    {
+      "id": "60002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "module_count": "8"
+    },
+    {
+      "id": "90002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "framework": "iso_42001",
+      "module_count": "8"
+    },
+    {
+      "id": "120002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "150001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "150002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "150003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "150004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    },
+    {
+      "id": "180001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "module_count": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tmodule_count\n2\tHigh-Risk AI Systems\tEU AI Act\t8\n3\tEU AI Act Conformity Assessment\tEU AI Act\t8\n30001\tTest AI Safety Course\tEU AI Act\t1\n30002\tTest AI Safety Course\tEU AI Act\t1\n30003\tTest AI Safety Course\tEU AI Act\t1\n30004\tTest AI Safety Course\tEU AI Act\t1\n30005\tTest AI Safety Course\tEU AI Act\t1\n60001\tEU AI Act Fundamentals\tEU AI Act\t8\n60002\tTest AI Safety Course\tEU AI Act\t1\n90001\tNIST AI RMF Fundamentals\tNIST AI RMF\t8\n90002\tTest AI Safety Course\tEU AI Act\t1\n120001\tISO 42001 AI Management System Fundamentals\tiso_42001\t8\n120002\tTest AI Safety Course\tEU AI Act\t1\n150001\tTest AI Safety Course\tEU AI Act\t1\n150002\tTest AI Safety Course\tEU AI Act\t1\n150003\tTest AI Safety Course\tEU AI Act\t1\n150004\tTest AI Safety Course\tEU AI Act\t1\n180001\tTest AI Safety Course\tEU AI Act\t1\n",
+  "stderr": "",
+  "execution_time_ms": 83
+}

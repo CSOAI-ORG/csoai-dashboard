@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE course_enrollments ADD COLUMN couponId INT NULL AFTER stripePaymentIntentId, ADD COLUMN amountPaid INT NOT NULL DEFAULT 0 AFTER paidAmount, ADD COLUMN stripePriceId VARCHAR(255) NULL AFTER stripePaymentIntentId;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute ALTER TABLE course_enrollments ADD COLUMN couponId INT NULL AFTER stripePaymentIntentId, ADD COLUMN amountPaid INT NOT NULL DEFAULT 0 AFTER paidAmount, ADD COLUMN stripePriceId VARCHAR(255) NULL AFTER stripePaymentIntentId;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1301
+}

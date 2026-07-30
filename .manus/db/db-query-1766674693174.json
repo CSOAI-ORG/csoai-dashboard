@@ -1,0 +1,50 @@
+{
+  "query": "SELECT id, title, description, framework, level, JSON_LENGTH(modules) as module_count \nFROM courses \nWHERE framework = 'NIST AI RMF' \nORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, description, framework, level, JSON_LENGTH(modules) as module_count \nFROM courses \nWHERE framework = 'NIST AI RMF' \nORDER BY id;",
+  "rows": [
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "description": "Introduction to the four functions: Govern, Map, Measure, Manage, AI risk categories, and trustworthy AI characteristics",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "module_count": "8"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "description": "Build organizational AI governance structures, define roles and responsibilities, create AI policies, and engage stakeholders",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "module_count": "NULL"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "description": "Master AI system testing and evaluation, bias detection and mitigation, performance metrics, and continuous monitoring",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "module_count": "NULL"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "description": "Navigate Executive Order 14110, OMB AI guidance, and sector-specific regulations in healthcare, finance, and defense",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "module_count": "NULL"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "description": "Master the NIST AI Risk Management Framework with comprehensive training on the four core functions (Govern, Map, Measure, Manage) and seven trustworthy AI characteristics. Learn to build trustworthy AI systems through structured risk management. Duration: 20 hours. Prerequisites: Basic understanding of AI/ML concepts (recommended but not required). Target Audience: AI practitioners, compliance officers, risk managers, product managers.",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "module_count": "8"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tdescription\tframework\tlevel\tmodule_count\n5\tNIST AI RMF Fundamentals\tIntroduction to the four functions: Govern, Map, Measure, Manage, AI risk categories, and trustworthy AI characteristics\tNIST AI RMF\tfundamentals\t8\n6\tAI Risk Governance\tBuild organizational AI governance structures, define roles and responsibilities, create AI policies, and engage stakeholders\tNIST AI RMF\tadvanced\tNULL\n7\tAI Risk Assessment & Measurement\tMaster AI system testing and evaluation, bias detection and mitigation, performance metrics, and continuous monitoring\tNIST AI RMF\tadvanced\tNULL\n8\tFederal AI Regulations\tNavigate Executive Order 14110, OMB AI guidance, and sector-specific regulations in healthcare, finance, and defense\tNIST AI RMF\tadvanced\tNULL\n90001\tNIST AI RMF Fundamentals\tMaster the NIST AI Risk Management Framework with comprehensive training on the four core functions (Govern, Map, Measure, Manage) and seven trustworthy AI characteristics. Learn to build trustworthy AI systems through structured risk management. Duration: 20 hours. Prerequisites: Basic understanding of AI/ML concepts (recommended but not required). Target Audience: AI practitioners, compliance officers, risk managers, product managers.\tNIST AI RMF\tfundamentals\t8\n",
+  "stderr": "",
+  "execution_time_ms": 111
+}

@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO ai_systems (userId, name, description, systemType, riskLevel, status, deploymentDate) VALUES \n(1, 'ChatAssist Pro', 'Enterprise customer service chatbot with natural language understanding', 'chatbot', 'limited', 'active', '2024-01-15'),\n(1, 'RecommendAI', 'Product recommendation engine using collaborative filtering', 'recommendation', 'minimal', 'compliant', '2023-11-01'),\n(1, 'ContentGuard', 'AI-powered content moderation and classification system', 'classification', 'high', 'under_review', '2024-03-01'),\n(1, 'DocGen AI', 'Automated document generation and summarization tool', 'generation', 'limited', 'active', '2024-02-20'),\n(1, 'RiskAnalyzer', 'Financial risk assessment and fraud detection system', 'analysis', 'high', 'active', '2023-09-15');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO ai_systems (userId, name, description, systemType, riskLevel, status, deploymentDate) VALUES \n(1, 'ChatAssist Pro', 'Enterprise customer service chatbot with natural language understanding', 'chatbot', 'limited', 'active', '2024-01-15'),\n(1, 'RecommendAI', 'Product recommendation engine using collaborative filtering', 'recommendation', 'minimal', 'compliant', '2023-11-01'),\n(1, 'ContentGuard', 'AI-powered content moderation and classification system', 'classification', 'high', 'under_review', '2024-03-01'),\n(1, 'DocGen AI', 'Automated document generation and summarization tool', 'generation', 'limited', 'active', '2024-02-20'),\n(1, 'RiskAnalyzer', 'Financial risk assessment and fraud detection system', 'analysis', 'high', 'active', '2023-09-15');",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 63
+}

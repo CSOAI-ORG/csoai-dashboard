@@ -1,0 +1,19 @@
+{
+  "query": "SELECT id, title, framework, level, price, durationHours, active \nFROM courses \nWHERE framework IN ('eu_ai_act', 'nist_ai_rmf', 'iso_42001') \nAND level = 'fundamentals'\nORDER BY framework;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, level, price, durationHours, active \nFROM courses \nWHERE framework IN ('eu_ai_act', 'nist_ai_rmf', 'iso_42001') \nAND level = 'fundamentals'\nORDER BY framework;",
+  "rows": [
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "framework": "iso_42001",
+      "level": "fundamentals",
+      "price": "49900",
+      "durationHours": "20",
+      "active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tlevel\tprice\tdurationHours\tactive\n120001\tISO 42001 AI Management System Fundamentals\tiso_42001\tfundamentals\t49900\t20\t1\n",
+  "stderr": "",
+  "execution_time_ms": 136
+}

@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO course_regions (name, code, description) VALUES \n('European Union', 'EU', 'EU AI Act compliance training'),\n('United States', 'US', 'NIST AI RMF training'),\n('United Kingdom', 'UK', 'UK AI regulations'),\n('China', 'CN', 'TC260 framework training'),\n('International', 'INTL', 'ISO 42001 global standards'),\n('Asia Pacific', 'APAC', 'Regional AI governance'),\n('Middle East', 'ME', 'Regional compliance'),\n('Africa', 'AF', 'African AI initiatives'),\n('Latin America', 'LATAM', 'Latin American AI regulations')\nON DUPLICATE KEY UPDATE name=name",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO course_regions (name, code, description) VALUES \n('European Union', 'EU', 'EU AI Act compliance training'),\n('United States', 'US', 'NIST AI RMF training'),\n('United Kingdom', 'UK', 'UK AI regulations'),\n('China', 'CN', 'TC260 framework training'),\n('International', 'INTL', 'ISO 42001 global standards'),\n('Asia Pacific', 'APAC', 'Regional AI governance'),\n('Middle East', 'ME', 'Regional compliance'),\n('Africa', 'AF', 'African AI initiatives'),\n('Latin America', 'LATAM', 'Latin American AI regulations')\nON DUPLICATE KEY UPDATE name=name",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 72
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS email_execution_logs (\n  id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,\n  executionId INT NOT NULL,\n  stepExecutionId INT,\n  workflowId INT NOT NULL,\n  recipientUserId INT,\n  recipientEmail VARCHAR(320) NOT NULL,\n  recipientName VARCHAR(255),\n  emailSubject VARCHAR(500) NOT NULL,\n  emailTemplate VARCHAR(100),\n  status ENUM('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'clicked') DEFAULT 'queued' NOT NULL,\n  sentAt TIMESTAMP NULL,\n  deliveredAt TIMESTAMP NULL,\n  openedAt TIMESTAMP NULL,\n  clickedAt TIMESTAMP NULL,\n  errorMessage TEXT,\n  metadata JSON,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS email_execution_logs (\n  id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,\n  executionId INT NOT NULL,\n  stepExecutionId INT,\n  workflowId INT NOT NULL,\n  recipientUserId INT,\n  recipientEmail VARCHAR(320) NOT NULL,\n  recipientName VARCHAR(255),\n  emailSubject VARCHAR(500) NOT NULL,\n  emailTemplate VARCHAR(100),\n  status ENUM('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'clicked') DEFAULT 'queued' NOT NULL,\n  sentAt TIMESTAMP NULL,\n  deliveredAt TIMESTAMP NULL,\n  openedAt TIMESTAMP NULL,\n  clickedAt TIMESTAMP NULL,\n  errorMessage TEXT,\n  metadata JSON,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1680
+}

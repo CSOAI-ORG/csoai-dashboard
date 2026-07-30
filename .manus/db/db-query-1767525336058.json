@@ -1,0 +1,150 @@
+{
+  "query": "SELECT id, title, framework, active, level FROM courses WHERE active = 1 ORDER BY id LIMIT 20;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, active, level FROM courses WHERE active = 1 ORDER BY id LIMIT 20;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU_AI_ACT",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST_AI_RMF",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "framework": "UK_AI_SAFETY",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "framework": "CANADA_AIDA",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "framework": "AUSTRALIA_AI",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard",
+      "framework": "ISO_42001",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework",
+      "framework": "TC260",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690006",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690007",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690009",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690010",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690012",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690014",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690015",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690017",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690018",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690020",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690021",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690023",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    },
+    {
+      "id": "690024",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1",
+      "level": "fundamentals"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tactive\tlevel\n100001\tEU AI Act Fundamentals\tEU_AI_ACT\t1\tfundamentals\n100002\tNIST AI RMF Fundamentals\tNIST_AI_RMF\t1\tfundamentals\n100003\tUK AI Safety Institute Framework\tUK_AI_SAFETY\t1\tfundamentals\n100004\tCanada AIDA Compliance\tCANADA_AIDA\t1\tfundamentals\n100005\tAustralia AI Ethics Framework\tAUSTRALIA_AI\t1\tfundamentals\n100006\tISO 42001 International Standard\tISO_42001\t1\tfundamentals\n100007\tChina TC260 AI Framework\tTC260\t1\tfundamentals\n690006\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690007\tTest Course for Forums\tEU AI Act\t1\tfundamentals\n690009\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690010\tTest Course for Forums\tEU AI Act\t1\tfundamentals\n690012\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690014\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690015\tTest Course for Forums\tEU AI Act\t1\tfundamentals\n690017\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690018\tTest Course for Forums\tEU AI Act\t1\tfundamentals\n690020\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690021\tTest Course for Forums\tEU AI Act\t1\tfundamentals\n690023\tTest Course for Lessons\tEU AI Act\t1\tfundamentals\n690024\tTest Course for Forums\tEU AI Act\t1\tfundamentals\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

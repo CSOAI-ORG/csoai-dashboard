@@ -1,0 +1,50 @@
+{
+  "query": "SELECT ca.id, ca.analystId, ca.reportId, ca.priority, ca.status, wr.title FROM case_assignments ca JOIN watchdog_reports wr ON ca.reportId = wr.id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT ca.id, ca.analystId, ca.reportId, ca.priority, ca.status, wr.title FROM case_assignments ca JOIN watchdog_reports wr ON ca.reportId = wr.id;",
+  "rows": [
+    {
+      "id": "5",
+      "analystId": "1",
+      "reportId": "1",
+      "priority": "high",
+      "status": "assigned",
+      "title": "Gender bias detected in job recommendation AI"
+    },
+    {
+      "id": "4",
+      "analystId": "1",
+      "reportId": "2",
+      "priority": "urgent",
+      "status": "assigned",
+      "title": "AI chatbot providing medical advice without disclaimer"
+    },
+    {
+      "id": "3",
+      "analystId": "1",
+      "reportId": "3",
+      "priority": "medium",
+      "status": "assigned",
+      "title": "Privacy concern: AI assistant storing conversation history"
+    },
+    {
+      "id": "2",
+      "analystId": "1",
+      "reportId": "4",
+      "priority": "high",
+      "status": "assigned",
+      "title": "AI content moderation flagging legitimate news as misinformation"
+    },
+    {
+      "id": "1",
+      "analystId": "1",
+      "reportId": "5",
+      "priority": "urgent",
+      "status": "assigned",
+      "title": "Facial recognition system showing racial bias in accuracy"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tanalystId\treportId\tpriority\tstatus\ttitle\n5\t1\t1\thigh\tassigned\tGender bias detected in job recommendation AI\n4\t1\t2\turgent\tassigned\tAI chatbot providing medical advice without disclaimer\n3\t1\t3\tmedium\tassigned\tPrivacy concern: AI assistant storing conversation history\n2\t1\t4\thigh\tassigned\tAI content moderation flagging legitimate news as misinformation\n1\t1\t5\turgent\tassigned\tFacial recognition system showing racial bias in accuracy\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

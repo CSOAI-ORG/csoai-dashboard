@@ -1,0 +1,24 @@
+{
+  "query": "SELECT id, name, bundlePrice, regularPrice, courseIds FROM course_bundles ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, name, bundlePrice, regularPrice, courseIds FROM course_bundles ORDER BY id;",
+  "rows": [
+    {
+      "id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks",
+      "bundlePrice": "99900",
+      "regularPrice": "149700",
+      "courseIds": "\"[100001,100002,100006]\""
+    },
+    {
+      "id": "200002",
+      "name": "Complete Certification - All 7 Modules",
+      "bundlePrice": "199900",
+      "regularPrice": "349300",
+      "courseIds": "\"[100001,100002,100003,100004,100005,100006,100007]\""
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tbundlePrice\tregularPrice\tcourseIds\n200001\tFoundation Bundle - 3 Core Frameworks\t99900\t149700\t\"[100001,100002,100006]\"\n200002\tComplete Certification - All 7 Modules\t199900\t349300\t\"[100001,100002,100003,100004,100005,100006,100007]\"\n",
+  "stderr": "",
+  "execution_time_ms": 397
+}

@@ -1,0 +1,34 @@
+{
+  "query": "SELECT u.id, u.name, COUNT(CASE WHEN e.courseId IS NOT NULL THEN 1 END) as courses, COUNT(CASE WHEN e.bundleId IS NOT NULL THEN 1 END) as bundles FROM users u LEFT JOIN course_enrollments e ON u.id = e.userId WHERE u.name LIKE '%Admin%' GROUP BY u.id, u.name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT u.id, u.name, COUNT(CASE WHEN e.courseId IS NOT NULL THEN 1 END) as courses, COUNT(CASE WHEN e.bundleId IS NOT NULL THEN 1 END) as bundles FROM users u LEFT JOIN course_enrollments e ON u.id = e.userId WHERE u.name LIKE '%Admin%' GROUP BY u.id, u.name;",
+  "rows": [
+    {
+      "id": "2310112",
+      "name": "Test Admin",
+      "courses": "0",
+      "bundles": "0"
+    },
+    {
+      "id": "2220365",
+      "name": "Test Admin",
+      "courses": "0",
+      "bundles": "0"
+    },
+    {
+      "id": "2220364",
+      "name": "Test Admin",
+      "courses": "0",
+      "bundles": "0"
+    },
+    {
+      "id": "2310062",
+      "name": "Test Admin",
+      "courses": "0",
+      "bundles": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tcourses\tbundles\n2310112\tTest Admin\t0\t0\n2220365\tTest Admin\t0\t0\n2220364\tTest Admin\t0\t0\n2310062\tTest Admin\t0\t0\n",
+  "stderr": "",
+  "execution_time_ms": 422
+}

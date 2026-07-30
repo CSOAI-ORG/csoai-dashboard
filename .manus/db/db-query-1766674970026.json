@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id, title, JSON_LENGTH(modules) as module_count, \nJSON_EXTRACT(modules, '$[1].title') as module2_title,\nLENGTH(JSON_EXTRACT(modules, '$[1].content')) as module2_content_length\nFROM courses \nWHERE id = 120001;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, JSON_LENGTH(modules) as module_count, \nJSON_EXTRACT(modules, '$[1].title') as module2_title,\nLENGTH(JSON_EXTRACT(modules, '$[1].content')) as module2_content_length\nFROM courses \nWHERE id = 120001;",
+  "rows": [
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "module_count": "8",
+      "module2_title": "\"Context of the Organization (Clause 4)\"",
+      "module2_content_length": "30045"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tmodule_count\tmodule2_title\tmodule2_content_length\n120001\tISO 42001 AI Management System Fundamentals\t8\t\"Context of the Organization (Clause 4)\"\t30045\n",
+  "stderr": "",
+  "execution_time_ms": 59
+}

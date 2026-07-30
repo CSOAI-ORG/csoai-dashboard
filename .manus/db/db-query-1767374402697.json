@@ -1,0 +1,55 @@
+{
+  "query": "SELECT id, title, framework, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM courses WHERE framework != 'watchdog' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM courses WHERE framework != 'watchdog' LIMIT 5;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "stripePriceId": "price_1Sl574DuEg5HakgP2jyw5iYV",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "stripePriceId": "price_1Sl575DuEg5HakgP6EnJ7FjI",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "framework": "UK AI Safety Institute",
+      "stripePriceId": "price_1Sl576DuEg5HakgP6Kp0nsAT",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "framework": "Canada AIDA",
+      "stripePriceId": "price_1Sl578DuEg5HakgPEPjnGDsB",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "framework": "Australia AI Ethics",
+      "stripePriceId": "price_1Sl579DuEg5HakgPUJ0dVPUI",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tstripePriceId\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\n100001\tEU AI Act Fundamentals\tEU AI Act\tprice_1Sl574DuEg5HakgP2jyw5iYV\tNULL\tNULL\tNULL\n100002\tNIST AI RMF Fundamentals\tNIST AI RMF\tprice_1Sl575DuEg5HakgP6EnJ7FjI\tNULL\tNULL\tNULL\n100003\tUK AI Safety Institute Framework\tUK AI Safety Institute\tprice_1Sl576DuEg5HakgP6Kp0nsAT\tNULL\tNULL\tNULL\n100004\tCanada AIDA Compliance\tCanada AIDA\tprice_1Sl578DuEg5HakgPEPjnGDsB\tNULL\tNULL\tNULL\n100005\tAustralia AI Ethics Framework\tAustralia AI Ethics\tprice_1Sl579DuEg5HakgPUJ0dVPUI\tNULL\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 455
+}

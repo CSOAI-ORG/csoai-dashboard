@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE courses SET\n  stripePriceId = 'price_1SiAxLDuEg5HakgPkqfItPFo',\n  stripePriceId3Month = 'price_1SiAxLDuEg5HakgPcVVlPUwq',\n  stripePriceId6Month = 'price_1SiAxMDuEg5HakgPTLH15YfL',\n  stripePriceId12Month = 'price_1SiAxMDuEg5HakgPS08f4MyT'\nWHERE title = 'EU AI Act Fundamentals'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute UPDATE courses SET\n  stripePriceId = 'price_1SiAxLDuEg5HakgPkqfItPFo',\n  stripePriceId3Month = 'price_1SiAxLDuEg5HakgPcVVlPUwq',\n  stripePriceId6Month = 'price_1SiAxMDuEg5HakgPTLH15YfL',\n  stripePriceId12Month = 'price_1SiAxMDuEg5HakgPS08f4MyT'\nWHERE title = 'EU AI Act Fundamentals'",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 260
+}

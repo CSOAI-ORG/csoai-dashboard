@@ -1,0 +1,9 @@
+{
+  "query": "CREATE INDEX IF NOT EXISTS idx_forum_threads_courseId ON forum_threads(courseId);\nCREATE INDEX IF NOT EXISTS idx_forum_threads_userId ON forum_threads(userId);\nCREATE INDEX IF NOT EXISTS idx_forum_posts_threadId ON forum_posts(threadId);\nCREATE INDEX IF NOT EXISTS idx_analyst_assignments_analystId ON analyst_assignments(analystId);\nCREATE INDEX IF NOT EXISTS idx_ai_systems_userId ON ai_systems(userId);\nCREATE INDEX IF NOT EXISTS idx_watchdog_applications_email ON watchdog_applications(email);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE INDEX IF NOT EXISTS idx_forum_threads_courseId ON forum_threads(courseId);\nCREATE INDEX IF NOT EXISTS idx_forum_threads_userId ON forum_threads(userId);\nCREATE INDEX IF NOT EXISTS idx_forum_posts_threadId ON forum_posts(threadId);\nCREATE INDEX IF NOT EXISTS idx_analyst_assignments_analystId ON analyst_assignments(analystId);\nCREATE INDEX IF NOT EXISTS idx_ai_systems_userId ON ai_systems(userId);\nCREATE INDEX IF NOT EXISTS idx_watchdog_applications_email ON watchdog_applications(email);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 3418
+}

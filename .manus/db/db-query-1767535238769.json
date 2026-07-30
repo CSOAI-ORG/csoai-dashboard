@@ -1,0 +1,45 @@
+{
+  "query": "SELECT ce.id, ce.userId, ce.bundleId, cb.id as bundle_table_id, cb.name FROM course_enrollments ce LEFT JOIN course_bundles cb ON ce.bundleId = cb.id WHERE ce.bundleId IS NOT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT ce.id, ce.userId, ce.bundleId, cb.id as bundle_table_id, cb.name FROM course_enrollments ce LEFT JOIN course_bundles cb ON ce.bundleId = cb.id WHERE ce.bundleId IS NOT NULL;",
+  "rows": [
+    {
+      "id": "330039",
+      "userId": "1",
+      "bundleId": "200001",
+      "bundle_table_id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks"
+    },
+    {
+      "id": "330038",
+      "userId": "900014",
+      "bundleId": "200001",
+      "bundle_table_id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks"
+    },
+    {
+      "id": "330037",
+      "userId": "900022",
+      "bundleId": "200001",
+      "bundle_table_id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks"
+    },
+    {
+      "id": "330036",
+      "userId": "900016",
+      "bundleId": "200001",
+      "bundle_table_id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks"
+    },
+    {
+      "id": "330035",
+      "userId": "1",
+      "bundleId": "200001",
+      "bundle_table_id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tbundleId\tbundle_table_id\tname\n330039\t1\t200001\t200001\tFoundation Bundle - 3 Core Frameworks\n330038\t900014\t200001\t200001\tFoundation Bundle - 3 Core Frameworks\n330037\t900022\t200001\t200001\tFoundation Bundle - 3 Core Frameworks\n330036\t900016\t200001\t200001\tFoundation Bundle - 3 Core Frameworks\n330035\t1\t200001\t200001\tFoundation Bundle - 3 Core Frameworks\n",
+  "stderr": "",
+  "execution_time_ms": 395
+}

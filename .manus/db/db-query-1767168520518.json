@@ -1,0 +1,46 @@
+{
+  "query": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'test_questions';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'test_questions';",
+  "rows": [
+    {
+      "COLUMN_NAME": "id"
+    },
+    {
+      "COLUMN_NAME": "testId"
+    },
+    {
+      "COLUMN_NAME": "moduleId"
+    },
+    {
+      "COLUMN_NAME": "questionText"
+    },
+    {
+      "COLUMN_NAME": "questionType"
+    },
+    {
+      "COLUMN_NAME": "options"
+    },
+    {
+      "COLUMN_NAME": "correctAnswer"
+    },
+    {
+      "COLUMN_NAME": "explanation"
+    },
+    {
+      "COLUMN_NAME": "points"
+    },
+    {
+      "COLUMN_NAME": "difficulty"
+    },
+    {
+      "COLUMN_NAME": "isActive"
+    },
+    {
+      "COLUMN_NAME": "createdAt"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\nid\ntestId\nmoduleId\nquestionText\nquestionType\noptions\ncorrectAnswer\nexplanation\npoints\ndifficulty\nisActive\ncreatedAt\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

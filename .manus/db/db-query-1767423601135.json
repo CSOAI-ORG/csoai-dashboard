@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `module_completion_metrics` (\n  `id` int AUTO_INCREMENT NOT NULL PRIMARY KEY,\n  `course_id` int NOT NULL,\n  `module_id` int NOT NULL,\n  `region_id` int NOT NULL,\n  `date` timestamp NOT NULL,\n  `started_count` int NOT NULL DEFAULT 0,\n  `completed_count` int NOT NULL DEFAULT 0,\n  `average_time_spent` int,\n  `average_score` decimal(5, 2),\n  `pass_rate` decimal(5, 2),\n  `dropout_rate` decimal(5, 2),\n  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  INDEX `idx_courseId_moduleId` (`course_id`, `module_id`),\n  INDEX `idx_regionId_date` (`region_id`, `date`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `module_completion_metrics` (\n  `id` int AUTO_INCREMENT NOT NULL PRIMARY KEY,\n  `course_id` int NOT NULL,\n  `module_id` int NOT NULL,\n  `region_id` int NOT NULL,\n  `date` timestamp NOT NULL,\n  `started_count` int NOT NULL DEFAULT 0,\n  `completed_count` int NOT NULL DEFAULT 0,\n  `average_time_spent` int,\n  `average_score` decimal(5, 2),\n  `pass_rate` decimal(5, 2),\n  `dropout_rate` decimal(5, 2),\n  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  INDEX `idx_courseId_moduleId` (`course_id`, `module_id`),\n  INDEX `idx_regionId_date` (`region_id`, `date`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1660
+}

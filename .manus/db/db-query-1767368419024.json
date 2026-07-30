@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE course_enrollments MODIFY COLUMN courseId INT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute ALTER TABLE course_enrollments MODIFY COLUMN courseId INT NULL;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 527
+}

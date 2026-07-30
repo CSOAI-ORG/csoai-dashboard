@@ -1,0 +1,45 @@
+{
+  "query": "SELECT id, testId, questionText, questionType, difficulty FROM test_questions WHERE testId = 1 LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, testId, questionText, questionType, difficulty FROM test_questions WHERE testId = 1 LIMIT 5",
+  "rows": [
+    {
+      "id": "1",
+      "testId": "1",
+      "questionText": "What is the primary purpose of AI Safety?",
+      "questionType": "multiple_choice",
+      "difficulty": "medium"
+    },
+    {
+      "id": "2",
+      "testId": "1",
+      "questionText": "Which of the following is NOT a reason why AI Safety matters?",
+      "questionType": "multiple_choice",
+      "difficulty": "medium"
+    },
+    {
+      "id": "3",
+      "testId": "1",
+      "questionText": "What is the maximum penalty under the EU AI Act for prohibited AI practices?",
+      "questionType": "multiple_choice",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4",
+      "testId": "1",
+      "questionText": "What is the role of a COAI Watchdog Analyst?",
+      "questionType": "multiple_choice",
+      "difficulty": "medium"
+    },
+    {
+      "id": "5",
+      "testId": "1",
+      "questionText": "Which framework is voluntary and widely adopted in the United States?",
+      "questionType": "multiple_choice",
+      "difficulty": "medium"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttestId\tquestionText\tquestionType\tdifficulty\n1\t1\tWhat is the primary purpose of AI Safety?\tmultiple_choice\tmedium\n2\t1\tWhich of the following is NOT a reason why AI Safety matters?\tmultiple_choice\tmedium\n3\t1\tWhat is the maximum penalty under the EU AI Act for prohibited AI practices?\tmultiple_choice\tmedium\n4\t1\tWhat is the role of a COAI Watchdog Analyst?\tmultiple_choice\tmedium\n5\t1\tWhich framework is voluntary and widely adopted in the United States?\tmultiple_choice\tmedium\n",
+  "stderr": "",
+  "execution_time_ms": 446
+}

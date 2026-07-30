@@ -1,0 +1,45 @@
+{
+  "query": "SELECT c.id as course_id, c.title as course_title, c.regionId, r.id as region_id, r.name as region_name FROM courses c LEFT JOIN course_regions r ON c.regionId = r.id LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT c.id as course_id, c.title as course_title, c.regionId, r.id as region_id, r.name as region_name FROM courses c LEFT JOIN course_regions r ON c.regionId = r.id LIMIT 5",
+  "rows": [
+    {
+      "course_id": "100001",
+      "course_title": "EU AI Act Fundamentals",
+      "regionId": "1",
+      "region_id": "1",
+      "region_name": "European Union"
+    },
+    {
+      "course_id": "100002",
+      "course_title": "NIST AI RMF Fundamentals",
+      "regionId": "2",
+      "region_id": "2",
+      "region_name": "United States"
+    },
+    {
+      "course_id": "100003",
+      "course_title": "UK AI Safety Institute Framework",
+      "regionId": "3",
+      "region_id": "3",
+      "region_name": "United Kingdom"
+    },
+    {
+      "course_id": "100004",
+      "course_title": "Canada AIDA Compliance",
+      "regionId": "4",
+      "region_id": "4",
+      "region_name": "China"
+    },
+    {
+      "course_id": "100005",
+      "course_title": "Australia AI Ethics Framework",
+      "regionId": "5",
+      "region_id": "5",
+      "region_name": "International"
+    }
+  ],
+  "messages": [],
+  "stdout": "course_id\tcourse_title\tregionId\tregion_id\tregion_name\n100001\tEU AI Act Fundamentals\t1\t1\tEuropean Union\n100002\tNIST AI RMF Fundamentals\t2\t2\tUnited States\n100003\tUK AI Safety Institute Framework\t3\t3\tUnited Kingdom\n100004\tCanada AIDA Compliance\t4\t4\tChina\n100005\tAustralia AI Ethics Framework\t5\t5\tInternational\n",
+  "stderr": "",
+  "execution_time_ms": 1534
+}

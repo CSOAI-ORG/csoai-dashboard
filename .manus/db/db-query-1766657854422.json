@@ -1,0 +1,38 @@
+{
+  "query": "SHOW CREATE TABLE courses;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SHOW CREATE TABLE courses;",
+  "rows": [
+    {
+      "Table": "courses",
+      "Create Table": "CREATE TABLE `courses` ("
+    }
+  ],
+  "messages": [
+    "  `id` int(11) NOT NULL AUTO_INCREMENT,",
+    "  `regionId` int(11) NOT NULL,",
+    "  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,",
+    "  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `framework` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `level` enum('fundamentals','advanced','specialist') COLLATE utf8mb4_unicode_ci NOT NULL,",
+    "  `durationHours` int(11) NOT NULL,",
+    "  `price` int(11) NOT NULL,",
+    "  `stripePriceId` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `modules` json DEFAULT NULL,",
+    "  `prerequisites` json DEFAULT NULL,",
+    "  `certificationRequired` tinyint(1) NOT NULL DEFAULT '0',",
+    "  `active` tinyint(1) NOT NULL DEFAULT '1',",
+    "  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,",
+    "  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,",
+    "  `price3Month` int(11) DEFAULT NULL,",
+    "  `price6Month` int(11) DEFAULT NULL,",
+    "  `price12Month` int(11) DEFAULT NULL,",
+    "  `stripePriceId3Month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `stripePriceId6Month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  `stripePriceId12Month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,",
+    "  PRIMARY KEY (`id`) /*T![clustered_index] CLUSTERED */",
+    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=90001"
+  ],
+  "stdout": "Table\tCreate Table\ncourses\tCREATE TABLE `courses` (\n  `id` int(11) NOT NULL AUTO_INCREMENT,\n  `regionId` int(11) NOT NULL,\n  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `framework` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `level` enum('fundamentals','advanced','specialist') COLLATE utf8mb4_unicode_ci NOT NULL,\n  `durationHours` int(11) NOT NULL,\n  `price` int(11) NOT NULL,\n  `stripePriceId` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `modules` json DEFAULT NULL,\n  `prerequisites` json DEFAULT NULL,\n  `certificationRequired` tinyint(1) NOT NULL DEFAULT '0',\n  `active` tinyint(1) NOT NULL DEFAULT '1',\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  `price3Month` int(11) DEFAULT NULL,\n  `price6Month` int(11) DEFAULT NULL,\n  `price12Month` int(11) DEFAULT NULL,\n  `stripePriceId3Month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `stripePriceId6Month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `stripePriceId12Month` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`) /*T![clustered_index] CLUSTERED */\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=90001\n",
+  "stderr": "",
+  "execution_time_ms": 164
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS ab_variants (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  experimentId INT NOT NULL,\n  name VARCHAR(255) NOT NULL,\n  description TEXT,\n  interventionType VARCHAR(255),\n  interventionContent TEXT,\n  weight INT DEFAULT 50 NOT NULL,\n  isControl TINYINT DEFAULT 0 NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  INDEX idx_experimentId (experimentId)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS ab_variants (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  experimentId INT NOT NULL,\n  name VARCHAR(255) NOT NULL,\n  description TEXT,\n  interventionType VARCHAR(255),\n  interventionContent TEXT,\n  weight INT DEFAULT 50 NOT NULL,\n  isControl TINYINT DEFAULT 0 NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  INDEX idx_experimentId (experimentId)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1628
+}

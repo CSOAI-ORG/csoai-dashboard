@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS cohort_students (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  cohortId INT NOT NULL,\n  studentId INT NOT NULL,\n  enrolledAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  status ENUM('active', 'completed', 'dropped') DEFAULT 'active' NOT NULL,\n  INDEX idx_cohortId (cohortId),\n  INDEX idx_studentId (studentId),\n  UNIQUE KEY unique_cohort_student (cohortId, studentId)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS cohort_students (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  cohortId INT NOT NULL,\n  studentId INT NOT NULL,\n  enrolledAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  status ENUM('active', 'completed', 'dropped') DEFAULT 'active' NOT NULL,\n  INDEX idx_cohortId (cohortId),\n  INDEX idx_studentId (studentId),\n  UNIQUE KEY unique_cohort_student (cohortId, studentId)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1639
+}

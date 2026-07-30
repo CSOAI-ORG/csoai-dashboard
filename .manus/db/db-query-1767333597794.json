@@ -1,0 +1,18 @@
+{
+  "query": "SELECT testId, COUNT(*) as question_count FROM test_questions GROUP BY testId",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT testId, COUNT(*) as question_count FROM test_questions GROUP BY testId",
+  "rows": [
+    {
+      "testId": "30001",
+      "question_count": "121"
+    },
+    {
+      "testId": "1",
+      "question_count": "590"
+    }
+  ],
+  "messages": [],
+  "stdout": "testId\tquestion_count\n30001\t121\n1\t590\n",
+  "stderr": "",
+  "execution_time_ms": 406
+}

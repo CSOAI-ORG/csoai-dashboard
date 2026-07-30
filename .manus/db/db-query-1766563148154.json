@@ -1,0 +1,13 @@
+{
+  "query": "SELECT id FROM certification_tests WHERE code = 'WATCHDOG_BASIC';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id FROM certification_tests WHERE code = 'WATCHDOG_BASIC';",
+  "rows": [
+    {
+      "id": "30001"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\n30001\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

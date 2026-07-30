@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `email_templates` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `templateKey` varchar(100) NOT NULL,\n  `name` varchar(255) NOT NULL,\n  `subject` varchar(255) NOT NULL,\n  `htmlContent` text NOT NULL,\n  `textContent` text NOT NULL,\n  `variables` json NOT NULL,\n  `isActive` boolean NOT NULL DEFAULT true,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_templateKey` (`templateKey`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `email_templates` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `templateKey` varchar(100) NOT NULL,\n  `name` varchar(255) NOT NULL,\n  `subject` varchar(255) NOT NULL,\n  `htmlContent` text NOT NULL,\n  `textContent` text NOT NULL,\n  `variables` json NOT NULL,\n  `isActive` boolean NOT NULL DEFAULT true,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_templateKey` (`templateKey`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1650
+}

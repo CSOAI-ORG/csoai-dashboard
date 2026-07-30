@@ -1,0 +1,30 @@
+{
+  "query": "SELECT id, email, name FROM users WHERE email LIKE '%admin%' OR name LIKE '%Admin%' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, email, name FROM users WHERE email LIKE '%admin%' OR name LIKE '%Admin%' LIMIT 5;",
+  "rows": [
+    {
+      "id": "2220364",
+      "email": "admin_promo@test.com",
+      "name": "Test Admin"
+    },
+    {
+      "id": "2220365",
+      "email": "admin_promo@test.com",
+      "name": "Test Admin"
+    },
+    {
+      "id": "2310062",
+      "email": "admin_promo@test.com",
+      "name": "Test Admin"
+    },
+    {
+      "id": "2310112",
+      "email": "admin_promo@test.com",
+      "name": "Test Admin"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tname\n2220364\tadmin_promo@test.com\tTest Admin\n2220365\tadmin_promo@test.com\tTest Admin\n2310062\tadmin_promo@test.com\tTest Admin\n2310112\tadmin_promo@test.com\tTest Admin\n",
+  "stderr": "",
+  "execution_time_ms": 400
+}

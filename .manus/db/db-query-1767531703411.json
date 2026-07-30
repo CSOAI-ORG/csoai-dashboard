@@ -1,0 +1,26 @@
+{
+  "query": "SELECT id, name, description, active, bundlePrice, regularPrice FROM course_bundles;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, name, description, active, bundlePrice, regularPrice FROM course_bundles;",
+  "rows": [
+    {
+      "id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks",
+      "description": "Master the three most important AI safety frameworks: EU AI Act, NIST AI RMF, and ISO 42001. Perfect for beginners.",
+      "active": "1",
+      "bundlePrice": "99900",
+      "regularPrice": "149700"
+    },
+    {
+      "id": "200002",
+      "name": "Complete Certification - All 7 Modules",
+      "description": "The ultimate AI safety certification covering ALL regional frameworks. Become a globally recognized AI safety expert.",
+      "active": "1",
+      "bundlePrice": "199900",
+      "regularPrice": "349300"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tdescription\tactive\tbundlePrice\tregularPrice\n200001\tFoundation Bundle - 3 Core Frameworks\tMaster the three most important AI safety frameworks: EU AI Act, NIST AI RMF, and ISO 42001. Perfect for beginners.\t1\t99900\t149700\n200002\tComplete Certification - All 7 Modules\tThe ultimate AI safety certification covering ALL regional frameworks. Become a globally recognized AI safety expert.\t1\t199900\t349300\n",
+  "stderr": "",
+  "execution_time_ms": 428
+}

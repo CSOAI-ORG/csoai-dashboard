@@ -1,0 +1,23 @@
+{
+  "query": "SELECT * FROM coupons WHERE code = 'FOUNDING10K'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM coupons WHERE code = 'FOUNDING10K'",
+  "rows": [
+    {
+      "id": "1",
+      "code": "FOUNDING10K",
+      "description": "First 10,000 signups get FREE access to all courses",
+      "discountType": "percentage",
+      "discountValue": "100.00",
+      "maxUses": "10000",
+      "usedCount": "0",
+      "expiresAt": "NULL",
+      "active": "1",
+      "createdAt": "2026-01-02 09:37:41",
+      "updatedAt": "2026-01-02 09:37:41"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tcode\tdescription\tdiscountType\tdiscountValue\tmaxUses\tusedCount\texpiresAt\tactive\tcreatedAt\tupdatedAt\n1\tFOUNDING10K\tFirst 10,000 signups get FREE access to all courses\tpercentage\t100.00\t10000\t0\tNULL\t1\t2026-01-02 09:37:41\t2026-01-02 09:37:41\n",
+  "stderr": "",
+  "execution_time_ms": 419
+}

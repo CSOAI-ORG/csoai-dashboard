@@ -1,0 +1,196 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "admin_metrics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "agent_votes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ai_systems"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_decisions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_performance"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "api_keys"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessment_items"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "audit_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "case_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certification_tests"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "compliance_reports"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "compliance_rules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "council_sessions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_bundles"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_enrollments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_regions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_translations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "courses"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "exam_questions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "founding_members"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "frameworks"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "job_applications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "job_postings"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "lesson_translations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "loi_signups"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "module_translations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "newsletter_subscribers"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "notification_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "notifications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "organizations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "password_reset_tokens"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "pdca_cycles"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "realtime_events"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "recommendation_analytics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "recommendation_interactions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "recommendation_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_clicks"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_codes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_conversions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_payouts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_program"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "regions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "report_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "requirements"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "rule_updates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "specialist_earnings"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "specialists"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "test_questions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "training_modules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_test_attempts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_training_progress"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "users"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_applications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_comments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_reports"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "websocket_connections"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_K34VNBtbDJyjtW8qhrCBdB\n__drizzle_migrations\nadmin_metrics\nagent_votes\nai_systems\nanalyst_assignments\nanalyst_decisions\nanalyst_performance\napi_keys\nassessment_items\nassessments\naudit_logs\ncase_assignments\ncertificates\ncertification_tests\ncompliance_reports\ncompliance_rules\ncouncil_sessions\ncourse_bundles\ncourse_certificates\ncourse_enrollments\ncourse_regions\ncourse_translations\ncourses\nexam_questions\nfounding_members\nframeworks\njob_applications\njob_postings\nlesson_translations\nloi_signups\nmodule_translations\nnewsletter_subscribers\nnotification_preferences\nnotifications\norganizations\npassword_reset_tokens\npdca_cycles\nrealtime_events\nrecommendation_analytics\nrecommendation_interactions\nrecommendation_preferences\nreferral_clicks\nreferral_codes\nreferral_conversions\nreferral_payouts\nreferral_program\nregions\nreport_assignments\nrequirements\nrule_updates\nspecialist_earnings\nspecialists\ntest_questions\ntraining_modules\nuser_certificates\nuser_test_attempts\nuser_training_progress\nusers\nwatchdog_applications\nwatchdog_comments\nwatchdog_reports\nwebsocket_connections\n",
+  "stderr": "",
+  "execution_time_ms": 65
+}

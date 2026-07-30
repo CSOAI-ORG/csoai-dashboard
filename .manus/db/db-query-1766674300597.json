@@ -1,0 +1,14 @@
+{
+  "query": "SELECT id, title FROM courses WHERE framework LIKE '%ISO%' OR title LIKE '%ISO%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title FROM courses WHERE framework LIKE '%ISO%' OR title LIKE '%ISO%';",
+  "rows": [
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\n120001\tISO 42001 AI Management System Fundamentals\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

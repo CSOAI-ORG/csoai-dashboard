@@ -1,0 +1,19 @@
+{
+  "query": "SELECT id, aiSystemId, frameworkId FROM assessments; SELECT id, frameworkId, code FROM requirements LIMIT 30;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, aiSystemId, frameworkId FROM assessments; SELECT id, frameworkId, code FROM requirements LIMIT 30;",
+  "returncode": 1,
+  "logs": [
+    "id\taiSystemId\tframeworkId",
+    "1\t1\t1",
+    "2\t1\t2",
+    "3\t2\t1",
+    "4\t2\t3",
+    "5\t3\t1",
+    "6\t3\t2",
+    "7\t4\t1",
+    "8\t5\t1",
+    "9\t5\t2",
+    "10\t5\t3",
+    "ERROR 1054 (42S22) at line 1: Unknown column 'code' in 'field list'"
+  ]
+}

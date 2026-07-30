@@ -1,0 +1,80 @@
+{
+  "query": "SELECT id, code, title, durationMinutes, isActive FROM training_modules LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, code, title, durationMinutes, isActive FROM training_modules LIMIT 10;",
+  "rows": [
+    {
+      "id": "1",
+      "code": "module_1",
+      "title": "Introduction to AI Safety",
+      "durationMinutes": "30",
+      "isActive": "1"
+    },
+    {
+      "id": "2",
+      "code": "module_2",
+      "title": "Understanding the EU AI Act",
+      "durationMinutes": "45",
+      "isActive": "1"
+    },
+    {
+      "id": "3",
+      "code": "module_3",
+      "title": "NIST AI Risk Management Framework",
+      "durationMinutes": "40",
+      "isActive": "1"
+    },
+    {
+      "id": "4",
+      "code": "module_4",
+      "title": "Identifying AI Bias and Fairness Issues",
+      "durationMinutes": "50",
+      "isActive": "1"
+    },
+    {
+      "id": "5",
+      "code": "module_5",
+      "title": "Making Decisions as a Watchdog Analyst",
+      "durationMinutes": "45",
+      "isActive": "1"
+    },
+    {
+      "id": "30001",
+      "code": "UK_AI_BILL",
+      "title": "UK AI Bill & AI Safety Institute",
+      "durationMinutes": "240",
+      "isActive": "1"
+    },
+    {
+      "id": "30002",
+      "code": "CANADA_AIDA",
+      "title": "Canada AIDA (AI and Data Act)",
+      "durationMinutes": "240",
+      "isActive": "1"
+    },
+    {
+      "id": "30003",
+      "code": "AUSTRALIA_AI",
+      "title": "Australia AI Ethics Framework",
+      "durationMinutes": "240",
+      "isActive": "1"
+    },
+    {
+      "id": "30004",
+      "code": "ETHICS",
+      "title": "AI Ethics & Incident Analysis",
+      "durationMinutes": "240",
+      "isActive": "1"
+    },
+    {
+      "id": "30005",
+      "code": "EU_AI_ACT",
+      "title": "EU AI Act (Regulation 2024/1689)",
+      "durationMinutes": "240",
+      "isActive": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tcode\ttitle\tdurationMinutes\tisActive\n1\tmodule_1\tIntroduction to AI Safety\t30\t1\n2\tmodule_2\tUnderstanding the EU AI Act\t45\t1\n3\tmodule_3\tNIST AI Risk Management Framework\t40\t1\n4\tmodule_4\tIdentifying AI Bias and Fairness Issues\t50\t1\n5\tmodule_5\tMaking Decisions as a Watchdog Analyst\t45\t1\n30001\tUK_AI_BILL\tUK AI Bill & AI Safety Institute\t240\t1\n30002\tCANADA_AIDA\tCanada AIDA (AI and Data Act)\t240\t1\n30003\tAUSTRALIA_AI\tAustralia AI Ethics Framework\t240\t1\n30004\tETHICS\tAI Ethics & Incident Analysis\t240\t1\n30005\tEU_AI_ACT\tEU AI Act (Regulation 2024/1689)\t240\t1\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

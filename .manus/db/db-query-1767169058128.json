@@ -1,0 +1,75 @@
+{
+  "query": "SELECT * FROM user_test_attempts ORDER BY id DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM user_test_attempts ORDER BY id DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "10",
+      "userId": "1",
+      "testId": "1",
+      "score": "0",
+      "totalPoints": "0",
+      "percentScore": "NULL",
+      "passed": "0",
+      "answers": "NULL",
+      "startedAt": "2025-12-31 08:15:51",
+      "completedAt": "NULL",
+      "createdAt": "2025-12-31 08:15:51"
+    },
+    {
+      "id": "9",
+      "userId": "1",
+      "testId": "1",
+      "score": "0",
+      "totalPoints": "0",
+      "percentScore": "NULL",
+      "passed": "0",
+      "answers": "NULL",
+      "startedAt": "2025-12-31 08:12:18",
+      "completedAt": "NULL",
+      "createdAt": "2025-12-31 08:12:18"
+    },
+    {
+      "id": "8",
+      "userId": "1",
+      "testId": "1",
+      "score": "0",
+      "totalPoints": "0",
+      "percentScore": "NULL",
+      "passed": "0",
+      "answers": "NULL",
+      "startedAt": "2025-12-31 08:11:45",
+      "completedAt": "NULL",
+      "createdAt": "2025-12-31 08:11:45"
+    },
+    {
+      "id": "7",
+      "userId": "1",
+      "testId": "1",
+      "score": "0",
+      "totalPoints": "0",
+      "percentScore": "NULL",
+      "passed": "0",
+      "answers": "NULL",
+      "startedAt": "2025-12-31 08:06:18",
+      "completedAt": "NULL",
+      "createdAt": "2025-12-31 08:06:18"
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "testId": "1",
+      "score": "0",
+      "totalPoints": "0",
+      "percentScore": "NULL",
+      "passed": "0",
+      "answers": "NULL",
+      "startedAt": "2025-12-31 08:03:15",
+      "completedAt": "NULL",
+      "createdAt": "2025-12-31 08:03:14"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\ttestId\tscore\ttotalPoints\tpercentScore\tpassed\tanswers\tstartedAt\tcompletedAt\tcreatedAt\n10\t1\t1\t0\t0\tNULL\t0\tNULL\t2025-12-31 08:15:51\tNULL\t2025-12-31 08:15:51\n9\t1\t1\t0\t0\tNULL\t0\tNULL\t2025-12-31 08:12:18\tNULL\t2025-12-31 08:12:18\n8\t1\t1\t0\t0\tNULL\t0\tNULL\t2025-12-31 08:11:45\tNULL\t2025-12-31 08:11:45\n7\t1\t1\t0\t0\tNULL\t0\tNULL\t2025-12-31 08:06:18\tNULL\t2025-12-31 08:06:18\n6\t1\t1\t0\t0\tNULL\t0\tNULL\t2025-12-31 08:03:15\tNULL\t2025-12-31 08:03:14\n",
+  "stderr": "",
+  "execution_time_ms": 146
+}

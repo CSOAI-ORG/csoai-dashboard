@@ -1,0 +1,290 @@
+{
+  "query": "SELECT id, frameworkId, title FROM requirements;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, frameworkId, title FROM requirements;",
+  "rows": [
+    {
+      "id": "1",
+      "frameworkId": "3",
+      "title": "Corpus Source Safety Assessment"
+    },
+    {
+      "id": "2",
+      "frameworkId": "3",
+      "title": "Corpus Source Diversity"
+    },
+    {
+      "id": "3",
+      "frameworkId": "3",
+      "title": "Corpus Traceability"
+    },
+    {
+      "id": "4",
+      "frameworkId": "3",
+      "title": "Content Filtering"
+    },
+    {
+      "id": "5",
+      "frameworkId": "3",
+      "title": "IPR Management"
+    },
+    {
+      "id": "6",
+      "frameworkId": "3",
+      "title": "Personal Information Consent"
+    },
+    {
+      "id": "7",
+      "frameworkId": "3",
+      "title": "Annotator Training"
+    },
+    {
+      "id": "8",
+      "frameworkId": "3",
+      "title": "Annotation Role Separation"
+    },
+    {
+      "id": "9",
+      "frameworkId": "3",
+      "title": "Third-Party Model Filing"
+    },
+    {
+      "id": "10",
+      "frameworkId": "3",
+      "title": "Generated Content Safety"
+    },
+    {
+      "id": "11",
+      "frameworkId": "3",
+      "title": "Content Accuracy"
+    },
+    {
+      "id": "12",
+      "frameworkId": "3",
+      "title": "Content Reliability"
+    },
+    {
+      "id": "13",
+      "frameworkId": "3",
+      "title": "Service Suitability"
+    },
+    {
+      "id": "14",
+      "frameworkId": "3",
+      "title": "Service Transparency"
+    },
+    {
+      "id": "15",
+      "frameworkId": "3",
+      "title": "User Opt-Out"
+    },
+    {
+      "id": "16",
+      "frameworkId": "3",
+      "title": "Content Annotation"
+    },
+    {
+      "id": "17",
+      "frameworkId": "3",
+      "title": "Computing Security"
+    },
+    {
+      "id": "18",
+      "frameworkId": "3",
+      "title": "Complaint Mechanisms"
+    },
+    {
+      "id": "19",
+      "frameworkId": "3",
+      "title": "Account Suspension"
+    },
+    {
+      "id": "20",
+      "frameworkId": "3",
+      "title": "Model Update Management"
+    },
+    {
+      "id": "21",
+      "frameworkId": "3",
+      "title": "Keyword Library"
+    },
+    {
+      "id": "22",
+      "frameworkId": "3",
+      "title": "Test Question Bank"
+    },
+    {
+      "id": "23",
+      "frameworkId": "3",
+      "title": "Refusal Question Bank"
+    },
+    {
+      "id": "24",
+      "frameworkId": "3",
+      "title": "Classification Models"
+    },
+    {
+      "id": "25",
+      "frameworkId": "3",
+      "title": "Corpus Safety Assessment"
+    },
+    {
+      "id": "26",
+      "frameworkId": "3",
+      "title": "Generated Content Assessment"
+    },
+    {
+      "id": "27",
+      "frameworkId": "3",
+      "title": "Refusal Assessment"
+    },
+    {
+      "id": "28",
+      "frameworkId": "3",
+      "title": "Assessment Report"
+    },
+    {
+      "id": "29",
+      "frameworkId": "3",
+      "title": "Report Signatures"
+    },
+    {
+      "id": "30",
+      "frameworkId": "1",
+      "title": "Risk Management System"
+    },
+    {
+      "id": "31",
+      "frameworkId": "1",
+      "title": "Risk Identification"
+    },
+    {
+      "id": "32",
+      "frameworkId": "1",
+      "title": "Risk Mitigation"
+    },
+    {
+      "id": "33",
+      "frameworkId": "1",
+      "title": "Data Governance"
+    },
+    {
+      "id": "34",
+      "frameworkId": "1",
+      "title": "Data Quality"
+    },
+    {
+      "id": "35",
+      "frameworkId": "1",
+      "title": "Bias Examination"
+    },
+    {
+      "id": "36",
+      "frameworkId": "1",
+      "title": "Technical Documentation"
+    },
+    {
+      "id": "37",
+      "frameworkId": "1",
+      "title": "Documentation Content"
+    },
+    {
+      "id": "38",
+      "frameworkId": "1",
+      "title": "Transparency Requirements"
+    },
+    {
+      "id": "39",
+      "frameworkId": "1",
+      "title": "Instructions for Use"
+    },
+    {
+      "id": "40",
+      "frameworkId": "1",
+      "title": "Human Oversight"
+    },
+    {
+      "id": "41",
+      "frameworkId": "1",
+      "title": "Override Capability"
+    },
+    {
+      "id": "42",
+      "frameworkId": "2",
+      "title": "AI Governance Policies"
+    },
+    {
+      "id": "43",
+      "frameworkId": "2",
+      "title": "Accountability Structures"
+    },
+    {
+      "id": "44",
+      "frameworkId": "2",
+      "title": "Workforce Diversity"
+    },
+    {
+      "id": "45",
+      "frameworkId": "2",
+      "title": "Organizational Context"
+    },
+    {
+      "id": "46",
+      "frameworkId": "2",
+      "title": "Context Establishment"
+    },
+    {
+      "id": "47",
+      "frameworkId": "2",
+      "title": "Risk Categorization"
+    },
+    {
+      "id": "48",
+      "frameworkId": "2",
+      "title": "AI Benefits and Risks"
+    },
+    {
+      "id": "49",
+      "frameworkId": "2",
+      "title": "Risk Prioritization"
+    },
+    {
+      "id": "50",
+      "frameworkId": "2",
+      "title": "Risk Metrics"
+    },
+    {
+      "id": "51",
+      "frameworkId": "2",
+      "title": "Testing and Evaluation"
+    },
+    {
+      "id": "52",
+      "frameworkId": "2",
+      "title": "Continuous Monitoring"
+    },
+    {
+      "id": "53",
+      "frameworkId": "2",
+      "title": "Risk Response"
+    },
+    {
+      "id": "54",
+      "frameworkId": "2",
+      "title": "Risk Treatment"
+    },
+    {
+      "id": "55",
+      "frameworkId": "2",
+      "title": "Incident Response"
+    },
+    {
+      "id": "56",
+      "frameworkId": "2",
+      "title": "Documentation"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tframeworkId\ttitle\n1\t3\tCorpus Source Safety Assessment\n2\t3\tCorpus Source Diversity\n3\t3\tCorpus Traceability\n4\t3\tContent Filtering\n5\t3\tIPR Management\n6\t3\tPersonal Information Consent\n7\t3\tAnnotator Training\n8\t3\tAnnotation Role Separation\n9\t3\tThird-Party Model Filing\n10\t3\tGenerated Content Safety\n11\t3\tContent Accuracy\n12\t3\tContent Reliability\n13\t3\tService Suitability\n14\t3\tService Transparency\n15\t3\tUser Opt-Out\n16\t3\tContent Annotation\n17\t3\tComputing Security\n18\t3\tComplaint Mechanisms\n19\t3\tAccount Suspension\n20\t3\tModel Update Management\n21\t3\tKeyword Library\n22\t3\tTest Question Bank\n23\t3\tRefusal Question Bank\n24\t3\tClassification Models\n25\t3\tCorpus Safety Assessment\n26\t3\tGenerated Content Assessment\n27\t3\tRefusal Assessment\n28\t3\tAssessment Report\n29\t3\tReport Signatures\n30\t1\tRisk Management System\n31\t1\tRisk Identification\n32\t1\tRisk Mitigation\n33\t1\tData Governance\n34\t1\tData Quality\n35\t1\tBias Examination\n36\t1\tTechnical Documentation\n37\t1\tDocumentation Content\n38\t1\tTransparency Requirements\n39\t1\tInstructions for Use\n40\t1\tHuman Oversight\n41\t1\tOverride Capability\n42\t2\tAI Governance Policies\n43\t2\tAccountability Structures\n44\t2\tWorkforce Diversity\n45\t2\tOrganizational Context\n46\t2\tContext Establishment\n47\t2\tRisk Categorization\n48\t2\tAI Benefits and Risks\n49\t2\tRisk Prioritization\n50\t2\tRisk Metrics\n51\t2\tTesting and Evaluation\n52\t2\tContinuous Monitoring\n53\t2\tRisk Response\n54\t2\tRisk Treatment\n55\t2\tIncident Response\n56\t2\tDocumentation\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

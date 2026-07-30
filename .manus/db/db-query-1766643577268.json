@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `course_enrollments` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `courseId` int NOT NULL,\n  `status` enum('enrolled','in_progress','completed','failed') NOT NULL DEFAULT 'enrolled',\n  `progress` int NOT NULL DEFAULT 0,\n  `enrolledAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `completedAt` timestamp,\n  `score` int,\n  `certificateIssued` boolean NOT NULL DEFAULT false,\n  `paidAmount` int NOT NULL DEFAULT 0,\n  `stripePaymentIntentId` varchar(255),\n  `referredBySpecialistId` int,\n  `commissionPaid` boolean NOT NULL DEFAULT false,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `course_enrollments_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `course_enrollments` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `courseId` int NOT NULL,\n  `status` enum('enrolled','in_progress','completed','failed') NOT NULL DEFAULT 'enrolled',\n  `progress` int NOT NULL DEFAULT 0,\n  `enrolledAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `completedAt` timestamp,\n  `score` int,\n  `certificateIssued` boolean NOT NULL DEFAULT false,\n  `paidAmount` int NOT NULL DEFAULT 0,\n  `stripePaymentIntentId` varchar(255),\n  `referredBySpecialistId` int,\n  `commissionPaid` boolean NOT NULL DEFAULT false,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `course_enrollments_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 187
+}

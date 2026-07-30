@@ -1,0 +1,186 @@
+{
+  "query": "SELECT id, title, framework, level, price, price3Month, price6Month, price12Month, active FROM courses WHERE framework IN ('EU AI Act', 'NIST AI RMF') ORDER BY framework, level;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, level, price, price3Month, price6Month, price12Month, active FROM courses WHERE framework IN ('EU AI Act', 'NIST AI RMF') ORDER BY framework, level;",
+  "rows": [
+    {
+      "id": "30005",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "10890",
+      "price6Month": "11385",
+      "price12Month": "11880",
+      "active": "1"
+    },
+    {
+      "id": "30003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "10890",
+      "price6Month": "11385",
+      "price12Month": "11880",
+      "active": "1"
+    },
+    {
+      "id": "60002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "10890",
+      "price6Month": "11385",
+      "price12Month": "11880",
+      "active": "1"
+    },
+    {
+      "id": "60001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "49900",
+      "price3Month": "19900",
+      "price6Month": "9900",
+      "price12Month": "5900",
+      "active": "1"
+    },
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "30004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "10890",
+      "price6Month": "11385",
+      "price12Month": "11880",
+      "active": "1"
+    },
+    {
+      "id": "30001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "10890",
+      "price6Month": "11385",
+      "price12Month": "11880",
+      "active": "1"
+    },
+    {
+      "id": "30002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "10890",
+      "price6Month": "11385",
+      "price12Month": "11880",
+      "active": "1"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "14900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "14900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "19900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "price": "9900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "price": "49900",
+      "price3Month": "19900",
+      "price6Month": "9900",
+      "price12Month": "5900",
+      "active": "1"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "price": "14900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "price": "19900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "price": "14900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tlevel\tprice\tprice3Month\tprice6Month\tprice12Month\tactive\n30005\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\t10890\t11385\t11880\t1\n30003\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\t10890\t11385\t11880\t1\n60002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\t10890\t11385\t11880\t1\n60001\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\t49900\t19900\t9900\t5900\t1\n1\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\t9900\tNULL\tNULL\tNULL\t1\n30004\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\t10890\t11385\t11880\t1\n30001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\t10890\t11385\t11880\t1\n30002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\t10890\t11385\t11880\t1\n2\tHigh-Risk AI Systems\tEU AI Act\tadvanced\t14900\tNULL\tNULL\tNULL\t1\n4\tEU AI Act for Deployers\tEU AI Act\tadvanced\t14900\tNULL\tNULL\tNULL\t1\n3\tEU AI Act Conformity Assessment\tEU AI Act\tadvanced\t19900\tNULL\tNULL\tNULL\t1\n5\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\t9900\tNULL\tNULL\tNULL\t1\n90001\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\t49900\t19900\t9900\t5900\t1\n8\tFederal AI Regulations\tNIST AI RMF\tadvanced\t14900\tNULL\tNULL\tNULL\t1\n7\tAI Risk Assessment & Measurement\tNIST AI RMF\tadvanced\t19900\tNULL\tNULL\tNULL\t1\n6\tAI Risk Governance\tNIST AI RMF\tadvanced\t14900\tNULL\tNULL\tNULL\t1\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

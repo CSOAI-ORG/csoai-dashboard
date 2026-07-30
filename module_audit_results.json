@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "code": "module_1",
+    "title": "Introduction to AI Safety",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 2,
+    "code": "module_2",
+    "title": "Understanding the EU AI Act",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 3,
+    "code": "module_3",
+    "title": "NIST AI Risk Management Framework",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 4,
+    "code": "module_4",
+    "title": "Identifying AI Bias and Fairness Issues",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 5,
+    "code": "module_5",
+    "title": "Making Decisions as a Watchdog Analyst",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 30001,
+    "code": "UK_AI_BILL",
+    "title": "UK AI Bill & AI Safety Institute",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 30002,
+    "code": "CANADA_AIDA",
+    "title": "Canada AIDA (AI and Data Act)",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 30003,
+    "code": "AUSTRALIA_AI",
+    "title": "Australia AI Ethics Framework",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 30004,
+    "code": "ETHICS",
+    "title": "AI Ethics & Incident Analysis",
+    "questions": 58,
+    "status": "✅"
+  },
+  {
+    "id": 30005,
+    "code": "EU_AI_ACT",
+    "title": "EU AI Act (Regulation 2024/1689)",
+    "questions": 57,
+    "status": "✅"
+  },
+  {
+    "id": 30006,
+    "code": "NIST_RMF",
+    "title": "NIST AI Risk Management Framework",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 30007,
+    "code": "ISO_42001",
+    "title": "ISO/IEC 42001:2023 AI Management Systems",
+    "questions": 50,
+    "status": "✅"
+  },
+  {
+    "id": 30008,
+    "code": "TC260",
+    "title": "TC260 China AI Standards",
+    "questions": 55,
+    "status": "✅"
+  }
+]

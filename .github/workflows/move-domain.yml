@@ -1,0 +1,22 @@
+name: Ops Utility
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: deploy
+      - name: Submit URLs to IndexNow
+        run: python3 scripts/indexnow.py
+      - name: Commit status
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add INDEXNOW_STATUS.md
+          git commit -m "chore: indexnow submission [skip ci]" || echo "no changes"
+          git push origin deploy || echo "push failed"

@@ -1,0 +1,31 @@
+{
+  "query": "SELECT * FROM password_reset_tokens ORDER BY id DESC LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM password_reset_tokens ORDER BY id DESC LIMIT 10;",
+  "rows": [
+    {
+      "id": "30002",
+      "userId": "2310158",
+      "token": "5db87b558fb324de68a15b0cc558558bc8adb62370603688ff3aea982b7fc41c",
+      "expiresAt": "2026-01-04 06:44:44",
+      "createdAt": "2026-01-04 05:44:43"
+    },
+    {
+      "id": "30001",
+      "userId": "1",
+      "token": "7a54cabcd222b39de01078d5306b893610fe25325ace301f66a6c16fcd76c6d5",
+      "expiresAt": "2026-01-04 06:14:20",
+      "createdAt": "2026-01-04 05:14:19"
+    },
+    {
+      "id": "1",
+      "userId": "1",
+      "token": "0ea1e62bd081c46d15bfd82918c1508d96be87ade8b8dce0e71fad34bf61202d",
+      "expiresAt": "2026-01-01 14:41:21",
+      "createdAt": "2026-01-01 13:41:21"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\ttoken\texpiresAt\tcreatedAt\n30002\t2310158\t5db87b558fb324de68a15b0cc558558bc8adb62370603688ff3aea982b7fc41c\t2026-01-04 06:44:44\t2026-01-04 05:44:43\n30001\t1\t7a54cabcd222b39de01078d5306b893610fe25325ace301f66a6c16fcd76c6d5\t2026-01-04 06:14:20\t2026-01-04 05:14:19\n1\t1\t0ea1e62bd081c46d15bfd82918c1508d96be87ade8b8dce0e71fad34bf61202d\t2026-01-01 14:41:21\t2026-01-01 13:41:21\n",
+  "stderr": "",
+  "execution_time_ms": 421
+}

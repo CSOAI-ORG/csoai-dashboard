@@ -1,0 +1,28 @@
+{
+  "query": "SELECT DISTINCT framework FROM courses ORDER BY framework;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT DISTINCT framework FROM courses ORDER BY framework;",
+  "rows": [
+    {
+      "framework": "AI Ethics Framework"
+    },
+    {
+      "framework": "AIDA"
+    },
+    {
+      "framework": "EU AI Act"
+    },
+    {
+      "framework": "iso_42001"
+    },
+    {
+      "framework": "NIST AI RMF"
+    },
+    {
+      "framework": "UK AI Safety Institute"
+    }
+  ],
+  "messages": [],
+  "stdout": "framework\nAI Ethics Framework\nAIDA\nEU AI Act\niso_42001\nNIST AI RMF\nUK AI Safety Institute\n",
+  "stderr": "",
+  "execution_time_ms": 70
+}

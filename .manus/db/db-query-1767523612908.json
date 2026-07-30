@@ -1,0 +1,43 @@
+{
+  "query": "SHOW TABLES LIKE '%email%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SHOW TABLES LIKE '%email%';",
+  "rows": [
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_engagement"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_events"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_execution_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_queue"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_schedule_runs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_schedules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_templates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "email_workflows"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)": "user_email_preferences"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_K34VNBtbDJyjtW8qhrCBdB (%email%)\nemail_engagement\nemail_events\nemail_execution_logs\nemail_logs\nemail_preferences\nemail_queue\nemail_schedule_runs\nemail_schedules\nemail_templates\nemail_workflows\nuser_email_preferences\n",
+  "stderr": "",
+  "execution_time_ms": 107
+}

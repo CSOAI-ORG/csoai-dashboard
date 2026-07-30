@@ -1,0 +1,34 @@
+{
+  "query": "SELECT u.id, u.name, u.email, COUNT(e.id) as enrollment_count FROM users u JOIN course_enrollments e ON u.id = e.userId GROUP BY u.id, u.name, u.email;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT u.id, u.name, u.email, COUNT(e.id) as enrollment_count FROM users u JOIN course_enrollments e ON u.id = e.userId GROUP BY u.id, u.name, u.email;",
+  "rows": [
+    {
+      "id": "900022",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336485@test.com",
+      "enrollment_count": "1"
+    },
+    {
+      "id": "900016",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336285@test.com",
+      "enrollment_count": "1"
+    },
+    {
+      "id": "1",
+      "name": "Nick Templeman",
+      "email": "nicholastempleman@gmail.com",
+      "enrollment_count": "8"
+    },
+    {
+      "id": "900014",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336209@test.com",
+      "enrollment_count": "2"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\temail\tenrollment_count\n900022\tProgress Test User\tprogress-test-1766678336485@test.com\t1\n900016\tProgress Test User\tprogress-test-1766678336285@test.com\t1\n1\tNick Templeman\tnicholastempleman@gmail.com\t8\n900014\tProgress Test User\tprogress-test-1766678336209@test.com\t2\n",
+  "stderr": "",
+  "execution_time_ms": 407
+}

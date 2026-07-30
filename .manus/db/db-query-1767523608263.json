@@ -1,0 +1,382 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ab_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ab_experiments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ab_test_results"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ab_variants"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "admin_metrics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "agent_votes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ai_systems"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_decisions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_performance"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analytics_events"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "api_keys"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "api_metrics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessment_items"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessment_questions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "audit_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "badges"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "case_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certificate_issuances"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certificate_templates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certification_tests"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "cohort_students"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "compliance_reports"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "compliance_rules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "council_sessions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "coupon_usage"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "coupons"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_bundles"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_enrollments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_lessons"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_regions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "course_translations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "courses"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "daily_activity_log"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_engagement"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_events"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_execution_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_queue"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_schedule_runs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_schedules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_templates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "email_workflows"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "exam_questions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "forum_notifications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "forum_post_likes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "forum_posts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "forum_threads"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "founding_members"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "frameworks"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "incident_updates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "instructor_cohorts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "job_applications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "job_postings"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "leaderboard_snapshots"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "lesson_quizzes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "lesson_translations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "loi_signups"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "module_assessments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "module_completion_metrics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "module_translations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "newsletter_subscribers"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "notification_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "notifications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "organizations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "password_reset_tokens"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "pdca_cycles"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "realtime_events"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "recommendation_analytics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "recommendation_interactions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "recommendation_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_clicks"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_codes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_conversions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_payouts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "referral_program"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "regional_analytics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "regional_course_enrollments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "regions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "report_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "requirements"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "rule_updates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "schedule_execution_history"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "schedule_status_log"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "service_status"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "specialist_earnings"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "specialists"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "status_subscriptions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "system_incidents"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "team_invitations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "team_leaderboard_snapshots"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "team_memberships"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "teams"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "template_usage"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "test_questions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "training_modules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "uptime_metrics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_activity_triggers"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_assessment_attempts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_badges"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_email_preferences"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_lesson_progress"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_quiz_attempts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_quiz_scores"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_streaks"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_test_attempts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_training_progress"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "users"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_applications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_comments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_reports"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "websocket_connections"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "workflow_conversions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "workflow_executions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "workflow_metrics"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "workflow_schedules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "workflow_step_executions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "workflow_templates"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_K34VNBtbDJyjtW8qhrCBdB\n__drizzle_migrations\nab_assignments\nab_experiments\nab_test_results\nab_variants\nadmin_metrics\nagent_votes\nai_systems\nanalyst_assignments\nanalyst_decisions\nanalyst_performance\nanalytics_events\napi_keys\napi_metrics\nassessment_items\nassessment_questions\nassessments\naudit_logs\nbadges\ncase_assignments\ncertificate_issuances\ncertificate_templates\ncertificates\ncertification_tests\ncohort_students\ncompliance_reports\ncompliance_rules\ncouncil_sessions\ncoupon_usage\ncoupons\ncourse_bundles\ncourse_certificates\ncourse_enrollments\ncourse_lessons\ncourse_regions\ncourse_translations\ncourses\ndaily_activity_log\nemail_engagement\nemail_events\nemail_execution_logs\nemail_logs\nemail_preferences\nemail_queue\nemail_schedule_runs\nemail_schedules\nemail_templates\nemail_workflows\nexam_questions\nforum_notifications\nforum_post_likes\nforum_posts\nforum_threads\nfounding_members\nframeworks\nincident_updates\ninstructor_cohorts\njob_applications\njob_postings\nleaderboard_snapshots\nlesson_quizzes\nlesson_translations\nloi_signups\nmodule_assessments\nmodule_completion_metrics\nmodule_translations\nnewsletter_subscribers\nnotification_preferences\nnotifications\norganizations\npassword_reset_tokens\npdca_cycles\nrealtime_events\nrecommendation_analytics\nrecommendation_interactions\nrecommendation_preferences\nreferral_clicks\nreferral_codes\nreferral_conversions\nreferral_payouts\nreferral_program\nregional_analytics\nregional_course_enrollments\nregions\nreport_assignments\nrequirements\nrule_updates\nschedule_execution_history\nschedule_status_log\nservice_status\nspecialist_earnings\nspecialists\nstatus_subscriptions\nsystem_incidents\nteam_invitations\nteam_leaderboard_snapshots\nteam_memberships\nteams\ntemplate_usage\ntest_questions\ntraining_modules\nuptime_metrics\nuser_activity_triggers\nuser_assessment_attempts\nuser_badges\nuser_certificates\nuser_email_preferences\nuser_lesson_progress\nuser_quiz_attempts\nuser_quiz_scores\nuser_streaks\nuser_test_attempts\nuser_training_progress\nusers\nwatchdog_applications\nwatchdog_comments\nwatchdog_reports\nwebsocket_connections\nworkflow_conversions\nworkflow_executions\nworkflow_metrics\nworkflow_schedules\nworkflow_step_executions\nworkflow_templates\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

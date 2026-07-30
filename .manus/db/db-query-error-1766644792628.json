@@ -1,0 +1,8 @@
+{
+  "query": "ALTER TABLE users \nADD COLUMN IF NOT EXISTS brand VARCHAR(50) DEFAULT 'councilof.ai' CHECK (brand IN ('councilof.ai', 'safetyof.ai', 'both')),\nADD COLUMN IF NOT EXISTS founding_member BOOLEAN DEFAULT FALSE,\nADD COLUMN IF NOT EXISTS referral_code VARCHAR(50) UNIQUE;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute ALTER TABLE users \nADD COLUMN IF NOT EXISTS brand VARCHAR(50) DEFAULT 'councilof.ai' CHECK (brand IN ('councilof.ai', 'safetyof.ai', 'both')),\nADD COLUMN IF NOT EXISTS founding_member BOOLEAN DEFAULT FALSE,\nADD COLUMN IF NOT EXISTS referral_code VARCHAR(50) UNIQUE;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 8200 (HY000) at line 1: unsupported add column 'referral_code' constraint UNIQUE KEY when altering 'K34VNBtbDJyjtW8qhrCBdB.users'"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "query": "SELECT id, title, framework, level, active, price FROM courses LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, level, active, price FROM courses LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "active": "1",
+      "price": "49900"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "active": "1",
+      "price": "99900"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "active": "1",
+      "price": "99900"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "active": "1",
+      "price": "99900"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "active": "1",
+      "price": "49900"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tlevel\tactive\tprice\n1\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\t1\t49900\n2\tHigh-Risk AI Systems\tEU AI Act\tadvanced\t1\t99900\n3\tEU AI Act Conformity Assessment\tEU AI Act\tadvanced\t1\t99900\n4\tEU AI Act for Deployers\tEU AI Act\tadvanced\t1\t99900\n5\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\t1\t49900\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

@@ -1,0 +1,30 @@
+{
+  "query": "SELECT \n  CASE \n    WHEN questionText LIKE '%EU AI Act%' OR questionText LIKE '%high-risk%' OR questionText LIKE '%Article%' THEN 'EU AI Act'\n    WHEN questionText LIKE '%NIST%' OR questionText LIKE '%risk management framework%' THEN 'NIST RMF'\n    WHEN questionText LIKE '%TC260%' OR questionText LIKE '%China%' OR questionText LIKE '%Chinese%' THEN 'TC260'\n    WHEN questionText LIKE '%ethics%' OR questionText LIKE '%Ethics%' OR questionText LIKE '%bias%' OR questionText LIKE '%fairness%' THEN 'Ethics'\n    ELSE 'Incident Analysis'\n  END as category,\n  COUNT(*) as count\nFROM test_questions\nGROUP BY category;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT \n  CASE \n    WHEN questionText LIKE '%EU AI Act%' OR questionText LIKE '%high-risk%' OR questionText LIKE '%Article%' THEN 'EU AI Act'\n    WHEN questionText LIKE '%NIST%' OR questionText LIKE '%risk management framework%' THEN 'NIST RMF'\n    WHEN questionText LIKE '%TC260%' OR questionText LIKE '%China%' OR questionText LIKE '%Chinese%' THEN 'TC260'\n    WHEN questionText LIKE '%ethics%' OR questionText LIKE '%Ethics%' OR questionText LIKE '%bias%' OR questionText LIKE '%fairness%' THEN 'Ethics'\n    ELSE 'Incident Analysis'\n  END as category,\n  COUNT(*) as count\nFROM test_questions\nGROUP BY category;",
+  "rows": [
+    {
+      "category": "TC260",
+      "count": "3"
+    },
+    {
+      "category": "NIST RMF",
+      "count": "15"
+    },
+    {
+      "category": "Incident Analysis",
+      "count": "36"
+    },
+    {
+      "category": "Ethics",
+      "count": "12"
+    },
+    {
+      "category": "EU AI Act",
+      "count": "20"
+    }
+  ],
+  "messages": [],
+  "stdout": "category\tcount\nTC260\t3\nNIST RMF\t15\nIncident Analysis\t36\nEthics\t12\nEU AI Act\t20\n",
+  "stderr": "",
+  "execution_time_ms": 164
+}

@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "According to Australia's AI Ethics Principles, which principle emphasizes that AI systems should benefit individuals, society, and the environment throughout their lifecycle?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fairness"
+      },
+      {
+        "id": "B",
+        "text": "Human, social and environmental wellbeing"
+      },
+      {
+        "id": "C",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "D",
+        "text": "Accountability"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Australia's AI Ethics Principles state that the 'Human, social and environmental wellbeing' principle aims to ensure AI systems are used for beneficial outcomes for individuals, society and the environment.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "Which of Australia's AI Ethics Principles requires that AI systems be designed to be inclusive, accessible, and not result in unfair discrimination?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Human-centred values"
+      },
+      {
+        "id": "B",
+        "text": "Privacy protection and security"
+      },
+      {
+        "id": "C",
+        "text": "Fairness"
+      },
+      {
+        "id": "D",
+        "text": "Transparency and explainability"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The 'Fairness' principle in Australia's AI Ethics framework mandates that AI systems should be inclusive and accessible, and should not involve or result in unfair discrimination against individuals, communities or groups.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary purpose of the Voluntary AI Safety Standard (VAISS) in Australia?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To mandate specific penalties for non-compliant AI systems"
+      },
+      {
+        "id": "B",
+        "text": "To provide a legally binding framework for all AI development"
+      },
+      {
+        "id": "C",
+        "text": "To offer guidance to organizations on the safe and responsible use of AI"
+      },
+      {
+        "id": "D",
+        "text": "To replace the existing AI Ethics Principles"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The Voluntary AI Safety Standard (VAISS) is designed to help organisations develop and deploy AI systems in Australia safely and reliably by providing guidance.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "The principle of 'Contestability' in the Australian AI Ethics framework ensures that individuals have a right to:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Access the source code of the AI system"
+      },
+      {
+        "id": "B",
+        "text": "Challenge the use or outcomes of an AI system that significantly impacts them"
+      },
+      {
+        "id": "C",
+        "text": "Be informed every time they interact with an AI system"
+      },
+      {
+        "id": "D",
+        "text": "Opt-out of any AI-driven decision-making process"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'Contestability' principle provides a mechanism for individuals to challenge the use or outcomes of an AI system when it has a significant impact on them.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a key aspect of the 'Transparency and Explainability' principle in Australia's AI Ethics Framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensuring AI systems are 100% accurate at all times"
+      },
+      {
+        "id": "B",
+        "text": "Making the full training data available to the public"
+      },
+      {
+        "id": "C",
+        "text": "Disclosing when an individual is interacting with an AI system"
+      },
+      {
+        "id": "D",
+        "text": "Requiring human approval for every AI-generated outcome"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The 'Transparency and Explainability' principle emphasizes that people should be able to find out when an AI system is engaging with them.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "The Australian Government's proposed mandatory guardrails for AI are intended to apply to:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "All AI systems developed in Australia"
+      },
+      {
+        "id": "B",
+        "text": "Only AI systems used by government agencies"
+      },
+      {
+        "id": "C",
+        "text": "AI systems used in 'high-risk' settings"
+      },
+      {
+        "id": "D",
+        "text": "AI systems that process personal data"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The proposals paper for introducing mandatory guardrails for AI specifies that they will apply in 'high-risk' settings.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "Under Australia's AI Ethics Principles, the 'Accountability' principle requires that:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI system itself is legally liable for its outcomes"
+      },
+      {
+        "id": "B",
+        "text": "Those responsible for the AI system's lifecycle are identifiable and accountable for its outcomes"
+      },
+      {
+        "id": "C",
+        "text": "All AI systems must undergo a government audit before deployment"
+      },
+      {
+        "id": "D",
+        "text": "Users of AI systems are solely responsible for any negative consequences"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'Accountability' principle states that those responsible for the different phases of the AI system lifecycle should be identifiable and accountable for the outcomes of the AI systems.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "Which principle from Australia's AI Ethics Framework is most concerned with protecting against data breaches and unauthorized access to information?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Fairness"
+      },
+      {
+        "id": "C",
+        "text": "Privacy protection and security"
+      },
+      {
+        "id": "D",
+        "text": "Human-centred values"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The 'Privacy protection and security' principle explicitly addresses the need to respect and uphold privacy rights and data protection, and ensure the security of data.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "The concept of 'Human-centred values' in the Australian AI Ethics framework emphasizes that AI systems should:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Prioritize efficiency and cost-reduction above all else"
+      },
+      {
+        "id": "B",
+        "text": "Respect human rights, diversity, and individual autonomy"
+      },
+      {
+        "id": "C",
+        "text": "Be developed exclusively by human programmers, without the use of other AI tools"
+      },
+      {
+        "id": "D",
+        "text": "Operate independently of human intervention"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'Human-centred values' principle states that AI systems should respect human rights, diversity, and the autonomy of individuals.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "What does the 'Reliability and safety' principle in Australia's AI Ethics Framework require of AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To be completely free from errors and biases"
+      },
+      {
+        "id": "B",
+        "text": "To operate in accordance with their intended purpose throughout their lifecycle"
+      },
+      {
+        "id": "C",
+        "text": "To be easily understandable by a non-technical audience"
+      },
+      {
+        "id": "D",
+        "text": "To have their performance guaranteed by a third-party insurer"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'Reliability and safety' principle requires that AI systems should reliably operate in accordance with their intended purpose throughout their lifecycle.",
+    "difficulty": "easy",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A financial institution uses an AI system to assess loan applications. The system is found to be disproportionately rejecting applications from individuals in certain postcodes, even though they have good credit histories. Which of Australia's AI Ethics Principles is most clearly being violated?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Fairness"
+      },
+      {
+        "id": "C",
+        "text": "Transparency and explainability"
+      },
+      {
+        "id": "D",
+        "text": "Human, social and environmental wellbeing"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This scenario demonstrates a violation of the 'Fairness' principle, as the AI system is resulting in unfair discrimination against a specific group of individuals.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A social media platform deploys a new AI-powered content moderation system. The system is highly effective at removing harmful content, but it also frequently removes legitimate posts without providing a clear reason or a way for users to appeal the decision. This situation raises concerns primarily related to which two AI Ethics Principles?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fairness and Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Transparency and explainability, and Contestability"
+      },
+      {
+        "id": "C",
+        "text": "Human-centred values and Accountability"
+      },
+      {
+        "id": "D",
+        "text": "Privacy protection and security, and Human, social and environmental wellbeing"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The lack of clear reasons for content removal and the absence of an appeals process directly conflict with the principles of 'Transparency and explainability' and 'Contestability'.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "An Australian healthcare provider is considering using an AI diagnostic tool that has been trained primarily on data from a non-Australian population. Which of the following is the most significant risk that needs to be addressed in line with the 'Fairness' principle?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The cost of the AI tool may be prohibitive for some patients."
+      },
+      {
+        "id": "B",
+        "text": "The tool may not be as accurate for the Australian population, including Indigenous Australians, due to biases in the training data."
+      },
+      {
+        "id": "C",
+        "text": "The AI tool may not be compatible with the provider's existing IT infrastructure."
+      },
+      {
+        "id": "D",
+        "text": "The use of the AI tool may lead to job losses for medical staff."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The 'Fairness' principle requires consideration of how AI systems may impact different groups. A tool trained on a different population may not be equitable or performant for all Australians, particularly underrepresented groups.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company developing a high-risk AI system for use in Australia wants to ensure it is well-positioned for the introduction of mandatory guardrails. According to the proposals paper, which of the following would be a crucial step to take?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Lobbying the government to have their AI system exempt from the regulations."
+      },
+      {
+        "id": "B",
+        "text": "Implementing the Voluntary AI Safety Standard and documenting their compliance."
+      },
+      {
+        "id": "C",
+        "text": "Moving their development operations overseas to avoid the new regulations."
+      },
+      {
+        "id": "D",
+        "text": "Focusing solely on the technical performance of the AI system, without considering ethical implications."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The proposals paper suggests that organisations implementing the Voluntary AI Safety Standard will be well-positioned for compliance with the mandatory guardrails when they are introduced.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "In the context of Indigenous Data Sovereignty in Australia, which of the following is a key consideration when developing and deploying AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensuring that Indigenous data is used to maximize commercial profits."
+      },
+      {
+        "id": "B",
+        "text": "Recognizing the rights of Indigenous peoples to control and govern their own data."
+      },
+      {
+        "id": "C",
+        "text": "Making all Indigenous data freely available to AI developers to promote innovation."
+      },
+      {
+        "id": "D",
+        "text": "Anonymizing Indigenous data is sufficient to address all ethical concerns."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Indigenous Data Sovereignty is about recognizing the rights of Indigenous peoples to control their data. This includes having a say in how their data is collected, used, and shared.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A retail company uses an AI-powered surveillance system to monitor for shoplifting. The system is highly accurate but operates without any signage or notification to customers that they are being monitored by AI. This raises concerns under which Australian AI Ethics Principle?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Fairness"
+      },
+      {
+        "id": "C",
+        "text": "Transparency and explainability"
+      },
+      {
+        "id": "D",
+        "text": "Accountability"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The lack of notification to customers about the AI surveillance system is a direct violation of the 'Transparency and explainability' principle, which requires that people are aware when they are being significantly impacted by AI.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is NOT one of the eight Australian AI Ethics Principles?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Profit Maximization"
+      },
+      {
+        "id": "B",
+        "text": "Human-centred values"
+      },
+      {
+        "id": "C",
+        "text": "Fairness"
+      },
+      {
+        "id": "D",
+        "text": "Privacy protection and security"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Profit Maximization is not one of the eight Australian AI Ethics Principles. The principles are focused on ethical considerations such as fairness, accountability, and human wellbeing.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A local council in Australia implements an AI system to manage traffic flow. The system inadvertently causes significant traffic congestion in a low-income neighborhood while improving traffic in wealthier areas. This outcome primarily conflicts with which AI Ethics Principle?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Human, social and environmental wellbeing"
+      },
+      {
+        "id": "C",
+        "text": "Transparency and explainability"
+      },
+      {
+        "id": "D",
+        "text": "Accountability"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI system is not benefiting all of society and is having a negative social impact on a specific community, which goes against the principle of 'Human, social and environmental wellbeing'.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "The Australian Government's approach to AI regulation can be best described as:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A hands-off approach with no plans for regulation."
+      },
+      {
+        "id": "B",
+        "text": "A risk-based approach with voluntary standards and proposed mandatory guardrails for high-risk applications."
+      },
+      {
+        "id": "C",
+        "text": "A strict, precautionary approach that bans most uses of AI."
+      },
+      {
+        "id": "D",
+        "text": "A single, comprehensive law that covers all aspects of AI."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Australia is taking a risk-based approach to AI regulation, starting with voluntary standards and proposing mandatory guardrails for high-risk AI, rather than a complete ban or a single all-encompassing law.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "An Australian company is developing an AI-powered recruitment tool. To align with the 'Fairness' principle, what is a critical step they should take?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensure the tool only recommends candidates from top-tier universities."
+      },
+      {
+        "id": "B",
+        "text": "Regularly audit the tool for biases and ensure it is not discriminating against any particular group."
+      },
+      {
+        "id": "C",
+        "text": "Make the tool's source code publicly available."
+      },
+      {
+        "id": "D",
+        "text": "Train the tool exclusively on data from their most successful employees."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "To ensure fairness, it is crucial to regularly audit the AI recruitment tool for biases to prevent discrimination against any protected groups.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A user of an AI-driven service in Australia believes they have been unfairly treated by a decision made by the system. Under the principle of 'Contestability', what should they be able to do?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Demand financial compensation from the AI developer."
+      },
+      {
+        "id": "B",
+        "text": "Have access to a timely process to challenge the decision."
+      },
+      {
+        "id": "C",
+        "text": "Request that the AI system be immediately shut down."
+      },
+      {
+        "id": "D",
+        "text": "Sue the AI system itself in a court of law."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The principle of 'Contestability' ensures that individuals have access to a process to challenge the outcomes of AI systems that significantly affect them.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of human oversight in the Australian AI Ethics framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To manually approve every decision made by an AI system."
+      },
+      {
+        "id": "B",
+        "text": "To be able to intervene in the operation of an AI system, especially in high-risk situations."
+      },
+      {
+        "id": "C",
+        "text": "To be held solely responsible for any failures of the AI system."
+      },
+      {
+        "id": "D",
+        "text": "To be replaced by AI systems wherever possible to improve efficiency."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Human oversight is about enabling meaningful human control and intervention in AI systems, not necessarily manual approval of every decision. It is a key aspect of the 'Accountability' principle.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "An Australian company is using an AI system that processes data from both Australian and European users. What is a key legal consideration regarding cross-border data flows?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "They only need to comply with Australian privacy laws."
+      },
+      {
+        "id": "B",
+        "text": "They must comply with both Australian privacy laws and the EU's GDPR for the data of European users."
+      },
+      {
+        "id": "C",
+        "text": "They can choose which set of privacy laws to follow."
+      },
+      {
+        "id": "D",
+        "text": "Cross-border data flows are not regulated."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "When handling data from multiple jurisdictions, companies must comply with the relevant data protection laws in each of those jurisdictions. In this case, both Australian privacy laws and the GDPR would apply.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "The proposed mandatory guardrails for high-risk AI in Australia are likely to include requirements for:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Algorithmic transparency, human oversight, and accountability mechanisms."
+      },
+      {
+        "id": "B",
+        "text": "A complete ban on the use of high-risk AI."
+      },
+      {
+        "id": "C",
+        "text": "A government-run monopoly on the development of high-risk AI."
+      },
+      {
+        "id": "D",
+        "text": "A requirement for all high-risk AI to be open-source."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The proposals paper for mandatory guardrails focuses on ensuring transparency, human oversight, and accountability for high-risk AI systems.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI system for use in a high-risk context in Australia. They are concerned about their legal obligations. What would be the most prudent course of action for them to take?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ignore the voluntary standards as they are not legally binding."
+      },
+      {
+        "id": "B",
+        "text": "Proactively adopt the Voluntary AI Safety Standard and monitor for the introduction of mandatory guardrails."
+      },
+      {
+        "id": "C",
+        "text": "Wait until the mandatory guardrails are legislated before taking any action."
+      },
+      {
+        "id": "D",
+        "text": "Assume that their existing compliance with general consumer law is sufficient."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Proactively adopting the voluntary standards is the most prudent approach as it will help the company align with best practices and prepare for future mandatory regulations.",
+    "difficulty": "medium",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company developing a high-risk AI system in Australia is required to conduct a conformity assessment under the proposed mandatory guardrails. This assessment would most likely involve:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A one-time check of the AI system's code by a government agency."
+      },
+      {
+        "id": "B",
+        "text": "An ongoing process of testing and documentation to demonstrate that the AI system meets the required standards."
+      },
+      {
+        "id": "C",
+        "text": "A public vote on whether the AI system should be allowed to operate."
+      },
+      {
+        "id": "D",
+        "text": "A simple declaration by the company that their AI system is safe."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Conformity assessments under the proposed mandatory guardrails are expected to be an ongoing process of demonstrating compliance with the standards, not just a one-time check.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A large corporation is using a complex, opaque AI model for making significant decisions about individuals. Under the principle of 'Transparency and Explainability', what is the company's primary obligation?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To provide a complete mathematical explanation of the model to every individual."
+      },
+      {
+        "id": "B",
+        "text": "To offer a simplified, understandable explanation of how the model works and the factors that influence its decisions."
+      },
+      {
+        "id": "C",
+        "text": "To claim that the model is a trade secret and refuse to provide any explanation."
+      },
+      {
+        "id": "D",
+        "text": "To only use transparent, easily understandable models, even if they are less accurate."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "While full technical transparency may not always be feasible, the principle of 'Transparency and Explainability' requires providing a reasonable and understandable explanation of the AI system's decision-making process.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A developer of a high-risk AI system in Australia is considering how to implement the 'Accountability' principle. Which of the following would be the most comprehensive approach?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Assigning a single junior employee to be the 'accountability person'."
+      },
+      {
+        "id": "B",
+        "text": "Creating a clear chain of responsibility for the AI system throughout its lifecycle, from development to deployment and operation."
+      },
+      {
+        "id": "C",
+        "text": "Purchasing liability insurance to cover any potential damages caused by the AI system."
+      },
+      {
+        "id": "D",
+        "text": "Including a clause in the terms of service that absolves the company of all responsibility."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A comprehensive approach to accountability involves establishing clear lines of responsibility throughout the entire lifecycle of the AI system, not just assigning a single person or relying on insurance.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "In the context of the proposed mandatory guardrails for high-risk AI in Australia, what is the likely relationship between the guardrails and the existing AI Ethics Principles?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The guardrails will replace the AI Ethics Principles."
+      },
+      {
+        "id": "B",
+        "text": "The guardrails will be a legally enforceable implementation of the AI Ethics Principles for high-risk applications."
+      },
+      {
+        "id": "C",
+        "text": "The guardrails will be completely separate from the AI Ethics Principles."
+      },
+      {
+        "id": "D",
+        "text": "The AI Ethics Principles will become legally binding for all AI systems."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The mandatory guardrails are expected to be a legally binding application of the principles outlined in the AI Ethics Framework, specifically for high-risk AI systems.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company is using an AI system that collects data from children. What is a critical consideration under Australian law and the AI Ethics Principles?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "They can collect any data they want as long as the children agree to the terms of service."
+      },
+      {
+        "id": "B",
+        "text": "They must obtain informed consent from the children's parents or guardians and ensure the data is handled with the utmost care."
+      },
+      {
+        "id": "C",
+        "text": "They are not allowed to collect any data from children under any circumstances."
+      },
+      {
+        "id": "D",
+        "text": "They only need to comply with the AI Ethics Principles, not any specific laws relating to children's privacy."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "When dealing with data from children, there are specific legal requirements for obtaining parental consent and heightened responsibilities for data protection, which are also reinforced by the AI Ethics Principles.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI-powered medical diagnostic tool. To comply with the 'Reliability and safety' principle, what is a crucial step they must take before deploying the tool in a clinical setting?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Market the tool as being 100% accurate."
+      },
+      {
+        "id": "B",
+        "text": "Conduct rigorous testing and validation to ensure the tool is accurate and reliable for its intended purpose."
+      },
+      {
+        "id": "C",
+        "text": "Ensure the tool can diagnose all possible medical conditions."
+      },
+      {
+        "id": "D",
+        "text": "Rely solely on the tool's recommendations without any human oversight."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "For a high-stakes application like medical diagnosis, rigorous testing and validation are essential to ensure the reliability and safety of the AI tool before it is used in a clinical setting.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company is using an AI system to make decisions that could have a significant negative impact on individuals. The company is refusing to provide any information about how the system works, citing trade secrecy. This is a direct challenge to which two Australian AI Ethics Principles?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fairness and Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Transparency and explainability, and Contestability"
+      },
+      {
+        "id": "C",
+        "text": "Human-centred values and Accountability"
+      },
+      {
+        "id": "D",
+        "text": "Privacy protection and security, and Human, social and environmental wellbeing"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Refusing to provide information about how a high-impact AI system works undermines both the ability of individuals to understand the decisions being made about them (Transparency and explainability) and their ability to challenge those decisions (Contestability).",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary difference between the voluntary AI safety standard and the proposed mandatory guardrails in Australia?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The voluntary standard applies to all AI systems, while the mandatory guardrails are for high-risk systems."
+      },
+      {
+        "id": "B",
+        "text": "The voluntary standard is legally binding, while the mandatory guardrails are not."
+      },
+      {
+        "id": "C",
+        "text": "The voluntary standard is focused on technical specifications, while the mandatory guardrails are focused on ethical principles."
+      },
+      {
+        "id": "D",
+        "text": "There is no difference between them."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The key difference is the scope of application. The voluntary standard is intended for all AI systems, while the mandatory guardrails are specifically designed for high-risk AI systems.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI system that will be used to make decisions about parole for prisoners. This would almost certainly be considered a high-risk application of AI. What is a key requirement that would likely apply to this system under the proposed mandatory guardrails?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The system must be able to predict with 100% accuracy whether a prisoner will re-offend."
+      },
+      {
+        "id": "B",
+        "text": "There must be meaningful human oversight of the system's decisions."
+      },
+      {
+        "id": "C",
+        "text": "The system must be developed by a government agency."
+      },
+      {
+        "id": "D",
+        "text": "The system's source code must be made public."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "For a high-risk application with such significant consequences, meaningful human oversight would be a critical requirement to ensure that the AI system's decisions are fair and just.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  },
+  {
+    "questionText": "A company is using an AI system to filter job applications. The system is found to be biased against female applicants. The company claims that they are not responsible because they purchased the system from a third-party vendor. Under the principle of 'Accountability', is the company's argument valid?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Yes, the vendor is solely responsible."
+      },
+      {
+        "id": "B",
+        "text": "No, the company deploying the AI system is also accountable for its outcomes."
+      },
+      {
+        "id": "C",
+        "text": "It depends on the terms of the contract between the company and the vendor."
+      },
+      {
+        "id": "D",
+        "text": "The AI system itself is responsible."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The principle of 'Accountability' holds that those who deploy and operate AI systems are also responsible for their outcomes, even if they did not develop the system themselves.",
+    "difficulty": "hard",
+    "category": "AUSTRALIA_AI",
+    "points": 1
+  }
+]

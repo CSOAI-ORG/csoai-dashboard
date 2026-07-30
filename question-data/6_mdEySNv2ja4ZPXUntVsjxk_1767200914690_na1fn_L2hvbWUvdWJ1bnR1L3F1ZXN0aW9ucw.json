@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "According to the TC260 AI Safety Governance Framework, what is the primary purpose of conducting thorough impact assessments of AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To ensure the AI system is profitable."
+      },
+      {
+        "id": "B",
+        "text": "To identify potential biases, ensure data integrity, and establish security mechanisms."
+      },
+      {
+        "id": "C",
+        "text": "To accelerate the deployment of AI systems."
+      },
+      {
+        "id": "D",
+        "text": "To reduce the cost of AI development."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 AI Safety Governance Framework stresses the need for robust risk management practices, requiring organizations to conduct thorough impact assessments of AI systems before, during, and after deployment. This includes identifying potential biases, ensuring data integrity, establishing security mechanisms, and continuously monitoring AI outcomes.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What does the principle of transparency in the TC260 framework require from organizations?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To make their AI models open source."
+      },
+      {
+        "id": "B",
+        "text": "To share all their training data with the public."
+      },
+      {
+        "id": "C",
+        "text": "To document their AI models, data sources, and decision-making processes to ensure they can be audited."
+      },
+      {
+        "id": "D",
+        "text": "To provide real-time access to the AI system's operations."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The principle of transparency plays a central role in the TC260 framework, with organizations expected to document their AI models, data sources, and decision-making processes to ensure they can be audited.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is NOT a key area of the TC260 AI Safety Governance Framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Risk management and transparency"
+      },
+      {
+        "id": "B",
+        "text": "Ethical responsibilities"
+      },
+      {
+        "id": "C",
+        "text": "Profit maximization"
+      },
+      {
+        "id": "D",
+        "text": "Accountability mechanisms"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The key areas of the TC260 AI Safety Governance Framework are risk management and transparency, ethical responsibilities, and accountability mechanisms. Profit maximization is not a principle of the framework.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the National Information Security Standardization Technical Committee (TC260) in China's AI governance?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To directly invest in AI startups."
+      },
+      {
+        "id": "B",
+        "text": "To develop and release AI safety governance frameworks and standards."
+      },
+      {
+        "id": "C",
+        "text": "To provide marketing and sales support for AI companies."
+      },
+      {
+        "id": "D",
+        "text": "To exclusively focus on the development of military AI."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "TC260 is a key body in China for formulating technical AI standards and has released the AI Safety Governance Framework to guide the development and deployment of AI technologies.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "The TC260 framework emphasizes compliance with which two major Chinese laws regarding data security and privacy?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Cybersecurity Law and the E-commerce Law."
+      },
+      {
+        "id": "B",
+        "text": "The Data Security Law and the Personal Information Protection Law."
+      },
+      {
+        "id": "C",
+        "text": "The National Intelligence Law and the Counter-Espionage Law."
+      },
+      {
+        "id": "D",
+        "text": "The Advertising Law and the Consumer Rights Protection Law."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The framework highlights the importance of safeguarding data across borders and emphasizes compliance with China\u2019s stringent data security and privacy laws, such as the Data Security Law and the Personal Information Protection Law.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary focus of the 'Basic Safety Requirements for Generative Artificial Intelligence Services (Draft for Feedback)'?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Enhancing the creative capabilities of generative AI."
+      },
+      {
+        "id": "B",
+        "text": "Improving the speed and efficiency of AI models."
+      },
+      {
+        "id": "C",
+        "text": "Specifying basic safety requirements for training data, model safety, and safety measures."
+      },
+      {
+        "id": "D",
+        "text": "Mandating the use of specific hardware for AI training."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The document specifies the basic safety requirements for generative artificial intelligence (AI) services, including training data safety, model safety, and safety measures, and provides safety assessment requirements.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company in China is developing a generative AI service. According to the TC260 draft standard, what is considered 'training data'?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Only the data used for pre-training the model."
+      },
+      {
+        "id": "B",
+        "text": "Only the data used for optimization and fine-tuning."
+      },
+      {
+        "id": "C",
+        "text": "All data that serve directly as input for model training, including pre-training and optimization training data."
+      },
+      {
+        "id": "D",
+        "text": "Only the data generated by the model itself."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The draft standard defines 'Training Data' as all data that serve directly as input for model training, including pre-training and optimization training data.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of the AI Safety Standards System (V1.0) released by TC260?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To rank AI companies based on their market share."
+      },
+      {
+        "id": "B",
+        "text": "To map out the current and future technical standards needed to implement the AI Safety Governance Framework."
+      },
+      {
+        "id": "C",
+        "text": "To provide a list of approved AI vendors."
+      },
+      {
+        "id": "D",
+        "text": "To set the pricing for generative AI services."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "In January 2025, TC260 released a draft \u2018AI Safety Standards System (V1.0)\u2019 that mapped out the current and future technical standards needed to implement the original framework.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is one of the main concerns regarding open-source models mentioned in the TC260 Framework 2.0?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "They are too expensive to maintain."
+      },
+      {
+        "id": "B",
+        "text": "They are not powerful enough for complex tasks."
+      },
+      {
+        "id": "C",
+        "text": "The downstream propagation and amplification of model defects."
+      },
+      {
+        "id": "D",
+        "text": "They are not compatible with Chinese hardware."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Framework 2.0 is significantly more focused on the governance of open-source models, driven by their rapid proliferation by Chinese developers. One of the risks includes the downstream propagation and amplification of model defects.",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "According to the TC260 framework, what is a recommended measure to mitigate the risk of AI systems being used to acquire knowledge about weapons of mass destruction?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To make the AI models less powerful."
+      },
+      {
+        "id": "B",
+        "text": "To ensure exclusion of sensitive training data in high-risk fields."
+      },
+      {
+        "id": "C",
+        "text": "To only allow government agencies to use such AI systems."
+      },
+      {
+        "id": "D",
+        "text": "To encrypt the output of the AI models."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "One of the technical countermeasures proposed to address these risks is to \u2018ensure exclusion of sensitive [training] data in high-risk fields such as nuclear, biological, and chemical weapons and missiles.\u2019",
+    "difficulty": "easy",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company is launching a new AI-powered recommendation algorithm in China. According to the TC260 framework, what is a crucial ethical responsibility they must consider?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Maximizing user engagement at all costs."
+      },
+      {
+        "id": "B",
+        "text": "Prioritizing public welfare and minimizing harm, with specific attention to vulnerable groups."
+      },
+      {
+        "id": "C",
+        "text": "Ensuring the algorithm only recommends products from Chinese companies."
+      },
+      {
+        "id": "D",
+        "text": "Making the algorithm's source code public."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 framework encourages organizations to implement AI systems that prioritize public welfare and minimize harm. AI developers are urged to account for the societal and individual impacts of their technologies, with specific attention paid to vulnerable groups.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A social media company uses a generative AI model to moderate content. The model incorrectly flags a user's post as a violation, leading to a temporary ban. Under the TC260 framework, what is the company's primary accountability mechanism in this scenario?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company should offer the user a discount on premium services."
+      },
+      {
+        "id": "B",
+        "text": "The company should have protocols for incident reporting and rectification, and channels for external oversight."
+      },
+      {
+        "id": "C",
+        "text": "The company should blame the AI model and take no further action."
+      },
+      {
+        "id": "D",
+        "text": "The company should delete the user's account permanently to avoid future issues."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Organizations are expected to create clear accountability structures to address any unintended consequences stemming from AI systems. This includes establishing protocols for incident reporting and rectification, as well as creating channels for external oversight where necessary.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A multinational corporation wants to transfer data of its Chinese users to its headquarters in Europe for AI model training. What is the most important consideration under the TC260 framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The cost of data transfer."
+      },
+      {
+        "id": "B",
+        "text": "The speed of data transfer."
+      },
+      {
+        "id": "C",
+        "text": "Compliance with China\u2019s cross-border data flow protocols and the Personal Information Protection Law."
+      },
+      {
+        "id": "D",
+        "text": "The time difference between China and Europe."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The framework highlights the importance of safeguarding data across borders and emphasizes compliance with China\u2019s stringent data security and privacy laws, such as the Data Security Law and the Personal Information Protection Law. Organizations operating in China or handling Chinese data must prioritize cross-border data flow protocols.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A startup is developing a deep synthesis technology for creating realistic avatars. What specific provision of China's multi-layered AI governance approach is most relevant to them?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The regulations on generative AI services."
+      },
+      {
+        "id": "B",
+        "text": "The provisions on the management of deep synthesis in internet information services."
+      },
+      {
+        "id": "C",
+        "text": "The rules for recommendation algorithms."
+      },
+      {
+        "id": "D",
+        "text": "The requirements for algorithm registration."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "China has specific regulations for deep synthesis technologies, which are part of its multi-layered AI governance approach. These provisions address the creation and use of deepfakes and other synthetic media.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company wants to use an open-source AI model developed in another country for its services in China. According to the TC260 Framework 2.0, what is a key risk they need to assess?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The model's popularity in the open-source community."
+      },
+      {
+        "id": "B",
+        "text": "The potential for security flaws from the foundation model to propagate and be amplified."
+      },
+      {
+        "id": "C",
+        "text": "The programming language the model is written in."
+      },
+      {
+        "id": "D",
+        "text": "The number of times the model has been downloaded."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Framework 2.0 warns about the risks of open-source models, including the downstream propagation and amplification of model defects, which could create vulnerabilities in open-source base models that could cascade through the ecosystem.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A hospital in China is using an AI system to assist with medical diagnoses. The AI system is not fully explainable, making it difficult for doctors to understand its reasoning. Which principle of the TC260 framework is being violated?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The principle of profit maximization."
+      },
+      {
+        "id": "B",
+        "text": "The principle of accountability, which includes explainability."
+      },
+      {
+        "id": "C",
+        "text": "The principle of open-source development."
+      },
+      {
+        "id": "D",
+        "text": "The principle of data minimization."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Accountability in the TC260 framework extends to ensuring that AI systems are explainable, meaning that decision-making processes should be understandable to stakeholders, particularly in high-stakes scenarios like medical diagnosis.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of the risk categorization and grading system introduced in TC260 Framework 2.0?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To determine the price of AI services."
+      },
+      {
+        "id": "B",
+        "text": "To rank AI researchers based on their publications."
+      },
+      {
+        "id": "C",
+        "text": "To provide a framework for sectoral regulators to adopt and adapt for standards and regulations in their domains."
+      },
+      {
+        "id": "D",
+        "text": "To create a public leaderboard of the most and least risky AI models."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A key update to the framework is the introduction of a risk categorization and grading system, which takes into account three factors: the level of intelligence, nature of application, and scale of application. The authors call for sectoral regulators to adopt and adapt the system for standards and regulations in their domains.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A Chinese tech company has developed a new algorithm for personalized news recommendations. What is the first regulatory step they must take before deploying it to the public?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Obtain a patent for the algorithm."
+      },
+      {
+        "id": "B",
+        "text": "Submit the algorithm for filing with the Cyberspace Administration of China (CAC)."
+      },
+      {
+        "id": "C",
+        "text": "Publish the algorithm's source code online."
+      },
+      {
+        "id": "D",
+        "text": "Translate the algorithm's documentation into English."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "China has regulations that require providers of recommendation algorithms to file them with the Cyberspace Administration of China (CAC). This is a key part of China's multi-layered AI governance approach.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "The TC260 Framework 2.0 discusses the risk of 'loss of human control over advanced AI systems.' What is a suggested countermeasure for this risk?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Limiting the processing power of AI systems."
+      },
+      {
+        "id": "B",
+        "text": "Implementing mechanisms such as circuit breakers and one-click control."
+      },
+      {
+        "id": "C",
+        "text": "Training AI systems on smaller datasets."
+      },
+      {
+        "id": "D",
+        "text": "Requiring all AI systems to be connected to the internet."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "As a countermeasure to loss of control risks, the framework suggests implementing \u2018mechanisms such as circuit breakers and one-click control\u2019 that could be used in \u2018extreme situations.\u2019",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company is found to be using biased training data in their AI-powered recruitment tool, leading to discriminatory hiring practices. Which aspect of the TC260 framework is most directly violated?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The provisions on cross-border data transfer."
+      },
+      {
+        "id": "B",
+        "text": "The ethical responsibility to prevent discrimination and foster inclusivity."
+      },
+      {
+        "id": "C",
+        "text": "The requirements for algorithm registration."
+      },
+      {
+        "id": "D",
+        "text": "The rules for content moderation."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 framework calls for systems that prevent discrimination, protect privacy, and foster inclusivity. Using biased training data that leads to discriminatory outcomes is a clear violation of this ethical responsibility.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the significance of TC260's open call for participation in drafting a formal standard for risk categorization and grading?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It indicates that the TC260 is abandoning its previous framework."
+      },
+      {
+        "id": "B",
+        "text": "It shows that the TC260 is moving quickly to translate its guidance into binding technical standards."
+      },
+      {
+        "id": "C",
+        "text": "It suggests that the TC260 is shifting its focus to international collaboration."
+      },
+      {
+        "id": "D",
+        "text": "It implies that the TC260 is no longer concerned with AI risks."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The open call for participation in drafting a formal standard for risk categorization and grading, just ten days after the release of Framework 2.0, demonstrates the TC260's intent to rapidly translate its guidance into concrete, binding technical standards.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A generative AI service in China is found to be producing content that criticizes the government. Which aspect of China's AI regulation is this a primary violation of?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Data privacy regulations."
+      },
+      {
+        "id": "B",
+        "text": "Content control regulations."
+      },
+      {
+        "id": "C",
+        "text": "Algorithm registration requirements."
+      },
+      {
+        "id": "D",
+        "text": "Cross-border data transfer rules."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Control over politically sensitive content has been the core driver of China\u2019s binding AI regulations to date. Generating content that is critical of the government is a direct violation of these content control regulations.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "The TC260 Framework 2.0 raises concerns about the erosion of 'independent learning, research, and creative capacity' due to over-reliance on AI. This falls under which category of risk?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Catastrophic risks."
+      },
+      {
+        "id": "B",
+        "text": "Broader societal risks."
+      },
+      {
+        "id": "C",
+        "text": "Risks from open-source models."
+      },
+      {
+        "id": "D",
+        "text": "Data security risks."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Framework 2.0 includes a new discussion of labor market impacts and a deeper interrogation of broader societal risks from AI, including the concern that reliance on AI tools could erode \u2018independent learning, research, and creative capacity.\u2019",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the relationship between the TC260's AI Safety Governance Framework and China's binding AI regulations?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The framework is a binding regulation itself."
+      },
+      {
+        "id": "B",
+        "text": "The framework is non-regulatory guidance that can inform technical standards and regulations."
+      },
+      {
+        "id": "C",
+        "text": "The framework is completely separate from and has no influence on regulations."
+      },
+      {
+        "id": "D",
+        "text": "The framework is a proposal to replace all existing AI regulations."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Like the U.S. National Institute of Standards and Technology\u2019s (NIST) 2022 AI Risk Management Framework, China\u2019s AI Safety Governance Framework 2.0 offers nonregulatory guidance that could inform technical standards or regulation to address risks.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A Chinese AI company is developing a generative AI model for creating photorealistic images. They are using a large dataset of images scraped from the internet. What is a potential legal issue they might face under China's AI regulations?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The model might be too creative."
+      },
+      {
+        "id": "B",
+        "text": "The dataset might contain copyrighted material or personal information, violating intellectual property rights and privacy laws."
+      },
+      {
+        "id": "C",
+        "text": "The model might generate images that are too beautiful."
+      },
+      {
+        "id": "D",
+        "text": "The model might be too slow."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 framework and other Chinese AI regulations emphasize the importance of data safety and personal information protection. Using a dataset with copyrighted material or personal information without proper authorization can lead to legal issues.",
+    "difficulty": "medium",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company developing a generative AI model in China wants to ensure their training data is compliant with the TC260 standards. They are concerned about the presence of illegal content in their dataset. What is the most effective way to address this?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ignore the illegal content as it is a small percentage of the dataset."
+      },
+      {
+        "id": "B",
+        "text": "Use a data filtering and cleaning process to remove illegal and harmful content."
+      },
+      {
+        "id": "C",
+        "text": "Anonymize the entire dataset."
+      },
+      {
+        "id": "D",
+        "text": "Only use data from government-approved sources."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 standards for generative AI services emphasize the importance of training data safety. This includes requirements to clean and filter training data to remove illegal and harmful content.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A social media platform in China uses an AI algorithm to recommend content to users. The algorithm is found to be creating information cocoons and echo chambers, limiting users' exposure to diverse perspectives. Which specific Chinese regulation is most relevant to this issue?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Cybersecurity Law."
+      },
+      {
+        "id": "B",
+        "text": "The Provisions on the Management of Recommendation Algorithms in Internet Information Services."
+      },
+      {
+        "id": "C",
+        "text": "The Personal Information Protection Law."
+      },
+      {
+        "id": "D",
+        "text": "The E-commerce Law."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "China has specific regulations for recommendation algorithms that aim to address issues like the creation of information cocoons and echo chambers. These regulations require algorithm providers to ensure transparency and give users the right to opt-out of personalized recommendations.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing a generative AI model that can write code. The model inadvertently generates code with a security vulnerability. Under the TC260 framework, what is the company's responsibility?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company is not responsible as the vulnerability was unintentional."
+      },
+      {
+        "id": "B",
+        "text": "The company should have a process for identifying and mitigating security risks in the model's output, and be prepared to issue patches or warnings."
+      },
+      {
+        "id": "C",
+        "text": "The company should immediately shut down the service and delete the model."
+      },
+      {
+        "id": "D",
+        "text": "The company should only allow certified developers to use the code generation feature."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 framework emphasizes model safety, which includes the security of the model itself and its outputs. The company is responsible for the safety of the generated content and should have measures in place to address security vulnerabilities.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A foreign company wants to offer its generative AI service in China. What is the most significant regulatory hurdle they will face regarding their AI model?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The model must be trained exclusively on Chinese data."
+      },
+      {
+        "id": "B",
+        "text": "The model must undergo a safety assessment by the relevant Chinese authorities."
+      },
+      {
+        "id": "C",
+        "text": "The model must be open-sourced."
+      },
+      {
+        "id": "D",
+        "text": "The model must be able to translate between Chinese and English."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Generative AI services offered to the public in China are subject to safety assessments by the relevant authorities. This is a key requirement for any company, foreign or domestic, wanting to operate in the Chinese market.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "The TC260 Framework 2.0 mentions the risk of 'loss of control over knowledge and capabilities of nuclear, biological, chemical, and missile weapons.' This is an example of what type of risk?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A societal risk."
+      },
+      {
+        "id": "B",
+        "text": "A catastrophic risk."
+      },
+      {
+        "id": "C",
+        "text": "An open-source risk."
+      },
+      {
+        "id": "D",
+        "text": "A data security risk."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Framework 2.0 offers a deeper discussion of catastrophic risks, including the warning of \u2018loss of control over knowledge and capabilities of nuclear, biological, chemical, and missile weapons.\u2019",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company in China is using a generative AI model to create news articles. The model generates a fake news story that goes viral. What is the company's liability under the Provisions on the Governance of the Online Information Content Ecosystem?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company has no liability as the AI generated the content."
+      },
+      {
+        "id": "B",
+        "text": "The company is fully liable and can face fines and other penalties."
+      },
+      {
+        "id": "C",
+        "text": "The company is only liable if they intentionally spread the fake news."
+      },
+      {
+        "id": "D",
+        "text": "The company is only liable if the fake news causes financial damage."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Under China's regulations, providers of generative AI services are responsible for the content produced by their models. The Provisions on the Governance of the Online Information Content Ecosystem prohibit the creation and dissemination of false information, and companies can be held liable for violations.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the Cyberspace Administration of China (CAC) in the context of the TC260 framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The CAC is a private company that competes with TC260."
+      },
+      {
+        "id": "B",
+        "text": "The CAC is the primary regulator that guides the work of TC260 and enforces AI-related regulations."
+      },
+      {
+        "id": "C",
+        "text": "The CAC is a research institute that provides technical support to TC260."
+      },
+      {
+        "id": "D",
+        "text": "The CAC is an international organization that oversees global AI standards."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The Cyberspace Administration of China (CAC) is the country\u2019s most powerful regulator of the internet, data, and AI. The TC260 framework was guided by the CAC, and the CAC is responsible for enforcing AI-related regulations.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI-powered chatbot for mental health support. What is a key ethical consideration they must address under the TC260 framework, especially concerning vulnerable groups?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensuring the chatbot can provide financial advice."
+      },
+      {
+        "id": "B",
+        "text": "Preventing the chatbot from becoming too emotionally attached to users."
+      },
+      {
+        "id": "C",
+        "text": "Ensuring the chatbot does not provide harmful or misleading advice, and has protocols for escalating high-risk situations to human professionals."
+      },
+      {
+        "id": "D",
+        "text": "Making the chatbot available 24/7."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The TC260 framework urges AI developers to account for the societal and individual impacts of their technologies, with specific attention paid to vulnerable groups. In the context of mental health, this means ensuring the chatbot is safe and effective, and has clear protocols for handling high-risk situations.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "China's multi-layered AI governance approach includes regulations, standards, and other mechanisms. What is the primary purpose of this approach?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To create a complex and confusing regulatory environment to discourage foreign competition."
+      },
+      {
+        "id": "B",
+        "text": "To promote AI innovation while managing the risks and ensuring alignment with national priorities."
+      },
+      {
+        "id": "C",
+        "text": "To focus solely on the development of military AI."
+      },
+      {
+        "id": "D",
+        "text": "To copy the AI governance models of other countries."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "China's multi-layered AI governance approach is designed to strike a balance between promoting the development of AI technology and managing the associated risks. It combines regulations, technical standards, and other measures to guide the healthy development of the AI industry.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  },
+  {
+    "questionText": "A company uses a generative AI model to create marketing copy. The model is found to be generating text that is highly persuasive but also misleading. What is the company's responsibility under the TC260 framework?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company can continue to use the model as long as it is profitable."
+      },
+      {
+        "id": "B",
+        "text": "The company must ensure that the generated content is truthful and not misleading, and may need to implement human oversight or additional filtering."
+      },
+      {
+        "id": "C",
+        "text": "The company should disclose that the copy was generated by AI and is not responsible for its accuracy."
+      },
+      {
+        "id": "D",
+        "text": "The company should only use the model for internal purposes."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The TC260 framework and related regulations place a strong emphasis on the truthfulness and accuracy of AI-generated content. Companies are responsible for the output of their models and must take steps to prevent the generation of misleading information.",
+    "difficulty": "hard",
+    "category": "TC260",
+    "points": 1
+  }
+]

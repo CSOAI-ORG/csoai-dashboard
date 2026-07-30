@@ -1,0 +1,514 @@
+{
+  "query": "SELECT id, title, framework, level, price FROM courses ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, level, price FROM courses ORDER BY id;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "19900"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "price": "19900"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "framework": "NIST AI RMF",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "9",
+      "title": "UK AI Safety Institute Overview",
+      "framework": "UK AI Safety Institute",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "10",
+      "title": "AI Safety Evaluation",
+      "framework": "UK AI Safety Institute",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "11",
+      "title": "Sector-Specific AI Guidance",
+      "framework": "UK AI Safety Institute",
+      "level": "advanced",
+      "price": "19900"
+    },
+    {
+      "id": "12",
+      "title": "AIDA Fundamentals",
+      "framework": "AIDA",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "13",
+      "title": "AI Impact Assessment",
+      "framework": "AIDA",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "14",
+      "title": "AI Ethics Framework Fundamentals",
+      "framework": "AI Ethics Framework",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "15",
+      "title": "AI Safety Standard Implementation",
+      "framework": "AI Ethics Framework",
+      "level": "advanced",
+      "price": "14900"
+    },
+    {
+      "id": "30001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "30002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "30003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "30004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "30005",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "60001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "49900"
+    },
+    {
+      "id": "60002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "price": "49900"
+    },
+    {
+      "id": "90002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "framework": "iso_42001",
+      "level": "fundamentals",
+      "price": "49900"
+    },
+    {
+      "id": "120002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "150001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "150002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "150003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "150004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "180001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "210001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "210002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "210003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "210004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "210005",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "240001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "270001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "270002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "270003",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270004",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270005",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270006",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270007",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270008",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270009",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270010",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270011",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270012",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270013",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "270014",
+      "title": "Test Progress Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "0"
+    },
+    {
+      "id": "300001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "300002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "300003",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "300004",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "300005",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "330001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "360001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "390001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "390002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "420001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "450001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "480001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "510001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "540001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "49900"
+    },
+    {
+      "id": "540002",
+      "title": "EU AI Act Advanced",
+      "framework": "EU AI Act",
+      "level": "advanced",
+      "price": "79900"
+    },
+    {
+      "id": "540003",
+      "title": "EU AI Act Specialist",
+      "framework": "EU AI Act",
+      "level": "specialist",
+      "price": "129900"
+    },
+    {
+      "id": "540004",
+      "title": "NIST AI Risk Management Framework Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals",
+      "price": "49900"
+    },
+    {
+      "id": "540005",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "framework": "ISO 42001",
+      "level": "fundamentals",
+      "price": "49900"
+    },
+    {
+      "id": "540006",
+      "title": "CEASA AI Safety Fundamentals",
+      "framework": "CEASA",
+      "level": "fundamentals",
+      "price": "59900"
+    },
+    {
+      "id": "570001",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    },
+    {
+      "id": "570002",
+      "title": "Test AI Safety Course",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "price": "9900"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tlevel\tprice\n1\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\t9900\n2\tHigh-Risk AI Systems\tEU AI Act\tadvanced\t14900\n3\tEU AI Act Conformity Assessment\tEU AI Act\tadvanced\t19900\n4\tEU AI Act for Deployers\tEU AI Act\tadvanced\t14900\n5\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\t9900\n6\tAI Risk Governance\tNIST AI RMF\tadvanced\t14900\n7\tAI Risk Assessment & Measurement\tNIST AI RMF\tadvanced\t19900\n8\tFederal AI Regulations\tNIST AI RMF\tadvanced\t14900\n9\tUK AI Safety Institute Overview\tUK AI Safety Institute\tfundamentals\t9900\n10\tAI Safety Evaluation\tUK AI Safety Institute\tadvanced\t14900\n11\tSector-Specific AI Guidance\tUK AI Safety Institute\tadvanced\t19900\n12\tAIDA Fundamentals\tAIDA\tfundamentals\t9900\n13\tAI Impact Assessment\tAIDA\tadvanced\t14900\n14\tAI Ethics Framework Fundamentals\tAI Ethics Framework\tfundamentals\t9900\n15\tAI Safety Standard Implementation\tAI Ethics Framework\tadvanced\t14900\n30001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n30002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n30003\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n30004\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n30005\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n60001\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\t49900\n60002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n90001\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\t49900\n90002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n120001\tISO 42001 AI Management System Fundamentals\tiso_42001\tfundamentals\t49900\n120002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n150001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n150002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n150003\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n150004\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n180001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n210001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n210002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n210003\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n210004\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n210005\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n240001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n270001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n270002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n270003\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270004\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270005\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270006\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270007\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270008\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270009\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270010\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270011\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270012\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270013\tTest Progress Course\tEU AI Act\tfundamentals\t0\n270014\tTest Progress Course\tEU AI Act\tfundamentals\t0\n300001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n300002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n300003\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n300004\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n300005\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n330001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n360001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n390001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n390002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n420001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n450001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n480001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n510001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n540001\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\t49900\n540002\tEU AI Act Advanced\tEU AI Act\tadvanced\t79900\n540003\tEU AI Act Specialist\tEU AI Act\tspecialist\t129900\n540004\tNIST AI Risk Management Framework Fundamentals\tNIST AI RMF\tfundamentals\t49900\n540005\tISO 42001 AI Management System Fundamentals\tISO 42001\tfundamentals\t49900\n540006\tCEASA AI Safety Fundamentals\tCEASA\tfundamentals\t59900\n570001\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n570002\tTest AI Safety Course\tEU AI Act\tfundamentals\t9900\n",
+  "stderr": "",
+  "execution_time_ms": 50
+}

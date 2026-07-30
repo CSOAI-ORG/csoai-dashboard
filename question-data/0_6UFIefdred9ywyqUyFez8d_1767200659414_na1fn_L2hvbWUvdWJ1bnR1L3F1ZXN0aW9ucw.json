@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "Under Article 5 of the EU AI Act, which of the following AI practices is strictly prohibited?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AI systems used for credit scoring"
+      },
+      {
+        "id": "B",
+        "text": "AI systems for optimizing energy consumption"
+      },
+      {
+        "id": "C",
+        "text": "AI systems that deploy subliminal techniques to materially distort a person's behavior"
+      },
+      {
+        "id": "D",
+        "text": "AI systems used for predicting employee performance"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Article 5(1)(a) of the EU AI Act explicitly prohibits the placing on the market, putting into service or use of an AI system that deploys subliminal techniques beyond a person\u2019s consciousness in order to materially distort a person\u2019s behaviour in a manner that causes or is likely to cause that person or another person physical or psychological harm.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "According to the EU AI Act, what is the main purpose of a CE marking on a high-risk AI system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To indicate the country of origin of the AI system"
+      },
+      {
+        "id": "B",
+        "text": "To certify that the AI system has been approved by the European AI Office"
+      },
+      {
+        "id": "C",
+        "text": "To declare that the AI system is in conformity with the requirements of the EU AI Act"
+      },
+      {
+        "id": "D",
+        "text": "To show that the AI system has been tested for cybersecurity vulnerabilities"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The CE marking indicates that the provider of the high-risk AI system declares that the system is in conformity with the requirements set out in Chapter 2 of Title III of the EU AI Act and other applicable Union legislation harmonising the conditions for the marketing of products. It is a declaration of conformity.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "Which body is primarily responsible for the market surveillance of AI systems in the EU?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The European Commission"
+      },
+      {
+        "id": "B",
+        "text": "The European AI Office"
+      },
+      {
+        "id": "C",
+        "text": "National market surveillance authorities of the Member States"
+      },
+      {
+        "id": "D",
+        "text": "The European Parliament"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Market surveillance is primarily carried out by the national market surveillance authorities of the Member States, as established by Regulation (EU) 2019/1020. The European AI Office has a coordinating role, but the main responsibility lies with the national authorities.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the European AI Office under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To directly approve or reject all high-risk AI systems before they are placed on the market."
+      },
+      {
+        "id": "B",
+        "text": "To develop and maintain the EU database for high-risk AI systems and to monitor the implementation of the Regulation."
+      },
+      {
+        "id": "C",
+        "text": "To impose fines on non-compliant operators of AI systems."
+      },
+      {
+        "id": "D",
+        "text": "To provide legal advice to companies developing AI systems."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The European AI Office has several tasks, including supporting the consistent application of the AI Act, developing and maintaining the EU database for high-risk AI systems, and monitoring the implementation of the Regulation. It does not directly approve systems or impose fines.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "Under the EU AI Act, what is a 'high-risk' AI system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Any AI system that uses machine learning."
+      },
+      {
+        "id": "B",
+        "text": "An AI system that is listed in Annex III, or is a safety component of a product covered by Union harmonisation legislation listed in Annex II, and requires a third-party conformity assessment."
+      },
+      {
+        "id": "C",
+        "text": "Any AI system that processes personal data."
+      },
+      {
+        "id": "D",
+        "text": "An AI system that has the potential to cause any level of harm."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Article 6 defines high-risk AI systems. A system is high-risk if it is listed in Annex III (e.g., in areas like employment, education, or law enforcement) or if it is a safety component of a product covered by specific Union harmonisation legislation listed in Annex II and requires a third-party conformity assessment.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "What is the maximum administrative fine for placing a prohibited AI system on the market under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Up to \u20ac10 million or 2% of the total worldwide annual turnover."
+      },
+      {
+        "id": "B",
+        "text": "Up to \u20ac20 million or 4% of the total worldwide annual turnover."
+      },
+      {
+        "id": "C",
+        "text": "Up to \u20ac35 million or 7% of the total worldwide annual turnover."
+      },
+      {
+        "id": "D",
+        "text": "Up to \u20ac50 million or 10% of the total worldwide annual turnover."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "According to Article 99, non-compliance with Article 5 (prohibited AI practices) is subject to administrative fines of up to \u20ac35 million or, if the offender is an undertaking, up to 7% of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a key requirement for high-risk AI systems under Articles 8-15 of the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The system must be at least 99% accurate."
+      },
+      {
+        "id": "B",
+        "text": "The system must be developed using a specific programming language."
+      },
+      {
+        "id": "C",
+        "text": "The system must have appropriate human oversight measures."
+      },
+      {
+        "id": "D",
+        "text": "The system must be open-source."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Article 14 of the EU AI Act mandates that high-risk AI systems shall be designed and developed in such a way that they can be effectively overseen by natural persons during the period in which the AI system is in use. This is a key requirement for high-risk AI systems.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of the transparency obligations for certain AI systems under Article 50 of the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To ensure that users are aware that they are interacting with an AI system."
+      },
+      {
+        "id": "B",
+        "text": "To require the disclosure of the full source code of the AI system."
+      },
+      {
+        "id": "C",
+        "text": "To guarantee that the AI system is free of biases."
+      },
+      {
+        "id": "D",
+        "text": "To ensure the AI system is available in all EU languages."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Article 50(1) requires that providers of AI systems intended to interact with natural persons ensure that the natural persons are informed that they are interacting with an AI system, unless this is obvious from the circumstances and the context of use.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is NOT a prohibited AI practice under Article 5?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Social scoring for general purpose by public authorities."
+      },
+      {
+        "id": "B",
+        "text": "Real-time remote biometric identification in publicly accessible spaces for the purpose of law enforcement, subject to certain exceptions."
+      },
+      {
+        "id": "C",
+        "text": "AI systems that exploit the vulnerabilities of a specific group of persons."
+      },
+      {
+        "id": "D",
+        "text": "AI systems used to make predictions about the likelihood of an individual committing a crime."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "While the use of AI for predictive policing is a controversial topic and may be restricted, it is not explicitly listed as a prohibited practice in Article 5 in all circumstances. The other options are explicitly prohibited under Article 5.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary goal of the conformity assessment procedure for high-risk AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To determine the market price of the AI system."
+      },
+      {
+        "id": "B",
+        "text": "To assess the cybersecurity of the AI system."
+      },
+      {
+        "id": "C",
+        "text": "To demonstrate that the high-risk AI system complies with the requirements of the Act."
+      },
+      {
+        "id": "D",
+        "text": "To train the AI system on new data."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The conformity assessment procedure is a process to demonstrate that a high-risk AI system complies with the mandatory requirements of the EU AI Act before it can be placed on the market.",
+    "difficulty": "easy",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company develops an AI system to assist doctors in diagnosing a rare type of cancer. The system is intended to be used as a tool to provide a second opinion. Under the EU AI Act, how would this system likely be classified?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "As a prohibited AI practice."
+      },
+      {
+        "id": "B",
+        "text": "As a high-risk AI system."
+      },
+      {
+        "id": "C",
+        "text": "As a limited-risk AI system with transparency obligations."
+      },
+      {
+        "id": "D",
+        "text": "As a minimal-risk AI system with no specific obligations."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AI systems intended to be used in the area of medical devices are generally classified as high-risk under Annex III, especially when they have a significant impact on patient care and diagnosis. Even as a second opinion tool, the potential for harm is significant, making it a high-risk system.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A social media company uses an AI system to recommend content to its users. The system is designed to maximize user engagement. Following an update, the system starts recommending increasingly extreme and polarizing content, leading to documented cases of psychological harm. Which article of the EU AI Act is most relevant to this situation?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Article 5 (Prohibited AI practices)"
+      },
+      {
+        "id": "B",
+        "text": "Article 10 (Data and data governance)"
+      },
+      {
+        "id": "C",
+        "text": "Article 13 (Transparency and provision of information to users)"
+      },
+      {
+        "id": "D",
+        "text": "Article 15 (Accuracy, robustness and cybersecurity)"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "This scenario could fall under Article 5(1)(a), which prohibits AI systems that deploy subliminal techniques to materially distort a person's behavior in a manner that causes or is likely to cause physical or psychological harm. The recommendation algorithm, by pushing extreme content, could be seen as a form of manipulation causing psychological harm.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A bank uses a high-risk AI system for credit scoring. A customer is denied a loan and requests an explanation. What are the bank's obligations under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The bank is not obligated to provide any explanation."
+      },
+      {
+        "id": "B",
+        "text": "The bank must provide the customer with the full source code of the AI system."
+      },
+      {
+        "id": "C",
+        "text": "The bank must provide a meaningful explanation of the decision-making process of the AI system."
+      },
+      {
+        "id": "D",
+        "text": "The bank only needs to inform the customer that an AI system was used."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "While the AI Act itself focuses on the obligations of providers, the GDPR (General Data Protection Regulation) grants individuals the right to an explanation for automated decisions. The AI Act complements this by requiring high-risk systems to be designed for transparency (Article 13), which would enable the bank to provide a meaningful explanation of the logic involved in the credit scoring decision.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company wants to use a high-risk AI system that was developed by a third-party provider. What are the company's responsibilities as a 'user' of the system under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The user has no responsibilities; all obligations are on the provider."
+      },
+      {
+        "id": "B",
+        "text": "The user must re-certify the AI system through a new conformity assessment."
+      },
+      {
+        "id": "C",
+        "text": "The user must use the system in accordance with the provider's instructions for use and monitor its operation."
+      },
+      {
+        "id": "D",
+        "text": "The user must have a certified AI Safety Analyst on staff."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Article 29 outlines the obligations of users of high-risk AI systems. Users must use the system in accordance with the instructions for use, ensure that input data is relevant, and monitor the operation of the system. They are not required to re-certify the system, but they do have clear responsibilities.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A law enforcement agency wants to use a real-time remote biometric identification system in a public space to find a missing child. Under what conditions, if any, would this be permissible under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "This is always prohibited."
+      },
+      {
+        "id": "B",
+        "text": "This is permissible if the agency obtains a warrant."
+      },
+      {
+        "id": "C",
+        "text": "This is permissible as it falls under the exception for the targeted search for specific potential victims of crime, including missing children."
+      },
+      {
+        "id": "D",
+        "text": "This is only permissible if the system is 100% accurate."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Article 5(1)(d) prohibits real-time remote biometric identification in publicly accessible spaces for the purpose of law enforcement, but it provides for several exceptions. One of these exceptions is the targeted search for specific potential victims of crime, which includes missing children. This use is subject to strict conditions and safeguards.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company develops an AI system for sorting job applications. The system is trained on historical data from the company, which shows a clear bias against hiring women for technical roles. What requirement of the EU AI Act is this company most likely violating?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Article 9 (Risk management system)"
+      },
+      {
+        "id": "B",
+        "text": "Article 10 (Data and data governance)"
+      },
+      {
+        "id": "C",
+        "text": "Article 12 (Record-keeping)"
+      },
+      {
+        "id": "D",
+        "text": "Article 14 (Human oversight)"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Article 10 requires that high-risk AI systems be trained on data that is relevant, representative, free of errors and complete. The historical data used in this scenario is clearly not representative and contains biases, which is a violation of the data and data governance requirements.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A provider of a high-risk AI system makes a substantial modification to the system after it has been placed on the market. What is the provider required to do?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Inform the users of the modification."
+      },
+      {
+        "id": "B",
+        "text": "Conduct a new conformity assessment."
+      },
+      {
+        "id": "C",
+        "text": "Register the modification with the European AI Office."
+      },
+      {
+        "id": "D",
+        "text": "Nothing, as long as the modification improves the system."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Article 43(4) states that if a substantial modification is made to a high-risk AI system that has already undergone a conformity assessment, the system must undergo a new conformity assessment before it is placed on the market or put into service.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing a high-risk AI system and wants to use a notified body for the conformity assessment. What is the role of the notified body?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To provide funding for the development of the AI system."
+      },
+      {
+        "id": "B",
+        "text": "To act as a legal representative for the company."
+      },
+      {
+        "id": "C",
+        "text": "To perform a third-party conformity assessment of the AI system."
+      },
+      {
+        "id": "D",
+        "text": "To market the AI system in the EU."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Notified bodies are independent third-party organizations designated by Member States to perform conformity assessments of high-risk AI systems when a third-party assessment is required. Their role is to verify that the system complies with the requirements of the AI Act.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company based outside the EU wants to sell its high-risk AI system within the EU. What must the company do to comply with the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The EU AI Act does not apply to companies outside the EU."
+      },
+      {
+        "id": "B",
+        "text": "The company must establish a subsidiary within the EU."
+      },
+      {
+        "id": "C",
+        "text": "The company must appoint an authorised representative in the EU."
+      },
+      {
+        "id": "D",
+        "text": "The company must translate all its documentation into all official EU languages."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Article 25 requires that where a provider of a high-risk AI system is not established in the Union, they must appoint an authorised representative in the Union by written mandate. This representative is responsible for ensuring the provider's compliance with the Act.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A developer creates a deepfake video of a politician giving a speech they never made. The video is very realistic. What are the developer's obligations under Article 50 of the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The developer must delete the video immediately."
+      },
+      {
+        "id": "B",
+        "text": "The developer must disclose that the video is a deepfake."
+      },
+      {
+        "id": "C",
+        "text": "The developer must obtain the politician's consent before creating the video."
+      },
+      {
+        "id": "D",
+        "text": "The developer has no obligations if the video is for satirical purposes."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Article 50(3) requires that users of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall disclose that the content has been artificially generated or manipulated. There are exceptions for legitimate purposes such as art or science, but even then, the disclosure should not hamper the legitimate purpose.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A market surveillance authority finds that a high-risk AI system on the market presents a risk to health and safety. What is the authority's first step?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Immediately ban the AI system from the market."
+      },
+      {
+        "id": "B",
+        "text": "Impose a fine on the provider."
+      },
+      {
+        "id": "C",
+        "text": "Require the provider to take corrective action to bring the system into compliance."
+      },
+      {
+        "id": "D",
+        "text": "Issue a public warning about the AI system."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "According to Article 95, if a market surveillance authority finds that a high-risk AI system presents a risk, it shall without delay require the relevant operator to take all appropriate corrective actions to bring the system into compliance, to withdraw it from the market, or to recall it within a reasonable period.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of the EU database for high-risk AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To allow the public to vote on which AI systems should be considered high-risk."
+      },
+      {
+        "id": "B",
+        "text": "To provide a marketplace for buying and selling high-risk AI systems."
+      },
+      {
+        "id": "C",
+        "text": "To increase transparency and allow the public and authorities to access information about high-risk AI systems on the market."
+      },
+      {
+        "id": "D",
+        "text": "To store the training data for all high-risk AI systems."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The EU database for high-risk AI systems, as described in Article 71, is intended to increase transparency for the public and to facilitate the work of market surveillance authorities and other competent authorities. It will contain information about high-risk AI systems that have been placed on the market.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company uses an AI system to monitor its employees' keystrokes and mouse movements to assess their productivity. How would this be treated under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "This is a minimal-risk AI system."
+      },
+      {
+        "id": "B",
+        "text": "This is a high-risk AI system under Annex III."
+      },
+      {
+        "id": "C",
+        "text": "This is a prohibited AI practice."
+      },
+      {
+        "id": "D",
+        "text": "This is only allowed with the employees' consent."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AI systems used in the context of employment, particularly for monitoring and evaluating the performance and behavior of workers, are classified as high-risk under Annex III of the EU AI Act. This is because they can have a significant impact on workers' careers and livelihoods.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A provider of a high-risk AI system is a small or medium-sized enterprise (SME). Does the EU AI Act offer any specific support for them?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "No, SMEs have the same obligations as large companies."
+      },
+      {
+        "id": "B",
+        "text": "Yes, SMEs are exempt from all obligations under the Act."
+      },
+      {
+        "id": "C",
+        "text": "Yes, the Act encourages the establishment of AI regulatory sandboxes to help SMEs test their systems."
+      },
+      {
+        "id": "D",
+        "text": "Yes, SMEs can get a discount on fines for non-compliance."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The EU AI Act recognizes the specific needs of SMEs and encourages the establishment of AI regulatory sandboxes (Article 53) where they can test their innovative AI systems in a controlled environment with the support of competent authorities. This is intended to foster innovation and reduce the burden on SMEs.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "What is the relationship between the EU AI Act and the GDPR?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The EU AI Act replaces the GDPR for all AI systems."
+      },
+      {
+        "id": "B",
+        "text": "The GDPR is irrelevant to AI systems."
+      },
+      {
+        "id": "C",
+        "text": "The EU AI Act is without prejudice to the GDPR and the two regulations apply in parallel."
+      },
+      {
+        "id": "D",
+        "text": "The EU AI Act only applies to AI systems that do not process personal data."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The EU AI Act and the GDPR are designed to work together. The AI Act sets out a framework for the development and use of AI systems, while the GDPR specifically protects the fundamental right to data protection. The AI Act is without prejudice to the GDPR, meaning that if an AI system processes personal data, it must comply with both regulations.",
+    "difficulty": "medium",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A large city's police force is considering deploying a predictive policing AI system to identify areas with a high risk of future crime. The system is trained on historical crime data, which reflects existing societal biases. To comply with the EU AI Act, what would be the most critical and challenging requirement to address before deploying this system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensuring the system has a clear and intuitive user interface for police officers."
+      },
+      {
+        "id": "B",
+        "text": "Conducting a fundamental rights impact assessment and mitigating the risks of discrimination."
+      },
+      {
+        "id": "C",
+        "text": "Registering the system in the EU database for high-risk AI systems."
+      },
+      {
+        "id": "D",
+        "text": "Obtaining a CE marking for the system."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Predictive policing systems are high-risk under Annex III. The most critical and challenging requirement for such a system is to address the risk of discrimination, as outlined in Article 10 on data and data governance. The historical data is likely to contain biases, and the police force would need to conduct a thorough fundamental rights impact assessment and implement robust measures to mitigate the risk of reinforcing existing discrimination. This is a far more complex challenge than the other options.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A startup has developed a novel AI-powered recruitment tool that claims to identify the best candidates for a job based on their facial expressions and tone of voice during a video interview. The startup argues that their tool is not high-risk because it is only an assistive tool and the final hiring decision is made by a human. Is their argument valid?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Yes, because human oversight is in place."
+      },
+      {
+        "id": "B",
+        "text": "No, because AI systems used for recruitment are always high-risk, regardless of human oversight."
+      },
+      {
+        "id": "C",
+        "text": "Yes, as long as the candidates consent to the use of the tool."
+      },
+      {
+        "id": "D",
+        "text": "No, because the tool is likely to be considered a high-risk system as it significantly influences the outcome of the recruitment process, and the use of emotion recognition in the workplace is a sensitive area."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "The startup's argument is weak. AI systems used in recruitment are listed as high-risk in Annex III. Even if a human makes the final decision, a tool that filters and ranks candidates so heavily based on sensitive data like facial expressions and voice analysis would be seen as having a significant influence on the outcome. Furthermore, the use of emotion recognition in the workplace is a particularly sensitive area that is likely to be subject to intense scrutiny.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A hospital implements a high-risk AI system for allocating scarce medical resources. The system is designed to maximize the number of life-years saved. However, it consistently deprioritizes patients with disabilities, even when their prognosis is good. A patient with a disability is denied a ventilator and dies. What are the potential legal consequences for the hospital and the provider of the AI system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "There are no legal consequences as the system was designed to maximize life-years saved, which is an objective criterion."
+      },
+      {
+        "id": "B",
+        "text": "The hospital could be held liable for discrimination and a breach of fundamental rights, and the provider could be fined for placing a non-compliant system on the market."
+      },
+      {
+        "id": "C",
+        "text": "Only the provider of the AI system can be held liable."
+      },
+      {
+        "id": "D",
+        "text": "The hospital is fully exempt from liability as they were using a certified AI system."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a complex scenario with multiple layers of liability. The hospital, as the user, could be held liable for discrimination under existing anti-discrimination laws and for a breach of the fundamental right to life and health. The provider of the AI system could also be held liable for placing a non-compliant system on the market, as the system clearly has a discriminatory bias, which violates the requirements of the AI Act (e.g., Article 10). The hospital is not exempt from liability just because the system is certified.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company that provides a high-risk AI system for credit scoring goes bankrupt. The system is still in use by several banks. Who is responsible for ensuring the continued compliance and safety of the system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The banks, as the users, are now fully responsible for the system."
+      },
+      {
+        "id": "B",
+        "text": "The European AI Office will take over the maintenance of the system."
+      },
+      {
+        "id": "C",
+        "text": "The system must be immediately taken out of service."
+      },
+      {
+        "id": "D",
+        "text": "This is a legal grey area not explicitly covered by the AI Act, but the banks would likely have to take on more responsibility or find an alternative system."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "The EU AI Act places most of the obligations on the provider. In the case of a provider going bankrupt, the situation becomes complex. While the Act does not explicitly detail this scenario, the banks as users would still have an obligation to ensure the system is used safely and in compliance with the law. They would likely need to either take on the responsibilities of the provider, which would be very difficult, or decommission the system and find a compliant alternative. This highlights a potential gap in the legislation.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A government agency uses an AI system to detect fraudulent welfare claims. The system flags a claim as potentially fraudulent, and the agency immediately suspends the claimant's benefits pending an investigation. The claimant is a single mother who relies on the benefits to feed her children. What is the most significant compliance failure in this scenario?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI system was not registered in the EU database."
+      },
+      {
+        "id": "B",
+        "text": "The agency failed to ensure adequate human oversight before taking a decision with a significant negative impact on the claimant."
+      },
+      {
+        "id": "C",
+        "text": "The AI system was not trained on a sufficiently large dataset."
+      },
+      {
+        "id": "D",
+        "text": "The claimant was not informed that an AI system was used."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This scenario highlights a critical failure of human oversight (Article 14). For high-risk AI systems, especially in the public sector, a human should always be in the loop before a decision with a significant negative impact is taken. The agency should have investigated the flagged claim before suspending the benefits. This is a serious breach of the principles of the AI Act and could also be a violation of the claimant's fundamental rights.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company develops a general-purpose AI model that can be adapted for a wide range of applications, some of which are high-risk. What are the company's obligations under the EU AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company has no obligations as the model is general-purpose."
+      },
+      {
+        "id": "B",
+        "text": "The company must ensure the model complies with all the requirements for high-risk AI systems."
+      },
+      {
+        "id": "C",
+        "text": "The company must provide information and documentation to the downstream providers who integrate the model into high-risk AI systems."
+      },
+      {
+        "id": "D",
+        "text": "The company must get pre-market approval from the European AI Office for the general-purpose model."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The EU AI Act has specific provisions for general-purpose AI models. While the provider of the general-purpose model is not responsible for the compliance of the final high-risk system, they are required to cooperate with the downstream providers and provide them with the necessary information and documentation about the model to enable them to comply with their obligations.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A market surveillance authority suspects that a high-risk AI system for medical diagnosis is not performing as accurately as claimed by the provider, leading to misdiagnoses. The provider refuses to grant the authority access to the system's source code, claiming it is a trade secret. What powers does the authority have?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The authority has no power to access the source code."
+      },
+      {
+        "id": "B",
+        "text": "The authority can impose a fine on the provider for non-cooperation, but cannot access the code."
+      },
+      {
+        "id": "C",
+        "text": "The authority can, where necessary, be granted access to the source code of the AI system."
+      },
+      {
+        "id": "D",
+        "text": "The authority must sue the provider in court to get access to the source code."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Article 91 gives market surveillance authorities the power to request access to the data and documentation of the AI system, and where necessary, they can be granted access to the source code. While trade secrets are protected, this protection is not absolute and can be overridden when necessary for the purpose of market surveillance and ensuring public safety.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing a high-risk AI system and is conducting the conformity assessment itself (internal control). What is the main risk of this approach?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company will have to pay a higher fee to register the system in the EU database."
+      },
+      {
+        "id": "B",
+        "text": "The company may lack the independence and objectivity to properly assess the conformity of its own system."
+      },
+      {
+        "id": "C",
+        "text": "The company will not be able to sell the system outside the EU."
+      },
+      {
+        "id": "D",
+        "text": "The company will have to provide a longer warranty for the system."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The main risk of a conformity assessment based on internal control is the potential lack of independence and objectivity. The company may be tempted to overlook or downplay non-compliance issues to get its product to market faster. This is why for some of the most critical high-risk systems, a third-party conformity assessment by a notified body is mandatory.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "An AI system is used to create personalized study plans for students. The system is very effective for most students, but it consistently provides poor recommendations for students with learning disabilities, causing them to fall behind. The provider of the system argues that the system is not discriminatory because it does not use any data about disabilities. Is this a valid defense?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Yes, because there is no direct discrimination."
+      },
+      {
+        "id": "B",
+        "text": "No, because this is a case of indirect discrimination, which is also prohibited."
+      },
+      {
+        "id": "C",
+        "text": "Yes, as long as the provider offers a refund to the students with learning disabilities."
+      },
+      {
+        "id": "D",
+        "text": "No, because all AI systems for education are prohibited."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a classic example of indirect discrimination. Even if the system does not explicitly use data about disabilities, it may be that the features it does use are correlated with disabilities, leading to a discriminatory outcome. The EU AI Act, in conjunction with existing anti-discrimination law, prohibits both direct and indirect discrimination. The provider has a responsibility to ensure their system is fair and does not have a discriminatory impact on certain groups.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  },
+  {
+    "questionText": "A company wants to use an open-source AI model as a component in its high-risk AI system. What are the company's responsibilities regarding the open-source model?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company has no responsibilities as the model is open-source."
+      },
+      {
+        "id": "B",
+        "text": "The company must conduct a full conformity assessment of the open-source model itself."
+      },
+      {
+        "id": "C",
+        "text": "The company must ensure that the open-source model, as integrated into their system, complies with the requirements of the AI Act, and they are responsible for the overall compliance of their high-risk system."
+      },
+      {
+        "id": "D",
+        "text": "The company must get permission from the original developers of the open-source model."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "When an open-source model is integrated into a high-risk AI system, the provider of the high-risk system is responsible for the overall compliance of their product. This means they must ensure that the open-source component, as used in their system, meets the relevant requirements of the AI Act. They cannot simply assume that the open-source model is compliant. They must verify its performance and safety in the context of their own system.",
+    "difficulty": "hard",
+    "category": "EU_AI_ACT",
+    "points": 1
+  }
+]

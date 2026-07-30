@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "According to ISO 42001, what is the primary purpose of Clause 4, Context of the Organization?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To establish the AI management system (AIMS) scope and objectives."
+      },
+      {
+        "id": "B",
+        "text": "To define the roles and responsibilities of top management in relation to the AIMS."
+      },
+      {
+        "id": "C",
+        "text": "To understand the organization's internal and external issues, interested parties, and their requirements relevant to the AIMS."
+      },
+      {
+        "id": "D",
+        "text": "To outline the processes for performance evaluation and continual improvement of the AIMS."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clause 4 of ISO 42001 requires the organization to determine external and internal issues that are relevant to its purpose and that affect its ability to achieve the intended outcomes of its AIMS. It also requires the identification of interested parties and their requirements.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a key requirement of Clause 5, Leadership, in ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Conducting internal audits of the AIMS."
+      },
+      {
+        "id": "B",
+        "text": "Ensuring the integration of the AIMS requirements into the organization's business processes."
+      },
+      {
+        "id": "C",
+        "text": "Performing AI risk assessments."
+      },
+      {
+        "id": "D",
+        "text": "Managing nonconformities and corrective actions."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 5, Leadership, emphasizes the role of top management in ensuring that the AIMS is integrated into the organization's business processes. This demonstrates leadership and commitment to the AIMS.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Under ISO 42001, what is the main objective of Clause 6, Planning?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To determine the resources needed for the AIMS."
+      },
+      {
+        "id": "B",
+        "text": "To establish, implement, and maintain a process for the ongoing identification of risks and opportunities related to the AIMS."
+      },
+      {
+        "id": "C",
+        "text": "To ensure that personnel are competent on the basis of appropriate education, training, or experience."
+      },
+      {
+        "id": "D",
+        "text": "To monitor, measure, analyze, and evaluate the performance of the AIMS."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 6, Planning, requires the organization to plan actions to address risks and opportunities. This includes establishing AI objectives at relevant functions and levels.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What does Clause 7 of ISO 42001, Support, primarily address?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The operational planning and control of the AIMS."
+      },
+      {
+        "id": "B",
+        "text": "The resources, competence, awareness, communication, and documented information needed for the AIMS."
+      },
+      {
+        "id": "C",
+        "text": "The requirements for internal audits and management reviews."
+      },
+      {
+        "id": "D",
+        "text": "The processes for continual improvement of the AIMS."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 7, Support, covers the necessary support for the AIMS, including resources, competence of personnel, awareness, communication, and documented information.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following activities falls under Clause 8, Operation, of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Establishing the AI policy."
+      },
+      {
+        "id": "B",
+        "text": "Setting AI objectives."
+      },
+      {
+        "id": "C",
+        "text": "Implementing and controlling the processes needed to meet AIMS requirements."
+      },
+      {
+        "id": "D",
+        "text": "Reviewing the AIMS at planned intervals."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clause 8, Operation, is about the execution of the plans and processes that have been established in the previous clauses. It includes operational planning and control, AI risk assessment, and AI risk treatment.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What is the focus of Clause 9, Performance evaluation, in ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To ensure the availability of resources for the AIMS."
+      },
+      {
+        "id": "B",
+        "text": "To manage changes to the AIMS in a planned manner."
+      },
+      {
+        "id": "C",
+        "text": "To monitor, measure, analyze, and evaluate the performance and effectiveness of the AIMS."
+      },
+      {
+        "id": "D",
+        "text": "To define the scope of the AIMS."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clause 9, Performance evaluation, requires the organization to evaluate the performance and the effectiveness of the AIMS. This includes monitoring, measurement, analysis, evaluation, internal audit, and management review.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "According to ISO 42001, what is the purpose of Clause 10, Improvement?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To establish the context of the organization."
+      },
+      {
+        "id": "B",
+        "text": "To ensure top management demonstrates leadership and commitment."
+      },
+      {
+        "id": "C",
+        "text": "To react to nonconformities and take action to control and correct them."
+      },
+      {
+        "id": "D",
+        "text": "To determine the necessary competence of personnel."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clause 10, Improvement, deals with nonconformity, corrective action, and continual improvement. It requires the organization to react to nonconformities and take corrective actions to prevent their recurrence.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What is a key output of the AI risk assessment process as defined in ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A list of AI opportunities."
+      },
+      {
+        "id": "B",
+        "text": "A statement of applicability."
+      },
+      {
+        "id": "C",
+        "text": "A risk treatment plan."
+      },
+      {
+        "id": "D",
+        "text": "A communication plan."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The AI risk assessment process in ISO 42001 (Clause 8.2) leads to the development of an AI risk treatment plan (Clause 8.3) to address the identified risks.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a mandatory documented information requirement in ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The organization's business plan."
+      },
+      {
+        "id": "B",
+        "text": "The curriculum vitae of the AI team members."
+      },
+      {
+        "id": "C",
+        "text": "The scope of the AI management system."
+      },
+      {
+        "id": "D",
+        "text": "A list of all AI systems used in the organization."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "According to ISO 42001, Clause 4.3, the scope of the AIMS shall be available and be maintained as documented information.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary purpose of an internal audit of the AIMS as per ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To provide a basis for the selection of suppliers."
+      },
+      {
+        "id": "B",
+        "text": "To provide information on whether the AIMS conforms to the organization's own requirements and the requirements of the standard."
+      },
+      {
+        "id": "C",
+        "text": "To satisfy the requirements of external interested parties."
+      },
+      {
+        "id": "D",
+        "text": "To determine the financial budget for the AIMS."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 9.2 of ISO 42001 states that the organization shall conduct internal audits at planned intervals to provide information on whether the AIMS conforms to the organization's own requirements for its AIMS and the requirements of ISO 42001.",
+    "difficulty": "easy",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A financial services company is implementing an AI-powered chatbot to handle customer queries. As part of their ISO 42001 compliance, they need to define the scope of their AIMS. Which of the following would be the most appropriate scope statement?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AIMS applies to all activities of the company."
+      },
+      {
+        "id": "B",
+        "text": "The AIMS applies to the IT department."
+      },
+      {
+        "id": "C",
+        "text": "The AIMS applies to the development, deployment, and maintenance of the AI-powered chatbot for customer service."
+      },
+      {
+        "id": "D",
+        "text": "The AIMS applies to the company's data centers."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "This is a scenario-based question. The scope of the AIMS should be specific and relevant to the AI system being managed. Option C provides a clear and concise scope that is directly related to the AI chatbot, which is the subject of the AIMS.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "During a management review of the AIMS, which of the following inputs is most crucial for assessing the effectiveness of the system, according to Clause 9.3 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The number of employees who have received AI training."
+      },
+      {
+        "id": "B",
+        "text": "The results of internal and external audits."
+      },
+      {
+        "id": "C",
+        "text": "The marketing materials for the AI product."
+      },
+      {
+        "id": "D",
+        "text": "The latest trends in AI technology."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 9.3, Management Review, requires that the management review shall include consideration of the results of audits. Audit results provide direct evidence of the AIMS's conformity and effectiveness.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization has identified a significant risk of bias in its AI-based recruitment tool. According to ISO 42001, what would be the most appropriate next step?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Immediately stop using the recruitment tool."
+      },
+      {
+        "id": "B",
+        "text": "Develop and implement a risk treatment plan."
+      },
+      {
+        "id": "C",
+        "text": "Inform the job applicants about the potential bias."
+      },
+      {
+        "id": "D",
+        "text": "Wait for the next scheduled management review to discuss the issue."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a scenario-based question. According to Clause 8.3 of ISO 42001, after assessing AI risks, the organization shall define and implement a risk treatment plan to address the identified risks. This is a proactive approach to managing AI risks.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What is the relationship between the AI risk assessment and the AI impact assessment in ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "They are the same thing."
+      },
+      {
+        "id": "B",
+        "text": "The AI impact assessment is a part of the AI risk assessment."
+      },
+      {
+        "id": "C",
+        "text": "The AI risk assessment focuses on risks to the organization, while the AI impact assessment focuses on impacts on individuals and society."
+      },
+      {
+        "id": "D",
+        "text": "The AI risk assessment is performed by the IT department, while the AI impact assessment is performed by the legal department."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "ISO 42001 distinguishes between AI risk assessment (Clause 8.2), which is focused on risks to the organization, and AI impact assessment (Annex B.5), which is focused on the potential impacts of the AI system on individuals and society.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI system for medical diagnosis. According to ISO 42001, which of the following documentation is most critical to maintain?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The marketing plan for the AI system."
+      },
+      {
+        "id": "B",
+        "text": "The minutes of the project team's weekly meetings."
+      },
+      {
+        "id": "C",
+        "text": "The data used to train and test the AI system, including its sources and characteristics."
+      },
+      {
+        "id": "D",
+        "text": "The biographies of the data scientists who developed the AI system."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "This is a scenario-based question. For a high-risk AI system like one for medical diagnosis, maintaining detailed documentation about the data used for training and testing is crucial for transparency, accountability, and demonstrating the system's safety and effectiveness, as emphasized in Clause 7.5 and Annex B.7 of ISO 42001.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is the best example of a measurable objective for an AIMS, as per Clause 6.2 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To be the best in the industry in AI."
+      },
+      {
+        "id": "B",
+        "text": "To improve the accuracy of the AI-powered sales forecasting tool."
+      },
+      {
+        "id": "C",
+        "text": "To reduce the false positive rate of the AI-based fraud detection system to below 1% within the next six months."
+      },
+      {
+        "id": "D",
+        "text": "To ensure that all employees are aware of the organization's AI policy."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clause 6.2 of ISO 42001 requires AI objectives to be measurable. Option C is a specific, measurable, achievable, relevant, and time-bound (SMART) objective, which is a best practice for setting objectives.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization discovers a nonconformity in its AIMS during an internal audit. According to Clause 10.2 of ISO 42001, what is the first step the organization should take?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Implement a corrective action."
+      },
+      {
+        "id": "B",
+        "text": "React to the nonconformity and, as applicable, take action to control and correct it."
+      },
+      {
+        "id": "C",
+        "text": "Review the effectiveness of the corrective action taken."
+      },
+      {
+        "id": "D",
+        "text": "Make changes to the AIMS."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 10.2 of ISO 42001 specifies a sequence of actions to be taken when a nonconformity is identified. The first step is to react to the nonconformity and take immediate action to control and correct it.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company wants to ensure that its AI development team has the necessary skills to build and maintain the AIMS. Which clause of ISO 42001 provides guidance on this?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Clause 4: Context of the organization"
+      },
+      {
+        "id": "B",
+        "text": "Clause 5: Leadership"
+      },
+      {
+        "id": "C",
+        "text": "Clause 7: Support"
+      },
+      {
+        "id": "D",
+        "text": "Clause 9: Performance evaluation"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Clause 7.2, Competence, of ISO 42001 requires the organization to determine the necessary competence of person(s) doing work under its control that affects the performance and effectiveness of the AIMS and to ensure that these persons are competent.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What is the main purpose of the management review of the AIMS as required by Clause 9.3 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To ensure the continuing suitability, adequacy, and effectiveness of the AIMS."
+      },
+      {
+        "id": "B",
+        "text": "To allocate the budget for the AIMS for the next financial year."
+      },
+      {
+        "id": "C",
+        "text": "To approve the AI policy."
+      },
+      {
+        "id": "D",
+        "text": "To conduct a detailed technical review of the AI models."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Clause 9.3 of ISO 42001 states that top management shall review the organization's AIMS, at planned intervals, to ensure its continuing suitability, adequacy, and effectiveness.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company is using a third-party AI service to analyze customer data. How should the company address the risks associated with this third-party service in its AIMS, according to ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company is not responsible for the risks associated with the third-party service."
+      },
+      {
+        "id": "B",
+        "text": "The company should ensure that the third-party service provider is ISO 42001 certified."
+      },
+      {
+        "id": "C",
+        "text": "The company should include the third-party service in the scope of its AIMS and assess and treat the associated risks."
+      },
+      {
+        "id": "D",
+        "text": "The company should ask the third-party service provider to sign a non-disclosure agreement."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "This is a scenario-based question. ISO 42001 requires the organization to manage the risks associated with its AI systems, including those provided by third parties. Annex B.10 provides guidance on managing third-party relationships.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is NOT a required input for the management review of the AIMS under Clause 9.3 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The status of actions from previous management reviews."
+      },
+      {
+        "id": "B",
+        "text": "Changes in external and internal issues that are relevant to the AIMS."
+      },
+      {
+        "id": "C",
+        "text": "The individual performance reviews of the AI team members."
+      },
+      {
+        "id": "D",
+        "text": "Information on the performance and effectiveness of the AIMS, including trends in nonconformities and corrective actions."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "While the competence of personnel is important (Clause 7.2), the individual performance reviews of team members are not a required input for the management review as specified in Clause 9.3. The focus of the management review is on the performance of the AIMS as a whole.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization is implementing an AIMS and is in the process of identifying interested parties. Which of the following would be the LEAST relevant interested party to consider under Clause 4.2 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Customers and users of the AI system."
+      },
+      {
+        "id": "B",
+        "text": "Regulators and government agencies."
+      },
+      {
+        "id": "C",
+        "text": "The organization's competitors."
+      },
+      {
+        "id": "D",
+        "text": "Employees and internal stakeholders."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "While competitors are part of the business environment, their requirements are not typically considered directly in the AIMS. The focus of Clause 4.2 is on parties that have requirements relevant to the AIMS, such as customers, users, regulators, and employees.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary difference between the AI risk assessment required in Clause 6.1.2 and the operational AI risk assessment in Clause 8.2 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "There is no difference; they are the same assessment performed at different times."
+      },
+      {
+        "id": "B",
+        "text": "Clause 6.1.2 is a strategic assessment of risks and opportunities for the AIMS, while Clause 8.2 is a more detailed assessment of risks at the operational level of specific AI systems."
+      },
+      {
+        "id": "C",
+        "text": "Clause 6.1.2 is performed by top management, while Clause 8.2 is performed by the AI development team."
+      },
+      {
+        "id": "D",
+        "text": "Clause 6.1.2 focuses on financial risks, while Clause 8.2 focuses on technical risks."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Clause 6.1.2 is part of the planning process and takes a broader, strategic view of risks and opportunities for the AIMS. Clause 8.2 is part of the operational process and involves a more granular assessment of risks associated with specific AI systems and their operation.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company has implemented an AIMS for its AI-powered customer service chatbot. After a few months, they notice that the chatbot is providing incorrect information to customers. What is the most appropriate action to take according to ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Immediately take the chatbot offline and replace it with human agents."
+      },
+      {
+        "id": "B",
+        "text": "Treat the issue as a nonconformity, investigate the root cause, and take corrective action."
+      },
+      {
+        "id": "C",
+        "text": "Wait for customers to complain before taking any action."
+      },
+      {
+        "id": "D",
+        "text": "Update the chatbot's knowledge base with the correct information without any further investigation."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a scenario-based question. The incorrect information provided by the chatbot is a nonconformity. According to Clause 10.2 of ISO 42001, the organization should react to the nonconformity, evaluate the need for action to eliminate the cause(s) of the nonconformity, and implement any action needed.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is the best example of a continual improvement activity for an AIMS under Clause 10.1 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Performing the annual internal audit of the AIMS."
+      },
+      {
+        "id": "B",
+        "text": "Fixing a bug in the AI model."
+      },
+      {
+        "id": "C",
+        "text": "Analyzing the trends in customer feedback about the AI system to identify areas for enhancement."
+      },
+      {
+        "id": "D",
+        "text": "Providing the required resources for the AIMS."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Continual improvement (Clause 10.1) is about proactively enhancing the performance of the AIMS. Analyzing trends in customer feedback to identify areas for enhancement is a proactive approach to improving the AI system and the AIMS.",
+    "difficulty": "medium",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization is implementing an AI system that will have a significant impact on individuals' privacy. In this context, which of the following controls from Annex A of ISO 42001 would be most critical to implement and document?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A.2.1: AI policy"
+      },
+      {
+        "id": "B",
+        "text": "A.4.1: Resources for the AI system"
+      },
+      {
+        "id": "C",
+        "text": "A.5.5: AI system impact assessment"
+      },
+      {
+        "id": "D",
+        "text": "A.9.2: Internal audit"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Given the significant impact on individuals' privacy, conducting a thorough AI system impact assessment (A.5.5) is crucial. This assessment will help the organization understand and mitigate the potential negative impacts on privacy.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing a complex AI system for autonomous vehicles. The top management is concerned about ensuring the safety and reliability of the system. Which of the following approaches would be most effective in demonstrating leadership and commitment to the AIMS, as per Clause 5 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Delegating all responsibility for the AIMS to the IT department."
+      },
+      {
+        "id": "B",
+        "text": "Establishing a clear AI policy that emphasizes safety and ethical considerations, and actively participating in management reviews of the AIMS."
+      },
+      {
+        "id": "C",
+        "text": "Focusing solely on the financial return on investment of the AI system."
+      },
+      {
+        "id": "D",
+        "text": "Purchasing the most expensive AI development tools available on the market."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a scenario-based question. Clause 5, Leadership, requires top management to demonstrate leadership and commitment. Establishing a strong AI policy and being actively involved in the oversight of the AIMS, such as through management reviews, are key indicators of this commitment, especially for a high-risk system like autonomous vehicles.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization has implemented an AIMS for its AI-based credit scoring system. During a management review, it is found that the system is disproportionately denying credit to individuals from a certain demographic group. What is the most appropriate and comprehensive response from the organization, considering the principles of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ignore the finding, as the system is proprietary and its internal workings cannot be disclosed."
+      },
+      {
+        "id": "B",
+        "text": "Immediately suspend the use of the AI system and launch a thorough investigation into the root cause of the bias, including a review of the training data and algorithms. Implement corrective actions and re-validate the system before redeploying it."
+      },
+      {
+        "id": "C",
+        "text": "Offer a public apology but continue using the system as is."
+      },
+      {
+        "id": "D",
+        "text": "Adjust the credit scoring threshold for the affected demographic group to compensate for the bias."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a scenario-based question. The issue of bias in the AI system is a serious nonconformity with ethical and legal implications. The most appropriate response, in line with the principles of ISO 42001 (particularly Clause 10.2 on corrective action and the emphasis on fairness in Annex C), is to take immediate and thorough action to investigate and rectify the problem.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization is preparing for an external audit of its AIMS. The auditor will likely pay close attention to the link between the organization's stated AI objectives (Clause 6.2) and its performance evaluation activities (Clause 9.1). Which of the following provides the strongest evidence of this link?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A documented AI policy."
+      },
+      {
+        "id": "B",
+        "text": "A set of key performance indicators (KPIs) that are directly aligned with the AI objectives, and records of monitoring and measuring these KPIs."
+      },
+      {
+        "id": "C",
+        "text": "A list of all the AI systems in use in the organization."
+      },
+      {
+        "id": "D",
+        "text": "The minutes of the management review meetings."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "To demonstrate the effectiveness of the AIMS, there must be a clear link between what the organization wants to achieve with its AI (objectives) and how it measures its progress (performance evaluation). Having well-defined KPIs that are aligned with the objectives and regularly monitored provides strong evidence of this link.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company is implementing an AIMS and is struggling to define the appropriate level of documentation. According to ISO 42001, what is the primary factor that should determine the extent of documented information?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The size of the organization."
+      },
+      {
+        "id": "B",
+        "text": "The personal preference of the AIMS manager."
+      },
+      {
+        "id": "C",
+        "text": "The complexity of the AI systems and the risks associated with them."
+      },
+      {
+        "id": "D",
+        "text": "The requirements of the organization's marketing department."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "ISO 42001 (Clause 7.5) does not prescribe a one-size-fits-all approach to documentation. The extent of documented information should be appropriate to the complexity of the AI systems and the level of risk they pose. High-risk, complex systems will require more extensive documentation than low-risk, simple systems.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization is conducting an AI impact assessment for a new AI-powered surveillance system. Which of the following potential impacts should be given the highest priority for mitigation, according to the principles of responsible AI and ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The cost of storing the surveillance data."
+      },
+      {
+        "id": "B",
+        "text": "The potential for the system to be used for mass surveillance and the infringement of individuals' right to privacy."
+      },
+      {
+        "id": "C",
+        "text": "The need to train security personnel on how to use the new system."
+      },
+      {
+        "id": "D",
+        "text": "The potential for the system to be hacked."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a scenario-based question. While all the options are valid considerations, the potential for mass surveillance and the infringement of fundamental rights like privacy is a major ethical and societal concern. ISO 42001, through its requirement for an AI impact assessment (Annex B.5), emphasizes the importance of considering such impacts on individuals and society.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "During an internal audit of the AIMS, an auditor finds that the AI development team has been using a new open-source AI library without following the organization's change management process (Clause 6.3). What is the most significant risk associated with this finding?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The team might be violating the licensing terms of the open-source library."
+      },
+      {
+        "id": "B",
+        "text": "The new library may introduce unforeseen vulnerabilities or biases into the AI system, and the lack of a formal review process means that these risks have not been properly assessed and mitigated."
+      },
+      {
+        "id": "C",
+        "text": "The team might be wasting time by experimenting with new tools."
+      },
+      {
+        "id": "D",
+        "text": "The team might be exceeding its budget."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The change management process (Clause 6.3) is in place to ensure that changes to the AIMS and the AI systems are properly planned, assessed, and approved. Bypassing this process can introduce significant risks, such as security vulnerabilities, performance issues, or ethical problems like bias, without proper oversight.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization is trying to foster a culture of continual improvement for its AIMS. Which of the following actions by top management would be most effective in promoting this culture, in line with Clause 10.1 of ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Punishing employees who make mistakes or report problems."
+      },
+      {
+        "id": "B",
+        "text": "Encouraging and empowering employees to identify and suggest improvements, and providing them with the resources to implement them."
+      },
+      {
+        "id": "C",
+        "text": "Making changes to the AIMS only when absolutely necessary to avoid disruption."
+      },
+      {
+        "id": "D",
+        "text": "Setting unrealistic improvement targets that are impossible to achieve."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A culture of continual improvement thrives on openness, empowerment, and a proactive approach to finding better ways of working. Top management plays a crucial role in fostering this culture by encouraging employee involvement, providing support for improvement initiatives, and creating a safe environment for reporting problems and suggesting solutions.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "An organization is implementing an AIMS and needs to establish a process for AI risk treatment. According to ISO 42001 (Clause 8.3), which of the following is NOT a valid risk treatment option?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Avoiding the risk by deciding not to start or continue with the activity that gives rise to the risk."
+      },
+      {
+        "id": "B",
+        "text": "Accepting the risk by informed decision."
+      },
+      {
+        "id": "C",
+        "text": "Ignoring the risk and hoping it will not materialize."
+      },
+      {
+        "id": "D",
+        "text": "Modifying the risk by changing the likelihood or consequences."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Ignoring a risk is not a valid risk treatment option under ISO 42001 or any other recognized risk management framework. Risk treatment requires a conscious and deliberate decision to avoid, accept, modify, or share the risk.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  },
+  {
+    "questionText": "A company has developed a sophisticated AI algorithm for stock market trading. The algorithm is a black box, meaning that its decisions are not easily explainable. How does this lack of explainability pose a challenge for conforming to ISO 42001?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It does not pose any challenge, as long as the algorithm is profitable."
+      },
+      {
+        "id": "B",
+        "text": "It makes it difficult to assess the risks associated with the algorithm, to conduct meaningful audits and reviews, and to ensure accountability."
+      },
+      {
+        "id": "C",
+        "text": "It is a problem only if the company's competitors have explainable AI algorithms."
+      },
+      {
+        "id": "D",
+        "text": "It is a technical issue that is outside the scope of the AIMS."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is a scenario-based question. Explainability is a key aspect of trustworthy AI. A lack of explainability in a high-stakes application like stock market trading makes it very difficult to manage the risks effectively, as required by ISO 42001. It hinders the ability to understand why the system makes certain decisions, which is crucial for risk assessment, auditing, and accountability.",
+    "difficulty": "hard",
+    "category": "ISO_42001",
+    "points": 1
+  }
+]

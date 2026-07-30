@@ -1,0 +1,33 @@
+{
+  "query": "SELECT * FROM courses WHERE framework = 'EU AI Act' LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM courses WHERE framework = 'EU AI Act' LIMIT 1;",
+  "rows": [
+    {
+      "id": "1",
+      "regionId": "1",
+      "title": "EU AI Act Fundamentals",
+      "description": "Comprehensive overview of the EU AI Act including risk-based approach, prohibited practices, and transparency obligations",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "4",
+      "price": "9900",
+      "stripePriceId": "price_1SiAxLDuEg5HakgPkqfItPFo",
+      "modules": "NULL",
+      "prerequisites": "NULL",
+      "certificationRequired": "0",
+      "active": "1",
+      "createdAt": "2025-12-25 06:20:54",
+      "updatedAt": "2025-12-25 09:39:42",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId3Month": "price_1SiAxLDuEg5HakgPcVVlPUwq",
+      "stripePriceId6Month": "price_1SiAxMDuEg5HakgPTLH15YfL",
+      "stripePriceId12Month": "price_1SiAxMDuEg5HakgPS08f4MyT"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tregionId\ttitle\tdescription\tframework\tlevel\tdurationHours\tprice\tstripePriceId\tmodules\tprerequisites\tcertificationRequired\tactive\tcreatedAt\tupdatedAt\tprice3Month\tprice6Month\tprice12Month\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\n1\t1\tEU AI Act Fundamentals\tComprehensive overview of the EU AI Act including risk-based approach, prohibited practices, and transparency obligations\tEU AI Act\tfundamentals\t4\t9900\tprice_1SiAxLDuEg5HakgPkqfItPFo\tNULL\tNULL\t0\t1\t2025-12-25 06:20:54\t2025-12-25 09:39:42\tNULL\tNULL\tNULL\tprice_1SiAxLDuEg5HakgPcVVlPUwq\tprice_1SiAxMDuEg5HakgPTLH15YfL\tprice_1SiAxMDuEg5HakgPS08f4MyT\n",
+  "stderr": "",
+  "execution_time_ms": 130
+}

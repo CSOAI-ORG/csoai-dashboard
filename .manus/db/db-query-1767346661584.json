@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO coupons (code, description, discountType, discountValue, maxUses, usedCount, active) \nVALUES ('FOUNDING10K', 'First 10,000 signups get FREE access to all courses', 'percentage', 100.00, 10000, 0, 1)\nON DUPLICATE KEY UPDATE description='First 10,000 signups get FREE access to all courses'",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO coupons (code, description, discountType, discountValue, maxUses, usedCount, active) \nVALUES ('FOUNDING10K', 'First 10,000 signups get FREE access to all courses', 'percentage', 100.00, 10000, 0, 1)\nON DUPLICATE KEY UPDATE description='First 10,000 signups get FREE access to all courses'",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 405
+}

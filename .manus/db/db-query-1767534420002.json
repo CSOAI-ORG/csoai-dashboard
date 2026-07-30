@@ -1,0 +1,45 @@
+{
+  "query": "SELECT e.id, e.userId, e.bundleId, b.id as bundle_table_id, b.name as bundle_name FROM course_enrollments e LEFT JOIN course_bundles b ON e.bundleId = b.id WHERE e.bundleId IS NOT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT e.id, e.userId, e.bundleId, b.id as bundle_table_id, b.name as bundle_name FROM course_enrollments e LEFT JOIN course_bundles b ON e.bundleId = b.id WHERE e.bundleId IS NOT NULL;",
+  "rows": [
+    {
+      "id": "330035",
+      "userId": "1",
+      "bundleId": "1",
+      "bundle_table_id": "NULL",
+      "bundle_name": "NULL"
+    },
+    {
+      "id": "330036",
+      "userId": "900016",
+      "bundleId": "1",
+      "bundle_table_id": "NULL",
+      "bundle_name": "NULL"
+    },
+    {
+      "id": "330037",
+      "userId": "900022",
+      "bundleId": "1",
+      "bundle_table_id": "NULL",
+      "bundle_name": "NULL"
+    },
+    {
+      "id": "330038",
+      "userId": "900014",
+      "bundleId": "1",
+      "bundle_table_id": "NULL",
+      "bundle_name": "NULL"
+    },
+    {
+      "id": "330039",
+      "userId": "1",
+      "bundleId": "1",
+      "bundle_table_id": "NULL",
+      "bundle_name": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tbundleId\tbundle_table_id\tbundle_name\n330035\t1\t1\tNULL\tNULL\n330036\t900016\t1\tNULL\tNULL\n330037\t900022\t1\tNULL\tNULL\n330038\t900014\t1\tNULL\tNULL\n330039\t1\t1\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 405
+}

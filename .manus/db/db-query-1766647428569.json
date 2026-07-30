@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE courses \nADD COLUMN price3Month INT NULL,\nADD COLUMN price6Month INT NULL,\nADD COLUMN price12Month INT NULL,\nADD COLUMN stripePriceId3Month VARCHAR(255) NULL,\nADD COLUMN stripePriceId6Month VARCHAR(255) NULL,\nADD COLUMN stripePriceId12Month VARCHAR(255) NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute ALTER TABLE courses \nADD COLUMN price3Month INT NULL,\nADD COLUMN price6Month INT NULL,\nADD COLUMN price12Month INT NULL,\nADD COLUMN stripePriceId3Month VARCHAR(255) NULL,\nADD COLUMN stripePriceId6Month VARCHAR(255) NULL,\nADD COLUMN stripePriceId12Month VARCHAR(255) NULL;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1724
+}

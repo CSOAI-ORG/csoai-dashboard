@@ -1,0 +1,376 @@
+{
+  "query": "SELECT id, title, framework, active FROM courses ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, active FROM courses ORDER BY id;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU_AI_ACT",
+      "active": "1"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST_AI_RMF",
+      "active": "1"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "framework": "UK_AI_SAFETY",
+      "active": "1"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "framework": "CANADA_AIDA",
+      "active": "1"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "framework": "AUSTRALIA_AI",
+      "active": "1"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard",
+      "framework": "ISO_42001",
+      "active": "1"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework",
+      "framework": "TC260",
+      "active": "1"
+    },
+    {
+      "id": "660001",
+      "title": "Test Analytics Course",
+      "framework": "eu-ai-act",
+      "active": "0"
+    },
+    {
+      "id": "660004",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "0"
+    },
+    {
+      "id": "660005",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "0"
+    },
+    {
+      "id": "660006",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "0"
+    },
+    {
+      "id": "690002",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "0"
+    },
+    {
+      "id": "690003",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "0"
+    },
+    {
+      "id": "690004",
+      "title": "Test Analytics Course",
+      "framework": "eu-ai-act",
+      "active": "0"
+    },
+    {
+      "id": "690006",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690007",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690009",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690010",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690012",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690014",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690015",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690017",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690018",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690020",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690021",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690023",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690024",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690026",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690027",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690029",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690030",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690032",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690033",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690035",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690036",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690038",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690039",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690041",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690042",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690043",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690045",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690046",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690048",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690049",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690051",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690052",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690054",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690055",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690057",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690058",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690060",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690061",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690063",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690064",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690066",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690067",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690069",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690070",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690071",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690073",
+      "title": "Test Course for Lessons",
+      "framework": "EU AI Act",
+      "active": "1"
+    },
+    {
+      "id": "690074",
+      "title": "Test Course for Forums",
+      "framework": "EU AI Act",
+      "active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tactive\n100001\tEU AI Act Fundamentals\tEU_AI_ACT\t1\n100002\tNIST AI RMF Fundamentals\tNIST_AI_RMF\t1\n100003\tUK AI Safety Institute Framework\tUK_AI_SAFETY\t1\n100004\tCanada AIDA Compliance\tCANADA_AIDA\t1\n100005\tAustralia AI Ethics Framework\tAUSTRALIA_AI\t1\n100006\tISO 42001 International Standard\tISO_42001\t1\n100007\tChina TC260 AI Framework\tTC260\t1\n660001\tTest Analytics Course\teu-ai-act\t0\n660004\tTest Course for Lessons\tEU AI Act\t0\n660005\tTest Course for Forums\tEU AI Act\t0\n660006\tTest Course for Lessons\tEU AI Act\t0\n690002\tTest Course for Lessons\tEU AI Act\t0\n690003\tTest Course for Forums\tEU AI Act\t0\n690004\tTest Analytics Course\teu-ai-act\t0\n690006\tTest Course for Lessons\tEU AI Act\t1\n690007\tTest Course for Forums\tEU AI Act\t1\n690009\tTest Course for Lessons\tEU AI Act\t1\n690010\tTest Course for Forums\tEU AI Act\t1\n690012\tTest Course for Lessons\tEU AI Act\t1\n690014\tTest Course for Lessons\tEU AI Act\t1\n690015\tTest Course for Forums\tEU AI Act\t1\n690017\tTest Course for Lessons\tEU AI Act\t1\n690018\tTest Course for Forums\tEU AI Act\t1\n690020\tTest Course for Lessons\tEU AI Act\t1\n690021\tTest Course for Forums\tEU AI Act\t1\n690023\tTest Course for Lessons\tEU AI Act\t1\n690024\tTest Course for Forums\tEU AI Act\t1\n690026\tTest Course for Lessons\tEU AI Act\t1\n690027\tTest Course for Forums\tEU AI Act\t1\n690029\tTest Course for Lessons\tEU AI Act\t1\n690030\tTest Course for Forums\tEU AI Act\t1\n690032\tTest Course for Lessons\tEU AI Act\t1\n690033\tTest Course for Forums\tEU AI Act\t1\n690035\tTest Course for Lessons\tEU AI Act\t1\n690036\tTest Course for Forums\tEU AI Act\t1\n690038\tTest Course for Lessons\tEU AI Act\t1\n690039\tTest Course for Forums\tEU AI Act\t1\n690041\tTest Course for Lessons\tEU AI Act\t1\n690042\tTest Course for Forums\tEU AI Act\t1\n690043\tTest Course for Forums\tEU AI Act\t1\n690045\tTest Course for Lessons\tEU AI Act\t1\n690046\tTest Course for Forums\tEU AI Act\t1\n690048\tTest Course for Lessons\tEU AI Act\t1\n690049\tTest Course for Forums\tEU AI Act\t1\n690051\tTest Course for Lessons\tEU AI Act\t1\n690052\tTest Course for Forums\tEU AI Act\t1\n690054\tTest Course for Lessons\tEU AI Act\t1\n690055\tTest Course for Forums\tEU AI Act\t1\n690057\tTest Course for Lessons\tEU AI Act\t1\n690058\tTest Course for Forums\tEU AI Act\t1\n690060\tTest Course for Lessons\tEU AI Act\t1\n690061\tTest Course for Forums\tEU AI Act\t1\n690063\tTest Course for Lessons\tEU AI Act\t1\n690064\tTest Course for Forums\tEU AI Act\t1\n690066\tTest Course for Lessons\tEU AI Act\t1\n690067\tTest Course for Forums\tEU AI Act\t1\n690069\tTest Course for Lessons\tEU AI Act\t1\n690070\tTest Course for Forums\tEU AI Act\t1\n690071\tTest Course for Forums\tEU AI Act\t1\n690073\tTest Course for Lessons\tEU AI Act\t1\n690074\tTest Course for Forums\tEU AI Act\t1\n",
+  "stderr": "",
+  "execution_time_ms": 210
+}

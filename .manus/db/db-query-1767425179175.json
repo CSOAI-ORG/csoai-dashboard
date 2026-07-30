@@ -1,0 +1,45 @@
+{
+  "query": "SELECT id, regionId, title FROM courses LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, regionId, title FROM courses LIMIT 10",
+  "rows": [
+    {
+      "id": "100001",
+      "regionId": "1",
+      "title": "EU AI Act Fundamentals"
+    },
+    {
+      "id": "100002",
+      "regionId": "2",
+      "title": "NIST AI RMF Fundamentals"
+    },
+    {
+      "id": "100003",
+      "regionId": "3",
+      "title": "UK AI Safety Institute Framework"
+    },
+    {
+      "id": "100004",
+      "regionId": "4",
+      "title": "Canada AIDA Compliance"
+    },
+    {
+      "id": "100005",
+      "regionId": "5",
+      "title": "Australia AI Ethics Framework"
+    },
+    {
+      "id": "100006",
+      "regionId": "6",
+      "title": "ISO 42001 International Standard"
+    },
+    {
+      "id": "100007",
+      "regionId": "7",
+      "title": "China TC260 AI Framework"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tregionId\ttitle\n100001\t1\tEU AI Act Fundamentals\n100002\t2\tNIST AI RMF Fundamentals\n100003\t3\tUK AI Safety Institute Framework\n100004\t4\tCanada AIDA Compliance\n100005\t5\tAustralia AI Ethics Framework\n100006\t6\tISO 42001 International Standard\n100007\t7\tChina TC260 AI Framework\n",
+  "stderr": "",
+  "execution_time_ms": 1535
+}

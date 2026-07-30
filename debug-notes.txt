@@ -1,0 +1,18 @@
+# My Courses Bug Analysis
+
+## Issue:
+- The My Courses page shows duplicate "EU AI Act Fundamentals" entries (3 visible)
+- Says "7 Total Courses" but only showing duplicates of the same course
+- User wants ONLY 7 modules + 2 bundles showing
+
+## Root Cause:
+- The getMyEnrollments query returns ALL enrollments for the user
+- Multiple enrollments exist for the same course (duplicate enrollments in DB)
+- Need to either:
+  1. Deduplicate enrollments by courseId in the query
+  2. Or filter to show only unique courses
+
+## Solution:
+- Modify the MyCourses.tsx to deduplicate enrollments by courseId
+- Show only the most recent enrollment per course
+- Also need to fix mobile menu UX with clear hamburger/close button

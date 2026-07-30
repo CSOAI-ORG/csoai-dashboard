@@ -1,0 +1,25 @@
+{
+  "query": "SELECT f.code, f.name, COUNT(r.id) as requirement_count FROM frameworks f LEFT JOIN requirements r ON f.id = r.frameworkId GROUP BY f.id, f.code, f.name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT f.code, f.name, COUNT(r.id) as requirement_count FROM frameworks f LEFT JOIN requirements r ON f.id = r.frameworkId GROUP BY f.id, f.code, f.name;",
+  "rows": [
+    {
+      "code": "EU_AI_ACT",
+      "name": "EU AI Act",
+      "requirement_count": "12"
+    },
+    {
+      "code": "NIST_RMF",
+      "name": "NIST AI RMF",
+      "requirement_count": "15"
+    },
+    {
+      "code": "TC260",
+      "name": "TC260 AI Safety Framework",
+      "requirement_count": "29"
+    }
+  ],
+  "messages": [],
+  "stdout": "code\tname\trequirement_count\nEU_AI_ACT\tEU AI Act\t12\nNIST_RMF\tNIST AI RMF\t15\nTC260\tTC260 AI Safety Framework\t29\n",
+  "stderr": "",
+  "execution_time_ms": 63
+}

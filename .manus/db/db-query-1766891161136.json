@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, title, active, framework FROM courses LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, active, framework FROM courses LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "active": "1",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "active": "1",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "active": "1",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "active": "1",
+      "framework": "EU AI Act"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "active": "1",
+      "framework": "NIST AI RMF"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tactive\tframework\n1\tEU AI Act Fundamentals\t1\tEU AI Act\n2\tHigh-Risk AI Systems\t1\tEU AI Act\n3\tEU AI Act Conformity Assessment\t1\tEU AI Act\n4\tEU AI Act for Deployers\t1\tEU AI Act\n5\tNIST AI RMF Fundamentals\t1\tNIST AI RMF\n",
+  "stderr": "",
+  "execution_time_ms": 106
+}

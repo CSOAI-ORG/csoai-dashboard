@@ -1,0 +1,34 @@
+{
+  "query": "SELECT u.id, u.name, u.email, COUNT(DISTINCT ce.id) as bundle_count FROM users u INNER JOIN course_enrollments ce ON u.id = ce.userId WHERE ce.bundleId IS NOT NULL GROUP BY u.id, u.name, u.email;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT u.id, u.name, u.email, COUNT(DISTINCT ce.id) as bundle_count FROM users u INNER JOIN course_enrollments ce ON u.id = ce.userId WHERE ce.bundleId IS NOT NULL GROUP BY u.id, u.name, u.email;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Nick Templeman",
+      "email": "nicholastempleman@gmail.com",
+      "bundle_count": "2"
+    },
+    {
+      "id": "900014",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336209@test.com",
+      "bundle_count": "1"
+    },
+    {
+      "id": "900016",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336285@test.com",
+      "bundle_count": "1"
+    },
+    {
+      "id": "900022",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336485@test.com",
+      "bundle_count": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\temail\tbundle_count\n1\tNick Templeman\tnicholastempleman@gmail.com\t2\n900014\tProgress Test User\tprogress-test-1766678336209@test.com\t1\n900016\tProgress Test User\tprogress-test-1766678336285@test.com\t1\n900022\tProgress Test User\tprogress-test-1766678336485@test.com\t1\n",
+  "stderr": "",
+  "execution_time_ms": 415
+}

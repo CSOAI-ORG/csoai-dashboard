@@ -1,0 +1,1 @@
+ALTER TABLE `agent_votes` MODIFY COLUMN `agentProvider` enum('openai','anthropic','google','kimi','deepseek') NOT NULL;

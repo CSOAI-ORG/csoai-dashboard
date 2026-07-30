@@ -1,0 +1,111 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1766571150531,
+      "tag": "0000_modern_invisible_woman",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1766577861814,
+      "tag": "0001_lying_wallflower",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1766585923590,
+      "tag": "0002_rare_excalibur",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1766634011089,
+      "tag": "0003_noisy_morbius",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1766643531529,
+      "tag": "0004_premium_skrulls",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1766647169475,
+      "tag": "0005_graceful_sphinx",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1766675247913,
+      "tag": "0006_cooing_star_brand",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1766677944941,
+      "tag": "0007_fast_nextwave",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1766726098442,
+      "tag": "0008_classy_anthem",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1766727515352,
+      "tag": "0009_worthless_leper_queen",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1766728145351,
+      "tag": "0010_strong_wallflower",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1766729862310,
+      "tag": "0011_even_champions",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1766752111751,
+      "tag": "0012_amusing_doctor_faustus",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1766756860921,
+      "tag": "0013_massive_doomsday",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1767437683314,
+      "tag": "0014_flimsy_sandman",
+      "breakpoints": true
+    }
+  ]
+}

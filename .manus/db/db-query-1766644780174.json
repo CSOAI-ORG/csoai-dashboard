@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS founding_members (\n  id SERIAL PRIMARY KEY,\n  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,\n  membership_number VARCHAR(50) UNIQUE NOT NULL,\n  purchased_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  lifetime_access BOOLEAN DEFAULT TRUE,\n  equity_allocation DECIMAL(5,4),\n  referral_code VARCHAR(50) UNIQUE NOT NULL\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS founding_members (\n  id SERIAL PRIMARY KEY,\n  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,\n  membership_number VARCHAR(50) UNIQUE NOT NULL,\n  purchased_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  lifetime_access BOOLEAN DEFAULT TRUE,\n  equity_allocation DECIMAL(5,4),\n  referral_code VARCHAR(50) UNIQUE NOT NULL\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 276
+}

@@ -1,0 +1,8 @@
+{
+  "query": "INSERT INTO coupons (code, description, discountType, discountValue, maxUses, usedCount, active, expiresAt) VALUES ('FOUNDING10K', 'Founding member offer - Free training for first 10,000 users', 'percentage', 100.00, 10000, 0, 1, NULL);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO coupons (code, description, discountType, discountValue, maxUses, usedCount, active, expiresAt) VALUES ('FOUNDING10K', 'Founding member offer - Free training for first 10,000 users', 'percentage', 100.00, 10000, 0, 1, NULL);",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1062 (23000) at line 1: Duplicate entry '?' for key 'coupons.code'"
+  ]
+}

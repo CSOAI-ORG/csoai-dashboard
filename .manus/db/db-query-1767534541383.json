@@ -1,0 +1,38 @@
+{
+  "query": "SELECT u.id, u.name, u.email, (SELECT COUNT(*) FROM course_enrollments WHERE userId = u.id AND courseId IS NOT NULL) as courses, (SELECT COUNT(*) FROM course_enrollments WHERE userId = u.id AND bundleId IS NOT NULL) as bundles FROM users u WHERE u.name LIKE '%Admin%' ORDER BY u.id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT u.id, u.name, u.email, (SELECT COUNT(*) FROM course_enrollments WHERE userId = u.id AND courseId IS NOT NULL) as courses, (SELECT COUNT(*) FROM course_enrollments WHERE userId = u.id AND bundleId IS NOT NULL) as bundles FROM users u WHERE u.name LIKE '%Admin%' ORDER BY u.id;",
+  "rows": [
+    {
+      "id": "2220364",
+      "name": "Test Admin",
+      "email": "admin_promo@test.com",
+      "courses": "0",
+      "bundles": "0"
+    },
+    {
+      "id": "2220365",
+      "name": "Test Admin",
+      "email": "admin_promo@test.com",
+      "courses": "0",
+      "bundles": "0"
+    },
+    {
+      "id": "2310062",
+      "name": "Test Admin",
+      "email": "admin_promo@test.com",
+      "courses": "0",
+      "bundles": "0"
+    },
+    {
+      "id": "2310112",
+      "name": "Test Admin",
+      "email": "admin_promo@test.com",
+      "courses": "0",
+      "bundles": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\temail\tcourses\tbundles\n2220364\tTest Admin\tadmin_promo@test.com\t0\t0\n2220365\tTest Admin\tadmin_promo@test.com\t0\t0\n2310062\tTest Admin\tadmin_promo@test.com\t0\t0\n2310112\tTest Admin\tadmin_promo@test.com\t0\t0\n",
+  "stderr": "",
+  "execution_time_ms": 409
+}

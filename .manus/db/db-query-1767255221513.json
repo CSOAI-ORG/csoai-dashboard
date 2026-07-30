@@ -1,0 +1,178 @@
+{
+  "query": "SELECT id, title, LEFT(description, 100) as short_desc, price, level FROM courses WHERE active = 1 ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, LEFT(description, 100) as short_desc, price, level FROM courses WHERE active = 1 ORDER BY id;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "short_desc": "Comprehensive overview of the EU AI Act including risk-based approach, prohibited practices, and tra",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "short_desc": "Deep dive into Annex III use cases, conformity assessment procedures, technical documentation, and r",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "short_desc": "Master the CE marking process, notified body involvement, self-assessment vs third-party assessment,",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "short_desc": "Learn deployer obligations (Article 26), human oversight requirements, fundamental rights impact ass",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "short_desc": "Introduction to the four functions: Govern, Map, Measure, Manage, AI risk categories, and trustworth",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "short_desc": "Build organizational AI governance structures, define roles and responsibilities, create AI policies",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "short_desc": "Master AI system testing and evaluation, bias detection and mitigation, performance metrics, and con",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "short_desc": "Navigate Executive Order 14110, OMB AI guidance, and sector-specific regulations in healthcare, fina",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "9",
+      "title": "UK AI Safety Institute Overview",
+      "short_desc": "Understand the pro-innovation regulatory approach, five cross-sectoral principles, and AI Safety Ins",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "10",
+      "title": "AI Safety Evaluation",
+      "short_desc": "Learn frontier AI safety testing, red teaming methodologies, and capability assessments",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "11",
+      "title": "Sector-Specific AI Guidance",
+      "short_desc": "Master healthcare AI (MHRA), financial services AI (FCA/PRA), and public sector AI (CDEI) guidance",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "12",
+      "title": "AIDA Fundamentals",
+      "short_desc": "Introduction to Canada Artificial Intelligence and Data Act, key obligations, and compliance require",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "13",
+      "title": "AI Impact Assessment",
+      "short_desc": "Learn to conduct AI impact assessments, identify risks, and implement mitigation strategies under AI",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "14",
+      "title": "AI Ethics Framework Fundamentals",
+      "short_desc": "Understand Australia AI Ethics Framework, voluntary safety standards, and responsible AI principles",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "15",
+      "title": "AI Safety Standard Implementation",
+      "short_desc": "Implement Australia Voluntary AI Safety Standard in your organization",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "60001",
+      "title": "EU AI Act Fundamentals",
+      "short_desc": "Comprehensive 8-module course covering the EU AI Act regulation. Learn prohibited practices, high-ri",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "90001",
+      "title": "NIST AI RMF Fundamentals",
+      "short_desc": "Master the NIST AI Risk Management Framework with comprehensive training on the four core functions ",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "short_desc": "Comprehensive training on ISO/IEC 42001:2023 - the world's first international standard for AI manag",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "540001",
+      "title": "EU AI Act Fundamentals",
+      "short_desc": "Master the basics of the EU AI Act, the world's first comprehensive AI regulation. Learn risk classi",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "540002",
+      "title": "EU AI Act Advanced",
+      "short_desc": "Deep dive into advanced topics of the EU AI Act including transparency requirements, documentation, ",
+      "price": "99900",
+      "level": "advanced"
+    },
+    {
+      "id": "540003",
+      "title": "EU AI Act Specialist",
+      "short_desc": "Expert-level course covering sector-specific applications, edge cases, and strategic compliance for ",
+      "price": "199900",
+      "level": "specialist"
+    },
+    {
+      "id": "540004",
+      "title": "NIST AI Risk Management Framework Fundamentals",
+      "short_desc": "Learn the NIST AI RMF approach to managing AI risks. Understand the four functions: MAP, MEASURE, MA",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "540005",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "short_desc": "Master the ISO 42001 standard for AI management systems. Learn requirements, implementation, and cer",
+      "price": "49900",
+      "level": "fundamentals"
+    },
+    {
+      "id": "540006",
+      "title": "CEASA AI Safety Fundamentals",
+      "short_desc": "Comprehensive introduction to AI safety principles, techniques, and best practices.",
+      "price": "49900",
+      "level": "fundamentals"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tshort_desc\tprice\tlevel\n1\tEU AI Act Fundamentals\tComprehensive overview of the EU AI Act including risk-based approach, prohibited practices, and tra\t49900\tfundamentals\n2\tHigh-Risk AI Systems\tDeep dive into Annex III use cases, conformity assessment procedures, technical documentation, and r\t99900\tadvanced\n3\tEU AI Act Conformity Assessment\tMaster the CE marking process, notified body involvement, self-assessment vs third-party assessment,\t99900\tadvanced\n4\tEU AI Act for Deployers\tLearn deployer obligations (Article 26), human oversight requirements, fundamental rights impact ass\t99900\tadvanced\n5\tNIST AI RMF Fundamentals\tIntroduction to the four functions: Govern, Map, Measure, Manage, AI risk categories, and trustworth\t49900\tfundamentals\n6\tAI Risk Governance\tBuild organizational AI governance structures, define roles and responsibilities, create AI policies\t99900\tadvanced\n7\tAI Risk Assessment & Measurement\tMaster AI system testing and evaluation, bias detection and mitigation, performance metrics, and con\t99900\tadvanced\n8\tFederal AI Regulations\tNavigate Executive Order 14110, OMB AI guidance, and sector-specific regulations in healthcare, fina\t99900\tadvanced\n9\tUK AI Safety Institute Overview\tUnderstand the pro-innovation regulatory approach, five cross-sectoral principles, and AI Safety Ins\t49900\tfundamentals\n10\tAI Safety Evaluation\tLearn frontier AI safety testing, red teaming methodologies, and capability assessments\t99900\tadvanced\n11\tSector-Specific AI Guidance\tMaster healthcare AI (MHRA), financial services AI (FCA/PRA), and public sector AI (CDEI) guidance\t99900\tadvanced\n12\tAIDA Fundamentals\tIntroduction to Canada Artificial Intelligence and Data Act, key obligations, and compliance require\t49900\tfundamentals\n13\tAI Impact Assessment\tLearn to conduct AI impact assessments, identify risks, and implement mitigation strategies under AI\t99900\tadvanced\n14\tAI Ethics Framework Fundamentals\tUnderstand Australia AI Ethics Framework, voluntary safety standards, and responsible AI principles\t49900\tfundamentals\n15\tAI Safety Standard Implementation\tImplement Australia Voluntary AI Safety Standard in your organization\t99900\tadvanced\n60001\tEU AI Act Fundamentals\tComprehensive 8-module course covering the EU AI Act regulation. Learn prohibited practices, high-ri\t49900\tfundamentals\n90001\tNIST AI RMF Fundamentals\tMaster the NIST AI Risk Management Framework with comprehensive training on the four core functions \t49900\tfundamentals\n120001\tISO 42001 AI Management System Fundamentals\tComprehensive training on ISO/IEC 42001:2023 - the world's first international standard for AI manag\t49900\tfundamentals\n540001\tEU AI Act Fundamentals\tMaster the basics of the EU AI Act, the world's first comprehensive AI regulation. Learn risk classi\t49900\tfundamentals\n540002\tEU AI Act Advanced\tDeep dive into advanced topics of the EU AI Act including transparency requirements, documentation, \t99900\tadvanced\n540003\tEU AI Act Specialist\tExpert-level course covering sector-specific applications, edge cases, and strategic compliance for \t199900\tspecialist\n540004\tNIST AI Risk Management Framework Fundamentals\tLearn the NIST AI RMF approach to managing AI risks. Understand the four functions: MAP, MEASURE, MA\t49900\tfundamentals\n540005\tISO 42001 AI Management System Fundamentals\tMaster the ISO 42001 standard for AI management systems. Learn requirements, implementation, and cer\t49900\tfundamentals\n540006\tCEASA AI Safety Fundamentals\tComprehensive introduction to AI safety principles, techniques, and best practices.\t49900\tfundamentals\n",
+  "stderr": "",
+  "execution_time_ms": 62
+}

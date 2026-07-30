@@ -1,0 +1,85 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "agent_votes"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "ai_systems"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_decisions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "analyst_performance"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "api_keys"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessment_items"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "assessments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "audit_logs"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "case_assignments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "certification_tests"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "council_sessions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "frameworks"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "organizations"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "pdca_cycles"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "requirements"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "test_questions"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "training_modules"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_certificates"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_test_attempts"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "user_training_progress"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "users"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_applications"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_comments"
+    },
+    {
+      "Tables_in_K34VNBtbDJyjtW8qhrCBdB": "watchdog_reports"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_K34VNBtbDJyjtW8qhrCBdB\n__drizzle_migrations\nagent_votes\nai_systems\nanalyst_decisions\nanalyst_performance\napi_keys\nassessment_items\nassessments\naudit_logs\ncase_assignments\ncertification_tests\ncouncil_sessions\nframeworks\norganizations\npdca_cycles\nrequirements\ntest_questions\ntraining_modules\nuser_certificates\nuser_test_attempts\nuser_training_progress\nusers\nwatchdog_applications\nwatchdog_comments\nwatchdog_reports\n",
+  "stderr": "",
+  "execution_time_ms": 49
+}

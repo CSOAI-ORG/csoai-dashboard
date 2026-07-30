@@ -1,0 +1,42 @@
+{
+  "query": "SELECT DISTINCT framework, COUNT(*) as count FROM courses GROUP BY framework;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT DISTINCT framework, COUNT(*) as count FROM courses GROUP BY framework;",
+  "rows": [
+    {
+      "framework": "ISO 42001",
+      "count": "1"
+    },
+    {
+      "framework": "CEASA",
+      "count": "1"
+    },
+    {
+      "framework": "UK AI Safety Institute",
+      "count": "3"
+    },
+    {
+      "framework": "AIDA",
+      "count": "2"
+    },
+    {
+      "framework": "EU AI Act",
+      "count": "56"
+    },
+    {
+      "framework": "NIST AI RMF",
+      "count": "6"
+    },
+    {
+      "framework": "iso_42001",
+      "count": "1"
+    },
+    {
+      "framework": "AI Ethics Framework",
+      "count": "2"
+    }
+  ],
+  "messages": [],
+  "stdout": "framework\tcount\nISO 42001\t1\nCEASA\t1\nUK AI Safety Institute\t3\nAIDA\t2\nEU AI Act\t56\nNIST AI RMF\t6\niso_42001\t1\nAI Ethics Framework\t2\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

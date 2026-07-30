@@ -1,0 +1,38 @@
+{
+  "query": "SELECT id, userId, bundleId, enrollmentType, paymentStatus FROM course_enrollments WHERE bundleId IS NOT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, userId, bundleId, enrollmentType, paymentStatus FROM course_enrollments WHERE bundleId IS NOT NULL;",
+  "rows": [
+    {
+      "id": "330035",
+      "userId": "1",
+      "bundleId": "1",
+      "enrollmentType": "bundle",
+      "paymentStatus": "completed"
+    },
+    {
+      "id": "330036",
+      "userId": "900016",
+      "bundleId": "1",
+      "enrollmentType": "bundle",
+      "paymentStatus": "completed"
+    },
+    {
+      "id": "330037",
+      "userId": "900022",
+      "bundleId": "1",
+      "enrollmentType": "bundle",
+      "paymentStatus": "completed"
+    },
+    {
+      "id": "330038",
+      "userId": "900014",
+      "bundleId": "1",
+      "enrollmentType": "bundle",
+      "paymentStatus": "completed"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tbundleId\tenrollmentType\tpaymentStatus\n330035\t1\t1\tbundle\tcompleted\n330036\t900016\t1\tbundle\tcompleted\n330037\t900022\t1\tbundle\tcompleted\n330038\t900014\t1\tbundle\tcompleted\n",
+  "stderr": "",
+  "execution_time_ms": 399
+}

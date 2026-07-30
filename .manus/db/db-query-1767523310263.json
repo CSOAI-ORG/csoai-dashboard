@@ -1,0 +1,130 @@
+{
+  "query": "SELECT id, title, price, price3Month, price6Month, price12Month, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM courses LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, price, price3Month, price6Month, price12Month, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM courses LIMIT 10;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC1uDuEg5HakgPeb4AHmzf",
+      "stripePriceId3Month": "price_1SlC1uDuEg5HakgPdgCJ1A2n",
+      "stripePriceId6Month": "price_1SlC1uDuEg5HakgP2mHnQhv7",
+      "stripePriceId12Month": "price_1SlC1uDuEg5HakgPVo9p5TIf"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC1vDuEg5HakgPa4Im68C6",
+      "stripePriceId3Month": "price_1SlC1vDuEg5HakgPcoKjiqSB",
+      "stripePriceId6Month": "price_1SlC1wDuEg5HakgPvLjOF2vp",
+      "stripePriceId12Month": "price_1SlC1wDuEg5HakgPCkoasT9A"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC1wDuEg5HakgP1JNuSQg2",
+      "stripePriceId3Month": "price_1SlC1xDuEg5HakgPLa9VjtNT",
+      "stripePriceId6Month": "price_1SlC1xDuEg5HakgPOVDl8WFp",
+      "stripePriceId12Month": "price_1SlC1xDuEg5HakgP9t6SKEy3"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC1yDuEg5HakgPJsc6wyKs",
+      "stripePriceId3Month": "price_1SlC1yDuEg5HakgPHgMPF0nx",
+      "stripePriceId6Month": "price_1SlC1yDuEg5HakgPCHLreTsA",
+      "stripePriceId12Month": "price_1SlC1yDuEg5HakgPaUlVNtyy"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC1zDuEg5HakgPlUkmk6Up",
+      "stripePriceId3Month": "price_1SlC1zDuEg5HakgP3cTsm7IR",
+      "stripePriceId6Month": "price_1SlC1zDuEg5HakgP001N3WUZ",
+      "stripePriceId12Month": "price_1SlC20DuEg5HakgPI9QJC8Xh"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC20DuEg5HakgPPzF34eTx",
+      "stripePriceId3Month": "price_1SlC20DuEg5HakgPe7I457MC",
+      "stripePriceId6Month": "price_1SlC21DuEg5HakgP8oMSh2o0",
+      "stripePriceId12Month": "price_1SlC21DuEg5HakgPzOerQP3O"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework",
+      "price": "49900",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "price_1SlC22DuEg5HakgP68LYVQ7g",
+      "stripePriceId3Month": "price_1SlC22DuEg5HakgPlbdbY2dJ",
+      "stripePriceId6Month": "price_1SlC22DuEg5HakgPZRmLkkAi",
+      "stripePriceId12Month": "price_1SlC22DuEg5HakgPVG4t5636"
+    },
+    {
+      "id": "660001",
+      "title": "Test Analytics Course",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "660004",
+      "title": "Test Course for Lessons",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "660005",
+      "title": "Test Course for Forums",
+      "price": "0",
+      "price3Month": "NULL",
+      "price6Month": "NULL",
+      "price12Month": "NULL",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tprice\tprice3Month\tprice6Month\tprice12Month\tstripePriceId\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\n100001\tEU AI Act Fundamentals\t49900\tNULL\tNULL\tNULL\tprice_1SlC1uDuEg5HakgPeb4AHmzf\tprice_1SlC1uDuEg5HakgPdgCJ1A2n\tprice_1SlC1uDuEg5HakgP2mHnQhv7\tprice_1SlC1uDuEg5HakgPVo9p5TIf\n100002\tNIST AI RMF Fundamentals\t49900\tNULL\tNULL\tNULL\tprice_1SlC1vDuEg5HakgPa4Im68C6\tprice_1SlC1vDuEg5HakgPcoKjiqSB\tprice_1SlC1wDuEg5HakgPvLjOF2vp\tprice_1SlC1wDuEg5HakgPCkoasT9A\n100003\tUK AI Safety Institute Framework\t49900\tNULL\tNULL\tNULL\tprice_1SlC1wDuEg5HakgP1JNuSQg2\tprice_1SlC1xDuEg5HakgPLa9VjtNT\tprice_1SlC1xDuEg5HakgPOVDl8WFp\tprice_1SlC1xDuEg5HakgP9t6SKEy3\n100004\tCanada AIDA Compliance\t49900\tNULL\tNULL\tNULL\tprice_1SlC1yDuEg5HakgPJsc6wyKs\tprice_1SlC1yDuEg5HakgPHgMPF0nx\tprice_1SlC1yDuEg5HakgPCHLreTsA\tprice_1SlC1yDuEg5HakgPaUlVNtyy\n100005\tAustralia AI Ethics Framework\t49900\tNULL\tNULL\tNULL\tprice_1SlC1zDuEg5HakgPlUkmk6Up\tprice_1SlC1zDuEg5HakgP3cTsm7IR\tprice_1SlC1zDuEg5HakgP001N3WUZ\tprice_1SlC20DuEg5HakgPI9QJC8Xh\n100006\tISO 42001 International Standard\t49900\tNULL\tNULL\tNULL\tprice_1SlC20DuEg5HakgPPzF34eTx\tprice_1SlC20DuEg5HakgPe7I457MC\tprice_1SlC21DuEg5HakgP8oMSh2o0\tprice_1SlC21DuEg5HakgPzOerQP3O\n100007\tChina TC260 AI Framework\t49900\tNULL\tNULL\tNULL\tprice_1SlC22DuEg5HakgP68LYVQ7g\tprice_1SlC22DuEg5HakgPlbdbY2dJ\tprice_1SlC22DuEg5HakgPZRmLkkAi\tprice_1SlC22DuEg5HakgPVG4t5636\n660001\tTest Analytics Course\t0\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\n660004\tTest Course for Lessons\t0\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\n660005\tTest Course for Forums\t0\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 206
+}

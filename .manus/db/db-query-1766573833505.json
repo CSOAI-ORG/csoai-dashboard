@@ -1,0 +1,60 @@
+{
+  "query": "SELECT id, aiSystemId, frameworkId FROM assessments;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, aiSystemId, frameworkId FROM assessments;",
+  "rows": [
+    {
+      "id": "1",
+      "aiSystemId": "1",
+      "frameworkId": "1"
+    },
+    {
+      "id": "2",
+      "aiSystemId": "1",
+      "frameworkId": "2"
+    },
+    {
+      "id": "3",
+      "aiSystemId": "2",
+      "frameworkId": "1"
+    },
+    {
+      "id": "4",
+      "aiSystemId": "2",
+      "frameworkId": "3"
+    },
+    {
+      "id": "5",
+      "aiSystemId": "3",
+      "frameworkId": "1"
+    },
+    {
+      "id": "6",
+      "aiSystemId": "3",
+      "frameworkId": "2"
+    },
+    {
+      "id": "7",
+      "aiSystemId": "4",
+      "frameworkId": "1"
+    },
+    {
+      "id": "8",
+      "aiSystemId": "5",
+      "frameworkId": "1"
+    },
+    {
+      "id": "9",
+      "aiSystemId": "5",
+      "frameworkId": "2"
+    },
+    {
+      "id": "10",
+      "aiSystemId": "5",
+      "frameworkId": "3"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\taiSystemId\tframeworkId\n1\t1\t1\n2\t1\t2\n3\t2\t1\n4\t2\t3\n5\t3\t1\n6\t3\t2\n7\t4\t1\n8\t5\t1\n9\t5\t2\n10\t5\t3\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

@@ -1,0 +1,45 @@
+{
+  "query": "SELECT e.userId, u.name, u.email, e.enrollmentType, COUNT(*) as count FROM course_enrollments e JOIN users u ON e.userId = u.id GROUP BY e.userId, u.name, u.email, e.enrollmentType;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT e.userId, u.name, u.email, e.enrollmentType, COUNT(*) as count FROM course_enrollments e JOIN users u ON e.userId = u.id GROUP BY e.userId, u.name, u.email, e.enrollmentType;",
+  "rows": [
+    {
+      "userId": "1",
+      "name": "Nick Templeman",
+      "email": "nicholastempleman@gmail.com",
+      "enrollmentType": "bundle",
+      "count": "1"
+    },
+    {
+      "userId": "900016",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336285@test.com",
+      "enrollmentType": "course",
+      "count": "1"
+    },
+    {
+      "userId": "900022",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336485@test.com",
+      "enrollmentType": "course",
+      "count": "1"
+    },
+    {
+      "userId": "1",
+      "name": "Nick Templeman",
+      "email": "nicholastempleman@gmail.com",
+      "enrollmentType": "course",
+      "count": "7"
+    },
+    {
+      "userId": "900014",
+      "name": "Progress Test User",
+      "email": "progress-test-1766678336209@test.com",
+      "enrollmentType": "course",
+      "count": "2"
+    }
+  ],
+  "messages": [],
+  "stdout": "userId\tname\temail\tenrollmentType\tcount\n1\tNick Templeman\tnicholastempleman@gmail.com\tbundle\t1\n900016\tProgress Test User\tprogress-test-1766678336285@test.com\tcourse\t1\n900022\tProgress Test User\tprogress-test-1766678336485@test.com\tcourse\t1\n1\tNick Templeman\tnicholastempleman@gmail.com\tcourse\t7\n900014\tProgress Test User\tprogress-test-1766678336209@test.com\tcourse\t2\n",
+  "stderr": "",
+  "execution_time_ms": 402
+}

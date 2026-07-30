@@ -1,0 +1,30 @@
+{
+  "query": "SELECT id, subjectTitle FROM council_sessions ORDER BY id DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, subjectTitle FROM council_sessions ORDER BY id DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "30005",
+      "subjectTitle": "Facial Recognition Privacy Violation"
+    },
+    {
+      "id": "30004",
+      "subjectTitle": "Financial Trading AI Risk Assessment"
+    },
+    {
+      "id": "30003",
+      "subjectTitle": "Autonomous Vehicle Safety Protocol Breach"
+    },
+    {
+      "id": "30002",
+      "subjectTitle": "Biased Hiring Algorithm Discrimination"
+    },
+    {
+      "id": "30001",
+      "subjectTitle": "Unauthorized Data Collection by Healthcare AI"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tsubjectTitle\n30005\tFacial Recognition Privacy Violation\n30004\tFinancial Trading AI Risk Assessment\n30003\tAutonomous Vehicle Safety Protocol Breach\n30002\tBiased Hiring Algorithm Discrimination\n30001\tUnauthorized Data Collection by Healthcare AI\n",
+  "stderr": "",
+  "execution_time_ms": 185
+}

@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "Which of the following is a core principle of ethical AI, emphasizing the importance of avoiding the creation or reinforcement of unfair bias?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Transparency"
+      },
+      {
+        "id": "B",
+        "text": "Fairness"
+      },
+      {
+        "id": "C",
+        "text": "Accountability"
+      },
+      {
+        "id": "D",
+        "text": "Privacy"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Fairness is a core principle of ethical AI that focuses on ensuring that AI systems do not create or perpetuate unfair biases against individuals or groups.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary goal of an AI incident investigation?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To assign blame to individuals"
+      },
+      {
+        "id": "B",
+        "text": "To understand the root cause and prevent recurrence"
+      },
+      {
+        "id": "C",
+        "text": "To publicize the failure of the AI system"
+      },
+      {
+        "id": "D",
+        "text": "To immediately shut down the AI system"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The primary goal of an AI incident investigation is to identify the root cause of the incident to learn from it and prevent similar incidents from happening in the future.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is NOT a common type of bias in AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Algorithmic bias"
+      },
+      {
+        "id": "B",
+        "text": "Data bias"
+      },
+      {
+        "id": "C",
+        "text": "User bias"
+      },
+      {
+        "id": "D",
+        "text": "Hardware bias"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Hardware bias is not a recognized category of bias in AI systems. The most common types are data bias, algorithmic bias, and user bias.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of a fairness metric in AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To measure the profitability of an AI system"
+      },
+      {
+        "id": "B",
+        "text": "To quantify the performance of an AI model"
+      },
+      {
+        "id": "C",
+        "text": "To assess the equitable treatment of different groups by an AI system"
+      },
+      {
+        "id": "D",
+        "text": "To track the number of users of an AI system"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Fairness metrics are used to evaluate whether an AI system is treating different demographic groups or individuals equitably.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a key component of stakeholder communication after an AI incident?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Minimizing the perceived impact of the incident"
+      },
+      {
+        "id": "B",
+        "text": "Withholding information to avoid panic"
+      },
+      {
+        "id": "C",
+        "text": "Providing timely, transparent, and accurate information"
+      },
+      {
+        "id": "D",
+        "text": "Blaming external factors for the incident"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Effective stakeholder communication after an AI incident requires providing timely, transparent, and accurate information to build trust and manage the situation responsibly.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the main purpose of a lessons learned process after an AI incident?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To create a repository of failures to be used for training new employees"
+      },
+      {
+        "id": "B",
+        "text": "To identify opportunities for improvement in processes and systems"
+      },
+      {
+        "id": "C",
+        "text": "To satisfy regulatory requirements"
+      },
+      {
+        "id": "D",
+        "text": "To create a public relations campaign"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The main purpose of a lessons learned process is to analyze the incident and identify opportunities for improvement in the AI system, development processes, and operational procedures to prevent future incidents.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What does the principle of transparency in AI refer to?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI model should be a black box to protect intellectual property."
+      },
+      {
+        "id": "B",
+        "text": "The AI model and its decisions should be understandable and explainable."
+      },
+      {
+        "id": "C",
+        "text": "The AI model should be developed by a transparent and open-source community."
+      },
+      {
+        "id": "D",
+        "text": "The AI model should be transparent to other AI models."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Transparency in AI means that the decisions and workings of an AI model should be understandable and explainable to its users and stakeholders.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is root cause analysis in the context of AI incidents?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A method to identify the person responsible for the incident."
+      },
+      {
+        "id": "B",
+        "text": "A process to determine the fundamental cause of an incident to prevent its recurrence."
+      },
+      {
+        "id": "C",
+        "text": "A technique to analyze the financial impact of an incident."
+      },
+      {
+        "id": "D",
+        "text": "A marketing strategy to manage the public perception of an incident."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Root cause analysis is a systematic process for identifying the fundamental cause of a problem or incident, so that effective corrective actions can be taken to prevent its recurrence.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is an example of a remediation strategy after an AI incident?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ignoring the incident and hoping it does not happen again."
+      },
+      {
+        "id": "B",
+        "text": "Retraining the model with a more diverse and representative dataset."
+      },
+      {
+        "id": "C",
+        "text": "Deleting all data related to the incident."
+      },
+      {
+        "id": "D",
+        "text": "Issuing a public statement denying any wrongdoing."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Retraining the model with a more diverse and representative dataset is a common remediation strategy to address biases and improve the fairness and accuracy of an AI system after an incident.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of an incident classification system in AI incident management?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To categorize incidents based on their severity and impact."
+      },
+      {
+        "id": "B",
+        "text": "To assign a unique identification number to each incident."
+      },
+      {
+        "id": "C",
+        "text": "To determine the financial cost of each incident."
+      },
+      {
+        "id": "D",
+        "text": "To identify the individuals involved in each incident."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "An incident classification system helps to categorize AI incidents based on their severity, impact, and other characteristics. This allows for prioritization and appropriate response.",
+    "difficulty": "easy",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A facial recognition system used for hiring decisions is found to have a higher error rate for women than for men. This is an example of:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Algorithmic bias"
+      },
+      {
+        "id": "B",
+        "text": "Data bias"
+      },
+      {
+        "id": "C",
+        "text": "User bias"
+      },
+      {
+        "id": "D",
+        "text": "Confirmation bias"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "This is an example of data bias, where the training data for the facial recognition system was not representative of the population, leading to a higher error rate for a specific demographic group.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "An AI-powered loan application system denies a loan to an individual from a low-income neighborhood, even though the individual has a good credit score. This could be an example of:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Redlining"
+      },
+      {
+        "id": "B",
+        "text": "Disparate impact"
+      },
+      {
+        "id": "C",
+        "text": "Affirmative action"
+      },
+      {
+        "id": "D",
+        "text": "Both A and B"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "This scenario could be an example of both redlining (discriminating against individuals based on their geographic location) and disparate impact (a practice that has a disproportionately adverse effect on a protected group).",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the \u201cright to explanation\u201d in the context of AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The right of an individual to know if they are interacting with an AI system."
+      },
+      {
+        "id": "B",
+        "text": "The right of an individual to receive a meaningful explanation of the logic involved in an automated decision."
+      },
+      {
+        "id": "C",
+        "text": "The right of a company to protect its proprietary algorithms."
+      },
+      {
+        "id": "D",
+        "text": "The right of a government to access the source code of any AI system."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The \u201cright to explanation\u201d refers to the right of an individual to be provided with a meaningful explanation of the logic and reasoning behind a decision made by an automated or AI system, particularly when the decision has a significant impact on them.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A self-driving car is involved in an accident where it had to choose between hitting a pedestrian and swerving to hit a tree, which would harm the passenger. This is a classic example of:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A technical malfunction"
+      },
+      {
+        "id": "B",
+        "text": "A data privacy breach"
+      },
+      {
+        "id": "C",
+        "text": "An ethical dilemma"
+      },
+      {
+        "id": "D",
+        "text": "A cybersecurity attack"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "This is a classic ethical dilemma known as the trolley problem, applied to autonomous vehicles. It highlights the complex ethical considerations that need to be programmed into AI systems that make life-or-death decisions.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a proactive approach to mitigating bias in AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Waiting for users to report biased outcomes."
+      },
+      {
+        "id": "B",
+        "text": "Conducting regular audits of the AI system for bias."
+      },
+      {
+        "id": "C",
+        "text": "Issuing a public apology after a biased incident occurs."
+      },
+      {
+        "id": "D",
+        "text": "Ignoring the potential for bias in the AI system."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Conducting regular audits of the AI system for bias is a proactive approach to identify and mitigate bias before it causes significant harm. This is a key component of responsible AI governance.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A social media platform uses an AI algorithm to recommend content to users. The algorithm is found to be promoting extremist content to a small subset of users. What is the most significant ethical concern in this scenario?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The algorithm is not personalized enough."
+      },
+      {
+        "id": "B",
+        "text": "The algorithm is not transparent."
+      },
+      {
+        "id": "C",
+        "text": "The algorithm is creating filter bubbles and echo chambers."
+      },
+      {
+        "id": "D",
+        "text": "The algorithm is amplifying harmful content."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "The most significant ethical concern is that the algorithm is amplifying harmful content, which can have serious real-world consequences, including radicalization and violence.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of an AI ethics board or committee within an organization?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To develop and market new AI products."
+      },
+      {
+        "id": "B",
+        "text": "To provide guidance and oversight on the ethical development and deployment of AI."
+      },
+      {
+        "id": "C",
+        "text": "To handle customer service inquiries related to AI products."
+      },
+      {
+        "id": "D",
+        "text": "To secure funding for AI research and development."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "An AI ethics board or committee is responsible for providing guidance and oversight on the ethical development and deployment of AI, helping to ensure that the organization\\s AI systems are aligned with its values and ethical principles.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is a potential privacy risk associated with the use of AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI system may be too expensive to develop."
+      },
+      {
+        "id": "B",
+        "text": "The AI system may not be accurate enough."
+      },
+      {
+        "id": "C",
+        "text": "The AI system may be used to re-identify individuals from anonymized data."
+      },
+      {
+        "id": "D",
+        "text": "The AI system may not be compatible with existing IT infrastructure."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AI systems can be used to re-identify individuals from anonymized data by linking different datasets together, which poses a significant privacy risk.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the concept of 'explainable AI' (XAI)?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AI systems that can explain their decisions in natural language."
+      },
+      {
+        "id": "B",
+        "text": "AI systems that are designed to be easily understood by humans."
+      },
+      {
+        "id": "C",
+        "text": "AI systems that can provide a rationale for their predictions and decisions."
+      },
+      {
+        "id": "D",
+        "text": "All of the above."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "Explainable AI (XAI) refers to AI systems that are designed to be understandable by humans, can explain their decisions in natural language, and can provide a rationale for their predictions and decisions.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI-powered chatbot for customer service. To ensure the chatbot is not offensive or biased, the company should:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Only use data from a single, homogeneous group of users for training."
+      },
+      {
+        "id": "B",
+        "text": "Use a diverse and representative dataset for training and regularly audit the chatbot\\s conversations."
+      },
+      {
+        "id": "C",
+        "text": "Program the chatbot to avoid all controversial topics."
+      },
+      {
+        "id": "D",
+        "text": "Assume that the chatbot will not be biased because it is an AI."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "To ensure the chatbot is not offensive or biased, the company should use a diverse and representative dataset for training and regularly audit the chatbot\\s conversations to identify and correct any instances of bias or offensive language.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A hospital uses an AI system to predict the likelihood of a patient developing a certain disease. The system is trained on data from a predominantly white population. What is the most significant ethical risk of deploying this system in a diverse community?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The system may be less accurate for non-white patients, leading to misdiagnosis and health disparities."
+      },
+      {
+        "id": "B",
+        "text": "The system may violate the privacy of patients by using their health data without consent."
+      },
+      {
+        "id": "C",
+        "text": "The system may be too expensive for the hospital to maintain."
+      },
+      {
+        "id": "D",
+        "text": "The system may be difficult for doctors to use."
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "The most significant ethical risk is that the system may be less accurate for non-white patients due to the biased training data, leading to misdiagnosis and exacerbating existing health disparities.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A law enforcement agency uses a predictive policing AI to allocate police resources. The AI is trained on historical crime data, which shows higher crime rates in low-income and minority neighborhoods. What is the most likely outcome of using this AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI will accurately predict where crimes will occur."
+      },
+      {
+        "id": "B",
+        "text": "The AI will lead to a reduction in crime rates in all neighborhoods."
+      },
+      {
+        "id": "C",
+        "text": "The AI will create a feedback loop, leading to over-policing of already marginalized communities."
+      },
+      {
+        "id": "D",
+        "text": "The AI will be unbiased because it is based on objective data."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The AI is likely to create a feedback loop, where historical biases in crime data lead to increased police presence in marginalized communities, which in turn leads to more arrests and reinforces the initial bias.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the concept of 'adversarial attacks' in the context of AI security?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Attacks on the physical infrastructure of an AI system."
+      },
+      {
+        "id": "B",
+        "text": "Attempts to steal the intellectual property of an AI model."
+      },
+      {
+        "id": "C",
+        "text": "Deliberately crafted inputs that cause an AI model to make a mistake."
+      },
+      {
+        "id": "D",
+        "text": "Using AI to generate fake news and disinformation."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Adversarial attacks involve creating specially crafted inputs that are designed to deceive an AI model and cause it to make an incorrect prediction or classification. These attacks highlight the vulnerability of AI systems to malicious manipulation.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A company is using an AI-powered algorithm to make decisions about which employees to promote. What legal and ethical obligations does the company have to its employees?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company has no obligation to explain how the algorithm works."
+      },
+      {
+        "id": "B",
+        "text": "The company must be able to explain the factors that led to a promotion decision and ensure the process is fair and non-discriminatory."
+      },
+      {
+        "id": "C",
+        "text": "The company only needs to ensure that the algorithm is accurate."
+      },
+      {
+        "id": "D",
+        "text": "The company can use any criteria it wants in the algorithm, as long as it is not explicitly discriminatory."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The company has a legal and ethical obligation to ensure that its promotion process is fair and non-discriminatory. This includes being able to explain the factors that the AI algorithm considers and to demonstrate that the algorithm is not biased against any protected group.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the difference between privacy and data protection in the context of AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "There is no difference between the two terms."
+      },
+      {
+        "id": "B",
+        "text": "Privacy is about an individual\\s right to control their personal information, while data protection is about the technical and legal safeguards to protect that information."
+      },
+      {
+        "id": "C",
+        "text": "Data protection is about an individual\\s right to control their personal information, while privacy is about the technical and legal safeguards to protect that information."
+      },
+      {
+        "id": "D",
+        "text": "Privacy applies to personal data, while data protection applies to all data."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Privacy is a fundamental right that encompasses an individual\\s ability to control their personal information. Data protection refers to the specific legal and technical measures that are put in place to protect personal data from unauthorized access, use, or disclosure.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "An autonomous weapon system is designed to identify and engage enemy combatants without human intervention. What is the most significant ethical challenge associated with such a system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The system may be too expensive to produce."
+      },
+      {
+        "id": "B",
+        "text": "The system may not be effective in combat."
+      },
+      {
+        "id": "C",
+        "text": "The system raises concerns about the loss of meaningful human control over the use of lethal force."
+      },
+      {
+        "id": "D",
+        "text": "The system may be vulnerable to cyberattacks."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The most significant ethical challenge is the potential loss of meaningful human control over the use of lethal force, which raises fundamental questions about accountability, morality, and the laws of war.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A deepfake video is created to show a politician making a controversial statement that they never actually made. What is the primary ethical concern with this technology?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The technology is difficult to use."
+      },
+      {
+        "id": "B",
+        "text": "The technology can be used to create harmless entertainment."
+      },
+      {
+        "id": "C",
+        "text": "The technology can be used to spread misinformation and propaganda, undermining trust in institutions and individuals."
+      },
+      {
+        "id": "D",
+        "text": "The technology is not yet realistic enough to be convincing."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The primary ethical concern with deepfake technology is its potential to be used to spread misinformation and propaganda, which can have a corrosive effect on public discourse and trust.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of 'adversarial training' in making AI systems more robust?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Training an AI system on a limited and biased dataset."
+      },
+      {
+        "id": "B",
+        "text": "Training an AI system on a large and diverse dataset."
+      },
+      {
+        "id": "C",
+        "text": "Training an AI system on examples that are specifically designed to fool it."
+      },
+      {
+        "id": "D",
+        "text": "Training an AI system with a human-in-the-loop."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Adversarial training is a technique used to make AI systems more robust by training them on adversarial examples, which are inputs that are intentionally designed to cause the model to make a mistake. This helps the model to learn to be more resilient to such attacks.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A company uses an AI to monitor its employees' productivity. The AI tracks keystrokes, mouse movements, and website visits. What is the most significant ethical concern with this practice?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI may not be accurate in measuring productivity."
+      },
+      {
+        "id": "B",
+        "text": "The AI may be too expensive to implement."
+      },
+      {
+        "id": "C",
+        "text": "The AI may create a culture of surveillance and distrust, and violate employees` privacy."
+      },
+      {
+        "id": "D",
+        "text": "The AI may not be compatible with the company`s existing software."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The most significant ethical concern is that this practice can create a culture of surveillance and distrust, and it raises serious questions about employee privacy and autonomy.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the concept of 'value alignment' in AI ethics?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ensuring that an AI system is profitable."
+      },
+      {
+        "id": "B",
+        "text": "Ensuring that an AI system is accurate."
+      },
+      {
+        "id": "C",
+        "text": "Ensuring that an AI system`s goals and behaviors are aligned with human values."
+      },
+      {
+        "id": "D",
+        "text": "Ensuring that an AI system is developed by a diverse team."
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Value alignment is a central concept in AI ethics that focuses on ensuring that the goals and behaviors of an AI system are aligned with human values, such as fairness, safety, and well-being.",
+    "difficulty": "hard",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A company uses an AI to screen job applications. The AI is trained on data from past successful hires, who were predominantly from a single demographic group. What is the most likely outcome?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The AI will be very accurate in predicting job success."
+      },
+      {
+        "id": "B",
+        "text": "The AI will be biased against candidates from other demographic groups."
+      },
+      {
+        "id": "C",
+        "text": "The AI will be very fast at screening applications."
+      },
+      {
+        "id": "D",
+        "text": "The AI will be very expensive to operate."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI is likely to be biased against candidates from other demographic groups because it was trained on a non-representative dataset.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary purpose of a 'red team' exercise in AI ethics?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To test the AI system for security vulnerabilities."
+      },
+      {
+        "id": "B",
+        "text": "To identify potential ethical risks and harms before the AI system is deployed."
+      },
+      {
+        "id": "C",
+        "text": "To market the AI system to potential customers."
+      },
+      {
+        "id": "D",
+        "text": "To train the AI system on new data."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A red team exercise in AI ethics is a simulated attack designed to identify potential ethical risks, biases, and harms before an AI system is deployed to the public.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "An e-commerce website uses an AI to personalize product recommendations. The AI learns that customers who buy a certain product are also likely to buy another product. What is this an example of?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Collaborative filtering"
+      },
+      {
+        "id": "B",
+        "text": "Content-based filtering"
+      },
+      {
+        "id": "C",
+        "text": "Reinforcement learning"
+      },
+      {
+        "id": "D",
+        "text": "Supervised learning"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "This is an example of collaborative filtering, a common technique used in recommendation systems that makes predictions about the interests of a user by collecting preferences from many users.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "A social media company is criticized for not doing enough to remove hate speech from its platform. The company argues that it is a neutral platform and should not be responsible for the content posted by its users. This is an example of a debate about:",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Platform liability"
+      },
+      {
+        "id": "B",
+        "text": "Data privacy"
+      },
+      {
+        "id": "C",
+        "text": "Algorithmic bias"
+      },
+      {
+        "id": "D",
+        "text": "Explainable AI"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "This is a debate about platform liability, which concerns the extent to which online platforms should be held responsible for the content posted by their users.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  },
+  {
+    "questionText": "What is the primary goal of the GDPR (General Data Protection Regulation) in the context of AI?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To promote the development of AI in Europe."
+      },
+      {
+        "id": "B",
+        "text": "To protect the personal data of individuals and give them more control over their data."
+      },
+      {
+        "id": "C",
+        "text": "To regulate the use of AI in the military."
+      },
+      {
+        "id": "D",
+        "text": "To create a single market for AI in Europe."
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The primary goal of the GDPR is to protect the personal data of individuals in the European Union and to give them more control over how their data is collected, used, and stored.",
+    "difficulty": "medium",
+    "category": "ETHICS_INCIDENTS",
+    "points": 1
+  }
+]

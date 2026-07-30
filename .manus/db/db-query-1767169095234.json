@@ -1,0 +1,28 @@
+{
+  "query": "SELECT id, testId, questionText, isActive FROM test_questions WHERE testId = 1 AND isActive = 1 LIMIT 3;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, testId, questionText, isActive FROM test_questions WHERE testId = 1 AND isActive = 1 LIMIT 3;",
+  "rows": [
+    {
+      "id": "1",
+      "testId": "1",
+      "questionText": "What is the primary purpose of AI Safety?",
+      "isActive": "1"
+    },
+    {
+      "id": "2",
+      "testId": "1",
+      "questionText": "Which of the following is NOT a reason why AI Safety matters?",
+      "isActive": "1"
+    },
+    {
+      "id": "3",
+      "testId": "1",
+      "questionText": "What is the maximum penalty under the EU AI Act for prohibited AI practices?",
+      "isActive": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttestId\tquestionText\tisActive\n1\t1\tWhat is the primary purpose of AI Safety?\t1\n2\t1\tWhich of the following is NOT a reason why AI Safety matters?\t1\n3\t1\tWhat is the maximum penalty under the EU AI Act for prohibited AI practices?\t1\n",
+  "stderr": "",
+  "execution_time_ms": 53
+}

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `recommendation_interactions` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `recommendationId` varchar(100) NOT NULL,\n  `recommendationType` varchar(50) NOT NULL,\n  `action` enum('viewed','implemented','dismissed','snoozed') NOT NULL,\n  `feedback` enum('helpful','not_helpful','irrelevant'),\n  `feedbackNote` text,\n  `snoozeUntil` timestamp,\n  `aiSystemId` int,\n  `frameworkId` int,\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `recommendation_interactions_id` PRIMARY KEY(`id`),\n  INDEX `idx_user_rec` (`userId`, `recommendationId`),\n  INDEX `idx_user_action` (`userId`, `action`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `recommendation_interactions` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `recommendationId` varchar(100) NOT NULL,\n  `recommendationType` varchar(50) NOT NULL,\n  `action` enum('viewed','implemented','dismissed','snoozed') NOT NULL,\n  `feedback` enum('helpful','not_helpful','irrelevant'),\n  `feedbackNote` text,\n  `snoozeUntil` timestamp,\n  `aiSystemId` int,\n  `frameworkId` int,\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `recommendation_interactions_id` PRIMARY KEY(`id`),\n  INDEX `idx_user_rec` (`userId`, `recommendationId`),\n  INDEX `idx_user_action` (`userId`, `action`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 226
+}

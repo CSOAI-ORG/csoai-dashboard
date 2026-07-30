@@ -1,0 +1,97 @@
+{
+  "query": "SELECT id FROM requirements WHERE frameworkId = 3;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id FROM requirements WHERE frameworkId = 3;",
+  "rows": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "3"
+    },
+    {
+      "id": "4"
+    },
+    {
+      "id": "5"
+    },
+    {
+      "id": "6"
+    },
+    {
+      "id": "7"
+    },
+    {
+      "id": "8"
+    },
+    {
+      "id": "9"
+    },
+    {
+      "id": "10"
+    },
+    {
+      "id": "11"
+    },
+    {
+      "id": "12"
+    },
+    {
+      "id": "13"
+    },
+    {
+      "id": "14"
+    },
+    {
+      "id": "15"
+    },
+    {
+      "id": "16"
+    },
+    {
+      "id": "17"
+    },
+    {
+      "id": "18"
+    },
+    {
+      "id": "19"
+    },
+    {
+      "id": "20"
+    },
+    {
+      "id": "21"
+    },
+    {
+      "id": "22"
+    },
+    {
+      "id": "23"
+    },
+    {
+      "id": "24"
+    },
+    {
+      "id": "25"
+    },
+    {
+      "id": "26"
+    },
+    {
+      "id": "27"
+    },
+    {
+      "id": "28"
+    },
+    {
+      "id": "29"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n",
+  "stderr": "",
+  "execution_time_ms": 102
+}

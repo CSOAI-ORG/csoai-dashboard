@@ -1,0 +1,50 @@
+{
+  "query": "SELECT * FROM course_bundles LIMIT 2;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM course_bundles LIMIT 2;",
+  "rows": [
+    {
+      "id": "200001",
+      "regionId": "1",
+      "name": "Foundation Bundle - 3 Core Frameworks",
+      "description": "Master the three most important AI safety frameworks: EU AI Act, NIST AI RMF, and ISO 42001. Perfect for beginners.",
+      "courseIds": "\"[100001,100002,100006]\"",
+      "regularPrice": "149700",
+      "bundlePrice": "99900",
+      "savings": "49800",
+      "stripePriceId": "price_1Sl57DDuEg5HakgPZu5pNVHB",
+      "active": "1",
+      "createdAt": "2026-01-02 09:25:20",
+      "updatedAt": "2026-01-02 09:57:51",
+      "bundlePrice3Month": "NULL",
+      "bundlePrice6Month": "NULL",
+      "bundlePrice12Month": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "200002",
+      "regionId": "1",
+      "name": "Complete Certification - All 7 Modules",
+      "description": "The ultimate AI safety certification covering ALL regional frameworks. Become a globally recognized AI safety expert.",
+      "courseIds": "\"[100001,100002,100003,100004,100005,100006,100007]\"",
+      "regularPrice": "349300",
+      "bundlePrice": "199900",
+      "savings": "149400",
+      "stripePriceId": "price_1Sl57EDuEg5HakgPkWvUoRgs",
+      "active": "1",
+      "createdAt": "2026-01-02 09:25:20",
+      "updatedAt": "2026-01-02 09:57:53",
+      "bundlePrice3Month": "NULL",
+      "bundlePrice6Month": "NULL",
+      "bundlePrice12Month": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tregionId\tname\tdescription\tcourseIds\tregularPrice\tbundlePrice\tsavings\tstripePriceId\tactive\tcreatedAt\tupdatedAt\tbundlePrice3Month\tbundlePrice6Month\tbundlePrice12Month\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\n200001\t1\tFoundation Bundle - 3 Core Frameworks\tMaster the three most important AI safety frameworks: EU AI Act, NIST AI RMF, and ISO 42001. Perfect for beginners.\t\"[100001,100002,100006]\"\t149700\t99900\t49800\tprice_1Sl57DDuEg5HakgPZu5pNVHB\t1\t2026-01-02 09:25:20\t2026-01-02 09:57:51\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\n200002\t1\tComplete Certification - All 7 Modules\tThe ultimate AI safety certification covering ALL regional frameworks. Become a globally recognized AI safety expert.\t\"[100001,100002,100003,100004,100005,100006,100007]\"\t349300\t199900\t149400\tprice_1Sl57EDuEg5HakgPkWvUoRgs\t1\t2026-01-02 09:25:20\t2026-01-02 09:57:53\tNULL\tNULL\tNULL\tNULL\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 392
+}

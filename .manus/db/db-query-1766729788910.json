@@ -1,0 +1,18 @@
+{
+  "query": "SHOW COLUMNS FROM job_applications LIKE '%response%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SHOW COLUMNS FROM job_applications LIKE '%response%';",
+  "rows": [
+    {
+      "Field": "employer_response",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\nemployer_response\ttext\tYES\t\tNULL\t\n",
+  "stderr": "",
+  "execution_time_ms": 99
+}

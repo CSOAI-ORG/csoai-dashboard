@@ -1,0 +1,120 @@
+{
+  "query": "SELECT ce.id, ce.userId, ce.courseId, c.title, c.framework, ce.paymentStatus, ce.status, ce.enrolledAt \nFROM course_enrollments ce \nLEFT JOIN courses c ON ce.courseId = c.id \nORDER BY ce.userId, ce.enrolledAt DESC;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT ce.id, ce.userId, ce.courseId, c.title, c.framework, ce.paymentStatus, ce.status, ce.enrolledAt \nFROM course_enrollments ce \nLEFT JOIN courses c ON ce.courseId = c.id \nORDER BY ce.userId, ce.enrolledAt DESC;",
+  "rows": [
+    {
+      "id": "330027",
+      "userId": "1",
+      "courseId": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU_AI_ACT",
+      "paymentStatus": "free",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-04 11:03:50"
+    },
+    {
+      "id": "330026",
+      "userId": "1",
+      "courseId": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU_AI_ACT",
+      "paymentStatus": "free",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-04 10:59:33"
+    },
+    {
+      "id": "330025",
+      "userId": "1",
+      "courseId": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU_AI_ACT",
+      "paymentStatus": "free",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-04 10:31:09"
+    },
+    {
+      "id": "300003",
+      "userId": "1",
+      "courseId": "5",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-02 07:28:31"
+    },
+    {
+      "id": "300002",
+      "userId": "1",
+      "courseId": "12",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-02 07:28:30"
+    },
+    {
+      "id": "300001",
+      "userId": "1",
+      "courseId": "2",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-01 22:31:25"
+    },
+    {
+      "id": "270004",
+      "userId": "1",
+      "courseId": "1",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "enrolled",
+      "enrolledAt": "2026-01-01 09:54:49"
+    },
+    {
+      "id": "1",
+      "userId": "900014",
+      "courseId": "270004",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "completed",
+      "enrolledAt": "2025-12-25 15:58:56"
+    },
+    {
+      "id": "2",
+      "userId": "900014",
+      "courseId": "270005",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "in_progress",
+      "enrolledAt": "2025-12-25 15:58:56"
+    },
+    {
+      "id": "3",
+      "userId": "900016",
+      "courseId": "270006",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "in_progress",
+      "enrolledAt": "2025-12-25 15:58:56"
+    },
+    {
+      "id": "4",
+      "userId": "900022",
+      "courseId": "270012",
+      "title": "NULL",
+      "framework": "NULL",
+      "paymentStatus": "pending",
+      "status": "in_progress",
+      "enrolledAt": "2025-12-25 15:58:56"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tcourseId\ttitle\tframework\tpaymentStatus\tstatus\tenrolledAt\n330027\t1\t100001\tEU AI Act Fundamentals\tEU_AI_ACT\tfree\tenrolled\t2026-01-04 11:03:50\n330026\t1\t100001\tEU AI Act Fundamentals\tEU_AI_ACT\tfree\tenrolled\t2026-01-04 10:59:33\n330025\t1\t100001\tEU AI Act Fundamentals\tEU_AI_ACT\tfree\tenrolled\t2026-01-04 10:31:09\n300003\t1\t5\tNULL\tNULL\tpending\tenrolled\t2026-01-02 07:28:31\n300002\t1\t12\tNULL\tNULL\tpending\tenrolled\t2026-01-02 07:28:30\n300001\t1\t2\tNULL\tNULL\tpending\tenrolled\t2026-01-01 22:31:25\n270004\t1\t1\tNULL\tNULL\tpending\tenrolled\t2026-01-01 09:54:49\n1\t900014\t270004\tNULL\tNULL\tpending\tcompleted\t2025-12-25 15:58:56\n2\t900014\t270005\tNULL\tNULL\tpending\tin_progress\t2025-12-25 15:58:56\n3\t900016\t270006\tNULL\tNULL\tpending\tin_progress\t2025-12-25 15:58:56\n4\t900022\t270012\tNULL\tNULL\tpending\tin_progress\t2025-12-25 15:58:56\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

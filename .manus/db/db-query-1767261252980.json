@@ -1,0 +1,9 @@
+{
+  "query": "DELETE FROM course_enrollments WHERE userId = 1 AND courseId = 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute DELETE FROM course_enrollments WHERE userId = 1 AND courseId = 1;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 196
+}

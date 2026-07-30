@@ -1,0 +1,52 @@
+{
+  "query": "SELECT * FROM test_questions LIMIT 3;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM test_questions LIMIT 3;",
+  "rows": [
+    {
+      "id": "1",
+      "testId": "1",
+      "moduleId": "1",
+      "questionText": "What is the primary purpose of AI Safety?",
+      "questionType": "multiple_choice",
+      "options": "[\"To make AI systems faster\", \"To ensure AI systems operate reliably, ethically, and without causing unintended harm\", \"To reduce the cost of AI development\", \"To replace human workers with AI\"]",
+      "correctAnswer": "1",
+      "explanation": "AI Safety focuses on ensuring AI systems are reliable, ethical, and don't cause unintended harm to humans or society.",
+      "points": "1",
+      "difficulty": "medium",
+      "isActive": "1",
+      "createdAt": "2025-12-24 06:40:54"
+    },
+    {
+      "id": "2",
+      "testId": "1",
+      "moduleId": "1",
+      "questionText": "Which of the following is NOT a reason why AI Safety matters?",
+      "questionType": "multiple_choice",
+      "options": "[\"Preventing harm at scale\", \"Building public trust in AI\", \"Maximizing AI company profits\", \"Regulatory compliance\"]",
+      "correctAnswer": "2",
+      "explanation": "While AI safety may indirectly benefit companies, its primary purposes are preventing harm, building trust, and ensuring compliance.",
+      "points": "1",
+      "difficulty": "medium",
+      "isActive": "1",
+      "createdAt": "2025-12-24 06:40:54"
+    },
+    {
+      "id": "3",
+      "testId": "1",
+      "moduleId": "1",
+      "questionText": "What is the maximum penalty under the EU AI Act for prohibited AI practices?",
+      "questionType": "multiple_choice",
+      "options": "[\"€10 million or 2% of global revenue\", \"€35 million or 7% of global revenue\", \"€50 million or 10% of global revenue\", \"€1 million or 0.5% of global revenue\"]",
+      "correctAnswer": "1",
+      "explanation": "The EU AI Act imposes penalties up to €35 million or 7% of global annual revenue for prohibited AI practices.",
+      "points": "1",
+      "difficulty": "medium",
+      "isActive": "1",
+      "createdAt": "2025-12-24 06:40:54"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttestId\tmoduleId\tquestionText\tquestionType\toptions\tcorrectAnswer\texplanation\tpoints\tdifficulty\tisActive\tcreatedAt\n1\t1\t1\tWhat is the primary purpose of AI Safety?\tmultiple_choice\t[\"To make AI systems faster\", \"To ensure AI systems operate reliably, ethically, and without causing unintended harm\", \"To reduce the cost of AI development\", \"To replace human workers with AI\"]\t1\tAI Safety focuses on ensuring AI systems are reliable, ethical, and don't cause unintended harm to humans or society.\t1\tmedium\t1\t2025-12-24 06:40:54\n2\t1\t1\tWhich of the following is NOT a reason why AI Safety matters?\tmultiple_choice\t[\"Preventing harm at scale\", \"Building public trust in AI\", \"Maximizing AI company profits\", \"Regulatory compliance\"]\t2\tWhile AI safety may indirectly benefit companies, its primary purposes are preventing harm, building trust, and ensuring compliance.\t1\tmedium\t1\t2025-12-24 06:40:54\n3\t1\t1\tWhat is the maximum penalty under the EU AI Act for prohibited AI practices?\tmultiple_choice\t[\"€10 million or 2% of global revenue\", \"€35 million or 7% of global revenue\", \"€50 million or 10% of global revenue\", \"€1 million or 0.5% of global revenue\"]\t1\tThe EU AI Act imposes penalties up to €35 million or 7% of global annual revenue for prohibited AI practices.\t1\tmedium\t1\t2025-12-24 06:40:54\n",
+  "stderr": "",
+  "execution_time_ms": 65
+}

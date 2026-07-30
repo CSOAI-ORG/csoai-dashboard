@@ -1,0 +1,75 @@
+{
+  "query": "SELECT table_name, column_name, data_type FROM information_schema.columns WHERE table_schema = 'public' AND table_name LIKE '%test%' OR table_name LIKE '%exam%' ORDER BY table_name, ordinal_position;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT table_name, column_name, data_type FROM information_schema.columns WHERE table_schema = 'public' AND table_name LIKE '%test%' OR table_name LIKE '%exam%' ORDER BY table_name, ordinal_position;",
+  "rows": [
+    {
+      "table_name": "exam_questions",
+      "column_name": "id",
+      "data_type": "int"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "category",
+      "data_type": "varchar"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "question",
+      "data_type": "text"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "optionA",
+      "data_type": "text"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "optionB",
+      "data_type": "text"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "optionC",
+      "data_type": "text"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "optionD",
+      "data_type": "text"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "correctAnswer",
+      "data_type": "char"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "explanation",
+      "data_type": "text"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "difficulty",
+      "data_type": "varchar"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "points",
+      "data_type": "int"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "isActive",
+      "data_type": "tinyint"
+    },
+    {
+      "table_name": "exam_questions",
+      "column_name": "createdAt",
+      "data_type": "timestamp"
+    }
+  ],
+  "messages": [],
+  "stdout": "table_name\tcolumn_name\tdata_type\nexam_questions\tid\tint\nexam_questions\tcategory\tvarchar\nexam_questions\tquestion\ttext\nexam_questions\toptionA\ttext\nexam_questions\toptionB\ttext\nexam_questions\toptionC\ttext\nexam_questions\toptionD\ttext\nexam_questions\tcorrectAnswer\tchar\nexam_questions\texplanation\ttext\nexam_questions\tdifficulty\tvarchar\nexam_questions\tpoints\tint\nexam_questions\tisActive\ttinyint\nexam_questions\tcreatedAt\ttimestamp\n",
+  "stderr": "",
+  "execution_time_ms": 250
+}

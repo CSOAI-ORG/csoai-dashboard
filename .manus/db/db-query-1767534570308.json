@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO course_enrollments (userId, bundleId, enrollmentType, paymentStatus, amountPaid, status, progress) SELECT DISTINCT e.userId, 1, 'bundle', 'completed', 99900, 'enrolled', 0 FROM course_enrollments e WHERE e.courseId IS NOT NULL AND e.userId NOT IN (SELECT userId FROM course_enrollments WHERE bundleId IS NOT NULL);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO course_enrollments (userId, bundleId, enrollmentType, paymentStatus, amountPaid, status, progress) SELECT DISTINCT e.userId, 1, 'bundle', 'completed', 99900, 'enrolled', 0 FROM course_enrollments e WHERE e.courseId IS NOT NULL AND e.userId NOT IN (SELECT userId FROM course_enrollments WHERE bundleId IS NOT NULL);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 413
+}

@@ -1,0 +1,34 @@
+{
+  "query": "SELECT id, name, bundlePrice, bundlePrice3Month, bundlePrice6Month, bundlePrice12Month, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM course_bundles;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, name, bundlePrice, bundlePrice3Month, bundlePrice6Month, bundlePrice12Month, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM course_bundles;",
+  "rows": [
+    {
+      "id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks",
+      "bundlePrice": "99900",
+      "bundlePrice3Month": "33300",
+      "bundlePrice6Month": "16650",
+      "bundlePrice12Month": "8325",
+      "stripePriceId": "price_1Sl57DDuEg5HakgPZu5pNVHB",
+      "stripePriceId3Month": "price_1SltnwDuEg5HakgPSdH9VETl",
+      "stripePriceId6Month": "price_1SltnxDuEg5HakgPYJTZG2MD",
+      "stripePriceId12Month": "price_1SltnxDuEg5HakgPQaM0tbYA"
+    },
+    {
+      "id": "200002",
+      "name": "Complete Certification - All 7 Modules",
+      "bundlePrice": "199900",
+      "bundlePrice3Month": "66633",
+      "bundlePrice6Month": "33317",
+      "bundlePrice12Month": "16658",
+      "stripePriceId": "price_1Sl57EDuEg5HakgPkWvUoRgs",
+      "stripePriceId3Month": "price_1SltnyDuEg5HakgP5qvK3l9F",
+      "stripePriceId6Month": "price_1SltnyDuEg5HakgPGBsfxOjf",
+      "stripePriceId12Month": "price_1SltnzDuEg5HakgPtMARDHiT"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tbundlePrice\tbundlePrice3Month\tbundlePrice6Month\tbundlePrice12Month\tstripePriceId\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\n200001\tFoundation Bundle - 3 Core Frameworks\t99900\t33300\t16650\t8325\tprice_1Sl57DDuEg5HakgPZu5pNVHB\tprice_1SltnwDuEg5HakgPSdH9VETl\tprice_1SltnxDuEg5HakgPYJTZG2MD\tprice_1SltnxDuEg5HakgPQaM0tbYA\n200002\tComplete Certification - All 7 Modules\t199900\t66633\t33317\t16658\tprice_1Sl57EDuEg5HakgPkWvUoRgs\tprice_1SltnyDuEg5HakgP5qvK3l9F\tprice_1SltnyDuEg5HakgPGBsfxOjf\tprice_1SltnzDuEg5HakgPtMARDHiT\n",
+  "stderr": "",
+  "execution_time_ms": 60
+}

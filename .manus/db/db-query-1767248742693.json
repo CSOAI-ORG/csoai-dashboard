@@ -1,0 +1,62 @@
+{
+  "query": "SELECT moduleId, COUNT(*) as question_count FROM test_questions WHERE moduleId IS NOT NULL GROUP BY moduleId ORDER BY moduleId;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT moduleId, COUNT(*) as question_count FROM test_questions WHERE moduleId IS NOT NULL GROUP BY moduleId ORDER BY moduleId;",
+  "rows": [
+    {
+      "moduleId": "1",
+      "question_count": "50"
+    },
+    {
+      "moduleId": "2",
+      "question_count": "36"
+    },
+    {
+      "moduleId": "3",
+      "question_count": "40"
+    },
+    {
+      "moduleId": "4",
+      "question_count": "39"
+    },
+    {
+      "moduleId": "5",
+      "question_count": "49"
+    },
+    {
+      "moduleId": "30001",
+      "question_count": "50"
+    },
+    {
+      "moduleId": "30002",
+      "question_count": "50"
+    },
+    {
+      "moduleId": "30003",
+      "question_count": "50"
+    },
+    {
+      "moduleId": "30004",
+      "question_count": "58"
+    },
+    {
+      "moduleId": "30005",
+      "question_count": "57"
+    },
+    {
+      "moduleId": "30006",
+      "question_count": "50"
+    },
+    {
+      "moduleId": "30007",
+      "question_count": "50"
+    },
+    {
+      "moduleId": "30008",
+      "question_count": "55"
+    }
+  ],
+  "messages": [],
+  "stdout": "moduleId\tquestion_count\n1\t50\n2\t36\n3\t40\n4\t39\n5\t49\n30001\t50\n30002\t50\n30003\t50\n30004\t58\n30005\t57\n30006\t50\n30007\t50\n30008\t55\n",
+  "stderr": "",
+  "execution_time_ms": 1406
+}

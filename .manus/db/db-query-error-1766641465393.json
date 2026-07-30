@@ -1,0 +1,10 @@
+{
+  "query": "INSERT INTO agent_votes (sessionId, agentId, agentType, agentProvider, vote, confidence, reasoning) SELECT 1, 'agent_' || n, \n  CASE WHEN n <= 11 THEN 'guardian' WHEN n <= 22 THEN 'arbiter' ELSE 'scribe' END,\n  CASE (n-1) % 5 WHEN 0 THEN 'openai' WHEN 1 THEN 'anthropic' WHEN 2 THEN 'google' WHEN 3 THEN 'kimi' ELSE 'deepseek' END,\n  CASE WHEN n <= 25 THEN 'approve' WHEN n <= 30 THEN 'reject' ELSE 'escalate' END,\n  CAST((0.75 + RANDOM() * 0.25) AS VARCHAR),\n  'Evidence clearly demonstrates non-compliance with stated framework requirements.'\nFROM generate_series(1, 33) AS n;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute INSERT INTO agent_votes (sessionId, agentId, agentType, agentProvider, vote, confidence, reasoning) SELECT 1, 'agent_' || n, \n  CASE WHEN n <= 11 THEN 'guardian' WHEN n <= 22 THEN 'arbiter' ELSE 'scribe' END,\n  CASE (n-1) % 5 WHEN 0 THEN 'openai' WHEN 1 THEN 'anthropic' WHEN 2 THEN 'google' WHEN 3 THEN 'kimi' ELSE 'deepseek' END,\n  CASE WHEN n <= 25 THEN 'approve' WHEN n <= 30 THEN 'reject' ELSE 'escalate' END,\n  CAST((0.75 + RANDOM() * 0.25) AS VARCHAR),\n  'Evidence clearly demonstrates non-compliance with stated framework requirements.'\nFROM generate_series(1, 33) AS n;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1064 (42000) at line 1: You have an error in your SQL syntax; check the manual that corresponds to your TiDB version for the right syntax to use line 5 column 43 near \"VARCHAR),",
+    "  'Evidence clearly demonstrates non-compliance with stated framework requirements.'",
+    "FROM generate_series(1, 33) AS n\""
+  ]
+}

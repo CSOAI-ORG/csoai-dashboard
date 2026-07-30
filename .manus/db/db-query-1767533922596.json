@@ -1,0 +1,109 @@
+{
+  "query": "SELECT id, userId, courseId, bundleId, enrollmentType, paymentStatus, status FROM course_enrollments;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, userId, courseId, bundleId, enrollmentType, paymentStatus, status FROM course_enrollments;",
+  "rows": [
+    {
+      "id": "1",
+      "userId": "900014",
+      "courseId": "270004",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "pending",
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "userId": "900014",
+      "courseId": "270005",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "pending",
+      "status": "in_progress"
+    },
+    {
+      "id": "3",
+      "userId": "900016",
+      "courseId": "270006",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "pending",
+      "status": "in_progress"
+    },
+    {
+      "id": "4",
+      "userId": "900022",
+      "courseId": "270012",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "pending",
+      "status": "in_progress"
+    },
+    {
+      "id": "330028",
+      "userId": "1",
+      "courseId": "100002",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    },
+    {
+      "id": "330029",
+      "userId": "1",
+      "courseId": "100003",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    },
+    {
+      "id": "330030",
+      "userId": "1",
+      "courseId": "100004",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    },
+    {
+      "id": "330031",
+      "userId": "1",
+      "courseId": "100005",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    },
+    {
+      "id": "330032",
+      "userId": "1",
+      "courseId": "100006",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    },
+    {
+      "id": "330033",
+      "userId": "1",
+      "courseId": "100007",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "completed",
+      "status": "enrolled"
+    },
+    {
+      "id": "330034",
+      "userId": "1",
+      "courseId": "100001",
+      "bundleId": "NULL",
+      "enrollmentType": "course",
+      "paymentStatus": "free",
+      "status": "enrolled"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\tcourseId\tbundleId\tenrollmentType\tpaymentStatus\tstatus\n1\t900014\t270004\tNULL\tcourse\tpending\tcompleted\n2\t900014\t270005\tNULL\tcourse\tpending\tin_progress\n3\t900016\t270006\tNULL\tcourse\tpending\tin_progress\n4\t900022\t270012\tNULL\tcourse\tpending\tin_progress\n330028\t1\t100002\tNULL\tcourse\tcompleted\tenrolled\n330029\t1\t100003\tNULL\tcourse\tcompleted\tenrolled\n330030\t1\t100004\tNULL\tcourse\tcompleted\tenrolled\n330031\t1\t100005\tNULL\tcourse\tcompleted\tenrolled\n330032\t1\t100006\tNULL\tcourse\tcompleted\tenrolled\n330033\t1\t100007\tNULL\tcourse\tcompleted\tenrolled\n330034\t1\t100001\tNULL\tcourse\tfree\tenrolled\n",
+  "stderr": "",
+  "execution_time_ms": 400
+}

@@ -1,0 +1,18 @@
+{
+  "query": "SELECT id, title, description, framework, level, JSON_LENGTH(modules) as module_count \nFROM courses \nWHERE framework LIKE '%ISO%' \nORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, description, framework, level, JSON_LENGTH(modules) as module_count \nFROM courses \nWHERE framework LIKE '%ISO%' \nORDER BY id;",
+  "rows": [
+    {
+      "id": "120001",
+      "title": "ISO 42001 AI Management System Fundamentals",
+      "description": "Comprehensive training on ISO/IEC 42001:2023 - the world's first international standard for AI management systems. Learn to implement an AIMS, manage AI risks, and prepare for certification. Covers all 10 clauses, PDCA methodology, and alignment with EU AI Act and NIST AI RMF.",
+      "framework": "iso_42001",
+      "level": "fundamentals",
+      "module_count": "8"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tdescription\tframework\tlevel\tmodule_count\n120001\tISO 42001 AI Management System Fundamentals\tComprehensive training on ISO/IEC 42001:2023 - the world's first international standard for AI management systems. Learn to implement an AIMS, manage AI risks, and prepare for certification. Covers all 10 clauses, PDCA methodology, and alignment with EU AI Act and NIST AI RMF.\tiso_42001\tfundamentals\t8\n",
+  "stderr": "",
+  "execution_time_ms": 63
+}

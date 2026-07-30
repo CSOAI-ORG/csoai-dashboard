@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as total FROM test_questions WHERE isActive = 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT COUNT(*) as total FROM test_questions WHERE isActive = 1;",
+  "rows": [
+    {
+      "total": "158"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\n158\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

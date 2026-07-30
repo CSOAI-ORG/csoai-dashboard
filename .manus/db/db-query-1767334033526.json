@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, questionText, options, correctAnswer FROM test_questions WHERE testId = 1 LIMIT 1",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, questionText, options, correctAnswer FROM test_questions WHERE testId = 1 LIMIT 1",
+  "rows": [
+    {
+      "id": "1",
+      "questionText": "What is the primary purpose of AI Safety?",
+      "options": "[\"To make AI systems faster\", \"To ensure AI systems operate reliably, ethically, and without causing unintended harm\", \"To reduce the cost of AI development\", \"To replace human workers with AI\"]",
+      "correctAnswer": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tquestionText\toptions\tcorrectAnswer\n1\tWhat is the primary purpose of AI Safety?\t[\"To make AI systems faster\", \"To ensure AI systems operate reliably, ethically, and without causing unintended harm\", \"To reduce the cost of AI development\", \"To replace human workers with AI\"]\t1\n",
+  "stderr": "",
+  "execution_time_ms": 428
+}

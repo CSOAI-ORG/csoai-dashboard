@@ -1,0 +1,66 @@
+{
+  "query": "SELECT id, title FROM courses ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title FROM courses ORDER BY id;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework"
+    },
+    {
+      "id": "660001",
+      "title": "Test Analytics Course"
+    },
+    {
+      "id": "660004",
+      "title": "Test Course for Lessons"
+    },
+    {
+      "id": "660005",
+      "title": "Test Course for Forums"
+    },
+    {
+      "id": "660006",
+      "title": "Test Course for Lessons"
+    },
+    {
+      "id": "690002",
+      "title": "Test Course for Lessons"
+    },
+    {
+      "id": "690003",
+      "title": "Test Course for Forums"
+    },
+    {
+      "id": "690004",
+      "title": "Test Analytics Course"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\n100001\tEU AI Act Fundamentals\n100002\tNIST AI RMF Fundamentals\n100003\tUK AI Safety Institute Framework\n100004\tCanada AIDA Compliance\n100005\tAustralia AI Ethics Framework\n100006\tISO 42001 International Standard\n100007\tChina TC260 AI Framework\n660001\tTest Analytics Course\n660004\tTest Course for Lessons\n660005\tTest Course for Forums\n660006\tTest Course for Lessons\n690002\tTest Course for Lessons\n690003\tTest Course for Forums\n690004\tTest Analytics Course\n",
+  "stderr": "",
+  "execution_time_ms": 400
+}

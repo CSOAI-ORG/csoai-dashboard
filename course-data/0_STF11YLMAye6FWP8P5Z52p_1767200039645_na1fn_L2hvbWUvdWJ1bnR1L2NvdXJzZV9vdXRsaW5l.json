@@ -1,0 +1,604 @@
+{
+    "courseOverview": {
+        "title": "Certified AI Safety Analyst: EU AI Act",
+        "code": "CSOAI-EU-AI-ACT-01",
+        "learningObjectives": [
+            "Understand the legal framework of the EU AI Act.",
+            "Classify AI systems based on risk levels.",
+            "Identify and mitigate risks associated with high-risk AI systems.",
+            "Ensure compliance with transparency and accountability requirements.",
+            "Conduct conformity assessments and prepare technical documentation.",
+            "Understand the roles and responsibilities of different actors in the AI value chain.",
+            "Apply the EU AI Act in practical scenarios."
+        ],
+        "prerequisites": "Basic understanding of AI concepts and legal principles.",
+        "duration": 45,
+        "certificationLevel": "Specialist"
+    },
+    "modules": [
+        {
+            "title": "Module 1: Introduction to the EU AI Act",
+            "code": "CSOAI-EU-AI-ACT-M01",
+            "duration": 4,
+            "learningOutcomes": [
+                "Understand the rationale and objectives of the EU AI Act.",
+                "Define key terms and concepts.",
+                "Describe the scope and structure of the regulation."
+            ],
+            "content": "",
+            "regulatoryArticles": ["Article 1", "Article 2", "Article 3"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 2: Prohibited AI Practices",
+            "code": "CSOAI-EU-AI-ACT-M02",
+            "duration": 4,
+            "learningOutcomes": [
+                "Identify AI practices that are strictly prohibited under the EU AI Act.",
+                "Understand the rationale for prohibiting certain AI systems.",
+                "Analyze the scope and implications of the prohibitions."
+            ],
+            "content": "This module focuses on the AI practices that are considered unacceptable and are therefore strictly prohibited under the EU AI Act. It will provide a detailed analysis of the four categories of prohibited AI systems listed in Article 5 of the regulation. Participants will learn about the ethical and legal considerations that led to these prohibitions and the potential harm that these systems could cause to individuals and society. The module will also discuss the nuances and exceptions related to some of the prohibitions, such as the use of ‘real-time’ remote biometric identification systems in publicly accessible spaces for the purpose of law enforcement.\n\n**Key Topics:**\n\n*   **Subliminal, Manipulative, and Deceptive AI:** This section will explore the prohibition of AI systems that use subliminal techniques or purposefully manipulative or deceptive techniques to materially distort a person’s behavior. It will discuss the potential for such systems to undermine human autonomy and cause significant harm.\n*   **Exploitation of Vulnerabilities:** This part will focus on the prohibition of AI systems that exploit the vulnerabilities of specific groups of persons, such as children or persons with disabilities. It will explain how these systems can cause harm by distorting the behavior of vulnerable individuals.\n*   **Social Scoring:** This section will cover the prohibition of AI systems used for social scoring by public authorities. It will discuss the risks of such systems for fundamental rights, such as the right to privacy, data protection, and non-discrimination.\n*   **‘Real-time’ Remote Biometric Identification:** This part will provide a detailed analysis of the prohibition of ‘real-time’ remote biometric identification systems in publicly accessible spaces for the purpose of law enforcement. It will explain the strict conditions and exceptions for the use of such systems and the safeguards that must be in place.",
+            "practicalExercises": "*   **Scenario Analysis:** Analyze a series of scenarios and determine whether the AI systems described would be prohibited under the EU AI Act.\n*   **Debate:** A debate on the ethical implications of using ‘real-time’ remote biometric identification systems for law enforcement.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz to test the understanding of the prohibited AI practices.\n*   **Case Study Analysis:** A written analysis of a case study involving a prohibited AI practice.",
+            "regulatoryArticles": ["Article 5"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 3: High-Risk AI Systems: Classification",
+            "code": "CSOAI-EU-AI-ACT-M03",
+            "duration": 4,
+            "learningOutcomes": [
+                "Understand the criteria for classifying AI systems as high-risk.",
+                "Identify the categories of high-risk AI systems listed in Annex III.",
+                "Apply the classification rules to practical examples."
+            ],
+            "content": "This module provides a detailed examination of the classification of AI systems as high-risk. It will explain the two main pathways for an AI system to be classified as high-risk: either by being a product covered by Union harmonization legislation listed in Annex II, or by being listed in Annex III. Participants will learn how to navigate these annexes and apply the classification rules to determine whether an AI system is high-risk. The module will also cover the process for updating the list of high-risk AI systems in Annex III.\n\n**Key Topics:**\n\n*   **Classification Rules:** This section will provide a step-by-step guide to the classification rules for high-risk AI systems. It will explain the logic behind the risk-based approach and the criteria used to identify high-risk AI systems.\n*   **Annex II: Union Harmonisation Legislation:** This part will focus on the AI systems that are considered high-risk because they are components of products covered by specific Union harmonization legislation, such as medical devices or toys. It will explain how to determine if an AI system falls into this category.\n*   **Annex III: High-Risk AI Systems:** This section will provide a detailed overview of the categories of high-risk AI systems listed in Annex III. It will cover areas such as biometric identification, critical infrastructure, education, employment, access to essential services, law enforcement, and administration of justice.\n*   **Amendments to Annex III:** This part will explain the process for amending the list of high-risk AI systems in Annex III. It will discuss the criteria that the Commission will use to add or remove AI systems from the list.",
+            "practicalExercises": "*   **Classification Exercise:** Classify a list of AI systems as high-risk or not, based on the rules and annexes of the EU AI Act.\n*   **Case Study:** Analyze a complex case study and present a reasoned argument for or against classifying the AI system as high-risk.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on the classification rules and the categories of high-risk AI systems.\n*   **Written Assignment:** A written assignment requiring the classification of a given AI system with a detailed justification.",
+            "regulatoryArticles": ["Article 6", "Article 7", "Annex III"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 4: Requirements for High-Risk AI Systems",
+            "code": "CSOAI-EU-AI-ACT-M04",
+            "duration": 5,
+            "learningOutcomes": [
+                "Understand the requirements for data and data governance.",
+                "Learn about technical documentation and record-keeping obligations.",
+                "Grasp the importance of transparency, human oversight, accuracy, robustness, and cybersecurity."
+            ],
+            "content": "This module provides an in-depth analysis of the mandatory requirements for high-risk AI systems as laid down in Chapter 2 of Title III of the EU AI Act. It will cover the entire lifecycle of a high-risk AI system, from data and data governance to post-market monitoring. Participants will learn about the practical steps that providers of high-risk AI systems need to take to ensure compliance with the regulation. The module will also discuss the importance of a robust quality management system and the role of harmonized standards.\n\n**Key Topics:**\n\n*   **Data and Data Governance:** This section will focus on the requirements for the data used to train and test high-risk AI systems. It will cover aspects such as data quality, data relevance, and data protection. It will also discuss the importance of a sound data governance framework.\n*   **Technical Documentation and Record-Keeping:** This part will explain the obligations for providers to draw up and maintain technical documentation for high-risk AI systems. It will also cover the record-keeping requirements, which are essential for ensuring traceability and accountability.\n*   **Transparency and Provision of Information to Users:** This section will discuss the transparency requirements for high-risk AI systems. It will explain what information providers need to make available to users to enable them to understand and control the system.\n*   **Human Oversight:** This part will focus on the requirement for human oversight of high-risk AI systems. It will discuss the different forms of human oversight and the measures that need to be in place to ensure effective human control.\n*   **Accuracy, Robustness, and Cybersecurity:** This section will cover the requirements for high-risk AI systems to be accurate, robust, and resilient against attempts to alter their use or performance. It will discuss the importance of cybersecurity measures to prevent the exploitation of vulnerabilities.",
+            "practicalExercises": "*   **Technical Documentation Review:** Review a sample of technical documentation for a high-risk AI system and identify any gaps or weaknesses.\n*   **Human Oversight Design:** Design a human oversight mechanism for a given high-risk AI system.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on the requirements for high-risk AI systems.\n*   **Practical Exercise:** A practical exercise requiring the development of a partial technical documentation for a hypothetical high-risk AI system.",
+            "regulatoryArticles": ["Article 8", "Article 9", "Article 10", "Article 11", "Article 12", "Article 13", "Article 14", "Article 15"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 5: Transparency Obligations for Certain AI Systems",
+            "code": "CSOAI-EU-AI-ACT-M05",
+            "duration": 4,
+            "learningOutcomes": [
+                "Understand the transparency requirements for AI systems intended to interact with natural persons.",
+                "Learn about the obligations for AI systems that generate or manipulate content (deepfakes).",
+                "Analyze the implications of transparency for users and providers."
+            ],
+            "content": "This module focuses on the transparency obligations for certain AI systems, as outlined in Chapter IV of the EU AI Act. It will cover the requirements for AI systems that interact with humans, as well as those that generate or manipulate content, such as deepfakes. Participants will learn about the importance of transparency in building trust and empowering users. The module will also discuss the practical challenges of implementing these transparency obligations.\n\n**Key Topics:**\n\n*   **AI Systems Intended to Interact with Natural Persons:** This section will explain the obligation for providers to ensure that natural persons are informed that they are interacting with an AI system, unless this is obvious from the circumstances. It will discuss the different ways in which this information can be provided.\n*   **Emotion Recognition and Biometric Categorization Systems:** This part will cover the specific transparency obligations for emotion recognition systems and biometric categorization systems. It will explain the requirement to inform natural persons of the operation of such systems.\n*   **Deepfakes:** This section will focus on the transparency obligations for AI systems that generate or manipulate image, audio, or video content that appreciably resembles existing persons, objects, places, or other entities or events and would falsely appear to a person to be authentic or truthful. It will discuss the requirement to disclose that the content has been artificially generated or manipulated.\n*   **Implications for Users and Providers:** This part will analyze the implications of the transparency obligations for both users and providers of AI systems. It will discuss how transparency can empower users to make informed decisions and how providers can implement these obligations in a user-friendly way.",
+            "practicalExercises": "*   **Transparency by Design:** Design a user interface for an AI-powered chatbot that complies with the transparency requirements of the EU AI Act.\n*   **Deepfake Detection:** Analyze a set of images and videos and try to identify which ones are deepfakes.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on the transparency obligations for certain AI systems.\n*   **Case Study Analysis:** A written analysis of a case study involving a breach of transparency obligations.",
+            "regulatoryArticles": ["Article 50", "Article 51", "Article 52"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 6: Conformity Assessment",
+            "code": "CSOAI-EU-AI-ACT-M06",
+            "duration": 5,
+            "learningOutcomes": [
+                "Understand the conformity assessment procedures for high-risk AI systems.",
+                "Learn about the role of notified bodies.",
+                "Grasp the requirements for CE marking and the EU declaration of conformity."
+            ],
+            "content": "This module explains the conformity assessment procedures that high-risk AI systems must undergo before they can be placed on the market or put into service. It will cover the different conformity assessment procedures, the role of notified bodies, and the requirements for the CE marking and the EU declaration of conformity. Participants will gain a practical understanding of how to demonstrate compliance with the EU AI Act.\n\n**Key Topics:**\n\n*   **Conformity Assessment Procedures:** This section will provide a detailed overview of the conformity assessment procedures for high-risk AI systems. It will explain the difference between the internal control procedure and the conformity assessment procedure based on a quality management system and assessment of the technical documentation.\n*   **Notified Bodies:** This part will focus on the role of notified bodies in the conformity assessment process. It will explain how notified bodies are designated and what their tasks are. It will also discuss the importance of the independence and competence of notified bodies.\n*   **CE Marking and EU Declaration of Conformity:** This section will explain the requirements for the CE marking and the EU declaration of conformity. It will discuss the meaning of the CE marking and the information that must be included in the EU declaration of conformity.\n*   **Substantial Modifications:** This part will cover the rules for substantial modifications of high-risk AI systems. It will explain when a modification is considered substantial and what the consequences are for the conformity assessment.",
+            "practicalExercises": "*   **Conformity Assessment Simulation:** Simulate the conformity assessment procedure for a hypothetical high-risk AI system.\n*   **Notified Body Selection:** Develop a set of criteria for selecting a notified body.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on the conformity assessment procedures.\n*   **Practical Exercise:** A practical exercise requiring the drafting of an EU declaration of conformity for a hypothetical high-risk AI system.",
+            "regulatoryArticles": ["Article 43", "Article 44", "Article 48", "Article 49"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 7: Post-Market Monitoring and Market Surveillance",
+            "code": "CSOAI-EU-AI-ACT-M07",
+            "duration": 4,
+            "learningOutcomes": [
+                "Understand the post-market monitoring obligations for providers of high-risk AI systems.",
+                "Learn about the role of market surveillance authorities.",
+                "Grasp the procedures for dealing with non-compliant AI systems."
+            ],
+            "content": "This module covers the post-market monitoring and market surveillance provisions of the EU AI Act. It will explain the obligations for providers to monitor the performance of their high-risk AI systems once they are on the market. It will also discuss the role of market surveillance authorities in ensuring the effective implementation of the regulation and protecting the public from non-compliant AI systems. Participants will learn about the procedures for reporting serious incidents and for taking corrective actions.\n\n**Key Topics:**\n\n*   **Post-Market Monitoring System:** This section will explain the requirement for providers of high-risk AI systems to establish and maintain a post-market monitoring system. It will discuss the elements of such a system and the information that needs to be collected and analyzed.\n*   **Reporting of Serious Incidents:** This part will focus on the obligation for providers to report any serious incidents involving their high-risk AI systems to the relevant market surveillance authorities. It will explain what constitutes a serious incident and the timeline for reporting.\n*   **Market Surveillance and Control of AI Systems:** This section will discuss the role and powers of market surveillance authorities. It will explain how they can check the compliance of AI systems, request information from providers, and take measures to restrict or prohibit the placing on the market of non-compliant systems.\n*   **Procedure for Dealing with Non-Compliant AI Systems:** This part will provide a detailed overview of the procedure for dealing with AI systems that present a risk to health, safety, or fundamental rights. It will explain the steps that market surveillance authorities can take, from requiring corrective actions to ordering the recall of a system.",
+            "practicalExercises": "*   **Incident Reporting Simulation:** Simulate the reporting of a serious incident involving a high-risk AI system.\n*   **Market Surveillance Scenarios:** Analyze a series of scenarios and determine the appropriate actions for market surveillance authorities.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on post-market monitoring and market surveillance.\n*   **Case Study Analysis:** A written analysis of a case study involving a non-compliant AI system.",
+            "regulatoryArticles": ["Article 72", "Article 73", "Article 74"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 8: Governance and Enforcement",
+            "code": "CSOAI-EU-AI-ACT-M08",
+            "duration": 5,
+            "learningOutcomes": [
+                "Understand the roles of the European Artificial Intelligence Board and national competent authorities.",
+                "Learn about the AI Office and its tasks.",
+                "Grasp the mechanisms for cooperation and coordination between authorities."
+            ],
+            "content": "This module provides a comprehensive overview of the governance and enforcement structure of the EU AI Act. It will explain the roles and responsibilities of the different bodies involved in the implementation and enforcement of the regulation, including the European Artificial Intelligence Board, the national competent authorities, and the AI Office. Participants will learn about the mechanisms for cooperation and coordination between these bodies and how they will work together to ensure a consistent application of the AI Act across the Union.\n\n**Key Topics:**\n\n*   **European Artificial Intelligence Board:** This section will focus on the composition, tasks, and powers of the European Artificial Intelligence Board. It will explain how the Board will contribute to the consistent application of the AI Act and provide advice and expertise to the Commission.\n*   **National Competent Authorities:** This part will discuss the designation and tasks of the national competent authorities. It will explain their role in overseeing the implementation of the AI Act at the national level and their powers to enforce the regulation.\n*   **AI Office:** This section will provide a detailed overview of the AI Office, which will be established within the Commission. It will explain the tasks of the AI Office, such as supporting the work of the Board, providing guidance on the implementation of the AI Act, and monitoring the development of AI in the Union.\n*   **Cooperation and Coordination:** This part will focus on the mechanisms for cooperation and coordination between the different governance bodies. It will explain how they will exchange information, provide mutual assistance, and resolve any disagreements.",
+            "practicalExercises": "*   **Governance Structure Mapping:** Create a diagram illustrating the governance structure of the EU AI Act.\n*   **Role-Playing Exercise:** A role-playing exercise simulating a meeting of the European Artificial Intelligence Board.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on the governance and enforcement structure of the EU AI Act.\n*   **Written Assignment:** A written assignment analyzing the role of the AI Office in the implementation of the AI Act.",
+            "regulatoryArticles": ["Article 56", "Article 57", "Article 58"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 9: Penalties and Fines",
+            "code": "CSOAI-EU-AI-ACT-M09",
+            "duration": 4,
+            "learningOutcomes": [
+                "Understand the penalties for non-compliance with the EU AI Act.",
+                "Learn about the different levels of fines.",
+                "Grasp the criteria for imposing penalties."
+            ],
+            "content": "This module provides a detailed overview of the penalties and fines for non-compliance with the EU AI Act. It will explain the different levels of fines, the criteria for imposing them, and the role of national competent authorities in enforcing the penalties. Participants will gain a clear understanding of the financial and legal consequences of non-compliance, which will underscore the importance of a robust compliance strategy.\n\n**Key Topics:**\n\n*   **Administrative Fines:** This section will provide a detailed breakdown of the administrative fines for non-compliance with the EU AI Act. It will cover the different levels of fines, which can be up to 35 million euros or 7% of the total worldwide annual turnover, whichever is higher. It will also explain the criteria that will be taken into account when imposing fines, such as the nature, gravity, and duration of the infringement.\n*   **Penalties for Infringements of the Provisions on Prohibited AI Practices:** This part will focus on the specific penalties for infringements of the provisions on prohibited AI practices. It will explain that these are the most serious infringements and are subject to the highest level of fines.\n*   **Penalties for Infringements of other Provisions:** This section will cover the penalties for infringements of other provisions of the AI Act, such as the requirements for high-risk AI systems, the transparency obligations, and the obligations of providers and users. It will explain the different levels of fines for these infringements.\n*   **Procedural Aspects:** This part will discuss the procedural aspects of imposing penalties. It will explain the role of national competent authorities, the rights of the parties concerned, and the possibilities for judicial review.",
+            "practicalExercises": "*   **Fine Calculation Exercise:** Calculate the potential fine for a company that has infringed the EU AI Act, based on a given scenario.\n*   **Case Study Analysis:** Analyze a case study of a company that has been fined for non-compliance with a similar regulation and discuss the lessons learned.",
+            "assessmentCriteria": "*   **Quiz:** A multiple-choice quiz on the penalties and fines under the EU AI Act.\n*   **Written Assignment:** A written assignment requiring the analysis of a scenario and the determination of the appropriate penalty.",
+            "regulatoryArticles": ["Article 99", "Article 100", "Article 101"],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        },
+        {
+            "title": "Module 10: Practical Implementation and Case Studies",
+            "code": "CSOAI-EU-AI-ACT-M10",
+            "duration": 6,
+            "learningOutcomes": [
+                "Apply the EU AI Act to real-world case studies.",
+                "Develop a compliance strategy for an organization.",
+                "Understand the future of AI regulation in the EU."
+            ],
+            "content": "This final module is designed to bridge the gap between theory and practice. It will provide participants with the opportunity to apply their knowledge of the EU AI Act to real-world case studies and to develop a compliance strategy for a hypothetical organization. The module will also look ahead to the future of AI regulation in the EU, discussing the role of the AI Office, the potential for future amendments to the AI Act, and the relationship with other digital regulations.\n\n**Key Topics:**\n\n*   **Case Studies:** This section will present a series of case studies covering different sectors and types of AI systems. Participants will work in groups to analyze the case studies and to identify the key legal and ethical issues. They will then present their findings to the class.\n*   **Compliance Strategy:** This part will guide participants through the process of developing a compliance strategy for an organization that develops or uses AI systems. It will cover all the key aspects of compliance, from risk management and technical documentation to post-market monitoring and governance.\n*   **The Future of AI Regulation:** This section will look ahead to the future of AI regulation in the EU. It will discuss the role of the AI Office in monitoring the implementation of the AI Act and in proposing amendments. It will also explore the relationship between the AI Act and other digital regulations, such as the Digital Services Act and the Digital Markets Act.\n*   **International Cooperation:** This part will discuss the international dimension of the EU AI Act. It will explain how the EU is working with other countries and international organizations to promote a global consensus on trustworthy AI.",
+            "practicalExercises": "*   **Case Study Workshop:** A full-day workshop dedicated to the analysis and discussion of complex case studies.\n*   **Compliance Strategy Presentation:** A group presentation of a compliance strategy for a hypothetical organization.",
+            "assessmentCriteria": "*   **Case Study Analysis Report:** A written report analyzing a complex case study.\n*   **Compliance Strategy Document:** A comprehensive compliance strategy document for a hypothetical organization.",
+            "regulatoryArticles": [],
+            "practicalExercises": "",
+            "assessmentCriteria": ""
+        }
+    ],
+    "competencyFramework": {
+        "regulatoryKnowledge": [
+            "In-depth understanding of the EU AI Act, including its scope, objectives, and key definitions.",
+            "Comprehensive knowledge of the prohibited AI practices and the rationale behind them.",
+            "Expertise in the classification of AI systems as high-risk, including the criteria and the lists in Annexes II and III.",
+            "Thorough knowledge of the requirements for high-risk AI systems, covering data and data governance, technical documentation, transparency, human oversight, accuracy, robustness, and cybersecurity.",
+            "Understanding of the conformity assessment procedures, the role of notified bodies, and the requirements for CE marking.",
+            "Knowledge of the post-market monitoring and market surveillance obligations.",
+            "Familiarity with the governance and enforcement structure of the EU AI Act, including the roles of the European Artificial Intelligence Board, national competent authorities, and the AI Office.",
+            "Awareness of the penalties and fines for non-compliance."
+        ],
+        "practicalSkills": [
+            "Ability to apply the EU AI Act to real-world scenarios and case studies.",
+            "Skill in developing and implementing a compliance strategy for an organization.",
+            "Competence in conducting risk assessments of AI systems.",
+            "Ability to draft and review technical documentation for high-risk AI systems.",
+            "Skill in designing and implementing human oversight mechanisms.",
+            "Competence in managing the conformity assessment process.",
+            "Ability to handle incident reporting and corrective actions."
+        ],
+        "professionalConduct": [
+            "Commitment to ethical principles and the promotion of trustworthy AI.",
+            "Adherence to the highest standards of professional integrity and objectivity.",
+            "Respect for fundamental rights, including privacy, data protection, and non-discrimination.",
+            "Commitment to continuous learning and professional development.",
+            "Responsibility to act in the public interest and to contribute to the safety and well-being of society."
+        ],
+        "continuingEducation": [
+            "Certified AI Safety Analysts are required to complete at least 20 hours of continuing professional development (CPD) per year.",
+            "CPD activities can include attending courses, workshops, and conferences, as well as conducting research and publishing articles.",
+            "A minimum of 10 CPD hours must be dedicated to the EU AI Act and related legal and technical developments.",
+            "Certified professionals must maintain a record of their CPD activities and submit it to the CSOAI for verification upon request."
+        ]
+    },
+    "examQuestions": [
+        {
+            "questionText": "Which of the following is NOT a primary objective of the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "To promote the uptake of human-centric and trustworthy AI"},
+                {"id": "B", "text": "To ensure a high level of protection of health, safety, and fundamental rights"},
+                {"id": "C", "text": "To establish a uniform legal framework for the development and use of AI systems"},
+                {"id": "D", "text": "To mandate the use of AI in all public services"}
+            ],
+            "correctAnswer": "D",
+            "explanation": "The EU AI Act aims to create a legal framework for AI, not to mandate its use. The other options are all primary objectives of the regulation.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "Which of the following AI practices is strictly prohibited under Article 5 of the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "AI systems used for credit scoring"},
+                {"id": "B", "text": "AI systems that deploy subliminal techniques to distort a person's behavior"},
+                {"id": "C", "text": "AI systems used for recruitment"},
+                {"id": "D", "text": "AI systems used for medical diagnosis"}
+            ],
+            "correctAnswer": "B",
+            "explanation": "Article 5 of the EU AI Act prohibits AI systems that deploy subliminal techniques to materially distort a person's behavior. The other options are considered high-risk but not strictly prohibited.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "An AI system is considered high-risk if it is listed in which Annex of the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "Annex I"},
+                {"id": "B", "text": "Annex II"},
+                {"id": "C", "text": "Annex III"},
+                {"id": "D", "text": "Annex IV"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "Annex III of the EU AI Act contains a list of high-risk AI systems. Annex II lists Union harmonization legislation for products of which AI systems can be a component.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What is the main purpose of the technical documentation for a high-risk AI system?",
+            "options": [
+                {"id": "A", "text": "To market the AI system to potential customers"},
+                {"id": "B", "text": "To provide instructions for use to the end-user"},
+                {"id": "C", "text": "To demonstrate that the AI system complies with the requirements of the EU AI Act"},
+                {"id": "D", "text": "To train the AI model"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The technical documentation is a key element for demonstrating compliance with the requirements of the EU AI Act. It must contain all the necessary information to assess the conformity of the AI system.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What does the CE marking on a high-risk AI system indicate?",
+            "options": [
+                {"id": "A", "text": "That the AI system is of high quality"},
+                {"id": "B", "text": "That the AI system has been approved by the European Commission"},
+                {"id": "C", "text": "That the AI system complies with the requirements of the EU AI Act"},
+                {"id": "D", "text": "That the AI system is safe to use"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The CE marking is a declaration by the provider that the high-risk AI system complies with the requirements of the EU AI Act.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What is the role of a notified body in the conformity assessment of a high-risk AI system?",
+            "options": [
+                {"id": "A", "text": "To develop the AI system"},
+                {"id": "B", "text": "To market the AI system"},
+                {"id": "C", "text": "To assess the conformity of the AI system with the requirements of the EU AI Act"},
+                {"id": "D", "text": "To use the AI system"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "A notified body is a third-party conformity assessment body that is designated by a Member State to assess the conformity of high-risk AI systems with the requirements of the EU AI Act.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What is the main purpose of the post-market monitoring system for a high-risk AI system?",
+            "options": [
+                {"id": "A", "text": "To collect data for training the AI model"},
+                {"id": "B", "text": "To monitor the performance of the AI system and to identify any risks or shortcomings"},
+                {"id": "C", "text": "To market the AI system to new customers"},
+                {"id": "D", "text": "To provide customer support"}
+            ],
+            "correctAnswer": "B",
+            "explanation": "The post-market monitoring system is a key element for ensuring the ongoing compliance and safety of high-risk AI systems. It allows the provider to collect and analyze data on the performance of the system and to take corrective actions if necessary.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What is the role of the European Artificial Intelligence Board?",
+            "options": [
+                {"id": "A", "text": "To develop and market AI systems"},
+                {"id": "B", "text": "To enforce the EU AI Act in the Member States"},
+                {"id": "C", "text": "To advise the Commission on matters related to the EU AI Act and to ensure a consistent application of the regulation"},
+                {"id": "D", "text": "To represent the interests of the AI industry"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The European Artificial Intelligence Board is an expert group that advises the Commission on matters related to the EU AI Act and contributes to its consistent application.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What is the maximum fine for a company that infringes the provisions on prohibited AI practices?",
+            "options": [
+                {"id": "A", "text": "10 million euros or 2% of the total worldwide annual turnover"},
+                {"id": "B", "text": "20 million euros or 4% of the total worldwide annual turnover"},
+                {"id": "C", "text": "35 million euros or 7% of the total worldwide annual turnover"},
+                {"id": "D", "text": "50 million euros or 10% of the total worldwide annual turnover"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The EU AI Act provides for fines of up to 35 million euros or 7% of the total worldwide annual turnover for infringements of the provisions on prohibited AI practices.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "Which of the following is NOT a requirement for high-risk AI systems?",
+            "options": [
+                {"id": "A", "text": "A risk management system"},
+                {"id": "B", "text": "High-quality data sets"},
+                {"id": "C", "text": "A post-market monitoring system"},
+                {"id": "D", "text": "A built-in kill switch"}
+            ],
+            "correctAnswer": "D",
+            "explanation": "While human oversight is a requirement, a specific 'kill switch' is not explicitly mandated in the same way as the other listed requirements.",
+            "difficulty": "easy",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company develops an AI system to sort job applications. The system is found to be biased against a certain demographic group. Which requirement of the EU AI Act has been violated?",
+            "options": [
+                {"id": "A", "text": "Transparency"},
+                {"id": "B", "text": "Accuracy"},
+                {"id": "C", "text": "Data and data governance"},
+                {"id": "D", "text": "Human oversight"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The use of biased data in training the AI model would be a violation of the data and data governance requirements for high-risk AI systems.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A social media company uses an AI system to recommend content to its users. The system is designed to maximize user engagement, but it has the unintended consequence of amplifying extremist content. Which prohibited AI practice could this system be seen as violating?",
+            "options": [
+                {"id": "A", "text": "Subliminal techniques"},
+                {"id": "B", "text": "Exploitation of vulnerabilities"},
+                {"id": "C", "text": "Social scoring"},
+                {"id": "D", "text": "Manipulation of behavior"}
+            ],
+            "correctAnswer": "D",
+            "explanation": "The system could be seen as manipulating user behavior by promoting extremist content, even if that is not its explicit goal. This falls under the prohibition of AI systems that materially distort a person's behavior.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A law enforcement agency wants to use a ‘real-time’ remote biometric identification system in a public park to identify a suspected terrorist. What is the first step they must take?",
+            "options": [
+                {"id": "A", "text": "Obtain a warrant from a judge"},
+                {"id": "B", "text": "Inform the public that they will be using the system"},
+                {"id": 'C', 'text': 'Request authorization from a judicial or independent administrative authority'},
+                {"id": "D", "text": "Conduct a fundamental rights impact assessment"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The use of ‘real-time’ remote biometric identification systems in publicly accessible spaces for law enforcement purposes requires prior authorization from a judicial or independent administrative authority.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company that provides a high-risk AI system makes a substantial modification to the system. What is the consequence of this modification?",
+            "options": [
+                {"id": "A", "text": "The company must inform its customers about the modification"},
+                {"id": "B", "text": "The company must conduct a new conformity assessment"},
+                {"id": "C", "text": "The company must pay a fee to the European Commission"},
+                {"id": "D", "text": "The company must recall the system from the market"}
+            ],
+            "correctAnswer": "B",
+            "explanation": "A substantial modification to a high-risk AI system requires a new conformity assessment to ensure that the system still complies with the requirements of the EU AI Act.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A user of a high-risk AI system discovers a serious incident involving the system. What is their obligation?",
+            "options": [
+                {"id": "A", "text": "To fix the system themselves"},
+                {"id": "B", "text": "To inform the provider of the system"},
+                {"id": "C", "text": "To report the incident to the national competent authority"},
+                {"id": "D", "text": "To do nothing"}
+            ],
+            "correctAnswer": "B",
+            "explanation": "Users of high-risk AI systems are not directly obligated to report serious incidents to authorities, but they should inform the provider, who is then obligated to report the incident.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "Which of the following is NOT a task of the AI Office?",
+            "options": [
+                {"id": "A", "text": "To support the work of the European Artificial Intelligence Board"},
+                {"id": "B", "text": "To provide guidance on the implementation of the EU AI Act"},
+                {"id": "C", "text": "To develop and market its own AI systems"},
+                {"id": "D", "text": "To monitor the development of AI in the Union"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The AI Office is a governance body and is not involved in the development or marketing of AI systems.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company is fined for non-compliance with the EU AI Act. Which of the following factors will NOT be taken into account when determining the amount of the fine?",
+            "options": [
+                {"id": "A", "text": "The nature, gravity, and duration of the infringement"},
+                {"id": "B", "text": "The number of people affected by the infringement"},
+                {"id": "C", "text": "The company's profits"},
+                {"id": "D", "text": "The company's cooperation with the competent authorities"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "While the company's turnover is a factor in determining the maximum fine, the company's profits are not explicitly listed as a criterion for determining the amount of the fine.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company develops an AI system that generates deepfakes. What is the company's main obligation under the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "To obtain a license from the European Commission"},
+                {"id": "B", "text": "To ensure that the deepfakes are not used for malicious purposes"},
+                {"id": "C", "text": "To disclose that the content has been artificially generated or manipulated"},
+                {"id": "D", "text": "To delete the deepfakes after a certain period of time"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The main obligation for providers of AI systems that generate deepfakes is to ensure that users are aware that the content is artificial.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A provider of a high-risk AI system is based outside the EU, but the system is used in the EU. Is the provider subject to the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "Yes, because the system is used in the EU"},
+                {"id": "B", "text": "No, because the provider is based outside the EU"},
+                {"id": "C", "text": "Only if the provider has a subsidiary in the EU"},
+                {"id": "D", "text": "Only if the provider is a large company"}
+            ],
+            "correctAnswer": "A",
+            "explanation": "The EU AI Act has extraterritorial scope and applies to providers of AI systems that are placed on the market or put into service in the EU, regardless of where the provider is based.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "What is the relationship between the EU AI Act and the General Data Protection Regulation (GDPR)?",
+            "options": [
+                {"id": "A", "text": "The EU AI Act replaces the GDPR for AI systems"},
+                {"id": "B", "text": "The GDPR replaces the EU AI Act for AI systems"},
+                {"id": "C", "text": "The two regulations are complementary and both apply to AI systems that process personal data"},
+                {"id": "D", "text": "The two regulations are in conflict and it is not clear which one applies"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The EU AI Act is designed to be complementary to the GDPR. AI systems that process personal data must comply with both regulations.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company uses an AI system to monitor its employees' performance. The system analyzes keystrokes, mouse movements, and website visits to calculate a productivity score. The company uses this score to make decisions about promotions and bonuses. Which of the following statements is true?",
+            "options": [
+                {"id": "A", "text": "This is a prohibited AI practice under Article 5"},
+                {"id": "B", "text": "This is a high-risk AI system under Annex III"},
+                {"id": "C", "text": "This is a limited-risk AI system subject to transparency obligations"},
+                {"id": "D", "text": "This is a minimal-risk AI system and is not subject to any specific obligations"}
+            ],
+            "correctAnswer": "B",
+            "explanation": "AI systems used for workforce management are listed as high-risk in Annex III of the EU AI Act.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A hospital uses an AI system to assist doctors in diagnosing cancer from medical images. The system is not perfect and sometimes makes mistakes. Who is ultimately responsible for the diagnosis?",
+            "options": [
+                {"id": "A", "text": "The AI system"},
+                {"id": "B", "text": "The provider of the AI system"},
+                {"id": "C", "text": "The doctor"},
+                {"id": "D", "text": "The hospital"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The EU AI Act emphasizes the importance of human oversight for high-risk AI systems. In this case, the doctor is the ultimate decision-maker and is responsible for the diagnosis.",
+            "difficulty": "medium",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company wants to develop a high-risk AI system. They have a large dataset of personal data that they want to use for training the model. However, the data was collected for a different purpose and the company does not have the consent of the data subjects to use it for training the AI system. What should the company do?",
+            "options": [
+                {"id": "A", "text": "Use the data anyway, as it is essential for training the model"},
+                {"id": "B", "text": "Anonymize the data and then use it for training the model"},
+                {"id": "C", "text": "Obtain the explicit consent of the data subjects to use their data for training the AI system"},
+                {"id": "D", "text": "Delete the data and find a different dataset"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The use of personal data for training an AI system requires a valid legal basis under the GDPR. In this case, the company would need to obtain the explicit consent of the data subjects.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A law enforcement agency is using a ‘real-time’ remote biometric identification system to find a missing child in a crowded shopping mall. The system identifies a child who looks similar to the missing child, but it is not a perfect match. What should the law enforcement officers do?",
+            "options": [
+                {"id": "A", "text": "Immediately apprehend the child identified by the system"},
+                {"id": "B", "text": "Continue to monitor the child identified by the system and wait for more evidence"},
+                {"id": "C", "text": "Disregard the system's output and continue to search for the missing child manually"},
+                {"id": "D", "text": "Verify the identity of the child identified by the system through other means before taking any action"}
+            ],
+            "correctAnswer": "D",
+            "explanation": "The use of ‘real-time’ remote biometric identification systems requires human verification of the results. Law enforcement officers should not take action based solely on the output of the system.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A provider of a high-risk AI system discovers a serious vulnerability in the system that could be exploited by hackers. What is the provider's main obligation?",
+            "options": [
+                {"id": "A", "text": "To fix the vulnerability as quickly as possible"},
+                {"id": "B", "text": "To inform the users of the system about the vulnerability"},
+                {"id": "C", "text": "To report the vulnerability to the national competent authority"},
+                {"id": "D", "text": "All of the above"}
+            ],
+            "correctAnswer": "D",
+            "explanation": "The provider has an obligation to take corrective action, to inform the users, and to report the vulnerability to the competent authorities.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company develops an AI system that can predict whether a person is likely to commit a crime based on their social media activity. The company wants to sell this system to law enforcement agencies. What is the legal status of this system under the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "It is a prohibited AI practice"},
+                {"id": "B", "text": "It is a high-risk AI system"},
+                {"id": "C", "text": "It is a limited-risk AI system"},
+                {"id": "D", "text": "It is a minimal-risk AI system"}
+            ],
+            "correctAnswer": "A",
+            "explanation": "AI systems that perform social scoring or predict criminal behavior based on profiling are generally prohibited under the EU AI Act, especially for law enforcement purposes.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company wants to use an AI system to make decisions about loan applications. The system is trained on historical data that reflects past discriminatory lending practices. What is the main risk of using this system?",
+            "options": [
+                {"id": "A", "text": "The system may be inaccurate"},
+                {"id": "B", "text": "The system may be too slow"},
+                {"id": "C", "text": "The system may perpetuate and amplify existing biases"},
+                {"id": "D", "text": "The system may be too expensive"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The use of biased data in training an AI system can lead to discriminatory outcomes. This is a major concern for high-risk AI systems, such as those used for credit scoring.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A provider of a high-risk AI system outsources the development of a key component of the system to a third-party company. Who is ultimately responsible for the compliance of the entire system with the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "The third-party company"},
+                {"id": "B", "text": "The provider"},
+                {"id": "C", "text": "The user of the system"},
+                {"id": "D", "text": "The notified body"}
+            ],
+            "correctAnswer": "B",
+            "explanation": "The provider of a high-risk AI system is ultimately responsible for the compliance of the entire system, even if parts of it are developed by third parties.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company develops an AI system that can diagnose a rare disease with a high degree of accuracy. However, the system is a ‘black box’ and it is not possible to explain how it arrives at its conclusions. What is the main challenge for this system under the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "The system may not be accurate enough"},
+                {"id": "B", "text": "The system may not be robust enough"},
+                {"id": "C", "text": "The system may not be transparent enough"},
+                {"id": "D", "text": "The system may not be secure enough"}
+            ],
+            "correctAnswer": "C",
+            "explanation": "The EU AI Act places a strong emphasis on transparency for high-risk AI systems. The lack of explainability of a ‘black box’ system would be a major challenge for compliance.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        },
+        {
+            "questionText": "A company wants to use an AI system to monitor its employees' emotional state throughout the workday. The company claims that this will help to improve employee well-being. What is the legal status of this system under the EU AI Act?",
+            "options": [
+                {"id": "A", "text": "It is a prohibited AI practice"},
+                {"id": "B", "text": "It is a high-risk AI system"},
+                {"id": "C", "text": "It is a limited-risk AI system"},
+                {"id": "D", "text": "It is a minimal-risk AI system"}
+            ],
+            "correctAnswer": "A",
+            "explanation": "The use of AI systems to infer emotions of a natural person in the areas of workplace and education is a prohibited AI practice under Article 5.",
+            "difficulty": "hard",
+            "category": "EU_AI_ACT"
+        }
+    ]
+}

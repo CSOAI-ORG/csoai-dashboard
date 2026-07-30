@@ -1,0 +1,947 @@
+[
+  {
+    "questionText": "What is the primary purpose of the Artificial Intelligence and Data Act (AIDA) in Canada?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To accelerate AI development without any regulations"
+      },
+      {
+        "id": "B",
+        "text": "To establish a framework for the responsible development and use of AI systems"
+      },
+      {
+        "id": "C",
+        "text": "To ban the use of all AI systems in Canada"
+      },
+      {
+        "id": "D",
+        "text": "To create a government-owned AI development company"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA is designed to protect Canadians from potential AI-related harms and biases while promoting innovation and responsible AI development.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "Under AIDA, what is the definition of a \"high-impact\" AI system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Any AI system that uses personal data"
+      },
+      {
+        "id": "B",
+        "text": "An AI system that can cause physical or psychological harm, or have a significant adverse effect on an individual"
+      },
+      {
+        "id": "C",
+        "text": "An AI system used for entertainment purposes"
+      },
+      {
+        "id": "D",
+        "text": "An AI system that is not fully transparent"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA defines high-impact systems based on their potential to cause harm or significant adverse effects.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "Which of the following is NOT a stated objective of AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Protecting Canadians from AI-related harms"
+      },
+      {
+        "id": "B",
+        "text": "Promoting innovation in AI"
+      },
+      {
+        "id": "C",
+        "text": "Ensuring Canada's global competitiveness in AI"
+      },
+      {
+        "id": "D",
+        "text": "Mandating the use of specific AI technologies"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "AIDA aims to set a framework for responsible AI, not to mandate specific technologies.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the AI and Data Commissioner under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To develop and sell AI systems"
+      },
+      {
+        "id": "B",
+        "text": "To oversee and enforce compliance with AIDA"
+      },
+      {
+        "id": "C",
+        "text": "To provide funding for AI research"
+      },
+      {
+        "id": "D",
+        "text": "To lobby for the AI industry"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The AI and Data Commissioner is the primary regulator responsible for enforcing AIDA.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "AIDA is part of which larger bill?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bill C-11"
+      },
+      {
+        "id": "B",
+        "text": "Bill C-27"
+      },
+      {
+        "id": "C",
+        "text": "The Digital Privacy Act"
+      },
+      {
+        "id": "D",
+        "text": "The Canadian Charter of Rights and Freedoms"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA was introduced as part of Bill C-27, the Digital Charter Implementation Act, 2022.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What does AIDA require from businesses regarding their AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To make their source code publicly available"
+      },
+      {
+        "id": "B",
+        "text": "To provide clear information about how their AI systems work"
+      },
+      {
+        "id": "C",
+        "text": "To guarantee 100% accuracy"
+      },
+      {
+        "id": "D",
+        "text": "To only use AI systems developed in Canada"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA emphasizes transparency and explainability, requiring businesses to be clear about their AI systems' capabilities and limitations.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "Which of these is an example of a 'high-impact' AI system under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A music recommendation algorithm"
+      },
+      {
+        "id": "B",
+        "text": "An AI-powered chatbot for customer service inquiries"
+      },
+      {
+        "id": "C",
+        "text": "An AI system used for screening job applicants"
+      },
+      {
+        "id": "D",
+        "text": "A video game with AI-controlled characters"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AI systems used in employment screening are considered high-impact due to their significant effect on individuals' lives.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the relationship between AIDA and PIPEDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AIDA replaces PIPEDA entirely"
+      },
+      {
+        "id": "B",
+        "text": "AIDA and PIPEDA are unrelated"
+      },
+      {
+        "id": "C",
+        "text": "AIDA complements PIPEDA by providing specific rules for AI systems"
+      },
+      {
+        "id": "D",
+        "text": "PIPEDA is a provincial law, while AIDA is federal"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AIDA works in conjunction with PIPEDA, adding specific regulations for AI systems that process personal information.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the main focus of AIDA's risk management requirements?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Maximizing profits for businesses"
+      },
+      {
+        "id": "B",
+        "text": "Identifying, assessing, and mitigating potential harms"
+      },
+      {
+        "id": "C",
+        "text": "Ensuring the fastest possible AI development"
+      },
+      {
+        "id": "D",
+        "text": "Minimizing the cost of AI systems"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA requires a proactive approach to risk management, focusing on preventing harm to individuals and society.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "AIDA encourages the use of what to ensure fairness in AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Biased data"
+      },
+      {
+        "id": "B",
+        "text": "Anonymized and representative data"
+      },
+      {
+        "id": "C",
+        "text": "Incomplete data"
+      },
+      {
+        "id": "D",
+        "text": "Unaudited data"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "To mitigate bias, AIDA requires measures to ensure data is appropriately anonymized and representative of the population it affects.",
+    "difficulty": "easy",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company develops an AI system to predict customer churn. Under AIDA, what is their primary responsibility regarding the data used to train the model?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To use as much data as possible, regardless of its source"
+      },
+      {
+        "id": "B",
+        "text": "To ensure the data is of high quality, relevant, and used ethically"
+      },
+      {
+        "id": "C",
+        "text": "To purchase data from the cheapest available vendor"
+      },
+      {
+        "id": "D",
+        "text": "To delete the data immediately after training the model"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA mandates robust data governance practices, including ensuring data quality and ethical use.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A bank uses a high-impact AI system for credit scoring. According to AIDA, what must they provide to a customer who is denied credit?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The source code of the AI system"
+      },
+      {
+        "id": "B",
+        "text": "A general statement that the AI made the decision"
+      },
+      {
+        "id": "C",
+        "text": "A clear explanation of the decision and the main factors that led to it"
+      },
+      {
+        "id": "D",
+        "text": "A list of other banks that might approve the credit application"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AIDA's transparency and explainability requirements mean that individuals have the right to understand the rationale behind high-stakes decisions made by AI.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What are the potential penalties for a company found to be in non-compliance with AIDA's requirements for high-impact AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A warning and a request to do better next time"
+      },
+      {
+        "id": "B",
+        "text": "A mandatory public apology"
+      },
+      {
+        "id": "C",
+        "text": "Significant fines and potential criminal liability for individuals"
+      },
+      {
+        "id": "D",
+        "text": "A temporary suspension of their business license"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AIDA includes provisions for substantial fines and criminal penalties for serious offenses, demonstrating the gravity of non-compliance.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A tech startup is developing a new AI-powered diagnostic tool for doctors. What is the first step they should take to comply with AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "Launch the product and see what happens"
+      },
+      {
+        "id": "B",
+        "text": "Conduct a thorough risk assessment to determine if it's a high-impact system"
+      },
+      {
+        "id": "C",
+        "text": "Market the tool as being 'for entertainment purposes only'"
+      },
+      {
+        "id": "D",
+        "text": "Lobby the government to exempt their product from AIDA"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Determining whether an AI system is high-impact is a critical first step, as this dictates the level of regulatory scrutiny under AIDA.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "How does AIDA address the issue of algorithmic bias?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It ignores the issue, as bias is inevitable"
+      },
+      {
+        "id": "B",
+        "text": "It requires businesses to identify, assess, and mitigate biases in their AI systems"
+      },
+      {
+        "id": "C",
+        "text": "It only addresses bias against specific protected groups"
+      },
+      {
+        "id": "D",
+        "text": "It provides a list of pre-approved 'unbiased' algorithms"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA takes a comprehensive approach to bias, requiring ongoing monitoring and mitigation efforts throughout the AI lifecycle.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the Minister of Innovation, Science and Industry under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To personally approve every new AI system"
+      },
+      {
+        "id": "B",
+        "text": "To make regulations and provide guidance on AIDA's implementation"
+      },
+      {
+        "id": "C",
+        "text": "To act as the lead prosecutor in cases of non-compliance"
+      },
+      {
+        "id": "D",
+        "text": "To set the prices for AI products and services"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "The Minister has the power to create regulations that will further define and operationalize the principles outlined in AIDA.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A social media company uses an AI algorithm to recommend content to users. What obligation does it have under AIDA regarding transparency?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "None, as content recommendation is not a high-impact activity"
+      },
+      {
+        "id": "B",
+        "text": "To provide a general description of how the recommendation system works"
+      },
+      {
+        "id": "C",
+        "text": "To allow users to opt out of all algorithmic recommendations"
+      },
+      {
+        "id": "D",
+        "text": "To publish the full source code of the algorithm"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Even for systems that may not be high-impact, AIDA encourages a degree of transparency to build user trust.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is an 'algorithmic impact assessment' (AIA) and when is it required under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A marketing report on the potential benefits of an AI system, required for all AI"
+      },
+      {
+        "id": "B",
+        "text": "A technical document detailing the AI's architecture, required only for government systems"
+      },
+      {
+        "id": "C",
+        "text": "A comprehensive assessment of the potential impacts of a high-impact AI system, required before deployment"
+      },
+      {
+        "id": "D",
+        "text": "An optional self-assessment that companies can choose to conduct"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AIAs are a key component of AIDA's risk management framework for high-impact systems, requiring a thorough evaluation of potential societal and individual impacts.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "How does Canada's approach to AI governance in AIDA compare to the EU's AI Act?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AIDA is significantly more restrictive than the EU AI Act"
+      },
+      {
+        "id": "B",
+        "text": "The EU AI Act is focused on data privacy, while AIDA is focused on innovation"
+      },
+      {
+        "id": "C",
+        "text": "Both take a risk-based approach, but with some differences in definitions and requirements"
+      },
+      {
+        "id": "D",
+        "text": "AIDA is a direct copy of the EU AI Act"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "While both frameworks are risk-based, there are nuances in their scope, definitions of high-risk/high-impact systems, and specific obligations.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company that provides a high-impact AI system to another business is known as what under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "A 'developer'"
+      },
+      {
+        "id": "B",
+        "text": "A 'user'"
+      },
+      {
+        "id": "C",
+        "text": "A 'person who makes available for use'"
+      },
+      {
+        "id": "D",
+        "text": "An 'operator'"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AIDA distinguishes between those who develop, use, and make AI systems available, with specific obligations for each.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the purpose of the 'human oversight' requirement in AIDA for high-impact systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "To ensure that a human is always in the loop for every decision"
+      },
+      {
+        "id": "B",
+        "text": "To have a person to blame if something goes wrong"
+      },
+      {
+        "id": "C",
+        "text": "To provide a mechanism for intervention, review, and correction of AI-driven decisions"
+      },
+      {
+        "id": "D",
+        "text": "To slow down the decision-making process"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Human oversight is about ensuring accountability and providing a safeguard against erroneous or harmful automated decisions.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company is using an open-source AI model as part of its high-impact system. What are its responsibilities under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "None, as open-source models are exempt from AIDA"
+      },
+      {
+        "id": "B",
+        "text": "To fully understand the model, assess its risks, and ensure it meets AIDA's requirements"
+      },
+      {
+        "id": "C",
+        "text": "To contact the original developers of the model and make them responsible"
+      },
+      {
+        "id": "D",
+        "text": "To only use open-source models that have been pre-certified by the government"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Using an open-source model does not absolve a company of its responsibilities under AIDA. They are still accountable for the performance and impact of the overall system.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the role of the Privacy Commissioner in relation to AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Privacy Commissioner has no role, as AIDA is separate from privacy law"
+      },
+      {
+        "id": "B",
+        "text": "The Privacy Commissioner will be consulted and may share information with the AI and Data Commissioner, particularly when personal information is involved"
+      },
+      {
+        "id": "C",
+        "text": "The Privacy Commissioner is the sole enforcer of AIDA"
+      },
+      {
+        "id": "D",
+        "text": "The Privacy Commissioner can veto any decision made by the AI and Data Commissioner"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA recognizes the close link between AI and data privacy, and provides for collaboration between the two commissioners.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company wants to use an AI system to moderate content on its online platform. What is a key consideration for them under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "How to maximize the amount of content removed"
+      },
+      {
+        "id": "B",
+        "text": "The potential for the AI to make errors and unfairly censor legitimate speech"
+      },
+      {
+        "id": "C",
+        "text": "How to keep the moderation process completely secret"
+      },
+      {
+        "id": "D",
+        "text": "Whether they can use the cheapest available AI model"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Content moderation systems can have a significant impact on freedom of expression, making it crucial to consider and mitigate the risk of errors and bias.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "Under AIDA, what is the significance of making a 'substantial modification' to an AI system?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It has no legal significance"
+      },
+      {
+        "id": "B",
+        "text": "It may trigger a requirement for a new risk assessment and other compliance activities"
+      },
+      {
+        "id": "C",
+        "text": "It is prohibited without prior government approval"
+      },
+      {
+        "id": "D",
+        "text": "It requires the company to rebrand the AI system"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A substantial modification can alter the risks and impacts of an AI system, necessitating a re-evaluation of its compliance with AIDA.",
+    "difficulty": "medium",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing a high-impact AI system for use in a regulated industry (e.g., healthcare). How do AIDA's requirements interact with existing sectoral regulations?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AIDA's requirements replace all existing sectoral regulations"
+      },
+      {
+        "id": "B",
+        "text": "The company only needs to comply with the sectoral regulations"
+      },
+      {
+        "id": "C",
+        "text": "The company must comply with both AIDA and the sectoral regulations, potentially navigating overlapping or conflicting requirements"
+      },
+      {
+        "id": "D",
+        "text": "The company can choose which set of regulations to comply with"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "AIDA is designed to be a cross-sectoral law, but it does not override existing regulations. Companies in regulated sectors will need to ensure compliance with all applicable legal frameworks.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company is accused of using a biased AI system that discriminates against a protected group. What is the burden of proof under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company must prove that its AI system is not biased"
+      },
+      {
+        "id": "B",
+        "text": "The individuals who were harmed must prove that the AI system is biased"
+      },
+      {
+        "id": "C",
+        "text": "The government must prove that the company intended to discriminate"
+      },
+      {
+        "id": "D",
+        "text": "The burden of proof is on the AI and Data Commissioner to demonstrate that the system is biased and has caused harm."
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "While companies have obligations to mitigate bias, in an enforcement action, the regulator would typically need to demonstrate that the system is biased and has resulted in prohibited outcomes.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What are the limitations of the AI and Data Commissioner's powers under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Commissioner has unlimited power to regulate AI"
+      },
+      {
+        "id": "B",
+        "text": "The Commissioner's powers are limited to making non-binding recommendations"
+      },
+      {
+        "id": "C",
+        "text": "The Commissioner's powers are subject to judicial oversight and the Canadian Charter of Rights and Freedoms"
+      },
+      {
+        "id": "D",
+        "text": "The Commissioner can only investigate complaints from individuals, not initiate their own investigations"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "Like all government bodies, the AI and Data Commissioner's powers are not absolute and are constrained by the rule of law and constitutional principles.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company claims that its AI system is a 'trade secret' and refuses to provide a clear explanation of how it works. How would this be handled under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The company's claim of a trade secret would be accepted without question"
+      },
+      {
+        "id": "B",
+        "text": "AIDA's transparency requirements would likely override the claim of a trade secret, at least to the extent necessary to ensure compliance and protect the public"
+      },
+      {
+        "id": "C",
+        "text": "The company would be required to sell its trade secret to the government"
+      },
+      {
+        "id": "D",
+        "text": "The company would be exempt from AIDA's transparency requirements"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA attempts to balance the protection of intellectual property with the need for transparency and accountability, and it is unlikely that a claim of a trade secret would be a complete shield from regulatory scrutiny.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the process for an AI system to be designated as 'high-impact' under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "All AI systems are high-impact by default"
+      },
+      {
+        "id": "B",
+        "text": "The designation is made by the company developing the AI system, based on their own internal assessment"
+      },
+      {
+        "id": "C",
+        "text": "The designation is based on criteria set out in the Act and further defined in regulations, and may be subject to review by the AI and Data Commissioner"
+      },
+      {
+        "id": "D",
+        "text": "The designation is made by a public vote"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "While companies are expected to self-assess, the ultimate determination of whether a system is high-impact rests on the legal criteria and the regulator's interpretation.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company uses an AI system to make decisions that have a legal effect on individuals. What specific challenges does this pose under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "No specific challenges, as long as the AI is accurate"
+      },
+      {
+        "id": "B",
+        "text": "The challenge of ensuring that the AI's decisions are consistent with legal principles of procedural fairness and natural justice"
+      },
+      {
+        "id": "C",
+        "text": "The challenge of finding enough lawyers to review every decision"
+      },
+      {
+        "id": "D",
+        "text": "The challenge of translating legal texts into code"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "Using AI for decisions with legal consequences raises fundamental questions about due process and the right to a fair hearing, which AIDA's framework must address.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "How does AIDA address the 'black box' problem in complex AI systems?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It prohibits the use of any AI system that is not fully explainable"
+      },
+      {
+        "id": "B",
+        "text": "It requires companies to develop and provide meaningful explanations of the outputs of their AI systems, even if the internal workings are complex"
+      },
+      {
+        "id": "C",
+        "text": "It mandates that all AI systems be built using simple, transparent algorithms"
+      },
+      {
+        "id": "D",
+        "text": "It creates a government agency to 'crack open' black box models"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA focuses on the 'explainability' of outcomes rather than full transparency of the underlying code, recognizing that some models are inherently complex.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company operating a high-impact AI system in Canada is based in another country. How does AIDA apply to them?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "AIDA does not apply to foreign companies"
+      },
+      {
+        "id": "B",
+        "text": "The company must comply with AIDA if their AI system is used in Canada and has a real and substantial connection to Canada"
+      },
+      {
+        "id": "C",
+        "text": "The company only needs to comply with the laws of its home country"
+      },
+      {
+        "id": "D",
+        "text": "The company must establish a physical office in Canada to be subject to AIDA"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "AIDA has extraterritorial reach, meaning it can apply to companies outside of Canada if their AI activities have a sufficient connection to the country.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "What is the potential impact of AIDA on Canada's AI innovation ecosystem?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "It will stifle all innovation and cause a 'brain drain' of AI talent"
+      },
+      {
+        "id": "B",
+        "text": "It will have no impact on innovation"
+      },
+      {
+        "id": "C",
+        "text": "It could both encourage responsible innovation by building public trust and create compliance challenges, particularly for small and medium-sized enterprises"
+      },
+      {
+        "id": "D",
+        "text": "It will lead to a massive increase in funding for AI research"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "The impact of AIDA on innovation is a complex and debated topic, with potential benefits and drawbacks that will depend on how the law is implemented and enforced.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  },
+  {
+    "questionText": "A company is developing an AI system that generates realistic human faces. What are the key ethical and legal considerations under AIDA?",
+    "questionType": "multiple_choice",
+    "options": [
+      {
+        "id": "A",
+        "text": "The potential for the technology to be used for malicious purposes, such as creating 'deepfakes' for disinformation or harassment"
+      },
+      {
+        "id": "B",
+        "text": "The copyright implications of the generated images"
+      },
+      {
+        "id": "C",
+        "text": "The computational cost of generating the images"
+      },
+      {
+        "id": "D",
+        "text": "The artistic merit of the generated faces"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "Generative AI technologies raise significant ethical concerns about their potential for misuse, which AIDA's risk management framework is designed to address.",
+    "difficulty": "hard",
+    "category": "CANADA_AIDA",
+    "points": 1
+  }
+]

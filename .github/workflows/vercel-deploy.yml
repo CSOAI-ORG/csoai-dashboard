@@ -1,0 +1,81 @@
+name: Vercel Production Deploy
+
+on:
+  push:
+    branches: [deploy]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Vercel
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
+
+      - name: Deploy
+        id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          vercel deploy --prod --yes --token=$VERCEL_TOKEN 2>&1 | tee deploy.log
+          URL=$(grep -oE 'https://[a-zA-Z0-9._-]+\.vercel\.app' deploy.log | tail -1)
+          echo "DEPLOY_URL=$URL" >> "$GITHUB_ENV"
+
+      - name: Attach domain via Vercel REST API
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          PROJECT="csoai-dashboard"
+          API="https://api.vercel.com"
+          H_AUTH="Authorization: Bearer $VERCEL_TOKEN"
+
+          echo "=== Project info ===" | tee api.log
+          curl -s -H "$H_AUTH" "$API/v9/projects/$PROJECT" | tee -a api.log
+          echo "" | tee -a api.log
+
+          for D in csoai.org www.csoai.org; do
+            echo "=== Add domain $D to project ===" | tee -a api.log
+            curl -s -X POST -H "$H_AUTH" -H "Content-Type: application/json" \
+              "$API/v10/projects/$PROJECT/domains" \
+              -d "{\"name\":\"$D\"}" | tee -a api.log
+            echo "" | tee -a api.log
+          done
+
+          echo "=== DNS config recommendation for apex (csoai.org) ===" | tee -a api.log
+          curl -s -H "$H_AUTH" "$API/v6/domains/csoai.org/config" | tee -a api.log
+          echo "" | tee -a api.log
+
+          echo "=== Project domains list ===" | tee -a api.log
+          curl -s -H "$H_AUTH" "$API/v9/projects/$PROJECT/domains" | tee -a api.log
+          echo "" | tee -a api.log
+
+      - name: Write status back to repo
+        run: |
+          {
+            echo "# Deploy Status"
+            echo ""
+            echo "Generated: $(date -u)"
+            echo ""
+            echo "## Deploy URL"
+            echo '```'
+            echo "${DEPLOY_URL:-unknown}"
+            echo '```'
+            echo ""
+            echo "## Vercel API responses (domains)"
+            echo '```json'
+            cat api.log 2>/dev/null
+            echo '```'
+          } > DEPLOY_STATUS.md
+
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add DEPLOY_STATUS.md
+          git commit -m "chore: record deploy + domain status [skip ci]" || echo "no changes"
+          git push origin deploy || echo "push failed"

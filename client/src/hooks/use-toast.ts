@@ -1,0 +1,30 @@
+import { toast as sonnerToast } from 'sonner';
+
+interface ToastOptions {
+  title?: string;
+  description?: string;
+  variant?: 'default' | 'destructive';
+  duration?: number;
+}
+
+export function useToast() {
+  const toast = (options: ToastOptions) => {
+    const { title, description, variant, duration } = options;
+    
+    if (variant === 'destructive') {
+      sonnerToast.error(title, {
+        description,
+        duration: duration || 5000,
+      });
+    } else {
+      sonnerToast(title, {
+        description,
+        duration: duration || 3000,
+      });
+    }
+  };
+
+  return { toast };
+}
+
+export { sonnerToast as toast };

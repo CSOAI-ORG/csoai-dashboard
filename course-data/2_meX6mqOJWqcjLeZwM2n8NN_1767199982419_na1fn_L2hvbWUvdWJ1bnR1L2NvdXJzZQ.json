@@ -1,0 +1,21 @@
+{
+  "courseOverview": {
+    "courseTitle": "ISO/IEC 42001:2023 - AI Management Systems Certification",
+    "courseCode": "ISO_42001",
+    "learningObjectives": [
+      "Understand the requirements of an AI Management System (AIMS) based on ISO/IEC 42001.",
+      "Gain a comprehensive understanding of the clauses of ISO/IEC 42001, from Clause 4 to Clause 10.",
+      "Develop the skills to establish, implement, maintain, and continually improve an AIMS.",
+      "Master AI risk assessment and impact assessment methodologies.",
+      "Understand the documentation requirements for ISO/IEC 42001 compliance.",
+      "Learn to apply ethical principles and professional conduct standards in AI governance.",
+      "Prepare for the AI Safety Analyst certification exam."
+    ],
+    "prerequisites": "Basic understanding of AI concepts and quality management systems.",
+    "duration": 50,
+    "certificationLevel": "Specialist"
+  },
+  "modules": [],
+  "competencyFramework": {},
+  "examQuestions": []
+}

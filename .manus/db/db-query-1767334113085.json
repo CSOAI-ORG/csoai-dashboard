@@ -1,0 +1,22 @@
+{
+  "query": "SELECT id, code, title, isActive FROM certification_tests ORDER BY id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, code, title, isActive FROM certification_tests ORDER BY id",
+  "rows": [
+    {
+      "id": "1",
+      "code": "watchdog_cert_v1",
+      "title": "Watchdog Analyst Certification",
+      "isActive": "1"
+    },
+    {
+      "id": "30001",
+      "code": "WATCHDOG_BASIC",
+      "title": "Watchdog Analyst Basic Certification",
+      "isActive": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tcode\ttitle\tisActive\n1\twatchdog_cert_v1\tWatchdog Analyst Certification\t1\n30001\tWATCHDOG_BASIC\tWatchdog Analyst Basic Certification\t1\n",
+  "stderr": "",
+  "execution_time_ms": 402
+}

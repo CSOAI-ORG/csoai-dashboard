@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `courses` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `regionId` int NOT NULL,\n  `title` varchar(255) NOT NULL,\n  `description` text,\n  `framework` varchar(100),\n  `level` enum('fundamentals','advanced','specialist') NOT NULL,\n  `durationHours` int NOT NULL,\n  `price` int NOT NULL,\n  `stripePriceId` varchar(255),\n  `modules` json,\n  `prerequisites` json,\n  `certificationRequired` boolean NOT NULL DEFAULT false,\n  `active` boolean NOT NULL DEFAULT true,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `courses_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `courses` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `regionId` int NOT NULL,\n  `title` varchar(255) NOT NULL,\n  `description` text,\n  `framework` varchar(100),\n  `level` enum('fundamentals','advanced','specialist') NOT NULL,\n  `durationHours` int NOT NULL,\n  `price` int NOT NULL,\n  `stripePriceId` varchar(255),\n  `modules` json,\n  `prerequisites` json,\n  `certificationRequired` boolean NOT NULL DEFAULT false,\n  `active` boolean NOT NULL DEFAULT true,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `courses_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 194
+}

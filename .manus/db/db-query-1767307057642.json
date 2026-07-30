@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS lesson_quizzes (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  lessonId INT NOT NULL,\n  question TEXT NOT NULL,\n  options JSON NOT NULL,\n  correctAnswer INT NOT NULL,\n  explanation TEXT,\n  orderIndex INT DEFAULT 0 NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,\n  INDEX idx_lessonId (lessonId)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS lesson_quizzes (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  lessonId INT NOT NULL,\n  question TEXT NOT NULL,\n  options JSON NOT NULL,\n  correctAnswer INT NOT NULL,\n  explanation TEXT,\n  orderIndex INT DEFAULT 0 NOT NULL,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,\n  INDEX idx_lessonId (lessonId)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 510
+}

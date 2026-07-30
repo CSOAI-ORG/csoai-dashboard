@@ -1,0 +1,59 @@
+{
+  "query": "SELECT \n  c.id,\n  c.title,\n  COUNT(DISTINCT tm.id) as module_count,\n  COUNT(DISTINCT cl.id) as lesson_count,\n  COUNT(DISTINCT lq.id) as quiz_count\nFROM courses c\nLEFT JOIN training_modules tm ON tm.courseId = c.id\nLEFT JOIN course_lessons cl ON cl.courseId = c.id\nLEFT JOIN lesson_quizzes lq ON lq.lessonId = cl.id\nGROUP BY c.id, c.title\nORDER BY c.id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT \n  c.id,\n  c.title,\n  COUNT(DISTINCT tm.id) as module_count,\n  COUNT(DISTINCT cl.id) as lesson_count,\n  COUNT(DISTINCT lq.id) as quiz_count\nFROM courses c\nLEFT JOIN training_modules tm ON tm.courseId = c.id\nLEFT JOIN course_lessons cl ON cl.courseId = c.id\nLEFT JOIN lesson_quizzes lq ON lq.lessonId = cl.id\nGROUP BY c.id, c.title\nORDER BY c.id",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "7"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "7"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "3"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "3"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "3"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "3"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework",
+      "module_count": "1",
+      "lesson_count": "3",
+      "quiz_count": "3"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tmodule_count\tlesson_count\tquiz_count\n100001\tEU AI Act Fundamentals\t1\t3\t7\n100002\tNIST AI RMF Fundamentals\t1\t3\t7\n100003\tUK AI Safety Institute Framework\t1\t3\t3\n100004\tCanada AIDA Compliance\t1\t3\t3\n100005\tAustralia AI Ethics Framework\t1\t3\t3\n100006\tISO 42001 International Standard\t1\t3\t3\n100007\tChina TC260 AI Framework\t1\t3\t3\n",
+  "stderr": "",
+  "execution_time_ms": 1637
+}

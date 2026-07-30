@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, title, status, severity FROM watchdog_reports LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, status, severity FROM watchdog_reports LIMIT 10;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "Gender bias detected in job recommendation AI",
+      "status": "resolved",
+      "severity": "high"
+    },
+    {
+      "id": "2",
+      "title": "AI chatbot providing medical advice without disclaimer",
+      "status": "resolved",
+      "severity": "critical"
+    },
+    {
+      "id": "3",
+      "title": "Privacy concern: AI assistant storing conversation history",
+      "status": "resolved",
+      "severity": "medium"
+    },
+    {
+      "id": "4",
+      "title": "AI content moderation flagging legitimate news as misinformation",
+      "status": "under_review",
+      "severity": "high"
+    },
+    {
+      "id": "5",
+      "title": "Facial recognition system showing racial bias in accuracy",
+      "status": "under_review",
+      "severity": "critical"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tstatus\tseverity\n1\tGender bias detected in job recommendation AI\tresolved\thigh\n2\tAI chatbot providing medical advice without disclaimer\tresolved\tcritical\n3\tPrivacy concern: AI assistant storing conversation history\tresolved\tmedium\n4\tAI content moderation flagging legitimate news as misinformation\tunder_review\thigh\n5\tFacial recognition system showing racial bias in accuracy\tunder_review\tcritical\n",
+  "stderr": "",
+  "execution_time_ms": 1557
+}

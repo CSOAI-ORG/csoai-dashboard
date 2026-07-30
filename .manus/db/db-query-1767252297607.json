@@ -1,0 +1,80 @@
+{
+  "query": "SELECT id, title, framework, price, active FROM courses LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, price, active FROM courses LIMIT 10;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "price": "49900",
+      "active": "1"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "price": "99900",
+      "active": "1"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "price": "99900",
+      "active": "1"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "framework": "EU AI Act",
+      "price": "99900",
+      "active": "1"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "price": "49900",
+      "active": "1"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "framework": "NIST AI RMF",
+      "price": "99900",
+      "active": "1"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "framework": "NIST AI RMF",
+      "price": "99900",
+      "active": "1"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "framework": "NIST AI RMF",
+      "price": "99900",
+      "active": "1"
+    },
+    {
+      "id": "9",
+      "title": "UK AI Safety Institute Overview",
+      "framework": "UK AI Safety Institute",
+      "price": "49900",
+      "active": "1"
+    },
+    {
+      "id": "10",
+      "title": "AI Safety Evaluation",
+      "framework": "UK AI Safety Institute",
+      "price": "99900",
+      "active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tprice\tactive\n1\tEU AI Act Fundamentals\tEU AI Act\t49900\t1\n2\tHigh-Risk AI Systems\tEU AI Act\t99900\t1\n3\tEU AI Act Conformity Assessment\tEU AI Act\t99900\t1\n4\tEU AI Act for Deployers\tEU AI Act\t99900\t1\n5\tNIST AI RMF Fundamentals\tNIST AI RMF\t49900\t1\n6\tAI Risk Governance\tNIST AI RMF\t99900\t1\n7\tAI Risk Assessment & Measurement\tNIST AI RMF\t99900\t1\n8\tFederal AI Regulations\tNIST AI RMF\t99900\t1\n9\tUK AI Safety Institute Overview\tUK AI Safety Institute\t49900\t1\n10\tAI Safety Evaluation\tUK AI Safety Institute\t99900\t1\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

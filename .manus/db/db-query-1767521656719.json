@@ -1,0 +1,394 @@
+{
+  "query": "SELECT id, title, price/100 as price_gbp, framework, level, durationHours FROM courses ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, price/100 as price_gbp, framework, level, durationHours FROM courses ORDER BY id;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "price_gbp": "499.0000",
+      "framework": "EU_AI_ACT",
+      "level": "fundamentals",
+      "durationHours": "8"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "price_gbp": "499.0000",
+      "framework": "NIST_AI_RMF",
+      "level": "fundamentals",
+      "durationHours": "8"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "price_gbp": "499.0000",
+      "framework": "UK_AI_SAFETY",
+      "level": "fundamentals",
+      "durationHours": "7"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "price_gbp": "499.0000",
+      "framework": "CANADA_AIDA",
+      "level": "fundamentals",
+      "durationHours": "6"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "price_gbp": "499.0000",
+      "framework": "AUSTRALIA_AI",
+      "level": "fundamentals",
+      "durationHours": "6"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard",
+      "price_gbp": "499.0000",
+      "framework": "ISO_42001",
+      "level": "fundamentals",
+      "durationHours": "9"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework",
+      "price_gbp": "499.0000",
+      "framework": "TC260",
+      "level": "fundamentals",
+      "durationHours": "7"
+    },
+    {
+      "id": "660001",
+      "title": "Test Analytics Course",
+      "price_gbp": "0.0000",
+      "framework": "eu-ai-act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "660004",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "660005",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "660006",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690002",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690003",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690004",
+      "title": "Test Analytics Course",
+      "price_gbp": "0.0000",
+      "framework": "eu-ai-act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690006",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690007",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690009",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690010",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690012",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690014",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690015",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690017",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690018",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690020",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690021",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690023",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690024",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690026",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690027",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690029",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690030",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690032",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690033",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690035",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690036",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690038",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690039",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690041",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690042",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690043",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690045",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690046",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690048",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690049",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690051",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690052",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690054",
+      "title": "Test Course for Lessons",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    },
+    {
+      "id": "690055",
+      "title": "Test Course for Forums",
+      "price_gbp": "0.0000",
+      "framework": "EU AI Act",
+      "level": "fundamentals",
+      "durationHours": "10"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tprice_gbp\tframework\tlevel\tdurationHours\n100001\tEU AI Act Fundamentals\t499.0000\tEU_AI_ACT\tfundamentals\t8\n100002\tNIST AI RMF Fundamentals\t499.0000\tNIST_AI_RMF\tfundamentals\t8\n100003\tUK AI Safety Institute Framework\t499.0000\tUK_AI_SAFETY\tfundamentals\t7\n100004\tCanada AIDA Compliance\t499.0000\tCANADA_AIDA\tfundamentals\t6\n100005\tAustralia AI Ethics Framework\t499.0000\tAUSTRALIA_AI\tfundamentals\t6\n100006\tISO 42001 International Standard\t499.0000\tISO_42001\tfundamentals\t9\n100007\tChina TC260 AI Framework\t499.0000\tTC260\tfundamentals\t7\n660001\tTest Analytics Course\t0.0000\teu-ai-act\tfundamentals\t10\n660004\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n660005\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n660006\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690002\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690003\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690004\tTest Analytics Course\t0.0000\teu-ai-act\tfundamentals\t10\n690006\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690007\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690009\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690010\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690012\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690014\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690015\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690017\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690018\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690020\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690021\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690023\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690024\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690026\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690027\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690029\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690030\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690032\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690033\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690035\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690036\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690038\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690039\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690041\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690042\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690043\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690045\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690046\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690048\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690049\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690051\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690052\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n690054\tTest Course for Lessons\t0.0000\tEU AI Act\tfundamentals\t10\n690055\tTest Course for Forums\t0.0000\tEU AI Act\tfundamentals\t10\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

@@ -1,0 +1,31 @@
+{
+  "query": "SELECT id, title, framework, stripePriceId, stripePriceId3Month FROM courses WHERE framework != 'watchdog' LIMIT 3;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, stripePriceId, stripePriceId3Month FROM courses WHERE framework != 'watchdog' LIMIT 3;",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "stripePriceId": "price_1SlC1uDuEg5HakgPeb4AHmzf",
+      "stripePriceId3Month": "price_1SlC1uDuEg5HakgPdgCJ1A2n"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "stripePriceId": "price_1SlC1vDuEg5HakgPa4Im68C6",
+      "stripePriceId3Month": "price_1SlC1vDuEg5HakgPcoKjiqSB"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "framework": "UK AI Safety Institute",
+      "stripePriceId": "price_1SlC1wDuEg5HakgP1JNuSQg2",
+      "stripePriceId3Month": "price_1SlC1xDuEg5HakgPLa9VjtNT"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tstripePriceId\tstripePriceId3Month\n100001\tEU AI Act Fundamentals\tEU AI Act\tprice_1SlC1uDuEg5HakgPeb4AHmzf\tprice_1SlC1uDuEg5HakgPdgCJ1A2n\n100002\tNIST AI RMF Fundamentals\tNIST AI RMF\tprice_1SlC1vDuEg5HakgPa4Im68C6\tprice_1SlC1vDuEg5HakgPcoKjiqSB\n100003\tUK AI Safety Institute Framework\tUK AI Safety Institute\tprice_1SlC1wDuEg5HakgP1JNuSQg2\tprice_1SlC1xDuEg5HakgPLa9VjtNT\n",
+  "stderr": "",
+  "execution_time_ms": 391
+}

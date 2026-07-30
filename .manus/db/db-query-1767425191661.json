@@ -1,0 +1,82 @@
+{
+  "query": "SELECT * FROM course_regions LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT * FROM course_regions LIMIT 10",
+  "rows": [
+    {
+      "id": "1",
+      "name": "European Union",
+      "code": "EU",
+      "description": "EU AI Act compliance training",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "2",
+      "name": "United States",
+      "code": "US",
+      "description": "NIST AI RMF training",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "3",
+      "name": "United Kingdom",
+      "code": "UK",
+      "description": "UK AI regulations",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "4",
+      "name": "China",
+      "code": "CN",
+      "description": "TC260 framework training",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "5",
+      "name": "International",
+      "code": "INTL",
+      "description": "ISO 42001 global standards",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "6",
+      "name": "Asia Pacific",
+      "code": "APAC",
+      "description": "Regional AI governance",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "7",
+      "name": "Middle East",
+      "code": "ME",
+      "description": "Regional compliance",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "8",
+      "name": "Africa",
+      "code": "AF",
+      "description": "African AI initiatives",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    },
+    {
+      "id": "9",
+      "name": "Latin America",
+      "code": "LATAM",
+      "description": "Latin American AI regulations",
+      "isActive": "1",
+      "createdAt": "2025-12-31 15:32:37"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tcode\tdescription\tisActive\tcreatedAt\n1\tEuropean Union\tEU\tEU AI Act compliance training\t1\t2025-12-31 15:32:37\n2\tUnited States\tUS\tNIST AI RMF training\t1\t2025-12-31 15:32:37\n3\tUnited Kingdom\tUK\tUK AI regulations\t1\t2025-12-31 15:32:37\n4\tChina\tCN\tTC260 framework training\t1\t2025-12-31 15:32:37\n5\tInternational\tINTL\tISO 42001 global standards\t1\t2025-12-31 15:32:37\n6\tAsia Pacific\tAPAC\tRegional AI governance\t1\t2025-12-31 15:32:37\n7\tMiddle East\tME\tRegional compliance\t1\t2025-12-31 15:32:37\n8\tAfrica\tAF\tAfrican AI initiatives\t1\t2025-12-31 15:32:37\n9\tLatin America\tLATAM\tLatin American AI regulations\t1\t2025-12-31 15:32:37\n",
+  "stderr": "",
+  "execution_time_ms": 1474
+}

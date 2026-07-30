@@ -1,0 +1,804 @@
+{
+  "competencyFramework": {
+    "regulatoryKnowledge": [
+      "Deep understanding of the NIST AI Risk Management Framework (AI RMF 1.0).",
+      "Familiarity with the CSOAI regulatory body and its certification process.",
+      "Knowledge of relevant laws and regulations pertaining to AI safety and risk management."
+    ],
+    "practicalSkills": [
+      "Ability to apply the AI RMF to real-world AI systems.",
+      "Proficiency in using risk management tools and techniques.",
+      "Strong analytical and problem-solving skills.",
+      "Excellent communication and interpersonal skills."
+    ],
+    "professionalConduct": [
+      "Adherence to the CSOAI code of conduct.",
+      "Commitment to ethical and responsible AI.",
+      "Dedication to continuous learning and professional development."
+    ],
+    "continuingEducation": [
+      "Certified AI Safety Analysts are required to complete 40 hours of continuing professional development every two years.",
+      "Continuing professional development can include attending workshops, conferences, and webinars; taking additional courses; and contributing to the AI safety community."
+    ]
+  },
+  "courseOverview": {
+    "title": "NIST AI Risk Management Framework (AI RMF 1.0) Certification",
+    "code": "NIST_AI_RMF",
+    "learningObjectives": [
+      "Understand the core principles and functions of the NIST AI RMF.",
+      "Learn to apply the GOVERN, MAP, MEASURE, and MANAGE functions in practice.",
+      "Master the use of the AI RMF Playbook for implementation.",
+      "Identify and mitigate risks associated with AI systems.",
+      "Understand and promote trustworthy AI characteristics.",
+      "Prepare for the AI Safety Analyst certification exam.",
+      "Gain the skills to become a qualified AI Safety Analyst under the CSOAI regulatory body."
+    ],
+    "prerequisites": "None",
+    "duration": 40,
+    "certificationLevel": "Specialist"
+  },
+  "examQuestions": [
+    {
+      "questionText": "What is the primary purpose of the NIST AI Risk Management Framework (AI RMF)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To provide a standardized approach to managing AI risks"
+        },
+        {
+          "id": "B",
+          "text": "To mandate specific AI development practices"
+        },
+        {
+          "id": "C",
+          "text": "To rank AI systems based on their performance"
+        },
+        {
+          "id": "D",
+          "text": "To certify AI developers"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The AI RMF is a voluntary framework that provides a standardized approach to managing the risks associated with AI systems.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which of the following is NOT one of the four core functions of the AI RMF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GOVERN"
+        },
+        {
+          "id": "B",
+          "text": "MAP"
+        },
+        {
+          "id": "C",
+          "text": "CREATE"
+        },
+        {
+          "id": "D",
+          "text": "MEASURE"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "The four core functions of the AI RMF are GOVERN, MAP, MEASURE, and MANAGE.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "What is the main goal of the GOVERN function in the AI RMF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To develop AI models"
+        },
+        {
+          "id": "B",
+          "text": "To establish a risk management culture"
+        },
+        {
+          "id": "C",
+          "text": "To market AI products"
+        },
+        {
+          "id": "D",
+          "text": "To sell AI data"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The GOVERN function is about creating a culture of risk management within an organization.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which characteristic of trustworthy AI refers to the accuracy of an AI system's outputs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reliability"
+        },
+        {
+          "id": "B",
+          "text": "Validity"
+        },
+        {
+          "id": "C",
+          "text": "Safety"
+        },
+        {
+          "id": "D",
+          "text": "Security"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Validity refers to the accuracy of the AI system's outputs.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "What is the purpose of the AI RMF Playbook?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To provide a theoretical overview of AI"
+        },
+        {
+          "id": "B",
+          "text": "To offer practical guidance for implementing the AI RMF"
+        },
+        {
+          "id": "C",
+          "text": "To list all known AI risks"
+        },
+        {
+          "id": "D",
+          "text": "To provide a history of AI development"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The AI RMF Playbook is a practical guide for implementing the NIST AI Risk Management Framework.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which function of the AI RMF involves identifying and contextualizing AI risks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GOVERN"
+        },
+        {
+          "id": "B",
+          "text": "MAP"
+        },
+        {
+          "id": "C",
+          "text": "MEASURE"
+        },
+        {
+          "id": "D",
+          "text": "MANAGE"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The MAP function is a critical step in the risk management process, as it involves identifying and understanding the context of AI risks.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which of the following is a key principle of trustworthy AI?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Complexity"
+        },
+        {
+          "id": "B",
+          "text": "Obscurity"
+        },
+        {
+          "id": "C",
+          "text": "Fairness"
+        },
+        {
+          "id": "D",
+          "text": "Exclusivity"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fairness, with harmful bias managed, is one of the seven characteristics of trustworthy AI defined by NIST.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "What does the MEASURE function of the AI RMF focus on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Assessing and analyzing AI risks"
+        },
+        {
+          "id": "B",
+          "text": "Developing AI models"
+        },
+        {
+          "id": "C",
+          "text": "Deploying AI systems"
+        },
+        {
+          "id": "D",
+          "text": "Marketing AI products"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "The MEASURE function is where we move from identifying risks to assessing and analyzing them.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which function of the AI RMF deals with treating and responding to AI risks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GOVERN"
+        },
+        {
+          "id": "B",
+          "text": "MAP"
+        },
+        {
+          "id": "C",
+          "text": "MEASURE"
+        },
+        {
+          "id": "D",
+          "text": "MANAGE"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "The MANAGE function is where we take action to address the risks that have been identified, assessed, and analyzed.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "What is the certification level of this course?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fundamentals"
+        },
+        {
+          "id": "B",
+          "text": "Advanced"
+        },
+        {
+          "id": "C",
+          "text": "Specialist"
+        },
+        {
+          "id": "D",
+          "text": "Beginner"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "The course is designed for a Specialist certification level.",
+      "difficulty": "easy",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "An organization is developing an AI system for hiring. Which function of the AI RMF would be most concerned with ensuring the system does not perpetuate historical biases in hiring practices?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GOVERN"
+        },
+        {
+          "id": "B",
+          "text": "MAP"
+        },
+        {
+          "id": "C",
+          "text": "MEASURE"
+        },
+        {
+          "id": "D",
+          "text": "MANAGE"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The MAP function is concerned with identifying and contextualizing risks, which includes societal risks like bias.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A company is deploying a customer service chatbot. During the MEASURE phase, they notice that the chatbot provides inaccurate answers 20% of the time. Which characteristic of trustworthy AI is most at risk?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Validity"
+        },
+        {
+          "id": "B",
+          "text": "Reliability"
+        },
+        {
+          "id": "C",
+          "text": "Safety"
+        },
+        {
+          "id": "D",
+          "text": "Security"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Validity refers to the accuracy of the AI system’s outputs. In this case, the chatbot’s outputs are inaccurate.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which of the following is the best example of a risk treatment strategy of risk mitigation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Purchasing insurance to cover potential damages from an AI system failure"
+        },
+        {
+          "id": "B",
+          "text": "Implementing a human-in-the-loop system to review the outputs of an AI model"
+        },
+        {
+          "id": "C",
+          "text": "Deciding not to develop an AI system due to its high potential for harm"
+        },
+        {
+          "id": "D",
+          "text": "Accepting the risk of a low-impact AI system failure"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Risk mitigation involves reducing the likelihood or impact of a risk. A human-in-the-loop system is a form of mitigation.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "An organization is using an AI-powered medical diagnostic tool. Which of the following would be the most critical aspect of the GOVERN function in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ensuring the tool is profitable"
+        },
+        {
+          "id": "B",
+          "text": "Establishing clear lines of accountability for the tool’s decisions"
+        },
+        {
+          "id": "C",
+          "text": "Marketing the tool to as many hospitals as possible"
+        },
+        {
+          "id": "D",
+          "text": "Using the latest deep learning algorithms"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "In a high-stakes domain like medical diagnostics, establishing clear lines of accountability is a critical aspect of the GOVERN function.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A company is developing a self-driving car. During the MAP phase, they identify the risk of the car’s sensors failing in adverse weather conditions. What would be the next logical step in the AI RMF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immediately halt the development of the car"
+        },
+        {
+          "id": "B",
+          "text": "Assess the likelihood and impact of the sensor failure"
+        },
+        {
+          "id": "C",
+          "text": "Market the car as being safe in all weather conditions"
+        },
+        {
+          "id": "D",
+          "text": "Purchase insurance to cover any accidents"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "After identifying a risk in the MAP phase, the next logical step is to assess its likelihood and impact in the MEASURE phase.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which of the following is the best example of a technical measure to improve the transparency of an AI system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Publishing a high-level overview of the system’s architecture"
+        },
+        {
+          "id": "B",
+          "text": "Using an explainable AI (XAI) technique like SHAP to explain the model’s predictions"
+        },
+        {
+          "id": "C",
+          "text": "Providing a customer support hotline for users with questions"
+        },
+        {
+          "id": "D",
+          "text": "Writing a press release about the system’s benefits"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Explainable AI (XAI) techniques like SHAP are technical measures that can be used to improve the transparency of an AI system.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "An organization is using an AI-powered loan application system. They discover that the system is denying loans to a disproportionate number of applicants from a certain demographic group. Which characteristic of trustworthy AI is most clearly being violated?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Security"
+        },
+        {
+          "id": "B",
+          "text": "Reliability"
+        },
+        {
+          "id": "C",
+          "text": "Fairness"
+        },
+        {
+          "id": "D",
+          "text": "Safety"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "The system is exhibiting bias, which is a violation of the fairness characteristic of trustworthy AI.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "Which of the following is a key activity of the MANAGE function in the AI RMF?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Identifying potential AI risks"
+        },
+        {
+          "id": "B",
+          "text": "Assessing the likelihood and impact of AI risks"
+        },
+        {
+          "id": "C",
+          "text": "Developing and implementing risk treatment plans"
+        },
+        {
+          "id": "D",
+          "text": "Creating a risk management culture"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "The MANAGE function is where we take action to address the risks that have been identified, assessed, and analyzed, which includes developing and implementing risk treatment plans.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A company is developing an AI system to recommend personalized news articles to users. Which of the following would be the most effective way to improve the system’s explainability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Use a more complex deep learning model"
+        },
+        {
+          "id": "B",
+          "text": "Provide users with a list of the factors that contributed to each recommendation"
+        },
+        {
+          "id": "C",
+          "text": "Hire more customer support agents"
+        },
+        {
+          "id": "D",
+          "text": "Publish a white paper on the system’s architecture"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Providing users with a list of the factors that contributed to each recommendation is a direct way to improve the system’s explainability.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "What is the primary difference between the MEASURE and MANAGE functions of the AI RMF?",
+      "options": [
+        {
+          "id": "D",
+          "text": "There is no difference between the two functions."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The MEASURE function is where we move from identifying risks to assessing and analyzing them, while the MANAGE function is where we take action to address the risks that have been identified, assessed, and analyzed.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "An AI-powered recruitment tool is found to be biased against female candidates. Which of the following actions would be the most appropriate first step in the MANAGE phase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immediately decommission the tool"
+        },
+        {
+          "id": "B",
+          "text": "Retrain the model with a more balanced dataset"
+        },
+        {
+          "id": "C",
+          "text": "Purchase insurance to cover potential lawsuits"
+        },
+        {
+          "id": "D",
+          "text": "Issue a public apology"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Retraining the model with a more balanced dataset is a direct way to mitigate the bias and is a key part of the MANAGE function.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A company is developing an AI system for facial recognition. Which of the following would be the most significant ethical concern to address in the MAP phase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cost of developing the system"
+        },
+        {
+          "id": "B",
+          "text": "The potential for the system to be used for mass surveillance"
+        },
+        {
+          "id": "C",
+          "text": "The speed of the system’s facial recognition algorithm"
+        },
+        {
+          "id": "D",
+          "text": "The number of developers working on the project"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The potential for the system to be used for mass surveillance is a significant ethical concern that should be identified and contextualized in the MAP phase.",
+      "difficulty": "medium",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A large financial institution is using a complex, black-box AI model for fraud detection. The model is highly accurate, but the institution is facing pressure from regulators to provide explanations for its decisions. Which of the following would be the most appropriate course of action?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Replace the black-box model with a simpler, more interpretable model, even if it means sacrificing some accuracy."
+        },
+        {
+          "id": "B",
+          "text": "Develop a post-hoc explanation method, such as LIME or SHAP, to provide insights into the model’s decisions."
+        },
+        {
+          "id": "C",
+          "text": "Argue that the model’s high accuracy is sufficient to demonstrate its trustworthiness."
+        },
+        {
+          "id": "D",
+          "text": "Refuse to provide explanations, citing the proprietary nature of the model."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Developing a post-hoc explanation method is a good compromise between maintaining the model’s accuracy and providing transparency.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A social media company is using an AI algorithm to recommend content to its users. The algorithm is designed to maximize user engagement, but it has been found to amplify extremist content. Which of the following would be the most effective way to address this issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tweak the algorithm to down-rank extremist content."
+        },
+        {
+          "id": "B",
+          "text": "Ban all users who post extremist content."
+        },
+        {
+          "id": "C",
+          "text": "Redefine the algorithm’s objective function to include a measure of content diversity and quality."
+        },
+        {
+          "id": "D",
+          "text": "Do nothing, as the algorithm is simply giving users what they want."
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Redefining the algorithm’s objective function is a more fundamental and effective way to address the issue than simply tweaking the algorithm or banning users.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A hospital is using an AI system to assist with the diagnosis of a rare disease. The system is trained on a dataset that is not representative of the hospital’s patient population. What is the most likely consequence of this?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The system will be highly accurate for all patients."
+        },
+        {
+          "id": "B",
+          "text": "The system will be biased against certain patient groups."
+        },
+        {
+          "id": "C",
+          "text": "The system will be unable to make any diagnoses."
+        },
+        {
+          "id": "D",
+          "text": "The system will be more expensive to operate."
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Using a non-representative dataset is a common cause of bias in AI systems.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "An autonomous vehicle is involved in an accident. Which of the following would be the most important factor in determining accountability?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The speed of the vehicle at the time of the accident"
+        },
+        {
+          "id": "B",
+          "text": "The weather conditions at the time of the accident"
+        },
+        {
+          "id": "C",
+          "text": "The clarity of the lines of responsibility for the vehicle’s development and operation"
+        },
+        {
+          "id": "D",
+          "text": "The age of the vehicle’s owner"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Clear lines of responsibility are essential for determining accountability in the event of an AI system failure.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A company is developing an AI system to predict which employees are most likely to leave the company. Which of the following would be the most significant privacy concern?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The accuracy of the system’s predictions"
+        },
+        {
+          "id": "B",
+          "text": "The cost of developing the system"
+        },
+        {
+          "id": "C",
+          "text": "The potential for the system to be used to discriminate against employees"
+        },
+        {
+          "id": "D",
+          "text": "The type of data the system is using to make its predictions"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "The type of data the system is using is a significant privacy concern, as it may include sensitive personal information.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A government agency is using an AI system to make decisions about who should receive social benefits. The system is found to be denying benefits to eligible individuals. Which of the following would be the most appropriate first step to take?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Immediately halt the use of the system."
+        },
+        {
+          "id": "B",
+          "text": "Conduct a thorough audit of the system to identify the cause of the errors."
+        },
+        {
+          "id": "C",
+          "text": "Provide additional training to the agency’s staff."
+        },
+        {
+          "id": "D",
+          "text": "Issue a public statement defending the system’s use."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Given the high stakes involved, the most appropriate first step is to immediately halt the use of the system to prevent further harm.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "A company is developing an AI system to be used in a safety-critical application, such as controlling a power plant. Which of the following would be the most important consideration?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The speed of the system’s decision-making"
+        },
+        {
+          "id": "B",
+          "text": "The cost of developing the system"
+        },
+        {
+          "id": "C",
+          "text": "The system’s ability to operate reliably and safely under all conditions"
+        },
+        {
+          "id": "D",
+          "text": "The system’s user interface"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "In a safety-critical application, the most important consideration is the system’s ability to operate reliably and safely under all conditions.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    },
+    {
+      "questionText": "An AI system is found to have a negative impact on a particular community. Which of the following would be the most effective way to address this issue?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Engage with the affected community to understand their concerns and co-design a solution."
+        },
+        {
+          "id": "B",
+          "text": "Offer financial compensation to the affected community."
+        },
+        {
+          "id": "C",
+          "text": "Publish a report explaining why the system’s impact is not as bad as it seems."
+        },
+        {
+          "id": "D",
+          "text": "Do nothing, as the system’s overall impact is positive."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Engaging with the affected community is the most effective way to address the issue, as it allows for a more holistic and sustainable solution.",
+      "difficulty": "hard",
+      "category": "NIST_AI_RMF"
+    }
+  ],
+  "module": {
+    "title": "AI Safety Analyst Certification and the CSOAI Regulatory Body",
+    "code": "NIST_AI_RMF_M10",
+    "duration": 4,
+    "learningOutcomes": [
+      "Understand the role and responsibilities of an AI Safety Analyst.",
+      "Learn about the CSOAI regulatory body and its certification process.",
+      "Prepare for the AI Safety Analyst certification exam.",
+      "Understand the ethical and professional obligations of a certified AI Safety Analyst."
+    ],
+    "contentOutline": "This final module of the course is designed to prepare you for a career as a certified AI Safety Analyst. We will begin by providing a detailed overview of the role and responsibilities of an AI Safety Analyst. We will discuss the key skills and knowledge required for this profession, and we will explore the various career paths available to certified professionals. A key focus of this module will be on the CSOAI (Civil Society Organisation for AI) regulatory body. We will provide a comprehensive overview of the CSOAI, including its mission, its structure, and its role in the AI ecosystem. We will also provide a detailed walkthrough of the CSOAI certification process, from the application to the exam and beyond. We will provide you with all the information you need to successfully navigate the certification process and become a certified AI Safety Analyst. This module will also provide you with a comprehensive review of the material covered in the course. We will revisit the key concepts of the NIST AI Risk Management Framework, and we will provide you with additional practice questions and exercises to help you prepare for the certification exam. We will also provide you with a full-length practice exam that simulates the real certification exam. Finally, we will discuss the ethical and professional obligations of a certified AI Safety Analyst. We will explore the CSOAI code of conduct, and we will discuss the importance of continuing professional development. We will also provide you with resources and guidance to help you stay up-to-date on the latest developments in AI safety and risk management. By the end of this module, you will be fully prepared to take the AI Safety Analyst certification exam and to embark on a successful career as a certified professional.",
+    "keyRegulatoryArticles": [
+      "CSOAI Certification Handbook",
+      "CSOAI Code of Conduct"
+    ],
+    "practicalExercises": [
+      "Complete a full-length practice exam.",
+      "Develop a personal development plan for a career as an AI Safety Analyst."
+    ],
+    "assessmentCriteria": [
+      "Performance on the practice exam.",
+      "Quality and feasibility of the personal development plan."
+    ]
+  }
+}

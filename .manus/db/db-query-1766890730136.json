@@ -1,0 +1,90 @@
+{
+  "query": "SELECT id, title, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM courses LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month FROM courses LIMIT 10;",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "stripePriceId": "price_1SiAxLDuEg5HakgPkqfItPFo",
+      "stripePriceId3Month": "price_1SiAxLDuEg5HakgPcVVlPUwq",
+      "stripePriceId6Month": "price_1SiAxMDuEg5HakgPTLH15YfL",
+      "stripePriceId12Month": "price_1SiAxMDuEg5HakgPS08f4MyT"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "9",
+      "title": "UK AI Safety Institute Overview",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    },
+    {
+      "id": "10",
+      "title": "AI Safety Evaluation",
+      "stripePriceId": "NULL",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tstripePriceId\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\n1\tEU AI Act Fundamentals\tprice_1SiAxLDuEg5HakgPkqfItPFo\tprice_1SiAxLDuEg5HakgPcVVlPUwq\tprice_1SiAxMDuEg5HakgPTLH15YfL\tprice_1SiAxMDuEg5HakgPS08f4MyT\n2\tHigh-Risk AI Systems\tNULL\tNULL\tNULL\tNULL\n3\tEU AI Act Conformity Assessment\tNULL\tNULL\tNULL\tNULL\n4\tEU AI Act for Deployers\tNULL\tNULL\tNULL\tNULL\n5\tNIST AI RMF Fundamentals\tNULL\tNULL\tNULL\tNULL\n6\tAI Risk Governance\tNULL\tNULL\tNULL\tNULL\n7\tAI Risk Assessment & Measurement\tNULL\tNULL\tNULL\tNULL\n8\tFederal AI Regulations\tNULL\tNULL\tNULL\tNULL\n9\tUK AI Safety Institute Overview\tNULL\tNULL\tNULL\tNULL\n10\tAI Safety Evaluation\tNULL\tNULL\tNULL\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

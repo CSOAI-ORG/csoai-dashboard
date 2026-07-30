@@ -1,0 +1,52 @@
+{
+  "query": "SELECT c.id, c.title, c.regionId, r.name as regionName FROM courses c LEFT JOIN course_regions r ON c.regionId = r.id",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT c.id, c.title, c.regionId, r.name as regionName FROM courses c LEFT JOIN course_regions r ON c.regionId = r.id",
+  "rows": [
+    {
+      "id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "regionId": "1",
+      "regionName": "European Union"
+    },
+    {
+      "id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "regionId": "2",
+      "regionName": "United States"
+    },
+    {
+      "id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "regionId": "3",
+      "regionName": "United Kingdom"
+    },
+    {
+      "id": "100004",
+      "title": "Canada AIDA Compliance",
+      "regionId": "4",
+      "regionName": "China"
+    },
+    {
+      "id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "regionId": "5",
+      "regionName": "International"
+    },
+    {
+      "id": "100006",
+      "title": "ISO 42001 International Standard",
+      "regionId": "6",
+      "regionName": "Asia Pacific"
+    },
+    {
+      "id": "100007",
+      "title": "China TC260 AI Framework",
+      "regionId": "7",
+      "regionName": "Middle East"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tregionId\tregionName\n100001\tEU AI Act Fundamentals\t1\tEuropean Union\n100002\tNIST AI RMF Fundamentals\t2\tUnited States\n100003\tUK AI Safety Institute Framework\t3\tUnited Kingdom\n100004\tCanada AIDA Compliance\t4\tChina\n100005\tAustralia AI Ethics Framework\t5\tInternational\n100006\tISO 42001 International Standard\t6\tAsia Pacific\n100007\tChina TC260 AI Framework\t7\tMiddle East\n",
+  "stderr": "",
+  "execution_time_ms": 1498
+}

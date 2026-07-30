@@ -1,0 +1,35 @@
+{
+  "query": "SELECT id, name FROM ai_systems; SELECT id, code, name FROM frameworks;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, name FROM ai_systems; SELECT id, code, name FROM frameworks;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "ChatAssist Pro"
+    },
+    {
+      "id": "2",
+      "name": "RecommendAI"
+    },
+    {
+      "id": "3",
+      "name": "ContentGuard"
+    },
+    {
+      "id": "4",
+      "name": "DocGen AI"
+    },
+    {
+      "id": "5",
+      "name": "RiskAnalyzer"
+    }
+  ],
+  "messages": [
+    "id\tcode\tname",
+    "1\tEU_AI_ACT\tEU AI Act",
+    "2\tNIST_RMF\tNIST AI RMF",
+    "3\tTC260\tTC260 AI Safety Framework"
+  ],
+  "stdout": "id\tname\n1\tChatAssist Pro\n2\tRecommendAI\n3\tContentGuard\n4\tDocGen AI\n5\tRiskAnalyzer\nid\tcode\tname\n1\tEU_AI_ACT\tEU AI Act\n2\tNIST_RMF\tNIST AI RMF\n3\tTC260\tTC260 AI Safety Framework\n",
+  "stderr": "",
+  "execution_time_ms": 57
+}

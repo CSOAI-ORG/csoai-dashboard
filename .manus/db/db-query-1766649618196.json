@@ -1,0 +1,115 @@
+{
+  "query": "SELECT column_name, data_type, is_nullable \nFROM information_schema.columns \nWHERE table_name = 'courses' \nORDER BY ordinal_position;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT column_name, data_type, is_nullable \nFROM information_schema.columns \nWHERE table_name = 'courses' \nORDER BY ordinal_position;",
+  "rows": [
+    {
+      "column_name": "id",
+      "data_type": "int",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "regionId",
+      "data_type": "int",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "title",
+      "data_type": "varchar",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "description",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "framework",
+      "data_type": "varchar",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "level",
+      "data_type": "enum",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "durationHours",
+      "data_type": "int",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "price",
+      "data_type": "int",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "stripePriceId",
+      "data_type": "varchar",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "modules",
+      "data_type": "json",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "prerequisites",
+      "data_type": "json",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "certificationRequired",
+      "data_type": "tinyint",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "active",
+      "data_type": "tinyint",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "createdAt",
+      "data_type": "timestamp",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "updatedAt",
+      "data_type": "timestamp",
+      "is_nullable": "NO"
+    },
+    {
+      "column_name": "price3Month",
+      "data_type": "int",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "price6Month",
+      "data_type": "int",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "price12Month",
+      "data_type": "int",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "stripePriceId3Month",
+      "data_type": "varchar",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "stripePriceId6Month",
+      "data_type": "varchar",
+      "is_nullable": "YES"
+    },
+    {
+      "column_name": "stripePriceId12Month",
+      "data_type": "varchar",
+      "is_nullable": "YES"
+    }
+  ],
+  "messages": [],
+  "stdout": "column_name\tdata_type\tis_nullable\nid\tint\tNO\nregionId\tint\tNO\ntitle\tvarchar\tNO\ndescription\ttext\tYES\nframework\tvarchar\tYES\nlevel\tenum\tNO\ndurationHours\tint\tNO\nprice\tint\tNO\nstripePriceId\tvarchar\tYES\nmodules\tjson\tYES\nprerequisites\tjson\tYES\ncertificationRequired\ttinyint\tNO\nactive\ttinyint\tNO\ncreatedAt\ttimestamp\tNO\nupdatedAt\ttimestamp\tNO\nprice3Month\tint\tYES\nprice6Month\tint\tYES\nprice12Month\tint\tYES\nstripePriceId3Month\tvarchar\tYES\nstripePriceId6Month\tvarchar\tYES\nstripePriceId12Month\tvarchar\tYES\n",
+  "stderr": "",
+  "execution_time_ms": 1251
+}

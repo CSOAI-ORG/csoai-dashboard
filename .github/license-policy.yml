@@ -1,0 +1,19 @@
+# CSOAI dependency-licence policy (Action 4 / 3.3 of the IP playbook).
+# Enforce in CI: fail the build if a denied licence is introduced.
+allowed:
+  - MIT
+  - Apache-2.0
+  - BSD-3-Clause
+  - BSD-2-Clause
+  - ISC
+  - CC0-1.0
+  - Unlicense
+denied:        # network-copyleft / commercial-contaminating — never allow
+  - GPL-*
+  - AGPL-*
+  - SSPL-*
+  - Commons-Clause
+require_review:  # weak/file copyleft — maintainer must approve
+  - LGPL-*
+  - MPL-*
+  - EPL-*

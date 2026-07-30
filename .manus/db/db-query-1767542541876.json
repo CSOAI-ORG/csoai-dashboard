@@ -1,0 +1,36 @@
+{
+  "query": "SELECT id, name, bundlePrice, bundlePrice3Month, bundlePrice6Month, bundlePrice12Month, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month, active FROM course_bundles;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, name, bundlePrice, bundlePrice3Month, bundlePrice6Month, bundlePrice12Month, stripePriceId, stripePriceId3Month, stripePriceId6Month, stripePriceId12Month, active FROM course_bundles;",
+  "rows": [
+    {
+      "id": "200001",
+      "name": "Foundation Bundle - 3 Core Frameworks",
+      "bundlePrice": "99900",
+      "bundlePrice3Month": "NULL",
+      "bundlePrice6Month": "NULL",
+      "bundlePrice12Month": "NULL",
+      "stripePriceId": "price_1Sl57DDuEg5HakgPZu5pNVHB",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL",
+      "active": "1"
+    },
+    {
+      "id": "200002",
+      "name": "Complete Certification - All 7 Modules",
+      "bundlePrice": "199900",
+      "bundlePrice3Month": "NULL",
+      "bundlePrice6Month": "NULL",
+      "bundlePrice12Month": "NULL",
+      "stripePriceId": "price_1Sl57EDuEg5HakgPkWvUoRgs",
+      "stripePriceId3Month": "NULL",
+      "stripePriceId6Month": "NULL",
+      "stripePriceId12Month": "NULL",
+      "active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tbundlePrice\tbundlePrice3Month\tbundlePrice6Month\tbundlePrice12Month\tstripePriceId\tstripePriceId3Month\tstripePriceId6Month\tstripePriceId12Month\tactive\n200001\tFoundation Bundle - 3 Core Frameworks\t99900\tNULL\tNULL\tNULL\tprice_1Sl57DDuEg5HakgPZu5pNVHB\tNULL\tNULL\tNULL\t1\n200002\tComplete Certification - All 7 Modules\t199900\tNULL\tNULL\tNULL\tprice_1Sl57EDuEg5HakgPkWvUoRgs\tNULL\tNULL\tNULL\t1\n",
+  "stderr": "",
+  "execution_time_ms": 132
+}

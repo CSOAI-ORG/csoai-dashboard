@@ -1,0 +1,15 @@
+{
+  "query": "SELECT id, title, modules FROM courses WHERE id = 2;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, modules FROM courses WHERE id = 2;",
+  "rows": [
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "modules": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tmodules\n2\tHigh-Risk AI Systems\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 78
+}

@@ -1,0 +1,35 @@
+{
+  "query": "SELECT COUNT(*) as total, difficulty, questionType FROM test_questions GROUP BY difficulty, questionType;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT COUNT(*) as total, difficulty, questionType FROM test_questions GROUP BY difficulty, questionType;",
+  "rows": [
+    {
+      "total": "69",
+      "difficulty": "medium",
+      "questionType": "multiple_choice"
+    },
+    {
+      "total": "2",
+      "difficulty": "hard",
+      "questionType": "scenario"
+    },
+    {
+      "total": "1",
+      "difficulty": "hard",
+      "questionType": "multiple_choice"
+    },
+    {
+      "total": "3",
+      "difficulty": "medium",
+      "questionType": "scenario"
+    },
+    {
+      "total": "11",
+      "difficulty": "easy",
+      "questionType": "multiple_choice"
+    }
+  ],
+  "messages": [],
+  "stdout": "total\tdifficulty\tquestionType\n69\tmedium\tmultiple_choice\n2\thard\tscenario\n1\thard\tmultiple_choice\n3\tmedium\tscenario\n11\teasy\tmultiple_choice\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

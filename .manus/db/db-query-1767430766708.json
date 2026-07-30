@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS instructor_cohorts (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  instructorId INT NOT NULL,\n  cohortName VARCHAR(255) NOT NULL,\n  description TEXT,\n  courseId INT,\n  startDate TIMESTAMP,\n  endDate TIMESTAMP,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,\n  INDEX idx_instructorId (instructorId),\n  INDEX idx_courseId (courseId)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS instructor_cohorts (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  instructorId INT NOT NULL,\n  cohortName VARCHAR(255) NOT NULL,\n  description TEXT,\n  courseId INT,\n  startDate TIMESTAMP,\n  endDate TIMESTAMP,\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,\n  INDEX idx_instructorId (instructorId),\n  INDEX idx_courseId (courseId)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1695
+}

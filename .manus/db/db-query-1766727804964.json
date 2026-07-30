@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `notifications` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `type` enum('compliance_alert','system_update','job_application','certificate_issued','council_decision','report_update') NOT NULL,\n  `title` varchar(255) NOT NULL,\n  `message` text NOT NULL,\n  `link` varchar(500),\n  `priority` enum('low','medium','high','urgent') NOT NULL DEFAULT 'medium',\n  `isRead` boolean NOT NULL DEFAULT false,\n  `readAt` timestamp,\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT (now()),\n  CONSTRAINT `notifications_id` PRIMARY KEY(`id`),\n  INDEX `idx_userId_isRead` (`userId`, `isRead`),\n  INDEX `idx_createdAt` (`createdAt`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute CREATE TABLE IF NOT EXISTS `notifications` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `type` enum('compliance_alert','system_update','job_application','certificate_issued','council_decision','report_update') NOT NULL,\n  `title` varchar(255) NOT NULL,\n  `message` text NOT NULL,\n  `link` varchar(500),\n  `priority` enum('low','medium','high','urgent') NOT NULL DEFAULT 'medium',\n  `isRead` boolean NOT NULL DEFAULT false,\n  `readAt` timestamp,\n  `metadata` json,\n  `createdAt` timestamp NOT NULL DEFAULT (now()),\n  CONSTRAINT `notifications_id` PRIMARY KEY(`id`),\n  INDEX `idx_userId_isRead` (`userId`, `isRead`),\n  INDEX `idx_createdAt` (`createdAt`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 182
+}

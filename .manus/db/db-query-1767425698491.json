@@ -1,0 +1,45 @@
+{
+  "query": "SELECT c.id as course_id, c.title, COUNT(tm.id) as module_count FROM courses c LEFT JOIN training_modules tm ON c.id = tm.courseId GROUP BY c.id, c.title",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT c.id as course_id, c.title, COUNT(tm.id) as module_count FROM courses c LEFT JOIN training_modules tm ON c.id = tm.courseId GROUP BY c.id, c.title",
+  "rows": [
+    {
+      "course_id": "100006",
+      "title": "ISO 42001 International Standard",
+      "module_count": "0"
+    },
+    {
+      "course_id": "100007",
+      "title": "China TC260 AI Framework",
+      "module_count": "0"
+    },
+    {
+      "course_id": "100005",
+      "title": "Australia AI Ethics Framework",
+      "module_count": "0"
+    },
+    {
+      "course_id": "100001",
+      "title": "EU AI Act Fundamentals",
+      "module_count": "0"
+    },
+    {
+      "course_id": "100002",
+      "title": "NIST AI RMF Fundamentals",
+      "module_count": "0"
+    },
+    {
+      "course_id": "100003",
+      "title": "UK AI Safety Institute Framework",
+      "module_count": "0"
+    },
+    {
+      "course_id": "100004",
+      "title": "Canada AIDA Compliance",
+      "module_count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "course_id\ttitle\tmodule_count\n100006\tISO 42001 International Standard\t0\n100007\tChina TC260 AI Framework\t0\n100005\tAustralia AI Ethics Framework\t0\n100001\tEU AI Act Fundamentals\t0\n100002\tNIST AI RMF Fundamentals\t0\n100003\tUK AI Safety Institute Framework\t0\n100004\tCanada AIDA Compliance\t0\n",
+  "stderr": "",
+  "execution_time_ms": 1537
+}

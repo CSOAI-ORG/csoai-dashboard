@@ -1,0 +1,70 @@
+{
+  "query": "SELECT id, title, framework, level FROM courses ORDER BY id LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3VC7xi4RHX81jG7.65112bc774d1 --database K34VNBtbDJyjtW8qhrCBdB --execute SELECT id, title, framework, level FROM courses ORDER BY id LIMIT 10",
+  "rows": [
+    {
+      "id": "1",
+      "title": "EU AI Act Fundamentals",
+      "framework": "EU AI Act",
+      "level": "fundamentals"
+    },
+    {
+      "id": "2",
+      "title": "High-Risk AI Systems",
+      "framework": "EU AI Act",
+      "level": "advanced"
+    },
+    {
+      "id": "3",
+      "title": "EU AI Act Conformity Assessment",
+      "framework": "EU AI Act",
+      "level": "advanced"
+    },
+    {
+      "id": "4",
+      "title": "EU AI Act for Deployers",
+      "framework": "EU AI Act",
+      "level": "advanced"
+    },
+    {
+      "id": "5",
+      "title": "NIST AI RMF Fundamentals",
+      "framework": "NIST AI RMF",
+      "level": "fundamentals"
+    },
+    {
+      "id": "6",
+      "title": "AI Risk Governance",
+      "framework": "NIST AI RMF",
+      "level": "advanced"
+    },
+    {
+      "id": "7",
+      "title": "AI Risk Assessment & Measurement",
+      "framework": "NIST AI RMF",
+      "level": "advanced"
+    },
+    {
+      "id": "8",
+      "title": "Federal AI Regulations",
+      "framework": "NIST AI RMF",
+      "level": "advanced"
+    },
+    {
+      "id": "9",
+      "title": "UK AI Safety Institute Overview",
+      "framework": "UK AI Safety Institute",
+      "level": "fundamentals"
+    },
+    {
+      "id": "10",
+      "title": "AI Safety Evaluation",
+      "framework": "UK AI Safety Institute",
+      "level": "advanced"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tframework\tlevel\n1\tEU AI Act Fundamentals\tEU AI Act\tfundamentals\n2\tHigh-Risk AI Systems\tEU AI Act\tadvanced\n3\tEU AI Act Conformity Assessment\tEU AI Act\tadvanced\n4\tEU AI Act for Deployers\tEU AI Act\tadvanced\n5\tNIST AI RMF Fundamentals\tNIST AI RMF\tfundamentals\n6\tAI Risk Governance\tNIST AI RMF\tadvanced\n7\tAI Risk Assessment & Measurement\tNIST AI RMF\tadvanced\n8\tFederal AI Regulations\tNIST AI RMF\tadvanced\n9\tUK AI Safety Institute Overview\tUK AI Safety Institute\tfundamentals\n10\tAI Safety Evaluation\tUK AI Safety Institute\tadvanced\n",
+  "stderr": "",
+  "execution_time_ms": 62
+}
