@@ -6,12 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 [vars]
 ENVIRONMENT = "production"
 
-# Get your database_id by running: wrangler d1 create csoai-gspc
 [[d1_databases]]
 binding = "DB"
 database_name = "csoai-gspc"
-database_id = "YOUR_DATABASE_ID_HERE"
-
-# Optional: API key for write endpoints
-# [vars]
-# API_KEY = "your-secret-api-key"
+database_id = "c5ce60e7-4f59-4c87-9571-d55daa771fe2"
