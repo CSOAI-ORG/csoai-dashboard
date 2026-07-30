@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CredibilityFooter from "@/components/CredibilityFooter";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export const metadata: Metadata = {
   title: "CSOAI — The Measurement Body",
@@ -19,11 +20,17 @@ export default function RootLayout({
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>
-        <Navbar />
+        <ErrorBoundary>
+          <Navbar />
+        </ErrorBoundary>
         <main id="main-content" className="flex-1">
-          {children}
+          <ErrorBoundary>
+            {children}
+          </ErrorBoundary>
         </main>
-        <CredibilityFooter />
+        <ErrorBoundary>
+          <CredibilityFooter />
+        </ErrorBoundary>
       </body>
     </html>
   );
