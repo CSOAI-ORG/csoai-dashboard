@@ -4,7 +4,7 @@ import { SPECTRUM_LENSES } from "@/lib/constants";
 
 const MOCK_SCORES: Record<string, { value: number; n: number; interval: string }> = {
   red: { value: 78.3, n: 31, interval: "[+17.50, +52.18]" },
-  blue: { value: 91.2, n: 175, interval: "[+8.42, +14.00]" },
+  blue: { value: 0.667, n: 7, interval: "protection × (1 − over_block)" },
   purple: { value: 34.84, n: 31, interval: "[+17.50, +52.18]" },
   yellow: { value: 66.0, n: 12, interval: "[0, 22.1%]" },
   orange: { value: 44.1, n: 12, interval: "[0, 22.1%]" },

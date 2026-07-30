@@ -30,13 +30,19 @@ const CHANGE_CLASS_COLORS: Record<string, string> = {
 export default function DriftPage() {
   const [events, setEvents] = useState<DriftEvent[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [filterInstrument, setFilterInstrument] = useState<string>("all");
 
   useEffect(() => {
-    fetchDriftEvents().then((data) => {
-      setEvents(data);
-      setLoading(false);
-    });
+    fetchDriftEvents()
+      .then((data) => {
+        setEvents(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError("Failed to load drift events");
+        setLoading(false);
+      });
   }, []);
 
   const filtered = filterInstrument === "all"
@@ -48,6 +54,18 @@ export default function DriftPage() {
       <div className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading drift feed...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="p-4 rounded-lg border" style={{ borderColor: "var(--csoai-red)", background: "rgba(239,68,68,0.1)" }}>
+            <div style={{ color: "var(--csoai-red)" }}>{error}</div>
+          </div>
         </div>
       </div>
     );

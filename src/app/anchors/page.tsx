@@ -15,12 +15,18 @@ const STATUS_COLORS: Record<string, string> = {
 export default function AnchorsPage() {
   const [watchers, setWatchers] = useState<WatcherStatus[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchWatchers().then((data) => {
-      setWatchers(data);
-      setLoading(false);
-    });
+    fetchWatchers()
+      .then((data) => {
+        setWatchers(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError("Failed to load anchors");
+        setLoading(false);
+      });
   }, []);
 
   const liveCount = watchers.filter(w => w.status === "LIVE").length;
@@ -31,6 +37,18 @@ export default function AnchorsPage() {
       <div className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading anchors...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="p-4 rounded-lg border" style={{ borderColor: "var(--csoai-red)", background: "rgba(239,68,68,0.1)" }}>
+            <div style={{ color: "var(--csoai-red)" }}>{error}</div>
+          </div>
         </div>
       </div>
     );

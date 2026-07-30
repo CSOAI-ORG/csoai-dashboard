@@ -8,12 +8,18 @@ import type { JRecord } from "@/lib/types";
 export default function VerifyPage() {
   const [records, setRecords] = useState<JRecord[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchJRecords().then((data) => {
-      setRecords(data);
-      setLoading(false);
-    });
+    fetchJRecords()
+      .then((data) => {
+        setRecords(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError("Failed to load records");
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
@@ -21,6 +27,18 @@ export default function VerifyPage() {
       <div className="py-8 px-4">
         <div className="max-w-2xl mx-auto">
           <div className="animate-pulse" style={{ color: "var(--csoai-muted)" }}>Loading records...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-2xl mx-auto">
+          <div className="p-4 rounded-lg border" style={{ borderColor: "var(--csoai-red)", background: "rgba(239,68,68,0.1)" }}>
+            <div style={{ color: "var(--csoai-red)" }}>{error}</div>
+          </div>
         </div>
       </div>
     );

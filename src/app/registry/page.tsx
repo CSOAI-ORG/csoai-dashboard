@@ -27,13 +27,19 @@ interface Registrant {
 export default function RegistryPage() {
   const [registrants, setRegistrants] = useState<Registrant[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [expanded, setExpanded] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchRegistrants().then((data) => {
-      setRegistrants(data);
-      setLoading(false);
-    });
+    fetchRegistrants()
+      .then((data) => {
+        setRegistrants(data);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError("Failed to load registry");
+        setLoading(false);
+      });
   }, []);
 
   if (loading) {
@@ -41,6 +47,18 @@ export default function RegistryPage() {
       <div className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center py-12" style={{ color: "var(--csoai-muted)" }}>Loading registry...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="p-4 rounded-lg border" style={{ borderColor: "var(--csoai-red)", background: "rgba(239,68,68,0.1)" }}>
+            <div style={{ color: "var(--csoai-red)" }}>{error}</div>
+          </div>
         </div>
       </div>
     );
