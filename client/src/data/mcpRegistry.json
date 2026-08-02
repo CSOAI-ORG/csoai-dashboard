@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01",
+  "generatedAt": "2026-08-02",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -330,7 +330,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T12:12:50Z"
+      "updatedAt": "2026-08-01T12:18:27Z"
     },
     {
       "slug": "blockchain-verification-mcp",
@@ -1116,7 +1116,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T11:23:59Z"
+      "updatedAt": "2026-08-01T08:57:11Z"
     },
     {
       "slug": "meok-haulage-governance-bridge-mcp",
@@ -1195,7 +1195,7 @@
       ],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T09:02:54Z"
+      "updatedAt": "2026-08-01T09:10:42Z"
     },
     {
       "slug": "meok-nis2-nl-register-mcp",
@@ -1302,7 +1302,7 @@
       ],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-06-27T23:32:41Z"
+      "updatedAt": "2026-08-01T23:36:25Z"
     },
     {
       "slug": "mifid-ii-ai-mcp",
@@ -1496,7 +1496,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T09:02:56Z"
+      "updatedAt": "2026-08-01T09:10:42Z"
     },
     {
       "slug": "risk-assessment-ai-mcp",
@@ -1664,7 +1664,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T10:52:45Z"
+      "updatedAt": "2026-08-01T10:57:24Z"
     },
     {
       "slug": "awesome-mcp-security",
@@ -1719,7 +1719,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T14:12:42Z"
+      "updatedAt": "2026-08-01T14:19:44Z"
     },
     {
       "slug": "content-calendar-ai-mcp",
@@ -1730,7 +1730,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T16:22:41Z"
+      "updatedAt": "2026-08-01T16:27:46Z"
     },
     {
       "slug": "content-registry-mcp",
@@ -1868,7 +1868,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T14:02:55Z"
+      "updatedAt": "2026-08-01T14:08:39Z"
     },
     {
       "slug": "security-scanner-ai-mcp",
@@ -2299,7 +2299,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T22:02:46Z"
+      "updatedAt": "2026-08-01T22:07:58Z"
     },
     {
       "slug": "social-media-ai-mcp",
@@ -2365,7 +2365,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T16:32:49Z"
+      "updatedAt": "2026-08-01T16:37:34Z"
     },
     {
       "slug": "awesome-devops-mcp-servers",
@@ -2387,7 +2387,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T14:39:21Z"
+      "updatedAt": "2026-08-02T07:22:45Z"
     },
     {
       "slug": "budget-planner-ai-mcp",
@@ -2420,7 +2420,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T21:12:43Z"
+      "updatedAt": "2026-08-01T21:17:50Z"
     },
     {
       "slug": "competitor-monitor-ai-mcp",
@@ -2431,7 +2431,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T09:03:19Z"
+      "updatedAt": "2026-08-01T09:10:56Z"
     },
     {
       "slug": "csv-analytics-mcp",
@@ -2552,7 +2552,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T15:12:49Z"
+      "updatedAt": "2026-08-01T15:17:31Z"
     },
     {
       "slug": "pmcp-gateway",
@@ -2618,7 +2618,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T19:52:35Z"
+      "updatedAt": "2026-08-01T19:58:04Z"
     },
     {
       "slug": "tax-calculator-ai-mcp",
@@ -2662,7 +2662,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T15:02:55Z"
+      "updatedAt": "2026-08-01T15:10:25Z"
     },
     {
       "slug": "ascii-art-ai-mcp",
@@ -2706,7 +2706,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T11:32:38Z"
+      "updatedAt": "2026-08-01T11:38:11Z"
     },
     {
       "slug": "tone-rewriter-ai-mcp",
@@ -2739,7 +2739,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T19:02:56Z"
+      "updatedAt": "2026-08-01T19:10:04Z"
     },
     {
       "slug": "accounting-ai-mcp",
@@ -2827,7 +2827,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T23:02:47Z"
+      "updatedAt": "2026-08-01T23:08:05Z"
     },
     {
       "slug": "citation-finder-ai-mcp",
@@ -2838,7 +2838,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T22:22:48Z"
+      "updatedAt": "2026-08-01T22:29:52Z"
     },
     {
       "slug": "cli-builder-ai-mcp",
@@ -2937,7 +2937,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T18:03:00Z"
+      "updatedAt": "2026-08-01T18:07:42Z"
     },
     {
       "slug": "creativity-engine-mcp",
@@ -2981,7 +2981,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T20:22:46Z"
+      "updatedAt": "2026-08-01T20:27:50Z"
     },
     {
       "slug": "csv-tools-ai-mcp",
@@ -2992,7 +2992,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T08:32:37Z"
+      "updatedAt": "2026-08-01T08:37:39Z"
     },
     {
       "slug": "customer-support-ai-mcp",
@@ -3025,7 +3025,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T23:32:47Z"
+      "updatedAt": "2026-08-01T23:39:38Z"
     },
     {
       "slug": "date-calculator-ai-mcp",
@@ -3047,7 +3047,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T20:42:38Z"
+      "updatedAt": "2026-08-01T20:47:33Z"
     },
     {
       "slug": "diff-ai-mcp",
@@ -3289,7 +3289,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T09:32:41Z"
+      "updatedAt": "2026-08-01T09:39:48Z"
     },
     {
       "slug": "git-helper-ai-mcp",
@@ -3322,7 +3322,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T20:22:38Z"
+      "updatedAt": "2026-08-01T20:27:57Z"
     },
     {
       "slug": "hash-utils-ai-mcp",
@@ -3344,7 +3344,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T21:32:42Z"
+      "updatedAt": "2026-08-01T21:37:44Z"
     },
     {
       "slug": "hydration-reminder-ai-mcp",
@@ -3388,7 +3388,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T18:32:57Z"
+      "updatedAt": "2026-08-01T18:37:26Z"
     },
     {
       "slug": "json-ai-mcp",
@@ -3399,7 +3399,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T17:42:47Z"
+      "updatedAt": "2026-08-01T17:47:17Z"
     },
     {
       "slug": "jwt-ai-mcp",
@@ -3410,7 +3410,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T12:52:42Z"
+      "updatedAt": "2026-08-01T12:57:51Z"
     },
     {
       "slug": "keyword-extractor-ai-mcp",
@@ -3443,7 +3443,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T08:32:55Z"
+      "updatedAt": "2026-08-01T08:37:52Z"
     },
     {
       "slug": "legacy-engineering-mcp",
@@ -3940,7 +3940,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T11:32:55Z"
+      "updatedAt": "2026-08-01T11:38:06Z"
     },
     {
       "slug": "recipe-finder-ai-mcp",
@@ -3973,7 +3973,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T13:22:40Z"
+      "updatedAt": "2026-08-01T13:27:35Z"
     },
     {
       "slug": "restaurant-ai-mcp",
@@ -3995,7 +3995,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-07-25T20:52:38Z"
+      "updatedAt": "2026-08-01T20:57:58Z"
     },
     {
       "slug": "robotics-control-mcp",
@@ -4270,7 +4270,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-25T09:22:44Z"
+      "updatedAt": "2026-08-01T09:27:42Z"
     },
     {
       "slug": "voice-audio-mcp",
