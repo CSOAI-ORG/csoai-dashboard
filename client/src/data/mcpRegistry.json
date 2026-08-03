@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02",
+  "generatedAt": "2026-08-03",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -471,7 +471,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-07-26T19:12:50Z"
+      "updatedAt": "2026-08-02T19:12:44Z"
     },
     {
       "slug": "csoai-governance-crosswalk-mcp",
