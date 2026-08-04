@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-04",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
       "name": "Compliance & Regulatory",
-      "count": 128
+      "count": 125
     },
     {
       "name": "Safety & Security",
-      "count": 21
+      "count": 19
     },
     {
       "name": "Agent Infrastructure (A2A)",
-      "count": 16
+      "count": 17
     },
     {
       "name": "Payments & Commerce",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Developer & Ops Tools",
-      "count": 29
+      "count": 30
     },
     {
       "name": "AI Content & Creative",
@@ -37,13 +37,13 @@
     },
     {
       "name": "General AI Automation",
-      "count": 145
+      "count": 148
     }
   ],
   "frameworkCounts": [
     {
       "name": "EU AI Act",
-      "count": 41
+      "count": 39
     },
     {
       "name": "GDPR",
@@ -51,18 +51,18 @@
     },
     {
       "name": "DORA",
-      "count": 14
+      "count": 13
     },
     {
       "name": "NIS2",
-      "count": 14
-    },
-    {
-      "name": "NIST AI RMF",
-      "count": 8
+      "count": 13
     },
     {
       "name": "ISO 42001",
+      "count": 7
+    },
+    {
+      "name": "NIST AI RMF",
       "count": 7
     },
     {
@@ -71,7 +71,7 @@
     },
     {
       "name": "OWASP LLM",
-      "count": 3
+      "count": 2
     }
   ],
   "servers": [
@@ -461,17 +461,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:30:05Z"
-    },
-    {
-      "slug": "credential-manager-mcp",
-      "name": "Credential Manager",
-      "description": "Verifiable credential management. Issue, verify, revoke, and audit credentials with cryptographic integrity. By MEOK AI Labs.",
-      "url": "https://github.com/CSOAI-ORG/credential-manager-mcp",
-      "category": "Compliance & Regulatory",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": true,
-      "updatedAt": "2026-08-02T19:12:44Z"
     },
     {
       "slug": "csoai-governance-crosswalk-mcp",
@@ -1187,14 +1176,14 @@
     {
       "slug": "meok-nis2-de-register-mcp",
       "name": "Meok Nis2 De Register",
-      "description": "Germany NIS2 BSI register product \u2014 track Section 30/32 reporting timelines, KRITIS classifications, and BSI registration windows. By MEOK AI Labs.",
+      "description": "MCP server - Model Context Protocol tool.",
       "url": "https://github.com/CSOAI-ORG/meok-nis2-de-register-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
         "NIS2"
       ],
       "language": "Python",
-      "meokLabs": true,
+      "meokLabs": false,
       "updatedAt": "2026-08-01T09:10:42Z"
     },
     {
@@ -1445,20 +1434,6 @@
       "updatedAt": "2026-07-30T01:13:55Z"
     },
     {
-      "slug": "oscal-generator-mcp",
-      "name": "Oscal Generator",
-      "description": "MCP server emitting Ed25519-signed NIST OSCAL for EU AI Act Article 12 record-keeping. Includes an offline verifier \u2014 check the signatures yourself.",
-      "url": "https://github.com/CSOAI-ORG/oscal-generator-mcp",
-      "category": "Compliance & Regulatory",
-      "frameworks": [
-        "EU AI Act",
-        "NIST AI RMF"
-      ],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-07-28T10:01:10Z"
-    },
-    {
       "slug": "pci-dss-mcp",
       "name": "Pci Dss",
       "description": "PCI DSS 4.0 payment card compliance MCP server \u2014 12 requirements assessment, cardholder data flow, network segmentation, SAQ generation",
@@ -1486,14 +1461,10 @@
     {
       "slug": "regulatory-webhook-mcp",
       "name": "Regulatory Webhook",
-      "description": "Push-notify EU AI Act / NIS2 / DORA updates via webhook. Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 world-leading.",
+      "description": "MCP server - Model Context Protocol tool.",
       "url": "https://github.com/CSOAI-ORG/regulatory-webhook-mcp",
       "category": "Compliance & Regulatory",
-      "frameworks": [
-        "EU AI Act",
-        "DORA",
-        "NIS2"
-      ],
+      "frameworks": [],
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-08-01T09:10:42Z"
@@ -1597,17 +1568,6 @@
       "updatedAt": "2026-06-26T05:44:43Z"
     },
     {
-      "slug": "trust-chain-mcp",
-      "name": "Trust Chain",
-      "description": "Trust chain and attestation management by MEOK AI Labs.",
-      "url": "https://github.com/CSOAI-ORG/trust-chain-mcp",
-      "category": "Compliance & Regulatory",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": true,
-      "updatedAt": "2026-07-26T01:52:40Z"
-    },
-    {
       "slug": "uk-ai-act-mcp",
       "name": "Uk AI Act",
       "description": "UK AI Bill compliance MCP \u2014 AI regulation tracking, risk classification, impact assessment for UK-deployed AI systems.",
@@ -1656,12 +1616,10 @@
     {
       "slug": "agent-prompt-injection-firewall-mcp",
       "name": "Agent Prompt Injection Firewall",
-      "description": "AI agent prompt injection firewall MCP. OWASP LLM Top 10 #1 runtime guard. MIT",
+      "description": "MCP server - Model Context Protocol tool.",
       "url": "https://github.com/CSOAI-ORG/agent-prompt-injection-firewall-mcp",
       "category": "Safety & Security",
-      "frameworks": [
-        "OWASP LLM"
-      ],
+      "frameworks": [],
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-08-01T10:57:24Z"
@@ -1676,17 +1634,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-02T15:27:49Z"
-    },
-    {
-      "slug": "care-membrane-mcp",
-      "name": "Care Membrane",
-      "description": "AI Safety evaluation toolkit: care scoring, threat detection, burnout analysis, relationship prediction, and care membrane probe framework.",
-      "url": "https://github.com/CSOAI-ORG/care-membrane-mcp",
-      "category": "Safety & Security",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-08-01T06:28:30Z"
     },
     {
       "slug": "ci-cd-generator-ai-mcp",
@@ -1858,17 +1805,6 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:40:15Z"
-    },
-    {
-      "slug": "proofof-ai-mcp",
-      "name": "Proofof Ai",
-      "description": "AI content verification & deepfake detection MCP \u2014 media forensics, synthetic media detection, provenance chains. MIT.",
-      "url": "https://github.com/CSOAI-ORG/proofof-ai-mcp",
-      "category": "Safety & Security",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": false,
-      "updatedAt": "2026-08-01T14:08:39Z"
     },
     {
       "slug": "security-scanner-ai-mcp",
@@ -2056,6 +1992,17 @@
       "language": "HTML",
       "meokLabs": true,
       "updatedAt": "2026-06-17T05:52:30Z"
+    },
+    {
+      "slug": "trust-chain-mcp",
+      "name": "Trust Chain",
+      "description": "MCP server - Model Context Protocol tool.",
+      "url": "https://github.com/CSOAI-ORG/trust-chain-mcp",
+      "category": "Agent Infrastructure (A2A)",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-08-03T12:42:33Z"
     },
     {
       "slug": "webhook-ai-mcp",
@@ -2544,6 +2491,17 @@
       "updatedAt": "2026-06-13T06:18:02Z"
     },
     {
+      "slug": "oscal-generator-mcp",
+      "name": "Oscal Generator",
+      "description": "MCP server - Model Context Protocol tool.",
+      "url": "https://github.com/CSOAI-ORG/oscal-generator-mcp",
+      "category": "Developer & Ops Tools",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-07-28T10:01:10Z"
+    },
+    {
       "slug": "password-ai-mcp",
       "name": "Password Ai",
       "description": "Password manager MCP \u2014 generate, strength-check, breach monitoring, entropy calculation. Zero-knowledge. MIT.",
@@ -2830,6 +2788,17 @@
       "updatedAt": "2026-08-01T23:08:05Z"
     },
     {
+      "slug": "care-membrane-mcp",
+      "name": "Care Membrane",
+      "description": "MCP server - Model Context Protocol tool.",
+      "url": "https://github.com/CSOAI-ORG/care-membrane-mcp",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-08-01T06:28:30Z"
+    },
+    {
       "slug": "citation-finder-ai-mcp",
       "name": "Citation Finder Ai",
       "description": "MEOK AI Labs \u2014 Find and format academic citations.",
@@ -2951,6 +2920,17 @@
       "updatedAt": "2026-06-15T14:39:49Z"
     },
     {
+      "slug": "credential-manager-mcp",
+      "name": "Credential Manager",
+      "description": "MCP server - Model Context Protocol tool.",
+      "url": "https://github.com/CSOAI-ORG/credential-manager-mcp",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-08-02T19:12:44Z"
+    },
+    {
       "slug": "crm-ai-mcp",
       "name": "Crm Ai",
       "description": "Customer relationship management toolkit: lead scoring, deal stage prediction, follow-up scheduling, customer health scoring, and churn prediction. By MEOK AI Labs.",
@@ -3019,12 +2999,12 @@
     {
       "slug": "database-universal-mcp",
       "name": "Database Universal",
-      "description": "Database connector for SQLite, PostgreSQL, and MySQL. Query data, explore schema, insert rows, and export to CSV. By MEOK AI Labs.",
+      "description": "MCP server - Model Context Protocol tool.",
       "url": "https://github.com/CSOAI-ORG/database-universal-mcp",
       "category": "General AI Automation",
       "frameworks": [],
       "language": "Python",
-      "meokLabs": true,
+      "meokLabs": false,
       "updatedAt": "2026-08-01T23:39:38Z"
     },
     {
@@ -3919,6 +3899,17 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:40:53Z"
+    },
+    {
+      "slug": "proofof-ai-mcp",
+      "name": "Proofof Ai",
+      "description": "MCP server - Model Context Protocol tool.",
+      "url": "https://github.com/CSOAI-ORG/proofof-ai-mcp",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-08-01T14:08:39Z"
     },
     {
       "slug": "rag-knowledge-mcp",
