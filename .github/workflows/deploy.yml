@@ -10,6 +10,28 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
+      - name: Preflight — required Cloudflare secrets
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          # This job used to fail inside wrangler with a truncated
+          # "In a non-interactive environment, it's necessary to se..." and no clue why.
+          # Neither secret is configured on this repository (only GH_ORG_TOKEN and
+          # VERCEL_TOKEN are), so the deploy cannot succeed. Fail HERE, saying so.
+          # Deliberately not skipped-as-success: a deploy that did not happen must not
+          # report green.
+          missing=""
+          [ -z "$CF_TOKEN" ]   && missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -z "$CF_ACCOUNT" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          if [ -n "$missing" ]; then
+            echo "::error::Cannot deploy. Missing repository secret(s):$missing"
+            echo "Add them under Settings -> Secrets and variables -> Actions."
+            echo "Until then this workflow cannot pass, and should not pretend to."
+            exit 1
+          fi
+          echo "Cloudflare secrets present."
+
 
       - uses: actions/setup-node@v4
         with:
