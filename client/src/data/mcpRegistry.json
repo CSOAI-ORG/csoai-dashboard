@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04",
+  "generatedAt": "2026-08-05",
   "total": 370,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -126,7 +126,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:27:06Z"
+      "updatedAt": "2026-08-04T12:57:46Z"
     },
     {
       "slug": "api-tester-ai-mcp",
@@ -365,7 +365,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-15T14:39:25Z"
+      "updatedAt": "2026-08-04T13:01:45Z"
     },
     {
       "slug": "care-home-cqc-mcp",
@@ -643,7 +643,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:50:28Z"
+      "updatedAt": "2026-08-04T12:52:04Z"
     },
     {
       "slug": "gods-eye-geospatial-mcp",
@@ -829,7 +829,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-08-01T00:10:46Z"
+      "updatedAt": "2026-08-04T12:55:05Z"
     },
     {
       "slug": "mcp-spec-compliance-mcp",
@@ -1565,7 +1565,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:44:43Z"
+      "updatedAt": "2026-08-04T12:56:32Z"
     },
     {
       "slug": "uk-ai-act-mcp",
@@ -3368,7 +3368,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-08-01T18:37:26Z"
+      "updatedAt": "2026-08-04T12:54:34Z"
     },
     {
       "slug": "json-ai-mcp",
