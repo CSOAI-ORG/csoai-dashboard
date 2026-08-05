@@ -253,7 +253,7 @@ export default function NewHome() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-emerald-100 text-emerald-700 text-sm px-4 py-2">
-              The Western TC260
+              An independent measurement body
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Proven in China. Adapted for the West.

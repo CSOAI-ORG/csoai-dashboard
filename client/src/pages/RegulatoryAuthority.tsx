@@ -342,7 +342,7 @@ export default function RegulatoryAuthority() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Lead AI Safety Governance?</h2>
             <p className="text-lg text-emerald-100 mb-8">
-              Join CSOAI as we build the global standard for AI safety. Whether you're an enterprise, regulator, or analyst, there's a role for you.
+              Join CSOAI as we build independent, verifiable AI safety measurement. Whether you're an enterprise, regulator, or analyst, there's a role for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/enterprise">

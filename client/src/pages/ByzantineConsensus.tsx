@@ -167,7 +167,7 @@ export default function ByzantineConsensus() {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               A fault-tolerant, vendor-independent AI safety governance system inspired by 
-              Byzantine fault tolerance principles. Our council uses 12 different AI providers 
+              threshold-consensus principles. Our council uses 12 different AI providers 
               to ensure unbiased, impartial decisions on AI safety matters.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -195,7 +195,7 @@ export default function ByzantineConsensus() {
             <h2 className="text-3xl font-bold mb-6 text-center">What is Byzantine Consensus?</h2>
             <div className="prose prose-lg dark:prose-invert mx-auto">
               <p>
-                Byzantine fault tolerance (BFT) is a property of distributed systems that allows them to 
+                Threshold consensus is a property of distributed systems that allows them to 
                 reach consensus even when some participants are faulty or malicious. Named after the 
                 "Byzantine Generals Problem," this approach ensures that a system can continue to operate 
                 correctly as long as fewer than one-third of the participants are compromised.

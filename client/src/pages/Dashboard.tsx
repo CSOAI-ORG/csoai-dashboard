@@ -138,7 +138,7 @@ export default function Dashboard() {
           <div>
             <h1 className="text-3xl font-bold font-display tracking-tight" data-testid="dashboard-title">Dashboard</h1>
             <p className="text-muted-foreground text-sm mt-1">
-              Western TC260 - AI Safety Governance for Humanity
+              Independent AI Safety Measurement for Humanity
             </p>
           </div>
           <div className="flex items-center gap-2">

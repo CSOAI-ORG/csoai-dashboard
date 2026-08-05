@@ -112,7 +112,7 @@ export default function Landing() {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <Globe className="h-4 w-4" />
-                Western TC260 Equivalent
+                Independent measurement body
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -298,7 +298,7 @@ export default function Landing() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              The Western TC260
+              An independent measurement body
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive AI safety governance built for Western democracies
