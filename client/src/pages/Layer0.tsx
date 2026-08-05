@@ -46,7 +46,7 @@ const LAYERS: LayerDef[] = [
     id: "L0-B",
     name: "Certification",
     icon: ShieldCheck,
-    spec: "CSOAI Watchdog Certificates · BFT Council",
+    spec: "CSOAI Watchdog Certificates · designed 33-agent council",
     desc: "Ed25519-signed Watchdog Certificates mapping a system to 30+ frameworks, with a public verify URL anyone can check independently.",
     href: "/certification",
   },
@@ -84,8 +84,8 @@ const LAYERS: LayerDef[] = [
     id: "L0-G",
     name: "Human-in-the-Loop",
     icon: Users,
-    spec: "33-Agent BFT Council · PDCA escalation",
-    desc: "High-risk actions escalate to the Byzantine fault-tolerant Council with approval envelopes — impartial, vendor-independent human oversight.",
+    spec: "Designed 33-agent council · PDCA escalation",
+    desc: "High-risk actions escalate to the designed 33-agent council with approval envelopes — impartial, vendor-independent human oversight.",
     href: "/agent-council",
   },
   {
@@ -112,7 +112,7 @@ const PDCA = [
   { k: "Plan", d: "Map 30+ frameworks to executable Rego policies." },
   { k: "Do", d: "Sub-millisecond enforcement via Microsoft AGT & OPA." },
   { k: "Check", d: "Continuous monitoring + real-time trust scoring." },
-  { k: "Act", d: "Auto-remediate (low risk) or escalate to the BFT Council (high risk)." },
+  { k: "Act", d: "Auto-remediate (low risk) or escalate to the designed 33-agent council (high risk)." },
 ];
 
 export default function Layer0() {
@@ -215,7 +215,7 @@ export default function Layer0() {
             <Activity className="w-6 h-6 text-emerald-600" />
             <h2 className="text-3xl font-bold text-gray-900">The PDCA runtime engine</h2>
           </div>
-          <p className="text-gray-600 mb-8">The enforcer — continuous Plan / Do / Check / Act over every agent action.</p>
+          <p className="text-gray-600 mb-8">The instrument regulators enforce with — continuous Plan / Do / Check / Act over every agent action.</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
             {PDCA.map((p) => (
               <Card key={p.k} className="p-6">
