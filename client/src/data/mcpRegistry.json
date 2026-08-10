@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-09",
-  "total": 370,
+  "generatedAt": "2026-08-10",
+  "total": 371,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "name": "General AI Automation",
-      "count": 148
+      "count": 149
     }
   ],
   "frameworkCounts": [
@@ -2962,6 +2962,17 @@
       "language": "Python",
       "meokLabs": true,
       "updatedAt": "2026-08-08T20:24:06Z"
+    },
+    {
+      "slug": "csoai-mcp-dist",
+      "name": "Csoai Mcp Dist",
+      "description": "CSOAI MCP distribution \u2014 verified servers, jsDelivr/unpkg-mirrored",
+      "url": "https://github.com/CSOAI-ORG/csoai-mcp-dist",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "JavaScript",
+      "meokLabs": false,
+      "updatedAt": "2026-08-09T10:16:40Z"
     },
     {
       "slug": "csv-tools-ai-mcp",
