@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14",
+  "generatedAt": "2026-08-15",
   "total": 371,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -354,7 +354,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-07T18:44:23Z"
+      "updatedAt": "2026-08-14T18:44:13Z"
     },
     {
       "slug": "canada-aida-ai-mcp",
@@ -2763,7 +2763,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-09T06:10:08Z"
+      "updatedAt": "2026-08-14T11:58:10Z"
     },
     {
       "slug": "best-of-mcp-servers",
