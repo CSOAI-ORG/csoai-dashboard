@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-17",
-  "total": 371,
+  "generatedAt": "2026-08-18",
+  "total": 372,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "name": "General AI Automation",
-      "count": 149
+      "count": 150
     }
   ],
   "frameworkCounts": [
@@ -4328,6 +4328,17 @@
       "language": "Python",
       "meokLabs": false,
       "updatedAt": "2026-06-26T05:48:39Z"
+    },
+    {
+      "slug": "wowmcp-site",
+      "name": "Wowmcp Site",
+      "description": "MCP server - Model Context Protocol tool.",
+      "url": "https://github.com/CSOAI-ORG/wowmcp-site",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "HTML",
+      "meokLabs": false,
+      "updatedAt": "2026-08-17T11:13:37Z"
     }
   ]
 }
