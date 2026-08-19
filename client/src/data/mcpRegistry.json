@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18",
+  "generatedAt": "2026-08-19",
   "total": 372,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -47,15 +47,15 @@
     },
     {
       "name": "GDPR",
-      "count": 18
+      "count": 17
     },
     {
       "name": "DORA",
-      "count": 13
+      "count": 12
     },
     {
       "name": "NIS2",
-      "count": 13
+      "count": 12
     },
     {
       "name": "ISO 42001",
@@ -560,18 +560,15 @@
     {
       "slug": "eu-ai-act-compliance-mcp",
       "name": "Eu AI Act Compliance",
-      "description": "410 verbatim EU AI Act articles + 28 article-level reg MCPs (Art.12 / Art.50 / GDPR Art.9 / DORA Art.17 / NIS2 Art.21 / CRA). Part of the CSOAI Layer-0: 8 protocols \u00b7 100/100 A+++++ \u00b7 bleeding edge \u00b7 world-leading.",
+      "description": "EU AI Act measurement corpus \u2014 417 frozen provisions (113 Articles, provision-level granularity), signed GSPC crosswalk + article-level MCPs. Measurement, not certification.",
       "url": "https://github.com/CSOAI-ORG/eu-ai-act-compliance-mcp",
       "category": "Compliance & Regulatory",
       "frameworks": [
-        "EU AI Act",
-        "DORA",
-        "NIS2",
-        "GDPR"
+        "EU AI Act"
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-27T04:53:12Z"
+      "updatedAt": "2026-08-18T08:47:55Z"
     },
     {
       "slug": "eu-cra-mcp",
