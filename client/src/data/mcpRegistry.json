@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-21",
-  "total": 372,
+  "generatedAt": "2026-08-22",
+  "total": 371,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "name": "Safety & Security",
-      "count": 19
+      "count": 18
     },
     {
       "name": "Agent Infrastructure (A2A)",
@@ -354,7 +354,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-14T18:44:13Z"
+      "updatedAt": "2026-08-21T18:43:54Z"
     },
     {
       "slug": "canada-aida-ai-mcp",
@@ -826,7 +826,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-08-08T00:04:42Z"
+      "updatedAt": "2026-08-22T00:06:00Z"
     },
     {
       "slug": "mcp-spec-compliance-mcp",
@@ -1756,17 +1756,6 @@
       "updatedAt": "2026-06-26T05:36:56Z"
     },
     {
-      "slug": "optometry-ai-safety-mcp",
-      "name": "Optometry AI Safety",
-      "description": "MEOK AI Labs MCP Server",
-      "url": "https://github.com/CSOAI-ORG/optometry-ai-safety-mcp",
-      "category": "Safety & Security",
-      "frameworks": [],
-      "language": "Python",
-      "meokLabs": true,
-      "updatedAt": "2026-06-26T05:38:42Z"
-    },
-    {
       "slug": "owasp-agentic-mcp",
       "name": "Owasp Agentic",
       "description": "OWASP Top 10 for Agentic AI security MCP server \u2014 prompt injection detection, tool poisoning, excessive agency, data leakage assessment",
@@ -2265,7 +2254,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-08T02:04:13Z"
+      "updatedAt": "2026-08-22T02:03:55Z"
     },
     {
       "slug": "stock-analyzer-ai-mcp",
@@ -2342,7 +2331,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-08T01:44:20Z"
+      "updatedAt": "2026-08-22T01:43:41Z"
     },
     {
       "slug": "changelog-ai-mcp",
@@ -2793,7 +2782,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-08T06:25:54Z"
+      "updatedAt": "2026-08-22T06:25:48Z"
     },
     {
       "slug": "citation-finder-ai-mcp",
@@ -2826,7 +2815,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-08T05:03:57Z"
+      "updatedAt": "2026-08-22T05:03:35Z"
     },
     {
       "slug": "clipboard-ai-mcp",
@@ -3211,7 +3200,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": true,
-      "updatedAt": "2026-08-08T04:16:04Z"
+      "updatedAt": "2026-08-22T04:16:37Z"
     },
     {
       "slug": "fix-bridge-mcp",
@@ -3884,7 +3873,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-08T00:53:54Z"
+      "updatedAt": "2026-08-22T00:53:53Z"
     },
     {
       "slug": "planthire-ai-mcp",
