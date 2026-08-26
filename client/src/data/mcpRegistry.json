@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-25",
-  "total": 371,
+  "generatedAt": "2026-08-26",
+  "total": 372,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "name": "General AI Automation",
-      "count": 150
+      "count": 151
     }
   ],
   "frameworkCounts": [
@@ -2749,7 +2749,18 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-19T13:54:59Z"
+      "updatedAt": "2026-08-26T00:09:15Z"
+    },
+    {
+      "slug": "awesome-remote-mcp-servers",
+      "name": "Awesome Remote Mcp Servers",
+      "description": "Remote MCP Servers",
+      "url": "https://github.com/CSOAI-ORG/awesome-remote-mcp-servers",
+      "category": "General AI Automation",
+      "frameworks": [],
+      "language": "Python",
+      "meokLabs": false,
+      "updatedAt": "2026-06-23T20:25:15Z"
     },
     {
       "slug": "best-of-mcp-servers",
