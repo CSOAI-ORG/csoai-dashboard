@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30",
+  "generatedAt": "2026-08-31",
   "total": 372,
   "source": "https://github.com/orgs/CSOAI-ORG/repositories",
   "categories": [
@@ -402,7 +402,7 @@
       ],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-06-26T05:28:51Z"
+      "updatedAt": "2026-08-31T09:36:32Z"
     },
     {
       "slug": "concrete-pump-cpa-mcp",
@@ -2925,7 +2925,7 @@
       "frameworks": [],
       "language": "Python",
       "meokLabs": false,
-      "updatedAt": "2026-08-02T19:12:44Z"
+      "updatedAt": "2026-08-30T19:12:45Z"
     },
     {
       "slug": "crm-ai-mcp",
