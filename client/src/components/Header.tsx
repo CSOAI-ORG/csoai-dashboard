@@ -56,6 +56,7 @@ export function Header() {
         { name: 'Alerts', href: '/dashboard/alerts', description: 'Alert management' },
         { name: 'Instructor Dashboard', href: '/instructor/dashboard', description: 'Manage cohorts and students' },
         { name: 'A/B Testing', href: '/ab-testing', description: 'Experiment management' },
+        { name: 'AI Copilot', href: '/copilot', description: 'Ask the Council — governance Q&A' },
       ]
     },
     {

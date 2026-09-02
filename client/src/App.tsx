@@ -221,6 +221,7 @@ import MCPDetail from "./pages/MCPDetail";
 import FrameworkDetail from "./pages/FrameworkDetail";
 import Press from "./pages/Press";
 import HorusIntel from "./pages/HorusIntel";
+import GovernanceCopilot from "./pages/GovernanceCopilot";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -297,6 +298,7 @@ function App() {
                   <Route path="/risk-assessment" component={RiskAssessment} />
                   <Route path="/compliance" component={Compliance} />
                   <Route path="/agent-council" component={AgentCouncil} />
+                  <Route path="/copilot" component={GovernanceCopilot} />
                   <Route path="/council-detail" component={CouncilDetail} />
                   <Route path="/byzantine-consensus" component={ByzantineConsensus} />
                   <Route path="/watchdog" component={Watchdog} />
