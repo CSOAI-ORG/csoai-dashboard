@@ -1,37 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import CredibilityFooter from "@/components/CredibilityFooter";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export const metadata: Metadata = {
-  title: "CSOAI — The Measurement Body",
-  description: "Measuring what the measurement layer misses. Governance, Safety, Provenance, Continuity — deterministic, signed, anchored to the law.",
+  title: "Council of AI — CSOAI Ltd",
+  description:
+    "CSOAI Ltd operates Council of AI: independent AI measurement, signed evidence, free verification and public corrections. Measurement, not certification.",
+  alternates: {
+    canonical: "https://councilof.ai/",
+  },
+  openGraph: {
+    title: "Council of AI — independent AI measurement",
+    description:
+      "Published tests, signed evidence, free verification and public corrections. Measurement, not certification.",
+    url: "https://councilof.ai/",
+    type: "website",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <a href="#main-content" className="skip-to-content">
-          Skip to content
-        </a>
-        <ErrorBoundary>
-          <Navbar />
-        </ErrorBoundary>
-        <main id="main-content" className="flex-1">
-          <ErrorBoundary>
-            {children}
-          </ErrorBoundary>
-        </main>
-        <ErrorBoundary>
-          <CredibilityFooter />
-        </ErrorBoundary>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

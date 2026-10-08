@@ -1,78 +1,18 @@
-# Csoai Dashboard
+# csoai-dashboard — legacy/reference UI
 
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
-[![GSPC](https://img.shields.io/badge/GSPC-UNMEASURED-9ca3af)](https://councilof.ai/api/gspc)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/csoai_dashboard/)
+This repository contains an earlier CSOAI dashboard implementation. It is retained for source history and reference; it is not the current public source of truth for Council of AI claims, pricing, product counts, legal-compliance claims or certification claims.
 
-> CSOAI Dashboard — The ISO for AI Safety
+Current public source of truth:
 
-CSOAI Dashboard — The ISO for AI Safety. Competitor comparison, EU AI Act urgency, certification platform.
+- https://councilof.ai/
+- https://councilof.ai/api/gspc
+- https://councilof.ai/llms.txt
+- https://github.com/CSOAI-ORG/councilof-ai
 
----
+Council of AI is the public measurement service operated by CSOAI Ltd, a company incorporated in England and Wales on 2 January 2026, Companies House 16939677. CSOAI publishes independent measurement evidence, signed records, free verification and public corrections. It measures; it does not certify, accredit or issue legal-compliance determinations.
 
-## 🚀 Quick Start
+## Repository status
 
-```bash
-# Install via pip
-pip install csoai_dashboard
+Historical pages in earlier revisions may contain superseded product language, prices, certification copy, compliance claims or MCP counts. Do not cite those as current CSOAI claims. Mutable facts belong to the named live APIs above.
 
-# Or install via Smithery
-npx -y @smithery/cli@latest install csoai-dashboard --client claude
-```
-
-## ✨ Features
-
-- MCP protocol compliant
-- Easy installation
-- Well-documented API
-- Production-ready
-- Active maintenance
-
-## 📖 Documentation
-
-- [Full Documentation](https://docs.meok.ai/csoai-dashboard)
-- [API Reference](https://api.meok.ai)
-- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
-
-## 🛡️ Compliance
-
-This MCP server is built with **EU AI Act compliance** built-in:
-
-- ✅ Article 9 — Risk Management System
-- ✅ Article 13 — Transparency & Instructions for Use
-- ✅ Article 15 — Bias Detection & Testing
-- ✅ Article 26 — FRIA Support (where applicable)
-- ✅ Article 50 — AI Content Watermarking (where applicable)
-
-Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
-
-## 🏢 Enterprise
-
-Need custom development, SLA guarantees, or white-label deployment?
-
-- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
-- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
-
-[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
-
-## 🤝 Part of the MEOK Ecosystem
-
-This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
-
-| Domain | Purpose |
-|--------|---------|
-| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
-| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
-| [meok.ai](https://meok.ai) | Sovereign AI platform |
-| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
-
-## 📜 License
-
-MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
-
----
-
-<p align="center">
-  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
-</p>
+This repository remains MIT licensed unless a file states otherwise.
